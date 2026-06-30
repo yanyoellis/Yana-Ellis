@@ -117,7 +117,7 @@ const languageButtons = document.querySelectorAll(".language-button");
 const textNodes = document.querySelectorAll("[data-i18n]");
 const altNodes = document.querySelectorAll("[data-i18n-alt]");
 const projectCards = document.querySelectorAll(".project-card");
-const supportedLanguages = Object.keys(translations);
+const supportedLanguages = ["en", "uk", "pl"];
 
 function getInitialLanguage() {
   const savedLanguage = localStorage.getItem("yana-ellis-language");

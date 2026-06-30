@@ -1281,6 +1281,8 @@ languageButtons.forEach((button) => {
 
 const browserLanguage = (navigator.language || 'en').slice(0, 2);
 const savedLanguage = localStorage.getItem(storageKey);
-const initialLanguage = savedLanguage || (copy[browserLanguage] ? browserLanguage : 'en');
+const initialLanguage = savedLanguage && savedLanguage !== 'ru'
+  ? savedLanguage
+  : (browserLanguage !== 'ru' && copy[browserLanguage] ? browserLanguage : 'en');
 
 render(initialLanguage);

@@ -85,7 +85,7 @@ const translations={
   }
 };
 
-const supported=['ru','pl','uk','en'];
+const supported=['pl','uk','en'];
 const stored=localStorage.getItem('aeternum-case-lang');
 const browser=(navigator.language||'en').slice(0,2).toLowerCase();
 const initial=supported.includes(stored)?stored:(supported.includes(browser)?browser:'en');

@@ -10,6 +10,32 @@
     <link rel="stylesheet" crossorigin href="./assets/index-DU4PZiDQ.css">
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"></div>
+    <script>
+      if (localStorage.getItem("tavola-case-language") === "ru") {
+        localStorage.setItem("tavola-case-language", "en");
+      }
+
+      const removeRussianOption = () => {
+        document.querySelectorAll(".case-language__button").forEach((button) => {
+          if (button.textContent.trim() === "Русский") button.remove();
+        });
+      };
+
+      new MutationObserver(removeRussianOption).observe(document.getElementById("root"), {
+        childList: true,
+        subtree: true,
+      });
+
+      document.addEventListener("click", (event) => {
+        const drawer = document.querySelector(".scene-drawer--open");
+        if (!drawer) return;
+
+        const clickedOutside = !event.target.closest(".scene-drawer");
+        if (clickedOutside) {
+          drawer.querySelector(".scene-drawer__close")?.click();
+        }
+      }, true);
+    </script>
   </body>
 </html>

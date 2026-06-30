@@ -793,4 +793,4 @@ document.addEventListener("pointermove", event => {
 });
 
 const savedLanguage = safeStorageGet("blackwood-case-study-language");
-applyLanguage(savedLanguage && languageMeta[savedLanguage] ? savedLanguage : "en");
+applyLanguage(savedLanguage && savedLanguage !== "ru" && languageMeta[savedLanguage] ? savedLanguage : "en");
