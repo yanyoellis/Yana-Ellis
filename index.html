@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Yana Ellis is a UX/UI designer creating minimal, experimental and concept-driven digital experiences."
+    />
+    <title>Yana Ellis - UX/UI Designer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header" aria-label="Yana Ellis">
+        <a class="brand-link" href="#top" aria-label="Yana Ellis">
+          <img
+            class="brand-logo"
+            src="assets/yana-ellis-logo-transparent.png"
+            alt="Yana Ellis logo"
+            data-i18n-alt="logoAlt"
+          />
+        </a>
+
+        <div class="language-switcher" aria-label="Language">
+          <button class="language-button is-active" type="button" data-lang="en" aria-pressed="true">
+            EN
+          </button>
+          <button class="language-button" type="button" data-lang="ru" aria-pressed="false">
+            RU
+          </button>
+          <button class="language-button" type="button" data-lang="uk" aria-pressed="false">
+            UK
+          </button>
+          <button class="language-button" type="button" data-lang="pl" aria-pressed="false">
+            PL
+          </button>
+        </div>
+      </header>
+
+      <main id="top">
+        <section class="hero-section" aria-labelledby="hero-title">
+          <div class="hero-copy">
+            <h1 id="hero-title" class="hero-name">YANA ELLIS</h1>
+            <p class="hero-role" data-i18n="heroRole">UX/UI DESIGNER</p>
+            <p class="hero-description" data-i18n="heroDescription">
+              I design minimal, experimental and concept-driven digital experiences.
+            </p>
+            <p class="availability" data-i18n="availability">Open for freelance projects</p>
+          </div>
+          <div class="hero-negative-space" aria-hidden="true"></div>
+        </section>
+
+        <section class="info-section" aria-label="Designer information">
+          <article class="info-column">
+            <p class="section-kicker" data-i18n="aboutTitle">ABOUT ME</p>
+            <div class="body-copy">
+              <p data-i18n="aboutOne">Designing interfaces is my way of expressing ideas.</p>
+              <p data-i18n="aboutTwo">
+                I focus on clarity, emotion and details that create unique digital experiences.
+              </p>
+              <p data-i18n="aboutThree">
+                I work with minimalism, bold concepts and thoughtful interactions.
+              </p>
+            </div>
+          </article>
+
+          <article class="info-column">
+            <p class="section-kicker" data-i18n="toolsTitle">TOOLS</p>
+            <ul class="tools-list" aria-label="Tools">
+              <li>Figma</li>
+              <li>Photoshop</li>
+              <li>Illustrator</li>
+              <li>Framer</li>
+              <li data-i18n="toolHtml">HTML / CSS (basic)</li>
+              <li data-i18n="toolJs">JavaScript (basic)</li>
+            </ul>
+          </article>
+
+          <article class="info-column">
+            <p class="section-kicker" data-i18n="approachTitle">APPROACH</p>
+            <div class="approach-list">
+              <div class="approach-item">
+                <span class="approach-icon icon-minimalism" aria-hidden="true"></span>
+                <div>
+                  <h2 data-i18n="minimalismTitle">MINIMALISM</h2>
+                  <p data-i18n="minimalismText">Less, but meaningful.</p>
+                </div>
+              </div>
+              <div class="approach-item">
+                <span class="approach-icon icon-concept" aria-hidden="true"></span>
+                <div>
+                  <h2 data-i18n="conceptTitle">CONCEPT FIRST</h2>
+                  <p data-i18n="conceptText">Strong idea drives design.</p>
+                </div>
+              </div>
+              <div class="approach-item">
+                <span class="approach-icon icon-interaction" aria-hidden="true"></span>
+                <div>
+                  <h2 data-i18n="interactionTitle">INTERACTION</h2>
+                  <p data-i18n="interactionText">Details that make experience smooth.</p>
+                </div>
+              </div>
+              <div class="approach-item">
+                <span class="approach-icon icon-attention" aria-hidden="true"></span>
+                <div>
+                  <h2 data-i18n="attentionTitle">ATTENTION</h2>
+                  <p data-i18n="attentionText">Precision in every pixel.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="info-column">
+            <p class="section-kicker" data-i18n="contactTitle">CONTACT</p>
+            <address class="contact-list">
+              <a href="mailto:oh.yanyoellis@gmail.com">
+                <span data-i18n="emailLabel">Email</span>
+                <span>oh.yanyoellis@gmail.com</span>
+              </a>
+              <a href="https://t.me/ohyanyo" target="_blank" rel="noreferrer">
+                <span>Telegram</span>
+                <span>@ohyanyo</span>
+              </a>
+              <a href="https://www.instagram.com/oh.yanyo/#" target="_blank" rel="noreferrer">
+                <span>Instagram</span>
+                <span>@oh.yanyo</span>
+              </a>
+            </address>
+          </article>
+        </section>
+
+        <section class="projects-section" aria-labelledby="projects-title">
+          <div class="projects-heading-row">
+            <h2 id="projects-title" class="section-kicker" data-i18n="projectsTitle">
+              FEATURED PROJECTS
+            </h2>
+          </div>
+
+          <div class="projects-grid">
+            <a
+              class="project-card"
+              href="projects/pelagea/index.html"
+              data-project-name="Pelagea"
+              aria-label="Open Pelagea project site"
+            >
+              <span class="project-frame">
+                <img class="project-cover" src="assets/projects/pelagea.jpg" alt="" />
+                <span class="project-meta">
+                  <span class="project-name">Pelagea</span>
+                  <span class="project-type" data-i18n="projectType">Open project</span>
+                </span>
+              </span>
+            </a>
+
+            <a
+              class="project-card"
+              href="projects/noir/index.html"
+              data-project-name="Noir"
+              aria-label="Open Noir project site"
+            >
+              <span class="project-frame">
+                <img class="project-cover" src="assets/projects/noir.jpg" alt="" />
+                <span class="project-meta">
+                  <span class="project-name">Noir</span>
+                  <span class="project-type" data-i18n="projectType">Open project</span>
+                </span>
+              </span>
+            </a>
+
+            <a
+              class="project-card"
+              href="projects/lvl-home/index.html"
+              data-project-name="LVL-HOME"
+              aria-label="Open LVL-HOME project site"
+            >
+              <span class="project-frame">
+                <img class="project-cover" src="assets/projects/lvl-home.jpg" alt="" />
+                <span class="project-meta">
+                  <span class="project-name">LVL-HOME</span>
+                  <span class="project-type" data-i18n="projectType">Open project</span>
+                </span>
+              </span>
+            </a>
+
+            <a
+              class="project-card"
+              href="projects/tavola-nostra/index.html?v=2"
+              data-project-name="Tavola-Nostra"
+              aria-label="Open Tavola-Nostra project site"
+            >
+              <span class="project-frame">
+                <img class="project-cover" src="assets/projects/tavola-nostra.jpg" alt="" />
+                <span class="project-meta">
+                  <span class="project-name">Tavola-Nostra</span>
+                  <span class="project-type" data-i18n="projectType">Open project</span>
+                </span>
+              </span>
+            </a>
+
+            <a
+              class="project-card"
+              href="projects/aeternum/index.html"
+              data-project-name="Aeternum"
+              aria-label="Open Aeternum project site"
+            >
+              <span class="project-frame">
+                <img class="project-cover" src="assets/projects/aeternum.jpg" alt="" />
+                <span class="project-meta">
+                  <span class="project-name">Aeternum</span>
+                  <span class="project-type" data-i18n="projectType">Open project</span>
+                </span>
+              </span>
+            </a>
+
+            <a
+              class="project-card"
+              href="projects/crt-terminal/index.html?v=2"
+              data-project-name="CRT-Terminal"
+              aria-label="Open CRT-Terminal project site"
+            >
+              <span class="project-frame">
+                <img class="project-cover" src="assets/projects/crt-terminal.jpg" alt="" />
+                <span class="project-meta">
+                  <span class="project-name">CRT-Terminal</span>
+                  <span class="project-type" data-i18n="projectType">Open project</span>
+                </span>
+              </span>
+            </a>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

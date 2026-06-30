@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0e0d0b">
+  <meta name="description" content="A cinematic one-page interactive noir detective experience.">
+  <title>Case File #371 — The Blackwood Earrings</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="desk" id="desk">
+    <div class="lamp-glow" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+
+    <header class="case-index" aria-label="Case progress">
+      <span class="case-index__num">371</span>
+      <span class="case-index__label">BLACKWOOD<br>EARRINGS</span>
+      <span class="case-index__rule"></span>
+      <span class="case-index__step" id="stepLabel">SEALED FILE</span>
+    </header>
+
+    <a class="case-study-link" href="case-study.html" aria-label="Open UX case study page">
+      <span>View UX Case Study</span>
+      <i aria-hidden="true"></i>
+    </a>
+
+    <div class="ambient-props" aria-label="Objects scattered across the desk">
+      <button class="desk-prop pencil" type="button" aria-label="Inspect the pencil" data-prop-message="A blunt pencil. Nothing but graphite and bite marks."></button>
+      <button class="desk-prop paperclip clip-one" type="button" aria-label="Inspect the large paper clip" data-prop-message="Bent out of shape. Entirely unremarkable."></button>
+      <button class="desk-prop paperclip clip-two" type="button" aria-label="Inspect the small paper clip" data-prop-message="A paper clip. It has no testimony to offer."></button>
+      <button class="desk-prop brass-key" type="button" aria-label="Inspect the old key" data-prop-message="An old desk key. It fits none of the locks in this case."><i></i><b></b></button>
+      <button class="desk-prop fountain-pen" type="button" aria-label="Inspect the fountain pen" data-prop-message="Black ink. The report was typed, not written."><i></i></button>
+      <button class="desk-prop magnifier" type="button" aria-label="Inspect the magnifying glass" data-prop-message="Dust, scratches, and an impressive lack of clues."><i></i></button>
+      <button class="desk-prop notebook" type="button" aria-label="Inspect the small notebook" data-prop-message="Phone numbers, grocery lists, no useful alibis."><span>NOTES</span><i></i></button>
+    </div>
+
+    <section class="folder-stage" id="folderStage">
+      <button class="folder folder--closed" id="folder" aria-label="Open case file">
+        <span class="folder__tab">M. BLACKWOOD / 371</span>
+        <span class="folder__crease"></span>
+        <span class="folder__content">
+          <small>CASE FILE</small>
+          <strong>#371</strong>
+          <em>THE BLACKWOOD<br>EARRINGS</em>
+        </span>
+        <span class="stamp stamp--confidential">CONFIDENTIAL</span>
+        <span class="folder__prompt"><i></i> Click to open</span>
+        <span class="folder__solved-stamp">CASE<br>SOLVED</span>
+      </button>
+
+      <article class="open-file" id="openFile" aria-hidden="true">
+        <div class="folder-back"></div>
+        <div class="report-paper">
+          <div class="report-paper__header">
+            <div>
+              <span>BLACKWOOD MANOR</span>
+              <h1>Incident report</h1>
+            </div>
+            <div class="report-number">CASE<br><b>#371</b></div>
+          </div>
+          <div class="report-grid">
+            <div class="case-facts">
+              <dl>
+                <div><dt>Victim</dt><dd>Margaret Blackwood</dd></div>
+                <div><dt>Crime</dt><dd>Diamond earrings stolen</dd></div>
+                <div><dt>Date</dt><dd>October 12</dd></div>
+                <div><dt>Location</dt><dd>Master bedroom</dd></div>
+                <div><dt>Estimated time</dt><dd>9:40 PM</dd></div>
+              </dl>
+              <p>Mrs. Blackwood reported the earrings missing after returning to her bedroom. The jewelry box was open. No signs of forced entry were found.</p>
+              <span class="margin-note">inside job?</span>
+            </div>
+            <button class="case-photo case-photo--earrings" data-lightbox="earrings" aria-label="Enlarge photograph of the missing earrings">
+              <span class="photo-image"></span>
+              <span class="photo-caption">The missing earrings</span>
+              <i class="tape"></i>
+            </button>
+          </div>
+          <div class="crime-row">
+            <div class="crime-copy">
+              <h2>Crime scene photo</h2>
+              <span class="evidence-code">EXHIBIT 03 — BEDROOM</span>
+              <p>Small burn mark found near the vanity. No cigarette was recovered.</p>
+              <span class="red-underline"></span>
+            </div>
+            <button class="case-photo case-photo--scene" data-lightbox="scene" aria-label="Enlarge crime scene photograph">
+              <span class="photo-image"></span>
+              <span class="photo-caption">Master bedroom, 10:17 PM</span>
+              <i class="tape"></i>
+            </button>
+          </div>
+          <button class="close-file" id="closeFile"><span>Close file</span><i></i></button>
+        </div>
+      </article>
+    </section>
+
+    <section class="investigation" id="investigation" aria-hidden="true">
+      <div class="suspect-heading">
+        <span>PERSONS OF INTEREST</span>
+        <h2>Inspect the suspects</h2>
+        <p id="suspectHint">Turn over at least three photographs.</p>
+      </div>
+
+      <div class="suspect-board" id="suspectBoard">
+        <button class="suspect-card" data-suspect="emily" style="--r:-4deg;--delay:0ms;--pos:0%" aria-label="Emily, housekeeper">
+          <span class="suspect-card__inner">
+            <span class="suspect-card__front">
+              <span class="portrait"></span>
+              <span class="suspect-name">Emily<small>Housekeeper</small></span>
+              <span class="pin"></span>
+            </span>
+            <span class="suspect-card__back">
+              <b>Emily / 01</b>
+              <ul><li>Smokes occasionally.</li><li class="key-fact">Prefers mint cigarettes.</li><li>Cleaned the bedroom that morning.</li><li class="key-fact">Always wears red lipstick.</li></ul>
+              <em>Housekeeper</em>
+            </span>
+          </span>
+        </button>
+        <button class="suspect-card" data-suspect="james" style="--r:2.5deg;--delay:100ms;--pos:25%" aria-label="James, butler">
+          <span class="suspect-card__inner">
+            <span class="suspect-card__front">
+              <span class="portrait"></span>
+              <span class="suspect-name">James<small>Butler</small></span>
+              <span class="pin"></span>
+            </span>
+            <span class="suspect-card__back">
+              <b>James / 02</b>
+              <ul><li class="key-fact">Doesn't smoke.</li><li>Worked in the dining room from 7 PM to 10 PM.</li><li>Victim trusts him completely.</li><li>Keeps the manor keys.</li></ul>
+              <em>Butler</em>
+            </span>
+          </span>
+        </button>
+        <button class="suspect-card" data-suspect="olivia" style="--r:-2deg;--delay:200ms;--pos:50%" aria-label="Olivia, daughter">
+          <span class="suspect-card__inner">
+            <span class="suspect-card__front">
+              <span class="portrait"></span>
+              <span class="suspect-name">Olivia<small>Daughter</small></span>
+              <span class="pin"></span>
+            </span>
+            <span class="suspect-card__back">
+              <b>Olivia / 03</b>
+              <ul><li class="key-fact">15 years old.</li><li>Was watching a movie upstairs.</li><li>Often borrows her mother's jewelry.</li><li>Argued with Margaret last week.</li></ul>
+              <em>Daughter</em>
+            </span>
+          </span>
+        </button>
+        <button class="suspect-card" data-suspect="thomas" style="--r:3.5deg;--delay:300ms;--pos:75%" aria-label="Thomas, gardener">
+          <span class="suspect-card__inner">
+            <span class="suspect-card__front">
+              <span class="portrait"></span>
+              <span class="suspect-name">Thomas<small>Gardener</small></span>
+              <span class="pin"></span>
+            </span>
+            <span class="suspect-card__back">
+              <b>Thomas / 04</b>
+              <ul><li>Smokes every day.</li><li class="key-fact">Rolls his own cigarettes.</li><li>Worked in the garden until 9 PM.</li><li>Left muddy footprints near the back door.</li></ul>
+              <em>Gardener</em>
+            </span>
+          </span>
+        </button>
+        <button class="suspect-card" data-suspect="claire" style="--r:-3deg;--delay:400ms;--pos:100%" aria-label="Claire, personal assistant">
+          <span class="suspect-card__inner">
+            <span class="suspect-card__front">
+              <span class="portrait"></span>
+              <span class="suspect-name">Claire<small>Personal assistant</small></span>
+              <span class="pin"></span>
+            </span>
+            <span class="suspect-card__back">
+              <b>Claire / 05</b>
+              <ul><li class="key-fact">Doesn't smoke.</li><li>Visited the manor at 8 PM.</li><li class="key-fact">Doesn't wear lipstick.</li><li>Collects vintage hats.</li></ul>
+              <em>Personal assistant</em>
+            </span>
+          </span>
+        </button>
+      </div>
+
+      <aside class="evidence-card" id="evidenceCard">
+        <span>EVIDENCE</span><b>#8</b>
+        <div class="typewriter" id="evidenceText"></div>
+        <small>BLACKWOOD MANOR • OCT 12</small>
+      </aside>
+
+      <div class="verdict-prompt" id="verdictPrompt">
+        <span>All clues considered</span>
+        <strong>Who stole the earrings?</strong>
+        <small>Choose a photograph</small>
+      </div>
+
+      <div class="wrong-note" id="wrongNote">Not enough evidence.</div>
+    </section>
+
+    <div class="coffee-cluster" id="coffeeCluster">
+      <div class="coffee-note"><span>REVIEW</span><br>call M.B.<br>before midnight</div>
+      <div class="coffee-ring" aria-hidden="true"></div>
+      <div class="cigarette" id="cigarette" aria-hidden="true"><i></i></div>
+      <button class="coffee-cup" id="coffeeCup" aria-label="Coffee cup"><span class="coffee"></span><i class="handle"></i></button>
+      <span class="cup-hint" id="cupHint">Move the cup</span>
+    </div>
+
+    <svg class="strings" id="strings" aria-hidden="true" viewBox="0 0 1440 900" preserveAspectRatio="none">
+      <path class="string string-one" d="M 1060 654 C 920 620, 770 690, 635 574 S 485 340, 350 310"/>
+      <path class="string string-two" d="M 1060 654 C 920 730, 700 735, 430 540 S 315 310, 260 300"/>
+      <circle cx="1060" cy="654" r="7"/><circle cx="350" cy="310" r="7"/>
+    </svg>
+
+    <section class="solution" id="solution" aria-hidden="true">
+      <div class="solution__paper">
+        <span class="solution__eyebrow">CASE FILE #371 / FINAL REPORT</span>
+        <h2>Emily took the earrings.</h2>
+        <p>The burn mark led to the cigarette.<br>The cigarette led to the lipstick.<br>The lipstick led to Emily.</p>
+        <strong>The Blackwood earrings<br>were recovered.</strong>
+        <button id="restartCase">Restart case <i></i></button>
+        <div class="solution-stamp">Case<br>Solved</div>
+      </div>
+    </section>
+
+    <dialog class="lightbox" id="lightbox">
+      <button class="lightbox__close" aria-label="Close enlarged photograph">×</button>
+      <div class="lightbox__photo"><div id="lightboxImage"></div><p id="lightboxCaption"></p></div>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

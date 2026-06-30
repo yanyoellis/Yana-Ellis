@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#050a12" />
+    <meta
+      name="description"
+      content="UX case study for LVL HOME — an interactive apartment finder based on a nighttime building facade."
+    />
+    <title>UX Case Study — LVL HOME</title>
+    <link rel="stylesheet" href="ux-case-study.css" />
+    <script src="ux-case-study.js" defer></script>
+  </head>
+  <body>
+    <div class="case-atmosphere" aria-hidden="true">
+      <span></span>
+      <span></span>
+    </div>
+
+    <header class="case-header">
+      <a class="case-brand" href="index.html" aria-label="LVL HOME — return to residences">
+        <svg viewBox="0 0 42 48" aria-hidden="true">
+          <path d="M6 43V16L21 5l15 11v27M11 43V20h20v23M6 43h30" />
+          <path d="M16 26h10v12H16zM21 26v12" />
+        </svg>
+        <span>LVL HOME</span>
+      </a>
+
+      <div class="case-header__right">
+        <nav aria-label="Main navigation">
+          <a href="about.html" data-nav="about">About</a>
+          <a href="index.html#floors" data-nav="floors">Floors</a>
+          <a class="is-active" href="ux-case-study.html" aria-current="page" data-nav="ux">UX Case</a>
+          <a href="contact.html" data-nav="contact">Contact</a>
+        </nav>
+
+        <div class="language-switcher" aria-label="Language">
+          <button type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang="ru" aria-pressed="false">RU</button>
+          <button type="button" data-lang="pl" aria-pressed="false">PL</button>
+          <button type="button" data-lang="uk" aria-pressed="false">UA</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="case-root" id="case-root"></main>
+
+    <footer class="case-footer" id="case-footer"></footer>
+  </body>
+</html>

@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#040a10" />
+    <meta name="description" content="Contact LVL HOME and arrange a private apartment viewing." />
+    <title>Contact — LVL HOME</title>
+    <link rel="stylesheet" href="contact.css" />
+    <script src="contact.js" defer></script>
+  </head>
+  <body>
+    <div class="contact-atmosphere" aria-hidden="true"></div>
+
+    <header class="contact-header">
+      <a class="contact-brand" href="index.html" aria-label="LVL HOME — return to residences">
+        <svg viewBox="0 0 42 48" aria-hidden="true">
+          <path d="M6 43V16L21 5l15 11v27M11 43V20h20v23M6 43h30" />
+          <path d="M16 26h10v12H16zM21 26v12" />
+        </svg>
+        <span>LVL HOME</span>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <a href="about.html">About</a>
+        <a href="index.html#floors">Floors</a>
+        <a href="ux-case-study.html">UX Case</a>
+        <a class="is-active" href="contact.html" aria-current="page">Contact</a>
+      </nav>
+    </header>
+
+    <main class="contact-page">
+      <div class="contact-visual" aria-hidden="true">
+        <img src="assets/contact-building-reference.png" alt="" />
+      </div>
+
+      <section class="contact-info" aria-labelledby="contact-title">
+        <p class="contact-eyebrow">Contact</p>
+        <h1 id="contact-title">Let’s find<br />your new home.</h1>
+        <p class="contact-lead">Our team is here to answer your questions and help you find the perfect apartment. Get in touch with us.</p>
+
+        <div class="contact-details">
+          <div class="contact-detail">
+            <span class="detail-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4 4.8 6.2c-.8.8.2 4.5 3.6 7.9s7.1 4.4 7.9 3.6l2.2-2.2-3.6-3.1-1.8 1.2c-1.4-.5-3.4-2.5-3.9-3.9l1.2-1.8L7 4Z" /></svg>
+            </span>
+            <div><a href="tel:+442071234567">+44 20 7123 4567</a><small>Mon – Fri&nbsp; 9:00 – 18:00</small></div>
+          </div>
+
+          <div class="contact-detail">
+            <span class="detail-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v12H3zM3 7l9 7 9-7" /></svg>
+            </span>
+            <div><a href="mailto:hello@lvlhome.com">hello@lvlhome.com</a><small>We aim to reply within 24 hours</small></div>
+          </div>
+
+          <div class="contact-detail">
+            <span class="detail-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.6 7-12a7 7 0 1 0-14 0c0 5.4 7 12 7 12Z" /><circle cx="12" cy="9" r="2" /></svg>
+            </span>
+            <div><strong>LVL HOME Sales Suite</strong><small>12 Westbourne Street, London W2 4YT</small></div>
+          </div>
+        </div>
+
+        <aside class="viewing-card">
+          <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="5" y="7" width="22" height="20" rx="1" /><path d="M10 4v7M22 4v7M5 13h22M10 17h3M16 17h3M22 17h1M10 21h3M16 21h3" /></svg>
+          <div>
+            <h2>Private viewing</h2>
+            <p>Book a private viewing and experience LVL HOME in person.</p>
+            <a href="#contact-form">Book a viewing <span>→</span></a>
+          </div>
+        </aside>
+      </section>
+
+      <form class="contact-form" id="contact-form">
+        <div class="field-row">
+          <label>
+            <span>Full name</span>
+            <input type="text" name="name" placeholder="Your name" autocomplete="name" required />
+          </label>
+          <label>
+            <span>Email address</span>
+            <input type="email" name="email" placeholder="Your email" autocomplete="email" required />
+          </label>
+        </div>
+
+        <label>
+          <span>Phone number</span>
+          <input type="tel" name="phone" placeholder="Your phone number" autocomplete="tel" />
+        </label>
+
+        <label>
+          <span>Interested in</span>
+          <select name="interest" required>
+            <option value="" selected disabled>Select apartment or floor</option>
+            <option value="2D">Apartment 2D</option>
+            <option value="4B">Apartment 4B</option>
+            <option value="5C">Apartment 5C</option>
+            <option value="7A">Apartment 7A</option>
+            <option value="8E">Apartment 8E</option>
+            <option value="10C">Apartment 10C</option>
+            <option value="11B">Apartment 11B</option>
+            <option value="general">General enquiry</option>
+          </select>
+        </label>
+
+        <label>
+          <span>Message</span>
+          <textarea name="message" rows="4" placeholder="How can we help you?"></textarea>
+        </label>
+
+        <button type="submit">Send message</button>
+        <p class="form-note">By submitting this form, you agree to our <a href="#privacy">Privacy Policy</a>.</p>
+        <p class="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </main>
+
+    <footer class="contact-footer">
+      <span>© LVL HOME 2026</span>
+      <div><a id="privacy" href="#privacy">Privacy policy</a><a href="#terms">Terms &amp; conditions</a></div>
+      <div><a href="#instagram">Instagram</a><a href="#facebook">Facebook</a></div>
+    </footer>
+  </body>
+</html>

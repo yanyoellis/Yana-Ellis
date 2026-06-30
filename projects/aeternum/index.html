@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#161412">
+  <meta name="description" content="AETERNUM — an interactive digital Pantheon of jewelry inspired by the gods.">
+  <title>AETERNUM — Jewelry inspired by the gods</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor-light" aria-hidden="true"></div>
+
+  <header class="site-header" aria-label="Primary navigation">
+    <button class="wordmark" data-action="pantheon" aria-label="Return to Pantheon">AETERNUM <span>MMXXVI</span></button>
+    <nav>
+      <button data-action="pantheon">Pantheon</button>
+      <button data-action="collections">Collections</button>
+      <a class="nav-link" href="case-study.html">UX Case</a>
+      <button data-action="about">About</button>
+      <button data-action="contact">Private viewing</button>
+    </nav>
+    <button class="sound-toggle" type="button" aria-label="Enable ambient sound" aria-pressed="false">
+      <span class="sound-bars" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="sound-label">Sound off</span>
+    </button>
+  </header>
+
+  <main id="experience">
+    <section class="scene scene-intro is-active" id="intro" aria-labelledby="intro-title">
+      <div class="temple-layer temple-back" aria-hidden="true"></div>
+      <div class="temple-layer temple-light" aria-hidden="true"></div>
+      <div class="intro-column intro-column-left" aria-hidden="true"></div>
+      <div class="intro-column intro-column-right" aria-hidden="true"></div>
+      <div class="intro-copy">
+        <p class="eyebrow">Rome · MMXXVI · Private house</p>
+        <h1 id="intro-title">AETERNUM</h1>
+        <p class="intro-subtitle">Jewelry inspired by the gods</p>
+        <div class="intro-actions">
+          <button class="enter-button" type="button" id="enter-button">
+            <span>Enter the Pantheon</span><i aria-hidden="true">↓</i>
+          </button>
+          <a class="case-study-button" href="case-study.html">
+            <span>View UX Case Study</span><i aria-hidden="true">→</i>
+          </a>
+        </div>
+      </div>
+      <div class="scroll-cue"><span>01</span><i></i><span>Threshold</span></div>
+    </section>
+
+    <section class="scene scene-pantheon" id="pantheon" aria-labelledby="pantheon-title" aria-hidden="true">
+      <div class="rotunda" aria-hidden="true">
+        <div class="oculus"></div>
+        <div class="dome-lines"></div>
+        <div class="floor-rings"></div>
+      </div>
+      <div class="pantheon-heading">
+        <p class="eyebrow">The central rotunda</p>
+        <h2 id="pantheon-title">Choose your passage</h2>
+        <p>Seven divine attributes. Seven sculptural collections.</p>
+      </div>
+      <div class="arch-gallery" id="arch-gallery" role="list" aria-label="Collection passages"></div>
+      <div class="central-relic" aria-hidden="true">
+        <div class="crystal-core"></div>
+        <div class="central-plinth"><span>AETERNUM</span></div>
+      </div>
+      <div class="gallery-controls">
+        <button id="arches-prev" type="button" aria-label="Previous passage">←</button>
+        <span><b id="arch-index">01</b> / 07</span>
+        <button id="arches-next" type="button" aria-label="Next passage">→</button>
+      </div>
+      <p class="spatial-hint">Drag or use arrows to orbit the rotunda</p>
+    </section>
+
+    <section class="scene scene-hall" id="hall" aria-labelledby="hall-title" aria-hidden="true">
+      <div class="hall-backdrop" aria-hidden="true"></div>
+      <div class="hall-vault" aria-hidden="true"><span></span><span></span><span></span></div>
+      <div class="hall-statue" aria-hidden="true"><div class="statue-head"></div><div class="statue-body"></div></div>
+      <div class="hall-copy">
+        <p class="eyebrow" id="hall-deity">Inspired by Zeus</p>
+        <h2 id="hall-title">Thunder</h2>
+        <p id="hall-intro">Sculpted light. Controlled power.</p>
+      </div>
+      <div class="relic-stage" id="relic-stage" aria-label="Jewelry exhibits"></div>
+      <div class="hall-actions">
+        <button class="text-button" type="button" data-action="pantheon">← Return to Pantheon</button>
+        <button class="text-button" type="button" id="next-hall">Next hall <span>→</span></button>
+      </div>
+      <p class="spatial-hint">Select a relic to draw closer</p>
+    </section>
+  </main>
+
+  <aside class="pantheon-map" aria-label="Pantheon map">
+    <span class="map-title">Plan</span>
+    <button class="map-node is-active" data-map="pantheon" aria-label="Central Hall"><i></i><span>Central</span></button>
+    <div id="map-collections"></div>
+  </aside>
+
+  <div class="transition-curtain" aria-hidden="true"><div></div><span>Approaching the hall</span></div>
+
+  <dialog class="product-dialog" id="product-dialog">
+    <button class="dialog-close" type="button" aria-label="Close product details">×</button>
+    <div class="product-visual" id="product-visual"></div>
+    <div class="product-info">
+      <p class="eyebrow" id="product-collection">Thunder Collection · I</p>
+      <h2 id="product-name">Lightning Earrings</h2>
+      <p class="product-description" id="product-description"></p>
+      <dl>
+        <div><dt>Material</dt><dd id="product-material"></dd></div>
+        <div><dt>Stones</dt><dd id="product-stones"></dd></div>
+        <div><dt>Offering</dt><dd id="product-price"></dd></div>
+      </dl>
+      <div class="dialog-actions">
+        <button class="primary-button" type="button" data-action="contact">Request private viewing</button>
+        <button class="secondary-button" type="button" data-action="close-product">Return to hall</button>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="stone-dialog" id="about-dialog">
+    <button class="dialog-close" type="button" aria-label="Close about panel">×</button>
+    <p class="eyebrow">Inscription · About the house</p>
+    <h2>Objects made for<br>an eternal present.</h2>
+    <p>AETERNUM is a fictional luxury jewelry house inspired by classical mythology, sacred architecture, and the symbolic language of ancient gods. Each collection transforms divine attributes into sculptural jewelry pieces, presented as relics inside a digital pantheon.</p>
+    <div class="inscription-mark">Æ</div>
+  </dialog>
+
+  <dialog class="contact-dialog" id="contact-dialog">
+    <button class="dialog-close" type="button" aria-label="Close contact panel">×</button>
+    <div>
+      <p class="eyebrow">The inner chamber</p>
+      <h2>Request a<br>private viewing</h2>
+      <p>Leave a note with the house. Your curator will reply within two working days.</p>
+    </div>
+    <form id="viewing-form">
+      <label>Name<input name="name" autocomplete="name" required placeholder="Your name"></label>
+      <label>Email<input name="email" type="email" autocomplete="email" required placeholder="you@example.com"></label>
+      <label>Collection<select name="collection" id="collection-select"></select></label>
+      <label>Message<textarea name="message" rows="2" placeholder="Tell us which relic drew you in"></textarea></label>
+      <button class="primary-button" type="submit">Send request</button>
+      <p class="form-status" role="status"></p>
+    </form>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>

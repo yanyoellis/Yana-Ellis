@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0e0d0b">
+  <meta name="description" content="UX case study for Case File #371: The Blackwood Earrings, an interactive noir detective portfolio concept.">
+  <title>UX Case Study - Case File #371 - The Blackwood Earrings</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Playfair+Display:wght@600;700;800&family=Special+Elite&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="case-study.css">
+</head>
+<body>
+  <div class="study-shell" id="top">
+    <div class="study-grain" aria-hidden="true"></div>
+    <div class="study-lamp" aria-hidden="true"></div>
+
+    <header class="study-nav" aria-label="Case study navigation">
+      <a class="study-nav__brand" href="index.html" data-i18n="nav.brand">CASE FILE #371</a>
+      <nav class="study-nav__links" aria-label="Primary">
+        <a href="#overview" data-i18n="nav.study">UX Case Study</a>
+        <a href="index.html" data-i18n="nav.project">Live Project</a>
+        <a href="https://github.com/yanyoellis/Noir" target="_blank" rel="noreferrer" data-i18n="nav.github">GitHub</a>
+      </nav>
+      <div class="language-switcher" aria-label="Language switcher">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="ru" aria-pressed="false">RU</button>
+        <button type="button" data-lang="pl" aria-pressed="false">PL</button>
+        <button type="button" data-lang="uk" aria-pressed="false">UK</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero-section section-dark">
+        <div class="hero-copy reveal">
+          <p class="eyebrow" data-i18n="hero.label">INTERACTIVE UX CASE STUDY</p>
+          <h1 data-i18n="hero.title">CASE FILE #371<br>THE BLACKWOOD EARRINGS</h1>
+          <p class="hero-subtitle" data-i18n="hero.subtitle">Designing a one-page interactive detective experience where users inspect evidence, uncover hidden clues, and solve a fictional jewelry theft through visual storytelling.</p>
+          <div class="meta-grid" aria-label="Project metadata">
+            <article><span data-i18n="meta.role.label">Role</span><strong data-i18n="meta.role.value">UX/UI Designer</strong></article>
+            <article><span data-i18n="meta.type.label">Project Type</span><strong data-i18n="meta.type.value">Interactive Portfolio Concept</strong></article>
+            <article><span data-i18n="meta.format.label">Format</span><strong data-i18n="meta.format.value">One-page interactive experience</strong></article>
+            <article><span data-i18n="meta.focus.label">Focus</span><strong data-i18n="meta.focus.value">Storytelling, microinteractions, visual UI, user flow</strong></article>
+            <article><span data-i18n="meta.tools.label">Tools</span><strong data-i18n="meta.tools.value">Figma, Photoshop, HTML, CSS, JavaScript</strong></article>
+          </div>
+          <div class="cta-row">
+            <a class="button button--gold" href="index.html" data-i18n="cta.live">View Live Project</a>
+            <a class="button button--ghost" href="https://github.com/yanyoellis/Noir" target="_blank" rel="noreferrer" data-i18n="cta.github">View GitHub</a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" aria-label="Decorative case file preview">
+          <div class="case-card">
+            <span class="case-card__stamp case-card__stamp--confidential" data-i18n="hero.card.confidential">CONFIDENTIAL</span>
+            <span class="case-card__stamp case-card__stamp--solved" data-i18n="hero.card.solved">CASE SOLVED</span>
+            <div class="case-card__string" aria-hidden="true"></div>
+            <div class="case-card__pin case-card__pin--one" aria-hidden="true"></div>
+            <div class="case-card__pin case-card__pin--two" aria-hidden="true"></div>
+            <p data-i18n="hero.card.label">UX CASE NOTES</p>
+            <h2 data-i18n="hero.card.title">Blackwood Earrings</h2>
+            <div class="case-card__polaroid">
+              <span></span>
+              <small data-i18n="hero.card.photo">interactive desk preview</small>
+            </div>
+            <em data-i18n="hero.card.note">A detective story told through objects, pacing, and visual feedback.</em>
+          </div>
+        </div>
+      </section>
+
+      <section class="study-section paper-section reveal" id="overview">
+        <div class="section-heading">
+          <span>01</span>
+          <h2 data-i18n="overview.title">PROJECT OVERVIEW</h2>
+        </div>
+        <div class="two-column">
+          <div class="copy-block">
+            <p data-i18n="overview.p1">The Blackwood Earrings is a single-page interactive portfolio concept designed as a noir detective desk. Instead of presenting information through a standard scroll-based layout, the project invites users to participate in a short investigation. The user opens a case folder, reads the crime report, inspects suspect photos, discovers a hidden cigarette butt under a coffee cup, and identifies the guilty suspect.</p>
+            <p data-i18n="overview.p2">The goal was not to create a complex game, but to design a focused interactive experience that demonstrates visual UI, storytelling, microanimations, state-based interactions, and clear UX logic within one atmospheric interface.</p>
+          </div>
+          <aside class="side-card">
+            <div><span data-i18n="overview.core.label">Core idea</span><strong data-i18n="overview.core.value">A detective story told through objects on a desk.</strong></div>
+            <div><span data-i18n="overview.task.label">User task</span><strong data-i18n="overview.task.value">Find the clue, connect the evidence, solve the case.</strong></div>
+            <div><span data-i18n="overview.outcome.label">Final outcome</span><strong data-i18n="overview.outcome.value">Emily, the housekeeper, is revealed as the guilty suspect.</strong></div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="study-section section-dark reveal">
+        <div class="section-heading">
+          <span>02</span>
+          <h2 data-i18n="challenge.title">THE CHALLENGE</h2>
+        </div>
+        <div class="copy-block copy-block--wide">
+          <p data-i18n="challenge.p1">Most portfolio projects are passive. Users scroll, look at screens, and leave. This concept explores how a portfolio project can become an experience instead of a static presentation. The main challenge was to balance atmosphere and usability: the interface needed to feel mysterious, but never confusing.</p>
+          <p data-i18n="challenge.p2">The experience had to guide users through a clear investigation without relying on long instructions, complex inventory systems, timers, or game mechanics that could distract from the design itself.</p>
+        </div>
+        <div class="challenge-grid">
+          <article><b>01</b><h3 data-i18n="challenge.card1.title">Make interaction feel natural</h3><p data-i18n="challenge.card1.text">The user should understand what can be clicked, opened, inspected, or moved without needing a tutorial.</p></article>
+          <article><b>02</b><h3 data-i18n="challenge.card2.title">Preserve the noir atmosphere</h3><p data-i18n="challenge.card2.text">The interface had to feel cinematic and mature, not cartoonish or overly playful.</p></article>
+          <article><b>03</b><h3 data-i18n="challenge.card3.title">Keep the story short</h3><p data-i18n="challenge.card3.text">The full experience should be completed in under three minutes.</p></article>
+          <article><b>04</b><h3 data-i18n="challenge.card4.title">Make the evidence logic readable</h3><p data-i18n="challenge.card4.text">Each clue had to lead clearly toward the final suspect.</p></article>
+        </div>
+      </section>
+
+      <section class="study-section paper-section reveal">
+        <div class="section-heading">
+          <span>03</span>
+          <h2 data-i18n="goals.title">DESIGN GOALS</h2>
+        </div>
+        <div class="goal-grid">
+          <article><b data-i18n="goal1.label">Goal 01</b><h3 data-i18n="goal1.title">Encourage curiosity</h3><p data-i18n="goal1.text">Use physical objects, hidden clues, and progressive discovery to make users want to explore the scene.</p></article>
+          <article><b data-i18n="goal2.label">Goal 02</b><h3 data-i18n="goal2.title">Minimize instructions</h3><p data-i18n="goal2.text">Replace long explanations with visual feedback, hover states, object movement, and clear interaction cues.</p></article>
+          <article><b data-i18n="goal3.label">Goal 03</b><h3 data-i18n="goal3.title">Build a cinematic mood</h3><p data-i18n="goal3.text">Use warm lighting, old paper, shadows, dust, red strings, and imperfect textures to create a noir detective atmosphere.</p></article>
+          <article><b data-i18n="goal4.label">Goal 04</b><h3 data-i18n="goal4.title">Keep the flow simple</h3><p data-i18n="goal4.text">Limit the experience to one screen, one case, five suspects, one hidden clue, and one final decision.</p></article>
+          <article><b data-i18n="goal5.label">Goal 05</b><h3 data-i18n="goal5.title">Reward observation</h3><p data-i18n="goal5.text">The user should feel clever for discovering the cigarette butt and connecting it to Emily.</p></article>
+          <article><b data-i18n="goal6.label">Goal 06</b><h3 data-i18n="goal6.title">Showcase UI craft</h3><p data-i18n="goal6.text">Use hover effects, flip cards, lightboxes, drag interaction, typing effects, and animated case-solving feedback.</p></article>
+        </div>
+      </section>
+
+      <section class="study-section section-dark reveal">
+        <div class="section-heading">
+          <span>04</span>
+          <h2 data-i18n="flow.title">USER FLOW</h2>
+        </div>
+        <ol class="flow-diagram">
+          <li data-i18n="flow.open">Open Case Folder</li>
+          <li data-i18n="flow.report">Read Crime Report</li>
+          <li data-i18n="flow.scene">Inspect Crime Scene Photo</li>
+          <li data-i18n="flow.close">Close File</li>
+          <li data-i18n="flow.review">Review Suspect Polaroids</li>
+          <li data-i18n="flow.flip">Flip Suspect Cards</li>
+          <li data-i18n="flow.cup">Move Coffee Cup</li>
+          <li data-i18n="flow.evidence">Discover Cigarette Butt</li>
+          <li data-i18n="flow.choose">Choose Guilty Suspect</li>
+          <li data-i18n="flow.solved">Case Solved</li>
+        </ol>
+        <p class="section-note" data-i18n="flow.note">The flow uses progressive disclosure. The user receives only the information needed at each stage. This keeps the experience focused and prevents the interface from becoming overloaded.</p>
+      </section>
+
+      <section class="study-section paper-section reveal">
+        <div class="section-heading">
+          <span>05</span>
+          <h2 data-i18n="ia.title">INFORMATION ARCHITECTURE</h2>
+        </div>
+        <div class="two-column two-column--diagram">
+          <div class="ia-board">
+            <ul class="ia-tree">
+              <li><span data-i18n="ia.root">Desk Scene</span>
+                <ul>
+                  <li><span data-i18n="ia.folder">Case Folder</span>
+                    <ul>
+                      <li data-i18n="ia.report">Crime Report</li>
+                      <li data-i18n="ia.earrings">Earrings Photo</li>
+                      <li data-i18n="ia.scene">Crime Scene Photo</li>
+                    </ul>
+                  </li>
+                  <li><span data-i18n="ia.suspects">Suspect Photos</span>
+                    <ul>
+                      <li data-i18n="name.emily">Emily</li>
+                      <li data-i18n="name.james">James</li>
+                      <li data-i18n="name.olivia">Olivia</li>
+                      <li data-i18n="name.thomas">Thomas</li>
+                      <li data-i18n="name.claire">Claire</li>
+                    </ul>
+                  </li>
+                  <li><span data-i18n="ia.hidden">Hidden Evidence</span>
+                    <ul>
+                      <li data-i18n="ia.cup">Coffee Cup</li>
+                      <li data-i18n="ia.butt">Cigarette Butt</li>
+                      <li data-i18n="ia.card">Evidence Card</li>
+                    </ul>
+                  </li>
+                  <li><span data-i18n="ia.final">Final Decision</span>
+                    <ul>
+                      <li data-i18n="ia.wrong">Wrong Suspect Feedback</li>
+                      <li data-i18n="ia.emilySelected">Emily Selected</li>
+                      <li data-i18n="ia.result">Case Solved Result</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <p class="section-note section-note--paper" data-i18n="ia.note">The information architecture was designed around physical storytelling. Every piece of content appears as an object on the detective desk, making the interface feel like a scene rather than a standard website layout.</p>
+        </div>
+      </section>
+
+      <section class="study-section section-dark reveal">
+        <div class="section-heading">
+          <span>06</span>
+          <h2 data-i18n="interaction.title">INTERACTION DESIGN</h2>
+        </div>
+        <div class="interaction-stack">
+          <article class="interaction-block">
+            <div class="mockup mockup--folder" aria-hidden="true"></div>
+            <div><span data-i18n="interaction.block1.label">Block 01</span><h3 data-i18n="interaction.block1.title">Case Folder Opening</h3><p data-i18n="interaction.block1.text">The closed case folder acts as the entry point into the story. The hover state subtly lifts the folder corner, while the click animation opens the file and zooms the user into the investigation. This creates a sense of commitment before the first document appears.</p><b data-i18n="interaction.purpose">UX purpose:</b><em data-i18n="interaction.block1.purpose">Introduce the story through a physical action.</em></div>
+          </article>
+          <article class="interaction-block">
+            <div class="mockup mockup--polaroid" aria-hidden="true"></div>
+            <div><span data-i18n="interaction.block2.label">Block 02</span><h3 data-i18n="interaction.block2.title">Polaroid Inspection</h3><p data-i18n="interaction.block2.text">Suspect information is hidden on the reverse side of each polaroid. This creates a natural investigation pattern: the user must inspect every person instead of receiving all facts at once. Each card has a unique rotation to make the desk feel imperfect and realistic.</p><b data-i18n="interaction.purpose">UX purpose:</b><em data-i18n="interaction.block2.purpose">Turn reading into discovery.</em></div>
+          </article>
+          <article class="interaction-block">
+            <div class="mockup mockup--cup" aria-hidden="true"></div>
+            <div><span data-i18n="interaction.block3.label">Block 03</span><h3 data-i18n="interaction.block3.title">Hidden Coffee Cup Evidence</h3><p data-i18n="interaction.block3.text">The coffee cup is intentionally designed as part of the scene first, not as an obvious button. It becomes interactive only after the user has inspected at least three suspects. This prevents users from discovering the key clue too early and supports the intended investigation flow.</p><b data-i18n="interaction.purpose">UX purpose:</b><em data-i18n="interaction.block3.purpose">Control pacing without forcing the user.</em></div>
+          </article>
+          <article class="interaction-block">
+            <div class="mockup mockup--evidence" aria-hidden="true"></div>
+            <div><span data-i18n="interaction.block4.label">Block 04</span><h3 data-i18n="interaction.block4.title">Evidence Reveal</h3><p data-i18n="interaction.block4.text">When the cigarette butt is revealed, an evidence card appears with a typewriter animation. The red lipstick mark and mint cigarette detail directly connect the hidden clue to Emily's suspect profile.</p><b data-i18n="interaction.purpose">UX purpose:</b><em data-i18n="interaction.block4.purpose">Make the deduction understandable.</em></div>
+          </article>
+          <article class="interaction-block">
+            <div class="mockup mockup--solved" aria-hidden="true"></div>
+            <div><span data-i18n="interaction.block5.label">Block 05</span><h3 data-i18n="interaction.block5.title">Final Suspect Selection</h3><p data-i18n="interaction.block5.text">The final choice is made by clicking a suspect photo. Wrong selections create a small shake animation and a short "Not enough evidence" note. Selecting Emily triggers red strings, a CASE SOLVED stamp, and the final explanation.</p><b data-i18n="interaction.purpose">UX purpose:</b><em data-i18n="interaction.block5.purpose">Give immediate feedback and emotional closure.</em></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="study-section paper-section reveal">
+        <div class="section-heading">
+          <span>07</span>
+          <h2 data-i18n="narrative.title">NARRATIVE LOGIC</h2>
+        </div>
+        <div class="deduction-board">
+          <p data-i18n="narrative.p">The mystery was designed around a simple clue chain. The crime scene starts with a burn mark but no cigarette. Later, the user discovers a cigarette butt with red lipstick under the coffee cup. The suspect facts help eliminate everyone except Emily.</p>
+          <div class="deduction-grid">
+            <article><b data-i18n="name.james">James</b><span data-i18n="narrative.james">Does not smoke.</span></article>
+            <article><b data-i18n="name.olivia">Olivia</b><span data-i18n="narrative.olivia">She is 15 years old, making the cigarette clue unlikely.</span></article>
+            <article><b data-i18n="name.thomas">Thomas</b><span data-i18n="narrative.thomas">Smokes, but rolls his own cigarettes. The found cigarette is thin and mint-flavored.</span></article>
+            <article><b data-i18n="name.claire">Claire</b><span data-i18n="narrative.claire">Does not smoke and does not wear lipstick.</span></article>
+            <article class="is-guilty"><b data-i18n="name.emily">Emily</b><span data-i18n="narrative.emily">Occasionally smokes mint cigarettes and always wears red lipstick.</span></article>
+          </div>
+          <div class="conclusion-note">
+            <strong data-i18n="narrative.conclusion">Conclusion:</strong>
+            <p data-i18n="narrative.lines">The burn mark led to the cigarette.<br>The cigarette led to the lipstick.<br>The lipstick led to Emily.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="study-section section-dark reveal">
+        <div class="section-heading">
+          <span>08</span>
+          <h2 data-i18n="visual.title">VISUAL LANGUAGE</h2>
+        </div>
+        <p class="section-note" data-i18n="visual.p">The visual system is built around noir cinema and old detective case materials. The interface uses a dark wooden desk as the main stage, aged paper for readable content, muted gold for premium details, and dark red for evidence connections. The design avoids bright colors to preserve the serious, cinematic mood.</p>
+        <div class="visual-grid">
+          <article><h3 data-i18n="visual.color.title">Color</h3><p data-i18n="visual.color.text">Almost black, dark wood, aged beige, dirty white, dark red, muted gold.</p><div class="swatches"><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
+          <article><h3 data-i18n="visual.type.title">Typography</h3><p data-i18n="visual.type.text">Elegant serif headings, typewriter body text, handwritten polaroid labels.</p></article>
+          <article><h3 data-i18n="visual.texture.title">Texture</h3><p data-i18n="visual.texture.text">Paper grain, dust overlay, coffee stains, cigarette burn, worn edges.</p></article>
+          <article><h3 data-i18n="visual.light.title">Lighting</h3><p data-i18n="visual.light.text">Soft warm lamp glow, strong shadows, subtle vignette.</p></article>
+          <article><h3 data-i18n="visual.mood.title">Mood</h3><p data-i18n="visual.mood.text">Private detective office, late night, expensive theft, quiet tension.</p></article>
+        </div>
+      </section>
+
+      <section class="study-section paper-section reveal">
+        <div class="section-heading">
+          <span>09</span>
+          <h2 data-i18n="components.title">UI COMPONENTS</h2>
+        </div>
+        <p class="section-note section-note--paper" data-i18n="components.p">The interface components are designed as physical objects rather than standard web elements. Buttons, cards, modals, and feedback states are disguised as case materials, which keeps the experience immersive while still maintaining functional clarity.</p>
+        <div class="component-grid">
+          <span data-i18n="component.folder">Case folder</span>
+          <span data-i18n="component.report">Crime report document</span>
+          <span data-i18n="component.polaroid">Polaroid card</span>
+          <span data-i18n="component.reverse">Polaroid reverse side</span>
+          <span data-i18n="component.evidence">Evidence card</span>
+          <span data-i18n="component.cup">Coffee cup</span>
+          <span data-i18n="component.butt">Cigarette butt</span>
+          <span data-i18n="component.string">Red string</span>
+          <span data-i18n="component.pins">Push pins</span>
+          <span data-i18n="component.stamp">Rubber stamp</span>
+          <span data-i18n="component.lightbox">Lightbox photo</span>
+          <span data-i18n="component.result">Final result card</span>
+        </div>
+      </section>
+
+      <section class="study-section section-dark reveal">
+        <div class="section-heading">
+          <span>10</span>
+          <h2 data-i18n="micro.title">MICROINTERACTIONS</h2>
+        </div>
+        <dl class="micro-list">
+          <div><dt data-i18n="micro.folderHover.label">Folder hover</dt><dd data-i18n="micro.folderHover.text">Subtle glow and lifted corner.</dd></div>
+          <div><dt data-i18n="micro.folderClick.label">Folder click</dt><dd data-i18n="micro.folderClick.text">Smooth opening animation and slight zoom.</dd></div>
+          <div><dt data-i18n="micro.document.label">Document reveal</dt><dd data-i18n="micro.document.text">Slide and fade transition.</dd></div>
+          <div><dt data-i18n="micro.polaroidHover.label">Polaroid hover</dt><dd data-i18n="micro.polaroidHover.text">Lift, straighten, and shadow increase.</dd></div>
+          <div><dt data-i18n="micro.polaroidClick.label">Polaroid click</dt><dd data-i18n="micro.polaroidClick.text">Flip animation to show suspect notes.</dd></div>
+          <div><dt data-i18n="micro.cup.label">Coffee cup interaction</dt><dd data-i18n="micro.cup.text">Grab cursor, slight movement, drag or click-to-move.</dd></div>
+          <div><dt data-i18n="micro.evidence.label">Evidence reveal</dt><dd data-i18n="micro.evidence.text">Cigarette appears from shadow, evidence card types out text.</dd></div>
+          <div><dt data-i18n="micro.wrong.label">Wrong answer</dt><dd data-i18n="micro.wrong.text">Suspect photo shakes and displays "Not enough evidence."</dd></div>
+          <div><dt data-i18n="micro.correct.label">Correct answer</dt><dd data-i18n="micro.correct.text">Emily photo highlights, red strings connect clues, CASE SOLVED stamp appears.</dd></div>
+          <div><dt data-i18n="micro.restart.label">Restart</dt><dd data-i18n="micro.restart.text">Scene resets with a short reverse animation.</dd></div>
+        </dl>
+      </section>
+
+      <section class="study-section paper-section reveal">
+        <div class="section-heading">
+          <span>11</span>
+          <h2 data-i18n="access.title">ACCESSIBILITY &amp; USABILITY</h2>
+        </div>
+        <div class="two-column">
+          <p class="section-note section-note--paper" data-i18n="access.p">Although the project is highly visual, the experience must remain usable and readable. Interactive objects need clear feedback states, large clickable areas, and enough contrast between text and paper backgrounds.</p>
+          <ul class="checklist">
+            <li data-i18n="access.item1">Readable type sizes</li>
+            <li data-i18n="access.item2">Strong contrast on documents</li>
+            <li data-i18n="access.item3">Large clickable targets</li>
+            <li data-i18n="access.item4">Visible hover and focus states</li>
+            <li data-i18n="access.item5">Keyboard support for major actions</li>
+            <li data-i18n="access.item6">Reduced motion option</li>
+            <li data-i18n="access.item7">No essential information hidden only in color</li>
+            <li data-i18n="access.item8">Short text blocks</li>
+            <li data-i18n="access.item9">Clear final feedback</li>
+          </ul>
+        </div>
+        <p class="hand-note" data-i18n="access.note">The noir style should never reduce usability. Atmosphere supports the experience, but clarity controls it.</p>
+      </section>
+
+      <section class="study-section section-dark reveal">
+        <div class="section-heading">
+          <span>12</span>
+          <h2 data-i18n="tech.title">TECHNICAL STRUCTURE</h2>
+        </div>
+        <p class="section-note" data-i18n="tech.p">The project can be built as a single-page front-end experience using HTML, CSS, and JavaScript. The logic is based on simple state changes rather than complex game systems.</p>
+        <div class="tech-grid">
+          <article><h3>HTML</h3><p data-i18n="tech.html">Scene structure, documents, polaroids, evidence cards, final result.</p></article>
+          <article><h3>CSS</h3><p data-i18n="tech.css">Layered desk composition, transforms, shadows, textures, responsive layout, animations.</p></article>
+          <article><h3>JavaScript</h3><p data-i18n="tech.js">Opening and closing the case folder, tracking viewed suspects, enabling the coffee cup, revealing evidence, validating suspect choice, restarting the case.</p></article>
+          <article><h3 data-i18n="tech.state.title">State logic</h3><p>folderOpened<br>fileClosed<br>viewedSuspectsCount<br>coffeeCupUnlocked<br>evidenceFound<br>caseSolved</p></article>
+        </div>
+        <div class="do-not">
+          <h3 data-i18n="tech.donot.title">Do not build</h3>
+          <span data-i18n="tech.donot.1">inventory system</span>
+          <span data-i18n="tech.donot.2">timer</span>
+          <span data-i18n="tech.donot.3">score counter</span>
+          <span data-i18n="tech.donot.4">multi-page game</span>
+          <span data-i18n="tech.donot.5">complex dialogue system</span>
+        </div>
+      </section>
+
+      <section class="study-section paper-section reveal">
+        <div class="section-heading">
+          <span>13</span>
+          <h2 data-i18n="decisions.title">KEY DESIGN DECISIONS</h2>
+        </div>
+        <div class="decision-grid">
+          <article><b data-i18n="decision1.label">Decision 01</b><h3 data-i18n="decision1.title">One-screen detective desk</h3><p data-i18n="decision1.text">The entire experience takes place on one desk to preserve immersion. Instead of navigating between pages, the user moves through the story by interacting with objects in the same physical space.</p></article>
+          <article><b data-i18n="decision2.label">Decision 02</b><h3 data-i18n="decision2.title">Progressive disclosure</h3><p data-i18n="decision2.text">Information appears only when it becomes relevant. This keeps the interface clean and makes each discovery feel intentional.</p></article>
+          <article><b data-i18n="decision3.label">Decision 03</b><h3 data-i18n="decision3.title">Delayed hidden clue</h3><p data-i18n="decision3.text">The cigarette butt is locked until the user inspects enough suspects. This protects the narrative structure and prevents the solution from appearing too early.</p></article>
+          <article><b data-i18n="decision4.label">Decision 04</b><h3 data-i18n="decision4.title">Physical UI instead of standard UI</h3><p data-i18n="decision4.text">Buttons and cards are represented as folders, photos, documents, stamps, and evidence notes. This makes the interface feel like part of the story.</p></article>
+          <article><b data-i18n="decision5.label">Decision 05</b><h3 data-i18n="decision5.title">Subtle guidance</h3><p data-i18n="decision5.text">The design uses hover feedback, shadows, movement, and cursor changes instead of direct instructions. The user is guided visually without breaking the atmosphere.</p></article>
+          <article><b data-i18n="decision6.label">Decision 06</b><h3 data-i18n="decision6.title">Short interaction loop</h3><p data-i18n="decision6.text">The mystery is intentionally short. The goal is to demonstrate interaction design and UX thinking quickly, not to create a full detective game.</p></article>
+        </div>
+      </section>
+
+      <section class="study-section section-dark final-section reveal">
+        <div class="section-heading">
+          <span>14</span>
+          <h2 data-i18n="final.title">FINAL EXPERIENCE</h2>
+        </div>
+        <div class="two-column">
+          <p class="section-note" data-i18n="final.p">At the end of the investigation, the user selects Emily as the guilty suspect. Her photo becomes highlighted, red strings connect the cigarette butt, crime scene, and suspect profile, and a CASE SOLVED stamp appears on the folder.</p>
+          <div class="final-card">
+            <p data-i18n="final.case">Emily took the earrings while cleaning the bedroom.<br>The burn mark led to the cigarette.<br>The cigarette led to the lipstick.<br>The lipstick led to Emily.</p>
+            <strong data-i18n="final.status">THE BLACKWOOD EARRINGS WERE RECOVERED.</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="study-section paper-section reveal">
+        <div class="section-heading">
+          <span>15</span>
+          <h2 data-i18n="reflection.title">REFLECTION</h2>
+        </div>
+        <div class="copy-block copy-block--wide">
+          <p data-i18n="reflection.p1">This project explores how interaction design can become part of storytelling. The main value of the concept is not the mystery itself, but the way the user uncovers it through objects, motion, visual hierarchy, and controlled information flow.</p>
+          <p data-i18n="reflection.p2">The biggest challenge was keeping the interface atmospheric without making it confusing. Every interaction needed to feel like part of the detective scene while still behaving like a clear digital interface.</p>
+          <p data-i18n="reflection.p3">If expanded further, the project could include multiple endings, optional clue notes, accessibility testing, improved keyboard navigation, and adaptive hints for users who do not discover the hidden evidence quickly.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="study-footer">
+      <p><span data-i18n="footer.title">CASE FILE #371<br>THE BLACKWOOD EARRINGS</span></p>
+      <small data-i18n="footer.by">Interactive UX/UI portfolio concept by Yana Ellis.</small>
+      <div class="cta-row">
+        <a class="button button--gold" href="index.html" data-i18n="cta.live">View Live Project</a>
+        <a class="button button--ghost" href="https://github.com/yanyoellis/Noir" target="_blank" rel="noreferrer" data-i18n="cta.github">View GitHub</a>
+        <a class="button button--ghost" href="https://github.com/yanyoellis" target="_blank" rel="noreferrer" data-i18n="footer.portfolio">Back to Portfolio</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="case-study.js"></script>
+</body>
+</html>

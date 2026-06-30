@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#020503" />
+    <meta name="description" content="An interactive late-eighties CRT terminal." />
+    <title>CRT Terminal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=2" />
+  </head>
+  <body>
+    <input
+      class="keyboard-capture"
+      id="keyboardCapture"
+      type="text"
+      inputmode="none"
+      autocomplete="off"
+      spellcheck="false"
+      aria-hidden="true"
+      tabindex="-1"
+      autofocus
+    />
+    <main class="scene" aria-label="A vintage computer terminal in a dark room">
+      <div class="artwork">
+        <div class="crt" id="crt">
+          <div class="terminal-scroll" id="terminal" role="log" aria-live="polite" aria-label="Interactive terminal">
+            <div class="terminal-flow" id="flow"></div>
+          </div>
+          <canvas class="matrix" id="matrix" aria-hidden="true"></canvas>
+          <div class="shutdown" id="shutdown" aria-hidden="true">
+            <span id="signalText"></span>
+          </div>
+          <div class="glass" aria-hidden="true"></div>
+        </div>
+      </div>
+    </main>
+    <div class="ux-folder-overlay" id="uxFolder" role="dialog" aria-modal="true" aria-labelledby="uxFolderTitle" aria-hidden="true" hidden>
+      <article class="ux-folder">
+        <div class="ux-folder__tab" data-ux-i18n="tab">UX DOSSIER</div>
+        <button class="ux-folder__close" id="uxFolderClose" type="button" aria-label="Close UX dossier" data-ux-i18n="close" data-ux-i18n-aria="closeAria">CLOSE</button>
+        <div class="ux-folder__language" aria-label="UX dossier language">
+          <button class="ux-folder__lang is-active" type="button" data-ux-lang="en" aria-pressed="true">EN</button>
+          <button class="ux-folder__lang" type="button" data-ux-lang="ru" aria-pressed="false">RU</button>
+          <button class="ux-folder__lang" type="button" data-ux-lang="uk" aria-pressed="false">UK</button>
+          <button class="ux-folder__lang" type="button" data-ux-lang="pl" aria-pressed="false">PL</button>
+        </div>
+        <p class="ux-folder__meta" data-ux-i18n="meta">FILE CRT-UX-1987 / STATUS OPENED / ACCESS GUEST</p>
+        <h1 id="uxFolderTitle" data-ux-i18n="title">CRT Terminal UX Case</h1>
+
+        <section>
+          <h2 data-ux-i18n="conceptTitle">Concept</h2>
+          <p data-ux-i18n="conceptBody">CRT Terminal turns a portfolio page into an interactive command-line object. The interface removes traditional navigation and asks the user to explore through typed commands, making the act of discovery part of the visual identity.</p>
+        </section>
+
+        <section>
+          <h2 data-ux-i18n="problemTitle">UX Problem</h2>
+          <p data-ux-i18n="problemBody">Most project pages explain interaction from the outside: menu, hero, cards, text, CTA. This concept needed the opposite feeling. The user should feel like they have found an old machine and are learning its language, while still understanding what can be done next.</p>
+        </section>
+
+        <section>
+          <h2 data-ux-i18n="goalsTitle">Goals</h2>
+          <ul>
+            <li data-ux-i18n="goalOne">Create a memorable first interaction instead of a standard landing layout.</li>
+            <li data-ux-i18n="goalTwo">Make commands discoverable through help, feedback, and short system responses.</li>
+            <li data-ux-i18n="goalThree">Keep the interface readable inside a noisy retro visual style.</li>
+            <li data-ux-i18n="goalFour">Use motion, scanlines, color modes, and glitches as feedback rather than decoration only.</li>
+            <li data-ux-i18n="goalFive">Support keyboard-first interaction while keeping the experience simple enough for casual users.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 data-ux-i18n="flowTitle">User Flow</h2>
+          <ol>
+            <li data-ux-i18n="flowOne">The terminal boots automatically and confirms that the system is ready.</li>
+            <li data-ux-i18n="flowTwo">The user is invited to type help.</li>
+            <li data-ux-i18n="flowThree">Help reveals a small command vocabulary, reducing uncertainty.</li>
+            <li data-ux-i18n="flowFour">The user tries commands such as about, color, matrix, scan, glitch, and ux.</li>
+            <li data-ux-i18n="flowFive">Each command returns an immediate state change or response, so the system feels alive.</li>
+            <li data-ux-i18n="flowSix">The ux command opens this dossier as the deeper case-study layer.</li>
+          </ol>
+        </section>
+
+        <section>
+          <h2 data-ux-i18n="interactionTitle">Interaction Logic</h2>
+          <p data-ux-i18n="interactionBody">The terminal uses typed input as navigation. This makes every action intentional: the user chooses a command, receives feedback, and learns the system through repetition. The prompt, cursor, loading bars, scan sequence, matrix mode, and color modes all reinforce the same interaction language.</p>
+        </section>
+
+        <section>
+          <h2 data-ux-i18n="decisionsTitle">Design Decisions</h2>
+          <ul>
+            <li data-ux-i18n="decisionOne">The CRT frame creates a physical boundary for the interface.</li>
+            <li data-ux-i18n="decisionTwo">Text is short in the terminal so the screen never becomes visually overloaded.</li>
+            <li data-ux-i18n="decisionThree">The UX dossier opens as a separate folder because long reading does not belong inside the tiny terminal log.</li>
+            <li data-ux-i18n="decisionFour">Green, amber, and blue modes let the user customize the mood without changing the system model.</li>
+            <li data-ux-i18n="decisionFive">Glitch and matrix effects are temporary, so they feel expressive without blocking the core flow.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 data-ux-i18n="accessibilityTitle">Accessibility Notes</h2>
+          <p data-ux-i18n="accessibilityBody">The project keeps high contrast, large monospaced text, visible system feedback, reduced command count, and a close button for the dossier. The design is intentionally stylized, but the user should always understand whether the system is waiting, loading, responding, or shutting down.</p>
+        </section>
+
+        <section>
+          <h2 data-ux-i18n="resultTitle">Result</h2>
+          <p data-ux-i18n="resultBody">The final experience behaves like a tiny operating system for a portfolio concept. It communicates personality through interaction, not through a static hero section, and gives the UX case its own readable folder layer.</p>
+        </section>
+      </article>
+    </div>
+    <script src="terminal.js?v=2"></script>
+  </body>
+</html>

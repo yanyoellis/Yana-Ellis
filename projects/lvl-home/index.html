@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#050a12" />
+    <meta
+      name="description"
+      content="LVL HOME — select a residence through an interactive night-time facade."
+    />
+    <title>LVL HOME — Apartments by floor</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="ambient" aria-hidden="true">
+      <span class="orb orb--one"></span>
+      <span class="orb orb--two"></span>
+    </div>
+
+    <header class="site-header">
+      <a class="brand" href="#about" aria-label="LVL HOME — back to top">
+        <svg class="brand__mark" viewBox="0 0 36 36" aria-hidden="true">
+          <path d="M7.5 28.5V12.8L18 5.5l10.5 7.3v15.7M12.5 28.5V15.4h11v13.1M7.5 28.5h21" />
+          <path d="M16 19h4M16 23h4" />
+        </svg>
+        <span class="brand__copy">
+          <strong>LVL HOME</strong>
+          <small>Private residences</small>
+        </span>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <a href="about.html">About</a>
+        <a href="#floors">Floors</a>
+        <a href="ux-case-study.html">UX Case</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="intro" id="about" aria-labelledby="intro-title">
+        <div class="intro__index">01 / 12</div>
+        <div class="intro__copy">
+          <p class="eyebrow">A singular address · London</p>
+          <h1 id="intro-title">Find your level.</h1>
+          <p>Explore the residence floor by floor. A warm window means a home is ready.</p>
+          <a class="case-study-link" href="ux-case-study.html">View UX Case Study</a>
+        </div>
+        <div class="scroll-cue" aria-hidden="true">
+          <span>Scroll to explore</span>
+          <i></i>
+        </div>
+      </section>
+
+      <section class="building-stage" id="floors" aria-label="Interactive apartment facade">
+        <aside class="filters" aria-label="Apartment filters">
+          <div class="filters__heading">
+            <span>Filter residences</span>
+            <button class="filter-reset" type="button">Reset</button>
+          </div>
+
+          <fieldset class="filter-group">
+            <legend>Rooms</legend>
+            <div class="segmented" data-filter="rooms">
+              <button type="button" class="is-active" data-value="all">All</button>
+              <button type="button" data-value="1">1</button>
+              <button type="button" data-value="2">2</button>
+              <button type="button" data-value="3">3</button>
+            </div>
+          </fieldset>
+
+          <label class="select-field">
+            <span>Floor</span>
+            <select id="floor-filter">
+              <option value="all">Any floor</option>
+              <option value="low">Floors 1–4</option>
+              <option value="mid">Floors 5–8</option>
+              <option value="high">Floors 9–12</option>
+            </select>
+          </label>
+
+          <label class="select-field">
+            <span>Price</span>
+            <select id="price-filter">
+              <option value="all">Any price</option>
+              <option value="1600">Up to £1,600</option>
+              <option value="2200">Up to £2,200</option>
+              <option value="3000">Up to £3,000</option>
+            </select>
+          </label>
+
+          <label class="select-field">
+            <span>Area</span>
+            <select id="area-filter">
+              <option value="all">Any area</option>
+              <option value="50">50+ m²</option>
+              <option value="70">70+ m²</option>
+              <option value="85">85+ m²</option>
+            </select>
+          </label>
+
+          <p class="filter-result"><span id="result-count">7</span> residences match</p>
+        </aside>
+
+        <div class="floor-ruler" aria-hidden="true">
+          <span>Roof</span>
+          <i></i>
+          <span>Ground</span>
+        </div>
+
+        <div class="building-wrap">
+          <div class="building" id="building">
+            <div class="building__crown">
+              <span>LVL</span>
+              <div class="crown-light"></div>
+            </div>
+            <div class="building__floors" id="building-floors"></div>
+            <div class="building__entrance">
+              <div class="entrance__door"><span>LVL HOME</span></div>
+              <div class="entrance__light entrance__light--left"></div>
+              <div class="entrance__light entrance__light--right"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="street-scene" aria-hidden="true">
+          <div class="street-tree street-tree--left">
+            <span class="tree__trunk"></span>
+            <span class="tree__crown tree__crown--one"></span>
+            <span class="tree__crown tree__crown--two"></span>
+            <span class="tree__crown tree__crown--three"></span>
+          </div>
+          <div class="street-tree street-tree--right">
+            <span class="tree__trunk"></span>
+            <span class="tree__crown tree__crown--one"></span>
+            <span class="tree__crown tree__crown--two"></span>
+            <span class="tree__crown tree__crown--three"></span>
+          </div>
+          <div class="street-lamp street-lamp--left"><span></span></div>
+          <div class="street-lamp street-lamp--right"><span></span></div>
+          <div class="street-road"></div>
+          <div class="street-actors" id="street-actors"></div>
+        </div>
+
+        <p class="availability-key"><i></i> Ready to rent</p>
+      </section>
+
+      <section class="closing" id="contact">
+        <p class="eyebrow">Private appointments</p>
+        <h2>One building.<br />A new point of view.</h2>
+        <a href="mailto:viewings@lvlhome.example">viewings@lvlhome.example</a>
+        <p class="closing__meta">10 Level Street · London · W1</p>
+      </section>
+    </main>
+
+    <div class="panel-backdrop" id="panel-backdrop" aria-hidden="true"></div>
+    <aside class="apartment-panel" id="apartment-panel" aria-hidden="true" aria-labelledby="panel-title">
+      <button class="panel-close" type="button" aria-label="Close apartment details">
+        <span></span><span></span>
+      </button>
+
+      <p class="panel-kicker">Available residence</p>
+      <div class="panel-heading">
+        <h2 id="panel-title">Apartment 7A</h2>
+        <span class="status">Ready to rent</span>
+      </div>
+
+      <figure class="apartment-photo">
+        <img
+          id="apartment-image"
+          src="assets/apartments/apartment-7a.png"
+          alt="Interior of Apartment 7A"
+        />
+        <figcaption>Residence interior</figcaption>
+      </figure>
+
+      <div class="floorplan" aria-label="Schematic floor plan placeholder">
+        <svg viewBox="0 0 440 250" role="img" aria-label="Abstract apartment floor plan">
+          <path d="M20 20h400v210H20zM20 118h164M184 20v210M290 20v98M184 118h236M290 118v112M350 118v112" />
+          <path d="M91 118v-26M184 171h-27M290 74h-24M350 168h-22" />
+          <circle cx="346" cy="72" r="24" />
+          <rect x="48" y="45" width="78" height="38" rx="2" />
+          <rect x="220" y="147" width="45" height="56" rx="2" />
+        </svg>
+        <span>Indicative plan</span>
+      </div>
+
+      <dl class="apartment-facts">
+        <div><dt>Floor</dt><dd data-field="floor">7</dd></div>
+        <div><dt>Rooms</dt><dd data-field="rooms">2</dd></div>
+        <div><dt>Area</dt><dd><span data-field="area">64</span> m²</dd></div>
+      </dl>
+
+      <div class="panel-price">
+        <span>Monthly rent</span>
+        <strong data-field="price">£1,950 / month</strong>
+      </div>
+
+      <button class="book-button" type="button">Book a viewing <span>↗</span></button>
+      <p class="booking-note" role="status" aria-live="polite"></p>
+    </aside>
+  </body>
+</html>
