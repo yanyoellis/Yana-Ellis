@@ -2,7 +2,7 @@ const translations={
   en:{
     metaTitle:'AETERNUM — UX Case Study',
     metaDescription:'UX case study for AETERNUM, a luxury jewelry concept experienced as a journey through a digital Pantheon.',
-    'nav.live':'View Live Project','nav.github':'View GitHub',
+    'nav.live':'View Live Project',
     'hero.label':'UX CASE STUDY','hero.title':'Designing a Digital Pantheon for Luxury Jewelry','hero.lede':'A luxury jewelry concept where the website is experienced as a journey through a digital Pantheon instead of a traditional online store.',
     'meta.role.label':'Role','meta.role.value':'UX/UI Designer','meta.type.label':'Project Type','meta.type.value':'Luxury Jewelry Concept','meta.focus.label':'Focus','meta.focus.value':'Spatial Navigation · Storytelling · Immersive UX · Luxury Art Direction',
     'overview.title':'Project Overview','overview.p1':'Traditional luxury jewelry websites usually present products through grids and product cards.','overview.p2':'AETERNUM explores a different idea.','overview.p3':'Instead of browsing products, visitors enter a marble Pantheon where every jewelry collection occupies its own architectural space inspired by a Greek or Roman deity.','overview.p4':'Navigation becomes part of the experience. Users do not simply move between pages; they walk through the building, discovering collections as destinations rather than categories.','overview.p5':'The goal was to combine storytelling, architecture, and interaction design into a calm luxury experience that encourages exploration instead of fast shopping.',
@@ -23,7 +23,7 @@ const translations={
   ru:{
     metaTitle:'AETERNUM — UX-кейс',
     metaDescription:'UX-кейс AETERNUM: концепт luxury jewelry, где сайт ощущается как путешествие по цифровому Пантеону.',
-    'nav.live':'Открыть проект','nav.github':'Открыть GitHub',
+    'nav.live':'Открыть проект',
     'hero.label':'UX-КЕЙС','hero.title':'Проектирование цифрового Пантеона для ювелирного бренда','hero.lede':'Концепт luxury jewelry, где сайт воспринимается как путешествие по цифровому Пантеону, а не как обычный интернет-магазин.',
     'meta.role.label':'Роль','meta.role.value':'UX/UI дизайнер','meta.type.label':'Тип проекта','meta.type.value':'Концепт luxury jewelry','meta.focus.label':'Фокус','meta.focus.value':'Пространственная навигация · Сторителлинг · Иммерсивный UX · Luxury art direction',
     'overview.title':'Обзор проекта','overview.p1':'Традиционные сайты luxury jewelry чаще всего показывают изделия через сетки и карточки товаров.','overview.p2':'AETERNUM исследует другую идею.','overview.p3':'Вместо просмотра товаров посетитель входит в мраморный Пантеон, где каждая ювелирная коллекция занимает собственное архитектурное пространство, вдохновлённое греческим или римским божеством.','overview.p4':'Навигация становится частью опыта. Пользователь не просто переходит между страницами — он движется по зданию и открывает коллекции как направления, а не как категории.','overview.p5':'Целью было объединить сторителлинг, архитектуру и интерактивный дизайн в спокойный luxury-опыт, который поощряет исследование вместо быстрого шопинга.',
@@ -44,7 +44,7 @@ const translations={
   pl:{
     metaTitle:'AETERNUM — Studium UX',
     metaDescription:'Studium UX projektu AETERNUM: koncepcja luxury jewelry, w której strona jest podróżą przez cyfrowy Panteon.',
-    'nav.live':'Zobacz projekt','nav.github':'Zobacz GitHub',
+    'nav.live':'Zobacz projekt',
     'hero.label':'STUDIUM UX','hero.title':'Projektowanie cyfrowego Panteonu dla marki biżuterii luksusowej','hero.lede':'Koncepcja luxury jewelry, w której strona jest doświadczana jako podróż przez cyfrowy Panteon, a nie jako tradycyjny sklep online.',
     'meta.role.label':'Rola','meta.role.value':'Projektantka UX/UI','meta.type.label':'Typ projektu','meta.type.value':'Koncepcja luxury jewelry','meta.focus.label':'Fokus','meta.focus.value':'Nawigacja przestrzenna · Storytelling · Immersyjny UX · Luxury art direction',
     'overview.title':'Przegląd projektu','overview.p1':'Tradycyjne strony luksusowej biżuterii zwykle prezentują produkty przez siatki i karty produktowe.','overview.p2':'AETERNUM sprawdza inną ideę.','overview.p3':'Zamiast przeglądać produkty, odwiedzający wchodzą do marmurowego Panteonu, w którym każda kolekcja zajmuje własną przestrzeń architektoniczną inspirowaną greckim lub rzymskim bóstwem.','overview.p4':'Nawigacja staje się częścią doświadczenia. Użytkownicy nie tylko przechodzą między stronami — poruszają się po budynku i odkrywają kolekcje jako miejsca docelowe, nie kategorie.','overview.p5':'Celem było połączenie storytellingu, architektury i projektowania interakcji w spokojne luksusowe doświadczenie, które zachęca do eksploracji zamiast szybkich zakupów.',
@@ -65,7 +65,7 @@ const translations={
   uk:{
     metaTitle:'AETERNUM — UX-кейс',
     metaDescription:'UX-кейс AETERNUM: концепт luxury jewelry, у якому сайт переживається як подорож цифровим Пантеоном.',
-    'nav.live':'Відкрити проєкт','nav.github':'Відкрити GitHub',
+    'nav.live':'Відкрити проєкт',
     'hero.label':'UX-КЕЙС','hero.title':'Проєктування цифрового Пантеону для ювелірного бренду','hero.lede':'Концепт luxury jewelry, у якому сайт сприймається як подорож цифровим Пантеоном, а не як традиційний інтернет-магазин.',
     'meta.role.label':'Роль','meta.role.value':'UX/UI дизайнерка','meta.type.label':'Тип проєкту','meta.type.value':'Концепт luxury jewelry','meta.focus.label':'Фокус','meta.focus.value':'Просторова навігація · Сторітелінг · Імерсивний UX · Luxury art direction',
     'overview.title':'Огляд проєкту','overview.p1':'Традиційні сайти luxury jewelry зазвичай показують вироби через сітки та продуктові картки.','overview.p2':'AETERNUM досліджує іншу ідею.','overview.p3':'Замість перегляду товарів відвідувачі входять до мармурового Пантеону, де кожна ювелірна колекція займає власний архітектурний простір, натхнений грецьким або римським божеством.','overview.p4':'Навігація стає частиною досвіду. Користувачі не просто переходять між сторінками — вони рухаються будівлею й відкривають колекції як напрямки, а не як категорії.','overview.p5':'Мета полягала в тому, щоб об’єднати сторітелінг, архітектуру та дизайн взаємодії у спокійний luxury-досвід, який заохочує дослідження замість швидкого шопінгу.',

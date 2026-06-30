@@ -36,7 +36,7 @@ const translations = {
     "nav.brand":"ДЕЛО #371",
     "nav.study":"UX Case Study",
     "nav.project":"Живой проект",
-    "nav.github":"GitHub",
+    
     "hero.label":"ИНТЕРАКТИВНЫЙ UX CASE STUDY",
     "hero.title":"CASE FILE #371<br>THE BLACKWOOD EARRINGS",
     "hero.subtitle":"Проектирование одностраничного интерактивного детективного опыта, где пользователь изучает улики, находит скрытые подсказки и раскрывает вымышленную кражу драгоценностей через визуальный сторителлинг.",
@@ -51,7 +51,7 @@ const translations = {
     "meta.tools.label":"Инструменты",
     "meta.tools.value":"Figma, Photoshop, HTML, CSS, JavaScript",
     "cta.live":"Открыть проект",
-    "cta.github":"Открыть GitHub",
+    
     "hero.card.confidential":"CONFIDENTIAL",
     "hero.card.solved":"CASE SOLVED",
     "hero.card.label":"UX-ЗАМЕТКИ",
@@ -267,7 +267,7 @@ const translations = {
     "nav.brand":"AKTA #371",
     "nav.study":"UX Case Study",
     "nav.project":"Projekt live",
-    "nav.github":"GitHub",
+    
     "hero.label":"INTERAKTYWNE UX CASE STUDY",
     "hero.title":"CASE FILE #371<br>THE BLACKWOOD EARRINGS",
     "hero.subtitle":"Projektowanie jednostronicowego interaktywnego doświadczenia detektywistycznego, w którym użytkownik analizuje dowody, odkrywa ukryte wskazówki i rozwiązuje fikcyjną kradzież biżuterii poprzez wizualny storytelling.",
@@ -282,7 +282,7 @@ const translations = {
     "meta.tools.label":"Narzędzia",
     "meta.tools.value":"Figma, Photoshop, HTML, CSS, JavaScript",
     "cta.live":"Zobacz projekt",
-    "cta.github":"Zobacz GitHub",
+    
     "hero.card.confidential":"CONFIDENTIAL",
     "hero.card.solved":"CASE SOLVED",
     "hero.card.label":"NOTATKI UX",
@@ -498,7 +498,7 @@ const translations = {
     "nav.brand":"СПРАВА #371",
     "nav.study":"UX Case Study",
     "nav.project":"Живий проєкт",
-    "nav.github":"GitHub",
+    
     "hero.label":"ІНТЕРАКТИВНИЙ UX CASE STUDY",
     "hero.title":"CASE FILE #371<br>THE BLACKWOOD EARRINGS",
     "hero.subtitle":"Проєктування односторінкового інтерактивного детективного досвіду, де користувач вивчає докази, знаходить приховані підказки й розкриває вигадану крадіжку коштовностей через візуальний сторітелінг.",
@@ -513,7 +513,7 @@ const translations = {
     "meta.tools.label":"Інструменти",
     "meta.tools.value":"Figma, Photoshop, HTML, CSS, JavaScript",
     "cta.live":"Переглянути проєкт",
-    "cta.github":"Переглянути GitHub",
+    
     "hero.card.confidential":"CONFIDENTIAL",
     "hero.card.solved":"CASE SOLVED",
     "hero.card.label":"UX-НОТАТКИ",

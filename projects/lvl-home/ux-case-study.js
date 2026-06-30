@@ -264,8 +264,6 @@ const copy = {
       credit: 'UX/UI portfolio concept by Yana Ellis.',
       buttons: [
         ['View Live Project', 'index.html'],
-        ['View GitHub', 'https://github.com/yanyoellis/LVL-HOME'],
-        ['Back to Portfolio', 'https://github.com/yanyoellis']
       ]
     }
   },
@@ -524,8 +522,6 @@ const copy = {
       credit: 'UX/UI portfolio concept by Yana Ellis.',
       buttons: [
         ['Открыть проект', 'index.html'],
-        ['GitHub', 'https://github.com/yanyoellis/LVL-HOME'],
-        ['Назад в портфолио', 'https://github.com/yanyoellis']
       ]
     }
   },
@@ -784,8 +780,6 @@ const copy = {
       credit: 'Koncepcja portfolio UX/UI by Yana Ellis.',
       buttons: [
         ['Zobacz projekt', 'index.html'],
-        ['GitHub', 'https://github.com/yanyoellis/LVL-HOME'],
-        ['Powrót do portfolio', 'https://github.com/yanyoellis']
       ]
     }
   },
@@ -1044,8 +1038,6 @@ const copy = {
       credit: 'UX/UI portfolio concept by Yana Ellis.',
       buttons: [
         ['Відкрити проєкт', 'index.html'],
-        ['GitHub', 'https://github.com/yanyoellis/LVL-HOME'],
-        ['Назад до портфоліо', 'https://github.com/yanyoellis']
       ]
     }
   }
