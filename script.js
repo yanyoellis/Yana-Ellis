@@ -2,7 +2,7 @@ const translations = {
   en: {
     documentTitle: "Yana Ellis - UX/UI Designer",
     logoAlt: "Yana Ellis logo",
-    heroRole: "UX/UI DESIGNER",
+    heroRole: "UX/UI Designer specializing in websites and digital products.",
     heroDescription: "I design minimal, experimental and concept-driven digital experiences.",
     availability: "Open for freelance projects",
     aboutTitle: "ABOUT ME",
