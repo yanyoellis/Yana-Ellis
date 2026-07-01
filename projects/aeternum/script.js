@@ -80,7 +80,9 @@ function renderHall(c){
   q('#hall-deity').textContent=`Inspired by ${c.deity}`;
   q('#hall-title').textContent=c.name;
   q('#hall-intro').textContent=c.tagline;
-  stage.innerHTML=c.products.map((p,i)=>`<button class="relic ${i===c.hero?'is-main':''}" type="button" data-product="${state.collection}-${i}" aria-label="View ${p[0]}"><img class="relic-image" src="${c.images[i]}" alt="${p[0]}"><span class="plinth"><span class="relic-label"><strong>${p[0]}</strong><span>Relic ${String(i+1).padStart(2,'0')}</span></span></span></button>`).join('');
+  const supporting=[0,1,2].filter(i=>i!==c.hero);
+  const exhibitOrder=[supporting[0],c.hero,supporting[1]];
+  stage.innerHTML=exhibitOrder.map(i=>{const p=c.products[i];return `<button class="relic ${i===c.hero?'is-main':''}" type="button" data-product="${state.collection}-${i}" aria-label="View ${p[0]}"><span class="relic-display"><img class="relic-art" src="${c.images[i]}" alt="${p[0]}"><img class="relic-frame" src="assets/relic-display-frame.png" alt="" aria-hidden="true"></span><span class="relic-label"><strong>${p[0]}</strong><span>Relic ${String(i+1).padStart(2,'0')}</span></span></button>`}).join('');
   qa('.relic').forEach(el=>el.addEventListener('click',()=>openProduct(el.dataset.product)));
   q('#collection-select').selectedIndex=state.collection;
 }
@@ -124,6 +126,17 @@ qa('.dialog-close').forEach(b=>b.addEventListener('click',()=>b.closest('dialog'
 qa('dialog').forEach(d=>d.addEventListener('click',e=>{if(e.target===d)d.close()}));
 q('#enter-button').addEventListener('click',enterPantheon);
 q('#arches-prev').addEventListener('click',()=>setArch(state.arch-1));q('#arches-next').addEventListener('click',()=>setArch(state.arch+1));
+let wheelLocked=false;
+scenes.pantheon.addEventListener('wheel',e=>{
+  if(state.scene!=='pantheon'||innerWidth<=900)return;
+  const delta=Math.abs(e.deltaY)>=Math.abs(e.deltaX)?e.deltaY:e.deltaX;
+  if(Math.abs(delta)<8)return;
+  e.preventDefault();
+  if(wheelLocked)return;
+  wheelLocked=true;
+  setArch(state.arch+(delta>0?1:-1));
+  setTimeout(()=>{wheelLocked=false},480);
+},{passive:false});
 q('#next-hall').addEventListener('click',()=>openHall(state.collection+1));
 q('#viewing-form').addEventListener('submit',e=>{e.preventDefault();const status=q('.form-status');status.textContent='Request received. The house will be in touch.';e.currentTarget.querySelector('button').disabled=true;setTimeout(()=>{e.currentTarget.reset();e.currentTarget.querySelector('button').disabled=false;status.textContent=''},4200)});
 
