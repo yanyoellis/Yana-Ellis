@@ -366,13 +366,70 @@ button {
 .projects-heading-row {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   margin-bottom: 28px;
+}
+
+.projects-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.projects-arrow {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 0;
+  background: transparent;
+  color: var(--text);
+  font-size: 1.1rem;
+  line-height: 1;
+  transition:
+    border-color 240ms ease,
+    background-color 240ms ease,
+    color 240ms ease;
+}
+
+.projects-arrow:hover,
+.projects-arrow:focus-visible {
+  border-color: var(--line-strong);
+  background: var(--text);
+  color: var(--bg);
+  outline: none;
+}
+
+.projects-arrow:disabled {
+  border-color: var(--line);
+  background: transparent;
+  color: var(--muted);
+  cursor: default;
+  opacity: 0.42;
+}
+
+.projects-viewport {
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  scroll-snap-type: inline mandatory;
+}
+
+.projects-viewport::-webkit-scrollbar {
+  display: none;
+}
+
+.projects-viewport:focus-visible {
+  outline: 1px solid var(--line-strong);
+  outline-offset: 6px;
 }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-auto-columns: calc((100% - 42px) / 4);
+  grid-auto-flow: column;
   gap: 14px;
 }
 
@@ -380,6 +437,7 @@ button {
   display: grid;
   min-width: 0;
   color: var(--text);
+  scroll-snap-align: start;
   transition:
     transform 300ms ease,
     color 240ms ease;
@@ -503,7 +561,7 @@ button {
   }
 
   .projects-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-auto-columns: calc((100% - 28px) / 3);
   }
 }
 
@@ -573,7 +631,7 @@ button {
   }
 
   .projects-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-columns: calc((100% - 12px) / 2);
     gap: 18px 12px;
   }
 }
@@ -607,7 +665,7 @@ button {
   }
 
   .projects-grid {
-    grid-template-columns: 1fr;
+    grid-auto-columns: 100%;
   }
 }
 

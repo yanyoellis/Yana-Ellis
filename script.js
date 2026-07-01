@@ -117,6 +117,10 @@ const languageButtons = document.querySelectorAll(".language-button");
 const textNodes = document.querySelectorAll("[data-i18n]");
 const altNodes = document.querySelectorAll("[data-i18n-alt]");
 const projectCards = document.querySelectorAll(".project-card");
+const projectsViewport = document.querySelector(".projects-viewport");
+const projectsGrid = document.querySelector(".projects-grid");
+const projectsPrevious = document.querySelector("#projectsPrevious");
+const projectsNext = document.querySelector("#projectsNext");
 const supportedLanguages = ["en", "uk", "pl"];
 
 function getInitialLanguage() {
@@ -174,4 +178,47 @@ languageButtons.forEach((button) => {
   });
 });
 
+function getProjectStep() {
+  const firstCard = projectsGrid?.querySelector(".project-card");
+
+  if (!firstCard) {
+    return 0;
+  }
+
+  const gap = Number.parseFloat(getComputedStyle(projectsGrid).columnGap) || 0;
+  return firstCard.getBoundingClientRect().width + gap;
+}
+
+function updateProjectArrows() {
+  if (!projectsViewport || !projectsPrevious || !projectsNext) {
+    return;
+  }
+
+  const maximumScroll = projectsViewport.scrollWidth - projectsViewport.clientWidth;
+  projectsPrevious.disabled = projectsViewport.scrollLeft <= 2;
+  projectsNext.disabled = projectsViewport.scrollLeft >= maximumScroll - 2;
+}
+
+function moveProjects(direction) {
+  projectsViewport?.scrollBy({
+    left: getProjectStep() * direction,
+    behavior: "smooth"
+  });
+}
+
+if (projectsViewport && projectsPrevious && projectsNext) {
+  projectsPrevious.addEventListener("click", () => moveProjects(-1));
+  projectsNext.addEventListener("click", () => moveProjects(1));
+  projectsViewport.addEventListener("scroll", updateProjectArrows, { passive: true });
+  projectsViewport.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+      event.preventDefault();
+      moveProjects(event.key === "ArrowLeft" ? -1 : 1);
+    }
+  });
+  window.addEventListener("resize", updateProjectArrows);
+  window.addEventListener("load", updateProjectArrows);
+}
+
 applyLanguage(getInitialLanguage());
+updateProjectArrows();

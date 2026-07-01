@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="NovaHQ — business intelligence that keeps your team in orbit." />
+  <title>NovaHQ — Business overview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#dashboard" data-page="dashboard" aria-label="NovaHQ home">
+        <span class="brand-mark"><i></i></span>
+        <span>Nova<span>HQ</span></span>
+      </a>
+
+      <button class="workspace-switcher" type="button">
+        <span class="workspace-avatar">N</span>
+        <span><small>Workspace</small>Nova Studio</span>
+        <svg viewBox="0 0 24 24"><path d="m8 10 4 4 4-4"/></svg>
+      </button>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <p>Overview</p>
+        <a class="active" href="#dashboard" data-page="dashboard"><svg><use href="#i-grid"/></svg><span>Dashboard</span></a>
+        <a href="#analytics" data-page="analytics"><svg><use href="#i-chart"/></svg><span>Analytics</span><b class="nav-badge">New</b></a>
+        <p>Manage</p>
+        <a href="#customers" data-page="customers"><svg><use href="#i-users"/></svg><span>Customers</span></a>
+        <a href="#revenue" data-page="revenue"><svg><use href="#i-wallet"/></svg><span>Revenue</span></a>
+        <a href="#subscriptions" data-page="subscriptions"><svg><use href="#i-refresh"/></svg><span>Subscriptions</span></a>
+        <a href="#projects" data-page="projects"><svg><use href="#i-folder"/></svg><span>Projects</span></a>
+        <p>Workspace</p>
+        <a href="#team" data-page="team"><svg><use href="#i-team"/></svg><span>Team</span></a>
+        <a href="#calendar" data-page="calendar"><svg><use href="#i-calendar"/></svg><span>Calendar</span></a>
+        <a href="#reports" data-page="reports"><svg><use href="#i-doc"/></svg><span>Reports</span></a>
+        <a href="#notifications" data-page="notifications"><svg><use href="#i-bell"/></svg><span>Notifications</span><b class="count-badge">4</b></a>
+        <a href="#integrations" data-page="integrations"><svg><use href="#i-link"/></svg><span>Integrations</span></a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <a href="#settings" data-page="settings"><svg><use href="#i-settings"/></svg><span>Settings</span></a>
+        <a href="#profile" data-page="profile"><svg><use href="#i-users"/></svg><span>Profile</span></a>
+        <a href="#ux-case-study" data-page="ux-case-study"><svg><use href="#i-doc"/></svg><span>UX case study</span></a>
+        <a href="#support" data-page="support"><svg><use href="#i-help"/></svg><span>Help & support</span></a>
+        <div class="upgrade-card">
+          <span class="sparkle">✦</span>
+          <strong>Unlock your growth</strong>
+          <p>Upgrade for forecasts and unlimited reports.</p>
+          <button type="button" id="upgradeBtn">Explore Pro</button>
+        </div>
+        <div class="user-card">
+          <span class="user-avatar">AL</span>
+          <span><strong>Alex Morgan</strong><small>alex@novahq.io</small></span>
+          <button aria-label="Open login preview" data-page="login">•••</button>
+        </div>
+      </div>
+    </aside>
+
+    <div class="mobile-backdrop" id="backdrop"></div>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="icon-btn mobile-menu" id="menuBtn" aria-label="Open menu"><svg><use href="#i-menu"/></svg></button>
+        <div class="search-wrap">
+          <svg><use href="#i-search"/></svg>
+          <input id="globalSearch" type="search" placeholder="Search anything..." aria-label="Search" />
+        </div>
+        <div class="top-actions">
+          <button class="period-btn" type="button" id="periodBtn" data-action="date-range"><svg><use href="#i-calendar"/></svg><span>Mar 1 – Mar 31</span><svg><use href="#i-chevron"/></svg></button>
+          <button class="icon-btn notification-btn" id="notificationBtn" aria-label="Notifications"><svg><use href="#i-bell"/></svg><i></i></button>
+          <button class="create-btn" type="button" id="createBtn"><span>+</span> Create report</button>
+        </div>
+      </header>
+
+      <section class="content" id="content">
+        <div class="page-heading">
+          <div>
+            <p class="eyebrow">Wednesday, March 26</p>
+            <h1>Good morning, Alex <span>✦</span></h1>
+            <p>Here’s what’s happening with your business today.</p>
+          </div>
+          <div class="heading-actions">
+            <button class="secondary-btn" type="button" id="exportBtn"><svg><use href="#i-download"/></svg> Export</button>
+            <button class="primary-btn" type="button" id="inviteBtn"><svg><use href="#i-user-plus"/></svg> Invite team</button>
+          </div>
+        </div>
+
+        <div class="insight-banner">
+          <div class="insight-icon">✦</div>
+          <div><strong>Nova insight</strong><p>Your revenue is growing <b>18.2% faster</b> than last quarter. Enterprise upgrades are the main driver.</p></div>
+          <a href="#analytics" data-page="analytics">View analysis <span>→</span></a>
+          <button class="dismiss" aria-label="Dismiss insight">×</button>
+        </div>
+
+        <div class="kpi-grid">
+          <article class="kpi-card accent-card">
+            <div class="kpi-top"><span class="kpi-label">Total revenue</span><button aria-label="Revenue menu">•••</button></div>
+            <strong>$248,540</strong>
+            <div class="kpi-meta"><span class="positive">↗ 14.2%</span><small>vs. last month</small><div class="mini-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+          </article>
+          <article class="kpi-card">
+            <div class="kpi-top"><span class="kpi-label">Monthly recurring</span><span class="metric-icon purple"><svg><use href="#i-refresh"/></svg></span></div>
+            <strong>$91,320</strong>
+            <div class="kpi-meta"><span class="positive">↗ 11.4%</span><small>vs. last month</small></div>
+          </article>
+          <article class="kpi-card">
+            <div class="kpi-top"><span class="kpi-label">Active customers</span><span class="metric-icon blue"><svg><use href="#i-users"/></svg></span></div>
+            <strong>18,420</strong>
+            <div class="kpi-meta"><span class="positive">↗ 8.1%</span><small>1,380 new this month</small></div>
+          </article>
+          <article class="kpi-card">
+            <div class="kpi-top"><span class="kpi-label">Churn rate</span><span class="metric-icon amber"><svg><use href="#i-trend"/></svg></span></div>
+            <strong>2.4%</strong>
+            <div class="kpi-meta"><span class="negative-good">↘ 0.6%</span><small>below 3% target</small></div>
+          </article>
+        </div>
+
+        <div class="dashboard-grid">
+          <article class="panel revenue-panel">
+            <div class="panel-header">
+              <div><h2>Revenue overview</h2><p>Monthly revenue performance</p></div>
+              <div class="segmented" role="group"><button class="active" data-range="12">12 months</button><button data-range="6">6 months</button><button data-range="3">30 days</button></div>
+            </div>
+            <div class="chart-summary"><strong>$248.5k</strong><span class="positive">↗ 14.2%</span></div>
+            <div class="chart-wrap">
+              <div class="y-labels"><span>$100k</span><span>$75k</span><span>$50k</span><span>$25k</span><span>$0</span></div>
+              <svg class="line-chart" viewBox="0 0 760 250" preserveAspectRatio="none" aria-label="Revenue chart">
+                <defs><linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#6967f0" stop-opacity=".25"/><stop offset="100%" stop-color="#6967f0" stop-opacity="0"/></linearGradient></defs>
+                <g class="gridlines"><path d="M0 12H760M0 67H760M0 122H760M0 177H760M0 232H760"/></g>
+                <path class="area" d="M0 192 C55 184 82 159 126 166 S205 191 253 141 S334 96 379 114 S455 160 507 99 S590 57 633 74 S701 63 760 22 L760 250 L0 250Z"/>
+                <path class="line" d="M0 192 C55 184 82 159 126 166 S205 191 253 141 S334 96 379 114 S455 160 507 99 S590 57 633 74 S701 63 760 22"/>
+                <g class="point"><circle cx="507" cy="99" r="5"/><circle cx="507" cy="99" r="10" class="halo"/></g>
+              </svg>
+              <div class="chart-tooltip"><small>August 2025</small><strong>$72,480</strong><span>+12.8%</span></div>
+              <div class="x-labels"><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span><span>Jan</span><span>Feb</span><span>Mar</span></div>
+            </div>
+          </article>
+
+          <article class="panel goal-panel">
+            <div class="panel-header"><div><h2>Monthly goal</h2><p>Revenue target</p></div><button class="more-btn">•••</button></div>
+            <div class="gauge">
+              <svg viewBox="0 0 220 125">
+                <path class="gauge-bg" d="M24 110a86 86 0 0 1 172 0"/>
+                <path class="gauge-fill" d="M24 110a86 86 0 0 1 172 0"/>
+              </svg>
+              <div><strong>82%</strong><span>achieved</span></div>
+            </div>
+            <div class="goal-values"><div><small>Current</small><strong>$248.5k</strong></div><i></i><div><small>Target</small><strong>$300k</strong></div></div>
+            <p class="goal-note">You need <strong>$51,460</strong> more to hit this month’s target.</p>
+          </article>
+
+          <article class="panel customers-panel">
+            <div class="panel-header">
+              <div><h2>Recent customers</h2><p>Latest customer activity</p></div>
+              <a href="#customers" data-page="customers">View all <span>→</span></a>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Customer</th><th>Plan</th><th>Value</th><th>Status</th><th>Last active</th><th></th></tr></thead>
+                <tbody>
+                  <tr><td><span class="company-logo coral">A</span><span><strong>Arcade Labs</strong><small>hello@arcadelabs.co</small></span></td><td><span class="plan enterprise">Enterprise</span></td><td>$12,400</td><td><span class="status active">Active</span></td><td>2 min ago</td><td>•••</td></tr>
+                  <tr><td><span class="company-logo ink">V</span><span><strong>Vesper Inc.</strong><small>team@vesper.io</small></span></td><td><span class="plan pro">Professional</span></td><td>$8,250</td><td><span class="status active">Active</span></td><td>1 hour ago</td><td>•••</td></tr>
+                  <tr><td><span class="company-logo aqua">M</span><span><strong>Metric Studio</strong><small>hi@metric.studio</small></span></td><td><span class="plan pro">Professional</span></td><td>$6,800</td><td><span class="status pending">Pending</span></td><td>3 hours ago</td><td>•••</td></tr>
+                  <tr><td><span class="company-logo gold">S</span><span><strong>Solace Systems</strong><small>ops@solace.dev</small></span></td><td><span class="plan starter">Starter</span></td><td>$2,450</td><td><span class="status active">Active</span></td><td>Yesterday</td><td>•••</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+
+          <article class="panel sources-panel">
+            <div class="panel-header"><div><h2>Traffic sources</h2><p>Where customers come from</p></div><button class="more-btn">•••</button></div>
+            <div class="donut-row">
+              <div class="donut"><div><strong>42.8k</strong><small>Total visits</small></div></div>
+              <ul>
+                <li><i class="violet"></i><span>Organic search</span><strong>42%</strong></li>
+                <li><i class="cyan"></i><span>Direct</span><strong>28%</strong></li>
+                <li><i class="orange"></i><span>Social</span><strong>18%</strong></li>
+                <li><i class="gray"></i><span>Referral</span><strong>12%</strong></li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="toast" id="toast"><span>✓</span><div><strong>Report is ready</strong><small>Your dashboard report has been generated.</small></div><button>×</button></div>
+
+  <div class="modal-backdrop" id="modalBackdrop">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+      <span class="modal-icon"><svg><use href="#i-user-plus"/></svg></span>
+      <h2 id="modalTitle">Invite your teammate</h2>
+      <p>Add someone to Nova Studio. You can choose their access level later.</p>
+      <label>Email address<input type="email" id="inviteEmail" placeholder="teammate@company.com" /></label>
+      <div class="modal-actions"><button class="secondary-btn" id="cancelInvite">Cancel</button><button class="primary-btn" id="sendInvite">Send invitation</button></div>
+    </div>
+  </div>
+
+  <svg class="svg-sprite" aria-hidden="true">
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 19V9m6 10V5m6 14v-7m4 7H2"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm13 10v-2a4 4 0 0 0-3-3.87m-2-11.96a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="i-wallet" viewBox="0 0 24 24"><path d="M20 7V6a2 2 0 0 0-2-2H5a3 3 0 0 0 0 6h15v10H5a3 3 0 0 1-3-3V7"/><path d="M16 14h1"/></symbol>
+    <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 6h7l2 2h9v11H3z"/></symbol>
+    <symbol id="i-team" viewBox="0 0 24 24"><circle cx="9" cy="7" r="3"/><circle cx="17" cy="8" r="2"/><path d="M3 20v-2a6 6 0 0 1 12 0v2m1-7a5 5 0 0 1 5 5v2"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 2h9l4 4v16H6zM14 2v5h5M9 12h6M9 16h6"/></symbol>
+    <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.5.5l2-2a5 5 0 0 0-7-7l-1.1 1.1M14 11a5 5 0 0 0-7.5-.5l-2 2a5 5 0 0 0 7 7l1.1-1.1"/></symbol>
+    <symbol id="i-settings" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1-2.8 2.8-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6v.2h-4V21a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1L4.2 17l.1-.1a1.7 1.7 0 0 0 .3-1.9A1.7 1.7 0 0 0 3 14H2.8v-4H3a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9L4.2 7 7 4.2l.1.1a1.7 1.7 0 0 0 1.9.3A1.7 1.7 0 0 0 10 3V2.8h4V3a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1L19.8 7l-.1.1a1.7 1.7 0 0 0-.3 1.9 1.7 1.7 0 0 0 1.6 1h.2v4H21a1.7 1.7 0 0 0-1.6 1Z"/></symbol>
+    <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.8 9a2.4 2.4 0 1 1 3.7 2c-.9.6-1.5 1-1.5 2M12 17h.01"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m8 10 4 4 4-4"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 21h16"/></symbol>
+    <symbol id="i-user-plus" viewBox="0 0 24 24"><path d="M15 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M8 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm11-5v6m3-3h-6"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 7h-6V1M4 17h6v6M5.1 9a8 8 0 0 1 13-3l2 1M3.9 17l2 1a8 8 0 0 0 13-3"/></symbol>
+    <symbol id="i-trend" viewBox="0 0 24 24"><path d="m3 17 6-6 4 4 8-9M15 6h6v6"/></symbol>
+  </svg>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -139,9 +139,35 @@
             <h2 id="projects-title" class="section-kicker" data-i18n="projectsTitle">
               FEATURED PROJECTS
             </h2>
+            <div class="projects-controls" aria-label="Project navigation">
+              <button
+                class="projects-arrow"
+                id="projectsPrevious"
+                type="button"
+                aria-label="Previous projects"
+                aria-controls="projectsViewport"
+              >
+                <span aria-hidden="true">&#8592;</span>
+              </button>
+              <button
+                class="projects-arrow"
+                id="projectsNext"
+                type="button"
+                aria-label="Next projects"
+                aria-controls="projectsViewport"
+              >
+                <span aria-hidden="true">&#8594;</span>
+              </button>
+            </div>
           </div>
 
-          <div class="projects-grid">
+          <div
+            class="projects-viewport"
+            id="projectsViewport"
+            tabindex="0"
+            aria-label="Featured projects"
+          >
+            <div class="projects-grid">
             <a
               class="project-card"
               href="projects/pelagea/index.html"
@@ -231,6 +257,21 @@
                 </span>
               </span>
             </a>
+            <a
+              class="project-card"
+              href="projects/novahq/index.html"
+              data-project-name="NovaHQ"
+              aria-label="Open NovaHQ project site"
+            >
+              <span class="project-frame">
+                <img class="project-cover" src="assets/projects/novahq.jpg" alt="" loading="lazy" decoding="async" />
+                <span class="project-meta">
+                  <span class="project-name">NovaHQ</span>
+                  <span class="project-type" data-i18n="projectType">Open project</span>
+                </span>
+              </span>
+            </a>
+            </div>
           </div>
         </section>
       </main>
