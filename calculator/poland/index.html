@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Poland Estimate - Yana Ellis</title>
+    <meta
+      name="description"
+      content="Estimate a custom website project for the Polish market with Yana Ellis."
+    />
+    <title>Website Estimate Poland - Yana Ellis</title>
     <link rel="icon" type="image/png" href="../../favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,67 +18,72 @@
     <link rel="stylesheet" href="../canada/calculator.css" />
   </head>
   <body>
+    <a class="skip-link" href="#calculatorQuestion">Skip to calculator</a>
+
     <div class="calculator-shell">
       <header class="calculator-header">
         <a class="brand-link" href="../../index.html" aria-label="Yana Ellis">
           <img class="brand-logo" src="../../assets/yana-ellis-logo-transparent.png" alt="Yana Ellis logo" />
         </a>
+
         <div class="calculator-actions">
-          <a class="portfolio-link" href="../../index.html" data-copy="back">Portfolio</a>
+          <a class="portfolio-link" href="../../index.html" data-i18n="backToPortfolio">Portfolio</a>
+          <div class="language-switcher" aria-label="Language">
+            <button class="language-button is-active" type="button" data-lang="en" aria-pressed="true">
+              EN
+            </button>
+            <button class="language-button" type="button" data-lang="uk" aria-pressed="false">
+              UK
+            </button>
+            <button class="language-button" type="button" data-lang="pl" aria-pressed="false">
+              PL
+            </button>
+          </div>
         </div>
       </header>
 
-      <main class="calculator-main">
-        <p class="section-kicker" data-copy="market">Poland / PLN</p>
-        <h1 class="calculator-title" data-copy="title">Poland calculator is coming soon</h1>
-        <p class="calculator-intro" data-copy="intro">
-          I am preparing a separate price list for the Polish market. For now, please use the
-          Canadian calculator or contact me directly.
-        </p>
-        <div class="question-actions">
-          <a class="calculator-button" href="../canada/index.html" data-copy="canada">Open Canada calculator</a>
-          <a class="calculator-button secondary" href="../../index.html" data-copy="portfolio">Back to portfolio</a>
-        </div>
+      <main class="calculator-layout">
+        <section class="calculator-main" aria-labelledby="calculatorTitle">
+          <p class="section-kicker" data-i18n="marketLabel">Poland / PLN</p>
+          <h1 id="calculatorTitle" class="calculator-title" data-i18n="calculatorTitle">
+            Website price calculator
+          </h1>
+          <p class="calculator-intro" data-i18n="calculatorIntro">
+            Answer a few practical questions and receive an initial estimate for your website.
+          </p>
+
+          <div class="progress-wrap" aria-hidden="true">
+            <span class="progress-track"><span class="progress-fill" id="progressFill"></span></span>
+          </div>
+
+          <article class="question-panel" id="questionPanel" aria-labelledby="calculatorQuestion"></article>
+          <section class="result-panel" id="resultPanel" hidden></section>
+        </section>
+
+        <aside class="estimate-panel" aria-label="Current estimate">
+          <p class="estimate-label" data-i18n="currentEstimate">Current estimate</p>
+          <p class="estimate-price" id="estimatePrice">0 PLN</p>
+          <p class="estimate-label estimate-building-label" data-i18n="youAreBuilding">You're building</p>
+          <p class="estimate-building" id="estimateBuilding" data-i18n="estimatePlaceholder">
+            Website estimate
+          </p>
+          <p class="estimate-note" data-i18n="estimateNote">
+            Taxes and third-party subscription costs are not included.
+          </p>
+        </aside>
       </main>
     </div>
 
-    <script>
-      const copy = {
-        en: {
-          back: "Portfolio",
-          market: "Poland / PLN",
-          title: "Poland calculator is coming soon",
-          intro:
-            "I am preparing a separate price list for the Polish market. For now, please use the Canadian calculator or contact me directly.",
-          canada: "Open Canada calculator",
-          portfolio: "Back to portfolio"
-        },
-        uk: {
-          back: "Портфоліо",
-          market: "Польща / PLN",
-          title: "Калькулятор для Польщі скоро з'явиться",
-          intro:
-            "Я готую окремий прайс для польського ринку. Поки що можна скористатися калькулятором Canada або написати мені напряму.",
-          canada: "Відкрити калькулятор Canada",
-          portfolio: "Повернутися до портфоліо"
-        },
-        pl: {
-          back: "Portfolio",
-          market: "Polska / PLN",
-          title: "Kalkulator dla Polski pojawi się wkrótce",
-          intro:
-            "Przygotowuję osobny cennik dla rynku polskiego. Na razie możesz skorzystać z kalkulatora Canada albo napisać do mnie bezpośrednio.",
-          canada: "Otwórz kalkulator Canada",
-          portfolio: "Wróć do portfolio"
-        }
-      };
-      const language = ["en", "uk", "pl"].includes(localStorage.getItem("yana-ellis-language"))
-        ? localStorage.getItem("yana-ellis-language")
-        : "en";
-      document.documentElement.lang = language;
-      document.querySelectorAll("[data-copy]").forEach((node) => {
-        node.textContent = copy[language][node.dataset.copy];
-      });
-    </script>
+    <div class="mobile-estimate" aria-label="Current estimate">
+      <span>
+        <span class="mobile-estimate-label" data-i18n="currentEstimate">Current estimate</span>
+        <strong id="mobileEstimatePrice">0 PLN</strong>
+      </span>
+      <span id="mobileEstimateBuilding" data-i18n="estimatePlaceholder">Website estimate</span>
+    </div>
+
+    <p class="sr-only" id="estimateAnnouncement" aria-live="polite"></p>
+
+    <script src="calculator.js"></script>
   </body>
 </html>

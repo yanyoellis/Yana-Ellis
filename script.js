@@ -39,7 +39,7 @@ const translations = {
     marketUkrainePrice: "Prices in Ukrainian hryvnia",
     marketUkraineCopy: "For businesses operating primarily in Ukraine.",
     marketPolandName: "Poland",
-    marketPolandPrice: "Prices in Polish zloty",
+    marketPolandPrice: "Prices in Polish złoty",
     marketPolandCopy: "For businesses operating primarily in Poland.",
     marketContinue: "Continue",
     marketNote:
