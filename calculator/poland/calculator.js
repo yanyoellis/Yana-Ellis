@@ -354,7 +354,7 @@ const questions = {
     options: [
       {
         id: "simple_one_page",
-        amount: 1200,
+        amount: 1000,
         title: {
           en: "Present one service or offer",
           uk: "Представити одну послугу або пропозицію",
@@ -368,7 +368,7 @@ const questions = {
       },
       {
         id: "extended_one_page",
-        amount: 1600,
+        amount: 1350,
         title: {
           en: "Present my business in more detail",
           uk: "Детальніше представити мій бізнес",
@@ -382,7 +382,7 @@ const questions = {
       },
       {
         id: "business_website",
-        amount: 2300,
+        amount: 1950,
         title: {
           en: "Present several services or areas of my business",
           uk: "Представити кілька послуг або напрямів бізнесу",
@@ -396,7 +396,7 @@ const questions = {
       },
       {
         id: "portfolio",
-        amount: 1500,
+        amount: 1300,
         title: {
           en: "Showcase my work or personal brand",
           uk: "Показати мої роботи або особистий бренд",
@@ -410,7 +410,7 @@ const questions = {
       },
       {
         id: "restaurant",
-        amount: 1900,
+        amount: 1600,
         title: {
           en: "Present a restaurant, cafe or bar",
           uk: "Представити ресторан, кафе або бар",
@@ -424,7 +424,7 @@ const questions = {
       },
       {
         id: "interactive_website",
-        amount: 2800,
+        amount: 2400,
         title: {
           en: "Create an unusual interactive experience",
           uk: "Створити незвичайний інтерактивний сайт",
@@ -466,13 +466,13 @@ const questions = {
     },
     options: [
       { id: "one_page", amount: 0, title: { en: "1 page", uk: "1 сторінка", pl: "1 podstrona" } },
-      { id: "two_three_pages", amount: 200, title: { en: "2-3 pages", uk: "2-3 сторінки", pl: "2-3 podstrony" } },
-      { id: "four_five_pages", amount: 450, title: { en: "4-5 pages", uk: "4-5 сторінок", pl: "4-5 podstron" } },
-      { id: "six_eight_pages", amount: 800, title: { en: "6-8 pages", uk: "6-8 сторінок", pl: "6-8 podstron" } },
-      { id: "nine_twelve_pages", amount: 1300, title: { en: "9-12 pages", uk: "9-12 сторінок", pl: "9-12 podstron" } },
+      { id: "two_three_pages", amount: 150, title: { en: "2-3 pages", uk: "2-3 сторінки", pl: "2-3 podstrony" } },
+      { id: "four_five_pages", amount: 400, title: { en: "4-5 pages", uk: "4-5 сторінок", pl: "4-5 podstron" } },
+      { id: "six_eight_pages", amount: 700, title: { en: "6-8 pages", uk: "6-8 сторінок", pl: "6-8 podstron" } },
+      { id: "nine_twelve_pages", amount: 1100, title: { en: "9-12 pages", uk: "9-12 сторінок", pl: "9-12 podstron" } },
       {
         id: "more_than_12_pages",
-        amount: 1800,
+        amount: 1550,
         starting: true,
         manual: true,
         noteKey: "largeSiteNote",
@@ -497,11 +497,11 @@ const questions = {
     },
     options: [
       { id: "up_to_5_sections", amount: 0, title: { en: "Up to 5 content sections", uk: "До 5 секцій контенту", pl: "Do 5 sekcji treści" } },
-      { id: "six_eight_sections", amount: 200, title: { en: "6-8 content sections", uk: "6-8 секцій контенту", pl: "6-8 sekcji treści" } },
-      { id: "nine_twelve_sections", amount: 450, title: { en: "9-12 content sections", uk: "9-12 секцій контенту", pl: "9-12 sekcji treści" } },
+      { id: "six_eight_sections", amount: 150, title: { en: "6-8 content sections", uk: "6-8 секцій контенту", pl: "6-8 sekcji treści" } },
+      { id: "nine_twelve_sections", amount: 400, title: { en: "9-12 content sections", uk: "9-12 секцій контенту", pl: "9-12 sekcji treści" } },
       {
         id: "more_than_12_sections",
-        amount: 750,
+        amount: 650,
         starting: true,
         manual: true,
         title: { en: "More than 12 content sections", uk: "Більше ніж 12 секцій контенту", pl: "Więcej niż 12 sekcji treści" }
@@ -536,7 +536,7 @@ const questions = {
       },
       {
         id: "some_missing",
-        amount: 300,
+        amount: 250,
         title: { en: "Some materials are missing", uk: "Деяких матеріалів не вистачає", pl: "Brakuje części materiałów" },
         description: {
           en: "Light text editing, content organisation, help selecting stock images and preparation of supplied materials.",
@@ -546,7 +546,7 @@ const questions = {
       },
       {
         id: "need_help",
-        amount: 650,
+        amount: 550,
         title: {
           en: "I need help preparing most of the content",
           uk: "Мені потрібна допомога з більшістю матеріалів",
@@ -588,7 +588,7 @@ const questions = {
       },
       {
         id: "distinctive",
-        amount: 300,
+        amount: 250,
         title: {
           en: "More distinctive and expressive",
           uk: "Більш виразний та індивідуальний",
@@ -602,7 +602,7 @@ const questions = {
       },
       {
         id: "signature",
-        amount: 700,
+        amount: 600,
         title: {
           en: "Signature visual concept",
           uk: "Авторська візуальна концепція",
@@ -644,7 +644,7 @@ const questions = {
       },
       {
         id: "advanced",
-        amount: 350,
+        amount: 300,
         title: { en: "Advanced animations", uk: "Розширені анімації", pl: "Zaawansowane animacje" },
         description: {
           en: "Expressive transitions, scroll-based effects, custom hover interactions and more detailed motion.",
@@ -654,7 +654,7 @@ const questions = {
       },
       {
         id: "immersive",
-        amount: 800,
+        amount: 700,
         starting: true,
         manual: true,
         title: {
@@ -712,7 +712,7 @@ const questions = {
           pl: "Dodatkowe pytania, wybór usługi, szczegóły projektu, preferowany termin i wybór budżetu."
         }
       },
-      { id: "file_upload", amount: 200, title: { en: "Allow visitors to upload files", uk: "Дозволити відвідувачам завантажувати файли", pl: "Pozwolić odwiedzającym przesyłać pliki" } },
+      { id: "file_upload", amount: 150, title: { en: "Allow visitors to upload files", uk: "Дозволити відвідувачам завантажувати файли", pl: "Pozwolić odwiedzającym przesyłać pliki" } },
       {
         id: "newsletter",
         amount: 150,
@@ -743,7 +743,7 @@ const questions = {
     options: [
       {
         id: "price_calculator",
-        amount: 500,
+        amount: 450,
         title: {
           en: "Estimated price calculator",
           uk: "Калькулятор орієнтовної ціни",
@@ -757,7 +757,7 @@ const questions = {
       },
       {
         id: "booking",
-        amount: 350,
+        amount: 300,
         title: {
           en: "Booking or reservation",
           uk: "Бронювання зустрічі або столика",
@@ -770,10 +770,10 @@ const questions = {
         }
       },
       { id: "gallery", amount: 150, title: { en: "Project or photo gallery", uk: "Галерея проєктів або фотографій", pl: "Galeria realizacji lub zdjęć" } },
-      { id: "filters", amount: 250, title: { en: "Project, service or product filters", uk: "Фільтри проєктів, послуг або товарів", pl: "Filtry realizacji, usług lub produktów" } },
+      { id: "filters", amount: 200, title: { en: "Project, service or product filters", uk: "Фільтри проєктів, послуг або товарів", pl: "Filtry realizacji, usług lub produktów" } },
       {
         id: "editable_blog",
-        amount: 600,
+        amount: 500,
         starting: true,
         manual: true,
         title: {
@@ -785,8 +785,8 @@ const questions = {
       { id: "faq", amount: 100, title: { en: "FAQ section", uk: "Розділ поширених запитань", pl: "Sekcja FAQ" } },
       { id: "reviews", amount: 100, title: { en: "Customer reviews", uk: "Відгуки клієнтів", pl: "Opinie klientów" } },
       { id: "map", amount: 150, title: { en: "Interactive Google Map", uk: "Інтерактивна Google Map", pl: "Interaktywna mapa Google" } },
-      { id: "menu", amount: 200, title: { en: "Restaurant or service menu", uk: "Меню ресторану або послуг", pl: "Menu restauracji lub usług" } },
-      { id: "before_after", amount: 200, title: { en: "Before-and-after comparison", uk: "Порівняння до і після", pl: "Porównanie przed i po" } },
+      { id: "menu", amount: 150, title: { en: "Restaurant or service menu", uk: "Меню ресторану або послуг", pl: "Menu restauracji lub usług" } },
+      { id: "before_after", amount: 150, title: { en: "Before-and-after comparison", uk: "Порівняння до і після", pl: "Porównanie przed i po" } },
       {
         id: "downloads",
         amount: 100,
@@ -835,7 +835,7 @@ const questions = {
       },
       {
         id: "external_payment",
-        amount: 300,
+        amount: 250,
         starting: true,
         title: {
           en: "I only need payment links or an external checkout",
@@ -845,7 +845,7 @@ const questions = {
       },
       {
         id: "catalogue",
-        amount: 700,
+        amount: 600,
         starting: true,
         manual: true,
         title: {
@@ -996,8 +996,8 @@ const questions = {
         }
       },
       { id: "future_update", amount: 150, title: { en: "One future content update", uk: "Одне майбутнє оновлення контенту", pl: "Jedna przyszła aktualizacja treści" } },
-      { id: "monthly_basic", monthly: 149, title: { en: "Basic monthly support", uk: "Базова щомісячна підтримка", pl: "Podstawowe wsparcie miesięczne" } },
-      { id: "monthly_extended", monthly: 279, title: { en: "Extended monthly support", uk: "Розширена щомісячна підтримка", pl: "Rozszerzone wsparcie miesięczne" } }
+      { id: "monthly_basic", monthly: 150, title: { en: "Basic monthly support", uk: "Базова щомісячна підтримка", pl: "Podstawowe wsparcie miesięczne" } },
+      { id: "monthly_extended", monthly: 250, title: { en: "Extended monthly support", uk: "Розширена щомісячна підтримка", pl: "Rozszerzone wsparcie miesięczne" } }
     ]
   }
 };
