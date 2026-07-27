@@ -25,35 +25,25 @@ const translations = {
     emailLabel: "Email",
     projectsTitle: "FEATURED PROJECTS",
     projectType: "Open project",
-    projectAria: "Open {name} project site"
-  },
-  ru: {
-    documentTitle: "Yana Ellis - UX/UI дизайнер",
-    logoAlt: "Логотип Yana Ellis",
-    heroRole: "UX/UI ДИЗАЙНЕР",
-    heroDescription: "Я создаю минималистичные, экспериментальные и концептуальные цифровые пространства.",
-    availability: "Открыта для freelance-проектов",
-    aboutTitle: "ОБО МНЕ",
-    aboutOne: "Дизайн интерфейсов для меня: способ выражать идеи.",
-    aboutTwo: "Я работаю с ясностью, эмоцией и деталями, которые создают уникальный цифровой опыт.",
-    aboutThree: "Мне близки минимализм, смелые концепции и продуманные взаимодействия.",
-    toolsTitle: "ИНСТРУМЕНТЫ",
-    toolHtml: "HTML/CSS для реализации макетов",
-    toolJs: "JavaScript для интерактивности интерфейса",
-    approachTitle: "ПОДХОД",
-    minimalismTitle: "МИНИМАЛИЗМ",
-    minimalismText: "Меньше, но осмысленнее.",
-    conceptTitle: "СНАЧАЛА КОНЦЕПТ",
-    conceptText: "Сильная идея ведет дизайн.",
-    interactionTitle: "ВЗАИМОДЕЙСТВИЕ",
-    interactionText: "Детали, которые делают опыт плавным.",
-    attentionTitle: "ВНИМАНИЕ",
-    attentionText: "Точность в каждом пикселе.",
-    contactTitle: "КОНТАКТ",
-    emailLabel: "Почта",
-    projectsTitle: "ИЗБРАННЫЕ ПРОЕКТЫ",
-    projectType: "Открыть сайт",
-    projectAria: "Открыть сайт проекта {name}"
+    projectAria: "Open {name} project site",
+    estimateButton: "Estimate",
+    marketClose: "Close market selection",
+    marketKicker: "Select your market",
+    marketTitle: "Where does your business operate?",
+    marketDescription:
+      "Choose the country where your business primarily operates. This determines the currency and regional pricing used for your estimate.",
+    marketCanadaName: "Canada",
+    marketCanadaPrice: "Prices in Canadian dollars",
+    marketCanadaCopy: "For businesses operating primarily in Canada.",
+    marketUkraineName: "Ukraine",
+    marketUkrainePrice: "Prices in Ukrainian hryvnia",
+    marketUkraineCopy: "For businesses operating primarily in Ukraine.",
+    marketPolandName: "Poland",
+    marketPolandPrice: "Prices in Polish zloty",
+    marketPolandCopy: "For businesses operating primarily in Poland.",
+    marketContinue: "Continue",
+    marketNote:
+      "Pricing is based on the country where the business primarily operates, not the visitor's current location."
   },
   uk: {
     documentTitle: "Yana Ellis - UX/UI дизайнерка",
@@ -81,7 +71,25 @@ const translations = {
     emailLabel: "Пошта",
     projectsTitle: "ОБРАНІ ПРОЄКТИ",
     projectType: "Відкрити сайт",
-    projectAria: "Відкрити сайт проєкту {name}"
+    projectAria: "Відкрити сайт проєкту {name}",
+    estimateButton: "Розрахунок",
+    marketClose: "Закрити вибір ринку",
+    marketKicker: "Оберіть ринок",
+    marketTitle: "Де працює ваш бізнес?",
+    marketDescription:
+      "Оберіть країну, у якій переважно працює ваш бізнес. Від цього залежатимуть валюта та регіональні ціни у розрахунку.",
+    marketCanadaName: "Канада",
+    marketCanadaPrice: "Ціни в канадських доларах",
+    marketCanadaCopy: "Для бізнесів, які переважно працюють у Канаді.",
+    marketUkraineName: "Україна",
+    marketUkrainePrice: "Ціни в українських гривнях",
+    marketUkraineCopy: "Для бізнесів, які переважно працюють в Україні.",
+    marketPolandName: "Польща",
+    marketPolandPrice: "Ціни в польських злотих",
+    marketPolandCopy: "Для бізнесів, які переважно працюють у Польщі.",
+    marketContinue: "Продовжити",
+    marketNote:
+      "Ціни залежать від країни, у якій переважно працює бізнес, а не від поточного місцезнаходження відвідувача."
   },
   pl: {
     documentTitle: "Yana Ellis - projektantka UX/UI",
@@ -109,19 +117,43 @@ const translations = {
     emailLabel: "Email",
     projectsTitle: "WYBRANE PROJEKTY",
     projectType: "Otwórz projekt",
-    projectAria: "Otwórz stronę projektu {name}"
+    projectAria: "Otwórz stronę projektu {name}",
+    estimateButton: "Wycena",
+    marketClose: "Zamknij wybór rynku",
+    marketKicker: "Wybierz rynek",
+    marketTitle: "Gdzie działa Twoja firma?",
+    marketDescription:
+      "Wybierz kraj, w którym głównie działa Twoja firma. Od tego zależą waluta i regionalne ceny użyte w wycenie.",
+    marketCanadaName: "Kanada",
+    marketCanadaPrice: "Ceny w dolarach kanadyjskich",
+    marketCanadaCopy: "Dla firm działających głównie w Kanadzie.",
+    marketUkraineName: "Ukraina",
+    marketUkrainePrice: "Ceny w hrywnach ukraińskich",
+    marketUkraineCopy: "Dla firm działających głównie w Ukrainie.",
+    marketPolandName: "Polska",
+    marketPolandPrice: "Ceny w polskich złotych",
+    marketPolandCopy: "Dla firm działających głównie w Polsce.",
+    marketContinue: "Dalej",
+    marketNote:
+      "Ceny zależą od kraju, w którym głównie działa firma, a nie od aktualnej lokalizacji odwiedzającego."
   }
 };
 
 const languageButtons = document.querySelectorAll(".language-button");
 const textNodes = document.querySelectorAll("[data-i18n]");
 const altNodes = document.querySelectorAll("[data-i18n-alt]");
+const ariaNodes = document.querySelectorAll("[data-i18n-aria]");
 const projectCards = document.querySelectorAll(".project-card");
 const projectsViewport = document.querySelector(".projects-viewport");
 const projectsGrid = document.querySelector(".projects-grid");
 const projectsPrevious = document.querySelector("#projectsPrevious");
 const projectsNext = document.querySelector("#projectsNext");
+const estimateButton = document.querySelector("#estimateButton");
+const marketModal = document.querySelector("#marketModal");
+const marketCards = document.querySelectorAll("[data-market]");
+const marketCloseButtons = document.querySelectorAll("[data-market-close]");
 const supportedLanguages = ["en", "uk", "pl"];
+let lastFocusedElement = null;
 
 function getInitialLanguage() {
   const savedLanguage = localStorage.getItem("yana-ellis-language");
@@ -163,6 +195,13 @@ function applyLanguage(language) {
     }
   });
 
+  ariaNodes.forEach((node) => {
+    const key = node.dataset.i18nAria;
+    if (copy[key]) {
+      node.setAttribute("aria-label", copy[key]);
+    }
+  });
+
   translateProjectLabels(language);
 
   languageButtons.forEach((button) => {
@@ -172,10 +211,105 @@ function applyLanguage(language) {
   });
 }
 
+function getFocusableElements(container) {
+  return Array.from(
+    container.querySelectorAll(
+      'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])'
+    )
+  ).filter((element) => !element.hasAttribute("hidden"));
+}
+
+function openMarketModal() {
+  if (!marketModal) {
+    return;
+  }
+
+  lastFocusedElement = document.activeElement;
+  marketModal.hidden = false;
+  document.body.classList.add("modal-open");
+
+  requestAnimationFrame(() => {
+    marketModal.classList.add("is-visible");
+    getFocusableElements(marketModal)[0]?.focus();
+  });
+}
+
+function closeMarketModal() {
+  if (!marketModal || marketModal.hidden) {
+    return;
+  }
+
+  marketModal.classList.remove("is-visible");
+  document.body.classList.remove("modal-open");
+
+  window.setTimeout(() => {
+    marketModal.hidden = true;
+    (lastFocusedElement || estimateButton)?.focus();
+  }, 220);
+}
+
+function keepFocusInsideModal(event) {
+  if (!marketModal || marketModal.hidden || event.key !== "Tab") {
+    return;
+  }
+
+  const focusableElements = getFocusableElements(marketModal);
+  const firstElement = focusableElements[0];
+  const lastElement = focusableElements[focusableElements.length - 1];
+
+  if (!firstElement || !lastElement) {
+    return;
+  }
+
+  if (event.shiftKey && document.activeElement === firstElement) {
+    event.preventDefault();
+    lastElement.focus();
+  }
+
+  if (!event.shiftKey && document.activeElement === lastElement) {
+    event.preventDefault();
+    firstElement.focus();
+  }
+}
+
+function selectMarket(market) {
+  sessionStorage.setItem("yana-ellis-selected-market", market);
+
+  const routes = {
+    canada: "calculator/canada/index.html",
+    ukraine: "calculator/ukraine/index.html",
+    poland: "calculator/poland/index.html"
+  };
+
+  window.location.href = routes[market] || routes.canada;
+}
+
 languageButtons.forEach((button) => {
   button.addEventListener("click", () => {
     applyLanguage(button.dataset.lang);
   });
+});
+
+estimateButton?.addEventListener("click", openMarketModal);
+
+marketCloseButtons.forEach((button) => {
+  button.addEventListener("click", closeMarketModal);
+});
+
+marketCards.forEach((card) => {
+  card.addEventListener("click", () => selectMarket(card.dataset.market));
+});
+
+document.addEventListener("keydown", (event) => {
+  if (!marketModal || marketModal.hidden) {
+    return;
+  }
+
+  if (event.key === "Escape") {
+    closeMarketModal();
+  }
+
+  keepFocusInsideModal(event);
 });
 
 function getProjectStep() {

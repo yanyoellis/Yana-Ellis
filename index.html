@@ -29,16 +29,22 @@
           />
         </a>
 
-        <div class="language-switcher" aria-label="Language">
-          <button class="language-button is-active" type="button" data-lang="en" aria-pressed="true">
-            EN
+        <div class="header-actions">
+          <button class="estimate-button" id="estimateButton" type="button" data-i18n="estimateButton">
+            Estimate
           </button>
-          <button class="language-button" type="button" data-lang="uk" aria-pressed="false">
-            UK
-          </button>
-          <button class="language-button" type="button" data-lang="pl" aria-pressed="false">
-            PL
-          </button>
+
+          <div class="language-switcher" aria-label="Language">
+            <button class="language-button is-active" type="button" data-lang="en" aria-pressed="true">
+              EN
+            </button>
+            <button class="language-button" type="button" data-lang="uk" aria-pressed="false">
+              UK
+            </button>
+            <button class="language-button" type="button" data-lang="pl" aria-pressed="false">
+              PL
+            </button>
+          </div>
         </div>
       </header>
 
@@ -291,6 +297,93 @@
           </div>
         </section>
       </main>
+    </div>
+
+    <div class="market-modal" id="marketModal" hidden>
+      <div class="market-backdrop" data-market-close></div>
+      <section
+        class="market-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="marketTitle"
+        aria-describedby="marketDescription"
+      >
+        <button
+          class="market-close"
+          type="button"
+          data-market-close
+          aria-label="Close market selection"
+          data-i18n-aria="marketClose"
+        >
+          &times;
+        </button>
+        <p class="section-kicker" data-i18n="marketKicker">Select your market</p>
+        <h2 id="marketTitle" class="market-title" data-i18n="marketTitle">
+          Where does your business operate?
+        </h2>
+        <p id="marketDescription" class="market-description" data-i18n="marketDescription">
+          Choose the country where your business primarily operates. This determines the currency and
+          regional pricing used for your estimate.
+        </p>
+
+        <div class="market-grid" aria-label="Markets">
+          <button class="market-card" type="button" data-market="canada">
+            <span class="market-card-top">
+              <span class="market-card-name" data-i18n="marketCanadaName">Canada</span>
+              <span class="market-card-currency">CAD</span>
+            </span>
+            <span class="market-card-price" data-i18n="marketCanadaPrice">
+              Prices in Canadian dollars
+            </span>
+            <span class="market-card-copy" data-i18n="marketCanadaCopy">
+              For businesses operating primarily in Canada.
+            </span>
+            <span class="market-card-action">
+              <span data-i18n="marketContinue">Continue</span>
+              <span aria-hidden="true">&#8594;</span>
+            </span>
+          </button>
+
+          <button class="market-card" type="button" data-market="ukraine">
+            <span class="market-card-top">
+              <span class="market-card-name" data-i18n="marketUkraineName">Ukraine</span>
+              <span class="market-card-currency">UAH</span>
+            </span>
+            <span class="market-card-price" data-i18n="marketUkrainePrice">
+              Prices in Ukrainian hryvnia
+            </span>
+            <span class="market-card-copy" data-i18n="marketUkraineCopy">
+              For businesses operating primarily in Ukraine.
+            </span>
+            <span class="market-card-action">
+              <span data-i18n="marketContinue">Continue</span>
+              <span aria-hidden="true">&#8594;</span>
+            </span>
+          </button>
+
+          <button class="market-card" type="button" data-market="poland">
+            <span class="market-card-top">
+              <span class="market-card-name" data-i18n="marketPolandName">Poland</span>
+              <span class="market-card-currency">PLN</span>
+            </span>
+            <span class="market-card-price" data-i18n="marketPolandPrice">
+              Prices in Polish zloty
+            </span>
+            <span class="market-card-copy" data-i18n="marketPolandCopy">
+              For businesses operating primarily in Poland.
+            </span>
+            <span class="market-card-action">
+              <span data-i18n="marketContinue">Continue</span>
+              <span aria-hidden="true">&#8594;</span>
+            </span>
+          </button>
+        </div>
+
+        <p class="market-note" data-i18n="marketNote">
+          Pricing is based on the country where the business primarily operates, not the visitor's
+          current location.
+        </p>
+      </section>
     </div>
 
     <script src="script.js"></script>

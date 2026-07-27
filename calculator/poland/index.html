@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poland Estimate - Yana Ellis</title>
+    <link rel="icon" type="image/png" href="../../favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../canada/calculator.css" />
+  </head>
+  <body>
+    <div class="calculator-shell">
+      <header class="calculator-header">
+        <a class="brand-link" href="../../index.html" aria-label="Yana Ellis">
+          <img class="brand-logo" src="../../assets/yana-ellis-logo-transparent.png" alt="Yana Ellis logo" />
+        </a>
+        <div class="calculator-actions">
+          <a class="portfolio-link" href="../../index.html" data-copy="back">Portfolio</a>
+        </div>
+      </header>
+
+      <main class="calculator-main">
+        <p class="section-kicker" data-copy="market">Poland / PLN</p>
+        <h1 class="calculator-title" data-copy="title">Poland calculator is coming soon</h1>
+        <p class="calculator-intro" data-copy="intro">
+          I am preparing a separate price list for the Polish market. For now, please use the
+          Canadian calculator or contact me directly.
+        </p>
+        <div class="question-actions">
+          <a class="calculator-button" href="../canada/index.html" data-copy="canada">Open Canada calculator</a>
+          <a class="calculator-button secondary" href="../../index.html" data-copy="portfolio">Back to portfolio</a>
+        </div>
+      </main>
+    </div>
+
+    <script>
+      const copy = {
+        en: {
+          back: "Portfolio",
+          market: "Poland / PLN",
+          title: "Poland calculator is coming soon",
+          intro:
+            "I am preparing a separate price list for the Polish market. For now, please use the Canadian calculator or contact me directly.",
+          canada: "Open Canada calculator",
+          portfolio: "Back to portfolio"
+        },
+        uk: {
+          back: "Портфоліо",
+          market: "Польща / PLN",
+          title: "Калькулятор для Польщі скоро з'явиться",
+          intro:
+            "Я готую окремий прайс для польського ринку. Поки що можна скористатися калькулятором Canada або написати мені напряму.",
+          canada: "Відкрити калькулятор Canada",
+          portfolio: "Повернутися до портфоліо"
+        },
+        pl: {
+          back: "Portfolio",
+          market: "Polska / PLN",
+          title: "Kalkulator dla Polski pojawi się wkrótce",
+          intro:
+            "Przygotowuję osobny cennik dla rynku polskiego. Na razie możesz skorzystać z kalkulatora Canada albo napisać do mnie bezpośrednio.",
+          canada: "Otwórz kalkulator Canada",
+          portfolio: "Wróć do portfolio"
+        }
+      };
+      const language = ["en", "uk", "pl"].includes(localStorage.getItem("yana-ellis-language"))
+        ? localStorage.getItem("yana-ellis-language")
+        : "en";
+      document.documentElement.lang = language;
+      document.querySelectorAll("[data-copy]").forEach((node) => {
+        node.textContent = copy[language][node.dataset.copy];
+      });
+    </script>
+  </body>
+</html>
