@@ -439,7 +439,8 @@ module.exports = async function submitEstimate(request, response) {
       to: payload.client.email,
       subject: `${payload.requestId} - Website project request received`,
       textBody: clientText(payload),
-      htmlBody: clientHtml(payload)
+      htmlBody: clientHtml(payload),
+      replyTo: to
     });
 
     return sendJson(response, 200, { ok: true, requestId: payload.requestId });
