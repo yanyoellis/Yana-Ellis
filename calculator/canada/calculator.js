@@ -334,7 +334,7 @@ const questionCopy = {
     options: [
       {
         id: "simple_landing",
-        amount: 590,
+        amount: 500,
         title: {
           en: "Present one service or offer",
           uk: "Представити одну послугу або пропозицію",
@@ -348,7 +348,7 @@ const questionCopy = {
       },
       {
         id: "extended_landing",
-        amount: 770,
+        amount: 650,
         title: {
           en: "Present my business in more detail",
           uk: "Детальніше представити мій бізнес",
@@ -362,7 +362,7 @@ const questionCopy = {
       },
       {
         id: "business_website",
-        amount: 1040,
+        amount: 900,
         title: {
           en: "Present several services or areas of my business",
           uk: "Представити кілька послуг або напрямів бізнесу",
@@ -376,7 +376,7 @@ const questionCopy = {
       },
       {
         id: "portfolio",
-        amount: 720,
+        amount: 600,
         title: {
           en: "Showcase my work or personal brand",
           uk: "Показати мої роботи або особистий бренд",
@@ -390,7 +390,7 @@ const questionCopy = {
       },
       {
         id: "restaurant",
-        amount: 860,
+        amount: 750,
         title: {
           en: "Present a restaurant, cafe or bar",
           uk: "Представити ресторан, кафе або бар",
@@ -404,7 +404,7 @@ const questionCopy = {
       },
       {
         id: "interactive",
-        amount: 1260,
+        amount: 1050,
         title: {
           en: "Create an unusual interactive experience",
           uk: "Створити незвичайний інтерактивний сайт",
@@ -460,22 +460,22 @@ const questionCopy = {
       },
       {
         id: "small_pages",
-        amount: 90,
+        amount: 100,
         title: { en: "A small website with 2-3 pages", uk: "Невеликий сайт на 2-3 сторінки", pl: "Mała strona z 2-3 podstronami" }
       },
       {
         id: "standard_pages",
-        amount: 180,
+        amount: 150,
         title: { en: "A standard website with 4-5 pages", uk: "Стандартний сайт на 4-5 сторінок", pl: "Standardowa strona z 4-5 podstronami" }
       },
       {
         id: "larger_pages",
-        amount: 320,
+        amount: 250,
         title: { en: "A larger website with 6-8 pages", uk: "Більший сайт на 6-8 сторінок", pl: "Większa strona z 6-8 podstronami" }
       },
       {
         id: "more_than_8_pages",
-        amount: 540,
+        amount: 450,
         starting: true,
         manual: true,
         noteKey: "largeSiteNote",
@@ -510,17 +510,17 @@ const questionCopy = {
       },
       {
         id: "six_to_8_sections",
-        amount: 90,
+        amount: 100,
         title: { en: "6-8 sections", uk: "6-8 секцій", pl: "6-8 sekcji" }
       },
       {
         id: "nine_to_12_sections",
-        amount: 180,
+        amount: 150,
         title: { en: "9-12 sections", uk: "9-12 секцій", pl: "9-12 sekcji" }
       },
       {
         id: "more_than_12_sections",
-        amount: 320,
+        amount: 250,
         starting: true,
         manual: true,
         title: { en: "More than 12 sections", uk: "Більше ніж 12 секцій", pl: "Więcej niż 12 sekcji" }
@@ -555,7 +555,7 @@ const questionCopy = {
       },
       {
         id: "some_missing",
-        amount: 140,
+        amount: 100,
         title: { en: "Some materials are missing", uk: "Деяких матеріалів не вистачає", pl: "Brakuje części materiałów" },
         description: {
           en: "Light editing, content organisation and help selecting suitable images.",
@@ -565,7 +565,7 @@ const questionCopy = {
       },
       {
         id: "need_help",
-        amount: 320,
+        amount: 250,
         title: {
           en: "I need help preparing most of the content",
           uk: "Мені потрібна допомога з більшістю матеріалів",
@@ -607,7 +607,7 @@ const questionCopy = {
       },
       {
         id: "distinctive",
-        amount: 140,
+        amount: 100,
         title: {
           en: "More distinctive and expressive",
           uk: "Більш виразний та індивідуальний",
@@ -621,7 +621,7 @@ const questionCopy = {
       },
       {
         id: "signature",
-        amount: 320,
+        amount: 250,
         title: {
           en: "Signature visual concept",
           uk: "Авторська візуальна концепція",
@@ -663,7 +663,7 @@ const questionCopy = {
       },
       {
         id: "advanced",
-        amount: 140,
+        amount: 100,
         title: { en: "Advanced animations", uk: "Розширені анімації", pl: "Zaawansowane animacje" },
         description: {
           en: "More expressive transitions, scroll effects and detailed motion.",
@@ -673,7 +673,7 @@ const questionCopy = {
       },
       {
         id: "immersive",
-        amount: 320,
+        amount: 250,
         starting: true,
         manual: true,
         noteKey: "animationNote",
@@ -718,7 +718,7 @@ const questionCopy = {
       },
       {
         id: "extended_form",
-        amount: 70,
+        amount: 50,
         title: { en: "Detailed request form", uk: "Детальна форма заявки", pl: "Rozbudowany formularz zapytania" },
         description: {
           en: "Additional questions, service selection, preferred date or project details.",
@@ -728,7 +728,7 @@ const questionCopy = {
       },
       {
         id: "file_upload",
-        amount: 90,
+        amount: 100,
         title: {
           en: "Allow visitors to upload files",
           uk: "Дозволити відвідувачам завантажувати файли",
@@ -737,7 +737,7 @@ const questionCopy = {
       },
       {
         id: "newsletter",
-        amount: 70,
+        amount: 50,
         title: { en: "Email newsletter signup", uk: "Підписка на email-розсилку", pl: "Zapis do newslettera" }
       },
       {
@@ -769,7 +769,7 @@ const questionCopy = {
     options: [
       {
         id: "price_calculator",
-        amount: 230,
+        amount: 200,
         title: {
           en: "Let visitors calculate an estimated price",
           uk: "Дозволити відвідувачам розрахувати орієнтовну ціну",
@@ -778,7 +778,7 @@ const questionCopy = {
       },
       {
         id: "booking",
-        amount: 160,
+        amount: 150,
         title: {
           en: "Allow visitors to book an appointment or reservation",
           uk: "Дозволити відвідувачам бронювати зустріч або резервувати місце",
@@ -792,7 +792,7 @@ const questionCopy = {
       },
       {
         id: "gallery",
-        amount: 70,
+        amount: 50,
         title: {
           en: "Show a project or photo gallery",
           uk: "Показати галерею проєктів або фотографій",
@@ -801,7 +801,7 @@ const questionCopy = {
       },
       {
         id: "filtering",
-        amount: 110,
+        amount: 100,
         title: {
           en: "Allow visitors to filter projects, services or products",
           uk: "Дозволити фільтрувати проєкти, послуги або товари",
@@ -810,7 +810,7 @@ const questionCopy = {
       },
       {
         id: "editable_content",
-        amount: 270,
+        amount: 250,
         starting: true,
         manual: true,
         title: {
@@ -835,7 +835,7 @@ const questionCopy = {
       },
       {
         id: "map",
-        amount: 70,
+        amount: 50,
         title: {
           en: "Interactive map with the business location",
           uk: "Інтерактивна карта з адресою бізнесу",
@@ -844,12 +844,12 @@ const questionCopy = {
       },
       {
         id: "menu",
-        amount: 90,
+        amount: 100,
         title: { en: "Restaurant, cafe or service menu", uk: "Меню ресторану, кафе або послуг", pl: "Menu restauracji, kawiarni lub usług" }
       },
       {
         id: "before_after",
-        amount: 90,
+        amount: 100,
         title: {
           en: "Interactive before-and-after images",
           uk: "Інтерактивне порівняння «до та після»",
@@ -894,7 +894,7 @@ const questionCopy = {
       },
       {
         id: "payment_links",
-        amount: 140,
+        amount: 100,
         starting: true,
         title: {
           en: "I only need payment links or external checkout",
@@ -1070,7 +1070,7 @@ const questionCopy = {
       },
       {
         id: "future_update",
-        amount: 70,
+        amount: 50,
         title: {
           en: "One future content update",
           uk: "Одне майбутнє оновлення контенту",
@@ -1079,12 +1079,12 @@ const questionCopy = {
       },
       {
         id: "monthly_basic",
-        monthly: 70,
+        monthly: 50,
         title: { en: "Basic monthly support", uk: "Базова щомісячна підтримка", pl: "Podstawowe wsparcie miesięczne" }
       },
       {
         id: "monthly_extended",
-        monthly: 130,
+        monthly: 100,
         title: { en: "Extended monthly support", uk: "Розширена щомісячна підтримка", pl: "Rozszerzone wsparcie miesięczne" }
       }
     ]

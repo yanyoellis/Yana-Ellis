@@ -626,12 +626,57 @@ button {
   grid-column: 1 / -1;
 }
 
+.form-section {
+  gap: 14px;
+  min-width: 0;
+  margin: 0;
+  padding: 20px 0;
+  border-top: 1px solid var(--line);
+  border-right: 0;
+  border-bottom: 1px solid var(--line);
+  border-left: 0;
+}
+
 .field label,
 .field legend {
   color: var(--text);
   font-size: 0.74rem;
   font-weight: 600;
   text-transform: uppercase;
+}
+
+.choice-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.checkbox-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.choice-control {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  min-height: 48px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  color: var(--soft);
+  text-transform: none;
+}
+
+.choice-control input {
+  width: auto;
+  min-height: auto;
+  margin-top: 2px;
+  accent-color: var(--accent);
+}
+
+.choice-control span {
+  font-size: 0.86rem;
+  font-weight: 500;
+  line-height: 1.35;
 }
 
 .field input,
@@ -665,6 +710,136 @@ button {
 .field input::placeholder,
 .field textarea::placeholder {
   color: rgba(142, 142, 138, 0.76);
+}
+
+.field .choice-control input {
+  width: auto;
+  min-height: auto;
+  margin-top: 2px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.conditional-panel {
+  display: grid;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.conditional-panel[hidden],
+.conditional-contact[hidden] {
+  display: none;
+}
+
+.conditional-panel h3 {
+  margin: 0;
+  color: var(--text);
+  font-size: 0.74rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.link-list {
+  display: grid;
+  gap: 10px;
+}
+
+.link-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: start;
+}
+
+.link-row .field-error {
+  grid-column: 1 / -1;
+}
+
+.small-button {
+  width: fit-content;
+}
+
+.form-note,
+.submit-notice,
+.final-review {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: var(--soft);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.form-note,
+.submit-notice {
+  padding: 16px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.submit-notice {
+  display: grid;
+  gap: 8px;
+}
+
+.submit-notice p {
+  margin: 0;
+}
+
+.final-review {
+  display: grid;
+  gap: 16px;
+  padding: 22px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.final-review h3 {
+  margin: 0;
+  color: var(--text);
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.final-review dl {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+}
+
+.final-review dl div {
+  display: grid;
+  grid-template-columns: minmax(150px, 0.34fr) minmax(0, 1fr);
+  gap: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--line);
+}
+
+.final-review dt {
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.final-review dd {
+  margin: 0;
+  color: var(--text);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.review-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.consent-field a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .form-status {
@@ -799,6 +974,77 @@ button {
   color: var(--accent);
   font-size: 1rem;
   line-height: 1.6;
+}
+
+.price-notice,
+.submission-choice-section {
+  margin: 34px 0;
+  padding: 22px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.price-notice h3,
+.submission-choice-section h3,
+.submission-choice h4 {
+  margin: 0;
+  color: var(--text);
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.price-notice p,
+.submission-choice p,
+.choice-status {
+  color: var(--soft);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.price-notice p {
+  max-width: 760px;
+  margin: 12px 0 0;
+}
+
+.submission-choice-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.submission-choice {
+  display: grid;
+  gap: 14px;
+  align-content: start;
+  min-height: 220px;
+  padding: 20px;
+  border: 1px solid var(--line);
+}
+
+.submission-choice.is-primary {
+  border-color: var(--line-strong);
+}
+
+.submission-choice p,
+.choice-status {
+  margin: 0;
+}
+
+.submission-choice .calculator-button {
+  width: fit-content;
+  margin-top: auto;
+}
+
+.choice-status {
+  min-height: 24px;
+  margin-top: 14px;
+  color: var(--accent);
+}
+
+.request-form[hidden] {
+  display: none;
 }
 
 .manual-review-box,
@@ -1071,11 +1317,15 @@ button {
 
   .option-grid,
   .form-grid,
-  .details-content {
+  .details-content,
+  .choice-list,
+  .checkbox-grid,
+  .submission-choice-grid {
     grid-template-columns: 1fr;
   }
 
-  .option-card {
+  .option-card,
+  .submission-choice {
     min-height: 0;
   }
 
@@ -1108,6 +1358,16 @@ button {
 
   .summary-edit {
     justify-self: start;
+  }
+
+  .link-row,
+  .final-review dl div {
+    grid-template-columns: 1fr;
+  }
+
+  .submission-choice .calculator-button,
+  .small-button {
+    width: 100%;
   }
 }
 

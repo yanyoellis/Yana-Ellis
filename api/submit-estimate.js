@@ -30,6 +30,180 @@ function truncate(value, max = 4000) {
   return valueText.length > max ? `${valueText.slice(0, max)}...` : valueText;
 }
 
+function sanitizeText(value, max = 1000) {
+  return String(value ?? "")
+    .replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/g, "")
+    .trim()
+    .slice(0, max);
+}
+
+function normalizeUrlInput(value) {
+  const trimmed = sanitizeText(value, 500);
+  if (!trimmed) {
+    return "";
+  }
+
+  const candidate = /^[a-z][a-z\d+.-]*:/i.test(trimmed) ? trimmed : `https://${trimmed}`;
+
+  try {
+    const url = new URL(candidate);
+    if (url.protocol !== "http:" && url.protocol !== "https:") {
+      return "";
+    }
+    return url.href;
+  } catch (error) {
+    return "";
+  }
+}
+
+function normalizeTelegram(value) {
+  const raw = sanitizeText(value, 120);
+  const urlMatch = raw.match(/^(?:https?:\/\/)?(?:www\.)?t\.me\/([A-Za-z0-9_]{5,32})\/?$/i);
+  const username = (urlMatch ? urlMatch[1] : raw.replace(/^@/, "")).trim();
+  return /^[A-Za-z0-9_]{5,32}$/.test(username) ? `@${username}` : "";
+}
+
+function normalizeInstagram(value) {
+  const raw = sanitizeText(value, 160);
+  const urlMatch = raw.match(/^(?:https?:\/\/)?(?:www\.)?instagram\.com\/([A-Za-z0-9._]{1,30})\/?$/i);
+  const username = (urlMatch ? urlMatch[1] : raw.replace(/^@/, "")).trim();
+  return /^[A-Za-z0-9._]{1,30}$/.test(username) ? `@${username}` : "";
+}
+
+function normalizePhone(value) {
+  const raw = sanitizeText(value, 80);
+  const hasPlus = raw.startsWith("+");
+  const digits = raw.replace(/[^\d]/g, "");
+  if (digits.length < 7 || digits.length > 16) {
+    return "";
+  }
+  return `${hasPlus ? "+" : ""}${digits}`;
+}
+
+function sanitizeStringArray(values, maxItems = 12, maxLength = 160) {
+  return Array.isArray(values) ? values.slice(0, maxItems).map((value) => sanitizeText(value, maxLength)).filter(Boolean) : [];
+}
+
+function sanitizeLinks(links) {
+  if (!Array.isArray(links)) {
+    return [];
+  }
+
+  const normalized = [];
+  links.slice(0, 8).forEach((item) => {
+    const raw = typeof item === "string" ? item : item?.raw || item?.url || "";
+    const url = normalizeUrlInput(typeof item === "string" ? item : item?.url || item?.raw || "");
+    if (url) {
+      normalized.push({ raw: sanitizeText(raw, 500), url });
+    }
+  });
+  return normalized;
+}
+
+function validateAndSanitizePayload(payload) {
+  if (!payload || typeof payload !== "object") {
+    return "The request is missing required information.";
+  }
+
+  payload.requestId = sanitizeText(payload.requestId, 64);
+  payload.interfaceLanguage = sanitizeText(payload.interfaceLanguage, 8);
+
+  if (payload.client) {
+    payload.client.name = sanitizeText(payload.client.name, 120);
+    payload.client.email = sanitizeText(payload.client.email, 180);
+    payload.client.phone = sanitizeText(payload.client.phone, 80);
+    payload.client.telegram = sanitizeText(payload.client.telegram, 120);
+    payload.client.whatsapp = sanitizeText(payload.client.whatsapp, 80);
+    payload.client.instagram = sanitizeText(payload.client.instagram, 160);
+    payload.client.companyName = sanitizeText(payload.client.companyName, 160);
+    payload.client.currentWebsite = sanitizeText(payload.client.currentWebsite, 500);
+    payload.client.preferredContact = sanitizeText(payload.client.preferredContact, 40);
+    payload.client.preferredContactLabel = sanitizeText(payload.client.preferredContactLabel, 80);
+    payload.client.contactDestinationRaw = sanitizeText(payload.client.contactDestinationRaw, 180);
+    payload.client.bestContactTime = sanitizeText(payload.client.bestContactTime, 220);
+    payload.client.projectDescription = sanitizeText(payload.client.projectDescription, 4000);
+    payload.client.additionalNotes = sanitizeText(payload.client.additionalNotes, 3000);
+
+    const method = payload.client.preferredContact;
+    let contactDestination = "";
+    if (method === "Email") {
+      contactDestination = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(payload.client.email) ? payload.client.email : "";
+    } else if (method === "Telegram") {
+      contactDestination = normalizeTelegram(payload.client.contactDestinationRaw || payload.client.telegram);
+    } else if (method === "WhatsApp") {
+      contactDestination = normalizePhone(payload.client.contactDestinationRaw || payload.client.whatsapp);
+    } else if (method === "Instagram") {
+      contactDestination = normalizeInstagram(payload.client.contactDestinationRaw || payload.client.instagram);
+    }
+
+    if (!contactDestination) {
+      return "Please provide a valid preferred contact method and contact details.";
+    }
+
+    payload.client.contactDestination = contactDestination;
+    payload.client.consent = payload.client.contactConsent === true && payload.client.privacyConsent === true;
+  }
+
+  if (payload.inspiration) {
+    payload.inspiration.preference = sanitizeText(payload.inspiration.preference, 60);
+    payload.inspiration.preferenceLabel = sanitizeText(payload.inspiration.preferenceLabel, 160);
+    const rawLinks = Array.isArray(payload.inspiration.links) ? payload.inspiration.links.slice(0, 8) : [];
+    const hasUnsafeLink = rawLinks.some((item) => {
+      const raw = typeof item === "string" ? item : item?.url || item?.raw || "";
+      return sanitizeText(raw, 500) && !normalizeUrlInput(raw);
+    });
+    if (hasUnsafeLink) {
+      return "Please enter valid http or https inspiration links only.";
+    }
+    payload.inspiration.links = sanitizeLinks(rawLinks);
+    payload.inspiration.notes = sanitizeText(payload.inspiration.notes, 2000);
+  } else {
+    payload.inspiration = { preference: "", preferenceLabel: "", links: [], notes: "" };
+  }
+
+  if (payload.brandMaterials) {
+    payload.brandMaterials.selected = sanitizeStringArray(payload.brandMaterials.selected, 9, 80);
+    payload.brandMaterials.labels = sanitizeStringArray(payload.brandMaterials.labels, 9, 120);
+  } else {
+    payload.brandMaterials = { selected: [], labels: [] };
+  }
+
+  if (payload.deadline) {
+    payload.deadline.type = sanitizeText(payload.deadline.type, 80);
+    payload.deadline.typeLabel = sanitizeText(payload.deadline.typeLabel, 160);
+    payload.deadline.approximatePeriod = sanitizeText(payload.deadline.approximatePeriod, 180);
+    payload.deadline.specificDate = /^\d{4}-\d{2}-\d{2}$/.test(String(payload.deadline.specificDate || "")) ? payload.deadline.specificDate : "";
+    payload.deadline.availabilityConfirmed = false;
+  } else {
+    payload.deadline = { type: "no_fixed_date", typeLabel: "No fixed date", approximatePeriod: "", specificDate: "", availabilityConfirmed: false };
+  }
+
+  if (payload.budget) {
+    payload.budget.expectation = sanitizeText(payload.budget.expectation, 80);
+    payload.budget.expectationLabel = sanitizeText(payload.budget.expectationLabel, 160);
+    payload.budget.reviewRequested = payload.budget.expectation === "reduce_scope";
+  } else {
+    payload.budget = { expectation: "", expectationLabel: "", reviewRequested: false };
+  }
+
+  if (payload.projectStage) {
+    payload.projectStage.stage = sanitizeText(payload.projectStage.stage, 80);
+    payload.projectStage.stageLabel = sanitizeText(payload.projectStage.stageLabel, 180);
+  } else {
+    payload.projectStage = { stage: "", stageLabel: "" };
+  }
+
+  if (payload.referral) {
+    payload.referral.source = sanitizeText(payload.referral.source, 80);
+    payload.referral.sourceLabel = sanitizeText(payload.referral.sourceLabel, 160);
+    payload.referral.other = sanitizeText(payload.referral.other, 180);
+  } else {
+    payload.referral = { source: "", sourceLabel: "", other: "" };
+  }
+
+  return "";
+}
+
 function readBody(request) {
   return new Promise((resolve, reject) => {
     let body = "";
@@ -62,6 +236,10 @@ function hasRequiredPayload(payload) {
       payload.client?.companyName &&
       payload.client?.projectDescription &&
       payload.client?.consent === true &&
+      payload.client?.contactConsent === true &&
+      payload.client?.privacyConsent === true &&
+      payload.client?.preferredContact &&
+      payload.client?.contactDestination &&
       payload.market?.labelEn &&
       payload.pricing?.preliminaryEstimateDisplay &&
       Array.isArray(payload.answers)
@@ -146,6 +324,84 @@ function compactAnswersText(payload) {
     .join("\n");
 }
 
+function linksText(payload) {
+  const links = payload.inspiration?.links || [];
+  return links.length ? links.map((item, index) => `${index + 1}. ${text(item.url)}`).join("\n") : "-";
+}
+
+function materialsText(payload) {
+  const labels = payload.brandMaterials?.labels || [];
+  return labels.length ? labels.map((label) => `- ${label}`).join("\n") : "-";
+}
+
+function deadlineText(payload) {
+  const deadline = payload.deadline || {};
+  return [
+    `Requested deadline type:\n${text(deadline.typeLabel)}`,
+    `Approximate period:\n${text(deadline.approximatePeriod)}`,
+    `Requested date:\n${text(deadline.specificDate)}`,
+    "Availability confirmed:\nNo - manual confirmation required"
+  ].join("\n\n");
+}
+
+function additionalRequestDetailsText(payload) {
+  return `CONTACT PREFERENCE
+
+Preferred contact method:
+${text(payload.client?.preferredContactLabel || payload.client?.preferredContact)}
+
+Contact destination:
+${text(payload.client?.contactDestination)}
+
+Best time to contact:
+${text(payload.client?.bestContactTime)}
+
+CONTACT PERMISSION
+
+Contact consent:
+${payload.client?.contactConsent ? "Yes" : "No"}
+
+Privacy consent:
+${payload.client?.privacyConsent ? "Yes" : "No"}
+
+INSPIRATION
+
+Preference:
+${text(payload.inspiration?.preferenceLabel)}
+
+Links:
+${linksText(payload)}
+
+Notes:
+${text(payload.inspiration?.notes)}
+
+AVAILABLE MATERIALS
+
+${materialsText(payload)}
+
+DEADLINE
+
+${deadlineText(payload)}
+
+BUDGET RESPONSE
+
+Preliminary estimate within expected budget:
+${text(payload.budget?.expectationLabel)}
+${payload.budget?.reviewRequested ? "\n\nBUDGET REVIEW REQUESTED" : ""}
+
+PROJECT STAGE
+
+${text(payload.projectStage?.stageLabel)}
+
+REFERRAL SOURCE
+
+${text(payload.referral?.sourceLabel)}${payload.referral?.other ? `\n${payload.referral.other}` : ""}`;
+}
+
+function multilineHtml(value) {
+  return escapeHtml(value).replace(/\n/g, "<br />");
+}
+
 function telegramMessage(payload) {
   return `NEW WEBSITE REQUEST
 
@@ -178,7 +434,13 @@ Company or project:
 ${text(payload.client.companyName)}
 
 Preferred contact:
-${text(payload.client.preferredContact)}
+${text(payload.client.preferredContactLabel || payload.client.preferredContact)}
+
+Contact destination:
+${text(payload.client.contactDestination)}
+
+Best time to contact:
+${text(payload.client.bestContactTime)}
 
 Current website:
 ${text(payload.client.currentWebsite)}
@@ -190,6 +452,10 @@ ${truncate(payload.client.projectDescription, 900)}
 SELECTED OPTIONS
 
 ${truncate(compactAnswersText(payload), 1400)}
+
+REQUEST DETAILS
+
+${truncate(additionalRequestDetailsText(payload), 1200)}
 
 MONTHLY SUPPORT
 ${text(payload.pricing.monthlySupportDisplay)}
@@ -261,7 +527,13 @@ Current website:
 ${text(payload.client.currentWebsite)}
 
 Preferred contact:
-${text(payload.client.preferredContact)}
+${text(payload.client.preferredContactLabel || payload.client.preferredContact)}
+
+Contact destination:
+${text(payload.client.contactDestination)}
+
+Best time to contact:
+${text(payload.client.bestContactTime)}
 
 Preferred start:
 ${text(payload.client.preferredStartDate)}
@@ -269,6 +541,10 @@ ${text(payload.client.preferredStartDate)}
 PROJECT DESCRIPTION
 
 ${truncate(payload.client.projectDescription)}
+
+REQUEST DETAILS
+
+${additionalRequestDetailsText(payload)}
 
 CALCULATOR ANSWERS
 
@@ -321,10 +597,13 @@ function internalHtml(payload) {
     <p>${escapeHtml(payload.client.name)}<br />${escapeHtml(payload.client.email)}<br />${escapeHtml(payload.client.phone)}<br />${escapeHtml(payload.client.telegram)}</p>
     <p><strong>Company:</strong> ${escapeHtml(payload.client.companyName)}</p>
     <p><strong>Current website:</strong> ${escapeHtml(payload.client.currentWebsite)}</p>
-    <p><strong>Preferred contact:</strong> ${escapeHtml(payload.client.preferredContact)}</p>
-    <p><strong>Preferred start:</strong> ${escapeHtml(payload.client.preferredStartDate)}</p>
+    <p><strong>Preferred contact:</strong> ${escapeHtml(payload.client.preferredContactLabel || payload.client.preferredContact)}</p>
+    <p><strong>Contact destination:</strong> ${escapeHtml(payload.client.contactDestination)}</p>
+    <p><strong>Best time to contact:</strong> ${escapeHtml(payload.client.bestContactTime)}</p>
     <h2>Project description</h2>
     <p>${escapeHtml(truncate(payload.client.projectDescription)).replace(/\n/g, "<br />")}</p>
+    <h2>Request details</h2>
+    <p>${multilineHtml(additionalRequestDetailsText(payload))}</p>
     <h2>Calculator answers</h2>
     <ol>${selectedAnswersHtml(payload)}</ol>
     <h2>Price breakdown</h2>
@@ -351,6 +630,14 @@ const clientCopy = {
     selected: "Selected options",
     monthly: "Optional monthly support",
     notSelected: "Not selected",
+    preferredContact: "Preferred contact method",
+    contactDestination: "Contact I will use",
+    contactLine:
+      "You selected {method} as your preferred contact method. I will use {destination} when responding to this request.",
+    inspiration: "Submitted inspiration links",
+    deadline: "Requested deadline",
+    notFinal:
+      "Neither the preliminary price nor the requested deadline is final until I review the project scope and confirm availability.",
     signoff: "Regards,\nYana Ellis"
   },
   uk: {
@@ -367,6 +654,14 @@ const clientCopy = {
     selected: "Вибрані параметри",
     monthly: "Додаткова щомісячна підтримка",
     notSelected: "Не вибрано",
+    preferredContact: "Бажаний спосіб зв'язку",
+    contactDestination: "Контакт, який я використаю",
+    contactLine:
+      "Ви вибрали {method} як бажаний спосіб отримання відповіді. Я використаю {destination} для зв'язку щодо цієї заявки.",
+    inspiration: "Надіслані посилання на референси",
+    deadline: "Бажаний дедлайн",
+    notFinal:
+      "Ні попередня ціна, ні бажаний дедлайн не є фінальними, доки я не перегляну обсяг проєкту та не підтверджу доступність.",
     signoff: "З повагою,\nYana Ellis"
   },
   pl: {
@@ -383,6 +678,14 @@ const clientCopy = {
     selected: "Wybrane elementy",
     monthly: "Opcjonalne wsparcie miesięczne",
     notSelected: "Nie wybrano",
+    preferredContact: "Preferowany sposób kontaktu",
+    contactDestination: "Kontakt, którego użyję",
+    contactLine:
+      "Wybrałaś / wybrałeś {method} jako preferowaną formę odpowiedzi. Skorzystam z {destination}, aby odpowiedzieć na to zapytanie.",
+    inspiration: "Przesłane linki do inspiracji",
+    deadline: "Wybrany termin",
+    notFinal:
+      "Ani wstępna cena, ani wybrany termin nie są ostateczne, dopóki nie przeanalizuję zakresu projektu i nie potwierdzę dostępności.",
     signoff: "Pozdrawiam,\nYana Ellis"
   }
 };
@@ -394,6 +697,12 @@ function clientText(payload) {
   const selected = payload.answers
     .map((answer) => `- ${answer.questionLabel}: ${answer.optionLabel}`)
     .join("\n");
+  const contactMethod = text(payload.client.preferredContactLabel || payload.client.preferredContact);
+  const contactDestination = text(payload.client.contactDestination);
+  const contactLine = copy.contactLine
+    .replace("{method}", contactMethod)
+    .replace("{destination}", contactDestination);
+  const deadline = payload.deadline?.specificDate || payload.deadline?.approximatePeriod || payload.deadline?.typeLabel || copy.notSelected;
 
   return `${copy.greeting}, ${firstName}!
 
@@ -414,6 +723,22 @@ ${websiteType}
 ${copy.review}
 
 ${copy.disclaimer}
+
+${contactLine}
+
+${copy.preferredContact}:
+${contactMethod}
+
+${copy.contactDestination}:
+${contactDestination}
+
+${copy.inspiration}:
+${linksText(payload)}
+
+${copy.deadline}:
+${deadline}
+
+${copy.notFinal}
 
 ${copy.selected}:
 
@@ -504,6 +829,11 @@ module.exports = async function submitEstimate(request, response) {
     return sendJson(response, 413, { ok: false, message: "Request body is too large." });
   }
 
+  const validationError = validateAndSanitizePayload(payload);
+  if (validationError) {
+    return sendJson(response, 400, { ok: false, message: validationError });
+  }
+
   if (!hasRequiredPayload(payload)) {
     return sendJson(response, 400, { ok: false, message: "The request is missing required information." });
   }
@@ -540,7 +870,7 @@ module.exports = async function submitEstimate(request, response) {
       await sendTelegram(payload);
     }
 
-    if (!telegramConfigured && emailConfigured) {
+    if (emailConfigured) {
       await sendEmail({
         from,
         to,
