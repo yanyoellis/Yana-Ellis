@@ -1,4 +1,5 @@
 const RESEND_ENDPOINT = "https://api.resend.com/emails";
+const TELEGRAM_MESSAGE_LIMIT = 3900;
 const MAX_BODY_BYTES = 256 * 1024;
 const MIN_COMPLETION_MS = 2500;
 const rateLimitWindowMs = 10 * 60 * 1000;
@@ -136,6 +137,86 @@ function priceBreakdownText(payload) {
     `Manual review:\n${payload.flags?.manualReview ? "Yes" : "No"}`,
     `Custom quote:\n${payload.flags?.customQuote ? "Yes" : "No"}`
   ].join("\n\n");
+}
+
+function compactAnswersText(payload) {
+  return payload.answers
+    .slice(0, 14)
+    .map((answer) => `- ${text(answer.questionLabel)}: ${text(answer.optionLabel)}${answer.priceEffect ? ` (${answer.priceEffect})` : ""}`)
+    .join("\n");
+}
+
+function telegramMessage(payload) {
+  return `NEW WEBSITE REQUEST
+
+${payload.requestId}
+
+Market:
+${payload.market.labelEn}
+
+Estimate:
+${payload.pricing.preliminaryEstimateDisplay}
+
+Status:
+${manualStatus(payload)}
+
+CLIENT
+
+Name:
+${text(payload.client.name)}
+
+Email:
+${text(payload.client.email)}
+
+Phone:
+${text(payload.client.phone)}
+
+Telegram:
+${text(payload.client.telegram)}
+
+Company or project:
+${text(payload.client.companyName)}
+
+Preferred contact:
+${text(payload.client.preferredContact)}
+
+Current website:
+${text(payload.client.currentWebsite)}
+
+PROJECT DESCRIPTION
+
+${truncate(payload.client.projectDescription, 900)}
+
+SELECTED OPTIONS
+
+${truncate(compactAnswersText(payload), 1400)}
+
+MONTHLY SUPPORT
+${text(payload.pricing.monthlySupportDisplay)}
+
+Page:
+${text(payload.metadata?.pageUrl)}
+
+IMPORTANT
+This is a preliminary calculator estimate. Send the client a confirmed final quote manually.`;
+}
+
+function splitTelegramMessage(message) {
+  const chunks = [];
+  let remaining = message;
+
+  while (remaining.length > TELEGRAM_MESSAGE_LIMIT) {
+    const slice = remaining.slice(0, TELEGRAM_MESSAGE_LIMIT);
+    const splitAt = Math.max(slice.lastIndexOf("\n\n"), slice.lastIndexOf("\n"), 1);
+    chunks.push(remaining.slice(0, splitAt).trim());
+    remaining = remaining.slice(splitAt).trim();
+  }
+
+  if (remaining) {
+    chunks.push(remaining);
+  }
+
+  return chunks;
 }
 
 function internalText(payload) {
@@ -381,6 +462,34 @@ async function sendEmail({ from, to, subject, textBody, htmlBody, replyTo }) {
   return response.json();
 }
 
+async function sendTelegram(payload) {
+  const botToken = process.env.TELEGRAM_BOT_TOKEN;
+  const chatId = process.env.TELEGRAM_CHAT_ID;
+
+  if (!botToken || !chatId) {
+    throw new Error("Telegram service is not configured.");
+  }
+
+  const chunks = splitTelegramMessage(telegramMessage(payload));
+
+  for (const chunk of chunks) {
+    const response = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        chat_id: chatId,
+        text: chunk,
+        disable_web_page_preview: true
+      })
+    });
+
+    if (!response.ok) {
+      const responseText = await response.text();
+      throw new Error(`Telegram rejected the request: ${responseText}`);
+    }
+  }
+}
+
 module.exports = async function submitEstimate(request, response) {
   if (request.method !== "POST") {
     response.setHeader("Allow", "POST");
@@ -414,34 +523,42 @@ module.exports = async function submitEstimate(request, response) {
 
   const from = process.env.ESTIMATE_FROM_EMAIL;
   const to = process.env.ESTIMATE_TO_EMAIL || "oh.yanyoellis@gmail.com";
+  const telegramConfigured = Boolean(process.env.TELEGRAM_BOT_TOKEN && process.env.TELEGRAM_CHAT_ID);
+  const emailConfigured = process.env.ENABLE_RESEND_DELIVERY === "true" && Boolean(process.env.RESEND_API_KEY && from);
 
-  if (!process.env.RESEND_API_KEY || !from) {
+  if (!telegramConfigured && !emailConfigured) {
     return sendJson(response, 503, {
       ok: false,
-      message: "Email service is not configured yet."
+      message: "Request delivery is not configured yet."
     });
   }
 
   const subject = `New website request — ${payload.requestId} — ${payload.market.labelEn} — ${payload.pricing.preliminaryEstimateDisplay}`;
 
   try {
-    await sendEmail({
-      from,
-      to,
-      subject,
-      textBody: internalText(payload),
-      htmlBody: internalHtml(payload),
-      replyTo: payload.client.email
-    });
+    if (telegramConfigured) {
+      await sendTelegram(payload);
+    }
 
-    await sendEmail({
-      from,
-      to: payload.client.email,
-      subject: `${payload.requestId} - Website project request received`,
-      textBody: clientText(payload),
-      htmlBody: clientHtml(payload),
-      replyTo: to
-    });
+    if (!telegramConfigured && emailConfigured) {
+      await sendEmail({
+        from,
+        to,
+        subject,
+        textBody: internalText(payload),
+        htmlBody: internalHtml(payload),
+        replyTo: payload.client.email
+      });
+
+      await sendEmail({
+        from,
+        to: payload.client.email,
+        subject: `${payload.requestId} - Website project request received`,
+        textBody: clientText(payload),
+        htmlBody: clientHtml(payload),
+        replyTo: to
+      });
+    }
 
     return sendJson(response, 200, { ok: true, requestId: payload.requestId });
   } catch (error) {
