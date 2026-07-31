@@ -221,6 +221,41 @@ button {
   line-height: 1.75;
 }
 
+.starting-ranges {
+  display: grid;
+  gap: 12px;
+  max-width: 760px;
+  margin-top: 40px;
+  padding: 20px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.starting-ranges p {
+  margin: 0;
+  color: var(--soft);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+.starting-ranges ul {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.starting-ranges li {
+  min-height: 76px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  color: var(--text);
+  font-size: 0.86rem;
+  line-height: 1.45;
+}
+
 .progress-wrap {
   margin-top: 52px;
 }
@@ -445,9 +480,10 @@ button {
 .estimate-price {
   margin: 12px 0 0;
   font-family: var(--serif);
-  font-size: clamp(2.8rem, 5vw, 4.4rem);
+  font-size: clamp(2rem, 3.5vw, 3.4rem);
   font-weight: 500;
-  line-height: 0.9;
+  line-height: 1;
+  overflow-wrap: anywhere;
 }
 
 .estimate-price.is-updating,
@@ -476,9 +512,10 @@ button {
 .result-price {
   margin: 20px 0 0;
   font-family: var(--serif);
-  font-size: clamp(3.4rem, 8vw, 7rem);
+  font-size: clamp(2.7rem, 6.5vw, 5.8rem);
   font-weight: 500;
-  line-height: 0.86;
+  line-height: 0.95;
+  overflow-wrap: anywhere;
 }
 
 .result-copy {
@@ -558,6 +595,14 @@ button {
 .info-details summary:focus-visible {
   outline: 1px solid var(--line-strong);
   outline-offset: 4px;
+}
+
+.breakdown-details {
+  margin-top: 14px;
+}
+
+.breakdown-details .breakdown-table {
+  margin-bottom: 18px;
 }
 
 .details-content {
@@ -893,9 +938,10 @@ button {
 .result-side-panel strong {
   display: block;
   font-family: var(--serif);
-  font-size: clamp(2.3rem, 4vw, 4rem);
+  font-size: clamp(1.9rem, 3.2vw, 3.35rem);
   font-weight: 500;
-  line-height: 0.9;
+  line-height: 1;
+  overflow-wrap: anywhere;
 }
 
 .result-side-panel p {
@@ -903,6 +949,14 @@ button {
   color: var(--soft);
   font-size: 0.9rem;
   line-height: 1.7;
+}
+
+.scope-explanation {
+  max-width: 720px;
+  margin: 16px 0 0;
+  color: var(--soft);
+  font-size: 0.95rem;
+  line-height: 1.75;
 }
 
 .estimate-section {
@@ -1212,7 +1266,7 @@ button {
   }
 
   body {
-    padding-bottom: 78px;
+    padding-bottom: 118px;
   }
 
   .calculator-layout {
@@ -1248,6 +1302,10 @@ button {
     backdrop-filter: blur(10px);
   }
 
+  .mobile-estimate > span:first-child {
+    min-width: 0;
+  }
+
   .mobile-estimate-label {
     display: block;
     color: var(--muted);
@@ -1260,9 +1318,10 @@ button {
     display: block;
     margin-top: 4px;
     font-family: var(--serif);
-    font-size: 1.7rem;
+    font-size: clamp(1.05rem, 4.8vw, 1.45rem);
     font-weight: 500;
-    line-height: 0.9;
+    line-height: 1.05;
+    overflow-wrap: anywhere;
   }
 
   .mobile-estimate > span:last-child {
@@ -1320,6 +1379,7 @@ button {
   .details-content,
   .choice-list,
   .checkbox-grid,
+  .starting-ranges ul,
   .submission-choice-grid {
     grid-template-columns: 1fr;
   }

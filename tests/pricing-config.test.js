@@ -85,8 +85,8 @@ function assertPricingVersions() {
     assert(workflow.includes(`roundingUnit: ${market.roundingUnit}`), `${market.name}: workflow rounding unit is not ${market.roundingUnit}`);
   });
 
-  assert(workflow.includes('const WORKFLOW_VERSION = "1.1";'), "Missing updated workflow version.");
-  assert(workflow.includes('const FORM_VERSION = "2.0";'), "Missing updated form version.");
+  assert(workflow.includes('const WORKFLOW_VERSION = "1.2";'), "Missing updated workflow version.");
+  assert(workflow.includes('const FORM_VERSION = "2.1";'), "Missing updated form version.");
 }
 
 function assertRequestFormRequirements() {
@@ -102,6 +102,9 @@ function assertRequestFormRequirements() {
     "deadlineType",
     "budgetExpectation",
     "brandMaterials",
+    "emailCopy",
+    "estimateRange",
+    "groupedBreakdownRows",
     "referralSource",
     "/privacy-policy.html"
   ].forEach((token) => {
@@ -115,6 +118,7 @@ function assertRequestFormRequirements() {
     "normalizeInstagram",
     "contactConsent === true",
     "privacyConsent === true",
+    "emailCopy",
     "BUDGET REVIEW REQUESTED",
     "disable_web_page_preview: true"
   ].forEach((token) => {

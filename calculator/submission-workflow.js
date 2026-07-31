@@ -1,6 +1,6 @@
 (() => {
-  const WORKFLOW_VERSION = "1.1";
-  const FORM_VERSION = "2.0";
+  const WORKFLOW_VERSION = "1.2";
+  const FORM_VERSION = "2.1";
   const PRICING_MONTH = "2026-07-29";
   const API_ENDPOINT = "/api/submit-estimate";
   const telegramHandle = "@ohyanyo";
@@ -14,6 +14,7 @@
       inspirationLinks: [""],
       brandMaterials: [],
       deadlineType: "no_fixed_date",
+      emailCopy: false,
       contactConsent: false,
       privacyConsent: false
     };
@@ -652,6 +653,181 @@
     }
   };
 
+  Object.assign(workflowCopy.en, {
+    preliminaryProjectEstimate: "Your preliminary project estimate",
+    manualRangeTitle: "Your estimated project range",
+    estimatedStartingPoint: "Estimated starting range",
+    resultCopy:
+      "This is an approximate calculator estimate. The final price can change depending on design direction, technical details, content, timing and project nuances.",
+    statusManual: "Individual review needed",
+    priceNotice:
+      "The calculator shows an approximate starting point, not a final offer. The exact price can differ depending on visual design, content, integrations, timing and other project details. Taxes, paid tools, hosting, domains and third-party subscriptions are not included unless confirmed separately.",
+    estimatePanelNotice:
+      "Approximate price. Taxes, hosting, domains and third-party subscriptions are not included.",
+    manualNoticeTitle: "Individual review needed",
+    manualNotice:
+      "Your project includes advanced or custom requirements. The estimate shown is a preliminary range, not a confirmed final price. I will review the details and confirm the exact scope before work begins.",
+    estimatedProjectBudget: "Estimated project budget",
+    baseWebsite: "Base project",
+    pagesAndContent: "Pages and content",
+    designAndAnimation: "Design and animation",
+    advancedFunctionality: "Advanced functionality",
+    languagesGroup: "Languages",
+    launchAndSupport: "Launch and support",
+    estimatedTotal: "Estimated total",
+    viewDetailedBreakdown: "View detailed breakdown",
+    scopeExplanation:
+      "This estimate reflects the selected scope: website size, content preparation, visual direction, interaction level, language versions, launch help and support.",
+    scopeExplanationManual:
+      "This project includes advanced or custom requirements. Because of its scope, it needs an individual review before the final price is confirmed.",
+    advancedFeatureNotice:
+      "Advanced features can significantly increase the project cost and may require an individual review.",
+    startingRangesTitle: "Typical starting ranges",
+    startingRangesCopy:
+      "These are starting points before add-ons, languages, timing and custom functionality.",
+    marketRanges: [
+      "Landing / portfolio: from {simple}",
+      "Business website: from {business}",
+      "Interactive or custom project: from {interactive}"
+    ],
+    chooseNextStep: "Choose what you want to do next",
+    viewOnlyTitle: "Save estimate without sending",
+    viewOnlyCopy: "No information will be sent.",
+    viewOnlyButton: "Save estimate without sending",
+    requestOptionTitle: "Send project request",
+    requestOptionCopy: "I will review your project and contact you to confirm the details.",
+    openRequestForm: "Send project request",
+    noRequestSent: "No information has been sent. Your estimate is only saved in this browser session.",
+    requestFinalQuote: "Send project request",
+    formIntro:
+      "Send your project details for review. The calculator price is approximate and may change depending on design complexity, technical details, content and project nuances.",
+    contactConsent:
+      "I agree that Yana Ellis may contact me using the details provided regarding this project request.",
+    contactPhoneOption: "Phone call",
+    contactNoPreferenceOption: "No preference",
+    emailCopy: "Email me a copy of this estimate",
+    finalReviewEstimate: "Estimate shown above",
+    finalReviewEmailCopy: "Email copy requested",
+    documentDisclaimer:
+      "This document contains a preliminary estimate generated from the calculator answers. It is not an invoice, contract or binding commercial offer. The final project price may change after the requirements, design details and technical scope are reviewed."
+  });
+
+  Object.assign(workflowCopy.uk, {
+    preliminaryProjectEstimate: "Попередній розрахунок проєкту",
+    manualRangeTitle: "Орієнтовний діапазон вартості",
+    estimatedStartingPoint: "Орієнтовний стартовий діапазон",
+    resultCopy:
+      "Це приблизний розрахунок у калькуляторі. Фінальна вартість може змінюватися залежно від дизайну, технічних деталей, контенту, термінів і нюансів проєкту.",
+    statusManual: "Потрібна індивідуальна оцінка",
+    priceNotice:
+      "Калькулятор показує приблизний орієнтир, а не фінальну пропозицію. Точна вартість може відрізнятися залежно від дизайну, контенту, інтеграцій, термінів та інших деталей. Податки, платні інструменти, хостинг, домени та сторонні підписки не включені, якщо це не підтверджено окремо.",
+    estimatePanelNotice:
+      "Приблизна ціна. Податки, хостинг, домени та сторонні підписки не включені.",
+    manualNoticeTitle: "Потрібна індивідуальна оцінка",
+    manualNotice:
+      "У проєкті є складні або індивідуальні вимоги. Показана сума є попереднім діапазоном, а не підтвердженою фінальною ціною. Я перегляну деталі та підтверджу точний обсяг перед початком роботи.",
+    estimatedProjectBudget: "Орієнтовний бюджет проєкту",
+    baseWebsite: "Базовий проєкт",
+    pagesAndContent: "Сторінки та контент",
+    designAndAnimation: "Дизайн і анімація",
+    advancedFunctionality: "Розширена функціональність",
+    languagesGroup: "Мови",
+    launchAndSupport: "Запуск і підтримка",
+    estimatedTotal: "Орієнтовний підсумок",
+    viewDetailedBreakdown: "Переглянути детальний розрахунок",
+    scopeExplanation:
+      "Розрахунок враховує вибраний обсяг: розмір сайту, підготовку контенту, візуальний напрям, рівень інтерактивності, мовні версії, запуск і підтримку.",
+    scopeExplanationManual:
+      "Цей проєкт містить складні або індивідуальні вимоги. Через обсяг його потрібно переглянути окремо перед підтвердженням фінальної ціни.",
+    advancedFeatureNotice:
+      "Розширені функції можуть суттєво збільшити вартість проєкту та потребувати індивідуальної оцінки.",
+    startingRangesTitle: "Типові стартові діапазони",
+    startingRangesCopy:
+      "Це стартові орієнтири до додаткових функцій, мов, термінів та індивідуальної логіки.",
+    marketRanges: [
+      "Лендінг / портфоліо: від {simple}",
+      "Бізнес-сайт: від {business}",
+      "Інтерактивний або кастомний проєкт: від {interactive}"
+    ],
+    viewOnlyTitle: "Зберегти розрахунок без надсилання",
+    viewOnlyCopy: "Жодна інформація не буде надіслана.",
+    viewOnlyButton: "Зберегти без надсилання",
+    requestOptionTitle: "Надіслати заявку на проєкт",
+    requestOptionCopy: "Я перегляну проєкт і зв'яжуся з вами, щоб підтвердити деталі.",
+    openRequestForm: "Надіслати заявку",
+    noRequestSent: "Жодна інформація не була надіслана. Розрахунок збережено лише в цій сесії браузера.",
+    requestFinalQuote: "Надіслати заявку на проєкт",
+    formIntro:
+      "Надішліть деталі проєкту на перегляд. Ціна в калькуляторі є приблизною та може змінюватися залежно від складності дизайну, технічних деталей, контенту і нюансів проєкту.",
+    contactConsent:
+      "Я погоджуюся, що Yana Ellis може зв'язатися зі мною за наданими контактами щодо цього запиту на проєкт.",
+    contactPhoneOption: "Телефонний дзвінок",
+    contactNoPreferenceOption: "Немає переваги",
+    emailCopy: "Надіслати мені копію цього розрахунку на email",
+    finalReviewEstimate: "Розрахунок показано вище",
+    finalReviewEmailCopy: "Копія на email",
+    documentDisclaimer:
+      "Цей документ містить попередній розрахунок на основі відповідей у калькуляторі. Це не рахунок, не договір і не обов'язкова комерційна пропозиція. Фінальна ціна може змінитися після перегляду вимог, дизайну та технічного обсягу."
+  });
+
+  Object.assign(workflowCopy.pl, {
+    preliminaryProjectEstimate: "Wstępna wycena projektu",
+    manualRangeTitle: "Szacunkowy zakres projektu",
+    estimatedStartingPoint: "Szacunkowy zakres startowy",
+    resultCopy:
+      "To przybliżona wycena z kalkulatora. Cena końcowa może się zmienić w zależności od kierunku projektu wizualnego, szczegółów technicznych, treści, terminu i niuansów projektu.",
+    statusManual: "Potrzebna indywidualna analiza",
+    priceNotice:
+      "Kalkulator pokazuje przybliżony punkt wyjścia, a nie ostateczną ofertę. Dokładna cena może się różnić w zależności od projektu wizualnego, treści, integracji, terminu i innych szczegółów. Podatki, płatne narzędzia, hosting, domeny i zewnętrzne subskrypcje nie są uwzględnione, chyba że zostanie to potwierdzone osobno.",
+    estimatePanelNotice:
+      "Cena orientacyjna. Podatki, hosting, domeny i zewnętrzne subskrypcje nie są wliczone.",
+    manualNoticeTitle: "Potrzebna indywidualna analiza",
+    manualNotice:
+      "Projekt zawiera zaawansowane lub indywidualne wymagania. Pokazana kwota jest wstępnym zakresem, a nie potwierdzoną ceną końcową. Przeanalizuję szczegóły i potwierdzę dokładny zakres przed rozpoczęciem pracy.",
+    estimatedProjectBudget: "Szacunkowy budżet projektu",
+    baseWebsite: "Projekt bazowy",
+    pagesAndContent: "Strony i treści",
+    designAndAnimation: "Design i animacja",
+    advancedFunctionality: "Zaawansowana funkcjonalność",
+    languagesGroup: "Języki",
+    launchAndSupport: "Uruchomienie i wsparcie",
+    estimatedTotal: "Szacunkowa suma",
+    viewDetailedBreakdown: "Zobacz szczegółową wycenę",
+    scopeExplanation:
+      "Wycena uwzględnia wybrany zakres: rozmiar strony, przygotowanie treści, kierunek wizualny, poziom interakcji, wersje językowe, uruchomienie i wsparcie.",
+    scopeExplanationManual:
+      "Ten projekt zawiera zaawansowane lub indywidualne wymagania. Ze względu na zakres wymaga osobnej analizy przed potwierdzeniem ceny końcowej.",
+    advancedFeatureNotice:
+      "Zaawansowane funkcje mogą znacząco zwiększyć koszt projektu i wymagać indywidualnej analizy.",
+    startingRangesTitle: "Typowe zakresy startowe",
+    startingRangesCopy:
+      "To punkty wyjścia przed dodatkami, językami, terminem i indywidualną funkcjonalnością.",
+    marketRanges: [
+      "Landing / portfolio: od {simple}",
+      "Strona biznesowa: od {business}",
+      "Projekt interaktywny lub custom: od {interactive}"
+    ],
+    viewOnlyTitle: "Zapisz wycenę bez wysyłania",
+    viewOnlyCopy: "Żadne informacje nie zostaną wysłane.",
+    viewOnlyButton: "Zapisz bez wysyłania",
+    requestOptionTitle: "Wyślij zapytanie o projekt",
+    requestOptionCopy: "Przeanalizuję projekt i skontaktuję się z Tobą, aby potwierdzić szczegóły.",
+    openRequestForm: "Wyślij zapytanie",
+    noRequestSent: "Żadne informacje nie zostały wysłane. Wycena jest zapisana tylko w tej sesji przeglądarki.",
+    requestFinalQuote: "Wyślij zapytanie o projekt",
+    formIntro:
+      "Wyślij szczegóły projektu do analizy. Cena w kalkulatorze jest przybliżona i może się zmienić w zależności od złożoności designu, szczegółów technicznych, treści i niuansów projektu.",
+    contactConsent:
+      "Zgadzam się, aby Yana Ellis skontaktowała się ze mną za pomocą podanych danych w sprawie tego zapytania projektowego.",
+    contactPhoneOption: "Rozmowa telefoniczna",
+    contactNoPreferenceOption: "Bez preferencji",
+    emailCopy: "Wyślij mi kopię tej wyceny na email",
+    finalReviewEstimate: "Wycena pokazana powyżej",
+    finalReviewEmailCopy: "Kopia email",
+    documentDisclaimer:
+      "Ten dokument zawiera wstępną wycenę wygenerowaną na podstawie odpowiedzi w kalkulatorze. Nie jest fakturą, umową ani wiążącą ofertą handlową. Cena końcowa może się zmienić po analizie wymagań, detali designu i zakresu technicznego."
+  });
+
   function wc(key) {
     return workflowCopy[currentLanguage]?.[key] || workflowCopy.en[key] || key;
   }
@@ -694,6 +870,21 @@
 
   function signedAmount(amount) {
     return amount > 0 ? `+${formatAmount(amount)}` : formatAmount(amount);
+  }
+
+  function positiveEffect(amount) {
+    return amount > 0 ? signedAmount(amount) : wc("included");
+  }
+
+  function estimateRange(calculation) {
+    if (calculation.customBase || !calculation.preliminaryEstimate) {
+      return wc("customQuote");
+    }
+
+    const unit = calculation.roundingUnit || marketConfig().roundingUnit;
+    const low = Math.max(unit, roundByUnit(calculation.preliminaryEstimate * 0.9, unit));
+    const high = Math.max(low + unit, roundByUnit(calculation.preliminaryEstimate * 1.1, unit));
+    return `${formatAmount(low)} - ${formatAmount(high)}`;
   }
 
   function multiplierDisplay(multiplier) {
@@ -803,7 +994,13 @@
     });
 
     const subtotal = basePrice + fixedAdditions;
-    const languageAdjustment = subtotal * (languageMultiplier - 1);
+    const languageEligibleQuestionIds = new Set(["size", "content", "design", "animations", "contactFeatures", "businessFeatures", "onlineSales"]);
+    const languageExcludedOptionIds = new Set(["file_upload", "booking", "map"]);
+    const languageEligibleFixed = answerData
+      .filter((answer) => languageEligibleQuestionIds.has(answer.questionId) && !languageExcludedOptionIds.has(answer.optionId))
+      .reduce((sum, answer) => sum + (answer.fixedPrice || 0), 0);
+    const languageEligibleSubtotal = basePrice + languageEligibleFixed;
+    const languageAdjustment = languageEligibleSubtotal * (languageMultiplier - 1);
     const afterLanguage = subtotal + languageAdjustment;
     const timelineAdjustment = afterLanguage * (timelineMultiplier - 1);
     const amountBeforeRounding = afterLanguage + timelineAdjustment;
@@ -816,6 +1013,7 @@
       basePrice,
       fixedAdditions,
       subtotal,
+      languageEligibleSubtotal,
       languageMultiplier,
       languageAdjustment,
       timelineMultiplier,
@@ -834,17 +1032,98 @@
   }
 
   function resultAmount(calculation) {
-    return calculation.customBase ? wc("customQuote") : formatAmount(calculation.preliminaryEstimate);
+    if (calculation.customBase) {
+      return wc("customQuote");
+    }
+    return calculation.manualReview ? estimateRange(calculation) : formatAmount(calculation.preliminaryEstimate);
+  }
+
+  function selectedOptionSummary(calculation, questionIds) {
+    const labels = calculation.answerData
+      .filter((answer) => questionIds.includes(answer.questionId))
+      .map((answer) => answer.optionLabel)
+      .filter(Boolean);
+    return labels.length ? labels.slice(0, 4).join(", ") : wc("notSelected");
+  }
+
+  function fixedTotalFor(calculation, questionIds) {
+    return calculation.answerData
+      .filter((answer) => questionIds.includes(answer.questionId))
+      .reduce((sum, answer) => sum + (answer.fixedPrice || 0), 0);
+  }
+
+  function groupedBreakdownRows(calculation) {
+    const pagesAndContent = fixedTotalFor(calculation, ["size", "content"]);
+    const designAndAnimation = fixedTotalFor(calculation, ["design", "animations"]);
+    const advancedFunctionality = fixedTotalFor(calculation, ["contactFeatures", "businessFeatures", "onlineSales"]);
+    const launchAndSupport = fixedTotalFor(calculation, ["domain", "support"]) + calculation.timelineAdjustment;
+
+    return [
+      {
+        category: wc("baseWebsite"),
+        option: selectedOptionSummary(calculation, ["purpose"]),
+        effect: calculation.customBase ? wc("customQuote") : formatAmount(calculation.basePrice),
+        priceType: "subtotal"
+      },
+      {
+        category: wc("pagesAndContent"),
+        option: selectedOptionSummary(calculation, ["size", "content"]),
+        effect: positiveEffect(pagesAndContent),
+        priceType: "adjustment"
+      },
+      {
+        category: wc("designAndAnimation"),
+        option: selectedOptionSummary(calculation, ["design", "animations"]),
+        effect: positiveEffect(designAndAnimation),
+        priceType: "adjustment"
+      },
+      {
+        category: wc("advancedFunctionality"),
+        option: selectedOptionSummary(calculation, ["contactFeatures", "businessFeatures", "onlineSales"]),
+        effect: positiveEffect(advancedFunctionality),
+        priceType: "adjustment"
+      },
+      {
+        category: wc("languagesGroup"),
+        option: selectedOptionSummary(calculation, ["languages"]),
+        effect: calculation.languageMultiplier !== 1 ? signedAmount(calculation.languageAdjustment) : wc("included"),
+        priceType: "adjustment"
+      },
+      {
+        category: wc("launchAndSupport"),
+        option: selectedOptionSummary(calculation, ["domain", "timeline", "support"]),
+        effect: positiveEffect(launchAndSupport),
+        priceType: "adjustment"
+      },
+      {
+        category: wc("estimatedTotal"),
+        option: "",
+        effect: resultAmount(calculation),
+        priceType: "total"
+      }
+    ];
+  }
+
+  function buildBreakdownRows(rows) {
+    return rows
+      .map(
+        (row) => `
+          <div class="breakdown-row ${row.priceType === "total" ? "is-total" : ""}" role="row">
+            <span role="cell" data-label="${html(wc("category"))}">${html(row.category)}</span>
+            <span role="cell" data-label="${html(wc("selectedOption"))}">${html(row.option || "-")}</span>
+            <strong role="cell" data-label="${html(wc("priceEffect"))}">${html(row.effect)}</strong>
+          </div>
+        `
+      )
+      .join("");
   }
 
   function buildBreakdown(calculation) {
-    const rows = [
+    const rows = groupedBreakdownRows(calculation);
+    const detailedRows = [
       ...calculation.breakdownRows,
-      { category: wc("calculatedSubtotal"), option: "", effect: formatAmount(calculation.subtotal), priceType: "subtotal" },
       { category: wc("languageAdjustment"), option: multiplierDisplay(calculation.languageMultiplier), effect: signedAmount(calculation.languageAdjustment), priceType: "adjustment" },
       { category: wc("timelineAdjustment"), option: multiplierDisplay(calculation.timelineMultiplier), effect: signedAmount(calculation.timelineAdjustment), priceType: "adjustment" },
-      { category: wc("amountBeforeRounding"), option: "", effect: formatAmount(calculation.amountBeforeRounding), priceType: "subtotal" },
-      { category: wc("roundingUnit"), option: "", effect: formatAmount(calculation.roundingUnit), priceType: "subtotal" },
       { category: wc("preliminaryEstimate"), option: "", effect: resultAmount(calculation), priceType: "total" }
     ];
 
@@ -857,18 +1136,19 @@
             <span role="columnheader">${wc("selectedOption")}</span>
             <span role="columnheader">${wc("priceEffect")}</span>
           </div>
-          ${rows
-            .map(
-              (row) => `
-                <div class="breakdown-row ${row.priceType === "total" ? "is-total" : ""}" role="row">
-                  <span role="cell" data-label="${html(wc("category"))}">${html(row.category)}</span>
-                  <span role="cell" data-label="${html(wc("selectedOption"))}">${html(row.option || "-")}</span>
-                  <strong role="cell" data-label="${html(wc("priceEffect"))}">${html(row.effect)}</strong>
-                </div>
-              `
-            )
-            .join("")}
+          ${buildBreakdownRows(rows)}
         </div>
+        <details class="info-details breakdown-details">
+          <summary>${wc("viewDetailedBreakdown")}</summary>
+          <div class="breakdown-table" role="table" aria-label="${html(wc("viewDetailedBreakdown"))}">
+            <div class="breakdown-row breakdown-head" role="row">
+              <span role="columnheader">${wc("category")}</span>
+              <span role="columnheader">${wc("selectedOption")}</span>
+              <span role="columnheader">${wc("priceEffect")}</span>
+            </div>
+            ${buildBreakdownRows(detailedRows)}
+          </div>
+        </details>
       </section>
     `;
   }
@@ -880,6 +1160,69 @@
         <p>${wc("priceNotice")}</p>
       </section>
     `;
+  }
+
+  function buildScopeExplanation(calculation) {
+    const copy = calculation.manualReview ? wc("scopeExplanationManual") : wc("scopeExplanation");
+    return `<p class="scope-explanation">${copy}</p>`;
+  }
+
+  function marketRangeLines() {
+    const purposeOptions = questionCopy.purpose.options;
+    const optionAmount = (id) => purposeOptions.find((option) => option.id === id)?.amount || 0;
+    const replacements = {
+      simple: formatAmount(optionAmount("simple_landing")),
+      business: formatAmount(optionAmount("business_website")),
+      interactive: formatAmount(optionAmount("interactive"))
+    };
+
+    return (workflowCopy[currentLanguage]?.marketRanges || workflowCopy.en.marketRanges).map((line) =>
+      line.replace("{simple}", replacements.simple).replace("{business}", replacements.business).replace("{interactive}", replacements.interactive)
+    );
+  }
+
+  function injectStartingRanges() {
+    const intro = document.querySelector(".calculator-intro");
+    const progressWrap = document.querySelector(".progress-wrap");
+    if (!intro || !progressWrap) {
+      return;
+    }
+
+    let ranges = document.querySelector("#marketStartingRanges");
+    if (!ranges) {
+      ranges = document.createElement("section");
+      ranges.id = "marketStartingRanges";
+      ranges.className = "starting-ranges";
+      progressWrap.parentNode.insertBefore(ranges, progressWrap);
+    }
+
+    ranges.innerHTML = `
+      <p class="section-kicker">${wc("startingRangesTitle")}</p>
+      <p>${wc("startingRangesCopy")}</p>
+      <ul>${marketRangeLines().map((line) => `<li>${html(line)}</li>`).join("")}</ul>
+    `;
+  }
+
+  function decorateQuestionPanel() {
+    const questions = getQuestions();
+    const question = questions[state.step];
+    if (!question) {
+      return;
+    }
+
+    const progress = Math.round(((state.step + 1) / questions.length) * 100);
+    const stepLabel = questionPanel.querySelector(".step-label");
+    if (stepLabel && !stepLabel.dataset.enhanced) {
+      stepLabel.dataset.enhanced = "true";
+      stepLabel.textContent = `${stepLabel.textContent} / ${progress}%`;
+    }
+
+    if (["animations", "businessFeatures", "onlineSales"].includes(question.id)) {
+      const actions = questionPanel.querySelector(".question-actions");
+      if (actions && !questionPanel.querySelector(".advanced-feature-note")) {
+        actions.insertAdjacentHTML("beforebegin", `<p class="question-note advanced-feature-note">${wc("advancedFeatureNotice")}</p>`);
+      }
+    }
   }
 
   function buildProjectSummary(calculation) {
@@ -1069,6 +1412,7 @@
       projectStage: formValue(formData, "projectStage"),
       referralSource: formValue(formData, "referralSource"),
       referralSourceOther: formValue(formData, "referralSourceOther"),
+      emailCopy: formData.get("emailCopy") === "on",
       contactConsent: formData.get("contactConsent") === "on",
       privacyConsent: formData.get("privacyConsent") === "on"
     };
@@ -1083,7 +1427,9 @@
       Email: wc("contactEmailOption"),
       Telegram: wc("contactTelegramOption"),
       WhatsApp: wc("contactWhatsAppOption"),
-      Instagram: wc("contactInstagramOption")
+      Instagram: wc("contactInstagramOption"),
+      Phone: wc("contactPhoneOption"),
+      "No preference": wc("contactNoPreferenceOption")
     };
     return labels[method] || wc("notProvided");
   }
@@ -1103,10 +1449,19 @@
       const normalized = normalizePhone(raw);
       return { raw, normalized, valid: Boolean(normalized) };
     }
+    if (method === "Phone") {
+      const raw = formValue(formData, "phone");
+      const normalized = normalizePhone(raw);
+      return { raw, normalized, valid: Boolean(normalized) };
+    }
     if (method === "Instagram") {
       const raw = formValue(formData, "instagram");
       const normalized = normalizeInstagram(raw);
       return { raw, normalized, valid: Boolean(normalized) };
+    }
+    if (method === "No preference") {
+      const raw = formValue(formData, "email");
+      return { raw, normalized: raw, valid: /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(raw) };
     }
     return { raw: "", normalized: "", valid: false };
   }
@@ -1249,6 +1604,8 @@
           <option value="Telegram" ${selectedAttribute("Telegram", method)}>${wc("contactTelegramOption")}</option>
           <option value="WhatsApp" ${selectedAttribute("WhatsApp", method)}>${wc("contactWhatsAppOption")}</option>
           <option value="Instagram" ${selectedAttribute("Instagram", method)}>${wc("contactInstagramOption")}</option>
+          <option value="Phone" ${selectedAttribute("Phone", method)}>${wc("contactPhoneOption")}</option>
+          <option value="No preference" ${selectedAttribute("No preference", method)}>${wc("contactNoPreferenceOption")}</option>
         </select>
         <span class="field-error" id="preferredContactError"></span>
       </div>
@@ -1283,30 +1640,40 @@
       .slice(0, 6);
   }
 
+  function draftContactDestination(method) {
+    if (method === "Email" || method === "No preference") {
+      return formDraft.email;
+    }
+    if (method === "Telegram") {
+      return formDraft.telegram;
+    }
+    if (method === "WhatsApp") {
+      return formDraft.whatsapp;
+    }
+    if (method === "Instagram") {
+      return formDraft.instagram;
+    }
+    if (method === "Phone") {
+      return formDraft.phone;
+    }
+    return "";
+  }
+
   function buildFinalReview(calculation) {
     const method = formDraft.preferredContact || "";
-    const destination =
-      method === "Email"
-        ? formDraft.email
-        : method === "Telegram"
-          ? formDraft.telegram
-          : method === "WhatsApp"
-            ? formDraft.whatsapp
-            : method === "Instagram"
-              ? formDraft.instagram
-              : "";
+    const destination = draftContactDestination(method);
     const websiteType = selectedAnswerObjects()[0]?.selected?.[0];
     const features = mainFeatureSummary();
     const inspirationCount = (formDraft.inspirationLinks || []).filter((value) => value.trim()).length;
 
     const rows = [
-      [wc("finalReviewEstimate"), resultAmount(calculation)],
       [wc("finalReviewMarket"), `${localMarketLabel()} / ${marketConfig().currencyCode}`],
       [wc("finalReviewWebsiteType"), websiteType ? getText(websiteType.title) : wc("notProvided")],
       [wc("finalReviewFeatures"), features.length ? features.join(", ") : wc("notProvided")],
       [wc("finalReviewContactMethod"), contactMethodLabel(method)],
       [wc("finalReviewContactDestination"), destination || wc("notProvided")],
       [wc("finalReviewInspirationLinks"), String(inspirationCount)],
+      [wc("finalReviewEmailCopy"), formDraft.emailCopy ? wc("yes") : wc("no")],
       [wc("finalReviewContactConsent"), formDraft.contactConsent ? wc("yes") : wc("no")],
       [wc("finalReviewPrivacyConsent"), formDraft.privacyConsent ? wc("yes") : wc("no")]
     ];
@@ -1391,6 +1758,12 @@
             </label>
             <span class="field-error" id="privacyConsentCheckboxError"></span>
           </div>
+          <div class="field full consent-field">
+            <label for="emailCopyCheckbox">
+              <input id="emailCopyCheckbox" name="emailCopy" type="checkbox" ${formDraft.emailCopy ? "checked" : ""} />
+              <span>${wc("emailCopy")}</span>
+            </label>
+          </div>
         </div>
         <div class="submit-notice" role="note">
           <p>${wc("contactExpectation")}</p>
@@ -1405,7 +1778,7 @@
 
   renderResult = function renderEnhancedResult() {
     const calculation = calculateDetailedEstimate();
-    const resultLabel = calculation.manualReview ? wc("estimatedStartingPoint") : wc("preliminaryProjectEstimate");
+    const resultLabel = calculation.manualReview ? wc("manualRangeTitle") : wc("preliminaryProjectEstimate");
     const resultDisplay = resultAmount(calculation);
     const statusText = calculation.manualReview ? wc("statusManual") : wc("statusPreliminary");
 
@@ -1420,6 +1793,7 @@
         <p class="result-price">${resultDisplay}</p>
         <span class="estimate-status-badge">${statusText}</span>
         <p class="result-copy">${wc("resultCopy")}</p>
+        ${buildScopeExplanation(calculation)}
       </div>
       <div class="result-consultation-grid">
         <div class="result-main-flow">
@@ -1442,6 +1816,54 @@
         </aside>
       </div>
     `;
+  };
+
+  calculateEstimate = function calculateWorkflowEstimate() {
+    const calculation = calculateDetailedEstimate();
+    return {
+      base: calculation.basePrice,
+      fixed: calculation.fixedAdditions,
+      subtotal: calculation.subtotal,
+      languageMultiplier: calculation.languageMultiplier,
+      timelineMultiplier: calculation.timelineMultiplier,
+      final: calculation.preliminaryEstimate,
+      optionalMonthly: calculation.monthlySupport,
+      manual: calculation.manualReview,
+      customBase: calculation.customBase,
+      manualFlags: calculation.manualFlags,
+      detailed: calculation
+    };
+  };
+
+  getEstimateDisplay = function getWorkflowEstimateDisplay(calculation) {
+    return resultAmount(calculation?.detailed || calculateDetailedEstimate());
+  };
+
+  updateEstimatePanels = function updateWorkflowEstimatePanels() {
+    const calculation = calculateDetailedEstimate();
+    const display = resultAmount(calculation);
+    const building = getBuildingLabel();
+
+    if (estimatePrice?.textContent !== display) {
+      animatePriceChange(estimatePrice);
+      animatePriceChange(mobileEstimatePrice);
+    }
+
+    if (estimatePrice) {
+      estimatePrice.textContent = display;
+    }
+    if (mobileEstimatePrice) {
+      mobileEstimatePrice.textContent = display;
+    }
+    if (estimateBuilding) {
+      estimateBuilding.textContent = building;
+    }
+    if (mobileEstimateBuilding) {
+      mobileEstimateBuilding.textContent = building;
+    }
+    if (estimateAnnouncement) {
+      estimateAnnouncement.textContent = `${wc("estimatedProjectBudget")}: ${display}`;
+    }
   };
 
   editStep = function editEnhancedStep(step) {
@@ -1621,6 +2043,8 @@
         Telegram: ["telegramUsername", "telegramUsernameError", wc("invalidTelegram")],
         WhatsApp: ["whatsappNumber", "whatsappNumberError", wc("invalidWhatsApp")],
         Instagram: ["instagramUsername", "instagramUsernameError", wc("invalidInstagram")],
+        Phone: ["clientPhone", "preferredContactError", wc("invalidWhatsApp")],
+        "No preference": ["clientEmail", "clientEmailError", wc("requiredEmail")],
         Email: ["clientEmail", "clientEmailError", wc("requiredEmail")]
       };
       const [fieldId, errorId, message] = methodErrors[selectedContactMethod] || ["preferredContact", "preferredContactError", wc("requiredContactDestination")];
@@ -1723,6 +2147,7 @@
         preferredStartDate: "",
         projectDescription: formValue(formData, "description"),
         additionalNotes: formValue(formData, "notes"),
+        emailCopy: formData.get("emailCopy") === "on",
         contactConsent: formData.get("contactConsent") === "on",
         privacyConsent: formData.get("privacyConsent") === "on",
         consent: formData.get("contactConsent") === "on" && formData.get("privacyConsent") === "on"
@@ -1766,6 +2191,8 @@
         fixedAdditionsDisplay: formatAmount(calculation.fixedAdditions),
         subtotal: calculation.subtotal,
         subtotalDisplay: formatAmount(calculation.subtotal),
+        languageEligibleSubtotal: calculation.languageEligibleSubtotal,
+        languageEligibleSubtotalDisplay: formatAmount(calculation.languageEligibleSubtotal),
         languageMultiplier: calculation.languageMultiplier,
         languageAdjustment: calculation.languageAdjustment,
         languageAdjustmentDisplay: signedAmount(calculation.languageAdjustment),
@@ -1777,7 +2204,9 @@
         roundingUnit: calculation.roundingUnit,
         roundingUnitDisplay: formatAmount(calculation.roundingUnit),
         preliminaryEstimate: calculation.preliminaryEstimate,
+        preliminaryEstimateExactDisplay: formatAmount(calculation.preliminaryEstimate),
         preliminaryEstimateDisplay: resultAmount(calculation),
+        manualEstimateRangeDisplay: calculation.manualReview ? resultAmount(calculation) : "",
         monthlySupport: calculation.monthlySupport,
         monthlySupportDisplay: calculation.monthlySupport ? formatMonthly(calculation.monthlySupport) : wc("notSelected")
       },
@@ -1788,7 +2217,7 @@
       },
       visibleSummary: {
         answers: answerSummaryLines(calculation),
-        breakdown: calculation.breakdownRows
+        breakdown: groupedBreakdownRows(calculation)
           .map((row) => `${row.category}: ${row.option} - ${row.effect}`)
           .join("\n"),
         contactPreference: `${contactMethodLabel(formValue(formData, "preferredContact"))}: ${contact.normalized || contact.raw || wc("notProvided")}`,
@@ -1912,10 +2341,8 @@
     const breakdownRows = [
       [wc("baseWebsite"), "", payload.pricing.basePriceDisplay || formatAmount(payload.pricing.basePrice)],
       [wc("fixedAdditions"), "", payload.pricing.fixedAdditionsDisplay || formatAmount(payload.pricing.fixedAdditions)],
-      [wc("calculatedSubtotal"), "", payload.pricing.subtotalDisplay || formatAmount(payload.pricing.subtotal)],
       [wc("languageAdjustment"), multiplierDisplay(payload.pricing.languageMultiplier), payload.pricing.languageAdjustmentDisplay || signedAmount(payload.pricing.languageAdjustment)],
       [wc("timelineAdjustment"), multiplierDisplay(payload.pricing.timelineMultiplier), payload.pricing.timelineAdjustmentDisplay || signedAmount(payload.pricing.timelineAdjustment)],
-      [wc("roundingUnit"), "", payload.pricing.roundingUnitDisplay || formatAmount(payload.pricing.roundingUnit)],
       [wc("preliminaryEstimate"), "", payload.pricing.preliminaryEstimateDisplay]
     ]
       .map((row) => `<tr><th>${html(row[0])}</th><td>${html(row[1])}</td><td>${html(row[2])}</td></tr>`)
@@ -2130,21 +2557,42 @@
     true
   );
 
+  const nativeRenderQuestion = renderQuestion;
+  renderQuestion = function renderEnhancedQuestion() {
+    nativeRenderQuestion();
+    injectStartingRanges();
+    decorateQuestionPanel();
+  };
+
   if (ui.en) {
     ui.en.estimatedProjectCost = workflowCopy.en.preliminaryProjectEstimate;
     ui.en.finalCopy = workflowCopy.en.resultCopy;
     ui.en.finalEstimate = workflowCopy.en.preliminaryEstimate;
+    ui.en.currentEstimate = workflowCopy.en.estimatedProjectBudget;
+    ui.en.estimateNote = workflowCopy.en.estimatePanelNotice;
   }
   if (ui.uk) {
     ui.uk.estimatedProjectCost = workflowCopy.uk.preliminaryProjectEstimate;
     ui.uk.finalCopy = workflowCopy.uk.resultCopy;
     ui.uk.finalEstimate = workflowCopy.uk.preliminaryEstimate;
+    ui.uk.currentEstimate = workflowCopy.uk.estimatedProjectBudget;
+    ui.uk.estimateNote = workflowCopy.uk.estimatePanelNotice;
   }
   if (ui.pl) {
     ui.pl.estimatedProjectCost = workflowCopy.pl.preliminaryProjectEstimate;
     ui.pl.finalCopy = workflowCopy.pl.resultCopy;
     ui.pl.finalEstimate = workflowCopy.pl.preliminaryEstimate;
+    ui.pl.currentEstimate = workflowCopy.pl.estimatedProjectBudget;
+    ui.pl.estimateNote = workflowCopy.pl.estimatePanelNotice;
   }
 
+  staticTextNodes.forEach((node) => {
+    const key = node.dataset.i18n;
+    if (ui[currentLanguage]?.[key]) {
+      node.textContent = t(key);
+    }
+  });
+
+  injectStartingRanges();
   render();
 })();

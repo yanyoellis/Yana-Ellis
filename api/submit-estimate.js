@@ -123,6 +123,7 @@ function validateAndSanitizePayload(payload) {
     payload.client.bestContactTime = sanitizeText(payload.client.bestContactTime, 220);
     payload.client.projectDescription = sanitizeText(payload.client.projectDescription, 4000);
     payload.client.additionalNotes = sanitizeText(payload.client.additionalNotes, 3000);
+    payload.client.emailCopy = payload.client.emailCopy === true;
 
     const method = payload.client.preferredContact;
     let contactDestination = "";
@@ -132,8 +133,12 @@ function validateAndSanitizePayload(payload) {
       contactDestination = normalizeTelegram(payload.client.contactDestinationRaw || payload.client.telegram);
     } else if (method === "WhatsApp") {
       contactDestination = normalizePhone(payload.client.contactDestinationRaw || payload.client.whatsapp);
+    } else if (method === "Phone") {
+      contactDestination = normalizePhone(payload.client.contactDestinationRaw || payload.client.phone);
     } else if (method === "Instagram") {
       contactDestination = normalizeInstagram(payload.client.contactDestinationRaw || payload.client.instagram);
+    } else if (method === "No preference") {
+      contactDestination = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(payload.client.email) ? payload.client.email : "";
     }
 
     if (!contactDestination) {
@@ -266,7 +271,7 @@ function languageLabel(language) {
 }
 
 function manualStatus(payload) {
-  return payload.flags?.manualReview ? "Manual review required" : "Preliminary estimate";
+  return payload.flags?.manualReview ? "Individual review needed" : "Preliminary estimate";
 }
 
 function selectedAnswersText(payload) {
@@ -277,7 +282,7 @@ function selectedAnswersText(payload) {
         lines.push(answer.priceType === "base" ? `Base price: ${answer.priceEffect}` : `Effect: ${answer.priceEffect}`);
       }
       if (answer.manualReview) {
-        lines.push("Manual review: Yes");
+        lines.push("Individual review: Yes");
       }
       return lines.join("\n");
     })
@@ -303,16 +308,11 @@ function priceBreakdownText(payload) {
   return [
     `Base price:\n${text(pricing.basePriceDisplay || payload.answers?.find((answer) => answer.priceType === "base")?.priceEffect || pricing.basePrice)}`,
     `Fixed additions:\n${text(pricing.fixedAdditionsDisplay || pricing.fixedAdditions)}`,
-    `Subtotal:\n${text(pricing.subtotalDisplay || pricing.subtotal)}`,
-    `Language multiplier:\n${text(pricing.languageMultiplier)}`,
     `Language adjustment:\n${text(pricing.languageAdjustmentDisplay || pricing.languageAdjustment)}`,
-    `Timeline multiplier:\n${text(pricing.timelineMultiplier)}`,
     `Timeline adjustment:\n${text(pricing.timelineAdjustmentDisplay || pricing.timelineAdjustment)}`,
-    `Amount before rounding:\n${text(pricing.amountBeforeRoundingDisplay || pricing.amountBeforeRounding)}`,
-    `Rounding unit:\n${text(pricing.roundingUnitDisplay || pricing.roundingUnit)}`,
     `Preliminary estimate:\n${text(pricing.preliminaryEstimateDisplay)}`,
     `Monthly support:\n${text(pricing.monthlySupportDisplay)}`,
-    `Manual review:\n${payload.flags?.manualReview ? "Yes" : "No"}`,
+    `Individual review:\n${payload.flags?.manualReview ? "Yes" : "No"}`,
     `Custom quote:\n${payload.flags?.customQuote ? "Yes" : "No"}`
   ].join("\n\n");
 }
@@ -363,6 +363,9 @@ ${payload.client?.contactConsent ? "Yes" : "No"}
 
 Privacy consent:
 ${payload.client?.privacyConsent ? "Yes" : "No"}
+
+Email copy requested:
+${payload.client?.emailCopy ? "Yes" : "No"}
 
 INSPIRATION
 
@@ -880,14 +883,16 @@ module.exports = async function submitEstimate(request, response) {
         replyTo: payload.client.email
       });
 
-      await sendEmail({
-        from,
-        to: payload.client.email,
-        subject: `${payload.requestId} - Website project request received`,
-        textBody: clientText(payload),
-        htmlBody: clientHtml(payload),
-        replyTo: to
-      });
+      if (payload.client.emailCopy) {
+        await sendEmail({
+          from,
+          to: payload.client.email,
+          subject: `${payload.requestId} - Website project request received`,
+          textBody: clientText(payload),
+          htmlBody: clientHtml(payload),
+          replyTo: to
+        });
+      }
     }
 
     return sendJson(response, 200, { ok: true, requestId: payload.requestId });
