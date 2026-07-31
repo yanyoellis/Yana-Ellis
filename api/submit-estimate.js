@@ -124,6 +124,7 @@ function validateAndSanitizePayload(payload) {
     payload.client.projectDescription = sanitizeText(payload.client.projectDescription, 4000);
     payload.client.additionalNotes = sanitizeText(payload.client.additionalNotes, 3000);
     payload.client.emailCopy = payload.client.emailCopy === true;
+    payload.client.termsConsent = payload.client.termsConsent === true;
 
     const method = payload.client.preferredContact;
     let contactDestination = "";
@@ -146,7 +147,7 @@ function validateAndSanitizePayload(payload) {
     }
 
     payload.client.contactDestination = contactDestination;
-    payload.client.consent = payload.client.contactConsent === true && payload.client.privacyConsent === true;
+    payload.client.consent = payload.client.contactConsent === true && payload.client.privacyConsent === true && payload.client.termsConsent === true;
   }
 
   if (payload.inspiration) {
@@ -198,6 +199,45 @@ function validateAndSanitizePayload(payload) {
     payload.projectStage = { stage: "", stageLabel: "" };
   }
 
+  if (payload.planning) {
+    payload.planning.translationSource = sanitizeText(payload.planning.translationSource, 80);
+    payload.planning.translationSourceLabel = sanitizeText(payload.planning.translationSourceLabel, 180);
+    payload.planning.phasedImplementation = sanitizeText(payload.planning.phasedImplementation, 80);
+    payload.planning.phasedImplementationLabel = sanitizeText(payload.planning.phasedImplementationLabel, 180);
+    payload.planning.visualDirection = sanitizeText(payload.planning.visualDirection, 1200);
+  } else {
+    payload.planning = {
+      translationSource: "",
+      translationSourceLabel: "",
+      phasedImplementation: "",
+      phasedImplementationLabel: "",
+      visualDirection: ""
+    };
+  }
+
+  if (payload.promotion) {
+    const discountPercent = Number(payload.promotion.discountPercent) || 0;
+    payload.promotion.option = sanitizeText(payload.promotion.option, 80);
+    payload.promotion.optionLabel = sanitizeText(payload.promotion.optionLabel, 180);
+    payload.promotion.discountPercent = Math.max(0, Math.min(100, discountPercent));
+    payload.promotion.discountAmount = Number(payload.promotion.discountAmount) || 0;
+    payload.promotion.discountAmountDisplay = sanitizeText(payload.promotion.discountAmountDisplay, 80);
+    payload.promotion.estimatedPriceAfterDiscount = Number(payload.promotion.estimatedPriceAfterDiscount) || 0;
+    payload.promotion.estimatedPriceAfterDiscountDisplay = sanitizeText(payload.promotion.estimatedPriceAfterDiscountDisplay, 120);
+    payload.promotion.conditionsSummary = sanitizeText(payload.promotion.conditionsSummary, 800);
+  } else {
+    payload.promotion = {
+      option: "standard",
+      optionLabel: "Standard price, no promotional conditions",
+      discountPercent: 0,
+      discountAmount: 0,
+      discountAmountDisplay: "-",
+      estimatedPriceAfterDiscount: 0,
+      estimatedPriceAfterDiscountDisplay: "",
+      conditionsSummary: ""
+    };
+  }
+
   if (payload.referral) {
     payload.referral.source = sanitizeText(payload.referral.source, 80);
     payload.referral.sourceLabel = sanitizeText(payload.referral.sourceLabel, 160);
@@ -243,6 +283,7 @@ function hasRequiredPayload(payload) {
       payload.client?.consent === true &&
       payload.client?.contactConsent === true &&
       payload.client?.privacyConsent === true &&
+      payload.client?.termsConsent === true &&
       payload.client?.preferredContact &&
       payload.client?.contactDestination &&
       payload.market?.labelEn &&
@@ -311,6 +352,9 @@ function priceBreakdownText(payload) {
     `Language adjustment:\n${text(pricing.languageAdjustmentDisplay || pricing.languageAdjustment)}`,
     `Timeline adjustment:\n${text(pricing.timelineAdjustmentDisplay || pricing.timelineAdjustment)}`,
     `Preliminary estimate:\n${text(pricing.preliminaryEstimateDisplay)}`,
+    `Promotional option:\n${text(payload.promotion?.optionLabel)}`,
+    `Promotional discount:\n${text(pricing.promotionalDiscountAmountDisplay || payload.promotion?.discountAmountDisplay)} (${text(payload.promotion?.discountPercent, "0")}%)`,
+    `Estimate after promotional option:\n${text(pricing.promotionalEstimateDisplay || payload.promotion?.estimatedPriceAfterDiscountDisplay)}`,
     `Monthly support:\n${text(pricing.monthlySupportDisplay)}`,
     `Individual review:\n${payload.flags?.manualReview ? "Yes" : "No"}`,
     `Custom quote:\n${payload.flags?.customQuote ? "Yes" : "No"}`
@@ -364,6 +408,9 @@ ${payload.client?.contactConsent ? "Yes" : "No"}
 Privacy consent:
 ${payload.client?.privacyConsent ? "Yes" : "No"}
 
+Terms consent:
+${payload.client?.termsConsent ? "Yes" : "No"}
+
 Email copy requested:
 ${payload.client?.emailCopy ? "Yes" : "No"}
 
@@ -396,6 +443,32 @@ PROJECT STAGE
 
 ${text(payload.projectStage?.stageLabel)}
 
+TRANSLATIONS
+
+${text(payload.planning?.translationSourceLabel)}
+
+PHASED IMPLEMENTATION
+
+${text(payload.planning?.phasedImplementationLabel)}
+
+VISUAL DIRECTION
+
+${text(payload.planning?.visualDirection)}
+
+PROMOTIONAL OPTION
+
+Selected option:
+${text(payload.promotion?.optionLabel)}
+
+Discount:
+${text(payload.promotion?.discountPercent)}%
+
+Estimated price after promotional option:
+${text(payload.promotion?.estimatedPriceAfterDiscountDisplay)}
+
+Conditions:
+${text(payload.promotion?.conditionsSummary)}
+
 REFERRAL SOURCE
 
 ${text(payload.referral?.sourceLabel)}${payload.referral?.other ? `\n${payload.referral.other}` : ""}`;
@@ -415,6 +488,12 @@ ${payload.market.labelEn}
 
 Estimate:
 ${payload.pricing.preliminaryEstimateDisplay}
+
+Promotional option:
+${text(payload.promotion?.optionLabel)}
+
+Promotional estimate:
+${text(payload.pricing?.promotionalEstimateDisplay || payload.promotion?.estimatedPriceAfterDiscountDisplay)}
 
 Status:
 ${manualStatus(payload)}
@@ -506,6 +585,12 @@ ${languageLabel(payload.interfaceLanguage)}
 Preliminary estimate:
 ${payload.pricing.preliminaryEstimateDisplay}
 
+Promotional option:
+${text(payload.promotion?.optionLabel)}
+
+Promotional estimate:
+${text(payload.pricing?.promotionalEstimateDisplay || payload.promotion?.estimatedPriceAfterDiscountDisplay)}
+
 Status:
 ${manualStatus(payload)}
 
@@ -595,6 +680,8 @@ function internalHtml(payload) {
     <p><strong>Market:</strong><br />${escapeHtml(payload.market.labelEn)}</p>
     <p><strong>Interface language:</strong><br />${escapeHtml(languageLabel(payload.interfaceLanguage))}</p>
     <p><strong>Preliminary estimate:</strong><br />${escapeHtml(payload.pricing.preliminaryEstimateDisplay)}</p>
+    <p><strong>Promotional option:</strong><br />${escapeHtml(payload.promotion?.optionLabel || "-")}</p>
+    <p><strong>Promotional estimate:</strong><br />${escapeHtml(payload.pricing?.promotionalEstimateDisplay || payload.promotion?.estimatedPriceAfterDiscountDisplay || "-")}</p>
     <p><strong>Status:</strong><br />${escapeHtml(manualStatus(payload))}</p>
     <h2>Client information</h2>
     <p>${escapeHtml(payload.client.name)}<br />${escapeHtml(payload.client.email)}<br />${escapeHtml(payload.client.phone)}<br />${escapeHtml(payload.client.telegram)}</p>
@@ -627,10 +714,11 @@ const clientCopy = {
     estimate: "Preliminary estimate",
     selectedType: "Selected website type",
     review:
-      "I will review all project requirements and contact you within one business day.",
+      "I will review all project requirements and contact you within 1-2 business days.",
     disclaimer:
       "The amount shown is a preliminary estimate based on your calculator answers. The exact price will be confirmed after the requirements are reviewed and before any work begins.",
     selected: "Selected options",
+    promotion: "Promotional option",
     monthly: "Optional monthly support",
     notSelected: "Not selected",
     preferredContact: "Preferred contact method",
@@ -651,10 +739,11 @@ const clientCopy = {
     estimate: "Попередній розрахунок",
     selectedType: "Вибраний тип сайту",
     review:
-      "Я перегляну всі вимоги проєкту та зв'яжуся з вами протягом одного робочого дня.",
+      "Я перегляну всі вимоги проєкту та зв'яжуся з вами протягом 1-2 робочих днів.",
     disclaimer:
       "Вказана сума є попереднім розрахунком на основі відповідей у калькуляторі. Точну вартість буде підтверджено після перевірки вимог і до початку роботи.",
     selected: "Вибрані параметри",
+    promotion: "Промоційний варіант",
     monthly: "Додаткова щомісячна підтримка",
     notSelected: "Не вибрано",
     preferredContact: "Бажаний спосіб зв'язку",
@@ -675,10 +764,11 @@ const clientCopy = {
     estimate: "Wstępna wycena",
     selectedType: "Wybrany rodzaj strony",
     review:
-      "Przeanalizuję wszystkie wymagania projektu i skontaktuję się z Tobą w ciągu jednego dnia roboczego.",
+      "Przeanalizuję wszystkie wymagania projektu i skontaktuję się z Tobą w ciągu 1-2 dni roboczych.",
     disclaimer:
       "Podana kwota jest wstępną wyceną opartą na odpowiedziach w kalkulatorze. Dokładna cena zostanie potwierdzona po analizie wymagań i przed rozpoczęciem pracy.",
     selected: "Wybrane elementy",
+    promotion: "Opcja promocyjna",
     monthly: "Opcjonalne wsparcie miesięczne",
     notSelected: "Nie wybrano",
     preferredContact: "Preferowany sposób kontaktu",
@@ -719,6 +809,10 @@ ${payload.market.label}
 
 ${copy.estimate}:
 ${payload.pricing.preliminaryEstimateDisplay}
+
+${copy.promotion}:
+${text(payload.promotion?.optionLabel)}
+${text(payload.pricing?.promotionalEstimateDisplay || payload.promotion?.estimatedPriceAfterDiscountDisplay)}
 
 ${copy.selectedType}:
 ${websiteType}

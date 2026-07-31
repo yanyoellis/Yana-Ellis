@@ -85,8 +85,8 @@ function assertPricingVersions() {
     assert(workflow.includes(`roundingUnit: ${market.roundingUnit}`), `${market.name}: workflow rounding unit is not ${market.roundingUnit}`);
   });
 
-  assert(workflow.includes('const WORKFLOW_VERSION = "1.2";'), "Missing updated workflow version.");
-  assert(workflow.includes('const FORM_VERSION = "2.1";'), "Missing updated form version.");
+  assert(workflow.includes('const WORKFLOW_VERSION = "1.4";'), "Missing updated workflow version.");
+  assert(workflow.includes('const FORM_VERSION = "2.3";'), "Missing updated form version.");
 }
 
 function assertRequestFormRequirements() {
@@ -97,6 +97,7 @@ function assertRequestFormRequirements() {
     "inspirationLinks[]",
     "contactConsent",
     "privacyConsent",
+    "termsConsent",
     "WhatsApp",
     "Instagram",
     "deadlineType",
@@ -105,8 +106,19 @@ function assertRequestFormRequirements() {
     "emailCopy",
     "estimateRange",
     "groupedBreakdownRows",
+    "not_sure_recommend",
+    "translationSource",
+    "phasedImplementation",
+    "visualDirection",
+    "more_than_twenty_pages",
     "referralSource",
-    "/privacy-policy.html"
+    "promotionalOption",
+    "promotionalOptions",
+    "promotionalEstimate",
+    "/privacy-policy.html",
+    "/terms-of-service.html",
+    "../../project-guide.html",
+    "../../faq.html"
   ].forEach((token) => {
     assert(workflow.includes(token), `Workflow missing ${token}`);
   });
@@ -118,7 +130,10 @@ function assertRequestFormRequirements() {
     "normalizeInstagram",
     "contactConsent === true",
     "privacyConsent === true",
+    "termsConsent === true",
     "emailCopy",
+    "payload.planning",
+    "payload.promotion",
     "BUDGET REVIEW REQUESTED",
     "disable_web_page_preview: true"
   ].forEach((token) => {

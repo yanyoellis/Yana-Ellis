@@ -40,12 +40,19 @@ function basePayload(overrides = {}) {
       contactDestination: "@tester_user",
       contactConsent: true,
       privacyConsent: true,
+      termsConsent: true,
       consent: true
     },
     market: { label: "Canada", labelEn: "Canada" },
     pricing: { preliminaryEstimateDisplay: "1,600 CAD" },
     answers: [],
     inspiration: { links: [] },
+    promotion: {
+      option: "standard",
+      optionLabel: "Standard price, no promotional conditions",
+      discountPercent: 0,
+      discountAmountDisplay: "-"
+    },
     metadata: { elapsedMs: 3000 },
     ...overrides
   };

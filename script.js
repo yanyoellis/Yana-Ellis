@@ -27,6 +27,29 @@ const translations = {
     projectType: "Open project",
     projectAria: "Open {name} project site",
     estimateButton: "Estimate",
+    estimateProjectButton: "Estimate project",
+    processButton: "How the process works",
+    processNote:
+      "Read the full process, payments, revisions and project terms before sending a request.",
+    clientInfoKicker: "CLIENT INFORMATION",
+    clientInfoTitle: "Details before we start",
+    clientInfoText:
+      "Review common questions, privacy details and project terms before sending a request.",
+    clientInfoFaqTitle: "FAQ",
+    clientInfoFaqText: "Answers about process, payments, revisions and support.",
+    clientInfoPrivacyTitle: "Privacy Policy",
+    clientInfoPrivacyText: "How project request data is collected and used.",
+    clientInfoTermsTitle: "Terms of Service",
+    clientInfoTermsText: "Project scope, estimates, payments and ownership terms.",
+    footerText:
+      "Website design and development information for clear written project requests.",
+    footerProjectGuide: "Project Guide",
+    footerFaq: "FAQ",
+    footerPrivacy: "Privacy Policy",
+    footerTerms: "Terms of Service",
+    footerCalculator: "Calculator",
+    footerEmail: "Email",
+    footerTelegram: "Telegram",
     marketClose: "Close market selection",
     marketKicker: "Select your market",
     marketTitle: "Where does your business operate?",
@@ -73,6 +96,29 @@ const translations = {
     projectType: "Відкрити сайт",
     projectAria: "Відкрити сайт проєкту {name}",
     estimateButton: "Розрахунок",
+    estimateProjectButton: "Оцінити проєкт",
+    processButton: "Як проходить робота",
+    processNote:
+      "Прочитайте повний процес, оплату, правки та умови проєкту перед надсиланням заявки.",
+    clientInfoKicker: "ІНФОРМАЦІЯ ДЛЯ КЛІЄНТІВ",
+    clientInfoTitle: "Деталі перед стартом",
+    clientInfoText:
+      "Перегляньте часті питання, приватність та умови проєкту перед надсиланням заявки.",
+    clientInfoFaqTitle: "FAQ",
+    clientInfoFaqText: "Відповіді про процес, оплату, правки та підтримку.",
+    clientInfoPrivacyTitle: "Конфіденційність",
+    clientInfoPrivacyText: "Як дані із заявки збираються та використовуються.",
+    clientInfoTermsTitle: "Умови",
+    clientInfoTermsText: "Обсяг проєкту, оцінки, оплата та передача прав.",
+    footerText:
+      "Інформація про дизайн і розробку сайтів для зрозумілих письмових заявок.",
+    footerProjectGuide: "Гайд проєкту",
+    footerFaq: "FAQ",
+    footerPrivacy: "Конфіденційність",
+    footerTerms: "Умови",
+    footerCalculator: "Калькулятор",
+    footerEmail: "Email",
+    footerTelegram: "Telegram",
     marketClose: "Закрити вибір ринку",
     marketKicker: "Оберіть ринок",
     marketTitle: "Де працює ваш бізнес?",
@@ -119,6 +165,29 @@ const translations = {
     projectType: "Otwórz projekt",
     projectAria: "Otwórz stronę projektu {name}",
     estimateButton: "Wycena",
+    estimateProjectButton: "Wyceń projekt",
+    processButton: "Jak wygląda proces",
+    processNote:
+      "Przeczytaj pełny proces, płatności, poprawki i warunki projektu przed wysłaniem zapytania.",
+    clientInfoKicker: "INFORMACJE DLA KLIENTÓW",
+    clientInfoTitle: "Szczegóły przed startem",
+    clientInfoText:
+      "Przejrzyj najczęstsze pytania, prywatność i warunki projektu przed wysłaniem zapytania.",
+    clientInfoFaqTitle: "FAQ",
+    clientInfoFaqText: "Odpowiedzi o procesie, płatnościach, poprawkach i wsparciu.",
+    clientInfoPrivacyTitle: "Prywatność",
+    clientInfoPrivacyText: "Jak dane z zapytania są zbierane i używane.",
+    clientInfoTermsTitle: "Regulamin",
+    clientInfoTermsText: "Zakres projektu, wyceny, płatności i prawa własności.",
+    footerText:
+      "Informacje o projektowaniu i tworzeniu stron dla jasnych pisemnych zapytań.",
+    footerProjectGuide: "Przewodnik",
+    footerFaq: "FAQ",
+    footerPrivacy: "Prywatność",
+    footerTerms: "Regulamin",
+    footerCalculator: "Kalkulator",
+    footerEmail: "Email",
+    footerTelegram: "Telegram",
     marketClose: "Zamknij wybór rynku",
     marketKicker: "Wybierz rynek",
     marketTitle: "Gdzie działa Twoja firma?",
@@ -149,6 +218,8 @@ const projectsGrid = document.querySelector(".projects-grid");
 const projectsPrevious = document.querySelector("#projectsPrevious");
 const projectsNext = document.querySelector("#projectsNext");
 const estimateButton = document.querySelector("#estimateButton");
+const heroEstimateButton = document.querySelector("#heroEstimateButton");
+const footerEstimateButton = document.querySelector("#footerEstimateButton");
 const marketModal = document.querySelector("#marketModal");
 const marketCards = document.querySelectorAll("[data-market]");
 const marketCloseButtons = document.querySelectorAll("[data-market-close]");
@@ -291,6 +362,8 @@ languageButtons.forEach((button) => {
 });
 
 estimateButton?.addEventListener("click", openMarketModal);
+heroEstimateButton?.addEventListener("click", openMarketModal);
+footerEstimateButton?.addEventListener("click", openMarketModal);
 
 marketCloseButtons.forEach((button) => {
   button.addEventListener("click", closeMarketModal);

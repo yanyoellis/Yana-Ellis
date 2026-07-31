@@ -1,6 +1,6 @@
 (() => {
-  const WORKFLOW_VERSION = "1.2";
-  const FORM_VERSION = "2.1";
+  const WORKFLOW_VERSION = "1.4";
+  const FORM_VERSION = "2.3";
   const PRICING_MONTH = "2026-07-29";
   const API_ENDPOINT = "/api/submit-estimate";
   const telegramHandle = "@ohyanyo";
@@ -14,9 +14,14 @@
       inspirationLinks: [""],
       brandMaterials: [],
       deadlineType: "no_fixed_date",
+      translationSource: "",
+      phasedImplementation: "",
+      visualDirection: "",
+      promotionalOption: "standard",
       emailCopy: false,
       contactConsent: false,
-      privacyConsent: false
+      privacyConsent: false,
+      termsConsent: false
     };
   }
 
@@ -701,13 +706,82 @@
     requestFinalQuote: "Send project request",
     formIntro:
       "Send your project details for review. The calculator price is approximate and may change depending on design complexity, technical details, content and project nuances.",
+    responseTime: "I usually respond within 1-2 business days.",
+    successNext:
+      "I will review the request and contact you within 1-2 business days with the confirmed project price or any necessary questions.",
     contactConsent:
       "I agree that Yana Ellis may contact me using the details provided regarding this project request.",
     contactPhoneOption: "Phone call",
     contactNoPreferenceOption: "No preference",
+    notSureRecommend: "I am not sure. Please recommend the best option.",
+    notSureRecommendDescription:
+      "Choose this if you want me to suggest the right level after reviewing the project.",
+    translationSourceTitle: "Who will provide the website translations?",
+    translationSourceOptions: [
+      { value: "", label: "Select an option" },
+      { value: "client_provides", label: "I will provide final translations" },
+      { value: "need_adaptation", label: "I need help adapting the text" },
+      { value: "professional_translation", label: "I need professional translation quoted separately" },
+      { value: "not_sure", label: "I am not sure yet" }
+    ],
+    phasedImplementationTitle: "Would you like to launch the project in phases?",
+    phasedImplementationOptions: [
+      { value: "", label: "Select an option" },
+      { value: "yes", label: "Yes, start with the essentials first" },
+      { value: "no", label: "No, I want the full scope at launch" },
+      { value: "recommend", label: "Please recommend the best approach" }
+    ],
+    visualDirectionTitle: "Preferred visual direction - optional",
+    visualDirectionPlaceholder:
+      "Minimal, editorial, luxury, dark, playful, clean SaaS, specific colours, references or anything you want to avoid.",
     emailCopy: "Email me a copy of this estimate",
+    projectGuideLink: "Project Guide",
+    faqLink: "FAQ",
+    termsOfService: "Terms of Service",
+    policySummaryTitle: "Before sending",
+    communicationPolicyTitle: "Communication",
+    communicationPolicyCopy:
+      "After you send the request, I review the calculator answers and project details, then contact you within 1-2 business days if anything needs clarification.",
+    paymentPolicyTitle: "Payment",
+    paymentPolicyCopy:
+      "Payment is usually split into stages. A typical project starts after the proposal is approved and the first payment is received through Payoneer, Wise or bank transfer.",
+    revisionPolicyTitle: "Revisions",
+    revisionPolicyCopy:
+      "Two organised revision rounds are included by default. New functionality, a new direction after approval or extra pages are quoted separately.",
+    promotionPolicyTitle: "Promotional discount",
+    promotionPolicyCopy:
+      "You can choose the standard price or request a promotional discount connected to a footer credit and/or a social media post. The final conditions are confirmed in writing.",
+    legalPolicyTitle: "Terms and privacy",
+    legalPolicyCopy:
+      "The calculator is approximate. Sending a request does not create a contract or payment obligation. Work starts only after written approval and the first payment.",
+    readPolicies:
+      'Read the full <a href="../../project-guide.html" target="_blank" rel="noopener noreferrer">Project Guide</a>, <a href="../../faq.html" target="_blank" rel="noopener noreferrer">FAQ</a>, <a href="/privacy-policy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a> and <a href="/terms-of-service.html" target="_blank" rel="noopener noreferrer">Terms of Service</a>.',
+    promotionalOptionTitle: "Promotional discount option",
+    promotionalOptionHelp:
+      "Choose the standard price or a promotional option. Any discount is conditional and will be confirmed in the final proposal before payment.",
+    promotionalOptions: [
+      { value: "standard", label: "Standard price, no promotional conditions", discount: 0 },
+      { value: "footer_credit", label: "10% footer credit discount", discount: 10 },
+      { value: "social_post", label: "5% social media post discount", discount: 5 },
+      { value: "combined", label: "15% combined promotional discount", discount: 15 },
+      { value: "discuss", label: "I want to discuss promotional options", discount: 0 }
+    ],
+    promotionalEstimate: "Estimate with promotional option",
+    promotionalDiscount: "Promotional discount",
+    promotionalConditions:
+      "Footer credit stays visible for 12 months. A social post should be published within 14 days after launch and requires at least 1,000 Instagram followers unless agreed otherwise.",
+    termsConsentBefore: "I understand that the calculator price is approximate, that sending this request does not create a contract or payment obligation, and I agree to the ",
+    termsConsentAfter: ".",
+    requiredTermsConsent: "Please confirm that you agree to the Terms of Service.",
     finalReviewEstimate: "Estimate shown above",
+    finalReviewPromotionalOption: "Promotional option",
+    finalReviewPromotionalEstimate: "Promotional estimate",
     finalReviewEmailCopy: "Email copy requested",
+    finalReviewTranslationSource: "Translations",
+    finalReviewPhasedImplementation: "Launch phases",
+    finalReviewVisualDirection: "Visual direction",
+    finalReviewTermsConsent: "Terms consent",
+    successProjectGuide: "Read project guide",
     documentDisclaimer:
       "This document contains a preliminary estimate generated from the calculator answers. It is not an invoice, contract or binding commercial offer. The final project price may change after the requirements, design details and technical scope are reviewed."
   });
@@ -759,13 +833,82 @@
     requestFinalQuote: "Надіслати заявку на проєкт",
     formIntro:
       "Надішліть деталі проєкту на перегляд. Ціна в калькуляторі є приблизною та може змінюватися залежно від складності дизайну, технічних деталей, контенту і нюансів проєкту.",
+    responseTime: "Зазвичай я відповідаю протягом 1-2 робочих днів.",
+    successNext:
+      "Я перегляну заявку та зв'яжуся з вами протягом 1-2 робочих днів із підтвердженою ціною або необхідними питаннями.",
     contactConsent:
       "Я погоджуюся, що Yana Ellis може зв'язатися зі мною за наданими контактами щодо цього запиту на проєкт.",
     contactPhoneOption: "Телефонний дзвінок",
     contactNoPreferenceOption: "Немає переваги",
+    notSureRecommend: "Я не впевнений/не впевнена. Порадьте найкращий варіант.",
+    notSureRecommendDescription:
+      "Оберіть це, якщо хочете, щоб я запропонувала відповідний рівень після перегляду проєкту.",
+    translationSourceTitle: "Хто надасть переклади для сайту?",
+    translationSourceOptions: [
+      { value: "", label: "Оберіть варіант" },
+      { value: "client_provides", label: "Я надам готові переклади" },
+      { value: "need_adaptation", label: "Потрібна допомога з адаптацією тексту" },
+      { value: "professional_translation", label: "Потрібен професійний переклад окремим розрахунком" },
+      { value: "not_sure", label: "Я поки не впевнений/не впевнена" }
+    ],
+    phasedImplementationTitle: "Чи хочете запускати проєкт етапами?",
+    phasedImplementationOptions: [
+      { value: "", label: "Оберіть варіант" },
+      { value: "yes", label: "Так, спочатку запустити найважливіше" },
+      { value: "no", label: "Ні, потрібен повний обсяг на запуск" },
+      { value: "recommend", label: "Порадьте найкращий підхід" }
+    ],
+    visualDirectionTitle: "Бажаний візуальний напрям - необов'язково",
+    visualDirectionPlaceholder:
+      "Мінімалізм, editorial, luxury, темний стиль, playful, clean SaaS, конкретні кольори, референси або те, чого варто уникати.",
     emailCopy: "Надіслати мені копію цього розрахунку на email",
+    projectGuideLink: "Гайд проєкту",
+    faqLink: "FAQ",
+    termsOfService: "Умови користування",
+    policySummaryTitle: "Перед надсиланням",
+    communicationPolicyTitle: "Комунікація",
+    communicationPolicyCopy:
+      "Після надсилання заявки я перегляну відповіді калькулятора та деталі проєкту, а потім напишу вам протягом 1-2 робочих днів, якщо потрібно щось уточнити.",
+    paymentPolicyTitle: "Оплата",
+    paymentPolicyCopy:
+      "Оплата зазвичай ділиться на етапи. Проєкт починається після погодження пропозиції та першого платежу через Payoneer, Wise або банківський переказ.",
+    revisionPolicyTitle: "Правки",
+    revisionPolicyCopy:
+      "За замовчуванням включено два організовані раунди правок. Нова функціональність, новий напрям після затвердження або додаткові сторінки розраховуються окремо.",
+    promotionPolicyTitle: "Промоційна знижка",
+    promotionPolicyCopy:
+      "Можна обрати стандартну ціну або запросити промоційну знижку за footer credit та/або пост у соцмережах. Фінальні умови підтверджуються письмово.",
+    legalPolicyTitle: "Умови та приватність",
+    legalPolicyCopy:
+      "Калькулятор дає приблизну оцінку. Надсилання заявки не створює договору чи обов'язку оплати. Робота починається тільки після письмового погодження та першого платежу.",
+    readPolicies:
+      'Прочитайте повний <a href="../../project-guide.html" target="_blank" rel="noopener noreferrer">гайд проєкту</a>, <a href="../../faq.html" target="_blank" rel="noopener noreferrer">FAQ</a>, <a href="/privacy-policy.html" target="_blank" rel="noopener noreferrer">політику конфіденційності</a> та <a href="/terms-of-service.html" target="_blank" rel="noopener noreferrer">умови користування</a>.',
+    promotionalOptionTitle: "Варіант промоційної знижки",
+    promotionalOptionHelp:
+      "Оберіть стандартну ціну або промоційний варіант. Будь-яка знижка є умовною та підтверджується у фінальній пропозиції перед оплатою.",
+    promotionalOptions: [
+      { value: "standard", label: "Стандартна ціна без промоційних умов", discount: 0 },
+      { value: "footer_credit", label: "10% знижки за footer credit", discount: 10 },
+      { value: "social_post", label: "5% знижки за пост у соцмережах", discount: 5 },
+      { value: "combined", label: "15% комбінованої промоційної знижки", discount: 15 },
+      { value: "discuss", label: "Хочу обговорити промоційні варіанти", discount: 0 }
+    ],
+    promotionalEstimate: "Оцінка з промоційним варіантом",
+    promotionalDiscount: "Промоційна знижка",
+    promotionalConditions:
+      "Footer credit залишається видимим 12 місяців. Пост у соцмережах має бути опублікований протягом 14 днів після запуску та потребує мінімум 1,000 підписників в Instagram, якщо письмово не погоджено інше.",
+    termsConsentBefore: "Я розумію, що ціна в калькуляторі приблизна, що надсилання заявки не створює договору чи обов'язку оплати, і погоджуюся з ",
+    termsConsentAfter: ".",
+    requiredTermsConsent: "Підтвердьте, будь ласка, згоду з умовами користування.",
     finalReviewEstimate: "Розрахунок показано вище",
+    finalReviewPromotionalOption: "Промоційний варіант",
+    finalReviewPromotionalEstimate: "Оцінка зі знижкою",
     finalReviewEmailCopy: "Копія на email",
+    finalReviewTranslationSource: "Переклади",
+    finalReviewPhasedImplementation: "Етапи запуску",
+    finalReviewVisualDirection: "Візуальний напрям",
+    finalReviewTermsConsent: "Згода з умовами",
+    successProjectGuide: "Прочитати гайд",
     documentDisclaimer:
       "Цей документ містить попередній розрахунок на основі відповідей у калькуляторі. Це не рахунок, не договір і не обов'язкова комерційна пропозиція. Фінальна ціна може змінитися після перегляду вимог, дизайну та технічного обсягу."
   });
@@ -817,13 +960,82 @@
     requestFinalQuote: "Wyślij zapytanie o projekt",
     formIntro:
       "Wyślij szczegóły projektu do analizy. Cena w kalkulatorze jest przybliżona i może się zmienić w zależności od złożoności designu, szczegółów technicznych, treści i niuansów projektu.",
+    responseTime: "Zazwyczaj odpowiadam w ciągu 1-2 dni roboczych.",
+    successNext:
+      "Przeanalizuję zapytanie i skontaktuję się w ciągu 1-2 dni roboczych z potwierdzoną ceną lub dodatkowymi pytaniami.",
     contactConsent:
       "Zgadzam się, aby Yana Ellis skontaktowała się ze mną za pomocą podanych danych w sprawie tego zapytania projektowego.",
     contactPhoneOption: "Rozmowa telefoniczna",
     contactNoPreferenceOption: "Bez preferencji",
+    notSureRecommend: "Nie jestem pewna/pewien. Zaproponuj najlepszą opcję.",
+    notSureRecommendDescription:
+      "Wybierz to, jeśli chcesz, abym dobrała odpowiedni poziom po analizie projektu.",
+    translationSourceTitle: "Kto przygotuje tłumaczenia strony?",
+    translationSourceOptions: [
+      { value: "", label: "Wybierz opcję" },
+      { value: "client_provides", label: "Dostarczę gotowe tłumaczenia" },
+      { value: "need_adaptation", label: "Potrzebuję pomocy z adaptacją tekstu" },
+      { value: "professional_translation", label: "Potrzebuję osobnej wyceny profesjonalnego tłumaczenia" },
+      { value: "not_sure", label: "Jeszcze nie wiem" }
+    ],
+    phasedImplementationTitle: "Czy chcesz uruchomić projekt etapami?",
+    phasedImplementationOptions: [
+      { value: "", label: "Wybierz opcję" },
+      { value: "yes", label: "Tak, najpierw najważniejsze elementy" },
+      { value: "no", label: "Nie, pełny zakres na start" },
+      { value: "recommend", label: "Zaproponuj najlepsze podejście" }
+    ],
+    visualDirectionTitle: "Preferowany kierunek wizualny - opcjonalnie",
+    visualDirectionPlaceholder:
+      "Minimal, editorial, luxury, dark, playful, clean SaaS, konkretne kolory, referencje albo rzeczy, których chcesz uniknąć.",
     emailCopy: "Wyślij mi kopię tej wyceny na email",
+    projectGuideLink: "Przewodnik",
+    faqLink: "FAQ",
+    termsOfService: "Regulamin",
+    policySummaryTitle: "Przed wysłaniem",
+    communicationPolicyTitle: "Komunikacja",
+    communicationPolicyCopy:
+      "Po wysłaniu zapytania sprawdzę odpowiedzi z kalkulatora i szczegóły projektu, a następnie skontaktuję się w ciągu 1-2 dni roboczych, jeśli trzeba coś doprecyzować.",
+    paymentPolicyTitle: "Płatność",
+    paymentPolicyCopy:
+      "Płatność zwykle dzieli się na etapy. Projekt zaczyna się po zaakceptowaniu propozycji i pierwszej płatności przez Payoneer, Wise albo przelew bankowy.",
+    revisionPolicyTitle: "Poprawki",
+    revisionPolicyCopy:
+      "Domyślnie wliczone są dwie uporządkowane rundy poprawek. Nowa funkcjonalność, nowy kierunek po akceptacji albo dodatkowe strony są wyceniane osobno.",
+    promotionPolicyTitle: "Zniżka promocyjna",
+    promotionPolicyCopy:
+      "Możesz wybrać cenę standardową albo poprosić o zniżkę promocyjną związaną z footer credit i/lub postem w mediach społecznościowych. Finalne warunki są potwierdzane pisemnie.",
+    legalPolicyTitle: "Regulamin i prywatność",
+    legalPolicyCopy:
+      "Kalkulator pokazuje przybliżoną wycenę. Wysłanie zapytania nie tworzy umowy ani obowiązku płatności. Praca zaczyna się dopiero po pisemnej akceptacji i pierwszej płatności.",
+    readPolicies:
+      'Przeczytaj pełny <a href="../../project-guide.html" target="_blank" rel="noopener noreferrer">przewodnik</a>, <a href="../../faq.html" target="_blank" rel="noopener noreferrer">FAQ</a>, <a href="/privacy-policy.html" target="_blank" rel="noopener noreferrer">politykę prywatności</a> i <a href="/terms-of-service.html" target="_blank" rel="noopener noreferrer">regulamin</a>.',
+    promotionalOptionTitle: "Opcja zniżki promocyjnej",
+    promotionalOptionHelp:
+      "Wybierz cenę standardową albo opcję promocyjną. Każda zniżka jest warunkowa i będzie potwierdzona w finalnej propozycji przed płatnością.",
+    promotionalOptions: [
+      { value: "standard", label: "Cena standardowa bez warunków promocyjnych", discount: 0 },
+      { value: "footer_credit", label: "10% zniżki za footer credit", discount: 10 },
+      { value: "social_post", label: "5% zniżki za post w social media", discount: 5 },
+      { value: "combined", label: "15% łączonej zniżki promocyjnej", discount: 15 },
+      { value: "discuss", label: "Chcę omówić opcje promocyjne", discount: 0 }
+    ],
+    promotionalEstimate: "Wycena z opcją promocyjną",
+    promotionalDiscount: "Zniżka promocyjna",
+    promotionalConditions:
+      "Footer credit pozostaje widoczny przez 12 miesięcy. Post społecznościowy powinien zostać opublikowany w ciągu 14 dni po starcie i wymaga minimum 1,000 obserwujących na Instagramie, chyba że pisemnie ustalimy inaczej.",
+    termsConsentBefore: "Rozumiem, że cena w kalkulatorze jest przybliżona, wysłanie zapytania nie tworzy umowy ani obowiązku płatności, i akceptuję ",
+    termsConsentAfter: ".",
+    requiredTermsConsent: "Potwierdź, że akceptujesz Regulamin.",
     finalReviewEstimate: "Wycena pokazana powyżej",
+    finalReviewPromotionalOption: "Opcja promocyjna",
+    finalReviewPromotionalEstimate: "Wycena po opcji promocyjnej",
     finalReviewEmailCopy: "Kopia email",
+    finalReviewTranslationSource: "Tłumaczenia",
+    finalReviewPhasedImplementation: "Etapy uruchomienia",
+    finalReviewVisualDirection: "Kierunek wizualny",
+    finalReviewTermsConsent: "Zgoda na regulamin",
+    successProjectGuide: "Przeczytaj przewodnik",
     documentDisclaimer:
       "Ten dokument zawiera wstępną wycenę wygenerowaną na podstawie odpowiedzi w kalkulatorze. Nie jest fakturą, umową ani wiążącą ofertą handlową. Cena końcowa może się zmienić po analizie wymagań, detali designu i zakresu technicznego."
   });
@@ -862,6 +1074,167 @@
       .replace(/</g, "&lt;")
       .replace(/>/g, "&gt;")
       .replace(/"/g, "&quot;");
+  }
+
+  function marketAmount(values) {
+    return values[marketConfig().id] ?? values.canada ?? 0;
+  }
+
+  function recommendOption() {
+    return {
+      id: "not_sure_recommend",
+      amount: 0,
+      customQuote: true,
+      manual: true,
+      title: {
+        en: workflowCopy.en.notSureRecommend,
+        uk: workflowCopy.uk.notSureRecommend,
+        pl: workflowCopy.pl.notSureRecommend
+      },
+      description: {
+        en: workflowCopy.en.notSureRecommendDescription,
+        uk: workflowCopy.uk.notSureRecommendDescription,
+        pl: workflowCopy.pl.notSureRecommendDescription
+      }
+    };
+  }
+
+  function addOptionIfMissing(question, option, afterId = "") {
+    if (!question?.options || question.options.some((existing) => existing.id === option.id)) {
+      return;
+    }
+
+    const insertIndex = afterId ? question.options.findIndex((existing) => existing.id === afterId) : -1;
+    if (insertIndex >= 0) {
+      question.options.splice(insertIndex + 1, 0, option);
+      return;
+    }
+
+    question.options.push(option);
+  }
+
+  function replaceOption(question, optionId, patch) {
+    const option = question?.options?.find((existing) => existing.id === optionId);
+    if (option) {
+      Object.assign(option, patch);
+    }
+  }
+
+  function enhancedPageOptions() {
+    const amounts = {
+      canada: [0, 150, 250, 450, 650, 900],
+      poland: [0, 300, 600, 900, 1300, 1800],
+      ukraine: [0, 3500, 6000, 9500, 13500, 19000]
+    }[marketConfig().id];
+
+    return [
+      { id: "one_page", amount: amounts[0], title: { en: "1 page", uk: "1 сторінка", pl: "1 podstrona" } },
+      { id: "two_five_pages", amount: amounts[1], title: { en: "2-5 pages", uk: "2-5 сторінок", pl: "2-5 podstron" } },
+      { id: "six_eight_pages", amount: amounts[2], title: { en: "6-8 pages", uk: "6-8 сторінок", pl: "6-8 podstron" } },
+      { id: "nine_twelve_pages", amount: amounts[3], title: { en: "9-12 pages", uk: "9-12 сторінок", pl: "9-12 podstron" } },
+      { id: "thirteen_twenty_pages", amount: amounts[4], manual: true, starting: true, noteKey: "largeSiteNote", title: { en: "13-20 pages", uk: "13-20 сторінок", pl: "13-20 podstron" } },
+      { id: "more_than_twenty_pages", amount: amounts[5], customQuote: true, manual: true, starting: true, noteKey: "largeSiteNote", title: { en: "More than 20 pages", uk: "Більше ніж 20 сторінок", pl: "Więcej niż 20 podstron" } }
+    ];
+  }
+
+  function enhanceQuestionConfiguration() {
+    if (questionCopy.__workflowEnhanced) {
+      return;
+    }
+    questionCopy.__workflowEnhanced = true;
+
+    questionCopy.sizePages.options = enhancedPageOptions();
+
+    ["content", "design", "animations", "languages", "domain", "timeline", "support", "onlineSales"].forEach((questionId) => {
+      addOptionIfMissing(questionCopy[questionId], recommendOption());
+    });
+
+    ["contactFeatures", "businessFeatures"].forEach((questionId) => {
+      addOptionIfMissing(questionCopy[questionId], recommendOption());
+    });
+
+    replaceOption(questionCopy.businessFeatures, "price_calculator", {
+      amount: marketAmount({ canada: 200, poland: 500, ukraine: 5500 }),
+      title: { en: "Simple price calculator", uk: "Простий калькулятор ціни", pl: "Prosty kalkulator ceny" },
+      description: {
+        en: "A compact calculator with a few fixed options and a clear result.",
+        uk: "Короткий калькулятор із кількома фіксованими варіантами та зрозумілим результатом.",
+        pl: "Krótki kalkulator z kilkoma stałymi opcjami i czytelnym wynikiem."
+      }
+    });
+    addOptionIfMissing(
+      questionCopy.businessFeatures,
+      {
+        id: "multi_step_calculator",
+        amount: marketAmount({ canada: 500, poland: 1000, ukraine: 10500 }),
+        starting: true,
+        title: { en: "Multi-step price calculator", uk: "Багатокроковий калькулятор ціни", pl: "Wielokrokowy kalkulator ceny" },
+        description: {
+          en: "Several steps, conditional sections and a more detailed estimate flow.",
+          uk: "Кілька кроків, умовні секції та детальніший шлях до розрахунку.",
+          pl: "Kilka kroków, sekcje warunkowe i bardziej szczegółowy proces wyceny."
+        }
+      },
+      "price_calculator"
+    );
+    addOptionIfMissing(
+      questionCopy.businessFeatures,
+      {
+        id: "advanced_conditional_calculator",
+        customQuote: true,
+        manual: true,
+        title: { en: "Advanced conditional calculator", uk: "Складний умовний калькулятор", pl: "Zaawansowany kalkulator warunkowy" },
+        description: {
+          en: "Advanced logic, dependencies, custom formulas or request submission rules.",
+          uk: "Складна логіка, залежності, індивідуальні формули або правила надсилання заявки.",
+          pl: "Zaawansowana logika, zależności, indywidualne formuły lub reguły wysyłki zapytania."
+        }
+      },
+      "multi_step_calculator"
+    );
+
+    replaceOption(questionCopy.businessFeatures, "booking", {
+      amount: marketAmount({ canada: 150, poland: 300, ukraine: 3500 }),
+      title: { en: "External booking link or embedded system", uk: "Зовнішнє бронювання або вбудована система", pl: "Zewnętrzny link lub osadzony system rezerwacji" }
+    });
+    addOptionIfMissing(
+      questionCopy.businessFeatures,
+      {
+        id: "custom_booking",
+        amount: marketAmount({ canada: 450, poland: 900, ukraine: 9500 }),
+        starting: true,
+        manual: true,
+        title: { en: "Custom booking flow", uk: "Індивідуальний сценарій бронювання", pl: "Indywidualny proces rezerwacji" },
+        description: {
+          en: "Custom availability, rules, forms, reminders or integration with a specific workflow.",
+          uk: "Індивідуальна доступність, правила, форми, нагадування або інтеграція з конкретним процесом.",
+          pl: "Indywidualna dostępność, reguły, formularze, przypomnienia lub integracja z konkretnym procesem."
+        }
+      },
+      "booking"
+    );
+
+    replaceOption(questionCopy.businessFeatures, "editable_content", {
+      amount: marketAmount({ canada: 250, poland: 600, ukraine: 6000 }),
+      starting: true,
+      manual: true,
+      title: { en: "Basic CMS for selected content", uk: "Базова CMS для вибраного контенту", pl: "Podstawowy CMS dla wybranych treści" }
+    });
+    addOptionIfMissing(
+      questionCopy.businessFeatures,
+      {
+        id: "advanced_admin_panel",
+        customQuote: true,
+        manual: true,
+        title: { en: "Advanced admin panel", uk: "Розширена адмін-панель", pl: "Zaawansowany panel administracyjny" },
+        description: {
+          en: "Custom roles, structured content, complex editing workflows or deeper integrations.",
+          uk: "Ролі, структурований контент, складні сценарії редагування або глибші інтеграції.",
+          pl: "Role, ustrukturyzowane treści, złożone procesy edycji lub głębsze integracje."
+        }
+      },
+      "editable_content"
+    );
   }
 
   function roundByUnit(amount, unit) {
@@ -925,6 +1298,7 @@
   }
 
   function calculateDetailedEstimate() {
+    enhanceQuestionConfiguration();
     ensureValidAnswers();
 
     const market = marketConfig();
@@ -1296,6 +1670,69 @@
     `;
   }
 
+  function promotionOptionDetails(value = formDraft.promotionalOption || "standard") {
+    const options = copyOptions("promotionalOptions");
+    const option = options.find((item) => item.value === value) || options[0] || { value: "standard", label: wc("notProvided"), discount: 0 };
+    return {
+      value: option.value,
+      label: option.label,
+      discountPercent: Number(option.discount) || 0
+    };
+  }
+
+  function promotionalEstimate(calculation, value = formDraft.promotionalOption || "standard") {
+    const promotion = promotionOptionDetails(value);
+    if (calculation.customBase || !calculation.preliminaryEstimate || !promotion.discountPercent) {
+      return {
+        ...promotion,
+        discountAmount: 0,
+        estimate: calculation.preliminaryEstimate,
+        display: promotion.discountPercent ? wc("customQuote") : resultAmount(calculation),
+        discountDisplay: wc("included")
+      };
+    }
+
+    const amountBeforeRounding = calculation.preliminaryEstimate * (1 - promotion.discountPercent / 100);
+    const estimate = roundByUnit(amountBeforeRounding, calculation.roundingUnit || marketConfig().roundingUnit);
+    const discountAmount = Math.max(0, calculation.preliminaryEstimate - estimate);
+    return {
+      ...promotion,
+      discountAmount,
+      estimate,
+      display: calculation.manualReview ? estimateRange({ ...calculation, preliminaryEstimate: estimate }) : formatAmount(estimate),
+      discountDisplay: discountAmount ? `-${formatAmount(discountAmount)}` : wc("included")
+    };
+  }
+
+  function buildClientPolicySummary() {
+    const items = [
+      [wc("communicationPolicyTitle"), wc("communicationPolicyCopy")],
+      [wc("paymentPolicyTitle"), wc("paymentPolicyCopy")],
+      [wc("revisionPolicyTitle"), wc("revisionPolicyCopy")],
+      [wc("promotionPolicyTitle"), wc("promotionPolicyCopy")],
+      [wc("legalPolicyTitle"), wc("legalPolicyCopy")]
+    ];
+
+    return `
+      <section class="next-steps policy-summary" aria-labelledby="policySummaryTitle">
+        <h3 id="policySummaryTitle">${wc("policySummaryTitle")}</h3>
+        <div class="policy-summary-grid">
+          ${items
+            .map(
+              ([title, copy]) => `
+                <article>
+                  <h4>${html(title)}</h4>
+                  <p>${html(copy)}</p>
+                </article>
+              `
+            )
+            .join("")}
+        </div>
+        <p class="policy-links">${wc("readPolicies")}</p>
+      </section>
+    `;
+  }
+
   function buildSubmissionChoices() {
     return `
       <section class="submission-choice-section" aria-labelledby="submissionChoiceTitle">
@@ -1312,6 +1749,10 @@
             <button class="calculator-button" type="button" data-action="show-request-form">${wc("openRequestForm")}</button>
           </article>
         </div>
+        <p class="policy-links">
+          <a href="../../project-guide.html" target="_blank" rel="noopener noreferrer">${wc("projectGuideLink")}</a>
+          <a href="../../faq.html" target="_blank" rel="noopener noreferrer">${wc("faqLink")}</a>
+        </p>
         <p class="choice-status" id="choiceStatus" role="status" aria-live="polite"></p>
       </section>
     `;
@@ -1410,11 +1851,16 @@
       deadlineDate: formValue(formData, "deadlineDate"),
       budgetExpectation: formValue(formData, "budgetExpectation"),
       projectStage: formValue(formData, "projectStage"),
+      translationSource: formValue(formData, "translationSource"),
+      phasedImplementation: formValue(formData, "phasedImplementation"),
+      visualDirection: formValue(formData, "visualDirection"),
+      promotionalOption: formValue(formData, "promotionalOption") || "standard",
       referralSource: formValue(formData, "referralSource"),
       referralSourceOther: formValue(formData, "referralSourceOther"),
       emailCopy: formData.get("emailCopy") === "on",
       contactConsent: formData.get("contactConsent") === "on",
-      privacyConsent: formData.get("privacyConsent") === "on"
+      privacyConsent: formData.get("privacyConsent") === "on",
+      termsConsent: formData.get("termsConsent") === "on"
     };
 
     if (!formDraft.inspirationLinks.length) {
@@ -1566,6 +2012,34 @@
         </div>
         <p class="field-help">${wc("deadlineNotice")}</p>
       </fieldset>
+      <div class="field full form-section">
+        <label for="translationSource">${wc("translationSourceTitle")}</label>
+        <select id="translationSource" name="translationSource">
+          ${copyOptions("translationSourceOptions")
+            .map((option) => `<option value="${html(option.value)}" ${selectedAttribute(option.value, formDraft.translationSource || "")}>${html(option.label)}</option>`)
+            .join("")}
+        </select>
+      </div>
+      <div class="field full form-section">
+        <label for="phasedImplementation">${wc("phasedImplementationTitle")}</label>
+        <select id="phasedImplementation" name="phasedImplementation">
+          ${copyOptions("phasedImplementationOptions")
+            .map((option) => `<option value="${html(option.value)}" ${selectedAttribute(option.value, formDraft.phasedImplementation || "")}>${html(option.label)}</option>`)
+            .join("")}
+        </select>
+      </div>
+      <div class="field full form-section">
+        <label for="visualDirection">${wc("visualDirectionTitle")}</label>
+        <textarea id="visualDirection" name="visualDirection" placeholder="${html(wc("visualDirectionPlaceholder"))}">${html(formDraft.visualDirection || "")}</textarea>
+      </div>
+      <fieldset class="field full form-section" id="promotionalOptionSection">
+        <legend>${wc("promotionalOptionTitle")}</legend>
+        <p class="field-help">${wc("promotionalOptionHelp")}</p>
+        <div class="choice-list">
+          ${formList("promotionalOptions", formDraft.promotionalOption || "standard", "promotionalOption")}
+        </div>
+        <p class="field-help">${wc("promotionalConditions")}</p>
+      </fieldset>
       <fieldset class="field full form-section">
         <legend>${wc("budgetTitle")}</legend>
         <div class="choice-list">
@@ -1665,6 +2139,7 @@
     const websiteType = selectedAnswerObjects()[0]?.selected?.[0];
     const features = mainFeatureSummary();
     const inspirationCount = (formDraft.inspirationLinks || []).filter((value) => value.trim()).length;
+    const promotion = promotionalEstimate(calculation, formDraft.promotionalOption || "standard");
 
     const rows = [
       [wc("finalReviewMarket"), `${localMarketLabel()} / ${marketConfig().currencyCode}`],
@@ -1673,9 +2148,15 @@
       [wc("finalReviewContactMethod"), contactMethodLabel(method)],
       [wc("finalReviewContactDestination"), destination || wc("notProvided")],
       [wc("finalReviewInspirationLinks"), String(inspirationCount)],
+      [wc("finalReviewTranslationSource"), optionLabel("translationSourceOptions", formDraft.translationSource || "")],
+      [wc("finalReviewPhasedImplementation"), optionLabel("phasedImplementationOptions", formDraft.phasedImplementation || "")],
+      [wc("finalReviewVisualDirection"), formDraft.visualDirection || wc("notProvided")],
+      [wc("finalReviewPromotionalOption"), promotion.label],
+      [wc("finalReviewPromotionalEstimate"), promotion.display],
       [wc("finalReviewEmailCopy"), formDraft.emailCopy ? wc("yes") : wc("no")],
       [wc("finalReviewContactConsent"), formDraft.contactConsent ? wc("yes") : wc("no")],
-      [wc("finalReviewPrivacyConsent"), formDraft.privacyConsent ? wc("yes") : wc("no")]
+      [wc("finalReviewPrivacyConsent"), formDraft.privacyConsent ? wc("yes") : wc("no")],
+      [wc("finalReviewTermsConsent"), formDraft.termsConsent ? wc("yes") : wc("no")]
     ];
 
     return `
@@ -1703,6 +2184,7 @@
           <p class="form-help">${wc("formIntro")}</p>
         </div>
         ${buildNextSteps()}
+        ${buildClientPolicySummary()}
         <div class="form-error-summary" id="formErrorSummary" role="alert" tabindex="-1" hidden></div>
         <div class="form-grid">
           <div class="field hp-field" aria-hidden="true">
@@ -1759,6 +2241,13 @@
             <span class="field-error" id="privacyConsentCheckboxError"></span>
           </div>
           <div class="field full consent-field">
+            <label for="termsConsentCheckbox">
+              <input id="termsConsentCheckbox" name="termsConsent" type="checkbox" required ${formDraft.termsConsent ? "checked" : ""} aria-describedby="termsConsentCheckboxError" />
+              <span>${wc("termsConsentBefore")}<a href="/terms-of-service.html" target="_blank" rel="noopener noreferrer">${wc("termsOfService")}</a>${wc("termsConsentAfter")}</span>
+            </label>
+            <span class="field-error" id="termsConsentCheckboxError"></span>
+          </div>
+          <div class="field full consent-field">
             <label for="emailCopyCheckbox">
               <input id="emailCopyCheckbox" name="emailCopy" type="checkbox" ${formDraft.emailCopy ? "checked" : ""} />
               <span>${wc("emailCopy")}</span>
@@ -1768,6 +2257,7 @@
         <div class="submit-notice" role="note">
           <p>${wc("contactExpectation")}</p>
           <p>${wc("responseTime")}</p>
+          <p>${wc("readPolicies")}</p>
         </div>
         ${buildFinalReview(calculation)}
         <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
@@ -1802,6 +2292,7 @@
           ${buildProjectSummary(calculation)}
           ${buildMonthlyBlock(calculation)}
           ${buildManualNotice(calculation)}
+          ${buildClientPolicySummary()}
           ${buildSubmissionChoices()}
           ${buildContactForm()}
           <div class="result-actions">
@@ -2073,6 +2564,11 @@
       setFieldError(form, "privacyConsentCheckbox", "privacyConsentCheckboxError", wc("requiredPrivacyConsent"));
     }
 
+    if (formData.get("termsConsent") !== "on") {
+      errors.push(wc("requiredTermsConsent"));
+      setFieldError(form, "termsConsentCheckbox", "termsConsentCheckboxError", wc("requiredTermsConsent"));
+    }
+
     const summary = form.querySelector("#formErrorSummary");
     if (errors.length && summary) {
       summary.hidden = false;
@@ -2107,7 +2603,11 @@
     const deadlineType = formValue(formData, "deadlineType") || "no_fixed_date";
     const budgetExpectation = formValue(formData, "budgetExpectation");
     const projectStage = formValue(formData, "projectStage");
+    const translationSource = formValue(formData, "translationSource");
+    const phasedImplementation = formValue(formData, "phasedImplementation");
     const referralSource = formValue(formData, "referralSource");
+    const promotionalOption = formValue(formData, "promotionalOption") || "standard";
+    const promotion = promotionalEstimate(calculation, promotionalOption);
 
     return {
       requestId,
@@ -2150,7 +2650,8 @@
         emailCopy: formData.get("emailCopy") === "on",
         contactConsent: formData.get("contactConsent") === "on",
         privacyConsent: formData.get("privacyConsent") === "on",
-        consent: formData.get("contactConsent") === "on" && formData.get("privacyConsent") === "on"
+        termsConsent: formData.get("termsConsent") === "on",
+        consent: formData.get("contactConsent") === "on" && formData.get("privacyConsent") === "on" && formData.get("termsConsent") === "on"
       },
       inspiration: {
         preference: inspirationPreference,
@@ -2173,6 +2674,23 @@
         expectation: budgetExpectation,
         expectationLabel: budgetExpectation ? optionLabel("budgetOptions", budgetExpectation) : wc("notProvided"),
         reviewRequested: budgetExpectation === "reduce_scope"
+      },
+      planning: {
+        translationSource,
+        translationSourceLabel: translationSource ? optionLabel("translationSourceOptions", translationSource) : wc("notProvided"),
+        phasedImplementation,
+        phasedImplementationLabel: phasedImplementation ? optionLabel("phasedImplementationOptions", phasedImplementation) : wc("notProvided"),
+        visualDirection: formValue(formData, "visualDirection")
+      },
+      promotion: {
+        option: promotion.value,
+        optionLabel: promotion.label,
+        discountPercent: promotion.discountPercent,
+        discountAmount: promotion.discountAmount,
+        discountAmountDisplay: promotion.discountDisplay,
+        estimatedPriceAfterDiscount: promotion.estimate,
+        estimatedPriceAfterDiscountDisplay: promotion.display,
+        conditionsSummary: wc("promotionalConditions")
       },
       projectStage: {
         stage: projectStage,
@@ -2206,6 +2724,11 @@
         preliminaryEstimate: calculation.preliminaryEstimate,
         preliminaryEstimateExactDisplay: formatAmount(calculation.preliminaryEstimate),
         preliminaryEstimateDisplay: resultAmount(calculation),
+        promotionalDiscountPercent: promotion.discountPercent,
+        promotionalDiscountAmount: promotion.discountAmount,
+        promotionalDiscountAmountDisplay: promotion.discountDisplay,
+        promotionalEstimate: promotion.estimate,
+        promotionalEstimateDisplay: promotion.display,
         manualEstimateRangeDisplay: calculation.manualReview ? resultAmount(calculation) : "",
         monthlySupport: calculation.monthlySupport,
         monthlySupportDisplay: calculation.monthlySupport ? formatMonthly(calculation.monthlySupport) : wc("notSelected")
@@ -2220,6 +2743,7 @@
         breakdown: groupedBreakdownRows(calculation)
           .map((row) => `${row.category}: ${row.option} - ${row.effect}`)
           .join("\n"),
+        promotionalOption: `${promotion.label} (${promotion.discountPercent}%)`,
         contactPreference: `${contactMethodLabel(formValue(formData, "preferredContact"))}: ${contact.normalized || contact.raw || wc("notProvided")}`,
         inspirationLinks: inspirationLinks.map((item) => item.url).join("\n")
       },
@@ -2323,10 +2847,12 @@
       <dl>
         <div><dt>${wc("requestId")}</dt><dd>${html(payload.requestId)}</dd></div>
         <div><dt>${wc("preliminaryEstimate")}</dt><dd>${html(payload.pricing.preliminaryEstimateDisplay)}</dd></div>
+        <div><dt>${wc("finalReviewPromotionalOption")}</dt><dd>${html(payload.promotion.optionLabel)}</dd></div>
         <div><dt>${wc("nextStep")}</dt><dd>${wc("successNext")}</dd></div>
       </dl>
       <div class="success-actions">
         <button class="calculator-button" type="button" data-action="download-summary">${wc("downloadSummary")}</button>
+        <a class="calculator-button secondary" href="../../project-guide.html">${wc("successProjectGuide")}</a>
         <a class="calculator-button secondary" href="../../index.html">${wc("returnPortfolio")}</a>
       </div>
     `;
@@ -2343,6 +2869,7 @@
       [wc("fixedAdditions"), "", payload.pricing.fixedAdditionsDisplay || formatAmount(payload.pricing.fixedAdditions)],
       [wc("languageAdjustment"), multiplierDisplay(payload.pricing.languageMultiplier), payload.pricing.languageAdjustmentDisplay || signedAmount(payload.pricing.languageAdjustment)],
       [wc("timelineAdjustment"), multiplierDisplay(payload.pricing.timelineMultiplier), payload.pricing.timelineAdjustmentDisplay || signedAmount(payload.pricing.timelineAdjustment)],
+      [wc("promotionalDiscount"), `${payload.promotion?.discountPercent || 0}%`, payload.pricing.promotionalDiscountAmountDisplay || wc("included")],
       [wc("preliminaryEstimate"), "", payload.pricing.preliminaryEstimateDisplay]
     ]
       .map((row) => `<tr><th>${html(row[0])}</th><td>${html(row[1])}</td><td>${html(row[2])}</td></tr>`)
@@ -2375,6 +2902,8 @@
             <div><strong>${wc("interfaceLanguage")}</strong><br>${html(payload.interfaceLanguage.toUpperCase())}</div>
             <div><strong>${wc("name")}</strong><br>${html(payload.client.name)}</div>
             <div><strong>${wc("company")}</strong><br>${html(payload.client.companyName)}</div>
+            <div><strong>${wc("finalReviewPromotionalOption")}</strong><br>${html(payload.promotion?.optionLabel || wc("notProvided"))}</div>
+            <div><strong>${wc("promotionalEstimate")}</strong><br>${html(payload.pricing.promotionalEstimateDisplay || payload.pricing.preliminaryEstimateDisplay)}</div>
           </div>
           <h2>${wc("projectSummary")}</h2>
           <table>${answerRows}</table>
@@ -2570,6 +3099,8 @@
     ui.en.finalEstimate = workflowCopy.en.preliminaryEstimate;
     ui.en.currentEstimate = workflowCopy.en.estimatedProjectBudget;
     ui.en.estimateNote = workflowCopy.en.estimatePanelNotice;
+    ui.en.projectGuideLink = workflowCopy.en.projectGuideLink;
+    ui.en.faqLink = workflowCopy.en.faqLink;
   }
   if (ui.uk) {
     ui.uk.estimatedProjectCost = workflowCopy.uk.preliminaryProjectEstimate;
@@ -2577,6 +3108,8 @@
     ui.uk.finalEstimate = workflowCopy.uk.preliminaryEstimate;
     ui.uk.currentEstimate = workflowCopy.uk.estimatedProjectBudget;
     ui.uk.estimateNote = workflowCopy.uk.estimatePanelNotice;
+    ui.uk.projectGuideLink = workflowCopy.uk.projectGuideLink;
+    ui.uk.faqLink = workflowCopy.uk.faqLink;
   }
   if (ui.pl) {
     ui.pl.estimatedProjectCost = workflowCopy.pl.preliminaryProjectEstimate;
@@ -2584,6 +3117,8 @@
     ui.pl.finalEstimate = workflowCopy.pl.preliminaryEstimate;
     ui.pl.currentEstimate = workflowCopy.pl.estimatedProjectBudget;
     ui.pl.estimateNote = workflowCopy.pl.estimatePanelNotice;
+    ui.pl.projectGuideLink = workflowCopy.pl.projectGuideLink;
+    ui.pl.faqLink = workflowCopy.pl.faqLink;
   }
 
   staticTextNodes.forEach((node) => {
@@ -2593,6 +3128,7 @@
     }
   });
 
+  enhanceQuestionConfiguration();
   injectStartingRanges();
   render();
 })();

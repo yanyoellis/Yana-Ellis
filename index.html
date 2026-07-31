@@ -33,6 +33,9 @@
           <button class="estimate-button" id="estimateButton" type="button" data-i18n="estimateButton">
             Estimate
           </button>
+          <a class="estimate-button guide-button" href="project-guide.html" data-i18n="processButton">
+            How the process works
+          </a>
 
           <div class="language-switcher" aria-label="Language">
             <button class="language-button is-active" type="button" data-lang="en" aria-pressed="true">
@@ -57,6 +60,17 @@
               I design minimal, experimental and concept-driven digital experiences.
             </p>
             <p class="availability" data-i18n="availability">Open for freelance projects</p>
+            <div class="hero-actions">
+              <button class="hero-button" id="heroEstimateButton" type="button" data-i18n="estimateProjectButton">
+                Estimate project
+              </button>
+              <a class="hero-button secondary" href="project-guide.html" data-i18n="processButton">
+                How the process works
+              </a>
+            </div>
+            <p class="process-note" data-i18n="processNote">
+              Read the full process, payments, revisions and project terms before sending a request.
+            </p>
           </div>
           <div class="hero-negative-space" aria-hidden="true"></div>
         </section>
@@ -296,7 +310,49 @@
             </div>
           </div>
         </section>
+
+        <section class="client-info-section" aria-labelledby="client-info-title">
+          <div class="client-info-heading">
+            <p class="section-kicker" data-i18n="clientInfoKicker">CLIENT INFORMATION</p>
+            <h2 id="client-info-title" data-i18n="clientInfoTitle">
+              Details before we start
+            </h2>
+            <p data-i18n="clientInfoText">
+              Review common questions, privacy details and project terms before sending a request.
+            </p>
+          </div>
+
+          <div class="client-info-links">
+            <a href="faq.html">
+              <span data-i18n="clientInfoFaqTitle">FAQ</span>
+              <span data-i18n="clientInfoFaqText">Answers about process, payments, revisions and support.</span>
+            </a>
+            <a href="privacy-policy.html">
+              <span data-i18n="clientInfoPrivacyTitle">Privacy Policy</span>
+              <span data-i18n="clientInfoPrivacyText">How project request data is collected and used.</span>
+            </a>
+            <a href="terms-of-service.html">
+              <span data-i18n="clientInfoTermsTitle">Terms of Service</span>
+              <span data-i18n="clientInfoTermsText">Project scope, estimates, payments and ownership terms.</span>
+            </a>
+          </div>
+        </section>
       </main>
+
+      <footer class="site-footer" aria-label="Footer">
+        <p class="footer-text" data-i18n="footerText">
+          Website design and development information for clear written project requests.
+        </p>
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="project-guide.html" data-i18n="footerProjectGuide">Project Guide</a>
+          <a href="faq.html" data-i18n="footerFaq">FAQ</a>
+          <a href="privacy-policy.html" data-i18n="footerPrivacy">Privacy Policy</a>
+          <a href="terms-of-service.html" data-i18n="footerTerms">Terms of Service</a>
+          <button type="button" id="footerEstimateButton" data-i18n="footerCalculator">Calculator</button>
+          <a href="mailto:oh.yanyoellis@gmail.com" data-i18n="footerEmail">Email</a>
+          <a href="https://t.me/ohyanyo" target="_blank" rel="noreferrer" data-i18n="footerTelegram">Telegram</a>
+        </nav>
+      </footer>
     </div>
 
     <div class="market-modal" id="marketModal" hidden>
@@ -386,6 +442,7 @@
       </section>
     </div>
 
+    <script src="site-config.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
