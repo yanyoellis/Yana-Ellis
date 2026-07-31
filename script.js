@@ -71,9 +71,9 @@ const translations = {
   uk: {
     documentTitle: "Yana Ellis - UX/UI дизайнерка",
     logoAlt: "Логотип Yana Ellis",
-    heroRole: "UX/UI ДИЗАЙНЕРКА",
+    heroRole: "UX/UI ТА ВЕБДИЗАЙНЕРКА, ЩО СПЕЦІАЛІЗУЄТЬСЯ НА САЙТАХ І ЦИФРОВИХ ПРОДУКТАХ.",
     heroDescription: "Я створюю мінімалістичні, експериментальні та концептуальні цифрові досвіди.",
-    availability: "Відкрита до freelance-проєктів",
+    availability: "Відкрита до фриланс-проєктів",
     aboutTitle: "ПРО МЕНЕ",
     aboutOne: "Дизайн інтерфейсів для мене: спосіб висловлювати ідеї.",
     aboutTwo: "Я зосереджуюся на ясності, емоції та деталях, що створюють унікальний цифровий досвід.",
@@ -140,7 +140,7 @@ const translations = {
   pl: {
     documentTitle: "Yana Ellis - projektantka UX/UI",
     logoAlt: "Logo Yana Ellis",
-    heroRole: "PROJEKTANTKA UX/UI",
+    heroRole: "PROJEKTANTKA UX/UI I WEB DESIGNERKA SPECJALIZUJĄCA SIĘ W STRONACH ORAZ PRODUKTACH CYFROWYCH.",
     heroDescription: "Projektuję minimalistyczne, eksperymentalne i koncepcyjne doświadczenia cyfrowe.",
     availability: "Otwarta na projekty freelance",
     aboutTitle: "O MNIE",

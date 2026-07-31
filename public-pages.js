@@ -94,7 +94,7 @@ const pages = {
     },
     anchors: {
       en: ["Process", "Communication", "Payment", "Revisions", "Promotion", "FAQ", "Privacy", "Terms"],
-      uk: ["Процес", "Комунікація", "Оплата", "Правки", "Знижка", "FAQ", "Privacy", "Terms"],
+      uk: ["Процес", "Комунікація", "Оплата", "Правки", "Знижка", "FAQ", "Приватність", "Умови"],
       pl: ["Proces", "Komunikacja", "Płatność", "Poprawki", "Promocja", "FAQ", "Prywatność", "Regulamin"]
     },
     processTitle: {
@@ -131,27 +131,27 @@ const pages = {
         ["Фінальна пропозиція та обсяг", "Після уточнення ви отримуєте письмову пропозицію з підтвердженим обсягом, ціною, графіком, оплатою, правками, матеріалами, сторонніми витратами й особливими умовами."],
         ["Оплата і резервування проєкту", "Робота починається після вашого підтвердження пропозиції та надходження першого платежу. Оплата можлива через Payoneer, Wise або банківський переказ залежно від доступності."],
         ["Збір контенту та доступів", "Ви надаєте логотип, кольори, тексти, фото, переклади, юридичні дані бізнесу, доступ до хостингу або сторонніх сервісів. У калькулятор не потрібно завантажувати всі файли."],
-        ["Структура і дизайн-напрям", "Я готую структуру інформації та візуальний напрям. Залежно від проєкту це може бути sitemap, wireframes, ключові екрани або дизайн-концепт."],
+        ["Структура і дизайн-напрям", "Я готую структуру інформації та візуальний напрям. Залежно від проєкту це може бути карта сайту, каркаси екранів, ключові екрани або дизайн-концепт."],
         ["Дизайн і раунди правок", "У пропозиції вказано кількість раундів. Один раунд - це один організований список розумних змін до поточного етапу."],
         ["Розробка", "Після затвердження дизайну сайт адаптивно реалізується для погоджених екранів. У розробку можуть входити форми, CMS, калькулятори, бронювання, фільтри, галереї та інтеграції, якщо вони в обсязі."],
         ["Тестування", "Сайт перевіряється на адаптивність, навігацію, форми, посилання, сумісність з основними браузерами й погоджену функціональність."],
-        ["Фінальне затвердження та залишок оплати", "Залишок і погоджені додаткові роботи сплачуються до публічного запуску, передачі production-файлів або повного доступу адміністратора."],
+        ["Фінальне затвердження та залишок оплати", "Залишок і погоджені додаткові роботи сплачуються до публічного запуску, передачі фінальних файлів або повного доступу адміністратора."],
         ["Запуск і передача", "Після фінального затвердження й оплати сайт підключається до домену та хостингу. Якщо це включено, ви отримуєте базові інструкції й потрібні доступи."],
         ["Підтримка після запуску", "Короткий період виправлення помилок може бути включений у пропозицію. Він покриває помилки в реалізованій функціональності, а не новий контент, нові функції чи зміну затвердженого дизайну."]
       ],
       pl: [
         ["Zobacz portfolio", "Przejrzyj wybrane projekty, aby zrozumieć kierunek wizualny, jakość interakcji, responsywność i sposób pełnej realizacji stron. Portfolio pokazuje styl oraz proces, ale nie jest kopiowane jako szablon."],
-        ["Wypełnij kalkulator", "Odpowiedz na pytania o cel strony, liczbę podstron, treści, design, animacje, języki, termin i wsparcie. Kalkulator tworzy wstępną wycenę oraz uporządkowane podsumowanie projektu."],
-        ["Sprawdź wstępną wycenę", "Kwota jest orientacyjna. Finalna cena może się zmienić po analizie złożoności designu, ilości treści, integracji, szczegółów technicznych i innych niuansów projektu."],
+        ["Wypełnij kalkulator", "Odpowiedz na pytania o cel strony, liczbę podstron, treści, projekt wizualny, animacje, języki, termin i wsparcie. Kalkulator tworzy wstępną wycenę oraz uporządkowane podsumowanie projektu."],
+        ["Sprawdź wstępną wycenę", "Kwota jest orientacyjna. Finalna cena może się zmienić po analizie złożoności projektu wizualnego, ilości treści, integracji, szczegółów technicznych i innych niuansów projektu."],
         ["Wyślij zapytanie", "Możesz tylko zobaczyć wycenę albo wysłać wynik kalkulatora z danymi kontaktowymi. Wysłanie zapytania oznacza, że mogę skontaktować się z Tobą, aby doprecyzować zamówienie."],
         ["Analiza w ciągu 1-2 dni roboczych", "Zazwyczaj analizuję nowe zapytania w ciągu 1-2 dni roboczych. Sprawdzam wymagania, złożoność, termin, materiały, warunki rabatu i możliwe konflikty zakresu."],
         ["Pytania doprecyzowujące", "Kontaktuję się wybranym kanałem. Rozmowy nie są obowiązkowe, jeśli projekt można wyjaśnić pisemnie. Większość projektów da się omówić przez email lub Telegram."],
         ["Finalna oferta i zakres", "Po doprecyzowaniu otrzymujesz pisemną ofertę z potwierdzonym zakresem, ceną, harmonogramem, planem płatności, poprawkami, materiałami, kosztami zewnętrznymi i warunkami specjalnymi."],
         ["Płatność i rezerwacja projektu", "Praca zaczyna się po zaakceptowaniu oferty i zaksięgowaniu pierwszej płatności. Płatność może odbyć się przez Payoneer, Wise albo przelew bankowy, zależnie od dostępności."],
         ["Zebranie treści i dostępów", "Dostarczasz logo, kolory, teksty, zdjęcia, tłumaczenia, dane prawne firmy, dostęp do hostingu lub usług zewnętrznych. Nie trzeba wysyłać wszystkich plików przez kalkulator."],
-        ["Struktura i kierunek designu", "Przygotowuję strukturę informacji oraz kierunek wizualny. W zależności od projektu może to być sitemap, wireframes, kluczowe ekrany albo koncept designu."],
-        ["Design i rundy poprawek", "Oferta określa liczbę rund. Jedna runda oznacza jedną uporządkowaną listę rozsądnych zmian do bieżącego etapu."],
-        ["Development", "Po akceptacji designu strona jest wdrażana responsywnie dla ustalonych ekranów. Zakres może obejmować formularze, CMS, kalkulatory, rezerwacje, filtry, galerie i integracje."],
+        ["Struktura i kierunek wizualny", "Przygotowuję strukturę informacji oraz kierunek wizualny. W zależności od projektu może to być mapa strony, szkice ekranów, kluczowe ekrany albo koncepcja wizualna."],
+        ["Projekt wizualny i rundy poprawek", "Oferta określa liczbę rund. Jedna runda oznacza jedną uporządkowaną listę rozsądnych zmian do bieżącego etapu."],
+        ["Wdrożenie", "Po akceptacji projektu wizualnego strona jest wdrażana responsywnie dla ustalonych ekranów. Zakres może obejmować formularze, CMS, kalkulatory, rezerwacje, filtry, galerie i integracje."],
         ["Testowanie", "Strona jest sprawdzana pod kątem responsywności, nawigacji, formularzy, linków, zgodności z głównymi przeglądarkami i uzgodnionej funkcjonalności."],
         ["Finalna akceptacja i pozostała płatność", "Pozostała kwota oraz zaakceptowane prace dodatkowe muszą być opłacone przed publicznym startem, przekazaniem plików produkcyjnych albo pełnym dostępem administratora."],
         ["Start i przekazanie", "Po finalnej akceptacji i płatności strona jest podłączana do ustalonej domeny i hostingu. Jeśli obejmuje to zakres, otrzymujesz podstawowe instrukcje i potrzebne dostępy."],
@@ -221,6 +221,28 @@ const pages = {
 function tx(value, language) {
   if (Array.isArray(value)) return value;
   return value?.[language] || value?.en || "";
+}
+
+function localizedPaymentMethods(language) {
+  const labels = {
+    "bank transfer": {
+      en: "bank transfer",
+      uk: "банківський переказ",
+      pl: "przelew bankowy"
+    }
+  };
+
+  return siteConfig.business.paymentMethods
+    .map((method) => labels[method]?.[language] || method)
+    .join(", ");
+}
+
+function localizedEffectiveDate(language) {
+  return {
+    en: siteConfig.legal.effectiveDate,
+    uk: "1 серпня 2026 року",
+    pl: "1 sierpnia 2026"
+  }[language] || siteConfig.legal.effectiveDate;
 }
 
 function currentLanguage() {
@@ -361,7 +383,7 @@ function infoCard(item) {
 }
 
 function guideSections(language) {
-  const paymentMethods = siteConfig.business.paymentMethods.join(", ");
+  const paymentMethods = localizedPaymentMethods(language);
   const responseTime = tx(siteConfig.business.responseTime, language);
   const revisionDefault = tx(siteConfig.business.revisionDefault, language);
   const bugFixPeriod = tx(siteConfig.business.bugFixPeriod, language);
@@ -428,8 +450,8 @@ function guideSections(language) {
         ["Дострокове видалення", "Якщо кредит прибрано раніше або пост не опубліковано чи видалено раніше, сума початкової знижки підлягає оплаті."]
       ],
       faqIntro: "FAQ відповідає на питання про ціни, оплату, права, підтримку, контент, терміни та знижки.",
-      privacyIntro: "Privacy Policy пояснює, які дані збираються через калькулятор і форму, які сервіси їх обробляють та як попросити виправлення чи видалення.",
-      termsIntro: "Terms of Service пояснює обмеження калькулятора, прийняття проєкту, оплату, обсяг, права, сторонні сервіси та формальні повідомлення."
+      privacyIntro: "Політика конфіденційності пояснює, які дані збираються через калькулятор і форму, які сервіси їх обробляють та як попросити виправлення чи видалення.",
+      termsIntro: "Умови використання пояснюють обмеження калькулятора, прийняття проєкту, оплату, обсяг, права, сторонні сервіси та формальні повідомлення."
     },
     pl: {
       communicationTitle: "Komunikacja",
@@ -448,14 +470,14 @@ function guideSections(language) {
       revisions: [
         ["Rundy poprawek", `Standardowo obowiązują ${revisionDefault}. Jedna runda to jedna zebrana lista rozsądnych zmian do aktualnie zaakceptowanego etapu.`],
         ["Prace dodatkowe", "Nowe podstrony, funkcje, języki, większa ilość treści, pełna zmiana kierunku lub prośby poza zaakceptowanym zakresem są wyceniane oddzielnie."],
-        ["Opóźnienia i pauzy", "Jeśli feedback, dostępy lub materiały są opóźnione, termin może się przesunąć. Dłuższa bezczynność może wstrzymać projekt i wymagać nowego harmonogramu."]
+        ["Opóźnienia i pauzy", "Jeśli informacje zwrotne, dostępy lub materiały są opóźnione, termin może się przesunąć. Dłuższa bezczynność może wstrzymać projekt i wymagać nowego harmonogramu."]
       ],
       promotionTitle: "Rabat promocyjny",
       promotionIntro: "Standardowa cena bez publicznego kredytu zawsze jest dostępna. Rabaty promocyjne są opcjonalne i działają tylko po pisemnej akceptacji warunków.",
       promotion: [
         ["Cena standardowa", "Publiczny kredyt nie jest wymagany i rabat nie jest naliczany."],
         ["Kredyt w stopce", `${siteConfig.promotion.footerCreditDiscount}% rabatu, jeśli mały aktywny kredyt projektantki pozostaje w stopce strony przez co najmniej ${siteConfig.promotion.displayPeriodMonths} miesięcy.`],
-        ["Publikacja w social media", `${siteConfig.promotion.socialPostDiscount}% rabatu, jeśli kwalifikujący się publiczny post oznacza Yanę Ellis w ciągu ${siteConfig.promotion.postingDeadlineDays} dni od startu.`],
+        ["Publikacja w mediach społecznościowych", `${siteConfig.promotion.socialPostDiscount}% rabatu, jeśli kwalifikujący się publiczny post oznacza Yanę Ellis w ciągu ${siteConfig.promotion.postingDeadlineDays} dni od startu.`],
         ["Opcja łączona", `${siteConfig.promotion.combinedDiscount}% rabatu, jeśli spełnione są warunki kredytu w stopce i publikacji.`],
         ["Wcześniejsze usunięcie", "Jeśli kredyt zostanie usunięty wcześniej albo post nie zostanie opublikowany lub zostanie usunięty wcześniej, pierwotna kwota rabatu staje się należna."]
       ],
@@ -475,7 +497,7 @@ function faqData(language) {
       ["Is the calculator price final?", "No. It is a preliminary estimate. The final price is confirmed only after I review the request, design direction, content volume, technical details and integrations."],
       ["Can I view the price without sending a request?", "Yes. At the end of the calculator you can view the approximate estimate only. Nothing is sent unless you choose to send the request."],
       ["What happens after I send the request?", `I normally review it within ${tx(siteConfig.business.responseTime, "en")}, then contact you through the selected channel with questions or a final written proposal.`],
-      ["How do payments work?", `Payment can be arranged through ${siteConfig.business.paymentMethods.join(", ")}. Most projects use ${siteConfig.business.defaultDeposit} before work begins and the remaining amount before launch or transfer.`],
+      ["How do payments work?", `Payment can be arranged through ${localizedPaymentMethods("en")}. Most projects use ${siteConfig.business.defaultDeposit} before work begins and the remaining amount before launch or transfer.`],
       ["Who pays for domain and hosting?", "The client normally pays domain, hosting and recurring third-party services directly unless the final proposal states otherwise."],
       ["How many revisions are included?", `The default is ${tx(siteConfig.business.revisionDefault, "en")}. Extra rounds, new pages, new functionality or major direction changes are additional work.`],
       ["What if I do not have text or photos?", "Content preparation, image sourcing or professional services can be added to scope. Stock licences and external services are charged separately."],
@@ -492,24 +514,24 @@ function faqData(language) {
       ["Чи є ціна з калькулятора фінальною?", "Ні. Це попередня оцінка. Фінальна ціна підтверджується тільки після перегляду заявки, дизайну, контенту, технічних деталей та інтеграцій."],
       ["Чи можна подивитися ціну без відправки заявки?", "Так. Наприкінці калькулятора можна лише переглянути приблизну оцінку. Нічого не надсилається, доки ви не оберете надсилання заявки."],
       ["Що буде після відправки заявки?", `Зазвичай я переглядаю її протягом ${tx(siteConfig.business.responseTime, "uk")}, а потім пишу через вибраний канал із питаннями або фінальною письмовою пропозицією.`],
-      ["Як працює оплата?", `Оплата можлива через ${siteConfig.business.paymentMethods.join(", ")}. У більшості проєктів ${siteConfig.business.defaultDeposit} сплачується до початку роботи, а залишок - перед запуском або передачею.`],
+      ["Як працює оплата?", `Оплата можлива через ${localizedPaymentMethods("uk")}. У більшості проєктів ${siteConfig.business.defaultDeposit} сплачується до початку роботи, а залишок - перед запуском або передачею.`],
       ["Хто платить за домен і хостинг?", "Зазвичай клієнт оплачує домен, хостинг і регулярні сторонні сервіси напряму, якщо фінальна пропозиція не передбачає інше."],
       ["Скільки правок включено?", `Стандартно включено ${tx(siteConfig.business.revisionDefault, "uk")}. Додаткові раунди, сторінки, функції або велика зміна напряму оплачуються окремо.`],
       ["Що якщо в мене немає текстів або фото?", "Підготовку контенту, пошук зображень або професійні послуги можна додати в обсяг. Стокові ліцензії та зовнішні сервіси оплачуються окремо."],
       ["Кому належить готовий сайт?", "Після повної оплати клієнт отримує права й доступи, описані у фінальній пропозиції. Сторонні інструменти, шрифти й бібліотеки мають власні ліцензії."],
       ["Чи можна показувати проєкт у портфоліо?", "Якщо конфіденційність не погоджена письмово до початку роботи, публічний завершений проєкт може бути показаний у портфоліо Yana Ellis."],
       ["Що таке рекламна знижка?", "Це опційна програма. Можна обрати стандартну ціну, знижку за кредит у футері, знижку за пост, комбінований варіант або обговорити доступні опції."],
-      ["Чи можна прибрати кредит у футері пізніше?", "Так, але якщо він прибирається до завершення погодженого періоду, початкова сума знижки стає payable перед видаленням."],
+      ["Чи можна прибрати кредит у футері пізніше?", "Так, але якщо він прибирається до завершення погодженого періоду, початкова сума знижки підлягає оплаті перед видаленням."],
       ["Чи включена підтримка після запуску?", `Може бути включено ${tx(siteConfig.business.bugFixPeriod, "uk")}. Майбутні оновлення, новий контент і нові функції є окремими послугами.`],
       ["Які дані збираються?", "Форма може збирати контакти, відповіді калькулятора, нотатки про проєкт, референси, бюджет, терміни, статуси згоди й технічні дані відправки."],
-      ["Як попросити видалення?", `Надішліть формальний privacy request на ${siteConfig.contact.email}. Перед зміною або видаленням даних може знадобитися перевірка особи.`]
+      ["Як попросити видалення?", `Надішліть формальний запит щодо приватності на ${siteConfig.contact.email}. Перед зміною або видаленням даних може знадобитися перевірка особи.`]
     ],
     pl: [
       ["Czy muszę umawiać rozmowę?", "Nie. Większość projektów można omówić przez email, Telegram albo inny uzgodniony kanał pisemny. Rozmowa jest proponowana tylko wtedy, gdy pisemne wyjaśnienia byłyby niewystarczające."],
-      ["Czy cena z kalkulatora jest finalna?", "Nie. To wycena wstępna. Finalna cena jest potwierdzana dopiero po analizie zapytania, kierunku designu, ilości treści, szczegółów technicznych i integracji."],
+      ["Czy cena z kalkulatora jest finalna?", "Nie. To wycena wstępna. Finalna cena jest potwierdzana dopiero po analizie zapytania, kierunku wizualnego, ilości treści, szczegółów technicznych i integracji."],
       ["Czy mogę zobaczyć cenę bez wysyłania zapytania?", "Tak. Na końcu kalkulatora możesz tylko zobaczyć orientacyjną wycenę. Nic nie jest wysyłane, dopóki nie wybierzesz wysłania zapytania."],
       ["Co dzieje się po wysłaniu zapytania?", `Zwykle analizuję je w ciągu ${tx(siteConfig.business.responseTime, "pl")}, a następnie kontaktuję się wybranym kanałem z pytaniami albo finalną pisemną ofertą.`],
-      ["Jak działa płatność?", `Płatność może odbyć się przez ${siteConfig.business.paymentMethods.join(", ")}. Większość projektów używa ${siteConfig.business.defaultDeposit} przed startem pracy, a reszty przed uruchomieniem lub przekazaniem.`],
+      ["Jak działa płatność?", `Płatność może odbyć się przez ${localizedPaymentMethods("pl")}. Większość projektów używa ${siteConfig.business.defaultDeposit} przed startem pracy, a reszty przed uruchomieniem lub przekazaniem.`],
       ["Kto płaci za domenę i hosting?", "Klient zwykle opłaca domenę, hosting i cykliczne usługi zewnętrzne bezpośrednio, chyba że finalna oferta stanowi inaczej."],
       ["Ile poprawek jest wliczone?", `Standardowo obowiązują ${tx(siteConfig.business.revisionDefault, "pl")}. Dodatkowe rundy, podstrony, funkcje lub duża zmiana kierunku są wyceniane oddzielnie.`],
       ["Co jeśli nie mam tekstów lub zdjęć?", "Przygotowanie treści, dobór zdjęć albo usługi profesjonalne można dodać do zakresu. Licencje stockowe i usługi zewnętrzne są płatne oddzielnie."],
@@ -519,7 +541,7 @@ function faqData(language) {
       ["Czy mogę później usunąć kredyt ze stopki?", "Tak, ale jeśli zostanie usunięty przed końcem uzgodnionego okresu, pierwotna kwota rabatu staje się należna przed usunięciem."],
       ["Czy wsparcie po starcie jest wliczone?", `Może być wliczony ${tx(siteConfig.business.bugFixPeriod, "pl")}. Przyszłe aktualizacje, nowe treści i nowe funkcje są oddzielnymi usługami.`],
       ["Jakie dane są zbierane?", "Formularz może zbierać dane kontaktowe, odpowiedzi z kalkulatora, notatki o projekcie, linki inspiracji, budżet, terminy, statusy zgód i techniczne dane wysyłki."],
-      ["Jak poprosić o usunięcie danych?", `Wyślij formalną prośbę privacy na ${siteConfig.contact.email}. Przed zmianą lub usunięciem danych może być wymagana weryfikacja tożsamości.`]
+      ["Jak poprosić o usunięcie danych?", `Wyślij formalną prośbę dotyczącą prywatności na ${siteConfig.contact.email}. Przed zmianą lub usunięciem danych może być wymagana weryfikacja tożsamości.`]
     ]
   };
   return data[language] || data.en;
@@ -552,7 +574,7 @@ function renderFaq(language) {
 }
 
 function legalSections(type, language) {
-  const effectiveDate = siteConfig.legal.effectiveDate;
+  const effectiveDate = localizedEffectiveDate(language);
   const contact = siteConfig.contact.email;
   const data = {
     privacy: {
@@ -573,9 +595,9 @@ function legalSections(type, language) {
         ["Contact", `Privacy questions and formal requests should be sent to ${contact}. General project questions may also be sent to Telegram ${siteConfig.contact.telegram}.`]
       ],
       uk: [
-        ["Вступ", `Дата набрання чинності: ${effectiveDate}. Ця Privacy Policy застосовується до портфоліо Yana Ellis, калькуляторів і форм заявки.`],
+        ["Вступ", `Дата набрання чинності: ${effectiveDate}. Ця Політика конфіденційності застосовується до портфоліо Yana Ellis, калькуляторів і форм заявки.`],
         ["Яка інформація збирається", "Форми можуть збирати ім'я, email, телефон, назву компанії або проєкту, username у месенджерах, поточний сайт, відповіді калькулятора, вимоги, бюджет, терміни, інформацію про бренд-матеріали, референси, статуси згоди, час відправки та технічні дані."],
-        ["Як збирається інформація", "Дані надаються користувачем через калькулятори та форми. Технічна інформація може автоматично оброблятися хостингом, безпековими, delivery або email-сервісами під час відправки заявки."],
+        ["Як збирається інформація", "Дані надаються користувачем через калькулятори та форми. Технічна інформація може автоматично оброблятися хостингом, безпековими сервісами, сервісами доставки повідомлень або email-сервісами під час відправки заявки."],
         ["Навіщо використовуються дані", "Дані потрібні для попереднього розрахунку, отримання й перегляду заявки, контакту через вибраний канал, підготовки фінальної пропозиції, захисту від спаму та ведення бізнес-записів."],
         ["Правові підстави", "Залежно від локації користувача, обробка може базуватися на переддоговірних діях, виконанні договору, згоді, законному інтересі або юридичних обов'язках."],
         ["Сервіси та передача", `Заявки можуть обробляти ${siteConfig.providers.hosting}, ${siteConfig.providers.requestProcessing}, ${siteConfig.providers.emailDelivery} і ${siteConfig.providers.telegramDelivery}. Дані не продаються й не передаються для реклами.`],
@@ -586,12 +608,12 @@ function legalSections(type, language) {
         ["Діти", "Послуги призначені для дорослих і представників бізнесу. Сайт не призначений для свідомого збору персональних даних дітей."],
         ["Сторонні посилання", "Сайт може посилатися на портфоліо, соцмережі, платіжні сервіси й інші сторонні ресурси. До них застосовуються їхні власні політики."],
         ["Зміни політики", "Політика може оновлюватися при зміні сервісів, провайдерів або правових вимог. Дата оновлюється при суттєвих змінах."],
-        ["Контакт", `Формальні privacy-запити надсилайте на ${contact}. Загальні питання про проєкт можна також писати в Telegram ${siteConfig.contact.telegram}.`]
+        ["Контакт", `Формальні запити щодо приватності надсилайте на ${contact}. Загальні питання про проєкт можна також писати в Telegram ${siteConfig.contact.telegram}.`]
       ],
       pl: [
         ["Wprowadzenie", `Data wejścia w życie: ${effectiveDate}. Ta Polityka prywatności dotyczy portfolio Yana Ellis, kalkulatorów i formularzy zapytań.`],
         ["Zbierane informacje", "Formularze mogą zbierać imię, email, telefon, nazwę firmy lub projektu, nazwy w komunikatorach, obecną stronę, odpowiedzi z kalkulatora, wymagania, budżet, terminy, informacje o materiałach marki, linki inspiracji, statusy zgód, czas wysłania i dane techniczne."],
-        ["Jak dane są zbierane", "Dane są podawane bezpośrednio przez użytkownika w kalkulatorach i formularzach. Dane techniczne mogą być przetwarzane automatycznie przez hosting, bezpieczeństwo, delivery lub usługi email podczas wysyłki."],
+        ["Jak dane są zbierane", "Dane są podawane bezpośrednio przez użytkownika w kalkulatorach i formularzach. Dane techniczne mogą być przetwarzane automatycznie przez hosting, zabezpieczenia, usługi dostarczania wiadomości lub pocztę email podczas wysyłki."],
         ["Cele przetwarzania", "Dane służą do pokazania wstępnej wyceny, otrzymania i analizy zapytania, kontaktu wybranym kanałem, przygotowania finalnej oferty, ochrony przed spamem i prowadzenia dokumentacji biznesowej."],
         ["Podstawy prawne", "W zależności od lokalizacji użytkownika przetwarzanie może opierać się na działaniach przedumownych, wykonaniu umowy, zgodzie, uzasadnionym interesie albo obowiązku prawnym."],
         ["Usługodawcy i udostępnianie", `Zapytania mogą być przetwarzane przez ${siteConfig.providers.hosting}, ${siteConfig.providers.requestProcessing}, ${siteConfig.providers.emailDelivery} i ${siteConfig.providers.telegramDelivery}. Dane nie są sprzedawane ani udostępniane do reklamy.`],
@@ -600,7 +622,7 @@ function legalSections(type, language) {
         ["Prawa użytkownika", `W zależności od prawa użytkownik może poprosić o dostęp, korektę, usunięcie, ograniczenie, sprzeciw, przeniesienie danych lub wycofanie zgody przez email ${contact}.`],
         ["Bezpieczeństwo", "Stosowane są rozsądne środki organizacyjne i techniczne, ale żadna transmisja ani metoda przechowywania online nie jest całkowicie bezpieczna."],
         ["Dzieci", "Usługi są przeznaczone dla dorosłych i przedstawicieli biznesu. Strona nie jest przeznaczona do świadomego zbierania danych dzieci."],
-        ["Linki zewnętrzne", "Strona może linkować do portfolio, social media, płatności i innych usług zewnętrznych. Obowiązują ich własne polityki."],
+        ["Linki zewnętrzne", "Strona może linkować do portfolio, mediów społecznościowych, płatności i innych usług zewnętrznych. Obowiązują ich własne polityki."],
         ["Zmiany polityki", "Polityka może być aktualizowana przy zmianie usług, dostawców lub wymogów prawnych. Data zostanie zmieniona przy istotnych aktualizacjach."],
         ["Kontakt", `Formalne prośby prywatności wyślij na ${contact}. Ogólne pytania projektowe można też pisać na Telegram ${siteConfig.contact.telegram}.`]
       ]
@@ -612,7 +634,7 @@ function legalSections(type, language) {
         ["Project acceptance", "Submitting a request does not obligate either party to proceed. A project begins only after scope, price, schedule and payment terms are agreed in writing and the required first payment has cleared."],
         ["Client responsibilities", "The client must provide accurate information, timely feedback, lawful content and necessary access. The client confirms they own or have permission to use supplied materials."],
         ["Services and scope changes", "Only items expressly included in the approved proposal are part of the project. Additional requests may require a revised price and schedule."],
-        ["Payments", `Payments may be arranged through ${siteConfig.business.paymentMethods.join(", ")}. Work may pause for overdue payments. Final deliverables, launch or credentials may be withheld until due amounts are paid.`],
+        ["Payments", `Payments may be arranged through ${localizedPaymentMethods("en")}. Work may pause for overdue payments. Final deliverables, launch or credentials may be withheld until due amounts are paid.`],
         ["Intellectual property", "Upon full payment, the client receives the rights expressly stated in the proposal for final approved deliverables. Preliminary concepts, rejected designs, internal tools, reusable components and general know-how remain with Yana Ellis."],
         ["Portfolio use", "Unless confidentiality is agreed in writing before work begins, Yana Ellis may display the completed public project, screenshots and a factual description of the work in portfolio and promotional materials."],
         ["Designer credit discounts", "Any discounted price connected to a footer credit or public promotion is conditional on the written promotional terms. Early removal or non-performance makes the original discount amount payable."],
@@ -628,33 +650,33 @@ function legalSections(type, language) {
         ["Сфера дії", "Ці Умови регулюють використання портфоліо Yana Ellis, калькуляторів, форм заявки та переддоговірної інформації. Конкретний проєкт регулюється фінальною письмовою пропозицією, рахунком і окремою угодою, якщо вона є."],
         ["Оцінки калькулятора", "Результати калькулятора є лише попередньою орієнтовною оцінкою. Вони не є обов'язковою пропозицією, договором, гарантією доступності або обіцянкою прийняти проєкт."],
         ["Прийняття проєкту", "Надсилання заявки не зобов'язує жодну сторону продовжувати. Проєкт починається лише після письмового погодження обсягу, ціни, графіка, оплати та надходження першого платежу."],
-        ["Обов'язки клієнта", "Клієнт має надати точну інформацію, своєчасний фідбек, законний контент і потрібні доступи. Клієнт підтверджує, що має права на надані матеріали."],
+        ["Обов'язки клієнта", "Клієнт має надати точну інформацію, своєчасний відгук, законний контент і потрібні доступи. Клієнт підтверджує, що має права на надані матеріали."],
         ["Послуги та зміни обсягу", "До проєкту входять лише позиції, прямо зазначені у затвердженій пропозиції. Додаткові запити можуть потребувати нової ціни й графіка."],
-        ["Оплата", `Оплату можна погодити через ${siteConfig.business.paymentMethods.join(", ")}. Робота може зупинятися через прострочення. Фінальні матеріали, запуск або доступи можуть утримуватися до повної оплати належних сум.`],
-        ["Інтелектуальна власність", "Після повної оплати клієнт отримує права, прямо зазначені у пропозиції. Чернетки, відхилені концепти, внутрішні інструменти, reusable components і know-how залишаються у Yana Ellis."],
+        ["Оплата", `Оплату можна погодити через ${localizedPaymentMethods("uk")}. Робота може зупинятися через прострочення. Фінальні матеріали, запуск або доступи можуть утримуватися до повної оплати належних сум.`],
+        ["Інтелектуальна власність", "Після повної оплати клієнт отримує права, прямо зазначені у пропозиції. Чернетки, відхилені концепти, внутрішні інструменти, повторно використовувані компоненти й загальні напрацювання залишаються у Yana Ellis."],
         ["Використання в портфоліо", "Якщо конфіденційність не погоджена письмово до початку роботи, Yana Ellis може показувати публічний завершений проєкт, скриншоти й опис роботи у портфоліо та промоматеріалах."],
-        ["Знижки за дизайнерський кредит", "Будь-яка знижка за footer credit або публічну промоцію діє лише за письмовими умовами. Дострокове видалення або невиконання робить суму початкової знижки payable."],
+        ["Знижки за дизайнерський кредит", "Будь-яка знижка за кредит у футері або публічну промоцію діє лише за письмовими умовами. Дострокове видалення або невиконання робить суму початкової знижки такою, що підлягає оплаті."],
         ["Сторонні сервіси", "Домени, хостинг, плагіни, платіжні системи, бронювання, шрифти, стокові матеріали та API можуть мати окремі платежі, умови й перебої."],
         ["Гарантії та обмеження", "Послуги виконуються з розумною турботою та навичками. Не гарантуються безперервна робота, майбутні зміни браузерів, позиції в пошуку, продажі, дохід або доступність сторонніх сервісів."],
-        ["Заборонені проєкти та поведінка", "Запити можуть бути відхилені або припинені через незаконний контент, порушення прав, обман, malware, harassment, exploitation, несплату або образливу поведінку."],
+        ["Заборонені проєкти та поведінка", "Запити можуть бути відхилені або припинені через незаконний контент, порушення прав, обман, зловмисне програмне забезпечення, переслідування, експлуатацію, несплату або образливу поведінку."],
         ["Призупинення та припинення", "Робота може бути призупинена через несплату, відсутність матеріалів, невирішені затвердження або порушення. Скасування й повернення коштів залежать від фінальної пропозиції та етапу проєкту."],
         ["Право і спори", tx(siteConfig.legal.governingLawNote, "uk")],
         ["Зміни", "Умови сайту можуть оновлюватися. Зміни не замінюють підписану угоду заднім числом, якщо сторони письмово не погодили інше."],
-        ["Контакт", `Загальні питання: ${siteConfig.contact.telegram} або ${siteConfig.contact.email}. Формальні повідомлення щодо оплати, скасування, прав або приватності потрібно надсилати email.`]
+        ["Контакт", `Загальні питання: ${siteConfig.contact.telegram} або ${siteConfig.contact.email}. Формальні повідомлення щодо оплати, скасування, прав або приватності потрібно надсилати електронною поштою.`]
       ],
       pl: [
         ["Zakres", "Te Warunki regulują korzystanie z portfolio Yana Ellis, kalkulatorów, formularzy zapytań i informacji przedumownych. Konkretny projekt podlega finalnej pisemnej ofercie, fakturze i ewentualnej oddzielnej umowie."],
         ["Wyceny z kalkulatora", "Wyniki kalkulatora są wycenami wstępnymi wyłącznie orientacyjnie. Nie są wiążącą ofertą, umową, gwarancją dostępności ani obietnicą przyjęcia projektu."],
         ["Akceptacja projektu", "Wysłanie zapytania nie zobowiązuje żadnej strony do rozpoczęcia. Projekt zaczyna się dopiero po pisemnym uzgodnieniu zakresu, ceny, harmonogramu, płatności i zaksięgowaniu pierwszej płatności."],
-        ["Obowiązki klienta", "Klient musi podać dokładne informacje, terminowy feedback, legalne treści i potrzebne dostępy. Klient potwierdza, że ma prawa do dostarczonych materiałów."],
+        ["Obowiązki klienta", "Klient musi podać dokładne informacje, terminowe informacje zwrotne, legalne treści i potrzebne dostępy. Klient potwierdza, że ma prawa do dostarczonych materiałów."],
         ["Usługi i zmiany zakresu", "Zakres obejmuje tylko elementy wyraźnie wskazane w zaakceptowanej ofercie. Dodatkowe prośby mogą wymagać nowej ceny i harmonogramu."],
-        ["Płatności", `Płatność może odbyć się przez ${siteConfig.business.paymentMethods.join(", ")}. Praca może zostać wstrzymana przy zaległościach. Finalne materiały, start lub dostępy mogą być wstrzymane do opłacenia należnych kwot.`],
-        ["Własność intelektualna", "Po pełnej płatności klient otrzymuje prawa wyraźnie opisane w ofercie. Koncepcje wstępne, odrzucone projekty, narzędzia wewnętrzne, reusable components i know-how pozostają przy Yana Ellis."],
+        ["Płatności", `Płatność może odbyć się przez ${localizedPaymentMethods("pl")}. Praca może zostać wstrzymana przy zaległościach. Finalne materiały, start lub dostępy mogą być wstrzymane do opłacenia należnych kwot.`],
+        ["Własność intelektualna", "Po pełnej płatności klient otrzymuje prawa wyraźnie opisane w ofercie. Koncepcje wstępne, odrzucone projekty, narzędzia wewnętrzne, komponenty wielokrotnego użytku i ogólna wiedza techniczna pozostają przy Yana Ellis."],
         ["Użycie w portfolio", "Jeśli poufność nie została uzgodniona pisemnie przed startem, Yana Ellis może pokazać ukończony publiczny projekt, zrzuty ekranu i opis pracy w portfolio oraz materiałach promocyjnych."],
         ["Rabaty za kredyt projektantki", "Każdy rabat związany z kredytem w stopce lub promocją publiczną zależy od pisemnych warunków. Wcześniejsze usunięcie lub niewykonanie powoduje obowiązek zapłaty pierwotnej kwoty rabatu."],
         ["Usługi zewnętrzne", "Domeny, hosting, wtyczki, procesory płatności, rezerwacje, fonty, materiały stockowe i API mogą mieć oddzielne opłaty, warunki i przerwy w działaniu."],
         ["Gwarancje i ograniczenia", "Usługi są wykonywane z rozsądną starannością i umiejętnością. Nie gwarantuje się nieprzerwanego działania, przyszłych zmian przeglądarek, pozycji w wyszukiwarce, sprzedaży, przychodów ani dostępności usług zewnętrznych."],
-        ["Zakazane projekty i zachowanie", "Zapytania mogą zostać odrzucone lub zakończone z powodu treści nielegalnych, naruszeń praw, oszustwa, malware, harassment, exploitation, braku płatności lub obraźliwego zachowania."],
+        ["Zakazane projekty i zachowanie", "Zapytania mogą zostać odrzucone lub zakończone z powodu treści nielegalnych, naruszeń praw, oszustwa, złośliwego oprogramowania, nękania, wykorzystywania, braku płatności lub obraźliwego zachowania."],
         ["Wstrzymanie i zakończenie", "Praca może zostać wstrzymana przez brak płatności, materiałów, akceptacji lub naruszenie. Anulowanie i zwroty zależą od finalnej oferty i etapu projektu."],
         ["Prawo właściwe i spory", tx(siteConfig.legal.governingLawNote, "pl")],
         ["Zmiany", "Warunki strony mogą być aktualizowane. Zmiany nie zastępują podpisanej umowy wstecznie, chyba że obie strony uzgodnią to pisemnie."],
