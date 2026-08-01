@@ -345,11 +345,24 @@ button {
   gap: 12px;
   align-content: start;
   padding: 22px;
+  scroll-margin-top: 82px;
 }
 
 .condition-copy,
 .policy-note {
   margin: 0;
+}
+
+.print-policy {
+  margin: 0 0 18px;
+}
+
+.print-button {
+  max-width: 100%;
+  min-height: 44px;
+  white-space: normal;
+  text-align: left;
+  cursor: pointer;
 }
 
 .faq-item {
@@ -499,5 +512,61 @@ button {
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
+  }
+}
+
+@media print {
+  :root {
+    --bg: #ffffff;
+    --text: #111111;
+    --muted: #555555;
+    --soft: #333333;
+    --accent: #111111;
+    --line: rgba(0, 0, 0, 0.18);
+    --line-strong: rgba(0, 0, 0, 0.28);
+    --page-pad: 24px;
+  }
+
+  body::before,
+  .page-header,
+  .page-footer,
+  .anchor-nav,
+  .cta-band,
+  .print-policy {
+    display: none !important;
+  }
+
+  .page-shell {
+    width: 100%;
+    padding: 0;
+  }
+
+  .page-hero {
+    padding: 0 0 24px;
+  }
+
+  .page-title {
+    font-size: 44px;
+    line-height: 1;
+  }
+
+  .content-grid {
+    gap: 20px;
+    padding-top: 0;
+  }
+
+  .content-section {
+    display: block;
+    padding-top: 20px;
+  }
+
+  .content-section h2 {
+    font-size: 30px;
+  }
+
+  .policy-card {
+    break-inside: avoid;
+    background: transparent;
+    border-color: var(--line);
   }
 }

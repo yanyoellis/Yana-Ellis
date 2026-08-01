@@ -1,13 +1,45 @@
 (() => {
-  const WORKFLOW_VERSION = "1.4";
-  const FORM_VERSION = "2.3";
+  const WORKFLOW_VERSION = "1.5";
+  const FORM_VERSION = "2.4";
   const PRICING_MONTH = "2026-07-29";
   const API_ENDPOINT = "/api/submit-estimate";
   const telegramHandle = "@ohyanyo";
+  const siteConfig = window.YANA_SITE_CONFIG || {};
+  const promotionConfig = siteConfig.promotion || {};
+  const legalConfig = siteConfig.legal || {};
   const startedAt = Date.now();
   const MAX_INSPIRATION_LINKS = 8;
   let lastSuccessfulPayload = null;
   let formDraft = createEmptyFormDraft();
+
+  function numericConfig(value, fallback) {
+    const number = Number(value);
+    return Number.isFinite(number) ? number : fallback;
+  }
+
+  function designerCreditDiscountPercent() {
+    return numericConfig(promotionConfig.DESIGNER_CREDIT_DISCOUNT_PERCENT, 10);
+  }
+
+  function designerCreditCureDays() {
+    return numericConfig(promotionConfig.DESIGNER_CREDIT_CURE_DAYS, 7);
+  }
+
+  function designerCreditTermsVersion() {
+    return promotionConfig.DESIGNER_CREDIT_TERMS_VERSION || "designer-credit-2026-08-01";
+  }
+
+  function defaultDesignerCreditTerm() {
+    return promotionConfig.DEFAULT_DESIGNER_CREDIT_TERM || "while_site_remains_active";
+  }
+
+  function termsVersion() {
+    return legalConfig.TERMS_VERSION || "terms-2026-08-01";
+  }
+
+  function privacyVersion() {
+    return legalConfig.PRIVACY_VERSION || "privacy-2026-08-01";
+  }
 
   function createEmptyFormDraft() {
     return {
@@ -18,6 +50,7 @@
       phasedImplementation: "",
       visualDirection: "",
       promotionalOption: "standard",
+      designerCreditConsent: false,
       emailCopy: false,
       contactConsent: false,
       privacyConsent: false,
@@ -748,39 +781,54 @@
     revisionPolicyTitle: "Revisions",
     revisionPolicyCopy:
       "Two organised revision rounds are included by default. New functionality, a new direction after approval or extra pages are quoted separately.",
-    promotionPolicyTitle: "Promotional discount",
+    promotionPolicyTitle: "Optional designer credit discount",
     promotionPolicyCopy:
-      "You can choose the standard price or request a promotional discount connected to a footer credit and/or a social media post. The final conditions are confirmed in writing.",
+      "You can choose the standard project price with no designer credit, or request a limited discount for keeping a small linked designer credit in the website footer.",
     legalPolicyTitle: "Terms and privacy",
     legalPolicyCopy:
       "The calculator is approximate. Sending a request does not create a contract or payment obligation. Work starts only after written approval and the first payment.",
     readPolicies:
       'Read the full <a href="../../project-guide.html" target="_blank" rel="noopener noreferrer">Project Guide</a>, <a href="../../faq.html" target="_blank" rel="noopener noreferrer">FAQ</a>, <a href="/privacy-policy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a> and <a href="/terms-of-service.html" target="_blank" rel="noopener noreferrer">Terms of Service</a>.',
-    promotionalOptionTitle: "Promotional discount option",
+    promotionalOptionTitle: "Optional designer credit discount",
     promotionalOptionHelp:
-      "Choose the standard price or a promotional option. Any discount is conditional and will be confirmed in the final proposal before payment.",
+      "You may choose the standard project price with no designer credit, or receive a limited discount by keeping a small permanent \"Designed and developed by Yana Ellis\" credit in the website footer.",
     promotionalOptions: [
-      { value: "standard", label: "Standard price, no promotional conditions", discount: 0 },
-      { value: "footer_credit", label: "10% footer credit discount", discount: 10 },
-      { value: "social_post", label: "5% social media post discount", discount: 5 },
-      { value: "combined", label: "15% combined promotional discount", discount: 15 },
-      { value: "discuss", label: "I want to discuss promotional options", discount: 0 }
+      { value: "standard", label: "Standard price, no designer credit", discount: 0 },
+      { value: "designer_credit", label: "Apply the designer credit discount", discount: designerCreditDiscountPercent() },
+      { value: "discuss", label: "I would like to discuss this option", discount: 0 }
     ],
-    promotionalEstimate: "Estimate with promotional option",
-    promotionalDiscount: "Promotional discount",
+    promotionalEstimate: "Updated preliminary estimate",
+    promotionalDiscount: "Designer credit discount",
+    standardProjectEstimate: "Standard project estimate",
+    discountAmount: "Discount amount",
+    designerCreditPreviewTitle: "Designer credit preview",
+    designerCreditPreviewText: "Website designed and developed by Yana Ellis ↗",
+    designerCreditPreviewName: "Yana Ellis",
+    designerCreditPreviewRole: "UX/UI Designer & Developer",
+    designerCreditPreviewPortfolio: "Portfolio",
+    designerCreditPreviewTelegram: "Telegram",
     promotionalConditions:
-      "Footer credit stays visible for 12 months. A social post should be published within 14 days after launch and requires at least 1,000 Instagram followers unless agreed otherwise.",
-    termsConsentBefore: "I understand that the calculator price is approximate, that sending this request does not create a contract or payment obligation, and I agree to the ",
+      "The discounted price applies while the agreed designer credit remains visible and functional in the website footer. The client may always choose the standard price without the credit.",
+    designerCreditRestoration:
+      "If the credit is removed, hidden, disabled or materially altered without written approval, I will first receive written notice and an opportunity to restore it. If it is not restored within the stated cure period, the original discount amount may become payable.",
+    designerCreditCurePeriod: `Cure period: ${designerCreditCureDays()} calendar days after written notice.`,
+    designerCreditTerm:
+      "Unless a shorter period is stated in the final proposal, the designer credit is expected to remain for as long as the discounted website remains publicly available in substantially the same form.",
+    designerCreditConsent:
+      "I understand that this discount is conditional on keeping the agreed designer credit visible and functional in the website footer.",
+    requiredDesignerCreditConsent: "Please confirm the Designer Credit Discount Conditions.",
+    termsConsentBefore: "I have read and agree to the ",
     termsConsentAfter: ".",
     requiredTermsConsent: "Please confirm that you agree to the Terms of Service.",
     finalReviewEstimate: "Estimate shown above",
-    finalReviewPromotionalOption: "Promotional option",
-    finalReviewPromotionalEstimate: "Promotional estimate",
+    finalReviewPromotionalOption: "Designer credit option",
+    finalReviewPromotionalEstimate: "Updated estimate",
     finalReviewEmailCopy: "Email copy requested",
     finalReviewTranslationSource: "Translations",
     finalReviewPhasedImplementation: "Launch phases",
     finalReviewVisualDirection: "Visual direction",
     finalReviewTermsConsent: "Terms consent",
+    finalReviewDesignerCreditConsent: "Designer credit consent",
     successProjectGuide: "Read project guide",
     documentDisclaimer:
       "This document contains a preliminary estimate generated from the calculator answers. It is not an invoice, contract or binding commercial offer. The final project price may change after the requirements, design details and technical scope are reviewed."
@@ -875,39 +923,54 @@
     revisionPolicyTitle: "Правки",
     revisionPolicyCopy:
       "За замовчуванням включено два організовані раунди правок. Нова функціональність, новий напрям після затвердження або додаткові сторінки розраховуються окремо.",
-    promotionPolicyTitle: "Промоційна знижка",
+    promotionPolicyTitle: "Опційна знижка за дизайнерський кредит",
     promotionPolicyCopy:
-      "Можна обрати стандартну ціну або запросити промоційну знижку за footer credit та/або пост у соцмережах. Фінальні умови підтверджуються письмово.",
+      "Можна обрати стандартну ціну без дизайнерського кредиту або запросити обмежену знижку за невеликий активний кредит у футері сайту.",
     legalPolicyTitle: "Умови та приватність",
     legalPolicyCopy:
       "Калькулятор дає приблизну оцінку. Надсилання заявки не створює договору чи обов'язку оплати. Робота починається тільки після письмового погодження та першого платежу.",
     readPolicies:
       'Прочитайте повний <a href="../../project-guide.html" target="_blank" rel="noopener noreferrer">гайд проєкту</a>, <a href="../../faq.html" target="_blank" rel="noopener noreferrer">FAQ</a>, <a href="/privacy-policy.html" target="_blank" rel="noopener noreferrer">політику конфіденційності</a> та <a href="/terms-of-service.html" target="_blank" rel="noopener noreferrer">умови користування</a>.',
-    promotionalOptionTitle: "Варіант промоційної знижки",
+    promotionalOptionTitle: "Опційна знижка за дизайнерський кредит",
     promotionalOptionHelp:
-      "Оберіть стандартну ціну або промоційний варіант. Будь-яка знижка є умовною та підтверджується у фінальній пропозиції перед оплатою.",
+      "Можна обрати стандартну ціну без дизайнерського кредиту або отримати обмежену знижку, якщо у футері сайту залишається невеликий постійний кредит \"Designed and developed by Yana Ellis\".",
     promotionalOptions: [
-      { value: "standard", label: "Стандартна ціна без промоційних умов", discount: 0 },
-      { value: "footer_credit", label: "10% знижки за footer credit", discount: 10 },
-      { value: "social_post", label: "5% знижки за пост у соцмережах", discount: 5 },
-      { value: "combined", label: "15% комбінованої промоційної знижки", discount: 15 },
-      { value: "discuss", label: "Хочу обговорити промоційні варіанти", discount: 0 }
+      { value: "standard", label: "Стандартна ціна без дизайнерського кредиту", discount: 0 },
+      { value: "designer_credit", label: "Застосувати знижку за дизайнерський кредит", discount: designerCreditDiscountPercent() },
+      { value: "discuss", label: "Я хочу обговорити цей варіант", discount: 0 }
     ],
-    promotionalEstimate: "Оцінка з промоційним варіантом",
-    promotionalDiscount: "Промоційна знижка",
+    promotionalEstimate: "Оновлена попередня оцінка",
+    promotionalDiscount: "Знижка за дизайнерський кредит",
+    standardProjectEstimate: "Стандартна оцінка проєкту",
+    discountAmount: "Сума знижки",
+    designerCreditPreviewTitle: "Попередній вигляд дизайнерського кредиту",
+    designerCreditPreviewText: "Website designed and developed by Yana Ellis ↗",
+    designerCreditPreviewName: "Yana Ellis",
+    designerCreditPreviewRole: "UX/UI Designer & Developer",
+    designerCreditPreviewPortfolio: "Портфоліо",
+    designerCreditPreviewTelegram: "Telegram",
     promotionalConditions:
-      "Footer credit залишається видимим 12 місяців. Пост у соцмережах має бути опублікований протягом 14 днів після запуску та потребує мінімум 1,000 підписників в Instagram, якщо письмово не погоджено інше.",
-    termsConsentBefore: "Я розумію, що ціна в калькуляторі приблизна, що надсилання заявки не створює договору чи обов'язку оплати, і погоджуюся з ",
+      "Знижена ціна діє, поки погоджений дизайнерський кредит залишається видимим і функціональним у футері сайту. Клієнт завжди може обрати стандартну ціну без кредиту.",
+    designerCreditRestoration:
+      "Якщо кредит буде видалено, приховано, вимкнено або суттєво змінено без письмового погодження, спочатку буде надіслано письмове повідомлення та можливість відновити його. Якщо кредит не буде відновлено протягом встановленого строку, початкова сума знижки може стати до оплати.",
+    designerCreditCurePeriod: `Строк відновлення: ${designerCreditCureDays()} календарних днів після письмового повідомлення.`,
+    designerCreditTerm:
+      "Якщо у фінальній пропозиції не зазначено коротший строк, дизайнерський кредит очікується протягом усього часу, поки сайт зі знижкою публічно доступний у суттєво тій самій формі.",
+    designerCreditConsent:
+      "Я розумію, що ця знижка залежить від того, що погоджений дизайнерський кредит залишається видимим і функціональним у футері сайту.",
+    requiredDesignerCreditConsent: "Підтвердьте, будь ласка, умови знижки за дизайнерський кредит.",
+    termsConsentBefore: "Я прочитала / прочитав і погоджуюся з ",
     termsConsentAfter: ".",
     requiredTermsConsent: "Підтвердьте, будь ласка, згоду з умовами користування.",
     finalReviewEstimate: "Розрахунок показано вище",
-    finalReviewPromotionalOption: "Промоційний варіант",
-    finalReviewPromotionalEstimate: "Оцінка зі знижкою",
+    finalReviewPromotionalOption: "Варіант дизайнерського кредиту",
+    finalReviewPromotionalEstimate: "Оновлена оцінка",
     finalReviewEmailCopy: "Копія на email",
     finalReviewTranslationSource: "Переклади",
     finalReviewPhasedImplementation: "Етапи запуску",
     finalReviewVisualDirection: "Візуальний напрям",
     finalReviewTermsConsent: "Згода з умовами",
+    finalReviewDesignerCreditConsent: "Згода з умовами дизайнерського кредиту",
     successProjectGuide: "Прочитати гайд",
     documentDisclaimer:
       "Цей документ містить попередній розрахунок на основі відповідей у калькуляторі. Це не рахунок, не договір і не обов'язкова комерційна пропозиція. Фінальна ціна може змінитися після перегляду вимог, дизайну та технічного обсягу."
@@ -1002,39 +1065,54 @@
     revisionPolicyTitle: "Poprawki",
     revisionPolicyCopy:
       "Domyślnie wliczone są dwie uporządkowane rundy poprawek. Nowa funkcjonalność, nowy kierunek po akceptacji albo dodatkowe strony są wyceniane osobno.",
-    promotionPolicyTitle: "Zniżka promocyjna",
+    promotionPolicyTitle: "Opcjonalny rabat za kredyt projektantki",
     promotionPolicyCopy:
-      "Możesz wybrać cenę standardową albo poprosić o zniżkę promocyjną związaną z footer credit i/lub postem w mediach społecznościowych. Finalne warunki są potwierdzane pisemnie.",
+      "Możesz wybrać standardową cenę bez kredytu projektantki albo poprosić o ograniczony rabat za mały aktywny kredyt w stopce strony.",
     legalPolicyTitle: "Regulamin i prywatność",
     legalPolicyCopy:
       "Kalkulator pokazuje przybliżoną wycenę. Wysłanie zapytania nie tworzy umowy ani obowiązku płatności. Praca zaczyna się dopiero po pisemnej akceptacji i pierwszej płatności.",
     readPolicies:
       'Przeczytaj pełny <a href="../../project-guide.html" target="_blank" rel="noopener noreferrer">przewodnik</a>, <a href="../../faq.html" target="_blank" rel="noopener noreferrer">FAQ</a>, <a href="/privacy-policy.html" target="_blank" rel="noopener noreferrer">politykę prywatności</a> i <a href="/terms-of-service.html" target="_blank" rel="noopener noreferrer">regulamin</a>.',
-    promotionalOptionTitle: "Opcja zniżki promocyjnej",
+    promotionalOptionTitle: "Opcjonalny rabat za kredyt projektantki",
     promotionalOptionHelp:
-      "Wybierz cenę standardową albo opcję promocyjną. Każda zniżka jest warunkowa i będzie potwierdzona w finalnej propozycji przed płatnością.",
+      "Możesz wybrać standardową cenę bez kredytu projektantki albo otrzymać ograniczony rabat, jeśli w stopce strony pozostanie mały stały kredyt \"Designed and developed by Yana Ellis\".",
     promotionalOptions: [
-      { value: "standard", label: "Cena standardowa bez warunków promocyjnych", discount: 0 },
-      { value: "footer_credit", label: "10% zniżki za footer credit", discount: 10 },
-      { value: "social_post", label: "5% zniżki za post w social media", discount: 5 },
-      { value: "combined", label: "15% łączonej zniżki promocyjnej", discount: 15 },
-      { value: "discuss", label: "Chcę omówić opcje promocyjne", discount: 0 }
+      { value: "standard", label: "Cena standardowa bez kredytu projektantki", discount: 0 },
+      { value: "designer_credit", label: "Zastosuj rabat za kredyt projektantki", discount: designerCreditDiscountPercent() },
+      { value: "discuss", label: "Chcę omówić tę opcję", discount: 0 }
     ],
-    promotionalEstimate: "Wycena z opcją promocyjną",
-    promotionalDiscount: "Zniżka promocyjna",
+    promotionalEstimate: "Zaktualizowana wycena wstępna",
+    promotionalDiscount: "Rabat za kredyt projektantki",
+    standardProjectEstimate: "Standardowa wycena projektu",
+    discountAmount: "Kwota rabatu",
+    designerCreditPreviewTitle: "Podgląd kredytu projektantki",
+    designerCreditPreviewText: "Website designed and developed by Yana Ellis ↗",
+    designerCreditPreviewName: "Yana Ellis",
+    designerCreditPreviewRole: "UX/UI Designer & Developer",
+    designerCreditPreviewPortfolio: "Portfolio",
+    designerCreditPreviewTelegram: "Telegram",
     promotionalConditions:
-      "Footer credit pozostaje widoczny przez 12 miesięcy. Post społecznościowy powinien zostać opublikowany w ciągu 14 dni po starcie i wymaga minimum 1,000 obserwujących na Instagramie, chyba że pisemnie ustalimy inaczej.",
-    termsConsentBefore: "Rozumiem, że cena w kalkulatorze jest przybliżona, wysłanie zapytania nie tworzy umowy ani obowiązku płatności, i akceptuję ",
+      "Cena z rabatem obowiązuje, dopóki uzgodniony kredyt projektantki pozostaje widoczny i funkcjonalny w stopce strony. Klient zawsze może wybrać standardową cenę bez kredytu.",
+    designerCreditRestoration:
+      "Jeśli kredyt zostanie usunięty, ukryty, wyłączony albo istotnie zmieniony bez pisemnej zgody, najpierw zostanie wysłane pisemne powiadomienie i możliwość przywrócenia go. Jeśli nie zostanie przywrócony w podanym terminie naprawczym, pierwotna kwota rabatu może stać się należna.",
+    designerCreditCurePeriod: `Termin naprawczy: ${designerCreditCureDays()} dni kalendarzowych po pisemnym powiadomieniu.`,
+    designerCreditTerm:
+      "Jeśli finalna oferta nie podaje krótszego okresu, kredyt projektantki powinien pozostać tak długo, jak strona z rabatem jest publicznie dostępna w zasadniczo tej samej formie.",
+    designerCreditConsent:
+      "Rozumiem, że ten rabat zależy od pozostawienia uzgodnionego kredytu projektantki jako widocznego i funkcjonalnego elementu stopki strony.",
+    requiredDesignerCreditConsent: "Potwierdź warunki rabatu za kredyt projektantki.",
+    termsConsentBefore: "Przeczytałam / przeczytałem i akceptuję ",
     termsConsentAfter: ".",
     requiredTermsConsent: "Potwierdź, że akceptujesz Regulamin.",
     finalReviewEstimate: "Wycena pokazana powyżej",
-    finalReviewPromotionalOption: "Opcja promocyjna",
-    finalReviewPromotionalEstimate: "Wycena po opcji promocyjnej",
+    finalReviewPromotionalOption: "Opcja kredytu projektantki",
+    finalReviewPromotionalEstimate: "Zaktualizowana wycena",
     finalReviewEmailCopy: "Kopia email",
     finalReviewTranslationSource: "Tłumaczenia",
     finalReviewPhasedImplementation: "Etapy uruchomienia",
     finalReviewVisualDirection: "Kierunek wizualny",
     finalReviewTermsConsent: "Zgoda na regulamin",
+    finalReviewDesignerCreditConsent: "Zgoda na warunki kredytu projektantki",
     successProjectGuide: "Przeczytaj przewodnik",
     documentDisclaimer:
       "Ten dokument zawiera wstępną wycenę wygenerowaną na podstawie odpowiedzi w kalkulatorze. Nie jest fakturą, umową ani wiążącą ofertą handlową. Cena końcowa może się zmienić po analizie wymagań, detali designu i zakresu technicznego."
@@ -1680,6 +1758,17 @@
     };
   }
 
+  function isDesignerCreditDiscount(value = formDraft.promotionalOption || "standard") {
+    return promotionOptionDetails(value).value === "designer_credit";
+  }
+
+  function designerCreditAcceptance(value = formDraft.promotionalOption || "standard", accepted = formDraft.designerCreditConsent) {
+    if (!isDesignerCreditDiscount(value)) {
+      return wc("notSelected");
+    }
+    return accepted ? wc("yes") : wc("no");
+  }
+
   function promotionalEstimate(calculation, value = formDraft.promotionalOption || "standard") {
     const promotion = promotionOptionDetails(value);
     if (calculation.customBase || !calculation.preliminaryEstimate || !promotion.discountPercent) {
@@ -1855,6 +1944,7 @@
       phasedImplementation: formValue(formData, "phasedImplementation"),
       visualDirection: formValue(formData, "visualDirection"),
       promotionalOption: formValue(formData, "promotionalOption") || "standard",
+      designerCreditConsent: formData.get("designerCreditConsent") === "on",
       referralSource: formValue(formData, "referralSource"),
       referralSourceOther: formValue(formData, "referralSourceOther"),
       emailCopy: formData.get("emailCopy") === "on",
@@ -2035,10 +2125,33 @@
       <fieldset class="field full form-section" id="promotionalOptionSection">
         <legend>${wc("promotionalOptionTitle")}</legend>
         <p class="field-help">${wc("promotionalOptionHelp")}</p>
+        <div class="designer-credit-preview" aria-label="${html(wc("designerCreditPreviewTitle"))}">
+          <a class="designer-credit-badge" href="${html(siteConfig.contact?.portfolioUrl || "../../index.html")}" target="_blank" rel="noopener noreferrer">
+            ${html(wc("designerCreditPreviewText"))}
+          </a>
+          <div class="designer-credit-card">
+            <strong>${html(wc("designerCreditPreviewName"))}</strong>
+            <span>${html(wc("designerCreditPreviewRole"))}</span>
+            <div>
+              <a href="${html(siteConfig.contact?.portfolioUrl || "../../index.html")}" target="_blank" rel="noopener noreferrer">${html(wc("designerCreditPreviewPortfolio"))}</a>
+              <a href="${html(siteConfig.contact?.telegramUrl || "https://t.me/ohyanyo")}" target="_blank" rel="noopener noreferrer">${html(wc("designerCreditPreviewTelegram"))}</a>
+            </div>
+          </div>
+        </div>
         <div class="choice-list">
           ${formList("promotionalOptions", formDraft.promotionalOption || "standard", "promotionalOption")}
         </div>
         <p class="field-help">${wc("promotionalConditions")}</p>
+        <p class="field-help">${wc("designerCreditRestoration")}</p>
+        <p class="field-help">${wc("designerCreditCurePeriod")}</p>
+        <p class="field-help">${wc("designerCreditTerm")}</p>
+        <div class="conditional-panel consent-field designer-credit-consent" id="designerCreditConsentPanel" ${isDesignerCreditDiscount(formDraft.promotionalOption) ? "" : "hidden"}>
+          <label for="designerCreditConsentCheckbox">
+            <input id="designerCreditConsentCheckbox" name="designerCreditConsent" type="checkbox" ${formDraft.designerCreditConsent ? "checked" : ""} aria-describedby="designerCreditConsentCheckboxError" />
+            <span>${wc("designerCreditConsent")}</span>
+          </label>
+          <span class="field-error" id="designerCreditConsentCheckboxError"></span>
+        </div>
       </fieldset>
       <fieldset class="field full form-section">
         <legend>${wc("budgetTitle")}</legend>
@@ -2153,6 +2266,7 @@
       [wc("finalReviewVisualDirection"), formDraft.visualDirection || wc("notProvided")],
       [wc("finalReviewPromotionalOption"), promotion.label],
       [wc("finalReviewPromotionalEstimate"), promotion.display],
+      [wc("finalReviewDesignerCreditConsent"), designerCreditAcceptance(promotion.value, formDraft.designerCreditConsent)],
       [wc("finalReviewEmailCopy"), formDraft.emailCopy ? wc("yes") : wc("no")],
       [wc("finalReviewContactConsent"), formDraft.contactConsent ? wc("yes") : wc("no")],
       [wc("finalReviewPrivacyConsent"), formDraft.privacyConsent ? wc("yes") : wc("no")],
@@ -2471,6 +2585,11 @@
     if (referralPanel) {
       referralPanel.hidden = formValue(formData, "referralSource") !== "other";
     }
+
+    const designerCreditConsentPanel = form.querySelector("#designerCreditConsentPanel");
+    if (designerCreditConsentPanel) {
+      designerCreditConsentPanel.hidden = !isDesignerCreditDiscount(formValue(formData, "promotionalOption") || "standard");
+    }
   }
 
   function enforceBrandMaterialRules(changedInput, form) {
@@ -2569,6 +2688,11 @@
       setFieldError(form, "termsConsentCheckbox", "termsConsentCheckboxError", wc("requiredTermsConsent"));
     }
 
+    if (isDesignerCreditDiscount(formValue(formData, "promotionalOption") || "standard") && formData.get("designerCreditConsent") !== "on") {
+      errors.push(wc("requiredDesignerCreditConsent"));
+      setFieldError(form, "designerCreditConsentCheckbox", "designerCreditConsentCheckboxError", wc("requiredDesignerCreditConsent"));
+    }
+
     const summary = form.querySelector("#formErrorSummary");
     if (errors.length && summary) {
       summary.hidden = false;
@@ -2608,6 +2732,9 @@
     const referralSource = formValue(formData, "referralSource");
     const promotionalOption = formValue(formData, "promotionalOption") || "standard";
     const promotion = promotionalEstimate(calculation, promotionalOption);
+    const designerCreditSelected = isDesignerCreditDiscount(promotionalOption);
+    const designerCreditAccepted = designerCreditSelected && formData.get("designerCreditConsent") === "on";
+    const acceptanceTimestamp = now.toISOString();
 
     return {
       requestId,
@@ -2628,7 +2755,10 @@
         calculatorVersion: WORKFLOW_VERSION,
         currencyCode: market.currencyCode,
         publicCurrencyLabel: market.displayCurrency,
-        pricingConfigurationVersion: market.pricingVersion
+        pricingConfigurationVersion: market.pricingVersion,
+        termsVersion: termsVersion(),
+        privacyVersion: privacyVersion(),
+        designerCreditTermsVersion: designerCreditTermsVersion()
       },
       client: {
         name: formValue(formData, "name"),
@@ -2651,7 +2781,19 @@
         contactConsent: formData.get("contactConsent") === "on",
         privacyConsent: formData.get("privacyConsent") === "on",
         termsConsent: formData.get("termsConsent") === "on",
+        designerCreditConsent: designerCreditAccepted,
         consent: formData.get("contactConsent") === "on" && formData.get("privacyConsent") === "on" && formData.get("termsConsent") === "on"
+      },
+      legal: {
+        termsAccepted: formData.get("termsConsent") === "on",
+        termsVersion: termsVersion(),
+        termsAcceptedAt: acceptanceTimestamp,
+        privacyAccepted: formData.get("privacyConsent") === "on",
+        privacyVersion: privacyVersion(),
+        privacyAcceptedAt: acceptanceTimestamp,
+        selectedLanguage: currentLanguage,
+        market: market.id,
+        calculatorSubmissionId: requestId
       },
       inspiration: {
         preference: inspirationPreference,
@@ -2690,7 +2832,49 @@
         discountAmountDisplay: promotion.discountDisplay,
         estimatedPriceAfterDiscount: promotion.estimate,
         estimatedPriceAfterDiscountDisplay: promotion.display,
-        conditionsSummary: wc("promotionalConditions")
+        conditionsSummary: [wc("promotionalConditions"), wc("designerCreditRestoration"), wc("designerCreditCurePeriod"), wc("designerCreditTerm")].join(" ")
+      },
+      designerCredit: {
+        selected: designerCreditSelected,
+        accepted: designerCreditAccepted,
+        option: promotion.value,
+        termsVersion: designerCreditTermsVersion(),
+        acceptedAt: designerCreditAccepted ? acceptanceTimestamp : "",
+        discountPercent: promotion.discountPercent,
+        discountAmount: promotion.discountAmount,
+        discountAmountDisplay: promotion.discountDisplay,
+        status: designerCreditSelected ? "active" : "none",
+        cureDays: designerCreditCureDays(),
+        defaultTerm: defaultDesignerCreditTerm(),
+        previewText: wc("designerCreditPreviewText"),
+        conditionsSummary: [wc("promotionalConditions"), wc("designerCreditRestoration"), wc("designerCreditCurePeriod"), wc("designerCreditTerm")].join(" ")
+      },
+      administration: {
+        timeline: [
+          {
+            type: "request_submitted",
+            label: "Calculator request submitted",
+            at: acceptanceTimestamp,
+            actor: "client",
+            requestId
+          },
+          {
+            type: "terms_accepted",
+            label: "Terms and Privacy accepted before submission",
+            at: acceptanceTimestamp,
+            actor: "client",
+            termsVersion: termsVersion(),
+            privacyVersion: privacyVersion()
+          },
+          {
+            type: "designer_credit_status",
+            label: "Designer credit status recorded",
+            at: acceptanceTimestamp,
+            actor: "system",
+            status: designerCreditSelected ? "active" : "none"
+          }
+        ],
+        designerCreditStatusValues: ["none", "active", "temporarilyMissing", "curePeriod", "repaymentDue", "removedByAgreement"]
       },
       projectStage: {
         stage: projectStage,
@@ -2724,11 +2908,18 @@
         preliminaryEstimate: calculation.preliminaryEstimate,
         preliminaryEstimateExactDisplay: formatAmount(calculation.preliminaryEstimate),
         preliminaryEstimateDisplay: resultAmount(calculation),
+        standardProjectEstimate: calculation.preliminaryEstimate,
+        standardProjectEstimateDisplay: resultAmount(calculation),
         promotionalDiscountPercent: promotion.discountPercent,
         promotionalDiscountAmount: promotion.discountAmount,
         promotionalDiscountAmountDisplay: promotion.discountDisplay,
         promotionalEstimate: promotion.estimate,
         promotionalEstimateDisplay: promotion.display,
+        designerCreditDiscountPercent: promotion.discountPercent,
+        designerCreditDiscountAmount: promotion.discountAmount,
+        designerCreditDiscountAmountDisplay: promotion.discountDisplay,
+        designerCreditEstimate: promotion.estimate,
+        designerCreditEstimateDisplay: promotion.display,
         manualEstimateRangeDisplay: calculation.manualReview ? resultAmount(calculation) : "",
         monthlySupport: calculation.monthlySupport,
         monthlySupportDisplay: calculation.monthlySupport ? formatMonthly(calculation.monthlySupport) : wc("notSelected")
@@ -2743,7 +2934,7 @@
         breakdown: groupedBreakdownRows(calculation)
           .map((row) => `${row.category}: ${row.option} - ${row.effect}`)
           .join("\n"),
-        promotionalOption: `${promotion.label} (${promotion.discountPercent}%)`,
+        designerCreditOption: `${promotion.label} (${promotion.discountPercent}%)`,
         contactPreference: `${contactMethodLabel(formValue(formData, "preferredContact"))}: ${contact.normalized || contact.raw || wc("notProvided")}`,
         inspirationLinks: inspirationLinks.map((item) => item.url).join("\n")
       },
@@ -2848,6 +3039,7 @@
         <div><dt>${wc("requestId")}</dt><dd>${html(payload.requestId)}</dd></div>
         <div><dt>${wc("preliminaryEstimate")}</dt><dd>${html(payload.pricing.preliminaryEstimateDisplay)}</dd></div>
         <div><dt>${wc("finalReviewPromotionalOption")}</dt><dd>${html(payload.promotion.optionLabel)}</dd></div>
+        <div><dt>${wc("finalReviewPromotionalEstimate")}</dt><dd>${html(payload.pricing.designerCreditEstimateDisplay || payload.pricing.promotionalEstimateDisplay || payload.pricing.preliminaryEstimateDisplay)}</dd></div>
         <div><dt>${wc("nextStep")}</dt><dd>${wc("successNext")}</dd></div>
       </dl>
       <div class="success-actions">
@@ -2869,8 +3061,10 @@
       [wc("fixedAdditions"), "", payload.pricing.fixedAdditionsDisplay || formatAmount(payload.pricing.fixedAdditions)],
       [wc("languageAdjustment"), multiplierDisplay(payload.pricing.languageMultiplier), payload.pricing.languageAdjustmentDisplay || signedAmount(payload.pricing.languageAdjustment)],
       [wc("timelineAdjustment"), multiplierDisplay(payload.pricing.timelineMultiplier), payload.pricing.timelineAdjustmentDisplay || signedAmount(payload.pricing.timelineAdjustment)],
-      [wc("promotionalDiscount"), `${payload.promotion?.discountPercent || 0}%`, payload.pricing.promotionalDiscountAmountDisplay || wc("included")],
-      [wc("preliminaryEstimate"), "", payload.pricing.preliminaryEstimateDisplay]
+      [wc("standardProjectEstimate"), "", payload.pricing.standardProjectEstimateDisplay || payload.pricing.preliminaryEstimateDisplay],
+      [wc("promotionalDiscount"), `${payload.promotion?.discountPercent || 0}%`, payload.pricing.designerCreditDiscountAmountDisplay || payload.pricing.promotionalDiscountAmountDisplay || wc("included")],
+      [wc("discountAmount"), "", payload.pricing.designerCreditDiscountAmountDisplay || payload.pricing.promotionalDiscountAmountDisplay || wc("included")],
+      [wc("promotionalEstimate"), "", payload.pricing.designerCreditEstimateDisplay || payload.pricing.promotionalEstimateDisplay || payload.pricing.preliminaryEstimateDisplay]
     ]
       .map((row) => `<tr><th>${html(row[0])}</th><td>${html(row[1])}</td><td>${html(row[2])}</td></tr>`)
       .join("");
@@ -2903,7 +3097,7 @@
             <div><strong>${wc("name")}</strong><br>${html(payload.client.name)}</div>
             <div><strong>${wc("company")}</strong><br>${html(payload.client.companyName)}</div>
             <div><strong>${wc("finalReviewPromotionalOption")}</strong><br>${html(payload.promotion?.optionLabel || wc("notProvided"))}</div>
-            <div><strong>${wc("promotionalEstimate")}</strong><br>${html(payload.pricing.promotionalEstimateDisplay || payload.pricing.preliminaryEstimateDisplay)}</div>
+            <div><strong>${wc("promotionalEstimate")}</strong><br>${html(payload.pricing.designerCreditEstimateDisplay || payload.pricing.promotionalEstimateDisplay || payload.pricing.preliminaryEstimateDisplay)}</div>
           </div>
           <h2>${wc("projectSummary")}</h2>
           <table>${answerRows}</table>

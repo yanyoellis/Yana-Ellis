@@ -85,8 +85,8 @@ function assertPricingVersions() {
     assert(workflow.includes(`roundingUnit: ${market.roundingUnit}`), `${market.name}: workflow rounding unit is not ${market.roundingUnit}`);
   });
 
-  assert(workflow.includes('const WORKFLOW_VERSION = "1.4";'), "Missing updated workflow version.");
-  assert(workflow.includes('const FORM_VERSION = "2.3";'), "Missing updated form version.");
+  assert(workflow.includes('const WORKFLOW_VERSION = "1.5";'), "Missing updated workflow version.");
+  assert(workflow.includes('const FORM_VERSION = "2.4";'), "Missing updated form version.");
 }
 
 function assertRequestFormRequirements() {
@@ -98,6 +98,9 @@ function assertRequestFormRequirements() {
     "contactConsent",
     "privacyConsent",
     "termsConsent",
+    "designerCreditConsent",
+    "designer_credit",
+    "DESIGNER_CREDIT_DISCOUNT_PERCENT",
     "WhatsApp",
     "Instagram",
     "deadlineType",
@@ -115,6 +118,7 @@ function assertRequestFormRequirements() {
     "promotionalOption",
     "promotionalOptions",
     "promotionalEstimate",
+    "designerCreditEstimate",
     "/privacy-policy.html",
     "/terms-of-service.html",
     "../../project-guide.html",
@@ -131,6 +135,8 @@ function assertRequestFormRequirements() {
     "contactConsent === true",
     "privacyConsent === true",
     "termsConsent === true",
+    "payload.legal",
+    "payload.designerCredit",
     "emailCopy",
     "payload.planning",
     "payload.promotion",
@@ -138,6 +144,20 @@ function assertRequestFormRequirements() {
     "disable_web_page_preview: true"
   ].forEach((token) => {
     assert(api.includes(token), `API missing ${token}`);
+  });
+
+  [
+    "social_post",
+    "combined",
+    "socialPostDiscount",
+    "combinedDiscount",
+    "postingDeadlineDays",
+    "minimumInstagramFollowers",
+    "Instagram followers",
+    "social media post discount"
+  ].forEach((token) => {
+    assert(!workflow.includes(token), `Workflow still contains removed social discount token ${token}`);
+    assert(!api.includes(token), `API still contains removed social discount token ${token}`);
   });
 }
 

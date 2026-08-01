@@ -44,14 +44,43 @@ function basePayload(overrides = {}) {
       consent: true
     },
     market: { label: "Canada", labelEn: "Canada" },
-    pricing: { preliminaryEstimateDisplay: "1,600 CAD" },
+    pricing: {
+      preliminaryEstimateDisplay: "1,600 CAD",
+      standardProjectEstimateDisplay: "1,600 CAD",
+      designerCreditEstimateDisplay: "1,600 CAD"
+    },
     answers: [],
     inspiration: { links: [] },
     promotion: {
       option: "standard",
-      optionLabel: "Standard price, no promotional conditions",
+      optionLabel: "Standard price, no designer credit",
       discountPercent: 0,
       discountAmountDisplay: "-"
+    },
+    legal: {
+      termsAccepted: true,
+      termsVersion: "terms-2026-08-01",
+      termsAcceptedAt: "2026-08-01T12:00:00.000Z",
+      privacyAccepted: true,
+      privacyVersion: "privacy-2026-08-01",
+      privacyAcceptedAt: "2026-08-01T12:00:00.000Z",
+      selectedLanguage: "en",
+      market: "canada",
+      calculatorSubmissionId: "YE-CA-TEST"
+    },
+    designerCredit: {
+      selected: false,
+      accepted: false,
+      option: "standard",
+      termsVersion: "designer-credit-2026-08-01",
+      acceptedAt: "",
+      discountPercent: 0,
+      discountAmountDisplay: "-",
+      status: "none",
+      cureDays: 7,
+      defaultTerm: "while_site_remains_active",
+      previewText: "Website designed and developed by Yana Ellis ↗",
+      conditionsSummary: ""
     },
     metadata: { elapsedMs: 3000 },
     ...overrides
@@ -81,6 +110,31 @@ async function main() {
 
   if (missingContactConsent.status !== 400) {
     throw new Error(`Missing contact consent should be rejected with 400, got ${missingContactConsent.status}`);
+  }
+
+  const missingDesignerCreditConsent = await runRequest(
+    basePayload({
+      promotion: {
+        option: "designer_credit",
+        optionLabel: "Apply the designer credit discount",
+        discountPercent: 10,
+        discountAmountDisplay: "-160 CAD",
+        estimatedPriceAfterDiscountDisplay: "1,450 CAD"
+      },
+      designerCredit: {
+        ...basePayload().designerCredit,
+        selected: true,
+        accepted: false,
+        option: "designer_credit",
+        discountPercent: 10,
+        discountAmountDisplay: "-160 CAD",
+        status: "active"
+      }
+    })
+  );
+
+  if (missingDesignerCreditConsent.status !== 400) {
+    throw new Error(`Designer credit discount without consent should be rejected with 400, got ${missingDesignerCreditConsent.status}`);
   }
 
   const validButUndeliverable = await runRequest(

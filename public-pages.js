@@ -70,9 +70,9 @@ const pages = {
       pl: "Przewodnik po projekcie strony | Yana Ellis"
     },
     description: {
-      en: "How website projects work with Yana Ellis: calculator, review, payment, revisions, launch, support and promotional discount conditions.",
+      en: "How website projects work with Yana Ellis: calculator, review, payment, revisions, launch, support, pauses and designer credit discount conditions.",
       uk: "Як проходить створення сайту з Yana Ellis: калькулятор, перегляд заявки, оплата, правки, запуск, підтримка та умови знижки.",
-      pl: "Jak wygląda projekt strony z Yaną Ellis: kalkulator, analiza, płatności, poprawki, start, wsparcie i warunki rabatu promocyjnego."
+      pl: "Jak wygląda projekt strony z Yaną Ellis: kalkulator, analiza, płatności, poprawki, start, wsparcie, pauzy i warunki rabatu za kredyt projektantki."
     },
     kicker: {
       en: "Project Guide",
@@ -93,9 +93,9 @@ const pages = {
         "Od pierwszej odpowiedzi w kalkulatorze po finalny start i płatność. Proces opiera się najpierw na informacjach pisemnych, aby można było poznać orientacyjną cenę, wysłać uporządkowane zapytanie i otrzymać finalną ofertę bez obowiązkowej rozmowy."
     },
     anchors: {
-      en: ["Process", "Communication", "Payment", "Revisions", "Promotion", "FAQ", "Privacy", "Terms"],
-      uk: ["Процес", "Комунікація", "Оплата", "Правки", "Знижка", "FAQ", "Приватність", "Умови"],
-      pl: ["Proces", "Komunikacja", "Płatność", "Poprawki", "Promocja", "FAQ", "Prywatność", "Regulamin"]
+      en: ["Process", "Communication", "Payment", "Revisions", "Designer Credit", "If Things Pause", "FAQ", "Privacy", "Terms"],
+      uk: ["Процес", "Комунікація", "Оплата", "Правки", "Дизайнерський кредит", "Якщо є пауза", "FAQ", "Приватність", "Умови"],
+      pl: ["Proces", "Komunikacja", "Płatność", "Poprawki", "Kredyt projektantki", "Gdy projekt staje", "FAQ", "Prywatność", "Regulamin"]
     },
     processTitle: {
       en: "Process",
@@ -108,7 +108,7 @@ const pages = {
         ["Complete the website calculator", "Answer practical questions about purpose, page count, content, visual design, animations, languages, timeline and support. The calculator creates a preliminary estimate and a structured project summary."],
         ["Review the preliminary estimate", "The amount is approximate. The final price may change after I review design complexity, content volume, integrations, technical details and other project nuances."],
         ["Send the project request", "You can view the estimate only, or send the calculator results with contact details. Sending the request means I may contact you to clarify the order before preparing a final proposal."],
-        ["Personal review within 1-2 business days", "I normally review new requests within 1-2 business days. I check selected requirements, complexity, timeline, available materials, promotional discount conditions and possible conflicts in scope."],
+        ["Personal review within 1-2 business days", "I normally review new requests within 1-2 business days. I check selected requirements, complexity, timeline, available materials, designer credit conditions and possible conflicts in scope."],
         ["Clarifying questions", "I contact you through your selected channel. Calls are optional unless the project cannot reasonably be clarified in writing. Most projects can be discussed by email or Telegram."],
         ["Final proposal and scope", "After clarification, you receive a written proposal with confirmed scope, final price, schedule, payment plan, included revisions, required materials, third-party costs and special conditions."],
         ["Payment and project reservation", "Work begins only after you approve the proposal and the first payment has cleared. Payment can be arranged through Payoneer, Wise or bank transfer, depending on availability."],
@@ -166,9 +166,9 @@ const pages = {
       pl: "FAQ projektowania stron | Yana Ellis"
     },
     description: {
-      en: "Answers about website pricing, process, payments, revisions, support, ownership, privacy and promotional discount conditions.",
+      en: "Answers about website pricing, process, payments, revisions, support, ownership, privacy, pauses and designer credit conditions.",
       uk: "Відповіді про ціни, процес, оплату, правки, підтримку, права, конфіденційність та умови знижки.",
-      pl: "Odpowiedzi o cenach, procesie, płatnościach, poprawkach, wsparciu, prawach, prywatności i rabacie promocyjnym."
+      pl: "Odpowiedzi o cenach, procesie, płatnościach, poprawkach, wsparciu, prawach, prywatności, pauzach i kredycie projektantki."
     },
     kicker: { en: "FAQ", uk: "FAQ", pl: "FAQ" },
     heading: { en: "Website Design FAQ", uk: "Поширені питання", pl: "Najczęstsze pytania" },
@@ -238,11 +238,19 @@ function localizedPaymentMethods(language) {
 }
 
 function localizedEffectiveDate(language) {
-  return {
-    en: siteConfig.legal.effectiveDate,
-    uk: "1 серпня 2026 року",
-    pl: "1 sierpnia 2026"
-  }[language] || siteConfig.legal.effectiveDate;
+  return tx(siteConfig.legal.TERMS_EFFECTIVE_DATE, language) || siteConfig.legal.effectiveDate;
+}
+
+function localizedPrivacyDate(language) {
+  return tx(siteConfig.legal.PRIVACY_EFFECTIVE_DATE, language) || localizedEffectiveDate(language);
+}
+
+function designerCreditDiscountPercent() {
+  return Number(siteConfig.promotion.DESIGNER_CREDIT_DISCOUNT_PERCENT) || 10;
+}
+
+function designerCreditCureDays() {
+  return Number(siteConfig.promotion.DESIGNER_CREDIT_CURE_DAYS) || 7;
 }
 
 function currentLanguage() {
@@ -287,6 +295,7 @@ function renderShell(page, language) {
     <nav class="footer-links" aria-label="Footer">
       ${baseLinks(labels)}
       <a href="calculator/canada/index.html">${labels.calculator}</a>
+      <a href="mailto:${siteConfig.contact.email}">${labels.contact}</a>
       <a href="${siteConfig.contact.telegramUrl}" target="_blank" rel="noreferrer">${labels.telegram}</a>
       <a href="mailto:${siteConfig.contact.email}">${labels.email}</a>
     </nav>
@@ -319,6 +328,35 @@ function cta(language) {
 
 function anchorNav(items) {
   return `<nav class="anchor-nav" aria-label="Page sections">${items.map(([id, label]) => `<a href="#${id}">${label}</a>`).join("")}</nav>`;
+}
+
+function termsAnchorItems(language) {
+  const labelMap = {
+    en: ["Payments", "Inactivity", "Cancellation", "Termination", "Designer Credit", "Hosting And Transfer", "Security", "Disputes"],
+    uk: ["Оплата", "Неактивність", "Скасування", "Припинення", "Дизайнерський кредит", "Хостинг і передача", "Безпека", "Спори"],
+    pl: ["Płatności", "Bezczynność", "Anulowanie", "Zakończenie", "Kredyt projektantki", "Hosting i transfer", "Bezpieczeństwo", "Spory"]
+  };
+  const labels = labelMap[language] || labelMap.en;
+  return [
+    ["payments", labels[0]],
+    ["inactivity", labels[1]],
+    ["cancellation", labels[2]],
+    ["termination", labels[3]],
+    ["designer-credit", labels[4]],
+    ["hosting-transfer", labels[5]],
+    ["security", labels[6]],
+    ["disputes", labels[7]]
+  ];
+}
+
+function printLabel(language) {
+  return (
+    {
+      en: "Download or print the terms that applied when you submitted this request.",
+      uk: "Завантажити або роздрукувати умови, які діяли під час відправки заявки.",
+      pl: "Pobierz albo wydrukuj warunki obowiązujące przy wysłaniu zapytania."
+    }[language] || "Download or print the terms that applied when you submitted this request."
+  );
 }
 
 function section(id, number, title, body) {
@@ -360,9 +398,10 @@ function renderProjectGuide(language) {
       ["payment", anchors[2]],
       ["revisions", anchors[3]],
       ["promotion", anchors[4]],
-      ["faq", anchors[5]],
-      ["privacy", anchors[6]],
-      ["terms", anchors[7]]
+      ["project-pauses", anchors[5]],
+      ["faq", anchors[6]],
+      ["privacy", anchors[7]],
+      ["terms", anchors[8]]
     ])}
     <div class="content-grid">
       ${section("process", "01", tx(page.processTitle, language), `<div class="step-list">${steps}</div>`)}
@@ -370,9 +409,10 @@ function renderProjectGuide(language) {
       ${section("payment", "03", guideCopy.paymentTitle, `<div class="card-grid">${guideCopy.payment.map(infoCard).join("")}</div>`)}
       ${section("revisions", "04", guideCopy.revisionsTitle, `<div class="card-grid">${guideCopy.revisions.map(infoCard).join("")}</div>`)}
       ${section("promotion", "05", guideCopy.promotionTitle, `<p>${guideCopy.promotionIntro}</p><div class="card-grid">${guideCopy.promotion.map(infoCard).join("")}</div>`)}
-      ${section("faq", "06", labels.faq, `<p>${guideCopy.faqIntro}</p><a class="nav-link" href="faq.html">${labels.faq}</a>`)}
-      ${section("privacy", "07", labels.privacy, `<p>${guideCopy.privacyIntro}</p><a class="nav-link" href="privacy-policy.html">${labels.privacy}</a>`)}
-      ${section("terms", "08", labels.terms, `<p>${guideCopy.termsIntro}</p><a class="nav-link" href="terms-of-service.html">${labels.terms}</a>`)}
+      ${section("project-pauses", "06", guideCopy.problemTitle, `<div class="card-grid">${guideCopy.problem.map(infoCard).join("")}</div>`)}
+      ${section("faq", "07", labels.faq, `<p>${guideCopy.faqIntro}</p><a class="nav-link" href="faq.html">${labels.faq}</a>`)}
+      ${section("privacy", "08", labels.privacy, `<p>${guideCopy.privacyIntro}</p><a class="nav-link" href="privacy-policy.html">${labels.privacy}</a>`)}
+      ${section("terms", "09", labels.terms, `<p>${guideCopy.termsIntro}</p><a class="nav-link" href="terms-of-service.html">${labels.terms}</a>`)}
     </div>
     ${cta(language)}
   `;
@@ -408,14 +448,26 @@ function guideSections(language) {
         ["Additional work", "New pages, new functionality, additional languages, expanded content, complete direction changes or requests outside the approved scope are quoted separately."],
         ["Delays and pauses", "If feedback, access or materials are delayed, the delivery date can move. Long inactivity may place the project on hold and require rescheduling."]
       ],
-      promotionTitle: "Promotional Partnership Discount",
-      promotionIntro: "The standard no-credit price is always available. Promotional discounts are optional and apply only when the written conditions are accepted.",
+      promotionTitle: "Optional Designer Credit Discount",
+      promotionIntro: "The standard no-credit price is always available. The only optional discount is a designer credit discount for keeping a small linked credit in the website footer.",
       promotion: [
-        ["Standard price", "No public credit is required and no promotional discount is applied."],
-        ["Footer credit", `${siteConfig.promotion.footerCreditDiscount}% discount if a small linked designer credit remains visible in the website footer for at least ${siteConfig.promotion.displayPeriodMonths} months.`],
-        ["Social post", `${siteConfig.promotion.socialPostDiscount}% discount if a qualifying public social media post credits and tags Yana Ellis within ${siteConfig.promotion.postingDeadlineDays} days after launch.`],
-        ["Combined", `${siteConfig.promotion.combinedDiscount}% discount when both the footer credit and qualifying post conditions are met.`],
-        ["Early removal", "If the credit is removed early or the post is not published or is deleted early, the original discount amount becomes payable."]
+        ["Standard price", "No designer credit is required and no discount is applied."],
+        ["Designer credit", `${designerCreditDiscountPercent()}% discount if a small linked “Designed and developed by Yana Ellis” credit remains visible and functional in the website footer.`],
+        ["Client choice", "The client may always choose the standard project price without the credit."],
+        ["Removal process", `If the credit is removed, hidden, disabled or materially changed without written approval, written notice is sent first. If it is not restored within ${designerCreditCureDays()} calendar days, the original discount amount may become payable.`],
+        ["No automatic shutdown", "Removing the credit does not automatically disable a fully paid website."]
+      ],
+      problemTitle: "When A Project Does Not Go As Planned",
+      problem: [
+        ["Client inactivity", "If messages, approvals, materials or access are missing, the schedule may move. Extended silence can place the project on hold and require a new start date."],
+        ["Agreed pauses", "A pause can be agreed in writing when the client needs more time. Restart timing depends on availability and the state of the project."],
+        ["Cancellation", "If a project is cancelled, paid amounts are reviewed proportionally against completed work, discovery, planning, reserved production time and agreed non-refundable costs."],
+        ["Late payments", "Work can pause while an overdue stage payment is unresolved. Launch, transfer or unrestricted administrator access may wait until due amounts are paid."],
+        ["Scope changes", "New pages, features, design direction changes, extra languages or integrations outside the approved proposal are quoted and scheduled separately."],
+        ["Designer termination", "Work may be refused or ended with notice for unlawful projects, abusive conduct, unsafe requests, infringement, malware, non-payment or serious breach."],
+        ["Hosting and access", "GitHub, Vercel, domains and third-party services are handled as agreed in the proposal. Ownership and transfer are confirmed before launch or handover."],
+        ["Security and third parties", "Reasonable care is used, but third-party outages, future browser changes, client edits, hacked accounts or unpaid subscriptions can require separate support."],
+        ["Complaints", `Formal complaints, cancellation notices and privacy requests should be sent by email to ${siteConfig.contact.email}; project questions can also go to Telegram ${siteConfig.contact.telegram}.`]
       ],
       faqIntro: "The FAQ answers common questions about pricing, payments, ownership, support, content, timelines and discounts.",
       privacyIntro: "The Privacy Policy explains what data is collected through the calculator and request form, which services process it and how to request correction or deletion.",
@@ -440,14 +492,26 @@ function guideSections(language) {
         ["Додаткова робота", "Нові сторінки, функції, мови, розширення контенту, повна зміна напряму або запити поза погодженим обсягом оцінюються окремо."],
         ["Затримки та паузи", "Якщо фідбек, доступи або матеріали затримуються, дата здачі може зміститися. Тривала неактивність може поставити проєкт на паузу та потребувати нового графіка."]
       ],
-      promotionTitle: "Рекламна партнерська знижка",
-      promotionIntro: "Стандартна ціна без публічного кредиту завжди доступна. Рекламні знижки є опційними й діють лише після письмового погодження умов.",
+      promotionTitle: "Опційна знижка за дизайнерський кредит",
+      promotionIntro: "Стандартна ціна без кредиту завжди доступна. Єдина опційна знижка - це знижка за невеликий активний кредит дизайнера у футері сайту.",
       promotion: [
-        ["Стандартна ціна", "Публічний кредит не потрібен, знижка не застосовується."],
-        ["Кредит у футері", `${siteConfig.promotion.footerCreditDiscount}% знижки, якщо невеликий активний кредит дизайнера залишається у футері сайту щонайменше ${siteConfig.promotion.displayPeriodMonths} місяців.`],
-        ["Публікація в соцмережах", `${siteConfig.promotion.socialPostDiscount}% знижки, якщо відповідний публічний пост згадує й тегує Yana Ellis протягом ${siteConfig.promotion.postingDeadlineDays} днів після запуску.`],
-        ["Комбінований варіант", `${siteConfig.promotion.combinedDiscount}% знижки, якщо виконані умови кредиту у футері та публікації.`],
-        ["Дострокове видалення", "Якщо кредит прибрано раніше або пост не опубліковано чи видалено раніше, сума початкової знижки підлягає оплаті."]
+        ["Стандартна ціна", "Дизайнерський кредит не потрібен, знижка не застосовується."],
+        ["Дизайнерський кредит", `${designerCreditDiscountPercent()}% знижки, якщо невеликий активний кредит “Designed and developed by Yana Ellis” залишається видимим і функціональним у футері сайту.`],
+        ["Вибір клієнта", "Клієнт завжди може обрати стандартну ціну без кредиту."],
+        ["Процес видалення", `Якщо кредит видалено, приховано, вимкнено або суттєво змінено без письмової згоди, спочатку надсилається письмове повідомлення. Якщо кредит не відновлено протягом ${designerCreditCureDays()} календарних днів, початкова сума знижки може стати до оплати.`],
+        ["Без автоматичного вимкнення", "Видалення кредиту саме по собі не вимикає автоматично повністю оплачений сайт."]
+      ],
+      problemTitle: "Коли проєкт іде не за планом",
+      problem: [
+        ["Неактивність клієнта", "Якщо немає відповідей, затверджень, матеріалів або доступів, графік може зміститися. Тривала тиша може поставити проєкт на паузу й потребувати нової дати старту."],
+        ["Погоджені паузи", "Паузу можна погодити письмово, якщо клієнту потрібен додатковий час. Повернення залежить від доступності та стану проєкту."],
+        ["Скасування", "Якщо проєкт скасовано, сплачені суми переглядаються пропорційно до виконаної роботи, discovery, планування, зарезервованого часу та погоджених невідшкодовуваних витрат."],
+        ["Прострочені платежі", "Робота може зупинитися, поки прострочений етап оплати не вирішено. Запуск, передача або повний доступ адміністратора можуть чекати до оплати належних сум."],
+        ["Зміни обсягу", "Нові сторінки, функції, зміна напряму дизайну, додаткові мови або інтеграції поза пропозицією оцінюються й плануються окремо."],
+        ["Припинення з боку дизайнера", "Роботу можна відхилити або завершити з повідомленням через незаконний проєкт, образливу поведінку, небезпечні запити, порушення прав, malware, несплату або серйозне порушення умов."],
+        ["Хостинг і доступ", "GitHub, Vercel, домени та сторонні сервіси ведуться так, як погоджено в пропозиції. Власність і передача підтверджуються до запуску або handover."],
+        ["Безпека і сторонні сервіси", "Використовується розумна обережність, але збої провайдерів, майбутні зміни браузерів, правки клієнта, зламані акаунти або неоплачені підписки можуть потребувати окремої підтримки."],
+        ["Скарги", `Формальні скарги, повідомлення про скасування та privacy-запити надсилайте на email ${siteConfig.contact.email}; загальні питання можна також писати в Telegram ${siteConfig.contact.telegram}.`]
       ],
       faqIntro: "FAQ відповідає на питання про ціни, оплату, права, підтримку, контент, терміни та знижки.",
       privacyIntro: "Політика конфіденційності пояснює, які дані збираються через калькулятор і форму, які сервіси їх обробляють та як попросити виправлення чи видалення.",
@@ -472,14 +536,26 @@ function guideSections(language) {
         ["Prace dodatkowe", "Nowe podstrony, funkcje, języki, większa ilość treści, pełna zmiana kierunku lub prośby poza zaakceptowanym zakresem są wyceniane oddzielnie."],
         ["Opóźnienia i pauzy", "Jeśli informacje zwrotne, dostępy lub materiały są opóźnione, termin może się przesunąć. Dłuższa bezczynność może wstrzymać projekt i wymagać nowego harmonogramu."]
       ],
-      promotionTitle: "Rabat promocyjny",
-      promotionIntro: "Standardowa cena bez publicznego kredytu zawsze jest dostępna. Rabaty promocyjne są opcjonalne i działają tylko po pisemnej akceptacji warunków.",
+      promotionTitle: "Opcjonalny rabat za kredyt projektantki",
+      promotionIntro: "Standardowa cena bez kredytu zawsze jest dostępna. Jedyny opcjonalny rabat dotyczy małego aktywnego kredytu projektantki w stopce strony.",
       promotion: [
-        ["Cena standardowa", "Publiczny kredyt nie jest wymagany i rabat nie jest naliczany."],
-        ["Kredyt w stopce", `${siteConfig.promotion.footerCreditDiscount}% rabatu, jeśli mały aktywny kredyt projektantki pozostaje w stopce strony przez co najmniej ${siteConfig.promotion.displayPeriodMonths} miesięcy.`],
-        ["Publikacja w mediach społecznościowych", `${siteConfig.promotion.socialPostDiscount}% rabatu, jeśli kwalifikujący się publiczny post oznacza Yanę Ellis w ciągu ${siteConfig.promotion.postingDeadlineDays} dni od startu.`],
-        ["Opcja łączona", `${siteConfig.promotion.combinedDiscount}% rabatu, jeśli spełnione są warunki kredytu w stopce i publikacji.`],
-        ["Wcześniejsze usunięcie", "Jeśli kredyt zostanie usunięty wcześniej albo post nie zostanie opublikowany lub zostanie usunięty wcześniej, pierwotna kwota rabatu staje się należna."]
+        ["Cena standardowa", "Kredyt projektantki nie jest wymagany i rabat nie jest naliczany."],
+        ["Kredyt projektantki", `${designerCreditDiscountPercent()}% rabatu, jeśli mały aktywny kredyt “Designed and developed by Yana Ellis” pozostaje widoczny i funkcjonalny w stopce strony.`],
+        ["Wybór klienta", "Klient zawsze może wybrać standardową cenę bez kredytu."],
+        ["Proces usunięcia", `Jeśli kredyt zostanie usunięty, ukryty, wyłączony albo istotnie zmieniony bez pisemnej zgody, najpierw zostaje wysłane pisemne powiadomienie. Jeśli kredyt nie zostanie przywrócony w ciągu ${designerCreditCureDays()} dni kalendarzowych, pierwotna kwota rabatu może stać się należna.`],
+        ["Bez automatycznego wyłączenia", "Samo usunięcie kredytu nie wyłącza automatycznie w pełni opłaconej strony."]
+      ],
+      problemTitle: "Gdy projekt nie idzie zgodnie z planem",
+      problem: [
+        ["Brak aktywności klienta", "Jeśli brakuje odpowiedzi, akceptacji, materiałów lub dostępów, harmonogram może się przesunąć. Dłuższa cisza może wstrzymać projekt i wymagać nowej daty startu."],
+        ["Uzgodnione pauzy", "Pauzę można ustalić pisemnie, gdy klient potrzebuje więcej czasu. Powrót zależy od dostępności i stanu projektu."],
+        ["Anulowanie", "Jeśli projekt zostanie anulowany, opłacone kwoty są oceniane proporcjonalnie do wykonanej pracy, discovery, planowania, zarezerwowanego czasu produkcyjnego i uzgodnionych kosztów bezzwrotnych."],
+        ["Opóźnione płatności", "Praca może zostać wstrzymana, dopóki zaległa płatność etapowa nie zostanie rozwiązana. Start, przekazanie lub pełny dostęp administratora mogą poczekać do zapłaty należnych kwot."],
+        ["Zmiany zakresu", "Nowe podstrony, funkcje, zmiany kierunku designu, dodatkowe języki lub integracje poza ofertą są wyceniane i planowane oddzielnie."],
+        ["Zakończenie przez projektantkę", "Praca może zostać odmówiona lub zakończona z powiadomieniem przy projekcie nielegalnym, obraźliwym zachowaniu, niebezpiecznych prośbach, naruszeniu praw, malware, braku płatności lub poważnym naruszeniu warunków."],
+        ["Hosting i dostęp", "GitHub, Vercel, domeny i usługi zewnętrzne są obsługiwane zgodnie z ofertą. Własność i przekazanie są potwierdzane przed startem lub handover."],
+        ["Bezpieczeństwo i strony trzecie", "Stosowana jest rozsądna ostrożność, ale awarie dostawców, przyszłe zmiany przeglądarek, edycje klienta, przejęte konta albo nieopłacone subskrypcje mogą wymagać osobnego wsparcia."],
+        ["Skargi", `Formalne skargi, powiadomienia o anulowaniu i prośby privacy należy wysłać na email ${siteConfig.contact.email}; pytania projektowe można też wysłać na Telegram ${siteConfig.contact.telegram}.`]
       ],
       faqIntro: "FAQ odpowiada na pytania o ceny, płatności, prawa, wsparcie, treści, terminy i rabaty.",
       privacyIntro: "Polityka prywatności wyjaśnia, jakie dane zbiera kalkulator i formularz, jakie usługi je przetwarzają oraz jak poprosić o korektę lub usunięcie.",
@@ -503,8 +579,27 @@ function faqData(language) {
       ["What if I do not have text or photos?", "Content preparation, image sourcing or professional services can be added to scope. Stock licences and external services are charged separately."],
       ["Who owns the finished website?", "After full payment, the client receives the rights and access described in the final proposal. Third-party tools, fonts and libraries remain subject to their own licences."],
       ["Can the project be shown in the portfolio?", "Unless confidentiality is agreed in writing before work begins, the completed public project may be shown in the Yana Ellis portfolio and promotional materials."],
-      ["What is the promotional discount?", "It is optional. You can choose the standard price, footer credit discount, social media publication discount, combined option or ask to discuss eligibility."],
-      ["Can I remove the footer credit later?", "Yes, but if it is removed before the agreed public display period ends, the original discount amount becomes payable before removal."],
+      ["What is the designer credit discount?", `It is optional. You can choose the standard price with no designer credit, or receive a ${designerCreditDiscountPercent()}% discount by keeping a small linked “Designed and developed by Yana Ellis” credit in the website footer.`],
+      ["What happens if I remove the designer credit?", `The website is not automatically disabled solely because the credit is removed. I will first send written notice and allow ${designerCreditCureDays()} calendar days to restore it. If the credit is not restored, the original discount amount may become payable.`],
+      ["What happens if I stop replying?", "The project can pause if feedback, approvals, materials or access are missing. I may send follow-ups first; a long silence can require rescheduling before work continues."],
+      ["When will my project be paused?", "A project may be paused when essential materials, feedback, access, approvals or stage payments are missing and the next planned task cannot reasonably continue."],
+      ["Can I return after the project is archived?", "Usually yes, but immediate reactivation is not guaranteed. I will review the project status, availability, old files, changed requirements and any reactivation work needed."],
+      ["Is immediate reactivation guaranteed?", "No. Returning after a long pause may need a new schedule, technical review, updated scope or a reactivation fee if extra setup time is required."],
+      ["Can the project be terminated after prolonged inactivity?", "It can be closed after repeated unanswered follow-ups and reasonable written notice. Paid deliverables already earned or completed are handled according to the final proposal and project stage."],
+      ["Is the initial payment always refundable?", "No. Paid amounts can cover completed work, discovery, planning, reserved production time and agreed non-refundable expenses. Any remaining balance is reviewed proportionally."],
+      ["How is a cancellation balance calculated?", "The balance is calculated against the approved scope, completed work, stage reached, reserved time, third-party costs and any cancellation terms stated in the final proposal."],
+      ["When can you stop working on a project?", "Work may be refused, paused or ended with notice for unlawful content, infringement, malware, unsafe requests, abusive conduct, non-payment or serious breach of agreed terms."],
+      ["What happens if a payment is late?", "Work can pause while payment is overdue. Launch, transfer, final files or unrestricted administrator access may wait until due amounts are paid."],
+      ["Can you disable my website?", "A fully paid transferred website is not disabled because of an ordinary dispute or credit issue. Access to unpaid work, unpaid hosting/support or pre-transfer environments can be limited according to the proposal."],
+      ["Who owns the GitHub repository?", "Repository ownership depends on the final proposal. It can stay under my workspace during production and be transferred or exported after final payment when that is included."],
+      ["Who owns the Vercel project?", "The Vercel project is handled as agreed in writing. It can stay in my account during production, then be transferred or recreated under the client's account if included and technically available."],
+      ["Can the project be transferred to my accounts?", "Yes, when transfer is included and all due amounts are paid. Domain, GitHub, Vercel and third-party account ownership are confirmed before handover."],
+      ["Who owns the domain?", "The domain should normally be owned by the client. If I assist with setup, the final proposal should state who buys it, who pays renewal fees and who controls DNS."],
+      ["What happens if a third-party service stops working?", "Third-party outages, API changes, subscription issues or provider policy changes are outside direct control. Investigation and fixes can be part of support or quoted separately."],
+      ["What happens if I edit the code myself?", "Client edits, third-party edits or plugin changes can affect warranty/support. I can investigate, but restoring or adapting modified code may be separate work."],
+      ["What happens after the bug-fix period?", "After the included bug-fix period, new fixes, updates, content edits, browser-change adjustments and new features are handled as paid support unless the proposal states otherwise."],
+      ["How do I submit a formal complaint?", `Send a clear written complaint to ${siteConfig.contact.email} with the request ID, project name, issue, screenshots or links, and the outcome you are asking for.`],
+      ["Which terms apply to my project?", `The website Terms version accepted when you submit the request is recorded, but the final written proposal can override general website terms for your specific project.`],
       ["Is post-launch support included?", `${tx(siteConfig.business.bugFixPeriod, "en")} may be included. Future updates, new content and new features are separate services.`],
       ["What data is collected?", "The form may collect contact details, calculator answers, project notes, inspiration links, budget expectations, deadlines, consent statuses and technical submission data."],
       ["How can I request deletion?", `Send a formal privacy request to ${siteConfig.contact.email}. Identity verification may be required before data is changed or deleted.`]
@@ -520,8 +615,27 @@ function faqData(language) {
       ["Що якщо в мене немає текстів або фото?", "Підготовку контенту, пошук зображень або професійні послуги можна додати в обсяг. Стокові ліцензії та зовнішні сервіси оплачуються окремо."],
       ["Кому належить готовий сайт?", "Після повної оплати клієнт отримує права й доступи, описані у фінальній пропозиції. Сторонні інструменти, шрифти й бібліотеки мають власні ліцензії."],
       ["Чи можна показувати проєкт у портфоліо?", "Якщо конфіденційність не погоджена письмово до початку роботи, публічний завершений проєкт може бути показаний у портфоліо Yana Ellis."],
-      ["Що таке рекламна знижка?", "Це опційна програма. Можна обрати стандартну ціну, знижку за кредит у футері, знижку за пост, комбінований варіант або обговорити доступні опції."],
-      ["Чи можна прибрати кредит у футері пізніше?", "Так, але якщо він прибирається до завершення погодженого періоду, початкова сума знижки підлягає оплаті перед видаленням."],
+      ["Що таке знижка за дизайнерський кредит?", `Це опційний варіант. Можна обрати стандартну ціну без дизайнерського кредиту або отримати ${designerCreditDiscountPercent()}% знижки, якщо у футері сайту залишається невеликий активний кредит “Designed and developed by Yana Ellis”.`],
+      ["Що буде, якщо я видалю дизайнерський кредит?", `Сайт не вимикається автоматично лише через видалення кредиту. Спочатку я надсилаю письмове повідомлення й даю ${designerCreditCureDays()} календарних днів на відновлення. Якщо кредит не відновлено, початкова сума знижки може стати до оплати.`],
+      ["Що буде, якщо я перестану відповідати?", "Проєкт може бути поставлений на паузу, якщо немає фідбеку, затверджень, матеріалів або доступів. Спочатку можуть бути follow-up повідомлення; тривала тиша може потребувати нового графіка."],
+      ["Коли проєкт ставиться на паузу?", "Проєкт може бути поставлений на паузу, коли без матеріалів, відповідей, доступів, затверджень або етапної оплати неможливо розумно продовжувати наступну задачу."],
+      ["Чи можна повернутися після архівації проєкту?", "Зазвичай так, але миттєве повернення не гарантується. Я переглядаю стан проєкту, доступність, старі файли, нові вимоги та потрібну роботу для повторного старту."],
+      ["Чи гарантоване миттєве відновлення?", "Ні. Повернення після довгої паузи може потребувати нового графіка, технічного перегляду, оновленого обсягу або reactivation fee, якщо потрібен додатковий setup."],
+      ["Чи може проєкт бути припинений після довгої неактивності?", "Так, після повторних follow-up повідомлень і розумного письмового попередження. Оплачені результати, які вже виконані або зароблені, обробляються згідно з фінальною пропозицією й етапом проєкту."],
+      ["Чи завжди повертається перший платіж?", "Ні. Сплачені суми можуть покривати виконану роботу, discovery, planning, зарезервований виробничий час і погоджені невідшкодовувані витрати. Залишок розраховується пропорційно."],
+      ["Як розраховується баланс при скасуванні?", "Баланс рахується за погодженим обсягом, виконаною роботою, етапом, зарезервованим часом, сторонніми витратами та умовами скасування у фінальній пропозиції."],
+      ["Коли ти можеш припинити роботу над проєктом?", "Роботу можна відхилити, поставити на паузу або завершити з повідомленням через незаконний контент, порушення прав, malware, небезпечні запити, образливу поведінку, несплату або серйозне порушення умов."],
+      ["Що буде, якщо платіж прострочено?", "Робота може зупинитися, поки платіж прострочений. Запуск, передача, фінальні файли або повний доступ адміністратора можуть чекати до оплати належних сум."],
+      ["Чи можеш ти вимкнути мій сайт?", "Повністю оплачений і переданий сайт не вимикається через звичайний спір або питання кредиту. Доступ до неоплаченої роботи, неоплаченого хостингу/підтримки або pre-transfer середовищ може бути обмежений згідно з пропозицією."],
+      ["Кому належить GitHub репозиторій?", "Власність репозиторію залежить від фінальної пропозиції. Під час роботи він може бути в моєму workspace, а після фінальної оплати може бути переданий або експортований, якщо це включено."],
+      ["Кому належить Vercel проєкт?", "Vercel проєкт ведеться так, як погоджено письмово. Він може бути в моєму акаунті під час роботи, а потім переданий або створений заново в акаунті клієнта, якщо це включено й технічно доступно."],
+      ["Чи можна перенести проєкт у мої акаунти?", "Так, якщо transfer включено й усі належні суми оплачені. Власність домену, GitHub, Vercel і сторонніх акаунтів підтверджується перед handover."],
+      ["Кому належить домен?", "Домен зазвичай має належати клієнту. Якщо я допомагаю з налаштуванням, фінальна пропозиція має визначати, хто купує домен, хто платить renewal fees і хто контролює DNS."],
+      ["Що буде, якщо сторонній сервіс перестане працювати?", "Збої сторонніх сервісів, зміни API, проблеми з підписками або правилами провайдерів не залежать напряму від мене. Перевірка й виправлення можуть входити в підтримку або оцінюватися окремо."],
+      ["Що буде, якщо я сама/сам зміню код?", "Правки клієнта, сторонні зміни або оновлення плагінів можуть вплинути на warranty/support. Я можу перевірити проблему, але відновлення або адаптація зміненого коду може бути окремою роботою."],
+      ["Що після bug-fix періоду?", "Після включеного періоду виправлення помилок нові fixes, оновлення, зміни контенту, адаптації під майбутні браузерні зміни та нові функції є paid support, якщо пропозиція не передбачає інше."],
+      ["Як подати формальну скаргу?", `Надішліть чітку письмову скаргу на ${siteConfig.contact.email}: номер заявки, назву проєкту, проблему, скриншоти або посилання та результат, якого ви очікуєте.`],
+      ["Які умови застосовуються до мого проєкту?", "Версія умов, прийнята під час відправки заявки, зберігається, але фінальна письмова пропозиція може змінювати або уточнювати загальні умови для конкретного проєкту."],
       ["Чи включена підтримка після запуску?", `Може бути включено ${tx(siteConfig.business.bugFixPeriod, "uk")}. Майбутні оновлення, новий контент і нові функції є окремими послугами.`],
       ["Які дані збираються?", "Форма може збирати контакти, відповіді калькулятора, нотатки про проєкт, референси, бюджет, терміни, статуси згоди й технічні дані відправки."],
       ["Як попросити видалення?", `Надішліть формальний запит щодо приватності на ${siteConfig.contact.email}. Перед зміною або видаленням даних може знадобитися перевірка особи.`]
@@ -537,8 +651,27 @@ function faqData(language) {
       ["Co jeśli nie mam tekstów lub zdjęć?", "Przygotowanie treści, dobór zdjęć albo usługi profesjonalne można dodać do zakresu. Licencje stockowe i usługi zewnętrzne są płatne oddzielnie."],
       ["Kto jest właścicielem gotowej strony?", "Po pełnej płatności klient otrzymuje prawa i dostępy opisane w finalnej ofercie. Narzędzia zewnętrzne, fonty i biblioteki podlegają własnym licencjom."],
       ["Czy projekt może być pokazany w portfolio?", "Jeśli poufność nie została uzgodniona pisemnie przed startem pracy, ukończony publiczny projekt może zostać pokazany w portfolio Yana Ellis."],
-      ["Czym jest rabat promocyjny?", "To opcjonalny program. Możesz wybrać cenę standardową, rabat za kredyt w stopce, rabat za post, opcję łączoną albo poprosić o omówienie dostępnych opcji."],
-      ["Czy mogę później usunąć kredyt ze stopki?", "Tak, ale jeśli zostanie usunięty przed końcem uzgodnionego okresu, pierwotna kwota rabatu staje się należna przed usunięciem."],
+      ["Czym jest rabat za kredyt projektantki?", `To opcjonalna możliwość. Możesz wybrać standardową cenę bez kredytu projektantki albo otrzymać ${designerCreditDiscountPercent()}% rabatu, jeśli w stopce strony pozostanie mały aktywny kredyt “Designed and developed by Yana Ellis”.`],
+      ["Co się stanie, jeśli usunę kredyt projektantki?", `Strona nie zostaje automatycznie wyłączona wyłącznie z powodu usunięcia kredytu. Najpierw wysyłam pisemne powiadomienie i daję ${designerCreditCureDays()} dni kalendarzowych na przywrócenie. Jeśli kredyt nie zostanie przywrócony, pierwotna kwota rabatu może stać się należna.`],
+      ["Co jeśli przestanę odpowiadać?", "Projekt może zostać wstrzymany, jeśli brakuje feedbacku, akceptacji, materiałów lub dostępów. Najpierw mogą pojawić się przypomnienia; dłuższa cisza może wymagać nowego harmonogramu."],
+      ["Kiedy projekt zostanie wstrzymany?", "Projekt może zostać wstrzymany, gdy bez materiałów, odpowiedzi, dostępów, akceptacji lub płatności etapowej nie da się rozsądnie kontynuować następnego zadania."],
+      ["Czy mogę wrócić po archiwizacji projektu?", "Zwykle tak, ale natychmiastowy powrót nie jest gwarantowany. Sprawdzam stan projektu, dostępność, stare pliki, zmienione wymagania i pracę potrzebną do ponownego startu."],
+      ["Czy natychmiastowa reaktywacja jest gwarantowana?", "Nie. Powrót po długiej przerwie może wymagać nowego harmonogramu, przeglądu technicznego, aktualizacji zakresu lub opłaty reaktywacyjnej, jeśli potrzebny jest dodatkowy setup."],
+      ["Czy projekt może zostać zakończony po długiej bezczynności?", "Tak, po powtarzanych przypomnieniach i rozsądnym pisemnym powiadomieniu. Opłacone rezultaty już wykonane lub wypracowane są rozliczane zgodnie z finalną ofertą i etapem projektu."],
+      ["Czy pierwsza płatność zawsze podlega zwrotowi?", "Nie. Opłacone kwoty mogą pokrywać wykonaną pracę, discovery, planning, zarezerwowany czas produkcyjny i uzgodnione koszty bezzwrotne. Pozostały balans jest oceniany proporcjonalnie."],
+      ["Jak liczony jest balans przy anulowaniu?", "Balans jest liczony względem zaakceptowanego zakresu, wykonanej pracy, osiągniętego etapu, zarezerwowanego czasu, kosztów zewnętrznych i warunków anulowania z finalnej oferty."],
+      ["Kiedy możesz przestać pracować nad projektem?", "Praca może zostać odmówiona, wstrzymana lub zakończona z powiadomieniem przy treściach nielegalnych, naruszeniu praw, malware, niebezpiecznych prośbach, obraźliwym zachowaniu, braku płatności lub poważnym naruszeniu warunków."],
+      ["Co jeśli płatność jest opóźniona?", "Praca może zostać wstrzymana, gdy płatność jest zaległa. Start, przekazanie, finalne pliki lub pełny dostęp administratora mogą poczekać do zapłaty należnych kwot."],
+      ["Czy możesz wyłączyć moją stronę?", "W pełni opłacona i przekazana strona nie jest wyłączana z powodu zwykłego sporu lub kwestii kredytu. Dostęp do nieopłaconej pracy, nieopłaconego hostingu/wsparcia albo środowisk przed transferem może być ograniczony zgodnie z ofertą."],
+      ["Kto jest właścicielem repozytorium GitHub?", "Własność repozytorium zależy od finalnej oferty. Podczas produkcji może pozostać w moim workspace, a po finalnej płatności może zostać przeniesione lub wyeksportowane, jeśli jest to w zakresie."],
+      ["Kto jest właścicielem projektu Vercel?", "Projekt Vercel jest obsługiwany zgodnie z pisemnymi ustaleniami. Może pozostać w moim koncie podczas produkcji, a potem zostać przeniesiony lub odtworzony w koncie klienta, jeśli jest to w zakresie i technicznie dostępne."],
+      ["Czy projekt można przenieść na moje konta?", "Tak, jeśli transfer jest w zakresie i wszystkie należne kwoty są opłacone. Własność domeny, GitHub, Vercel i kont zewnętrznych jest potwierdzana przed handover."],
+      ["Kto jest właścicielem domeny?", "Domena zwykle powinna należeć do klienta. Jeśli pomagam w konfiguracji, finalna oferta powinna określać, kto ją kupuje, kto płaci renewal fees i kto kontroluje DNS."],
+      ["Co jeśli usługa zewnętrzna przestanie działać?", "Awarie usług zewnętrznych, zmiany API, problemy z subskrypcją lub polityką dostawcy są poza bezpośrednią kontrolą. Analiza i naprawa mogą być częścią wsparcia albo osobną wyceną."],
+      ["Co jeśli sama/sam edytuję kod?", "Edycje klienta, zmiany stron trzecich albo aktualizacje pluginów mogą wpłynąć na warranty/support. Mogę to sprawdzić, ale odtworzenie lub adaptacja zmienionego kodu może być osobną pracą."],
+      ["Co dzieje się po okresie bug-fix?", "Po wliczonym okresie naprawy błędów nowe fixes, aktualizacje, zmiany treści, dostosowania do przyszłych zmian przeglądarek i nowe funkcje są płatnym wsparciem, chyba że oferta stanowi inaczej."],
+      ["Jak złożyć formalną skargę?", `Wyślij jasną pisemną skargę na ${siteConfig.contact.email}: numer zapytania, nazwę projektu, problem, zrzuty ekranu lub linki oraz oczekiwany rezultat.`],
+      ["Które warunki dotyczą mojego projektu?", "Wersja warunków zaakceptowana przy wysłaniu zapytania jest zapisywana, ale finalna pisemna oferta może zmienić lub doprecyzować ogólne warunki dla konkretnego projektu."],
       ["Czy wsparcie po starcie jest wliczone?", `Może być wliczony ${tx(siteConfig.business.bugFixPeriod, "pl")}. Przyszłe aktualizacje, nowe treści i nowe funkcje są oddzielnymi usługami.`],
       ["Jakie dane są zbierane?", "Formularz może zbierać dane kontaktowe, odpowiedzi z kalkulatora, notatki o projekcie, linki inspiracji, budżet, terminy, statusy zgód i techniczne dane wysyłki."],
       ["Jak poprosić o usunięcie danych?", `Wyślij formalną prośbę dotyczącą prywatności na ${siteConfig.contact.email}. Przed zmianą lub usunięciem danych może być wymagana weryfikacja tożsamości.`]
@@ -574,19 +707,19 @@ function renderFaq(language) {
 }
 
 function legalSections(type, language) {
-  const effectiveDate = localizedEffectiveDate(language);
+  const effectiveDate = type === "privacy" ? localizedPrivacyDate(language) : localizedEffectiveDate(language);
   const contact = siteConfig.contact.email;
   const data = {
     privacy: {
       en: [
-        ["Introduction", `Effective date: ${effectiveDate}. This Privacy Policy applies to the Yana Ellis portfolio, website calculators and project request forms.`],
-        ["Information collected", "The forms may collect name, email, phone, company or project name, messenger usernames, current website, calculator answers, project requirements, budget expectations, deadlines, brand materials information, inspiration links, consent statuses, submission time and technical data."],
+        ["Introduction", `Effective date: ${effectiveDate}. Policy version: ${siteConfig.legal.PRIVACY_VERSION}. This Privacy Policy applies to the Yana Ellis portfolio, website calculators and project request forms.`],
+        ["Information collected", "The forms may collect name, email, phone, company or project name, messenger usernames, current website, calculator answers, project requirements, budget expectations, deadlines, brand materials information, inspiration links, consent statuses, accepted Terms/Privacy/designer-credit versions, acceptance timestamps, submission ID, submission time and technical data."],
         ["How information is collected", "Information is provided directly by the user through calculators and request forms. Technical information may be processed automatically by hosting, security, delivery or email services when a request is submitted."],
-        ["Purposes of processing", "Information is used to display a preliminary estimate, receive and review project requests, contact the user through the selected channel, prepare a final proposal, prevent spam or abuse and maintain business records."],
+        ["Purposes of processing", "Information is used to display a preliminary estimate, receive and review project requests, contact the user through the selected channel, prepare a final proposal, prevent spam or abuse, keep request records and document accepted terms."],
         ["Legal bases", "Depending on the user's location, processing may be based on pre-contract steps, contract performance, consent, legitimate interests in operating the service or legal obligations."],
         ["Service providers and sharing", `Requests may be processed by ${siteConfig.providers.hosting}, ${siteConfig.providers.requestProcessing}, ${siteConfig.providers.emailDelivery} and ${siteConfig.providers.telegramDelivery}. Information is not sold or shared for advertising.`],
         ["International transfers", "Providers may process data in different countries. Only information reasonably necessary to deliver and review the request is processed."],
-        ["Retention", "Unsuccessful project requests may normally be retained for up to twelve months unless deletion is requested and no legal reason requires retention. Client project and financial records may be kept longer where required."],
+        ["Retention", "Unsuccessful project requests may normally be retained for up to twelve months unless deletion is requested and no legal reason requires retention. Project correspondence, payment records, inactivity/cancellation notes, dispute records, support history and financial records may be kept longer where required or reasonably needed."],
         ["User rights", `Depending on applicable law, users may request access, correction, deletion, restriction, objection, portability or withdrawal of consent by emailing ${contact}.`],
         ["Security", "Reasonable organisational and technical measures are used to protect information, but no internet transmission or storage method is completely secure."],
         ["Children", "The services are intended for adults and business representatives. The website is not intended to knowingly collect personal information from children."],
@@ -595,14 +728,14 @@ function legalSections(type, language) {
         ["Contact", `Privacy questions and formal requests should be sent to ${contact}. General project questions may also be sent to Telegram ${siteConfig.contact.telegram}.`]
       ],
       uk: [
-        ["Вступ", `Дата набрання чинності: ${effectiveDate}. Ця Політика конфіденційності застосовується до портфоліо Yana Ellis, калькуляторів і форм заявки.`],
-        ["Яка інформація збирається", "Форми можуть збирати ім'я, email, телефон, назву компанії або проєкту, username у месенджерах, поточний сайт, відповіді калькулятора, вимоги, бюджет, терміни, інформацію про бренд-матеріали, референси, статуси згоди, час відправки та технічні дані."],
+        ["Вступ", `Дата набрання чинності: ${effectiveDate}. Версія політики: ${siteConfig.legal.PRIVACY_VERSION}. Ця Політика конфіденційності застосовується до портфоліо Yana Ellis, калькуляторів і форм заявки.`],
+        ["Яка інформація збирається", "Форми можуть збирати ім'я, email, телефон, назву компанії або проєкту, username у месенджерах, поточний сайт, відповіді калькулятора, вимоги, бюджет, терміни, інформацію про бренд-матеріали, референси, статуси згоди, версії прийнятих Terms/Privacy/designer-credit умов, timestamps прийняття, submission ID, час відправки та технічні дані."],
         ["Як збирається інформація", "Дані надаються користувачем через калькулятори та форми. Технічна інформація може автоматично оброблятися хостингом, безпековими сервісами, сервісами доставки повідомлень або email-сервісами під час відправки заявки."],
-        ["Навіщо використовуються дані", "Дані потрібні для попереднього розрахунку, отримання й перегляду заявки, контакту через вибраний канал, підготовки фінальної пропозиції, захисту від спаму та ведення бізнес-записів."],
+        ["Навіщо використовуються дані", "Дані потрібні для попереднього розрахунку, отримання й перегляду заявки, контакту через вибраний канал, підготовки фінальної пропозиції, захисту від спаму, ведення записів заявки та документування прийнятих умов."],
         ["Правові підстави", "Залежно від локації користувача, обробка може базуватися на переддоговірних діях, виконанні договору, згоді, законному інтересі або юридичних обов'язках."],
         ["Сервіси та передача", `Заявки можуть обробляти ${siteConfig.providers.hosting}, ${siteConfig.providers.requestProcessing}, ${siteConfig.providers.emailDelivery} і ${siteConfig.providers.telegramDelivery}. Дані не продаються й не передаються для реклами.`],
         ["Міжнародна обробка", "Провайдери можуть обробляти дані в різних країнах. Обробляється лише інформація, розумно необхідна для доставки й перегляду заявки."],
-        ["Зберігання", "Нереалізовані заявки зазвичай можуть зберігатися до дванадцяти місяців, якщо не запитано видалення й немає юридичної причини зберігати їх довше. Проєктні та фінансові записи можуть зберігатися довше."],
+        ["Зберігання", "Нереалізовані заявки зазвичай можуть зберігатися до дванадцяти місяців, якщо не запитано видалення й немає юридичної причини зберігати їх довше. Проєктне листування, платіжні записи, нотатки про неактивність/скасування, dispute records, історія підтримки та фінансові записи можуть зберігатися довше, якщо це потрібно або розумно необхідно."],
         ["Права користувача", `Залежно від закону, користувач може попросити доступ, виправлення, видалення, обмеження, заперечення, переносимість або відкликання згоди через email ${contact}.`],
         ["Безпека", "Використовуються розумні організаційні та технічні заходи, але жоден спосіб передачі або зберігання в інтернеті не є абсолютно безпечним."],
         ["Діти", "Послуги призначені для дорослих і представників бізнесу. Сайт не призначений для свідомого збору персональних даних дітей."],
@@ -611,14 +744,14 @@ function legalSections(type, language) {
         ["Контакт", `Формальні запити щодо приватності надсилайте на ${contact}. Загальні питання про проєкт можна також писати в Telegram ${siteConfig.contact.telegram}.`]
       ],
       pl: [
-        ["Wprowadzenie", `Data wejścia w życie: ${effectiveDate}. Ta Polityka prywatności dotyczy portfolio Yana Ellis, kalkulatorów i formularzy zapytań.`],
-        ["Zbierane informacje", "Formularze mogą zbierać imię, email, telefon, nazwę firmy lub projektu, nazwy w komunikatorach, obecną stronę, odpowiedzi z kalkulatora, wymagania, budżet, terminy, informacje o materiałach marki, linki inspiracji, statusy zgód, czas wysłania i dane techniczne."],
+        ["Wprowadzenie", `Data wejścia w życie: ${effectiveDate}. Wersja polityki: ${siteConfig.legal.PRIVACY_VERSION}. Ta Polityka prywatności dotyczy portfolio Yana Ellis, kalkulatorów i formularzy zapytań.`],
+        ["Zbierane informacje", "Formularze mogą zbierać imię, email, telefon, nazwę firmy lub projektu, nazwy w komunikatorach, obecną stronę, odpowiedzi z kalkulatora, wymagania, budżet, terminy, informacje o materiałach marki, linki inspiracji, statusy zgód, zaakceptowane wersje Terms/Privacy/designer-credit, acceptance timestamps, submission ID, czas wysłania i dane techniczne."],
         ["Jak dane są zbierane", "Dane są podawane bezpośrednio przez użytkownika w kalkulatorach i formularzach. Dane techniczne mogą być przetwarzane automatycznie przez hosting, zabezpieczenia, usługi dostarczania wiadomości lub pocztę email podczas wysyłki."],
-        ["Cele przetwarzania", "Dane służą do pokazania wstępnej wyceny, otrzymania i analizy zapytania, kontaktu wybranym kanałem, przygotowania finalnej oferty, ochrony przed spamem i prowadzenia dokumentacji biznesowej."],
+        ["Cele przetwarzania", "Dane służą do pokazania wstępnej wyceny, otrzymania i analizy zapytania, kontaktu wybranym kanałem, przygotowania finalnej oferty, ochrony przed spamem, prowadzenia zapisów zapytania i dokumentowania zaakceptowanych warunków."],
         ["Podstawy prawne", "W zależności od lokalizacji użytkownika przetwarzanie może opierać się na działaniach przedumownych, wykonaniu umowy, zgodzie, uzasadnionym interesie albo obowiązku prawnym."],
         ["Usługodawcy i udostępnianie", `Zapytania mogą być przetwarzane przez ${siteConfig.providers.hosting}, ${siteConfig.providers.requestProcessing}, ${siteConfig.providers.emailDelivery} i ${siteConfig.providers.telegramDelivery}. Dane nie są sprzedawane ani udostępniane do reklamy.`],
         ["Transfery międzynarodowe", "Dostawcy mogą przetwarzać dane w różnych krajach. Przetwarzane są tylko informacje rozsądnie potrzebne do dostarczenia i analizy zapytania."],
-        ["Przechowywanie", "Niezrealizowane zapytania mogą być zwykle przechowywane do dwunastu miesięcy, chyba że poprosisz o usunięcie i nie ma prawnego powodu dłuższego przechowania. Dokumentacja projektowa i finansowa może być przechowywana dłużej."],
+        ["Przechowywanie", "Niezrealizowane zapytania mogą być zwykle przechowywane do dwunastu miesięcy, chyba że poprosisz o usunięcie i nie ma prawnego powodu dłuższego przechowania. Korespondencja projektowa, zapisy płatności, notatki o bezczynności/anulowaniu, dispute records, historia wsparcia i dokumentacja finansowa mogą być przechowywane dłużej, gdy jest to wymagane lub rozsądnie potrzebne."],
         ["Prawa użytkownika", `W zależności od prawa użytkownik może poprosić o dostęp, korektę, usunięcie, ograniczenie, sprzeciw, przeniesienie danych lub wycofanie zgody przez email ${contact}.`],
         ["Bezpieczeństwo", "Stosowane są rozsądne środki organizacyjne i techniczne, ale żadna transmisja ani metoda przechowywania online nie jest całkowicie bezpieczna."],
         ["Dzieci", "Usługi są przeznaczone dla dorosłych i przedstawicieli biznesu. Strona nie jest przeznaczona do świadomego zbierania danych dzieci."],
@@ -629,56 +762,71 @@ function legalSections(type, language) {
     },
     terms: {
       en: [
-        ["Scope", "These Terms govern use of the Yana Ellis portfolio website, calculators, project request forms and pre-contract information. A specific project is governed by the final written proposal, invoice and any separate agreement."],
+        ["Scope", `Effective date: ${effectiveDate}. Terms version: ${siteConfig.legal.TERMS_VERSION}. These Terms govern use of the Yana Ellis portfolio website, calculators, project request forms and pre-contract information. A specific project is governed by the final written proposal, invoice and any separate agreement.`],
         ["Calculator estimates", "Calculator results are preliminary estimates for orientation only. They are not binding quotations, contracts, guarantees of availability or promises to accept a project."],
         ["Project acceptance", "Submitting a request does not obligate either party to proceed. A project begins only after scope, price, schedule and payment terms are agreed in writing and the required first payment has cleared."],
         ["Client responsibilities", "The client must provide accurate information, timely feedback, lawful content and necessary access. The client confirms they own or have permission to use supplied materials."],
         ["Services and scope changes", "Only items expressly included in the approved proposal are part of the project. Additional requests may require a revised price and schedule."],
-        ["Payments", `Payments may be arranged through ${localizedPaymentMethods("en")}. Work may pause for overdue payments. Final deliverables, launch or credentials may be withheld until due amounts are paid.`],
+        ["Payments", `Payments may be arranged through ${localizedPaymentMethods("en")}. Work may pause for overdue payments. Final deliverables, launch or credentials may be withheld until due amounts are paid. Payment timing, deposit size, stage payments and any large-project schedule are confirmed in the final proposal.`, "payments"],
+        ["Client inactivity and delays", "If the client does not provide feedback, approvals, materials, access or content needed for the next stage, the delivery schedule may move. I may send reasonable follow-ups first. Extended inactivity can place the project on hold, archive the production slot or require a new schedule before work resumes.", "inactivity"],
+        ["Agreed project pauses", "A project pause can be agreed in writing when the client needs more time. A paused project is not automatically abandoned, but restart timing depends on availability, project state, third-party changes and any extra review needed."],
+        ["Cancellation and refunds", "If either side cancels before completion, paid amounts are reviewed proportionally. They may cover completed work, discovery, planning, reserved production time, agreed non-refundable expenses, third-party licences and any lawful cancellation fee stated in the final proposal. Any remaining balance is calculated individually.", "cancellation"],
         ["Intellectual property", "Upon full payment, the client receives the rights expressly stated in the proposal for final approved deliverables. Preliminary concepts, rejected designs, internal tools, reusable components and general know-how remain with Yana Ellis."],
         ["Portfolio use", "Unless confidentiality is agreed in writing before work begins, Yana Ellis may display the completed public project, screenshots and a factual description of the work in portfolio and promotional materials."],
-        ["Designer credit discounts", "Any discounted price connected to a footer credit or public promotion is conditional on the written promotional terms. Early removal or non-performance makes the original discount amount payable."],
-        ["Third-party services", "Domains, hosting, plugins, payment processors, booking services, fonts, stock assets and external APIs may have separate fees, terms and outages."],
+        ["Designer credit discounts", `The optional designer credit discount applies only while the agreed linked credit remains visible and functional in the website footer. If it is removed, hidden, disabled or materially altered without written approval, I first send written notice and allow ${designerCreditCureDays()} calendar days to restore it. If it is not restored, the original discount amount may become payable. The website is not automatically disabled solely because the credit is removed.`, "designer-credit"],
+        ["Hosting, repositories and transfer", "GitHub repositories, Vercel projects, domains, DNS records and third-party accounts are handled as agreed in the final proposal. During production, code or deployments may remain in my workspace. Transfer, export or recreation under the client's accounts happens after final payment when it is included and technically available.", "hosting-transfer"],
+        ["Third-party services", "Domains, hosting, plugins, payment processors, booking services, fonts, stock assets, email delivery, external APIs and subscriptions may have separate fees, terms, outages, usage limits and policy changes."],
+        ["Security, backups and data loss", "Reasonable care is used when working with credentials, files and deployments, but no online system is completely secure. The client is responsible for keeping control of their own accounts, renewal payments and backups after handover unless ongoing support says otherwise.", "security"],
         ["Warranties and limitations", "Services are performed with reasonable care and skill. No guarantee is made regarding uninterrupted operation, future browser changes, search rankings, sales, revenue or third-party availability."],
         ["Prohibited projects and conduct", "Requests may be refused or terminated for unlawful content, infringement, deception, malware, harassment, exploitation, non-payment or abusive conduct."],
-        ["Suspension and termination", "Work may be suspended for non-payment, missing materials, unresolved approvals or breach. Cancellation and refund treatment follows the final proposal and project stage."],
-        ["Governing law and disputes", tx(siteConfig.legal.governingLawNote, "en")],
+        ["Suspension and termination", "Work may be suspended for non-payment, missing materials, unresolved approvals or breach. A project may be terminated with notice for prolonged inactivity, unlawful requests, abusive conduct, unsafe behaviour, infringement, malware, non-payment or serious breach. Cancellation and refund treatment follows the final proposal and project stage.", "termination"],
+        ["Complaints and disputes", `Formal complaints should be sent to ${siteConfig.contact.email} with the request ID, project name, issue, evidence and requested outcome. I will review the issue in writing. ${tx(siteConfig.legal.governingLawNote, "en")}`, "disputes"],
         ["Changes", "Website Terms may be updated. Changes do not retroactively replace a signed project agreement unless both parties agree in writing."],
         ["Contact", `General questions: ${siteConfig.contact.telegram} or ${siteConfig.contact.email}. Formal notices concerning payments, cancellation, legal rights or privacy should be sent by email.`]
       ],
       uk: [
-        ["Сфера дії", "Ці Умови регулюють використання портфоліо Yana Ellis, калькуляторів, форм заявки та переддоговірної інформації. Конкретний проєкт регулюється фінальною письмовою пропозицією, рахунком і окремою угодою, якщо вона є."],
+        ["Сфера дії", `Дата набрання чинності: ${effectiveDate}. Версія умов: ${siteConfig.legal.TERMS_VERSION}. Ці Умови регулюють використання портфоліо Yana Ellis, калькуляторів, форм заявки та переддоговірної інформації. Конкретний проєкт регулюється фінальною письмовою пропозицією, рахунком і окремою угодою, якщо вона є.`],
         ["Оцінки калькулятора", "Результати калькулятора є лише попередньою орієнтовною оцінкою. Вони не є обов'язковою пропозицією, договором, гарантією доступності або обіцянкою прийняти проєкт."],
         ["Прийняття проєкту", "Надсилання заявки не зобов'язує жодну сторону продовжувати. Проєкт починається лише після письмового погодження обсягу, ціни, графіка, оплати та надходження першого платежу."],
         ["Обов'язки клієнта", "Клієнт має надати точну інформацію, своєчасний відгук, законний контент і потрібні доступи. Клієнт підтверджує, що має права на надані матеріали."],
         ["Послуги та зміни обсягу", "До проєкту входять лише позиції, прямо зазначені у затвердженій пропозиції. Додаткові запити можуть потребувати нової ціни й графіка."],
-        ["Оплата", `Оплату можна погодити через ${localizedPaymentMethods("uk")}. Робота може зупинятися через прострочення. Фінальні матеріали, запуск або доступи можуть утримуватися до повної оплати належних сум.`],
+        ["Оплата", `Оплату можна погодити через ${localizedPaymentMethods("uk")}. Робота може зупинятися через прострочення. Фінальні матеріали, запуск або доступи можуть утримуватися до повної оплати належних сум. Точний графік, розмір першого платежу, етапні платежі та умови великого проєкту підтверджуються у фінальній пропозиції.`, "payments"],
+        ["Неактивність клієнта і затримки", "Якщо клієнт не надає фідбек, затвердження, матеріали, доступи або контент, потрібні для наступного етапу, графік може зміститися. Спочатку можуть бути розумні follow-up повідомлення. Тривала неактивність може поставити проєкт на паузу, архівувати виробничий слот або потребувати нового графіка перед продовженням.", "inactivity"],
+        ["Погоджені паузи", "Паузу можна погодити письмово, якщо клієнту потрібен додатковий час. Пауза не означає автоматичну відмову від проєкту, але повернення залежить від доступності, стану проєкту, змін сторонніх сервісів і додаткового перегляду."],
+        ["Скасування і повернення коштів", "Якщо одна зі сторін скасовує проєкт до завершення, сплачені суми переглядаються пропорційно. Вони можуть покривати виконану роботу, discovery, planning, зарезервований виробничий час, погоджені невідшкодовувані витрати, сторонні ліцензії та законний cancellation fee, якщо він зазначений у фінальній пропозиції. Залишок розраховується індивідуально.", "cancellation"],
         ["Інтелектуальна власність", "Після повної оплати клієнт отримує права, прямо зазначені у пропозиції. Чернетки, відхилені концепти, внутрішні інструменти, повторно використовувані компоненти й загальні напрацювання залишаються у Yana Ellis."],
         ["Використання в портфоліо", "Якщо конфіденційність не погоджена письмово до початку роботи, Yana Ellis може показувати публічний завершений проєкт, скриншоти й опис роботи у портфоліо та промоматеріалах."],
-        ["Знижки за дизайнерський кредит", "Будь-яка знижка за кредит у футері або публічну промоцію діє лише за письмовими умовами. Дострокове видалення або невиконання робить суму початкової знижки такою, що підлягає оплаті."],
-        ["Сторонні сервіси", "Домени, хостинг, плагіни, платіжні системи, бронювання, шрифти, стокові матеріали та API можуть мати окремі платежі, умови й перебої."],
+        ["Знижки за дизайнерський кредит", `Опційна знижка за дизайнерський кредит діє лише поки погоджений активний кредит залишається видимим і функціональним у футері сайту. Якщо його видалено, приховано, вимкнено або суттєво змінено без письмової згоди, я спочатку надсилаю письмове повідомлення й даю ${designerCreditCureDays()} календарних днів на відновлення. Якщо кредит не відновлено, початкова сума знижки може стати до оплати. Сайт не вимикається автоматично лише через видалення кредиту.`, "designer-credit"],
+        ["Хостинг, репозиторії та передача", "GitHub-репозиторії, Vercel-проєкти, домени, DNS-записи та сторонні акаунти ведуться згідно з фінальною пропозицією. Під час роботи код або деплої можуть залишатися у моєму workspace. Передача, експорт або повторне створення в акаунтах клієнта відбувається після фінальної оплати, якщо це включено й технічно доступно.", "hosting-transfer"],
+        ["Сторонні сервіси", "Домени, хостинг, плагіни, платіжні системи, бронювання, шрифти, стокові матеріали, email delivery, зовнішні API та підписки можуть мати окремі платежі, умови, перебої, ліміти використання й зміни правил."],
+        ["Безпека, резервні копії та втрата даних", "Під час роботи з доступами, файлами й деплоями використовується розумна обережність, але жодна онлайн-система не є повністю безпечною. Після handover клієнт відповідає за контроль власних акаунтів, renewal payments і backups, якщо ongoing support не передбачає інше.", "security"],
         ["Гарантії та обмеження", "Послуги виконуються з розумною турботою та навичками. Не гарантуються безперервна робота, майбутні зміни браузерів, позиції в пошуку, продажі, дохід або доступність сторонніх сервісів."],
         ["Заборонені проєкти та поведінка", "Запити можуть бути відхилені або припинені через незаконний контент, порушення прав, обман, зловмисне програмне забезпечення, переслідування, експлуатацію, несплату або образливу поведінку."],
-        ["Призупинення та припинення", "Робота може бути призупинена через несплату, відсутність матеріалів, невирішені затвердження або порушення. Скасування й повернення коштів залежать від фінальної пропозиції та етапу проєкту."],
-        ["Право і спори", tx(siteConfig.legal.governingLawNote, "uk")],
+        ["Призупинення та припинення", "Робота може бути призупинена через несплату, відсутність матеріалів, невирішені затвердження або порушення. Проєкт може бути припинений з повідомленням через тривалу неактивність, незаконні запити, образливу поведінку, небезпечні дії, порушення прав, malware, несплату або серйозне порушення умов. Скасування й повернення коштів залежать від фінальної пропозиції та етапу проєкту.", "termination"],
+        ["Скарги та спори", `Формальні скарги потрібно надсилати на ${siteConfig.contact.email} із номером заявки, назвою проєкту, описом проблеми, доказами та бажаним результатом. Я розгляну питання письмово. ${tx(siteConfig.legal.governingLawNote, "uk")}`, "disputes"],
         ["Зміни", "Умови сайту можуть оновлюватися. Зміни не замінюють підписану угоду заднім числом, якщо сторони письмово не погодили інше."],
         ["Контакт", `Загальні питання: ${siteConfig.contact.telegram} або ${siteConfig.contact.email}. Формальні повідомлення щодо оплати, скасування, прав або приватності потрібно надсилати електронною поштою.`]
       ],
       pl: [
-        ["Zakres", "Te Warunki regulują korzystanie z portfolio Yana Ellis, kalkulatorów, formularzy zapytań i informacji przedumownych. Konkretny projekt podlega finalnej pisemnej ofercie, fakturze i ewentualnej oddzielnej umowie."],
+        ["Zakres", `Data wejścia w życie: ${effectiveDate}. Wersja regulaminu: ${siteConfig.legal.TERMS_VERSION}. Te Warunki regulują korzystanie z portfolio Yana Ellis, kalkulatorów, formularzy zapytań i informacji przedumownych. Konkretny projekt podlega finalnej pisemnej ofercie, fakturze i ewentualnej oddzielnej umowie.`],
         ["Wyceny z kalkulatora", "Wyniki kalkulatora są wycenami wstępnymi wyłącznie orientacyjnie. Nie są wiążącą ofertą, umową, gwarancją dostępności ani obietnicą przyjęcia projektu."],
         ["Akceptacja projektu", "Wysłanie zapytania nie zobowiązuje żadnej strony do rozpoczęcia. Projekt zaczyna się dopiero po pisemnym uzgodnieniu zakresu, ceny, harmonogramu, płatności i zaksięgowaniu pierwszej płatności."],
         ["Obowiązki klienta", "Klient musi podać dokładne informacje, terminowe informacje zwrotne, legalne treści i potrzebne dostępy. Klient potwierdza, że ma prawa do dostarczonych materiałów."],
         ["Usługi i zmiany zakresu", "Zakres obejmuje tylko elementy wyraźnie wskazane w zaakceptowanej ofercie. Dodatkowe prośby mogą wymagać nowej ceny i harmonogramu."],
-        ["Płatności", `Płatność może odbyć się przez ${localizedPaymentMethods("pl")}. Praca może zostać wstrzymana przy zaległościach. Finalne materiały, start lub dostępy mogą być wstrzymane do opłacenia należnych kwot.`],
+        ["Płatności", `Płatność może odbyć się przez ${localizedPaymentMethods("pl")}. Praca może zostać wstrzymana przy zaległościach. Finalne materiały, start lub dostępy mogą być wstrzymane do opłacenia należnych kwot. Dokładny harmonogram, wysokość pierwszej płatności, płatności etapowe i zasady dużego projektu są potwierdzane w finalnej ofercie.`, "payments"],
+        ["Bezczynność klienta i opóźnienia", "Jeśli klient nie dostarczy feedbacku, akceptacji, materiałów, dostępów lub treści potrzebnych do następnego etapu, harmonogram może się przesunąć. Najpierw mogą zostać wysłane rozsądne przypomnienia. Dłuższa bezczynność może wstrzymać projekt, zarchiwizować slot produkcyjny lub wymagać nowego harmonogramu przed wznowieniem.", "inactivity"],
+        ["Uzgodnione pauzy", "Pauza może zostać uzgodniona pisemnie, gdy klient potrzebuje więcej czasu. Pauza nie oznacza automatycznego porzucenia projektu, ale powrót zależy od dostępności, stanu projektu, zmian usług zewnętrznych i ewentualnej dodatkowej analizy."],
+        ["Anulowanie i zwroty", "Jeśli którakolwiek strona anuluje projekt przed zakończeniem, opłacone kwoty są analizowane proporcjonalnie. Mogą pokrywać wykonaną pracę, discovery, planning, zarezerwowany czas produkcyjny, uzgodnione koszty bezzwrotne, licencje zewnętrzne oraz legalną opłatę cancellation fee, jeśli została wskazana w finalnej ofercie. Pozostały balans jest liczony indywidualnie.", "cancellation"],
         ["Własność intelektualna", "Po pełnej płatności klient otrzymuje prawa wyraźnie opisane w ofercie. Koncepcje wstępne, odrzucone projekty, narzędzia wewnętrzne, komponenty wielokrotnego użytku i ogólna wiedza techniczna pozostają przy Yana Ellis."],
         ["Użycie w portfolio", "Jeśli poufność nie została uzgodniona pisemnie przed startem, Yana Ellis może pokazać ukończony publiczny projekt, zrzuty ekranu i opis pracy w portfolio oraz materiałach promocyjnych."],
-        ["Rabaty za kredyt projektantki", "Każdy rabat związany z kredytem w stopce lub promocją publiczną zależy od pisemnych warunków. Wcześniejsze usunięcie lub niewykonanie powoduje obowiązek zapłaty pierwotnej kwoty rabatu."],
-        ["Usługi zewnętrzne", "Domeny, hosting, wtyczki, procesory płatności, rezerwacje, fonty, materiały stockowe i API mogą mieć oddzielne opłaty, warunki i przerwy w działaniu."],
+        ["Rabaty za kredyt projektantki", `Opcjonalny rabat za kredyt projektantki obowiązuje tylko wtedy, gdy uzgodniony aktywny kredyt pozostaje widoczny i funkcjonalny w stopce strony. Jeśli zostanie usunięty, ukryty, wyłączony albo istotnie zmieniony bez pisemnej zgody, najpierw wysyłam pisemne powiadomienie i daję ${designerCreditCureDays()} dni kalendarzowych na przywrócenie. Jeśli kredyt nie zostanie przywrócony, pierwotna kwota rabatu może stać się należna. Strona nie jest automatycznie wyłączana wyłącznie z powodu usunięcia kredytu.`, "designer-credit"],
+        ["Hosting, repozytoria i transfer", "Repozytoria GitHub, projekty Vercel, domeny, rekordy DNS i konta usług zewnętrznych są obsługiwane zgodnie z finalną ofertą. Podczas produkcji kod lub wdrożenia mogą pozostać w moim workspace. Transfer, eksport albo odtworzenie w kontach klienta następuje po finalnej płatności, jeśli jest w zakresie i technicznie dostępne.", "hosting-transfer"],
+        ["Usługi zewnętrzne", "Domeny, hosting, wtyczki, procesory płatności, rezerwacje, fonty, materiały stockowe, email delivery, zewnętrzne API i subskrypcje mogą mieć oddzielne opłaty, warunki, awarie, limity użycia i zmiany zasad."],
+        ["Bezpieczeństwo, backupy i utrata danych", "Przy pracy z dostępami, plikami i wdrożeniami stosowana jest rozsądna ostrożność, ale żadna usługa online nie jest w pełni bezpieczna. Po handover klient odpowiada za kontrolę własnych kont, renewal payments i backupy, chyba że ongoing support stanowi inaczej.", "security"],
         ["Gwarancje i ograniczenia", "Usługi są wykonywane z rozsądną starannością i umiejętnością. Nie gwarantuje się nieprzerwanego działania, przyszłych zmian przeglądarek, pozycji w wyszukiwarce, sprzedaży, przychodów ani dostępności usług zewnętrznych."],
         ["Zakazane projekty i zachowanie", "Zapytania mogą zostać odrzucone lub zakończone z powodu treści nielegalnych, naruszeń praw, oszustwa, złośliwego oprogramowania, nękania, wykorzystywania, braku płatności lub obraźliwego zachowania."],
-        ["Wstrzymanie i zakończenie", "Praca może zostać wstrzymana przez brak płatności, materiałów, akceptacji lub naruszenie. Anulowanie i zwroty zależą od finalnej oferty i etapu projektu."],
-        ["Prawo właściwe i spory", tx(siteConfig.legal.governingLawNote, "pl")],
+        ["Wstrzymanie i zakończenie", "Praca może zostać wstrzymana przez brak płatności, materiałów, akceptacji lub naruszenie. Projekt może zostać zakończony z powiadomieniem przy długiej bezczynności, nielegalnych prośbach, obraźliwym zachowaniu, niebezpiecznych działaniach, naruszeniu praw, malware, braku płatności lub poważnym naruszeniu warunków. Anulowanie i zwroty zależą od finalnej oferty i etapu projektu.", "termination"],
+        ["Skargi i spory", `Formalne skargi należy wysyłać na ${siteConfig.contact.email} z numerem zapytania, nazwą projektu, opisem problemu, dowodami i oczekiwanym rezultatem. Sprawę analizuję pisemnie. ${tx(siteConfig.legal.governingLawNote, "pl")}`, "disputes"],
         ["Zmiany", "Warunki strony mogą być aktualizowane. Zmiany nie zastępują podpisanej umowy wstecznie, chyba że obie strony uzgodnią to pisemnie."],
         ["Kontakt", `Pytania ogólne: ${siteConfig.contact.telegram} lub ${siteConfig.contact.email}. Formalne zawiadomienia o płatnościach, anulowaniu, prawach lub prywatności należy wysyłać emailem.`]
       ]
@@ -691,13 +839,19 @@ function legalSections(type, language) {
 function renderLegal(type, language) {
   const page = pages[type];
   const sections = legalSections(type, language)
-    .map(([title, copy], index) => `<article class="policy-card"><h3>${index + 1}. ${title}</h3><p class="policy-note">${copy}</p></article>`)
+    .map(([title, copy, id], index) => `<article class="policy-card" id="${id || `${type}-section-${index + 1}`}"><h3>${index + 1}. ${title}</h3><p class="policy-note">${copy}</p></article>`)
     .join("");
+  const legalNav = type === "terms" ? anchorNav(termsAnchorItems(language)) : "";
+  const printAction =
+    type === "terms"
+      ? `<p class="policy-links print-policy"><button class="nav-link print-button" type="button" data-print-page>${printLabel(language)}</button></p>`
+      : "";
 
   return `
     ${renderHero(page, language)}
+    ${legalNav}
     <div class="content-grid">
-      ${section(type, "01", tx(page.heading, language), `<div class="policy-list">${sections}</div>`)}
+      ${section(type, "01", tx(page.heading, language), `${printAction}<div class="policy-list">${sections}</div>`)}
     </div>
     ${cta(language)}
   `;
@@ -754,6 +908,8 @@ function renderPage(language = currentLanguage()) {
       if (answer) answer.hidden = expanded;
     });
   });
+
+  document.querySelector("[data-print-page]")?.addEventListener("click", () => window.print());
 }
 
 renderPage();

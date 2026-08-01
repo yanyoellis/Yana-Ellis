@@ -768,6 +768,64 @@ button {
   background: transparent;
 }
 
+.designer-credit-preview {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(180px, 0.55fr);
+  gap: 12px;
+  align-items: stretch;
+}
+
+.designer-credit-badge,
+.designer-credit-card {
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.designer-credit-badge {
+  display: flex;
+  align-items: center;
+  min-height: 54px;
+  padding: 14px 16px;
+  color: var(--text);
+  font-size: 0.82rem;
+  line-height: 1.45;
+  text-decoration: none;
+}
+
+.designer-credit-card {
+  display: grid;
+  gap: 7px;
+  min-width: 0;
+  padding: 14px;
+}
+
+.designer-credit-card strong {
+  color: var(--text);
+  font-family: var(--serif);
+  font-size: 1.08rem;
+  font-weight: 500;
+}
+
+.designer-credit-card span {
+  color: var(--muted);
+  font-size: 0.74rem;
+  line-height: 1.4;
+}
+
+.designer-credit-card div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+}
+
+.designer-credit-card a {
+  color: var(--soft);
+  font-size: 0.72rem;
+  text-decoration: underline;
+  text-decoration-color: var(--line-strong);
+  text-underline-offset: 4px;
+}
+
 .conditional-panel {
   display: grid;
   gap: 12px;
@@ -1426,6 +1484,7 @@ button {
   .details-content,
   .choice-list,
   .checkbox-grid,
+  .designer-credit-preview,
   .policy-summary-grid,
   .starting-ranges ul,
   .submission-choice-grid {

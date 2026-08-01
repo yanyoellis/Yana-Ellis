@@ -28,12 +28,10 @@ window.YANA_SITE_CONFIG = {
     }
   },
   promotion: {
-    footerCreditDiscount: 10,
-    socialPostDiscount: 5,
-    combinedDiscount: 15,
-    displayPeriodMonths: 12,
-    postingDeadlineDays: 14,
-    minimumInstagramFollowers: 1000
+    DESIGNER_CREDIT_DISCOUNT_PERCENT: 10,
+    DESIGNER_CREDIT_CURE_DAYS: 7,
+    DEFAULT_DESIGNER_CREDIT_TERM: "while_site_remains_active",
+    DESIGNER_CREDIT_TERMS_VERSION: "designer-credit-2026-08-01"
   },
   providers: {
     hosting: "Vercel",
@@ -43,6 +41,18 @@ window.YANA_SITE_CONFIG = {
     analytics: "No non-essential analytics are intentionally enabled unless cookie consent and provider disclosure are added."
   },
   legal: {
+    TERMS_VERSION: "terms-2026-08-01",
+    TERMS_EFFECTIVE_DATE: {
+      en: "August 1, 2026",
+      uk: "1 серпня 2026 року",
+      pl: "1 sierpnia 2026"
+    },
+    PRIVACY_VERSION: "privacy-2026-08-01",
+    PRIVACY_EFFECTIVE_DATE: {
+      en: "August 1, 2026",
+      uk: "1 серпня 2026 року",
+      pl: "1 sierpnia 2026"
+    },
     effectiveDate: "August 1, 2026",
     governingLawNote: {
       en: "Governing law and dispute forum are confirmed in the final written proposal for each project.",
