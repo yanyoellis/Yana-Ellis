@@ -125,7 +125,7 @@ function assertRequestFormRequirements() {
     "phasedImplementation",
     "visualDirection",
     "more_than_12_pages",
-    "live-estimate-card",
+    "estimate-mini-breakdown",
     "baseIncludedNote",
     "positioningIntroLead",
     "referralSource",

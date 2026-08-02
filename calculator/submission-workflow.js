@@ -1723,18 +1723,6 @@
       .join("");
   }
 
-  function buildLiveEstimateCard(calculation = calculateDetailedEstimate()) {
-    return `
-      <aside class="live-estimate-card" aria-live="polite">
-        <div>
-          <h3>${wc("liveEstimateTitle")}</h3>
-          <p>${wc("liveEstimateCopy")}</p>
-        </div>
-        <dl>${buildLiveEstimateRows(calculation)}</dl>
-      </aside>
-    `;
-  }
-
   function updateDesktopEstimateBreakdown(calculation) {
     const panel = document.querySelector(".estimate-panel");
     if (!panel) {
@@ -1835,10 +1823,6 @@
       }
     }
 
-    const actions = questionPanel.querySelector(".question-actions");
-    if (actions && !questionPanel.querySelector(".live-estimate-card")) {
-      actions.insertAdjacentHTML("beforebegin", buildLiveEstimateCard());
-    }
   }
 
   function buildProjectSummary(calculation) {
