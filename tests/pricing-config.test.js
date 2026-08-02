@@ -7,25 +7,25 @@ const markets = [
   {
     name: "Canada",
     file: "calculator/canada/calculator.js",
-    roundingUnit: 50,
-    version: "CA-2026-07-29",
+    roundingUnit: 25,
+    version: "CA-2026-08-COMPETITIVE",
     expected: [
-      500, 650, 900, 600, 750, 1050, 0, 100, 150, 250, 450, 0, 100, 150, 250, 0,
-      100, 250, 0, 100, 250, 0, 100, 250, 0, 50, 100, 50, 0, 200, 150, 50, 100,
-      250, 50, 50, 50, 100, 100, 0, 100, 0, 50, 50, 0, 50, 50, 100
+      550, 700, 900, 650, 800, 1200, 0, 0, 150, 300, 500, 0, 75, 150, 250, 0,
+      100, 250, 0, 100, 250, 0, 125, 300, 0, 50, 75, 50, 0, 175, 125, 0, 100,
+      250, 0, 0, 0, 0, 100, 0, 100, 0, 0, 0, 0, 50, 59, 119
     ],
     hierarchyIndexes: { simple: 0, extended: 1, business: 2, interactive: 5 }
   },
   {
     name: "Poland",
     file: "calculator/poland/calculator.js",
-    roundingUnit: 100,
-    version: "PL-2026-07-29",
+    roundingUnit: 50,
+    version: "PL-2026-08-COMPETITIVE",
     expected: [
-      900, 1100, 1700, 1100, 1400, 2000, 0, 100, 300, 600, 900, 1300, 0, 100,
-      300, 600, 0, 200, 500, 0, 200, 500, 0, 300, 600, 0, 0, 100, 100, 100,
-      400, 300, 100, 200, 400, 100, 100, 100, 100, 100, 100, 0, 200, 500, 0,
-      100, 100, 0, 100, 100, 200
+      900, 1200, 1700, 1100, 1400, 2200, 0, 0, 300, 600, 1000, 1500, 0, 150,
+      300, 500, 0, 200, 500, 0, 200, 500, 0, 250, 650, 0, 0, 100, 150, 100,
+      350, 250, 0, 200, 450, 0, 0, 0, 0, 100, 0, 0, 200, 600, 0, 0, 0, 0,
+      100, 99, 199
     ],
     hierarchyIndexes: { simple: 0, extended: 1, business: 2, interactive: 5 }
   },
@@ -33,12 +33,12 @@ const markets = [
     name: "Ukraine",
     file: "calculator/ukraine/calculator.js",
     roundingUnit: 500,
-    version: "UA-2026-07-29",
+    version: "UA-2026-08-COMPETITIVE",
     expected: [
-      9000, 11500, 18000, 11000, 14500, 21500, 0, 1500, 3500, 6000, 9500,
-      13500, 0, 1500, 3500, 5500, 0, 2500, 5500, 0, 2500, 6000, 0, 3000, 7000,
-      0, 0, 1500, 1500, 1500, 4500, 3500, 1500, 2500, 5500, 1000, 1000, 1500,
-      2000, 2000, 1000, 0, 2500, 6000, 0, 1000, 1000, 0, 1500, 1500, 3500
+      8000, 11000, 16000, 10000, 13000, 21000, 0, 0, 3000, 6000, 10000,
+      15000, 0, 1500, 3000, 5000, 0, 2000, 5000, 0, 2000, 5000, 0, 2500,
+      6000, 0, 0, 1000, 1500, 1000, 4000, 3000, 0, 2000, 5000, 0, 0, 0,
+      0, 2000, 0, 0, 2000, 6000, 0, 0, 0, 0, 1000, 1500, 3000
     ],
     hierarchyIndexes: { simple: 0, extended: 1, business: 2, interactive: 5 }
   }
@@ -54,12 +54,21 @@ function read(file) {
   return fs.readFileSync(path.join(root, file), "utf8");
 }
 
+function priceEntries(source) {
+  return [...source.matchAll(/\b(amount|monthly):\s*(\d+)/g)].map((match) => ({
+    type: match[1],
+    value: Number(match[2])
+  }));
+}
+
 function priceValues(source) {
-  return [...source.matchAll(/\b(?:amount|monthly):\s*(\d+)/g)].map((match) => Number(match[1]));
+  return priceEntries(source).map((entry) => entry.value);
 }
 
 function assertPricingValues(market) {
-  const values = priceValues(read(market.file));
+  const source = read(market.file);
+  const values = priceValues(source);
+  const entries = priceEntries(source);
 
   assert(
     values.length === market.expected.length,
@@ -68,7 +77,9 @@ function assertPricingValues(market) {
 
   values.forEach((value, index) => {
     assert(value === market.expected[index], `${market.name}: value ${index} expected ${market.expected[index]}, found ${value}`);
-    assert(value === 0 || value % market.roundingUnit === 0, `${market.name}: value ${index} is not rounded to ${market.roundingUnit}`);
+    if (entries[index].type === "amount") {
+      assert(value === 0 || value % market.roundingUnit === 0, `${market.name}: value ${index} is not rounded to ${market.roundingUnit}`);
+    }
   });
 
   const h = market.hierarchyIndexes;
@@ -85,7 +96,7 @@ function assertPricingVersions() {
     assert(workflow.includes(`roundingUnit: ${market.roundingUnit}`), `${market.name}: workflow rounding unit is not ${market.roundingUnit}`);
   });
 
-  assert(workflow.includes('const WORKFLOW_VERSION = "1.5";'), "Missing updated workflow version.");
+  assert(workflow.includes('const WORKFLOW_VERSION = "1.6";'), "Missing updated workflow version.");
   assert(workflow.includes('const FORM_VERSION = "2.4";'), "Missing updated form version.");
 }
 
@@ -113,7 +124,10 @@ function assertRequestFormRequirements() {
     "translationSource",
     "phasedImplementation",
     "visualDirection",
-    "more_than_twenty_pages",
+    "more_than_12_pages",
+    "live-estimate-card",
+    "baseIncludedNote",
+    "positioningIntroLead",
     "referralSource",
     "promotionalOption",
     "promotionalOptions",

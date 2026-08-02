@@ -1,7 +1,7 @@
 (() => {
-  const WORKFLOW_VERSION = "1.5";
+  const WORKFLOW_VERSION = "1.6";
   const FORM_VERSION = "2.4";
-  const PRICING_MONTH = "2026-07-29";
+  const PRICING_MONTH = "2026-08-02";
   const API_ENDPOINT = "/api/submit-estimate";
   const telegramHandle = "@ohyanyo";
   const siteConfig = window.YANA_SITE_CONFIG || {};
@@ -65,8 +65,8 @@
       label: { en: "Canada", uk: "Канада", pl: "Kanada" },
       currencyCode: "CAD",
       displayCurrency: "CAD",
-      roundingUnit: 50,
-      pricingVersion: "CA-2026-07-29"
+      roundingUnit: 25,
+      pricingVersion: "CA-2026-08-COMPETITIVE"
     },
     poland: {
       id: "poland",
@@ -74,8 +74,8 @@
       label: { en: "Poland", uk: "Польща", pl: "Polska" },
       currencyCode: "PLN",
       displayCurrency: "PLN",
-      roundingUnit: 100,
-      pricingVersion: "PL-2026-07-29"
+      roundingUnit: 50,
+      pricingVersion: "PL-2026-08-COMPETITIVE"
     },
     ukraine: {
       id: "ukraine",
@@ -84,7 +84,7 @@
       currencyCode: "UAH",
       displayCurrency: "грн",
       roundingUnit: 500,
-      pricingVersion: "UA-2026-07-29"
+      pricingVersion: "UA-2026-08-COMPETITIVE"
     }
   };
 
@@ -706,6 +706,13 @@
     manualNotice:
       "Your project includes advanced or custom requirements. The estimate shown is a preliminary range, not a confirmed final price. I will review the details and confirm the exact scope before work begins.",
     estimatedProjectBudget: "Estimated project budget",
+    liveEstimateTitle: "Live estimate",
+    liveEstimateCopy: "Updates after every selected answer.",
+    baseIncludedNote: "Included in selected base package",
+    positioningIntroLead:
+      "Every website is individually designed and developed around the business rather than adapted from a pre-made visual layout.",
+    positioningIntroProcess:
+      "I personally handle the complete process, including design, development, responsive implementation, forms, domain connection and launch.",
     baseWebsite: "Base project",
     pagesAndContent: "Pages and content",
     designAndAnimation: "Design and animation",
@@ -849,6 +856,13 @@
     manualNotice:
       "У проєкті є складні або індивідуальні вимоги. Показана сума є попереднім діапазоном, а не підтвердженою фінальною ціною. Я перегляну деталі та підтверджу точний обсяг перед початком роботи.",
     estimatedProjectBudget: "Орієнтовний бюджет проєкту",
+    liveEstimateTitle: "Живий розрахунок",
+    liveEstimateCopy: "Оновлюється після кожної обраної відповіді.",
+    baseIncludedNote: "Включено в обраний базовий пакет",
+    positioningIntroLead:
+      "Кожен сайт створюється індивідуально під конкретний бізнес, а не адаптується з готового візуального шаблону.",
+    positioningIntroProcess:
+      "Я особисто відповідаю за весь процес: дизайн, розробку, адаптивну версію, форми, підключення домену та запуск.",
     baseWebsite: "Базовий проєкт",
     pagesAndContent: "Сторінки та контент",
     designAndAnimation: "Дизайн і анімація",
@@ -991,6 +1005,13 @@
     manualNotice:
       "Projekt zawiera zaawansowane lub indywidualne wymagania. Pokazana kwota jest wstępnym zakresem, a nie potwierdzoną ceną końcową. Przeanalizuję szczegóły i potwierdzę dokładny zakres przed rozpoczęciem pracy.",
     estimatedProjectBudget: "Szacunkowy budżet projektu",
+    liveEstimateTitle: "Wycena na żywo",
+    liveEstimateCopy: "Aktualizuje się po każdej wybranej odpowiedzi.",
+    baseIncludedNote: "Wliczone w wybrany pakiet bazowy",
+    positioningIntroLead:
+      "Każda strona jest indywidualnie projektowana i wdrażana dla konkretnej firmy, zamiast być jedynie adaptacją gotowego układu wizualnego.",
+    positioningIntroProcess:
+      "Osobiście odpowiadam za cały proces: projekt, wdrożenie, wersję responsywną, formularze, podłączenie domeny i uruchomienie strony.",
     baseWebsite: "Projekt bazowy",
     pagesAndContent: "Strony i treści",
     designAndAnimation: "Design i animacja",
@@ -1158,6 +1179,16 @@
     return values[marketConfig().id] ?? values.canada ?? 0;
   }
 
+  function calculatorConfig() {
+    if (typeof questionCopy !== "undefined") {
+      return questionCopy;
+    }
+    if (typeof questions !== "undefined") {
+      return questions;
+    }
+    return {};
+  }
+
   function recommendOption() {
     return {
       id: "not_sure_recommend",
@@ -1200,39 +1231,40 @@
 
   function enhancedPageOptions() {
     const amounts = {
-      canada: [0, 150, 250, 450, 650, 900],
-      poland: [0, 300, 600, 900, 1300, 1800],
-      ukraine: [0, 3500, 6000, 9500, 13500, 19000]
+      canada: [0, 0, 150, 300, 500, 750],
+      poland: [0, 0, 300, 600, 1000, 1500],
+      ukraine: [0, 0, 3000, 6000, 10000, 15000]
     }[marketConfig().id];
 
     return [
       { id: "one_page", amount: amounts[0], title: { en: "1 page", uk: "1 сторінка", pl: "1 podstrona" } },
-      { id: "two_five_pages", amount: amounts[1], title: { en: "2-5 pages", uk: "2-5 сторінок", pl: "2-5 podstron" } },
-      { id: "six_eight_pages", amount: amounts[2], title: { en: "6-8 pages", uk: "6-8 сторінок", pl: "6-8 podstron" } },
-      { id: "nine_twelve_pages", amount: amounts[3], title: { en: "9-12 pages", uk: "9-12 сторінок", pl: "9-12 podstron" } },
-      { id: "thirteen_twenty_pages", amount: amounts[4], manual: true, starting: true, noteKey: "largeSiteNote", title: { en: "13-20 pages", uk: "13-20 сторінок", pl: "13-20 podstron" } },
-      { id: "more_than_twenty_pages", amount: amounts[5], customQuote: true, manual: true, starting: true, noteKey: "largeSiteNote", title: { en: "More than 20 pages", uk: "Більше ніж 20 сторінок", pl: "Więcej niż 20 podstron" } }
+      { id: "two_three_pages", amount: amounts[1], title: { en: "2-3 pages", uk: "2-3 сторінки", pl: "2-3 podstrony" } },
+      { id: "four_five_pages", amount: amounts[2], title: { en: "4-5 pages", uk: "4-5 сторінок", pl: "4-5 podstron" } },
+      { id: "six_eight_pages", amount: amounts[3], title: { en: "6-8 pages", uk: "6-8 сторінок", pl: "6-8 podstron" } },
+      { id: "nine_twelve_pages", amount: amounts[4], title: { en: "9-12 pages", uk: "9-12 сторінок", pl: "9-12 podstron" } },
+      { id: "more_than_12_pages", amount: amounts[5], manual: true, starting: true, noteKey: "largeSiteNote", title: { en: "More than 12 pages", uk: "Більше ніж 12 сторінок", pl: "Więcej niż 12 podstron" } }
     ];
   }
 
   function enhanceQuestionConfiguration() {
-    if (questionCopy.__workflowEnhanced) {
+    const config = calculatorConfig();
+    if (config.__workflowEnhanced) {
       return;
     }
-    questionCopy.__workflowEnhanced = true;
+    config.__workflowEnhanced = true;
 
-    questionCopy.sizePages.options = enhancedPageOptions();
+    config.sizePages.options = enhancedPageOptions();
 
     ["content", "design", "animations", "languages", "domain", "timeline", "support", "onlineSales"].forEach((questionId) => {
-      addOptionIfMissing(questionCopy[questionId], recommendOption());
+      addOptionIfMissing(config[questionId], recommendOption());
     });
 
     ["contactFeatures", "businessFeatures"].forEach((questionId) => {
-      addOptionIfMissing(questionCopy[questionId], recommendOption());
+      addOptionIfMissing(config[questionId], recommendOption());
     });
 
-    replaceOption(questionCopy.businessFeatures, "price_calculator", {
-      amount: marketAmount({ canada: 200, poland: 500, ukraine: 5500 }),
+    replaceOption(config.businessFeatures, "price_calculator", {
+      amount: marketAmount({ canada: 175, poland: 350, ukraine: 4000 }),
       title: { en: "Simple price calculator", uk: "Простий калькулятор ціни", pl: "Prosty kalkulator ceny" },
       description: {
         en: "A compact calculator with a few fixed options and a clear result.",
@@ -1241,10 +1273,10 @@
       }
     });
     addOptionIfMissing(
-      questionCopy.businessFeatures,
+      config.businessFeatures,
       {
         id: "multi_step_calculator",
-        amount: marketAmount({ canada: 500, poland: 1000, ukraine: 10500 }),
+        amount: marketAmount({ canada: 350, poland: 700, ukraine: 8000 }),
         starting: true,
         title: { en: "Multi-step price calculator", uk: "Багатокроковий калькулятор ціни", pl: "Wielokrokowy kalkulator ceny" },
         description: {
@@ -1256,7 +1288,7 @@
       "price_calculator"
     );
     addOptionIfMissing(
-      questionCopy.businessFeatures,
+      config.businessFeatures,
       {
         id: "advanced_conditional_calculator",
         customQuote: true,
@@ -1271,15 +1303,15 @@
       "multi_step_calculator"
     );
 
-    replaceOption(questionCopy.businessFeatures, "booking", {
-      amount: marketAmount({ canada: 150, poland: 300, ukraine: 3500 }),
+    replaceOption(config.businessFeatures, "booking", {
+      amount: marketAmount({ canada: 125, poland: 250, ukraine: 3000 }),
       title: { en: "External booking link or embedded system", uk: "Зовнішнє бронювання або вбудована система", pl: "Zewnętrzny link lub osadzony system rezerwacji" }
     });
     addOptionIfMissing(
-      questionCopy.businessFeatures,
+      config.businessFeatures,
       {
         id: "custom_booking",
-        amount: marketAmount({ canada: 450, poland: 900, ukraine: 9500 }),
+        amount: marketAmount({ canada: 350, poland: 750, ukraine: 8000 }),
         starting: true,
         manual: true,
         title: { en: "Custom booking flow", uk: "Індивідуальний сценарій бронювання", pl: "Indywidualny proces rezerwacji" },
@@ -1292,14 +1324,19 @@
       "booking"
     );
 
-    replaceOption(questionCopy.businessFeatures, "editable_content", {
-      amount: marketAmount({ canada: 250, poland: 600, ukraine: 6000 }),
+    replaceOption(config.businessFeatures, "editable_content", {
+      amount: marketAmount({ canada: 225, poland: 450, ukraine: 5000 }),
       starting: true,
       manual: true,
       title: { en: "Basic CMS for selected content", uk: "Базова CMS для вибраного контенту", pl: "Podstawowy CMS dla wybranych treści" }
     });
+    replaceOption(config.businessFeatures, "editable_blog", {
+      amount: marketAmount({ canada: 225, poland: 450, ukraine: 5000 }),
+      starting: true,
+      manual: true
+    });
     addOptionIfMissing(
-      questionCopy.businessFeatures,
+      config.businessFeatures,
       {
         id: "advanced_admin_panel",
         customQuote: true,
@@ -1343,6 +1380,8 @@
   }
 
   function optionEffect(question, option) {
+    const effectiveAmount = effectiveOptionAmount(question.id, option);
+
     if (option.customQuote) {
       return wc("customQuote");
     }
@@ -1353,13 +1392,77 @@
       return option.priceDisplay || multiplierDisplay(option.multiplier || 1);
     }
     if (question.id === "purpose") {
-      return option.amount ? formatAmount(option.amount) : wc("customQuote");
+      return effectiveAmount ? formatAmount(effectiveAmount) : wc("customQuote");
+    }
+    if (effectiveAmount) {
+      return signedAmount(effectiveAmount);
     }
     if (option.amount) {
-      return signedAmount(option.amount);
+      return wc("baseIncludedNote");
     }
     return wc("included");
   }
+
+  function selectedPurposeId() {
+    return String(state.answers?.purpose || "");
+  }
+
+  function isExtendedOnePagePurpose(purposeId = selectedPurposeId()) {
+    return ["extended_landing", "extended_one_page"].includes(purposeId);
+  }
+
+  function isInteractivePurpose(purposeId = selectedPurposeId()) {
+    return ["interactive", "interactive_website"].includes(purposeId);
+  }
+
+  function effectiveOptionAmount(questionId, option) {
+    const amount = option.amount || 0;
+    const optionId = option.id;
+
+    if (!amount) {
+      return 0;
+    }
+
+    if (questionId === "size" && isExtendedOnePagePurpose() && ["six_to_8_sections", "six_eight_sections"].includes(optionId)) {
+      return 0;
+    }
+
+    if (isInteractivePurpose() && questionId === "design" && optionId === "distinctive") {
+      return 0;
+    }
+
+    if (isInteractivePurpose() && questionId === "animations" && optionId === "advanced") {
+      return 0;
+    }
+
+    return amount;
+  }
+
+  const nativeGetOptionPriceLabel = getOptionPriceLabel;
+  getOptionPriceLabel = function getWorkflowOptionPriceLabel(question, option) {
+    if (option.customQuote) {
+      return wc("customQuote");
+    }
+
+    if (option.monthly) {
+      return formatMonthly(option.monthly);
+    }
+
+    if (option.priceDisplay || (option.multiplier && option.multiplier !== 1)) {
+      return option.priceDisplay || multiplierDisplay(option.multiplier || 1);
+    }
+
+    const effectiveAmount = effectiveOptionAmount(question.id, option);
+    if (!effectiveAmount && option.amount) {
+      return wc("baseIncludedNote");
+    }
+
+    if (question.id === "purpose") {
+      return effectiveAmount ? formatAmount(effectiveAmount) : nativeGetOptionPriceLabel(question, option);
+    }
+
+    return effectiveAmount ? formatAddition(effectiveAmount, option.starting) : wc("included");
+  };
 
   function selectedAnswerObjects() {
     return getQuestions().map((question, index) => {
@@ -1396,7 +1499,8 @@
         const isLanguage = questionId === "languages";
         const isTimeline = questionId === "timeline";
         const isMonthly = Boolean(option.monthly);
-        const fixedPrice = !isBase && !isLanguage && !isTimeline && !isMonthly ? option.amount || 0 : 0;
+        const effectiveAmount = effectiveOptionAmount(questionId, option);
+        const fixedPrice = !isBase && !isLanguage && !isTimeline && !isMonthly ? effectiveAmount : 0;
         const multiplier = isLanguage || isTimeline ? option.multiplier || 1 : null;
         const priceType = isBase ? "base" : isLanguage || isTimeline ? "multiplier" : isMonthly ? "monthly" : fixedPrice ? "fixed" : option.customQuote ? "custom" : "included";
 
@@ -1407,7 +1511,7 @@
           manualFlags.push(getText(option.title));
         }
         if (isBase) {
-          basePrice += option.amount || 0;
+          basePrice += effectiveAmount;
         } else if (isLanguage) {
           languageMultiplier = option.multiplier || 1;
         } else if (isTimeline) {
@@ -1436,9 +1540,10 @@
           optionLabel: getText(option.title),
           optionDescription: getText(option.description),
           priceType,
-          fixedPrice: isBase ? option.amount || 0 : fixedPrice,
+          fixedPrice: isBase ? effectiveAmount : fixedPrice,
+          rawAmount: option.amount || 0,
           multiplier,
-          included: !option.amount && !option.monthly && !option.customQuote && !multiplier,
+          included: !effectiveAmount && !option.monthly && !option.customQuote && !multiplier,
           manualReview: Boolean(option.manual || option.customQuote || option.customBase),
           priceEffect: optionEffect(question, option)
         });
@@ -1605,6 +1710,47 @@
     `;
   }
 
+  function buildLiveEstimateRows(calculation) {
+    return groupedBreakdownRows(calculation)
+      .map(
+        (row) => `
+          <div>
+            <dt>${html(row.category)}</dt>
+            <dd>${html(row.effect)}</dd>
+          </div>
+        `
+      )
+      .join("");
+  }
+
+  function buildLiveEstimateCard(calculation = calculateDetailedEstimate()) {
+    return `
+      <aside class="live-estimate-card" aria-live="polite">
+        <div>
+          <h3>${wc("liveEstimateTitle")}</h3>
+          <p>${wc("liveEstimateCopy")}</p>
+        </div>
+        <dl>${buildLiveEstimateRows(calculation)}</dl>
+      </aside>
+    `;
+  }
+
+  function updateDesktopEstimateBreakdown(calculation) {
+    const panel = document.querySelector(".estimate-panel");
+    if (!panel) {
+      return;
+    }
+
+    let breakdown = panel.querySelector(".estimate-mini-breakdown");
+    if (!breakdown) {
+      breakdown = document.createElement("dl");
+      breakdown.className = "estimate-mini-breakdown";
+      panel.appendChild(breakdown);
+    }
+
+    breakdown.innerHTML = buildLiveEstimateRows(calculation);
+  }
+
   function buildPriceNotice() {
     return `
       <section class="price-notice" role="note">
@@ -1620,12 +1766,12 @@
   }
 
   function marketRangeLines() {
-    const purposeOptions = questionCopy.purpose.options;
-    const optionAmount = (id) => purposeOptions.find((option) => option.id === id)?.amount || 0;
+    const purposeOptions = calculatorConfig().purpose?.options || [];
+    const optionAmount = (...ids) => purposeOptions.find((option) => ids.includes(option.id))?.amount || 0;
     const replacements = {
-      simple: formatAmount(optionAmount("simple_landing")),
+      simple: formatAmount(optionAmount("simple_landing", "simple_one_page")),
       business: formatAmount(optionAmount("business_website")),
-      interactive: formatAmount(optionAmount("interactive"))
+      interactive: formatAmount(optionAmount("interactive", "interactive_website"))
     };
 
     return (workflowCopy[currentLanguage]?.marketRanges || workflowCopy.en.marketRanges).map((line) =>
@@ -1639,6 +1785,19 @@
     if (!intro || !progressWrap) {
       return;
     }
+
+    let positioning = document.querySelector("#calculatorPositioning");
+    if (!positioning) {
+      positioning = document.createElement("section");
+      positioning.id = "calculatorPositioning";
+      positioning.className = "positioning-note";
+      intro.insertAdjacentElement("afterend", positioning);
+    }
+
+    positioning.innerHTML = `
+      <p>${html(wc("positioningIntroLead"))}</p>
+      <p>${html(wc("positioningIntroProcess"))}</p>
+    `;
 
     let ranges = document.querySelector("#marketStartingRanges");
     if (!ranges) {
@@ -1674,6 +1833,11 @@
       if (actions && !questionPanel.querySelector(".advanced-feature-note")) {
         actions.insertAdjacentHTML("beforebegin", `<p class="question-note advanced-feature-note">${wc("advancedFeatureNotice")}</p>`);
       }
+    }
+
+    const actions = questionPanel.querySelector(".question-actions");
+    if (actions && !questionPanel.querySelector(".live-estimate-card")) {
+      actions.insertAdjacentHTML("beforebegin", buildLiveEstimateCard());
     }
   }
 
@@ -2469,6 +2633,7 @@
     if (estimateAnnouncement) {
       estimateAnnouncement.textContent = `${wc("estimatedProjectBudget")}: ${display}`;
     }
+    updateDesktopEstimateBreakdown(calculation);
   };
 
   editStep = function editEnhancedStep(step) {

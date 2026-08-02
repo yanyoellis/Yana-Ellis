@@ -334,7 +334,7 @@ const questionCopy = {
     options: [
       {
         id: "simple_landing",
-        amount: 500,
+        amount: 550,
         title: {
           en: "Present one service or offer",
           uk: "Представити одну послугу або пропозицію",
@@ -348,7 +348,7 @@ const questionCopy = {
       },
       {
         id: "extended_landing",
-        amount: 650,
+        amount: 700,
         title: {
           en: "Present my business in more detail",
           uk: "Детальніше представити мій бізнес",
@@ -376,7 +376,7 @@ const questionCopy = {
       },
       {
         id: "portfolio",
-        amount: 600,
+        amount: 650,
         title: {
           en: "Showcase my work or personal brand",
           uk: "Показати мої роботи або особистий бренд",
@@ -390,7 +390,7 @@ const questionCopy = {
       },
       {
         id: "restaurant",
-        amount: 750,
+        amount: 800,
         title: {
           en: "Present a restaurant, cafe or bar",
           uk: "Представити ресторан, кафе або бар",
@@ -404,7 +404,7 @@ const questionCopy = {
       },
       {
         id: "interactive",
-        amount: 1050,
+        amount: 1200,
         title: {
           en: "Create an unusual interactive experience",
           uk: "Створити незвичайний інтерактивний сайт",
@@ -460,7 +460,7 @@ const questionCopy = {
       },
       {
         id: "small_pages",
-        amount: 100,
+        amount: 0,
         title: { en: "A small website with 2-3 pages", uk: "Невеликий сайт на 2-3 сторінки", pl: "Mała strona z 2-3 podstronami" }
       },
       {
@@ -470,12 +470,12 @@ const questionCopy = {
       },
       {
         id: "larger_pages",
-        amount: 250,
+        amount: 300,
         title: { en: "A larger website with 6-8 pages", uk: "Більший сайт на 6-8 сторінок", pl: "Większa strona z 6-8 podstronami" }
       },
       {
         id: "more_than_8_pages",
-        amount: 450,
+        amount: 500,
         starting: true,
         manual: true,
         noteKey: "largeSiteNote",
@@ -510,7 +510,7 @@ const questionCopy = {
       },
       {
         id: "six_to_8_sections",
-        amount: 100,
+        amount: 75,
         title: { en: "6-8 sections", uk: "6-8 секцій", pl: "6-8 sekcji" }
       },
       {
@@ -663,7 +663,7 @@ const questionCopy = {
       },
       {
         id: "advanced",
-        amount: 100,
+        amount: 125,
         title: { en: "Advanced animations", uk: "Розширені анімації", pl: "Zaawansowane animacje" },
         description: {
           en: "More expressive transitions, scroll effects and detailed motion.",
@@ -673,7 +673,7 @@ const questionCopy = {
       },
       {
         id: "immersive",
-        amount: 250,
+        amount: 300,
         starting: true,
         manual: true,
         noteKey: "animationNote",
@@ -728,7 +728,7 @@ const questionCopy = {
       },
       {
         id: "file_upload",
-        amount: 100,
+        amount: 75,
         title: {
           en: "Allow visitors to upload files",
           uk: "Дозволити відвідувачам завантажувати файли",
@@ -769,7 +769,7 @@ const questionCopy = {
     options: [
       {
         id: "price_calculator",
-        amount: 200,
+        amount: 175,
         title: {
           en: "Let visitors calculate an estimated price",
           uk: "Дозволити відвідувачам розрахувати орієнтовну ціну",
@@ -778,7 +778,7 @@ const questionCopy = {
       },
       {
         id: "booking",
-        amount: 150,
+        amount: 125,
         title: {
           en: "Allow visitors to book an appointment or reservation",
           uk: "Дозволити відвідувачам бронювати зустріч або резервувати місце",
@@ -792,7 +792,7 @@ const questionCopy = {
       },
       {
         id: "gallery",
-        amount: 50,
+        amount: 0,
         title: {
           en: "Show a project or photo gallery",
           uk: "Показати галерею проєктів або фотографій",
@@ -821,7 +821,7 @@ const questionCopy = {
       },
       {
         id: "faq",
-        amount: 50,
+        amount: 0,
         title: {
           en: "Frequently asked questions section",
           uk: "Розділ поширених запитань",
@@ -830,12 +830,12 @@ const questionCopy = {
       },
       {
         id: "testimonials",
-        amount: 50,
+        amount: 0,
         title: { en: "Customer reviews or testimonials", uk: "Відгуки клієнтів", pl: "Opinie klientów" }
       },
       {
         id: "map",
-        amount: 50,
+        amount: 0,
         title: {
           en: "Interactive map with the business location",
           uk: "Інтерактивна карта з адресою бізнесу",
@@ -844,7 +844,7 @@ const questionCopy = {
       },
       {
         id: "menu",
-        amount: 100,
+        amount: 0,
         title: { en: "Restaurant, cafe or service menu", uk: "Меню ресторану, кафе або послуг", pl: "Menu restauracji, kawiarni lub usług" }
       },
       {
@@ -937,14 +937,14 @@ const questionCopy = {
       },
       {
         id: "two",
-        multiplier: 1.25,
-        priceDisplay: "+25%",
+        multiplier: 1.15,
+        priceDisplay: "+15%",
         title: { en: "Two languages", uk: "Дві мови", pl: "Dwa języki" }
       },
       {
         id: "three",
-        multiplier: 1.45,
-        priceDisplay: "+45%",
+        multiplier: 1.25,
+        priceDisplay: "+25%",
         title: { en: "Three languages", uk: "Три мови", pl: "Trzy języki" }
       },
       {
@@ -977,7 +977,7 @@ const questionCopy = {
       },
       {
         id: "need_domain_help",
-        amount: 50,
+        amount: 0,
         noteKey: "launchNote",
         title: {
           en: "I need help choosing and connecting a domain",
@@ -987,7 +987,7 @@ const questionCopy = {
       },
       {
         id: "not_sure",
-        amount: 50,
+        amount: 0,
         title: { en: "I am not sure", uk: "Я не впевнений / не впевнена", pl: "Nie wiem" }
       }
     ]
@@ -1020,8 +1020,8 @@ const questionCopy = {
       },
       {
         id: "priority",
-        multiplier: 1.3,
-        priceDisplay: "+30%",
+        multiplier: 1.2,
+        priceDisplay: "+20%",
         title: { en: "Priority timeline", uk: "Пріоритетний термін", pl: "Termin priorytetowy" },
         description: {
           en: "Approximately 5-7 business days, depending on complexity and client response time.",
@@ -1031,8 +1031,8 @@ const questionCopy = {
       },
       {
         id: "rush",
-        multiplier: 1.5,
-        priceDisplay: "+50%",
+        multiplier: 1.35,
+        priceDisplay: "+35%",
         title: { en: "Rush project", uk: "Терміновий проєкт", pl: "Pilny projekt" },
         description: {
           en: "The earliest realistic delivery date, confirmed individually before work begins.",
@@ -1079,12 +1079,12 @@ const questionCopy = {
       },
       {
         id: "monthly_basic",
-        monthly: 50,
+        monthly: 59,
         title: { en: "Basic monthly support", uk: "Базова щомісячна підтримка", pl: "Podstawowe wsparcie miesięczne" }
       },
       {
         id: "monthly_extended",
-        monthly: 100,
+        monthly: 119,
         title: { en: "Extended monthly support", uk: "Розширена щомісячна підтримка", pl: "Rozszerzone wsparcie miesięczne" }
       }
     ]
