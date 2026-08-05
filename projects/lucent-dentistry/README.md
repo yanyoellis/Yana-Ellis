@@ -36,7 +36,6 @@ http://127.0.0.1:<port>/projects/lucent-dentistry/index.html
 
 - Sticky glass navigation
 - Mobile menu
-- EN / PL / UA interface switcher
 - Service search and filters
 - FAQ accordion
 - Before/after slider

@@ -9,96 +9,34 @@
   const toastRegion = document.querySelector("#toastRegion");
 
   const copy = {
-    en: {
-      caption: "Private dental studio",
-      home: "Home",
-      services: "Services",
-      doctors: "Doctors",
-      about: "About",
-      pricing: "Pricing",
-      reviews: "Reviews",
-      contact: "Contact",
-      appointment: "Appointment",
-      book: "Book an appointment",
-      explore: "Explore treatments",
-      learnMore: "Learn more",
-      viewProfile: "View profile",
-      search: "Search services",
-      all: "All",
-      submit: "Submit request",
-      find: "Find an appointment",
-      next: "Next",
-      back: "Back",
-      confirm: "Confirm request",
-      close: "Close",
-      menu: "Menu",
-      success: "Your request has been received. Our coordinator will contact you shortly.",
-      newsletter: "Newsletter saved. Thank you.",
-      required: "Please complete this field.",
-      email: "Please enter a valid email address.",
-      phone: "Please enter a phone number.",
-      legal: "This demonstration website is for portfolio presentation. Treatment decisions require a real clinical consultation."
-    },
-    pl: {
-      caption: "Prywatne studio stomatologiczne",
-      home: "Start",
-      services: "Usługi",
-      doctors: "Lekarze",
-      about: "O klinice",
-      pricing: "Cennik",
-      reviews: "Opinie",
-      contact: "Kontakt",
-      appointment: "Wizyta",
-      book: "Umów wizytę",
-      explore: "Zobacz leczenie",
-      learnMore: "Czytaj więcej",
-      viewProfile: "Profil",
-      search: "Szukaj usług",
-      all: "Wszystkie",
-      submit: "Wyślij zapytanie",
-      find: "Znajdź termin",
-      next: "Dalej",
-      back: "Wstecz",
-      confirm: "Potwierdź",
-      close: "Zamknij",
-      menu: "Menu",
-      success: "Zgłoszenie zostało przyjęte. Koordynator skontaktuje się z Tobą wkrótce.",
-      newsletter: "Newsletter zapisany. Dziękujemy.",
-      required: "Uzupełnij to pole.",
-      email: "Wpisz poprawny adres email.",
-      phone: "Wpisz numer telefonu.",
-      legal: "Ta strona demonstracyjna służy prezentacji portfolio. Decyzje medyczne wymagają konsultacji klinicznej."
-    },
-    uk: {
-      caption: "Приватна стоматологічна студія",
-      home: "Головна",
-      services: "Послуги",
-      doctors: "Лікарі",
-      about: "Про клініку",
-      pricing: "Ціни",
-      reviews: "Відгуки",
-      contact: "Контакти",
-      appointment: "Запис",
-      book: "Записатися",
-      explore: "Переглянути послуги",
-      learnMore: "Детальніше",
-      viewProfile: "Профіль",
-      search: "Пошук послуг",
-      all: "Усі",
-      submit: "Надіслати запит",
-      find: "Знайти час",
-      next: "Далі",
-      back: "Назад",
-      confirm: "Підтвердити",
-      close: "Закрити",
-      menu: "Меню",
-      success: "Ваш запит отримано. Координатор зв'яжеться з вами найближчим часом.",
-      newsletter: "Підписку збережено. Дякуємо.",
-      required: "Заповніть це поле.",
-      email: "Введіть коректний email.",
-      phone: "Введіть номер телефону.",
-      legal: "Цей демонстраційний сайт створено для портфоліо. Медичні рішення потребують реальної консультації."
-    }
+    caption: "Private dental studio",
+    home: "Home",
+    services: "Services",
+    doctors: "Doctors",
+    about: "About",
+    pricing: "Pricing",
+    reviews: "Reviews",
+    contact: "Contact",
+    appointment: "Appointment",
+    book: "Book an appointment",
+    explore: "Explore treatments",
+    learnMore: "Learn more",
+    viewProfile: "View profile",
+    search: "Search services",
+    all: "All",
+    submit: "Submit request",
+    find: "Find an appointment",
+    next: "Next",
+    back: "Back",
+    confirm: "Confirm request",
+    close: "Close",
+    menu: "Menu",
+    success: "Your request has been received. Our coordinator will contact you shortly.",
+    newsletter: "Newsletter saved. Thank you.",
+    required: "Please complete this field.",
+    email: "Please enter a valid email address.",
+    phone: "Please enter a phone number.",
+    legal: "This demonstration website is for portfolio presentation. Treatment decisions require a real clinical consultation."
   };
 
   const services = [
@@ -262,11 +200,10 @@
     ["Do results vary?", "Yes. Aesthetic and medical outcomes depend on oral health, anatomy, habits and treatment choices. Individual consultation is required."]
   ];
 
-  let lang = localStorage.getItem("lucent-language") || "en";
   let appointmentState = { step: 0, service: "", doctor: "", slot: "", name: "", email: "", phone: "" };
 
   function t(key) {
-    return copy[lang]?.[key] || copy.en[key] || key;
+    return copy[key] || key;
   }
 
   function esc(value) {
@@ -300,9 +237,6 @@
           ${nav.map(([key, href]) => `<a class="${isActive(key)}" href="${href}">${t(key)}</a>`).join("")}
         </nav>
         <div class="nav-actions">
-          <div class="language-switch" aria-label="Language">
-            ${["en", "pl", "uk"].map((code) => `<button class="${lang === code ? "is-active" : ""}" type="button" data-lang="${code}" aria-pressed="${lang === code}">${code.toUpperCase()}</button>`).join("")}
-          </div>
           <a class="glass-button" href="${BASE}/appointment/index.html">${t("book")}</a>
           <button class="menu-toggle" type="button" data-menu-toggle aria-label="${t("menu")}">☰</button>
         </div>
@@ -590,13 +524,6 @@
   }
 
   function bindInteractions() {
-    document.querySelectorAll("[data-lang]").forEach((button) => {
-      button.addEventListener("click", () => {
-        lang = button.dataset.lang;
-        localStorage.setItem("lucent-language", lang);
-        route();
-      });
-    });
     document.querySelector("[data-menu-toggle]")?.addEventListener("click", () => document.querySelector("#navLinks")?.classList.toggle("is-open"));
     document.querySelectorAll("[data-form]").forEach((form) => form.addEventListener("submit", handleForm));
     document.querySelectorAll(".faq-question").forEach((button) => button.addEventListener("click", () => toggleFaq(button)));

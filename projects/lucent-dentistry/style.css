@@ -175,7 +175,6 @@ img {
 }
 
 .nav-links a,
-.language-switch button,
 .glass-pill {
   border: 1px solid transparent;
   border-radius: 999px;
@@ -192,10 +191,7 @@ img {
 
 .nav-links a:hover,
 .nav-links a:focus-visible,
-.nav-links a.is-active,
-.language-switch button:hover,
-.language-switch button:focus-visible,
-.language-switch button.is-active {
+.nav-links a.is-active {
   border-color: rgba(255, 255, 255, 0.86);
   background: rgba(255, 255, 255, 0.55);
   color: var(--text-primary);
@@ -206,21 +202,6 @@ img {
   display: flex;
   align-items: center;
   gap: 8px;
-}
-
-.language-switch {
-  display: flex;
-  gap: 2px;
-  padding: 4px;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.34);
-}
-
-.language-switch button {
-  min-width: 34px;
-  min-height: 30px;
-  background: transparent;
 }
 
 .menu-toggle {
@@ -1119,10 +1100,6 @@ textarea:focus {
 
   .nav-actions {
     justify-content: end;
-  }
-
-  .language-switch button {
-    min-width: 30px;
   }
 
   .page {
