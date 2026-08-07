@@ -26,6 +26,8 @@
       style: "Ornamental",
       year: "2026",
       visual: "visual-ornamental",
+      image: `${BASE}/assets/works/celestial-shoulder.jpg`,
+      alt: "Close-up of a refined ornamental fine-line shoulder tattoo",
       concept: "A shoulder composition built like a ceiling medallion: botanical linework, lunar spacing and quiet architectural symmetry."
     },
     {
@@ -35,6 +37,8 @@
       style: "Realism",
       year: "2026",
       visual: "visual-realism",
+      image: `${BASE}/assets/works/marble-saint.jpg`,
+      alt: "Close-up of a grayscale realism antique sculpture tattoo on the upper arm",
       concept: "Soft grayscale realism inspired by sculptural fragments, designed to follow the upper arm with museum-grade restraint."
     },
     {
@@ -44,6 +48,8 @@
       style: "Blackwork",
       year: "2025",
       visual: "visual-blackwork",
+      image: `${BASE}/assets/works/black-chapel.jpg`,
+      alt: "Close-up of a bold architectural blackwork tattoo inspired by chapel vaults",
       concept: "A dark architectural piece using vaulted rhythm, negative space and disciplined saturation."
     },
     {
@@ -53,6 +59,8 @@
       style: "Engraving",
       year: "2025",
       visual: "visual-engraving",
+      image: `${BASE}/assets/works/etched-garden.jpg`,
+      alt: "Close-up of an engraving-style botanical tattoo on the forearm",
       concept: "Fine hatchwork florals composed like an old print, with pressure and spacing adapted to skin movement."
     },
     {
@@ -62,6 +70,8 @@
       style: "Microrealism",
       year: "2026",
       visual: "visual-micro",
+      image: `${BASE}/assets/works/ivory-relic.jpg`,
+      alt: "Close-up of a small microrealism cameo tattoo with negative space",
       concept: "A small antique object study with controlled contrast, built for close viewing without losing clarity over time."
     },
     {
@@ -71,6 +81,8 @@
       style: "Dark Romanticism",
       year: "2025",
       visual: "visual-romantic",
+      image: `${BASE}/assets/works/velvet-altar.jpg`,
+      alt: "Close-up of a dark romantic ornamental floral tattoo on the upper arm",
       concept: "A burgundy-black composition where portrait shadow, ornamental edges and body placement act as one piece."
     }
   ];
@@ -83,6 +95,8 @@
       role: "Lead ornamental artist",
       focus: "Renaissance-inspired composition, fine line, ornamental anatomy",
       years: "12 years",
+      image: `${BASE}/assets/artists/maeva-rousseau.jpg`,
+      alt: "Portrait of Maeva Rousseau in a dark luxury tattoo atelier",
       availability: "Consultations open",
       influence: "Ceiling frescoes, botanical studies, French interior ornament",
       bio: "Maeva treats every piece as a living panel: placement comes first, then rhythm, contrast and the smallest decorative decision."
@@ -94,6 +108,8 @@
       role: "Realism and microrealism",
       focus: "Sculptural faces, antique objects, soft grayscale detail",
       years: "10 years",
+      image: `${BASE}/assets/artists/noah-varenne.jpg`,
+      alt: "Portrait of Noah Varenne in a refined tattoo atelier",
       availability: "Limited books",
       influence: "Marble busts, museum lighting, archival portraiture",
       bio: "Noah builds realism with restraint, keeping values clean so the work remains elegant after the first photograph fades."
@@ -105,6 +121,8 @@
       role: "Blackwork specialist",
       focus: "Architectural blackwork, dark romantic motifs, negative space",
       years: "9 years",
+      image: `${BASE}/assets/artists/elias-moreau.jpg`,
+      alt: "Portrait of Elias Moreau holding a black sketch portfolio",
       availability: "Booking by concept",
       influence: "Vaults, chapel shadows, ceremonial textile borders",
       bio: "Elias uses black as structure rather than decoration, shaping pieces around posture, clothing lines and movement."
@@ -246,7 +264,7 @@
     root.innerHTML = `
       ${pageHero(artist.name, artist.focus, artist.influence)}
       <section class="page split">
-        <div class="artist-portrait reveal">${artist.initials}</div>
+        <div class="artist-portrait reveal"><img src="${artist.image}" alt="${artist.alt}" loading="lazy" decoding="async" /></div>
         <div class="detail-panel reveal">
           <p class="kicker">${artist.role}</p>
           <h2 class="panel-title">${artist.years} of skin composition</h2>
@@ -319,7 +337,7 @@
   function workCard(work) {
     return `
       <button class="work-card ${work.visual}" type="button" data-work-id="${work.id}" aria-label="Open ${work.title}">
-        <span class="art-visual" aria-hidden="true"></span>
+        <span class="work-photo"><img src="${work.image}" alt="${work.alt}" loading="lazy" decoding="async" /></span>
         <span class="work-meta">
           <span class="tag-row"><span class="tag">${work.style}</span><span class="tag">${work.year}</span></span>
           <h3>${work.title}</h3>
@@ -333,7 +351,7 @@
     const href = artist.id === "maeva-rousseau" ? `${BASE}/artists/maeva-rousseau/index.html` : `${BASE}/artists/index.html#${artist.id}`;
     return `
       <article class="artist-card reveal" id="${artist.id}">
-        <div class="artist-portrait">${artist.initials}</div>
+        <div class="artist-portrait"><img src="${artist.image}" alt="${artist.alt}" loading="lazy" decoding="async" /></div>
         <p class="kicker">${artist.role}</p>
         <h3>${artist.name}</h3>
         <p>${artist.bio}</p>

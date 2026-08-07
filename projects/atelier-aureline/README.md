@@ -28,3 +28,4 @@ Premium multi-page tattoo atelier website concept for the Yana Ellis portfolio.
 - FAQ accordion
 - Frontend booking and contact form validation
 - Generated hero and portfolio cover asset
+- Generated artist portraits and tattoo work photography
