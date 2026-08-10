@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ELLIS Olfactory Office is a fictional high-end olfactory design studio website concept for the Yana Ellis portfolio."
+    />
+    <meta property="og:title" content="ELLIS Olfactory Office" />
+    <meta
+      property="og:description"
+      content="A luxury experimental website concept where scent becomes interface, movement and memory."
+    />
+    <meta property="og:image" content="/assets/projects/ellis-olfactory-office.jpg" />
+    <title>ELLIS Olfactory Office | London</title>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/projects/ellis-olfactory-office/style.css" />
+  </head>
+  <body>
+    <canvas id="scentCanvas" aria-hidden="true"></canvas>
+    <div class="ambient-grain" aria-hidden="true"></div>
+    <div class="custom-cursor" id="customCursor" aria-hidden="true">
+      <span id="cursorLabel">MOVE</span>
+    </div>
+
+    <header class="site-header" id="top">
+      <a class="brand-lockup" href="#top" aria-label="ELLIS Olfactory Office home">
+        <span>ELLIS</span>
+        <small>Olfactory Office<br />London</small>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#index">01 Index</a>
+        <a href="#lab">02 Lab</a>
+        <a href="#memory">03 Memory</a>
+        <a href="#commissions">04 Commissions</a>
+        <a href="#archive">05 Archive</a>
+      </nav>
+      <a class="header-cta" href="#enquiry">Request a commission</a>
+    </header>
+
+    <main>
+      <section class="hero section" data-scent="musk">
+        <div class="hero-copy">
+          <p class="eyebrow">Independent Olfactory Practice / London / Est. 2026</p>
+          <h1>
+            <span>WE DESIGN</span>
+            <span>WHAT CANNOT</span>
+            <span>BE SEEN.</span>
+          </h1>
+          <p class="hero-note">
+            ELLIS treats scent as a design material for people, rooms, objects,
+            memories and identities.
+          </p>
+          <a class="primary-link" href="#manifesto" data-cursor="ENTER">Enter the lab</a>
+        </div>
+        <div class="hero-register" aria-label="Studio principles">
+          <span>Scent, treated as material.</span>
+          <span>Memory has a chemistry.</span>
+          <span>An invisible form of design.</span>
+        </div>
+      </section>
+
+      <section class="manifesto section" id="manifesto" data-scent="mineral">
+        <div class="manifesto-line">
+          <span>You cannot</span>
+          <span>smell this</span>
+          <span>website.</span>
+        </div>
+        <p>
+          So we had to find another way: time, particles, pressure, colour,
+          density and the small disturbance of a cursor moving through air.
+        </p>
+      </section>
+
+      <section class="material-section section" id="material" data-scent="woody">
+        <div class="section-heading">
+          <p class="eyebrow">Scent as material</p>
+          <h2>SCENT IS<br />A MATERIAL.</h2>
+          <p>
+            We work with scent the way others work with light, stone, colour or
+            sound. We compose atmosphere, memory and identity through materials
+            that disappear the moment they are perceived.
+          </p>
+        </div>
+
+        <div class="material-stage" aria-label="Interactive scent materials">
+          <button class="material-orbit active" type="button" data-family="woody" data-tone="CEDAR">
+            <span>Cedar</span>
+            <small>Heavy / dry / architectural</small>
+          </button>
+          <button class="material-orbit" type="button" data-family="floral" data-tone="IRIS">
+            <span>Iris</span>
+            <small>Powder / skin / pale violet</small>
+          </button>
+          <button class="material-orbit" type="button" data-family="mineral" data-tone="MINERAL">
+            <span>Mineral</span>
+            <small>Cold / wet stone / precision</small>
+          </button>
+          <button class="material-orbit" type="button" data-family="smoky" data-tone="INCENSE">
+            <span>Incense</span>
+            <small>Curling / resin / shadow</small>
+          </button>
+          <button class="material-orbit" type="button" data-family="musk" data-tone="MUSK">
+            <span>Musk</span>
+            <small>Blurred / warm skin / diffusion</small>
+          </button>
+          <output id="materialOutput">CEDAR changes the field: slower, grounded, structured.</output>
+        </div>
+      </section>
+
+      <section class="index-section section" id="index" data-scent="citrus">
+        <div class="section-heading narrow">
+          <p class="eyebrow">Olfactory index</p>
+          <h2>COMPOSITIONS<br />THAT ARRIVE<br />IN TIME.</h2>
+        </div>
+
+        <div class="scent-index" id="scentList" aria-label="Select a scent">
+          <button class="scent-row active" type="button" data-scent-id="after-rain">
+            <span>01</span>
+            <strong>After Rain</strong>
+            <small>Mineral / Woody / Cold</small>
+          </button>
+          <button class="scent-row" type="button" data-scent-id="quiet-fire">
+            <span>02</span>
+            <strong>Quiet Fire</strong>
+            <small>Smoky / Amber / Dry</small>
+          </button>
+          <button class="scent-row" type="button" data-scent-id="skin-02">
+            <span>03</span>
+            <strong>Skin / 02</strong>
+            <small>Musk / Iris / Soft</small>
+          </button>
+          <button class="scent-row" type="button" data-scent-id="black-fig">
+            <span>04</span>
+            <strong>Black Fig</strong>
+            <small>Fruit / Leaf / Leather</small>
+          </button>
+          <button class="scent-row" type="button" data-scent-id="cold-library">
+            <span>05</span>
+            <strong>Cold Library</strong>
+            <small>Paper / Cedar / Rain</small>
+          </button>
+          <button class="scent-row" type="button" data-scent-id="hotel-2am">
+            <span>06</span>
+            <strong>Hotel at 2AM</strong>
+            <small>Tea / Smoke / Linen</small>
+          </button>
+        </div>
+
+        <article class="scent-detail" id="scentDetail" aria-live="polite">
+          <div class="detail-head">
+            <p id="detailNumber">ELLIS / 01</p>
+            <h3 id="detailName">AFTER RAIN</h3>
+            <span id="detailClass">Mineral / Woody / Cold</span>
+          </div>
+          <p class="detail-description" id="detailDescription">
+            Wet stone. Juniper. A room with an open window after summer rain.
+          </p>
+
+          <div class="timeline-wrap">
+            <div class="timeline-labels" aria-hidden="true">
+              <span>00:00</span>
+              <span>00:15</span>
+              <span>01:00</span>
+              <span>04:00</span>
+              <span>08:00</span>
+            </div>
+            <input
+              id="scentTimeline"
+              type="range"
+              min="0"
+              max="4"
+              step="1"
+              value="0"
+              aria-label="Explore scent development over time"
+            />
+          </div>
+
+          <div class="evolution-grid">
+            <div>
+              <p class="lab-label">Current stage</p>
+              <h4 id="stageTime">00:00</h4>
+              <p id="stageNotes">Bergamot / Ozone / Juniper</p>
+            </div>
+            <div>
+              <p class="lab-label">Behaviour</p>
+              <h4 id="stageBehaviour">Sharp opening</h4>
+              <p id="stageMood">Fast dispersion. Cold air. Bright mineral pressure.</p>
+            </div>
+          </div>
+
+          <div class="architecture" aria-label="Scent architecture">
+            <div class="layer top">
+              <span>Top</span>
+              <p id="topNotes">Bergamot / Juniper / Ozone</p>
+            </div>
+            <div class="layer heart">
+              <span>Heart</span>
+              <p id="heartNotes">Iris / Wet Stone Accord</p>
+            </div>
+            <div class="layer base">
+              <span>Base</span>
+              <p id="baseNotes">Cedar / Vetiver / White Musk</p>
+            </div>
+          </div>
+
+          <div class="mode-panel">
+            <div class="mode-toggle" role="group" aria-label="Switch scent mode">
+              <button class="active" type="button" data-mode="impression">Impression</button>
+              <button type="button" data-mode="formula">Formula</button>
+            </div>
+            <div id="impressionMode" class="mode-content active">
+              <p>
+                Cold stone after summer rain. An open window. Wet cedar. Air
+                before the room warms again.
+              </p>
+            </div>
+            <div id="formulaMode" class="mode-content formula-table">
+              <p><span>ISO E SUPER</span><b>18.4%</b></p>
+              <p><span>AMBROXAN</span><b>12.7%</b></p>
+              <p><span>HEDIONE</span><b>11.2%</b></p>
+              <p><span>CEDRAMBER</span><b>6.8%</b></p>
+              <p><span>MUSK ACCORD</span><b>5.4%</b></p>
+              <p><span>MINERAL ACCORD</span><b>4.1%</b></p>
+              <p><span>OTHER</span><b>41.4%</b></p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="lab-section section" id="lab" data-scent="smoky">
+        <div class="section-heading">
+          <p class="eyebrow">The lab</p>
+          <h2>COMPOSE<br />SOMETHING<br />THAT DOESN'T<br />EXIST YET.</h2>
+          <p>
+            Drag or tap materials into the field. The formula changes the
+            movement, density and emotional temperature of the interface.
+          </p>
+        </div>
+
+        <div class="lab-console">
+          <div class="ingredient-bank" id="ingredientBank">
+            <button type="button" data-material="CEDAR">Cedar</button>
+            <button type="button" data-material="IRIS">Iris</button>
+            <button type="button" data-material="LEATHER">Leather</button>
+            <button type="button" data-material="AMBER">Amber</button>
+            <button type="button" data-material="FIG">Fig</button>
+            <button type="button" data-material="TOBACCO">Tobacco</button>
+            <button type="button" data-material="MINERAL">Mineral</button>
+            <button type="button" data-material="INCENSE">Incense</button>
+            <button type="button" data-material="NEROLI">Neroli</button>
+            <button type="button" data-material="MUSK">Musk</button>
+            <button type="button" data-material="TEA">Tea</button>
+            <button type="button" data-material="SAFFRON">Saffron</button>
+          </div>
+
+          <div class="blend-zone" id="blendZone" tabindex="0" aria-label="Blending area">
+            <span class="blend-orb" aria-hidden="true"></span>
+            <p>Drop materials here</p>
+            <small>or tap a material to add it</small>
+          </div>
+
+          <aside class="formula-console">
+            <div class="formula-lines" id="formulaLines" aria-live="polite">
+              <p class="empty-formula">No materials selected yet.</p>
+            </div>
+            <div class="profile-output">
+              <p class="lab-label">Resulting profile</p>
+              <h3 id="profileName">AIR / WAITING</h3>
+            </div>
+            <div class="scales" id="profileScales">
+              <div><span>Cold</span><i style="--value: 45%"></i><span>Warm</span></div>
+              <div><span>Dry</span><i style="--value: 50%"></i><span>Sweet</span></div>
+              <div><span>Transparent</span><i style="--value: 35%"></i><span>Dense</span></div>
+              <div><span>Skin</span><i style="--value: 60%"></i><span>Space</span></div>
+            </div>
+            <div class="console-actions">
+              <button type="button" id="resetFormula">Reset formula</button>
+              <button type="button" id="saveFormula">Save composition</button>
+            </div>
+            <output id="savedFormula"></output>
+          </aside>
+        </div>
+      </section>
+
+      <section class="synesthesia-section section" id="synesthesia" data-scent="floral">
+        <div class="section-heading narrow">
+          <p class="eyebrow">Synesthesia</p>
+          <h2>IF THIS COLOUR<br />HAD A SCENT,<br />WHAT WOULD<br />IT BE?</h2>
+        </div>
+
+        <div class="colour-field" id="colourField" tabindex="0" aria-label="Move through the colour field to reveal scent notes">
+          <div class="floating-notes" id="floatingNotes">
+            <span>Move through colour</span>
+            <strong>IRIS / WHITE MUSK / RICE POWDER</strong>
+          </div>
+        </div>
+        <div class="palette-output">
+          <div>
+            <p class="lab-label">Your palette</p>
+            <h3 id="paletteTitle">No points selected</h3>
+          </div>
+          <div id="paletteChips" class="palette-chips"></div>
+          <button type="button" id="resetPalette">Clear palette</button>
+        </div>
+      </section>
+
+      <section class="memory-section section" id="memory" data-scent="musk">
+        <div class="memory-intro">
+          <p class="eyebrow">Memory to scent</p>
+          <h2>MEMORY<br />BECOMES<br />MATERIAL.</h2>
+          <p>
+            Some fragrances begin with ingredients. Others begin with something
+            you cannot stop remembering.
+          </p>
+          <button class="primary-link" type="button" id="beginMemory">Begin a memory</button>
+        </div>
+
+        <div class="memory-flow" id="memoryFlow" aria-live="polite">
+          <div class="question active" data-question="0">
+            <p>Question 01</p>
+            <h3>Where were you?</h3>
+            <div class="choice-row">
+              <button type="button">Home</button>
+              <button type="button">City</button>
+              <button type="button">Nature</button>
+              <button type="button">Somewhere else</button>
+            </div>
+          </div>
+          <div class="question" data-question="1">
+            <p>Question 02</p>
+            <h3>What time was it?</h3>
+            <input id="memoryTime" type="range" min="0" max="24" value="18" aria-label="Memory time from dawn to night" />
+            <output for="memoryTime" id="memoryTimeOutput">18:00 / low evening</output>
+          </div>
+          <div class="question" data-question="2">
+            <p>Question 03</p>
+            <h3>What do you remember most?</h3>
+            <div class="choice-row">
+              <button type="button">Air</button>
+              <button type="button">Place</button>
+              <button type="button">Person</button>
+              <button type="button">Object</button>
+            </div>
+          </div>
+          <div class="question" data-question="3">
+            <p>Question 04</p>
+            <h3>Was it warm or cold?</h3>
+            <input id="memoryTemp" type="range" min="0" max="100" value="40" aria-label="Memory temperature" />
+          </div>
+          <div class="question" data-question="4">
+            <p>Question 05</p>
+            <h3>What was the light like?</h3>
+            <div class="choice-row">
+              <button type="button">Dark</button>
+              <button type="button">Dim</button>
+              <button type="button">Soft</button>
+              <button type="button">Bright</button>
+              <button type="button">Harsh</button>
+            </div>
+          </div>
+          <div class="question" data-question="5">
+            <p>Question 06</p>
+            <h3>How does the memory feel now?</h3>
+            <label class="memory-scale">
+              <span>I want it back</span>
+              <input id="memoryEmotion" type="range" min="0" max="100" value="35" aria-label="Memory feeling" />
+              <span>I want it gone</span>
+            </label>
+          </div>
+          <div class="question" data-question="6">
+            <p>Question 07</p>
+            <h3>Describe one detail you still remember.</h3>
+            <textarea id="memoryDetail" rows="4" placeholder="A window left open. Rain on stone. Someone's coat."></textarea>
+          </div>
+          <div class="memory-actions">
+            <button type="button" id="prevQuestion">Back</button>
+            <button type="button" id="nextQuestion">Continue</button>
+          </div>
+          <div class="memory-result" id="memoryResult">
+            <p>MEMORY 042</p>
+            <h3>RAIN / OLD PAPER / COLD AIR / CEDAR / SKIN</h3>
+            <span>We can begin from here.</span>
+            <a href="#enquiry">Request a private consultation</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="practice-section section" id="spaces" data-scent="woody">
+        <p class="eyebrow">Practice areas</p>
+        <div class="practice-strip">
+          <article>
+            <span>01</span>
+            <h3>Personal</h3>
+            <p>Bespoke fragrances composed around an individual.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Space</h3>
+            <p>Olfactory identities for hotels, residences, galleries and retail environments.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Object</h3>
+            <p>Scent systems for automotive interiors, leather goods, packaging and products.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>Archive</h3>
+            <p>Research and reconstruction of historical or lost smells.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="commissions-section section" id="commissions" data-scent="mineral">
+        <div class="section-heading narrow">
+          <p class="eyebrow">Selected commissions</p>
+          <h2>CLIENTS<br />WITHHELD.</h2>
+        </div>
+        <div class="commission-list">
+          <article>
+            <span>01 / Private hotel / Kyoto</span>
+            <h3>Hinoki, rice steam, rain, white tea.</h3>
+            <p>A signature atmospheric composition for a 28-room private hotel.</p>
+          </article>
+          <article>
+            <span>02 / Residence / London</span>
+            <h3>Cedar, paper, leather, fireplace ash.</h3>
+            <p>A restrained spatial scent developed for a private library.</p>
+          </article>
+          <article>
+            <span>03 / Automotive / Munich</span>
+            <h3>Mineral, leather, cold metal, iris.</h3>
+            <p>Cabin scent research for an electric grand tourer.</p>
+          </article>
+          <article>
+            <span>04 / Fashion house / Paris</span>
+            <h3>Incense, dust, black tea, hot fabric.</h3>
+            <p>Olfactory environment for a temporary runway installation.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="archive-section section" id="archive" data-scent="smoky">
+        <div class="section-heading">
+          <p class="eyebrow">Archive</p>
+          <h2>SPECULATIVE<br />SCENT<br />RECONSTRUCTION.</h2>
+          <p>
+            ELLIS studies historical spaces as atmospheric material. These are
+            olfactory interpretations, not claims of exact reconstruction.
+          </p>
+        </div>
+        <div class="archive-files">
+          <article>
+            <span>Versailles / 1784</span>
+            <h3>Beeswax / Rose water / Powder / Oak / Smoke</h3>
+            <p>
+              Research note: a bright surface of polish and powder above older
+              wood, sealed air and candle residue.
+            </p>
+          </article>
+          <article>
+            <span>London Library / 1891</span>
+            <h3>Old paper / Coal smoke / Wax / Leather / Rain</h3>
+            <p>
+              Research note: cold bindings, wet wool at the entrance and coal
+              suspended in the upper air.
+            </p>
+          </article>
+          <article>
+            <span>Venetian Palazzo / 1726</span>
+            <h3>Stone / Salt air / Incense / Wood / Linen</h3>
+            <p>
+              Research note: mineral humidity, sun-warmed cloth and the soft
+              trace of ritual smoke.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="enquiry-section section" id="enquiry" data-scent="musk">
+        <div class="section-heading narrow">
+          <p class="eyebrow">Bespoke commission</p>
+          <h2>NOT EVERY<br />FORMULA SHOULD<br />BELONG TO<br />EVERYONE.</h2>
+          <p>
+            Private ELLIS commissions are developed through consultation,
+            research, material studies and iterative formulation.
+          </p>
+        </div>
+
+        <ol class="process-line" aria-label="Commission process">
+          <li>Conversation</li>
+          <li>Olfactory direction</li>
+          <li>First formula</li>
+          <li>Modification</li>
+          <li>Final composition</li>
+          <li>Archive</li>
+        </ol>
+
+        <form class="enquiry-form" id="enquiryForm">
+          <label>
+            Name
+            <input type="text" name="name" autocomplete="name" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" autocomplete="email" required />
+          </label>
+          <label>
+            Location
+            <input type="text" name="location" autocomplete="address-level2" />
+          </label>
+          <label>
+            Commission type
+            <select name="type">
+              <option>Personal</option>
+              <option>Space</option>
+              <option>Object</option>
+              <option>Archive</option>
+              <option>Other</option>
+            </select>
+          </label>
+          <label>
+            Optional budget range
+            <input type="text" name="budget" placeholder="Private on request" />
+          </label>
+          <label class="wide">
+            Project description
+            <textarea name="description" rows="5" required></textarea>
+          </label>
+          <button type="submit">Request a private commission</button>
+          <output id="formStatus" aria-live="polite"></output>
+        </form>
+      </section>
+
+      <section class="about-section section" id="about" data-scent="mineral">
+        <p class="eyebrow">About ELLIS</p>
+        <h2>OUR WORK BEGINS WHERE VISUAL IDENTITY ENDS.</h2>
+        <p>
+          ELLIS OLFACTORY OFFICE is an independent olfactory design practice
+          based in London. We work across fragrance, space, material and memory.
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a href="/index.html">Back to Yana Ellis portfolio</a>
+      <span>ELLIS OLFACTORY OFFICE / Fictional portfolio concept</span>
+    </footer>
+
+    <script src="/projects/ellis-olfactory-office/app.js"></script>
+  </body>
+</html>
