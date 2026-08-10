@@ -54,6 +54,16 @@ const ctx = canvas.getContext("2d");
 const cursor = document.querySelector("#customCursor");
 const cursorLabel = document.querySelector("#cursorLabel");
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const cursorStateClasses = [
+  "cursor-scent",
+  "cursor-open",
+  "cursor-smell",
+  "cursor-trace",
+  "cursor-blend",
+  "cursor-hold",
+  "cursor-answer",
+  "cursor-type"
+];
 let activeFamily = "musk";
 let width = 0;
 let height = 0;
@@ -148,6 +158,7 @@ window.addEventListener("pointermove", (event) => {
   pointer.active = true;
   cursor.style.left = `${event.clientX}px`;
   cursor.style.top = `${event.clientY}px`;
+  updateCursorState(event.target);
 });
 
 window.addEventListener("pointerleave", () => {
@@ -159,11 +170,86 @@ window.addEventListener("pointerenter", () => {
   cursor.style.opacity = "1";
 });
 
-document.addEventListener("pointerover", (event) => {
-  const interactive = event.target.closest("a, button, input, textarea, select, .colour-field, .blend-zone");
-  cursor.classList.toggle("is-active", Boolean(interactive));
-  cursorLabel.textContent = interactive?.dataset.cursor || (interactive ? "OPEN" : "MOVE");
-});
+function setCursorState(state = "idle", label = "") {
+  cursor.classList.remove(...cursorStateClasses, "has-label");
+
+  if (state !== "idle") {
+    cursor.classList.add(`cursor-${state}`);
+  }
+
+  cursorLabel.textContent = label;
+  cursor.classList.toggle("has-label", Boolean(label));
+}
+
+function updateCursorState(target) {
+  if (!target || window.innerWidth <= 760) {
+    return;
+  }
+
+  const explicitCursor = target.closest("[data-cursor]");
+
+  if (target.closest("#colourField")) {
+    setCursorState("trace", "TRACE");
+    return;
+  }
+
+  if (target.closest("#blendZone")) {
+    setCursorState("hold", "HOLD");
+    return;
+  }
+
+  if (target.closest("#ingredientBank button, .formula-line input, #resetFormula, #saveFormula")) {
+    setCursorState("blend", "BLEND");
+    return;
+  }
+
+  if (target.closest(".material-orbit")) {
+    setCursorState("smell", "SMELL");
+    return;
+  }
+
+  if (target.closest(".scent-row")) {
+    setCursorState("open", "OPEN");
+    return;
+  }
+
+  if (target.closest("#scentTimeline, .timeline-wrap")) {
+    setCursorState("trace", "TRACE");
+    return;
+  }
+
+  if (target.closest(".mode-toggle button")) {
+    setCursorState("open", "MODE");
+    return;
+  }
+
+  if (target.closest("#beginMemory, .memory-flow button, .memory-scale, #memoryTime, #memoryTemp, #memoryEmotion")) {
+    setCursorState("answer", "ANSWER");
+    return;
+  }
+
+  if (target.closest(".enquiry-form button")) {
+    setCursorState("open", "SEND");
+    return;
+  }
+
+  if (target.closest("textarea, select, input:not([type='range'])")) {
+    setCursorState("type");
+    return;
+  }
+
+  if (explicitCursor || target.closest("a, button")) {
+    setCursorState("open", explicitCursor?.dataset.cursor || "OPEN");
+    return;
+  }
+
+  if (target.closest("#scentCanvas, .hero, .manifesto, .material-stage, .scent-detail, .section[data-scent]")) {
+    setCursorState("scent");
+    return;
+  }
+
+  setCursorState("idle");
+}
 
 resizeCanvas();
 drawScentField();

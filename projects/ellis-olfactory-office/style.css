@@ -85,11 +85,12 @@ button {
   z-index: 30;
   display: grid;
   place-items: center;
-  width: 58px;
-  height: 58px;
-  border: 1px solid rgba(21, 19, 18, 0.42);
+  width: 10px;
+  height: 10px;
+  border: 1px solid transparent;
   border-radius: 999px;
-  color: var(--charcoal);
+  background: rgba(21, 19, 18, 0.78);
+  color: transparent;
   font-size: 0.56rem;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -100,13 +101,101 @@ button {
     width 180ms ease,
     height 180ms ease,
     border-color 180ms ease,
+    background-color 180ms ease,
+    color 180ms ease,
     opacity 180ms ease;
 }
 
-.custom-cursor.is-active {
+.custom-cursor span {
+  opacity: 0;
+  transform: scale(0.72);
+  transition:
+    opacity 160ms ease,
+    transform 160ms ease;
+}
+
+.custom-cursor.has-label span {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.custom-cursor.cursor-scent {
+  width: 34px;
+  height: 34px;
+  border-color: rgba(21, 19, 18, 0.34);
+  background: transparent;
+}
+
+.custom-cursor.cursor-open {
+  width: 74px;
+  height: 74px;
+  border-color: rgba(91, 38, 48, 0.72);
+  background: rgba(248, 243, 235, 0.38);
+  color: var(--charcoal);
+  backdrop-filter: blur(8px);
+}
+
+.custom-cursor.cursor-smell {
+  width: 92px;
+  height: 92px;
+  border-color: rgba(143, 168, 148, 0.72);
+  background:
+    radial-gradient(circle at 42% 40%, rgba(143, 168, 148, 0.24), transparent 44%),
+    rgba(248, 243, 235, 0.18);
+  color: var(--charcoal);
+  backdrop-filter: blur(10px);
+}
+
+.custom-cursor.cursor-trace {
+  width: 82px;
+  height: 82px;
+  border-color: rgba(91, 38, 48, 0.56);
+  background: transparent;
+  color: var(--burgundy);
+}
+
+.custom-cursor.cursor-trace::after {
+  position: absolute;
+  inset: 12px;
+  content: "";
+  border: 1px solid rgba(91, 38, 48, 0.22);
+  border-radius: inherit;
+}
+
+.custom-cursor.cursor-blend {
+  width: 96px;
+  height: 96px;
+  border-color: rgba(21, 19, 18, 0.7);
+  background: rgba(64, 49, 42, 0.18);
+  color: var(--charcoal);
+  backdrop-filter: blur(12px);
+}
+
+.custom-cursor.cursor-hold {
+  width: 110px;
+  height: 54px;
+  border-color: rgba(21, 19, 18, 0.54);
+  background: rgba(248, 243, 235, 0.44);
+  color: var(--charcoal);
+  backdrop-filter: blur(10px);
+}
+
+.custom-cursor.cursor-answer {
   width: 86px;
   height: 86px;
-  border-color: rgba(91, 38, 48, 0.72);
+  border-color: rgba(239, 231, 220, 0.7);
+  background: rgba(239, 231, 220, 0.12);
+  color: var(--ivory);
+  backdrop-filter: blur(10px);
+}
+
+.custom-cursor.cursor-type {
+  width: 2px;
+  height: 34px;
+  border: 0;
+  border-radius: 0;
+  background: currentColor;
+  color: var(--burgundy);
 }
 
 .site-header {
@@ -902,6 +991,7 @@ input[type="range"] {
   color: var(--ivory);
   backdrop-filter: blur(18px);
   transform: translate(-50%, -50%);
+  pointer-events: none;
 }
 
 .floating-notes span {
