@@ -16,10 +16,9 @@ const sharedLabels = {
     readMore: "Read more",
     footerText:
       "Website project information for clients who want a clear written process before requesting a final quote.",
-    ctaTitle: "Ready to estimate your website?",
+    ctaTitle: "Have a website project in mind?",
     ctaText:
-      "Use the calculator to view an approximate price, then choose whether to send the request for review.",
-    ctaPrimary: "Open calculator",
+      "Read the process details first, then contact me directly when you are ready to discuss the project.",
     ctaSecondary: "Contact Yana"
   },
   uk: {
@@ -35,10 +34,9 @@ const sharedLabels = {
     readMore: "Читати більше",
     footerText:
       "Інформація про процес створення сайту для клієнтів, які хочуть зрозумілий письмовий порядок роботи перед фінальною пропозицією.",
-    ctaTitle: "Готові оцінити сайт?",
+    ctaTitle: "Маєте ідею для сайту?",
     ctaText:
-      "Скористайтеся калькулятором, щоб побачити приблизну вартість, а потім оберіть, чи надсилати заявку на перегляд.",
-    ctaPrimary: "Відкрити калькулятор",
+      "Спочатку перегляньте деталі процесу, а коли будете готові обговорити проєкт, напишіть мені напряму.",
     ctaSecondary: "Написати Yana"
   },
   pl: {
@@ -54,10 +52,9 @@ const sharedLabels = {
     readMore: "Czytaj więcej",
     footerText:
       "Informacje o procesie projektu strony dla klientów, którzy chcą jasnych zasad przed finalną ofertą.",
-    ctaTitle: "Chcesz oszacować stronę?",
+    ctaTitle: "Masz pomysł na stronę?",
     ctaText:
-      "Skorzystaj z kalkulatora, aby zobaczyć orientacyjną cenę, a potem zdecyduj, czy wysłać zapytanie do analizy.",
-    ctaPrimary: "Otwórz kalkulator",
+      "Najpierw przeczytaj szczegóły procesu, a gdy będziesz gotowy omówić projekt, napisz do mnie bezpośrednio.",
     ctaSecondary: "Napisz do Yany"
   }
 };
@@ -294,7 +291,6 @@ function renderShell(page, language) {
     <p class="footer-text">${labels.footerText}</p>
     <nav class="footer-links" aria-label="Footer">
       ${baseLinks(labels)}
-      <a href="calculator/canada/index.html">${labels.calculator}</a>
       <a href="mailto:${siteConfig.contact.email}">${labels.contact}</a>
       <a href="${siteConfig.contact.telegramUrl}" target="_blank" rel="noreferrer">${labels.telegram}</a>
       <a href="mailto:${siteConfig.contact.email}">${labels.email}</a>
@@ -319,7 +315,6 @@ function cta(language) {
       <p class="section-kicker">${labels.ctaTitle}</p>
       <p class="page-intro">${labels.ctaText}</p>
       <div class="cta-actions">
-        <a class="nav-link" href="calculator/canada/index.html">${labels.ctaPrimary}</a>
         <a class="nav-link" href="${siteConfig.contact.telegramUrl}" target="_blank" rel="noreferrer">${labels.ctaSecondary}</a>
       </div>
     </section>
