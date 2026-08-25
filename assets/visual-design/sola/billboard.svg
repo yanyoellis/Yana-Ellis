@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1100" viewBox="0 0 1600 1100" role="img" aria-label="SOLA Outdoor billboard">
+  <title>SOLA - Outdoor billboard</title>
+  <desc>Original commercial portfolio visual for SOLA.</desc>
+  <rect x="0" y="0" width="1600" height="1100" fill="#d8d4ca"/><rect x="128" y="165" width="1344" height="528" fill="#fff45b" stroke="#222" stroke-width="8"/><text x="224.00000000000003" y="396" font-size="112.00000000000001" fill="#ff4f6d" font-family="Inter, Arial, sans-serif" font-weight="900">Taste the sun</text><text x="224.00000000000003" y="550" font-size="48" fill="#00a7e1" font-family="Inter, Arial, sans-serif" font-weight="800" letter-spacing="2">Zero alcohol</text><rect x="352" y="693" width="64" height="242" fill="#555"/><rect x="1184" y="693" width="64" height="242" fill="#555"/><line x1="0" y1="946" x2="1600" y2="946" stroke="#999" stroke-width="3" opacity="1"/>
+</svg>

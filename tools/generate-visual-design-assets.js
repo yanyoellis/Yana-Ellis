@@ -3,39 +3,18 @@ const path = require("path");
 
 const root = path.resolve(__dirname, "..");
 const assetRoot = path.join(root, "assets", "visual-design");
-const dataFile = path.join(root, "visual-design", "visual-design-data.js");
+const pageRoot = path.join(root, "visual-design");
+const dataFile = path.join(pageRoot, "visual-design-data.js");
+const capabilityFile = path.join(pageRoot, "capability-matrix.json");
 
 const categories = {
-  all: {
-    en: "All",
-    uk: "Усі",
-    pl: "Wszystkie"
-  },
-  branding: {
-    en: "Branding",
-    uk: "Брендинг",
-    pl: "Branding"
-  },
-  packaging: {
-    en: "Packaging",
-    uk: "Паковання",
-    pl: "Opakowania"
-  },
-  campaigns: {
-    en: "Campaigns",
-    uk: "Кампанії",
-    pl: "Kampanie"
-  },
-  editorial: {
-    en: "Editorial",
-    uk: "Редакційний дизайн",
-    pl: "Editorial"
-  },
-  digital: {
-    en: "Digital",
-    uk: "Диджитал",
-    pl: "Digital"
-  }
+  all: { en: "All", uk: "Усі", pl: "Wszystkie" },
+  branding: { en: "Branding", uk: "Брендинг", pl: "Branding" },
+  packaging: { en: "Packaging", uk: "Паковання", pl: "Opakowania" },
+  campaigns: { en: "Campaigns", uk: "Кампанії", pl: "Kampanie" },
+  editorial: { en: "Editorial", uk: "Редакційний дизайн", pl: "Editorial" },
+  corporate: { en: "Corporate", uk: "Корпоративний", pl: "Corporate" },
+  digital: { en: "Digital", uk: "Диджитал", pl: "Digital" }
 };
 
 const labels = {
@@ -46,13 +25,13 @@ const labels = {
     navVisual: "Visual Design",
     navProcess: "Process",
     heroKicker: "Visual Design",
-    heroTitle: "Visual identities. Packaging. Campaigns. Editorial.",
+    heroTitle: "Commercial graphics. Brand systems. Campaign assets.",
     heroText:
-      "A selection of concept visual work across branding, packaging, editorial, campaigns and digital graphics.",
+      "A multidisciplinary archive of concept projects across packaging, identity, advertising, editorial, corporate communication and digital marketing.",
     archiveKicker: "Archive",
-    archiveTitle: "Concept projects across different industries and visual systems.",
+    archiveTitle: "Graphic design work built around real deliverables.",
     archiveText:
-      "Every project is self-initiated and fictional, created to show range in graphic design, art direction and commercial communication.",
+      "Each concept project is self-initiated and fictional, but structured like a commercial brief with practical applications, mockups and campaign materials.",
     filterLabel: "Filter visual design projects",
     openProject: "Open project",
     conceptProject: "Concept project",
@@ -63,9 +42,9 @@ const labels = {
     role: "Role",
     deliverables: "Deliverables",
     tools: "Tools",
+    typography: "Typography direction",
+    capabilities: "Capabilities shown",
     images: "Project visuals",
-    close: "Close",
-    closeProject: "Close project",
     previousProject: "Previous project",
     nextProject: "Next project",
     backToArchive: "Back to Visual Design",
@@ -80,13 +59,13 @@ const labels = {
     navVisual: "Візуальний дизайн",
     navProcess: "Процес",
     heroKicker: "Візуальний дизайн",
-    heroTitle: "Айдентика. Паковання. Кампанії. Editorial.",
+    heroTitle: "Комерційна графіка. Бренд-системи. Кампанії.",
     heroText:
-      "Добірка концептуальних візуальних робіт у брендингу, пакованні, редакційному дизайні, кампаніях і digital-графіці.",
+      "Мультидисциплінарний архів концептів: паковання, айдентика, реклама, editorial, корпоративна комунікація та digital-маркетинг.",
     archiveKicker: "Архів",
-    archiveTitle: "Концепт-проєкти для різних індустрій і візуальних систем.",
+    archiveTitle: "Графічний дизайн, побудований навколо реальних матеріалів.",
     archiveText:
-      "Кожен проєкт є самостійним і вигаданим, створеним, щоб показати широту графічного дизайну, артдирекшену та комерційної комунікації.",
+      "Кожен концепт-проєкт самостійний і вигаданий, але зібраний як комерційний brief із практичними носіями, mockups і кампанійними матеріалами.",
     filterLabel: "Фільтр проєктів візуального дизайну",
     openProject: "Відкрити проєкт",
     conceptProject: "Концепт-проєкт",
@@ -97,9 +76,9 @@ const labels = {
     role: "Роль",
     deliverables: "Матеріали",
     tools: "Інструменти",
+    typography: "Типографічний напрям",
+    capabilities: "Показані навички",
     images: "Візуали проєкту",
-    close: "Закрити",
-    closeProject: "Закрити проєкт",
     previousProject: "Попередній проєкт",
     nextProject: "Наступний проєкт",
     backToArchive: "Назад до Visual Design",
@@ -114,13 +93,13 @@ const labels = {
     navVisual: "Visual Design",
     navProcess: "Proces",
     heroKicker: "Visual Design",
-    heroTitle: "Identyfikacje. Opakowania. Kampanie. Editorial.",
+    heroTitle: "Grafika komercyjna. Systemy marek. Kampanie.",
     heroText:
-      "Wybrane koncepcyjne prace wizualne z zakresu brandingu, opakowań, editorialu, kampanii i grafiki digital.",
+      "Multidyscyplinarne archiwum konceptów: opakowania, identyfikacje, reklama, editorial, komunikacja korporacyjna i digital marketing.",
     archiveKicker: "Archiwum",
-    archiveTitle: "Projekty koncepcyjne dla różnych branż i systemów wizualnych.",
+    archiveTitle: "Graphic design oparty na realnych materiałach.",
     archiveText:
-      "Każdy projekt jest fikcyjny i self-initiated, stworzony po to, aby pokazać zakres grafiki, art direction i komunikacji komercyjnej.",
+      "Każdy projekt jest fikcyjny i self-initiated, ale zbudowany jak komercyjny brief z praktycznymi aplikacjami, mockupami i materiałami kampanii.",
     filterLabel: "Filtr projektów visual design",
     openProject: "Otwórz projekt",
     conceptProject: "Projekt koncepcyjny",
@@ -131,9 +110,9 @@ const labels = {
     role: "Rola",
     deliverables: "Materiały",
     tools: "Narzędzia",
+    typography: "Kierunek typografii",
+    capabilities: "Pokazane umiejętności",
     images: "Wizualizacje projektu",
-    close: "Zamknij",
-    closeProject: "Zamknij projekt",
     previousProject: "Poprzedni projekt",
     nextProject: "Następny projekt",
     backToArchive: "Wróć do Visual Design",
@@ -143,15 +122,11 @@ const labels = {
   }
 };
 
-function t(en, uk, pl) {
-  return { en, uk, pl };
-}
+const tools = ["Figma", "Adobe Illustrator", "Adobe Photoshop"];
 
-function asset(id, title, kind, orientation = "landscape") {
-  return { id, title, kind, orientation };
+function asset(id, title, scene, orientation = "landscape", options = {}) {
+  return { id, title, scene, orientation, ...options };
 }
-
-const sharedTools = ["Figma", "Adobe Illustrator", "Adobe Photoshop"];
 
 const projects = [
   {
@@ -160,34 +135,26 @@ const projects = [
     client: "Lumière No. 7",
     year: "2026",
     filters: ["packaging", "branding", "campaigns"],
-    category: t("Packaging & Labels / Branding", "Паковання та етикетки / Брендинг", "Opakowania i etykiety / Branding"),
-    role: t("Brand Designer / Visual Designer", "Бренд-дизайнерка / Візуальна дизайнерка", "Brand Designer / Visual Designer"),
-    disciplines: t(
-      "Fragrance packaging, wordmark, label hierarchy, campaign art direction",
-      "Паковання аромату, вордмарк, ієрархія етикетки, артдирекшен кампанії",
-      "Opakowania perfum, wordmark, hierarchia etykiety, art direction kampanii"
-    ),
-    description: t(
-      "Developed a sensual packaging and campaign system for a fictional niche fragrance house. The identity uses a sharp serif wordmark, quiet metallic details and a restrained label hierarchy that can move from bottle to box, poster and launch social asset without losing its intimate editorial mood.",
-      "Розроблена чуттєва система паковання та кампанії для вигаданого нішевого парфумерного бренду. Айдентика поєднує гострий serif-вордмарк, стримані металеві деталі й чітку ієрархію етикетки, яка працює на флаконі, коробці, постері та launch-асеті.",
-      "System opakowań i kampanii dla fikcyjnej niszowej marki perfum. Identyfikacja łączy wyrazisty serifowy wordmark, subtelne metaliczne detale i spokojną hierarchię etykiety, która działa na flakonie, pudełku, plakacie i social launch asset."
-    ),
-    deliverables: t(
-      ["Wordmark", "Perfume bottle label", "Outer box", "Campaign poster", "Launch social asset", "Packaging typography system"],
-      ["Вордмарк", "Етикетка флакону", "Зовнішня коробка", "Постер кампанії", "Launch social asset", "Типографічна система паковання"],
-      ["Wordmark", "Etykieta flakonu", "Pudełko zewnętrzne", "Plakat kampanii", "Social launch asset", "System typografii opakowań"]
-    ),
-    tools: sharedTools,
-    palette: ["#070605", "#efe9dc", "#b89a62", "#2d2722", "#d8c5a0"],
-    style: "luxury",
-    span: "tall",
+    category: "Packaging & Labels / Branding",
+    role: "Brand Designer / Packaging Designer",
+    disciplines: "Fragrance packaging, label hierarchy, campaign art direction, premium print collateral",
+    description:
+      "A niche fragrance concept built as a tactile packaging system rather than a single poster. The work balances ivory paper, deep burgundy, black glass and muted metallic accents across bottle labels, boxes, print advertising and launch social assets.",
+    palette: ["#221012", "#f3eadc", "#7a1f2b", "#b9965a", "#090706"],
+    typography: "Editorial serif / small caps sans",
+    coverSize: "feature",
+    capabilities: ["Brand identity", "Logo design", "Packaging", "Labels", "Poster design", "Social media", "Print advertising", "FMCG"],
     assets: [
-      asset("cover", "Bottle and box cover", "packaging", "portrait"),
-      asset("label-system", "Fragrance label hierarchy", "packaging", "landscape"),
-      asset("wordmark", "Wordmark and secondary type", "identity", "landscape"),
-      asset("campaign-poster", "Fragrance campaign poster", "poster", "portrait"),
-      asset("launch-social", "Social launch asset", "social", "square"),
-      asset("packaging-set", "Packaging system mockup", "packaging", "landscape")
+      asset("cover", "Bottle and outer box system", "fragranceHero"),
+      asset("wordmark", "Primary wordmark", "logoSystem"),
+      asset("bottle-label", "Bottle label hierarchy", "labelSheet"),
+      asset("bottle-front", "Bottle front mockup", "bottleFront", "portrait"),
+      asset("bottle-close-up", "Bottle close-up", "closeUp"),
+      asset("outer-box", "Outer box", "boxMockup"),
+      asset("box-type-detail", "Box typography detail", "detailCrop"),
+      asset("campaign-poster", "Fragrance campaign poster", "premiumPoster", "portrait"),
+      asset("magazine-ad", "Magazine advertisement", "magazineAd"),
+      asset("launch-social", "Launch social media post", "socialPost", "square", { cta: "Discover No. 7" })
     ]
   },
   {
@@ -195,35 +162,26 @@ const projects = [
     title: "SOLA",
     client: "SOLA Sparkling",
     year: "2026",
-    filters: ["campaigns", "packaging"],
-    category: t("Social & Campaigns / Packaging", "Соціальні кампанії / Паковання", "Social & kampanie / Opakowania"),
-    role: t("Graphic Designer / Campaign Designer", "Графічна дизайнерка / Дизайнерка кампанії", "Graphic Designer / Campaign Designer"),
-    disciplines: t(
-      "Beverage packaging, campaign key visual, paid social assets",
-      "Паковання напоїв, key visual кампанії, paid social assets",
-      "Opakowania napojów, key visual kampanii, płatne kreacje social"
-    ),
-    description: t(
-      "Created a bright summer campaign for a fictional non-alcoholic sparkling drink. The system is intentionally commercial, colorful and optimistic, with flavor variants, high-impact can graphics and short copy built for outdoor, social and point-of-sale use.",
-      "Створена яскрава літня кампанія для вигаданого безалкогольного газованого напою. Система навмисно комерційна, кольорова й оптимістична: смакові варіанти, помітна графіка банок і короткий копірайт для outdoor, social та POS.",
-      "Jasna letnia kampania dla fikcyjnego bezalkoholowego napoju musującego. System jest komercyjny, kolorowy i optymistyczny, z wariantami smaków, mocną grafiką puszek i krótkim copy dla outdooru, social i POS."
-    ),
-    deliverables: t(
-      ["Can design", "Three flavor variants", "Outdoor advertisement", "Social post", "Story", "Point-of-sale poster"],
-      ["Дизайн банки", "Три смаки", "Outdoor-реклама", "Social post", "Story", "POS-постер"],
-      ["Projekt puszki", "Trzy warianty smakowe", "Reklama outdoor", "Post social", "Story", "Plakat POS"]
-    ),
-    tools: sharedTools,
-    palette: ["#fff2a8", "#ff6b5f", "#00a6a6", "#2947ff", "#ffffff"],
-    style: "beverage",
-    span: "wide",
+    filters: ["packaging", "campaigns", "digital"],
+    category: "FMCG Campaign / Packaging",
+    role: "Marketing Designer / Packaging Designer",
+    disciplines: "Beverage campaign, flavor system, retail graphics, paid social assets",
+    description:
+      "A bright FMCG campaign for a fictional non-alcoholic sparkling drink. The system prioritizes shelf recognition, flavor clarity, promotional messaging and high-energy assets for outdoor, retail, paid social and summer banners.",
+    palette: ["#fff45b", "#ff4f6d", "#00a7e1", "#2dd36f", "#1721a8"],
+    typography: "Rounded geometric sans / bold display",
+    coverSize: "large",
+    capabilities: ["Packaging", "Labels", "FMCG", "Paid ads", "Meta advertising", "Social media", "Retail graphics", "Digital banners"],
     assets: [
-      asset("cover", "Campaign key visual", "beverage", "landscape"),
-      asset("can-variants", "Three flavor can variants", "beverage", "landscape"),
-      asset("outdoor", "Outdoor advertisement", "poster", "landscape"),
-      asset("social-feed", "Social feed creative", "social", "square"),
-      asset("story", "Story advertisement", "social", "portrait"),
-      asset("pos-poster", "Point-of-sale poster", "poster", "portrait")
+      asset("cover", "Hero campaign visual", "beverageHero"),
+      asset("variants", "Three can and bottle variants", "beverageVariants"),
+      asset("flavor-system", "Flavor system", "flavorSystem"),
+      asset("billboard", "Outdoor billboard", "billboard", "landscape", { headline: "Taste the sun", cta: "Zero alcohol" }),
+      asset("meta-ad", "Meta ad", "adCard", "square", { headline: "Summer in a can", cta: "Shop now" }),
+      asset("story", "Instagram story", "phoneStory", "portrait", { headline: "3 flavors. 0 alcohol.", cta: "Try SOLA" }),
+      asset("retail-shelf", "Retail refrigerator shelf graphic", "retailShelf"),
+      asset("pos-poster", "POS promotional poster", "posPoster", "portrait", { headline: "2 for 1 weekend" }),
+      asset("summer-banner", "Summer campaign banner", "webBanner", "landscape", { headline: "Sparkling summer launch" })
     ]
   },
   {
@@ -231,35 +189,28 @@ const projects = [
     title: "NORTHLINE",
     client: "Northline Systems",
     year: "2025",
-    filters: ["branding", "digital"],
-    category: t("Branding & Identity / Digital Graphics", "Брендинг та айдентика / Digital-графіка", "Branding i identyfikacja / Grafika digital"),
-    role: t("Brand Designer / Communication Designer", "Бренд-дизайнерка / Дизайнерка комунікацій", "Brand Designer / Communication Designer"),
-    disciplines: t(
-      "B2B identity, presentation system, data graphics, corporate collateral",
-      "B2B-айдентика, система презентацій, data graphics, корпоративні матеріали",
-      "Identyfikacja B2B, system prezentacji, grafiki danych, materiały korporacyjne"
-    ),
-    description: t(
-      "Designed a precise corporate identity for a fictional infrastructure technology company. The visual language is grid-driven, calm and technical, with a modular mark, report covers, conference collateral and data graphics that support clear professional communication.",
-      "Розроблена точна корпоративна айдентика для вигаданої інфраструктурної tech-компанії. Візуальна мова базується на сітці, стриманій палітрі та модульному знаку, що працює в звітах, конференційних матеріалах і data graphics.",
-      "Precyzyjna identyfikacja korporacyjna dla fikcyjnej firmy technologii infrastrukturalnych. Język wizualny jest siatkowy, spokojny i techniczny, z modułowym znakiem, okładkami raportów, materiałami konferencyjnymi i grafikami danych."
-    ),
-    deliverables: t(
-      ["Corporate identity", "Business card", "Pitch deck slides", "LinkedIn banner", "Report cover", "Conference badge"],
-      ["Корпоративна айдентика", "Візитка", "Слайди pitch deck", "LinkedIn banner", "Обкладинка звіту", "Бейдж конференції"],
-      ["Identyfikacja korporacyjna", "Wizytówka", "Slajdy pitch deck", "Banner LinkedIn", "Okładka raportu", "Badge konferencyjny"]
-    ),
-    tools: sharedTools,
-    palette: ["#0c1014", "#d8e2e8", "#71808f", "#2d5d76", "#b8c8d2"],
-    style: "corporate",
-    span: "standard",
+    filters: ["branding", "corporate", "digital"],
+    category: "B2B Technology / Corporate Communication",
+    role: "Corporate Designer / Presentation Designer",
+    disciplines: "B2B identity, corporate stationery, pitch decks, data visualization, conference collateral",
+    description:
+      "A serious B2B technology identity focused on clarity, modularity and professional communication. The project demonstrates stationery, presentation slides, annual reports, LinkedIn assets, badges and infographics without decorative art-direction excess.",
+    palette: ["#eef4f8", "#15283a", "#3576a8", "#7d8b96", "#ffffff"],
+    typography: "Technical grotesk / monospaced data labels",
+    coverSize: "large",
+    capabilities: ["B2B technology", "Corporate design", "Presentation design", "Pitch decks", "Data visualization", "Brand identity", "LinkedIn graphics", "Corporate communication"],
     assets: [
-      asset("cover", "Corporate identity cover", "corporate", "landscape"),
-      asset("logo-system", "Logo and grid system", "identity", "landscape"),
-      asset("business-card", "Business card set", "identity", "landscape"),
-      asset("pitch-deck", "Pitch deck slides", "presentation", "landscape"),
-      asset("linkedin-banner", "LinkedIn banner", "digital", "landscape"),
-      asset("data-report", "Data report cover", "report", "portrait")
+      asset("cover", "Corporate system overview", "corporateOverview"),
+      asset("logo-system", "Logo system", "logoSystem"),
+      asset("stationery", "Corporate stationery", "stationery"),
+      asset("presentation-title", "Presentation title slide", "presentationSlide", "landscape", { headline: "Infrastructure intelligence" }),
+      asset("strategy-slide", "Strategy slide", "strategySlide"),
+      asset("data-slide", "Data visualization slide", "dataSlide"),
+      asset("linkedin-cover", "LinkedIn cover", "linkedinCover"),
+      asset("annual-report-cover", "Annual report cover", "reportCover", "portrait"),
+      asset("annual-report-spread", "Annual report internal spread", "reportSpread"),
+      asset("conference-badge", "Conference badge", "badge", "portrait"),
+      asset("infographic", "Corporate infographic", "infographic", "portrait")
     ]
   },
   {
@@ -267,35 +218,26 @@ const projects = [
     title: "AFTER MIDNIGHT",
     client: "After Midnight",
     year: "2026",
-    filters: ["campaigns", "editorial"],
-    category: t("Social & Campaigns / Print & Editorial", "Соціальні кампанії / Друк та editorial", "Social & kampanie / Print & editorial"),
-    role: t("Campaign Designer / Art Director", "Дизайнерка кампанії / Артдиректорка", "Campaign Designer / Art Director"),
-    disciplines: t(
-      "Event poster system, social campaign, ticket and wristband graphics",
-      "Система event-постерів, social campaign, квиток і wristband graphics",
-      "System plakatów eventowych, kampania social, bilet i opaska"
-    ),
-    description: t(
-      "Built an aggressive typographic campaign for a fictional electronic music night. The identity uses high contrast, distorted type and compressed spacing to communicate underground energy across posters, artist announcements, tickets and digital billboards.",
-      "Створена агресивна типографічна кампанія для вигаданої електронної події. Айдентика використовує високий контраст, деформовану типографіку й стиснутий простір для постерів, lineup graphics, квитків і digital billboards.",
-      "Agresywna kampania typograficzna dla fikcyjnej nocy muzyki elektronicznej. Identyfikacja wykorzystuje wysoki kontrast, zdeformowaną typografię i skompresowaną przestrzeń w plakatach, lineup graphics, biletach i billboardach digital."
-    ),
-    deliverables: t(
-      ["Main poster", "Alternate poster", "Lineup graphic", "Ticket", "Digital billboard", "Wristband"],
-      ["Головний постер", "Альтернативний постер", "Lineup graphic", "Квиток", "Digital billboard", "Wristband"],
-      ["Plakat główny", "Plakat alternatywny", "Lineup graphic", "Bilet", "Digital billboard", "Opaska"]
-    ),
-    tools: sharedTools,
-    palette: ["#030303", "#f5f0e8", "#ff2d55", "#4f46e5", "#9bff00"],
-    style: "event",
-    span: "tall",
+    filters: ["campaigns", "editorial", "digital"],
+    category: "Music Event Campaign",
+    role: "Campaign Designer / Art Director",
+    disciplines: "Event identity, typographic posters, venue graphics, social campaign, ticketing",
+    description:
+      "A complete underground electronic music campaign with expressive typography, distorted hierarchy and practical event assets. This is the intentionally experimental part of the archive, contained within a real campaign system.",
+    palette: ["#050509", "#f1f1eb", "#ff235a", "#732cff", "#b8ff00"],
+    typography: "Condensed display / distorted sans",
+    coverSize: "portrait",
+    capabilities: ["Event identity", "Poster design", "Social media", "Signage", "Print production", "Campaign systems", "Digital screens"],
     assets: [
-      asset("cover", "Main event poster", "poster", "portrait"),
-      asset("alternate-poster", "Alternate poster", "poster", "portrait"),
-      asset("feed-announcement", "Feed announcement", "social", "square"),
-      asset("lineup", "Artist lineup graphic", "social", "portrait"),
-      asset("ticket", "Event ticket", "ticket", "landscape"),
-      asset("billboard", "Digital billboard", "digital", "landscape")
+      asset("cover", "Hero poster", "clubPoster", "portrait"),
+      asset("alternate-poster", "Alternate poster", "clubPosterAlt", "portrait"),
+      asset("lineup-poster", "Lineup poster", "lineupPoster", "portrait"),
+      asset("instagram-post", "Instagram post", "socialPost", "square", { headline: "03 Nov / Berlin" }),
+      asset("instagram-story", "Instagram story", "phoneStory", "portrait", { headline: "After Midnight", cta: "Tickets live" }),
+      asset("ticket", "Ticket", "ticket"),
+      asset("wristband", "Wristband", "wristband"),
+      asset("digital-screen", "Outdoor digital screen", "billboard", "landscape", { headline: "AFTER MIDNIGHT", cta: "Warehouse 17" }),
+      asset("venue-signage", "Venue signage", "signage", "landscape", { headline: "Room A / Main Floor" })
     ]
   },
   {
@@ -304,34 +246,27 @@ const projects = [
     client: "Casa Fiora Hotel",
     year: "2025",
     filters: ["branding", "editorial"],
-    category: t("Branding & Identity / Print", "Брендинг та айдентика / Друк", "Branding i identyfikacja / Print"),
-    role: t("Brand Designer / Hospitality Designer", "Бренд-дизайнерка / Hospitality designer", "Brand Designer / Hospitality Designer"),
-    disciplines: t(
-      "Boutique hotel identity, stationery, guest collateral, local guide",
-      "Айдентика boutique hotel, stationery, матеріали для гостей, локальний гід",
-      "Identyfikacja boutique hotelu, stationery, materiały gościnne, lokalny przewodnik"
-    ),
-    description: t(
-      "Created a tactile hospitality identity for a fictional Mediterranean boutique hotel. The system balances romance and restraint through warm typography, soft paper tones and calm collateral that supports the guest journey from room key to breakfast menu and local guide.",
-      "Створена тактильна hospitality-айдентика для вигаданого середземноморського boutique hotel. Система балансує романтичність і стриманість через теплу типографіку, м’які паперові тони й матеріали для всього guest journey.",
-      "Dotykowa identyfikacja hospitality dla fikcyjnego śródziemnomorskiego boutique hotelu. System łączy romantyczność i powściągliwość przez ciepłą typografię, miękkie odcienie papieru i materiały wspierające cały guest journey."
-    ),
-    deliverables: t(
-      ["Hotel identity", "Room key card", "Welcome card", "Door hanger", "Breakfast menu", "Local guide"],
-      ["Айдентика готелю", "Ключ-карта", "Welcome card", "Door hanger", "Меню сніданку", "Локальний гід"],
-      ["Identyfikacja hotelu", "Karta do pokoju", "Welcome card", "Zawieszka na drzwi", "Menu śniadaniowe", "Lokalny przewodnik"]
-    ),
-    tools: sharedTools,
-    palette: ["#f3dfc4", "#7b4b31", "#d59c6c", "#fff8ee", "#455145"],
-    style: "hotel",
-    span: "standard",
+    category: "Boutique Hospitality / Print",
+    role: "Brand Designer / Hospitality Designer",
+    disciplines: "Hotel identity, guest collateral, printed menus, signage, local guide design",
+    description:
+      "A tactile Mediterranean hotel system built around guest touchpoints: room keys, menus, stationery, signage, postcards, tote graphics and a local guide booklet. The style is warm and romantic, but restrained enough for a premium hospitality brand.",
+    palette: ["#f7e0bf", "#6c3f27", "#c98358", "#fbf4e8", "#435845"],
+    typography: "Warm serif / humanist sans",
+    coverSize: "standard",
+    capabilities: ["Hospitality collateral", "Brand identity", "Logo design", "Editorial layout", "Signage", "Print design"],
     assets: [
-      asset("cover", "Hospitality collateral cover", "hospitality", "landscape"),
-      asset("key-cards", "Room key cards", "identity", "landscape"),
-      asset("welcome-card", "Welcome card", "print", "portrait"),
-      asset("breakfast-menu", "Breakfast menu", "editorial", "portrait"),
-      asset("postcard", "Hotel postcard", "print", "landscape"),
-      asset("local-guide", "Local guide spread", "editorial", "landscape")
+      asset("cover", "Hotel collateral system", "hospitalityOverview"),
+      asset("logo", "Hotel logo", "logoSystem"),
+      asset("room-key", "Room key", "keyCard"),
+      asset("welcome-card", "Welcome card", "welcomeCard", "portrait"),
+      asset("stationery", "Stationery", "stationery"),
+      asset("breakfast-menu", "Breakfast menu", "menu", "portrait"),
+      asset("door-hanger", "Door hanger", "doorHanger", "portrait"),
+      asset("postcard", "Postcard", "postcard"),
+      asset("tote-bag", "Tote bag", "toteBag", "portrait"),
+      asset("local-guide", "Local guide booklet", "magazineSpread"),
+      asset("hotel-signage", "Hotel signage", "signage", "landscape", { headline: "Garden rooms / Reception" })
     ]
   },
   {
@@ -340,34 +275,26 @@ const projects = [
     client: "Kinetic Training",
     year: "2026",
     filters: ["campaigns", "digital"],
-    category: t("Social & Campaigns / Digital Graphics", "Соціальні кампанії / Digital-графіка", "Social & kampanie / Grafika digital"),
-    role: t("Campaign Designer / Digital Graphic Designer", "Дизайнерка кампанії / Digital graphic designer", "Campaign Designer / Digital Graphic Designer"),
-    disciplines: t(
-      "Performance campaign graphics, mobile ads, email hero, promotional artwork",
-      "Performance campaign graphics, мобільні ads, email hero, promotional artwork",
-      "Grafiki performance campaign, mobile ads, email hero, promotional artwork"
-    ),
-    description: t(
-      "Designed conversion-focused marketing creatives for a fictional fitness app. The system avoids product UI and focuses on energetic paid media: bold headlines, dynamic crops, high contrast color and adaptable formats for mobile stories, app store promotion and email.",
-      "Розроблені conversion-focused рекламні креативи для вигаданого fitness app. Система не показує UI продукту, а фокусується на енергійних paid media: bold headlines, динамічні кадри, високий контраст і формати для stories, app store та email.",
-      "Kreacje marketingowe nastawione na konwersję dla fikcyjnej aplikacji fitness. System nie jest UI case study, tylko energetycznym paid media: mocne headline’y, dynamiczne kadry, wysoki kontrast i formaty dla stories, app store oraz email."
-    ),
-    deliverables: t(
-      ["Meta ad", "Instagram story ad", "TikTok cover", "App Store artwork", "Email hero", "Retargeting creative"],
-      ["Meta ad", "Instagram story ad", "TikTok cover", "App Store artwork", "Email hero", "Retargeting creative"],
-      ["Meta ad", "Instagram story ad", "TikTok cover", "App Store artwork", "Email hero", "Retargeting creative"]
-    ),
-    tools: sharedTools,
-    palette: ["#0b0b0c", "#f6f6f2", "#ff6a00", "#00e676", "#2632ff"],
-    style: "fitness",
-    span: "wide",
+    category: "Performance Marketing / Digital Graphics",
+    role: "Marketing Designer / Digital Graphic Designer",
+    disciplines: "Paid media, conversion creatives, promotional hierarchy, mobile-first campaign assets",
+    description:
+      "A performance marketing system for a fictional fitness app, built to show hierarchy, offers, CTA placement and format adaptation. The project is intentionally practical: Meta ads, carousel frames, stories, email, retargeting and comparison variants.",
+    palette: ["#0d0d10", "#ffffff", "#ff5a00", "#00d36f", "#204cff"],
+    typography: "Extra-bold grotesk / compact utility sans",
+    coverSize: "wide",
+    capabilities: ["Paid ads", "Meta advertising", "Social media", "Digital banners", "Marketing design", "Presentation of offers"],
     assets: [
-      asset("cover", "Performance campaign cover", "fitness", "landscape"),
-      asset("meta-ad", "Meta advertisement", "social", "square"),
-      asset("story-ad", "Instagram story ad", "social", "portrait"),
-      asset("tiktok-cover", "TikTok cover", "social", "portrait"),
-      asset("app-store", "App Store promo artwork", "digital", "landscape"),
-      asset("email-hero", "Email hero graphic", "digital", "landscape")
+      asset("cover", "Performance campaign system", "marketingOverview"),
+      asset("meta-static", "Meta static ad", "adCard", "square", { headline: "Train smarter", cta: "Start 7-day trial" }),
+      asset("meta-carousel", "Meta carousel", "carousel"),
+      asset("instagram-story", "Instagram story", "phoneStory", "portrait", { headline: "Build your streak", cta: "Start now" }),
+      asset("tiktok-cover", "TikTok cover", "phoneStory", "portrait", { headline: "20 min strength", cta: "Save workout" }),
+      asset("offer-ad", "Promotional offer ad", "adCard", "square", { headline: "50% off annual", cta: "Claim offer" }),
+      asset("app-store", "App Store promotional graphic", "webBanner", "landscape", { headline: "Personal plans that move with you" }),
+      asset("email-hero", "Email hero", "emailHeader", "landscape", { headline: "Your next session is ready" }),
+      asset("retargeting", "Retargeting creative", "adCard", "square", { headline: "Come back stronger", cta: "Resume plan" }),
+      asset("comparison", "Campaign comparison variants", "comparison")
     ]
   },
   {
@@ -376,34 +303,25 @@ const projects = [
     client: "FORM / 26 Magazine",
     year: "2025",
     filters: ["editorial"],
-    category: t("Print & Editorial", "Друк та editorial", "Print & editorial"),
-    role: t("Editorial Designer", "Редакційна дизайнерка", "Editorial Designer"),
-    disciplines: t(
-      "Magazine cover, editorial spread, long-form layout, typographic hierarchy",
-      "Magazine cover, editorial spread, long-form layout, типографічна ієрархія",
-      "Okładka magazynu, editorial spread, long-form layout, hierarchia typograficzna"
-    ),
-    description: t(
-      "Created an independent architecture magazine concept with a Swiss editorial structure. The layouts demonstrate issue hierarchy, page numbers, captions, running headers and controlled whitespace across covers, contents and long-form spreads.",
-      "Створена концепція незалежного архітектурного журналу зі швейцарською editorial-структурою. Макети показують ієрархію випуску, номери сторінок, підписи, running headers і контрольований whitespace у cover, contents та spreads.",
-      "Koncepcja niezależnego magazynu architektonicznego ze szwajcarską strukturą editorial. Layouty pokazują hierarchię numeru, paginację, podpisy, running headers i kontrolowaną przestrzeń w okładkach, contents i długich spreadach."
-    ),
-    deliverables: t(
-      ["Magazine cover", "Alternative cover", "Contents page", "Editorial spread", "Article spread", "Quote page"],
-      ["Обкладинка журналу", "Альтернативна обкладинка", "Contents page", "Editorial spread", "Article spread", "Quote page"],
-      ["Okładka magazynu", "Okładka alternatywna", "Contents page", "Editorial spread", "Article spread", "Quote page"]
-    ),
-    tools: sharedTools,
-    palette: ["#f5f3ec", "#111111", "#9a9a93", "#d3d0c4", "#53687a"],
-    style: "editorial",
-    span: "standard",
+    category: "Architecture Magazine / Editorial",
+    role: "Editorial Designer",
+    disciplines: "Magazine systems, readable editorial hierarchy, covers, spreads, captions and folios",
+    description:
+      "A monochrome editorial system for an independent architecture magazine. The project focuses on actual magazine logic: covers, contents, opening spreads, long-form copy, folios, captions, interviews and image-led pacing.",
+    palette: ["#f5f3ec", "#111111", "#868680", "#d7d4c8", "#53687a"],
+    typography: "Swiss grotesk / editorial serif",
+    coverSize: "standard",
+    capabilities: ["Editorial layout", "Magazine design", "Print design", "Typography systems", "Readable long-form layout"],
     assets: [
-      asset("cover", "Magazine cover", "editorial", "portrait"),
-      asset("alt-cover", "Alternative cover", "editorial", "portrait"),
-      asset("contents", "Contents page", "editorial", "portrait"),
-      asset("feature-spread", "Feature article spread", "editorial", "landscape"),
-      asset("image-spread", "Image-led spread", "editorial", "landscape"),
-      asset("quote-page", "Quote page", "editorial", "portrait")
+      asset("cover", "Magazine cover", "magazineCover", "portrait"),
+      asset("contents", "Contents page", "contentsPage", "portrait"),
+      asset("opening-spread", "Article opening spread", "magazineSpread"),
+      asset("long-form", "Long-form text spread", "textSpread"),
+      asset("image-led", "Image-led spread", "imageSpread"),
+      asset("pull-quote", "Pull quote spread", "quoteSpread"),
+      asset("interview", "Interview spread", "interviewSpread"),
+      asset("captions-folios", "Captions and folios", "detailCrop"),
+      asset("back-cover", "Back cover", "backCover", "portrait")
     ]
   },
   {
@@ -412,34 +330,26 @@ const projects = [
     client: "PawPaw Pantry",
     year: "2026",
     filters: ["packaging", "branding", "campaigns"],
-    category: t("Packaging & Labels / Branding", "Паковання та етикетки / Брендинг", "Opakowania i etykiety / Branding"),
-    role: t("Packaging Designer / Brand Designer", "Дизайнерка паковання / Бренд-дизайнерка", "Packaging Designer / Brand Designer"),
-    disciplines: t(
-      "Consumer packaging, illustration system, product variants, retail display",
-      "Consumer packaging, ілюстративна система, продуктові варіанти, retail display",
-      "Consumer packaging, system ilustracji, warianty produktowe, ekspozycja retail"
-    ),
-    description: t(
-      "Designed a cheerful but mature pet food brand with expressive packaging and a flexible icon system. The visual language uses confident color blocking, friendly illustration and clear variant hierarchy for dog food, cat food, treats, shipping and retail displays.",
-      "Розроблений дружній, але не дитячий pet food brand з виразним пакованням і гнучкою icon system. Візуальна мова використовує впевнені color blocks, friendly illustration і зрозумілу ієрархію для dog food, cat food, treats, shipping та retail.",
-      "Przyjazna, ale nie dziecięca marka karmy dla zwierząt z wyrazistym packagingiem i elastycznym systemem ikon. Język wizualny używa mocnych bloków koloru, ilustracji i czytelnej hierarchii wariantów dla dog food, cat food, treats, shipping i retail."
-    ),
-    deliverables: t(
-      ["Dog food package", "Cat food package", "Treat pouch", "Icon system", "Shipping box", "Retail display"],
-      ["Паковання dog food", "Паковання cat food", "Treat pouch", "Icon system", "Shipping box", "Retail display"],
-      ["Opakowanie dog food", "Opakowanie cat food", "Treat pouch", "Icon system", "Shipping box", "Retail display"]
-    ),
-    tools: sharedTools,
-    palette: ["#fff6df", "#ff7a59", "#1c7c54", "#ffd447", "#493548"],
-    style: "pet",
-    span: "wide",
+    category: "Consumer Packaging / Pet Food",
+    role: "Packaging Designer / Brand Designer",
+    disciplines: "Illustration-led packaging, product variants, retail display, launch graphics",
+    description:
+      "A cheerful consumer packaging system for a fictional pet food brand. It uses expressive illustration, clear product variants and retail-ready pack hierarchy without becoming childish or luxury-coded.",
+    palette: ["#fff3c8", "#ff6f4f", "#157a57", "#ffd330", "#4a2f68"],
+    typography: "Friendly geometric sans / chunky display",
+    coverSize: "large",
+    capabilities: ["Packaging", "Consumer branding", "Illustration integration", "Retail graphics", "Social media", "Product variants"],
     assets: [
-      asset("cover", "Pet packaging cover", "pet", "landscape"),
-      asset("dog-package", "Dog food package", "packaging", "portrait"),
-      asset("cat-package", "Cat food package", "packaging", "portrait"),
-      asset("treat-pouch", "Treat pouch", "packaging", "portrait"),
-      asset("icon-system", "Pet icon system", "identity", "landscape"),
-      asset("retail-display", "Retail display", "packaging", "landscape")
+      asset("cover", "Pet food package family", "petPackaging"),
+      asset("dog-package", "Dog food package", "pouchPackage", "portrait", { variant: "Dog / Chicken" }),
+      asset("cat-package", "Cat food package", "pouchPackage", "portrait", { variant: "Cat / Salmon" }),
+      asset("treat-pouch", "Treat pouch", "pouchPackage", "portrait", { variant: "Treats / Crunch" }),
+      asset("variants", "Product variants", "variantLineup"),
+      asset("icons", "Illustration and icon system", "iconSystem"),
+      asset("retail-display", "Retail shelf display", "retailShelf"),
+      asset("shipping-box", "Shipping box", "boxMockup"),
+      asset("launch-social", "Launch social post", "socialPost", "square", { headline: "Food with character" }),
+      asset("campaign", "Campaign graphic", "adCard", "square", { headline: "Real food. Real personality.", cta: "Meet PawPaw" })
     ]
   },
   {
@@ -447,35 +357,26 @@ const projects = [
     title: "MAISON ÉLAN",
     client: "Maison Élan",
     year: "2026",
-    filters: ["campaigns", "editorial"],
-    category: t("Social & Campaigns / Print & Editorial", "Соціальні кампанії / Друк та editorial", "Social & kampanie / Print & editorial"),
-    role: t("Art Director / Graphic Designer", "Артдиректорка / Графічна дизайнерка", "Art Director / Graphic Designer"),
-    disciplines: t(
-      "Fashion campaign, lookbook, invitation, digital banner",
-      "Fashion campaign, lookbook, invitation, digital banner",
-      "Fashion campaign, lookbook, invitation, digital banner"
-    ),
-    description: t(
-      "Created an expressive fashion editorial campaign for a fictional independent label. The system uses asymmetrical type, photographic placeholders, restrained color and elegant pacing across campaign poster, lookbook, invitation and social formats.",
-      "Створена виразна fashion editorial campaign для вигаданого незалежного fashion label. Система використовує асиметричну типографіку, photographic placeholders, стриманий колір і елегантний ритм у poster, lookbook, invitation та social.",
-      "Ekspresyjna fashion editorial campaign dla fikcyjnej niezależnej marki. System używa asymetrycznej typografii, photographic placeholders, powściągliwego koloru i eleganckiego rytmu w posterze, lookbooku, invitation i social."
-    ),
-    deliverables: t(
-      ["Campaign poster", "Lookbook cover", "Lookbook spread", "Invitation", "Social campaign", "Digital banner"],
-      ["Campaign poster", "Lookbook cover", "Lookbook spread", "Invitation", "Social campaign", "Digital banner"],
-      ["Campaign poster", "Lookbook cover", "Lookbook spread", "Invitation", "Social campaign", "Digital banner"]
-    ),
-    tools: sharedTools,
-    palette: ["#12100f", "#e5ded4", "#8f4f4f", "#c4a27a", "#f6f1e8"],
-    style: "fashion",
-    span: "tall",
+    filters: ["campaigns", "editorial", "digital"],
+    category: "Fashion Editorial Campaign",
+    role: "Art Director / Graphic Designer",
+    disciplines: "Fashion campaign, lookbook, invitation design, social and print assets",
+    description:
+      "A fashion-driven campaign system for a fictional independent label. The project uses image pacing, asymmetrical typography and tactile print moments across lookbook spreads, social assets, invitations and printed campaign material.",
+    palette: ["#17110f", "#f2e5dc", "#8e3341", "#c79a69", "#f7f2ed"],
+    typography: "Fashion serif / narrow sans",
+    coverSize: "portrait",
+    capabilities: ["Fashion", "Campaign systems", "Editorial layout", "Social media", "Digital banners", "Poster design"],
     assets: [
-      asset("cover", "Seasonal campaign cover", "fashion", "portrait"),
-      asset("poster", "Campaign poster", "poster", "portrait"),
-      asset("lookbook-cover", "Lookbook cover", "editorial", "portrait"),
-      asset("lookbook-spread", "Lookbook spread", "editorial", "landscape"),
-      asset("invitation", "Invitation card", "print", "landscape"),
-      asset("digital-banner", "Digital banner", "digital", "landscape")
+      asset("cover", "Seasonal campaign key visual", "fashionKeyVisual", "portrait"),
+      asset("lookbook-cover", "Lookbook cover", "lookbookCover", "portrait"),
+      asset("lookbook-spread", "Lookbook spread", "magazineSpread"),
+      asset("product-editorial", "Product editorial page", "editorialPage", "portrait"),
+      asset("invitation", "Invitation", "invitation"),
+      asset("social-campaign", "Social campaign", "socialPost", "square", { headline: "Autumn Study" }),
+      asset("story", "Story", "phoneStory", "portrait", { headline: "New silhouettes", cta: "Preview collection" }),
+      asset("digital-banner", "Digital banner", "webBanner", "landscape", { headline: "Maison Élan / Autumn Study" }),
+      asset("printed-poster", "Printed campaign poster", "premiumPoster", "portrait")
     ]
   },
   {
@@ -484,34 +385,26 @@ const projects = [
     client: "Verde Grove",
     year: "2025",
     filters: ["packaging", "branding"],
-    category: t("Packaging & Labels", "Паковання та етикетки", "Opakowania i etykiety"),
-    role: t("Packaging Designer", "Дизайнерка паковання", "Packaging Designer"),
-    disciplines: t(
-      "Olive oil labels, gift packaging, retail communication, recipe card",
-      "Етикетки оливкової олії, gift packaging, retail communication, recipe card",
-      "Etykiety oliwy, gift packaging, komunikacja retail, recipe card"
-    ),
-    description: t(
-      "Developed a Mediterranean olive oil packaging concept that balances agricultural heritage with contemporary retail positioning. The label system uses tactile color, narrow type and a clear product hierarchy across bottle, gift box, shipping and recipe collateral.",
-      "Розроблена концепція паковання середземноморської оливкової олії, що поєднує agricultural heritage і contemporary retail positioning. Label system використовує тактильний колір, вузьку типографіку й чітку ієрархію для bottle, gift box, shipping та recipe collateral.",
-      "Koncepcja opakowań oliwy śródziemnomorskiej, łącząca agricultural heritage z contemporary retail positioning. System etykiet używa dotykowego koloru, wąskiej typografii i jasnej hierarchii dla bottle, gift box, shipping i recipe collateral."
-    ),
-    deliverables: t(
-      ["Bottle label", "Secondary label", "Bottle mockup", "Gift packaging", "Shipping box", "Recipe card"],
-      ["Етикетка пляшки", "Secondary label", "Bottle mockup", "Gift packaging", "Shipping box", "Recipe card"],
-      ["Etykieta butelki", "Secondary label", "Bottle mockup", "Gift packaging", "Shipping box", "Recipe card"]
-    ),
-    tools: sharedTools,
-    palette: ["#f2e2c6", "#39452b", "#9a6a3a", "#d0a562", "#fff8ec"],
-    style: "olive",
-    span: "standard",
+    category: "Olive Oil Packaging / Retail",
+    role: "Packaging Designer",
+    disciplines: "Label systems, product family, gift packaging, retail and recipe collateral",
+    description:
+      "A Mediterranean olive oil system that translates agricultural heritage into a practical retail package family. The deliverables show front and back labels, product family logic, gift packaging, shelf presence and shipping collateral.",
+    palette: ["#f1dfbd", "#2f4d2f", "#9b6734", "#d0a65f", "#fff8ea"],
+    typography: "Heritage serif / condensed sans",
+    coverSize: "standard",
+    capabilities: ["Packaging", "Labels", "Retail graphics", "Food & beverage", "Print design", "Product variants"],
     assets: [
-      asset("cover", "Olive oil packaging cover", "olive", "landscape"),
-      asset("bottle-label", "Bottle label hierarchy", "packaging", "portrait"),
-      asset("variant-label", "Variant label system", "packaging", "landscape"),
-      asset("gift-box", "Gift packaging", "packaging", "landscape"),
-      asset("recipe-card", "Recipe card", "print", "portrait"),
-      asset("retail-ad", "Retail campaign advertisement", "poster", "landscape")
+      asset("cover", "Bottle and gift box", "oliveHero"),
+      asset("front-label", "Bottle label", "labelSheet"),
+      asset("back-label", "Back label", "backLabel", "portrait"),
+      asset("bottle-mockup", "Bottle mockup", "bottleFront", "portrait"),
+      asset("product-family", "Product family", "variantLineup"),
+      asset("gift-box", "Gift box", "boxMockup"),
+      asset("recipe-card", "Recipe card", "recipeCard", "portrait"),
+      asset("retail-shelf", "Retail shelf visual", "retailShelf"),
+      asset("campaign-ad", "Campaign advertisement", "magazineAd"),
+      asset("shipping", "Shipping packaging", "shippingBox")
     ]
   },
   {
@@ -519,35 +412,29 @@ const projects = [
     title: "FUTURE FORUM",
     client: "Future Forum",
     year: "2026",
-    filters: ["branding", "campaigns", "editorial"],
-    category: t("Branding & Identity / Social & Campaigns / Print", "Брендинг / Соціальні кампанії / Друк", "Branding / Social & kampanie / Print"),
-    role: t("Event Identity Designer", "Дизайнерка event-айдентики", "Event Identity Designer"),
-    disciplines: t(
-      "Conference identity, modular key visual, signage, social templates, stage graphics",
-      "Conference identity, modular key visual, signage, social templates, stage graphics",
-      "Conference identity, modular key visual, signage, social templates, stage graphics"
-    ),
-    description: t(
-      "Created a modular visual system for a fictional international business and technology conference. The identity uses bold blocks, structured motion-like compositions and a flexible typographic system that adapts from speaker announcements to badges, signage and stage screens.",
-      "Створена модульна візуальна система для вигаданої міжнародної business та technology conference. Айдентика використовує bold blocks, structured motion-like compositions і гнучку typography system для speaker announcements, badges, signage та stage screens.",
-      "Modularny system wizualny dla fikcyjnej międzynarodowej konferencji biznesowo-technologicznej. Identyfikacja używa bold blocks, structured motion-like compositions i elastycznego systemu typografii dla speaker announcements, badges, signage i stage screens."
-    ),
-    deliverables: t(
-      ["Conference identity", "Key visual", "Event poster", "Speaker announcement", "Badge", "Stage screen"],
-      ["Conference identity", "Key visual", "Event poster", "Speaker announcement", "Badge", "Stage screen"],
-      ["Conference identity", "Key visual", "Event poster", "Speaker announcement", "Badge", "Stage screen"]
-    ),
-    tools: sharedTools,
-    palette: ["#101214", "#f7f7f2", "#4c6fff", "#f7c948", "#ff4f7b"],
-    style: "conference",
-    span: "wide",
+    filters: ["branding", "campaigns", "corporate", "digital"],
+    category: "Business Conference Identity",
+    role: "Event Identity Designer",
+    disciplines: "Conference branding, modular key visual, signage, badges, social templates and stage graphics",
+    description:
+      "A modular identity for a fictional international technology and business conference. The system is designed to scale across posters, speaker graphics, agendas, badges, lanyards, presentation slides, signage and stage screens.",
+    palette: ["#101114", "#f7f7f2", "#345cff", "#f5c542", "#ff4f86"],
+    typography: "Modular grotesk / numeric display",
+    coverSize: "wide",
+    capabilities: ["Event identity", "Signage", "Presentation design", "Social media", "Corporate communication", "Poster design"],
     assets: [
-      asset("cover", "Conference key visual", "conference", "landscape"),
-      asset("event-poster", "Event poster", "poster", "portrait"),
-      asset("speaker", "Speaker announcement", "social", "square"),
-      asset("agenda", "Agenda graphic", "digital", "portrait"),
-      asset("badge", "Attendee badge and lanyard", "identity", "portrait"),
-      asset("stage-screen", "Stage screen", "digital", "landscape")
+      asset("cover", "Conference key visual", "conferenceOverview"),
+      asset("logo", "Logo", "logoSystem"),
+      asset("key-visual", "Key visual", "conferenceKeyVisual"),
+      asset("main-poster", "Main poster", "conferencePoster", "portrait"),
+      asset("speaker", "Speaker announcement", "socialPost", "square", { headline: "Mira Vale / Systems Lead" }),
+      asset("agenda", "Agenda graphic", "agenda", "portrait"),
+      asset("badge", "Badge", "badge", "portrait"),
+      asset("lanyard", "Lanyard", "lanyard"),
+      asset("presentation-slide", "Presentation slide", "presentationSlide", "landscape", { headline: "Tomorrow's operating systems" }),
+      asset("stage-screen", "Stage screen", "stageScreen"),
+      asset("directional-signage", "Directional signage", "signage", "landscape", { headline: "Stage B / Workshops" }),
+      asset("social-template", "Social template", "socialPost", "square", { headline: "Future Forum 2026" })
     ]
   },
   {
@@ -556,34 +443,27 @@ const projects = [
     client: "Kora Skincare",
     year: "2025",
     filters: ["branding", "packaging", "campaigns"],
-    category: t("Branding & Identity / Packaging", "Брендинг та айдентика / Паковання", "Branding i identyfikacja / Opakowania"),
-    role: t("Brand Designer / Packaging Designer", "Бренд-дизайнерка / Дизайнерка паковання", "Brand Designer / Packaging Designer"),
-    disciplines: t(
-      "Natural skincare identity, packaging, shipping system, social launch",
-      "Айдентика natural skincare, packaging, shipping system, social launch",
-      "Identyfikacja natural skincare, packaging, shipping system, social launch"
-    ),
-    description: t(
-      "Created an approachable skincare identity with soft organic forms, warm neutrals and one recognizable accent. The system covers logo, symbol, bottles, jars, shipping materials and launch graphics without becoming generic spa minimalism.",
-      "Створена approachable skincare-айдентика з м’якими органічними формами, теплими нейтралами й одним впізнаваним акцентом. Система охоплює logo, symbol, bottles, jars, shipping materials та launch graphics без generic spa minimalism.",
-      "Przystępna identyfikacja skincare z miękkimi organicznymi formami, ciepłymi neutralami i jednym rozpoznawalnym akcentem. System obejmuje logo, symbol, bottles, jars, shipping materials i launch graphics bez generic spa minimalism."
-    ),
-    deliverables: t(
-      ["Logo", "Symbol", "Bottle labels", "Cream jar", "Shipping box", "Instagram launch"],
-      ["Логотип", "Символ", "Етикетки пляшок", "Cream jar", "Shipping box", "Instagram launch"],
-      ["Logo", "Symbol", "Etykiety butelek", "Cream jar", "Shipping box", "Instagram launch"]
-    ),
-    tools: sharedTools,
-    palette: ["#f0dfcf", "#5b6a4f", "#d68f73", "#fff8f0", "#aa775f"],
-    style: "skincare",
-    span: "standard",
+    category: "Natural Skincare / Brand Identity",
+    role: "Brand Designer / Packaging Designer",
+    disciplines: "Approachable skincare identity, product packaging, shipping system, social launch",
+    description:
+      "A warm and natural skincare identity that shows a complete consumer brand system: logo, bottles, jars, outer packaging, shipping, tissue, sticker language, product cards and launch graphics.",
+    palette: ["#ead7c3", "#516b4d", "#d98b76", "#fff8ef", "#9d705d"],
+    typography: "Humanist sans / soft organic display",
+    coverSize: "standard",
+    capabilities: ["Beauty campaign design", "Packaging", "Labels", "Brand identity", "Social media", "Consumer branding"],
     assets: [
-      asset("cover", "Skincare identity cover", "skincare", "landscape"),
-      asset("logo-symbol", "Logo and symbol", "identity", "landscape"),
-      asset("bottle-labels", "Bottle labels", "packaging", "landscape"),
-      asset("cream-jar", "Cream jar packaging", "packaging", "square"),
-      asset("shipping", "Shipping box and tissue", "packaging", "landscape"),
-      asset("instagram", "Instagram launch post", "social", "square")
+      asset("cover", "Skincare package family", "skincareHero"),
+      asset("logo", "Logo", "logoSystem"),
+      asset("bottle", "Skincare bottle", "bottleFront", "portrait"),
+      asset("jar", "Jar", "jarMockup", "square"),
+      asset("outer-packaging", "Outer packaging", "boxMockup"),
+      asset("shipping-box", "Shipping box", "shippingBox"),
+      asset("tissue-paper", "Tissue paper", "patternSheet"),
+      asset("stickers", "Sticker system", "stickerSheet"),
+      asset("product-card", "Product card", "productCard", "portrait"),
+      asset("instagram", "Instagram launch post", "socialPost", "square", { headline: "Barrier care, softened" }),
+      asset("story", "Story", "phoneStory", "portrait", { headline: "New ritual", cta: "Meet KORA" })
     ]
   },
   {
@@ -592,34 +472,22 @@ const projects = [
     client: "Self-initiated poster series",
     year: "2026",
     filters: ["editorial", "digital"],
-    category: t("Print & Editorial", "Друк та editorial", "Print & editorial"),
-    role: t("Graphic Designer", "Графічна дизайнерка", "Graphic Designer"),
-    disciplines: t(
-      "Experimental poster series, typographic composition, image treatment",
-      "Experimental poster series, typographic composition, image treatment",
-      "Experimental poster series, typographic composition, image treatment"
-    ),
-    description: t(
-      "Created a self-initiated poster series about communication overload, digital noise and absence of meaningful connection. The series uses brutalist type, fragmented blocks and controlled visual chaos to give the archive a more conceptual and experimental dimension.",
-      "Створена self-initiated poster series про communication overload, digital noise та відсутність змістовного зв’язку. Серія використовує brutalist type, fragmented blocks і контрольований visual chaos, додаючи портфоліо концептуальний вимір.",
-      "Self-initiated poster series o communication overload, digital noise i braku znaczącego połączenia. Seria używa brutalist type, fragmented blocks i kontrolowanego visual chaos, dodając archiwum bardziej koncepcyjny wymiar."
-    ),
-    deliverables: t(
-      ["Poster 01", "Poster 02", "Poster 03", "Poster 04", "Poster 05", "Series overview"],
-      ["Poster 01", "Poster 02", "Poster 03", "Poster 04", "Poster 05", "Series overview"],
-      ["Poster 01", "Poster 02", "Poster 03", "Poster 04", "Poster 05", "Series overview"]
-    ),
-    tools: sharedTools,
-    palette: ["#f1efea", "#111111", "#e84a27", "#2b2b2b", "#b8b8b0"],
-    style: "experimental",
-    span: "tall",
+    category: "Experimental Poster Series",
+    role: "Graphic Designer",
+    disciplines: "Experimental typography, image treatment, poster composition",
+    description:
+      "A self-initiated poster series about communication overload and digital absence. This project is intentionally conceptual, but each poster explores the theme through a different typographic structure rather than repeating one layout.",
+    palette: ["#f3f1e8", "#0d0d0d", "#ff3d1f", "#6b6b66", "#d5d1c8"],
+    typography: "Brutalist sans / mono fragments",
+    coverSize: "portrait",
+    capabilities: ["Poster design", "Typography systems", "Experimental design", "Image treatment", "Print design"],
     assets: [
-      asset("cover", "Poster series cover", "experimental", "portrait"),
-      asset("poster-01", "No Signal poster 01", "poster", "portrait"),
-      asset("poster-02", "No Signal poster 02", "poster", "portrait"),
-      asset("poster-03", "No Signal poster 03", "poster", "portrait"),
-      asset("poster-04", "No Signal poster 04", "poster", "portrait"),
-      asset("series-overview", "Poster series overview", "poster", "landscape")
+      asset("cover", "Poster 01", "experimentalPoster", "portrait", { headline: "NO SIGNAL / 01" }),
+      asset("poster-02", "Poster 02", "experimentalPosterTwo", "portrait", { headline: "BUFFERED SILENCE" }),
+      asset("poster-03", "Poster 03", "experimentalPosterThree", "portrait", { headline: "THREAD CLOSED" }),
+      asset("poster-04", "Poster 04", "experimentalPoster", "portrait", { headline: "STATIC / OPEN" }),
+      asset("poster-05", "Poster 05", "experimentalPosterTwo", "portrait", { headline: "MESSAGE LOST" }),
+      asset("series-overview", "Poster series overview", "posterWall")
     ]
   },
   {
@@ -627,35 +495,28 @@ const projects = [
     title: "ORBIT",
     client: "Orbit Financial",
     year: "2025",
-    filters: ["digital", "branding"],
-    category: t("Digital Graphics / Branding", "Digital-графіка / Брендинг", "Grafika digital / Branding"),
-    role: t("Communication Designer", "Дизайнерка комунікацій", "Communication Designer"),
-    disciplines: t(
-      "Fintech communication, investor presentation, report graphics, data visualization",
-      "Fintech communication, investor presentation, report graphics, data visualization",
-      "Fintech communication, investor presentation, report graphics, data visualization"
-    ),
-    description: t(
-      "Built a communication design system for a fictional fintech platform. The work focuses on investor and corporate graphics rather than product UI, using stable typography, data-led compositions and clear report structures without relying on neon finance clichés.",
-      "Створена communication design system для вигаданої fintech platform. Робота фокусується на investor та corporate graphics, а не product UI, використовуючи стабільну типографіку, data-led compositions і зрозумілі report structures без neon finance clichés.",
-      "Communication design system dla fikcyjnej platformy fintech. Praca skupia się na investor i corporate graphics, nie product UI, używając stabilnej typografii, data-led compositions i jasnych struktur raportowych bez neon finance clichés."
-    ),
-    deliverables: t(
-      ["Investor presentation", "Report cover", "Report spread", "Data visualization", "LinkedIn announcement", "Webinar banner"],
-      ["Investor presentation", "Report cover", "Report spread", "Data visualization", "LinkedIn announcement", "Webinar banner"],
-      ["Investor presentation", "Report cover", "Report spread", "Data visualization", "LinkedIn announcement", "Webinar banner"]
-    ),
-    tools: sharedTools,
-    palette: ["#071514", "#f6f2e8", "#1c7c7a", "#d6bc74", "#91a7a6"],
-    style: "fintech",
-    span: "standard",
+    filters: ["corporate", "digital", "branding"],
+    category: "Fintech Corporate Communication",
+    role: "Communication Designer / Presentation Designer",
+    disciplines: "Fintech reports, investor deck assets, KPI graphics, webinar and corporate event communication",
+    description:
+      "A fintech communication design system focused on trust, clarity and business information. The project demonstrates investor decks, KPI slides, financial data visualization, reports, LinkedIn posts, webinars, email headers and conference screens.",
+    palette: ["#071514", "#f5f1e8", "#157d77", "#d6b25e", "#91a7a6"],
+    typography: "Financial grotesk / tabular numerals",
+    coverSize: "large",
+    capabilities: ["Fintech communication", "Corporate design", "Data visualization", "Pitch decks", "Presentation design", "LinkedIn graphics", "Email header"],
     assets: [
-      asset("cover", "Fintech communication cover", "fintech", "landscape"),
-      asset("investor-deck", "Investor presentation", "presentation", "landscape"),
-      asset("report-cover", "Financial report cover", "report", "portrait"),
-      asset("report-spread", "Report spread", "report", "landscape"),
-      asset("data-visual", "Data visualization", "digital", "landscape"),
-      asset("webinar", "Webinar banner", "digital", "landscape")
+      asset("cover", "Brand extension system", "fintechOverview"),
+      asset("brand-extension", "Brand extension system", "logoSystem"),
+      asset("investor-cover", "Investor deck cover", "presentationSlide", "landscape", { headline: "Investor update Q3" }),
+      asset("kpi-slide", "Financial KPI slide", "kpiSlide"),
+      asset("data-visualization", "Data visualization", "dataSlide"),
+      asset("report-cover", "Report cover", "reportCover", "portrait"),
+      asset("report-spread", "Report spread", "reportSpread"),
+      asset("webinar-banner", "Webinar banner", "webBanner", "landscape", { headline: "Cashflow visibility for modern teams" }),
+      asset("linkedin-post", "LinkedIn post", "socialPost", "square", { headline: "Q3 product signal" }),
+      asset("email-header", "Email header", "emailHeader", "landscape", { headline: "Monthly finance brief" }),
+      asset("conference-screen", "Conference screen", "stageScreen")
     ]
   },
   {
@@ -663,35 +524,27 @@ const projects = [
     title: "MISO CLUB",
     client: "Miso Club",
     year: "2026",
-    filters: ["branding", "editorial", "campaigns"],
-    category: t("Branding & Identity / Print", "Брендинг та айдентика / Друк", "Branding i identyfikacja / Print"),
-    role: t("Brand Designer / Graphic Designer", "Бренд-дизайнерка / Графічна дизайнерка", "Brand Designer / Graphic Designer"),
-    disciplines: t(
-      "Restaurant identity, menu design, takeaway packaging, social graphics",
-      "Restaurant identity, menu design, takeaway packaging, social graphics",
-      "Restaurant identity, menu design, takeaway packaging, social graphics"
-    ),
-    description: t(
-      "Created a playful restaurant identity for a fictional contemporary Asian dining concept. The system avoids obvious clichés and instead uses bold color, irreverent typography and graphic illustration across menus, takeaway packaging, loyalty card and delivery graphics.",
-      "Створена playful restaurant identity для вигаданого contemporary Asian dining concept. Система уникає очевидних кліше й використовує bold color, irreverent typography та graphic illustration у menus, takeaway packaging, loyalty card і delivery graphics.",
-      "Playful restaurant identity dla fikcyjnego contemporary Asian dining concept. System unika oczywistych klisz, używając bold color, irreverent typography i graphic illustration w menus, takeaway packaging, loyalty card i delivery graphics."
-    ),
-    deliverables: t(
-      ["Logo", "Secondary mark", "Menu", "Takeaway packaging", "Chopstick sleeve", "Restaurant poster"],
-      ["Logo", "Secondary mark", "Menu", "Takeaway packaging", "Chopstick sleeve", "Restaurant poster"],
-      ["Logo", "Secondary mark", "Menu", "Takeaway packaging", "Chopstick sleeve", "Restaurant poster"]
-    ),
-    tools: sharedTools,
-    palette: ["#fff2e0", "#ff5533", "#102bc4", "#111111", "#ffd600"],
-    style: "restaurant",
-    span: "wide",
+    filters: ["branding", "campaigns", "editorial"],
+    category: "Restaurant Identity / Print & Campaign",
+    role: "Brand Designer / Graphic Designer",
+    disciplines: "Restaurant branding, menu systems, takeaway packaging, loyalty and delivery promotion graphics",
+    description:
+      "A youthful restaurant identity that avoids generic visual clichés. It uses bold color, flexible marks, loud menu hierarchy and delivery-ready packaging to feel like a contemporary urban dining brand.",
+    palette: ["#fff1dc", "#ff4b2f", "#1128c7", "#111111", "#ffd500"],
+    typography: "Irreverent display sans / menu grotesk",
+    coverSize: "wide",
+    capabilities: ["Restaurant branding", "Menu design", "Packaging", "Social media", "Campaign systems", "Retail graphics"],
     assets: [
-      asset("cover", "Restaurant identity cover", "restaurant", "landscape"),
-      asset("logo-marks", "Logo and secondary mark", "identity", "landscape"),
-      asset("menu", "Restaurant menu", "editorial", "portrait"),
-      asset("takeaway", "Takeaway packaging", "packaging", "landscape"),
-      asset("poster", "Restaurant poster", "poster", "portrait"),
-      asset("delivery-bag", "Delivery bag graphic", "packaging", "portrait")
+      asset("cover", "Restaurant identity system", "restaurantOverview"),
+      asset("logo", "Restaurant logo", "logoSystem"),
+      asset("menu", "Menu", "menu", "portrait"),
+      asset("takeaway-box", "Takeaway box", "boxMockup"),
+      asset("chopstick-sleeve", "Chopstick sleeve", "sleeve"),
+      asset("delivery-bag", "Delivery bag", "deliveryBag", "portrait"),
+      asset("loyalty-card", "Loyalty card", "loyaltyCard"),
+      asset("poster", "Poster", "poster", "portrait"),
+      asset("social-post", "Social post", "socialPost", "square", { headline: "Hot bowls, cold city" }),
+      asset("delivery-promo", "Delivery promotion creative", "adCard", "square", { headline: "Free delivery tonight", cta: "Order now" })
     ]
   },
   {
@@ -699,35 +552,81 @@ const projects = [
     title: "NEST",
     client: "Nest Residences",
     year: "2025",
-    filters: ["branding", "digital", "editorial"],
-    category: t("Branding & Identity / Digital Graphics / Print", "Брендинг / Digital-графіка / Друк", "Branding / Grafika digital / Print"),
-    role: t("Brand Designer / Communication Designer", "Бренд-дизайнерка / Дизайнерка комунікацій", "Brand Designer / Communication Designer"),
-    disciplines: t(
-      "Residential development branding, sales brochure, floor plan treatment, outdoor graphics",
-      "Residential development branding, sales brochure, floor plan treatment, outdoor graphics",
-      "Residential development branding, sales brochure, floor plan treatment, outdoor graphics"
-    ),
-    description: t(
-      "Designed branding and sales communication for a fictional residential development. The system is spacious, architectural and commercially credible, with a restrained identity that supports brochures, property cards, outdoor media and sales presentation materials.",
-      "Розроблені branding та sales communication для вигаданого residential development. Система spacious, architectural і commercially credible, зі стриманою айдентикою для brochures, property cards, outdoor media та sales presentation materials.",
-      "Branding i sales communication dla fikcyjnego residential development. System jest przestrzenny, architektoniczny i commercially credible, z powściągliwą identyfikacją dla brochures, property cards, outdoor media i sales presentation materials."
-    ),
-    deliverables: t(
-      ["Development identity", "Brochure cover", "Brochure spread", "Floor plan treatment", "Billboard", "Property card"],
-      ["Development identity", "Brochure cover", "Brochure spread", "Floor plan treatment", "Billboard", "Property card"],
-      ["Development identity", "Brochure cover", "Brochure spread", "Floor plan treatment", "Billboard", "Property card"]
-    ),
-    tools: sharedTools,
-    palette: ["#ede8dc", "#222520", "#9f9b86", "#c9b28a", "#ffffff"],
-    style: "realestate",
-    span: "standard",
+    filters: ["branding", "corporate", "editorial", "digital"],
+    category: "Residential Development / Sales Communication",
+    role: "Brand Designer / Communication Designer",
+    disciplines: "Real estate branding, brochure design, floor plan presentation, outdoor and sales collateral",
+    description:
+      "A residential development communication system for print, outdoor and sales material. The work focuses on spacious hierarchy, property information, brochure pacing and commercial real estate clarity without becoming another website concept.",
+    palette: ["#ebe5d8", "#20251f", "#8f9a83", "#c0a77a", "#ffffff"],
+    typography: "Architectural serif / quiet sans",
+    coverSize: "standard",
+    capabilities: ["Real estate graphics", "Corporate design", "Editorial layout", "Outdoor advertising", "Presentation design", "Sales collateral"],
     assets: [
-      asset("cover", "Residential campaign cover", "realestate", "landscape"),
-      asset("identity", "Development identity", "identity", "landscape"),
-      asset("brochure-cover", "Brochure cover", "editorial", "portrait"),
-      asset("brochure-spread", "Brochure spread", "editorial", "landscape"),
-      asset("floor-plan", "Floor plan presentation", "digital", "landscape"),
-      asset("billboard", "Outdoor billboard", "poster", "landscape")
+      asset("cover", "Residential identity overview", "realEstateOverview"),
+      asset("identity", "Residential identity", "logoSystem"),
+      asset("brochure-cover", "Sales brochure cover", "reportCover", "portrait"),
+      asset("brochure-spread", "Brochure spread", "reportSpread"),
+      asset("property-card", "Property card", "productCard", "portrait"),
+      asset("floor-plan", "Floor plan presentation", "floorPlan"),
+      asset("billboard", "Billboard", "billboard", "landscape", { headline: "Quiet city living" }),
+      asset("construction-fence", "Construction fence", "signage", "landscape", { headline: "Opening Spring 2027" }),
+      asset("social-ad", "Social ad", "adCard", "square", { headline: "2-bed homes from 72 sqm", cta: "Book a viewing" }),
+      asset("sales-presentation", "Sales presentation", "presentationSlide", "landscape", { headline: "Nest Residences sales deck" })
+    ]
+  },
+  {
+    id: "echo-commerce",
+    title: "ECHO COMMERCE",
+    client: "Echo Commerce",
+    year: "2026",
+    filters: ["digital", "campaigns", "corporate"],
+    category: "E-commerce Marketing Design",
+    role: "Marketing Designer / Digital Graphic Designer",
+    disciplines: "Retail banners, display advertising, email graphics, product comparison and seasonal campaign assets",
+    description:
+      "A clean conversion-focused e-commerce graphics project. The work proves practical online retail capabilities: promo banners, launch banners, sale graphics, email headers, stories, Google Display sizes and product comparison modules.",
+    palette: ["#f7f9fb", "#18202a", "#1b7cff", "#ffb000", "#e73f5f"],
+    typography: "Clean commerce sans / utility UI labels",
+    coverSize: "large",
+    capabilities: ["E-commerce graphics", "Google display advertising", "Paid ads", "Digital banners", "Email header", "Product comparison", "Retail graphics"],
+    assets: [
+      asset("cover", "E-commerce campaign system", "commerceOverview"),
+      asset("home-banner", "Homepage promotional banner", "webBanner", "landscape", { headline: "Upgrade your daily setup" }),
+      asset("launch-banner", "Product launch banner", "webBanner", "landscape", { headline: "New desk essentials" }),
+      asset("sale-graphic", "Sale campaign graphic", "adCard", "square", { headline: "Summer sale -30%", cta: "Shop sale" }),
+      asset("email-hero", "Email campaign hero", "emailHeader", "landscape", { headline: "Fresh picks for focused work" }),
+      asset("instagram-post", "Instagram post", "socialPost", "square", { headline: "Workspace refresh" }),
+      asset("story", "Story", "phoneStory", "portrait", { headline: "48h flash drop", cta: "Tap to shop" }),
+      asset("display-set", "Google Display banner set", "displaySet"),
+      asset("comparison", "Product comparison graphic", "comparison"),
+      asset("seasonal-promo", "Seasonal promo creative", "adCard", "square", { headline: "Back to office bundle", cta: "Build yours" })
+    ]
+  },
+  {
+    id: "aura-beauty",
+    title: "AURA BEAUTY",
+    client: "Aura Beauty",
+    year: "2026",
+    filters: ["campaigns", "digital", "packaging"],
+    category: "Beauty Campaign / Digital & Retail",
+    role: "Campaign Designer / Beauty Marketing Designer",
+    disciplines: "Beauty campaign art direction, social ads, retail posters, launch banners and email graphics",
+    description:
+      "A feminine but not generic beauty campaign using soft mineral colors, clean hierarchy and product-led commercial messaging. The project adds beauty marketing examples across paid ads, social, email, retail and launch graphics.",
+    palette: ["#f6e9ea", "#5b3d56", "#d96f88", "#7d9b8e", "#fffaf6"],
+    typography: "Soft display serif / modern beauty sans",
+    coverSize: "large",
+    capabilities: ["Beauty campaign design", "Social media", "Paid ads", "Digital banners", "Retail poster", "Email header", "Marketing design"],
+    assets: [
+      asset("cover", "Campaign key visual", "beautyHero"),
+      asset("social-post", "Social post", "socialPost", "square", { headline: "Glow, balanced" }),
+      asset("story", "Story", "phoneStory", "portrait", { headline: "New mineral tint", cta: "See shades" }),
+      asset("paid-ad", "Paid advertisement", "adCard", "square", { headline: "Skin-first color", cta: "Shop Aura" }),
+      asset("launch-banner", "Product launch banner", "webBanner", "landscape", { headline: "Aura Mineral Veil is here" }),
+      asset("retail-poster", "Retail poster", "posPoster", "portrait", { headline: "Soft focus. Real skin." }),
+      asset("email-header", "Promotional email header", "emailHeader", "landscape", { headline: "Your shade edit" }),
+      asset("feature-graphic", "Product feature graphic", "productFeature")
     ]
   }
 ];
@@ -744,477 +643,613 @@ function esc(value) {
     .replace(/"/g, "&quot;");
 }
 
-function dimensions(orientation) {
-  if (orientation === "portrait") {
-    return { w: 1080, h: 1440 };
-  }
-  if (orientation === "square") {
-    return { w: 1200, h: 1200 };
-  }
-  return { w: 1440, h: 1080 };
-}
-
-function line(x1, y1, x2, y2, color, opacity = 1, width = 1) {
-  return `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${color}" stroke-width="${width}" opacity="${opacity}"/>`;
+function dims(orientation) {
+  if (orientation === "portrait") return { w: 1080, h: 1440 };
+  if (orientation === "square") return { w: 1200, h: 1200 };
+  return { w: 1600, h: 1100 };
 }
 
 function rect(x, y, width, height, fill, options = {}) {
-  const attrs = [
-    `x="${x}"`,
-    `y="${y}"`,
-    `width="${width}"`,
-    `height="${height}"`,
-    `fill="${fill}"`
-  ];
-
-  if (options.stroke) {
-    attrs.push(`stroke="${options.stroke}"`);
-  }
-  if (options.strokeWidth) {
-    attrs.push(`stroke-width="${options.strokeWidth}"`);
-  }
-  if (options.opacity !== undefined) {
-    attrs.push(`opacity="${options.opacity}"`);
-  }
-  if (options.rx !== undefined) {
-    attrs.push(`rx="${options.rx}"`);
-  }
-  if (options.transform) {
-    attrs.push(`transform="${options.transform}"`);
-  }
-
+  const attrs = [`x="${x}"`, `y="${y}"`, `width="${width}"`, `height="${height}"`, `fill="${fill}"`];
+  if (options.rx !== undefined) attrs.push(`rx="${options.rx}"`);
+  if (options.stroke) attrs.push(`stroke="${options.stroke}"`);
+  if (options.strokeWidth) attrs.push(`stroke-width="${options.strokeWidth}"`);
+  if (options.opacity !== undefined) attrs.push(`opacity="${options.opacity}"`);
+  if (options.transform) attrs.push(`transform="${options.transform}"`);
   return `<rect ${attrs.join(" ")}/>`;
 }
 
 function circle(cx, cy, r, fill, options = {}) {
   const attrs = [`cx="${cx}"`, `cy="${cy}"`, `r="${r}"`, `fill="${fill}"`];
-  if (options.stroke) {
-    attrs.push(`stroke="${options.stroke}"`);
-  }
-  if (options.strokeWidth) {
-    attrs.push(`stroke-width="${options.strokeWidth}"`);
-  }
-  if (options.opacity !== undefined) {
-    attrs.push(`opacity="${options.opacity}"`);
-  }
+  if (options.stroke) attrs.push(`stroke="${options.stroke}"`);
+  if (options.strokeWidth) attrs.push(`stroke-width="${options.strokeWidth}"`);
+  if (options.opacity !== undefined) attrs.push(`opacity="${options.opacity}"`);
   return `<circle ${attrs.join(" ")}/>`;
 }
 
+function line(x1, y1, x2, y2, color, width = 1, opacity = 1) {
+  return `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${color}" stroke-width="${width}" opacity="${opacity}"/>`;
+}
+
 function text(content, x, y, size, fill, options = {}) {
+  const family = options.serif
+    ? "Cormorant Garamond, Georgia, serif"
+    : options.mono
+      ? "Consolas, Monaco, monospace"
+      : "Inter, Arial, sans-serif";
   const attrs = [
     `x="${x}"`,
     `y="${y}"`,
     `font-size="${size}"`,
     `fill="${fill}"`,
-    `font-family="${options.serif ? "Cormorant Garamond, Georgia, serif" : "Inter, Arial, sans-serif"}"`,
-    `font-weight="${options.weight || 500}"`
+    `font-family="${family}"`,
+    `font-weight="${options.weight || 600}"`
   ];
-
-  if (options.anchor) {
-    attrs.push(`text-anchor="${options.anchor}"`);
-  }
-  if (options.spacing !== undefined) {
-    attrs.push(`letter-spacing="${options.spacing}"`);
-  }
-  if (options.transform) {
-    attrs.push(`transform="${options.transform}"`);
-  }
-  if (options.opacity !== undefined) {
-    attrs.push(`opacity="${options.opacity}"`);
-  }
-  if (options.uppercase) {
-    content = String(content).toUpperCase();
-  }
-
+  if (options.anchor) attrs.push(`text-anchor="${options.anchor}"`);
+  if (options.opacity !== undefined) attrs.push(`opacity="${options.opacity}"`);
+  if (options.spacing !== undefined) attrs.push(`letter-spacing="${options.spacing}"`);
+  if (options.transform) attrs.push(`transform="${options.transform}"`);
   return `<text ${attrs.join(" ")}>${esc(content)}</text>`;
 }
 
-function splitTitle(title) {
-  return title.replace(/\s\/\s/g, " / ").split(/\s+/).filter(Boolean);
-}
-
-function background(project, w, h) {
-  const [bg, fg, accent, deep, soft] = project.palette;
-  let out = rect(0, 0, w, h, bg);
-  out += rect(36, 36, w - 72, h - 72, "none", { stroke: fg, opacity: 0.18, strokeWidth: 1 });
-  out += line(w * 0.12, 0, w * 0.12, h, fg, 0.08);
-  out += line(w * 0.5, 0, w * 0.5, h, fg, 0.06);
-  out += line(w * 0.88, 0, w * 0.88, h, fg, 0.08);
-  out += line(0, h * 0.18, w, h * 0.18, fg, 0.08);
-  out += line(0, h * 0.82, w, h * 0.82, fg, 0.08);
-  out += circle(w * 0.85, h * 0.18, Math.min(w, h) * 0.22, accent, { opacity: 0.08 });
-  out += circle(w * 0.16, h * 0.84, Math.min(w, h) * 0.18, soft || accent, { opacity: 0.08 });
-  out += rect(w * 0.05, h * 0.05, w * 0.16, 4, accent, { opacity: 0.75 });
-  return out;
-}
-
-function caption(project, assetDef, w, h, fill) {
-  const label = assetDef.title;
-  let out = text("CONCEPT PROJECT", 72, h - 92, 22, fill, { weight: 700, spacing: 3, opacity: 0.7 });
-  out += text(label, 72, h - 54, 30, fill, { weight: 500, opacity: 0.86 });
-  return out;
-}
-
-function drawBottle(x, y, w, h, project, label) {
-  const [bg, fg, accent, deep, soft] = project.palette;
-  let out = rect(x + w * 0.32, y, w * 0.36, h * 0.16, accent, { opacity: 0.8, rx: 6 });
-  out += rect(x + w * 0.2, y + h * 0.12, w * 0.6, h * 0.82, deep || bg, {
-    stroke: fg,
-    strokeWidth: 2,
-    opacity: 0.98,
-    rx: 24
-  });
-  out += rect(x + w * 0.28, y + h * 0.42, w * 0.44, h * 0.26, fg, { opacity: 0.95 });
-  out += text(label, x + w * 0.5, y + h * 0.53, Math.max(22, w * 0.06), bg, {
-    serif: true,
-    weight: 600,
-    anchor: "middle",
-    spacing: 2
-  });
-  out += text("EAU DE PARFUM", x + w * 0.5, y + h * 0.6, Math.max(12, w * 0.024), bg, {
-    anchor: "middle",
-    spacing: 3,
-    weight: 700
-  });
-  out += text("50 ML", x + w * 0.5, y + h * 0.65, Math.max(12, w * 0.024), bg, {
-    anchor: "middle",
-    spacing: 2,
-    weight: 700
-  });
-  out += rect(x + w * 0.18, y + h * 0.94, w * 0.64, 12, accent, { opacity: 0.35, rx: 12 });
-  return out;
-}
-
-function templateLuxury(project, assetDef, w, h) {
-  const [bg, fg, accent, deep] = project.palette;
-  let out = background(project, w, h);
-  out += drawBottle(w * 0.18, h * 0.22, w * 0.28, h * 0.55, project, "Nº 7");
-  out += rect(w * 0.52, h * 0.23, w * 0.27, h * 0.52, deep, { stroke: accent, strokeWidth: 2 });
-  out += text("LUMIÈRE", w * 0.655, h * 0.39, w * 0.045, fg, { serif: true, anchor: "middle", weight: 600, spacing: 4 });
-  out += text("NO. 7", w * 0.655, h * 0.47, w * 0.035, accent, { serif: true, anchor: "middle", weight: 600, spacing: 4 });
-  out += line(w * 0.57, h * 0.53, w * 0.74, h * 0.53, accent, 0.8);
-  out += text("AMBER / SMOKE / IRIS", w * 0.655, h * 0.59, w * 0.018, fg, { anchor: "middle", spacing: 2, weight: 700 });
-  out += text("LUMIÈRE NO. 7", 72, 150, Math.min(w * 0.08, 92), fg, { serif: true, weight: 500, spacing: 5 });
-  out += caption(project, assetDef, w, h, fg);
-  return out;
-}
-
-function templateSkincare(project, assetDef, w, h) {
-  const [bg, fg, accent, light, clay] = project.palette;
-  let out = background(project, w, h);
-  out += circle(w * 0.3, h * 0.45, w * 0.16, accent, { opacity: 0.38 });
-  out += circle(w * 0.62, h * 0.32, w * 0.11, fg, { opacity: 0.2 });
-  out += rect(w * 0.18, h * 0.35, w * 0.16, h * 0.34, light, { stroke: clay, strokeWidth: 2, rx: 24 });
-  out += rect(w * 0.21, h * 0.3, w * 0.1, h * 0.08, clay, { rx: 8, opacity: 0.85 });
-  out += rect(w * 0.4, h * 0.31, w * 0.18, h * 0.39, light, { stroke: clay, strokeWidth: 2, rx: 26 });
-  out += rect(w * 0.44, h * 0.25, w * 0.1, h * 0.08, fg, { rx: 10, opacity: 0.72 });
-  out += circle(w * 0.73, h * 0.6, w * 0.12, light, { stroke: clay, strokeWidth: 2 });
-  out += text("KORA", w * 0.49, h * 0.49, w * 0.065, fg, { anchor: "middle", weight: 700, spacing: 4 });
-  out += text("BOTANICAL CARE", w * 0.49, h * 0.56, w * 0.018, fg, { anchor: "middle", weight: 700, spacing: 3 });
-  out += text("CALM SERUM", w * 0.26, h * 0.58, w * 0.018, fg, { anchor: "middle", weight: 700, spacing: 2 });
-  out += text("NOURISH CREAM", w * 0.73, h * 0.63, w * 0.017, fg, { anchor: "middle", weight: 700, spacing: 1 });
-  out += text("KORA", 72, 142, Math.min(w * 0.08, 92), fg, { weight: 700, spacing: 8 });
-  out += caption(project, assetDef, w, h, fg);
-  return out;
-}
-
-function templateRestaurant(project, assetDef, w, h) {
-  const [bg, red, blue, black, yellow] = project.palette;
-  let out = rect(0, 0, w, h, bg);
-  out += rect(w * 0.06, h * 0.08, w * 0.42, h * 0.76, red, { transform: `rotate(-3 ${w * 0.27} ${h * 0.46})` });
-  out += rect(w * 0.45, h * 0.18, w * 0.42, h * 0.62, blue, { transform: `rotate(4 ${w * 0.66} ${h * 0.49})` });
-  out += circle(w * 0.32, h * 0.44, w * 0.13, yellow, { stroke: black, strokeWidth: 4 });
-  out += circle(w * 0.32, h * 0.44, w * 0.08, bg, { stroke: black, strokeWidth: 3 });
-  out += text("MISO", w * 0.17, h * 0.27, w * 0.09, black, { weight: 800, spacing: 2 });
-  out += text("CLUB", w * 0.53, h * 0.6, w * 0.11, bg, { weight: 800, spacing: 2, transform: `rotate(90 ${w * 0.53} ${h * 0.6})` });
-  out += text("NO RULES MENU", w * 0.63, h * 0.34, w * 0.028, bg, { weight: 800, spacing: 2 });
-  out += text("NOODLES / BROTH / FIRE", w * 0.63, h * 0.39, w * 0.02, bg, { weight: 700, spacing: 2 });
-  out += caption(project, assetDef, w, h, black);
-  return out;
-}
-
-function templateCorporate(project, assetDef, w, h) {
-  const [bg, fg, muted, blue, soft] = project.palette;
-  let out = background(project, w, h);
-  for (let i = 0; i < 8; i += 1) {
-    out += line(w * 0.18, h * (0.22 + i * 0.07), w * 0.82, h * (0.22 + i * 0.07), fg, 0.09);
-  }
-  out += rect(w * 0.13, h * 0.19, w * 0.28, h * 0.48, "#111820", { stroke: muted, strokeWidth: 1, opacity: 0.96 });
-  out += rect(w * 0.48, h * 0.24, w * 0.35, h * 0.13, blue, { opacity: 0.65 });
-  out += rect(w * 0.48, h * 0.42, w * 0.35, h * 0.1, muted, { opacity: 0.45 });
-  out += rect(w * 0.48, h * 0.57, w * 0.22, h * 0.1, soft, { opacity: 0.55 });
-  out += text("NORTHLINE", w * 0.17, h * 0.32, w * 0.048, fg, { weight: 700, spacing: 5 });
-  out += text("INFRASTRUCTURE SYSTEMS", w * 0.17, h * 0.39, w * 0.017, muted, { weight: 700, spacing: 2 });
-  out += text("Q4 SIGNAL REPORT", w * 0.5, h * 0.33, w * 0.025, fg, { weight: 700, spacing: 2 });
-  out += text("PRECISION / GRID / DATA", w * 0.5, h * 0.62, w * 0.022, fg, { weight: 700, spacing: 2 });
-  out += caption(project, assetDef, w, h, fg);
-  return out;
-}
-
-function templateEvent(project, assetDef, w, h) {
-  const [bg, fg, hot, blue, acid] = project.palette;
-  let out = rect(0, 0, w, h, bg);
-  for (let i = 0; i < 12; i += 1) {
-    out += rect(w * (0.05 + i * 0.075), h * 0.1, 10, h * 0.78, i % 2 ? blue : hot, { opacity: 0.45 });
-  }
-  out += text("AFTER", w * 0.09, h * 0.32, w * 0.13, fg, { weight: 900, spacing: -2 });
-  out += text("MIDNIGHT", w * 0.08, h * 0.48, w * 0.1, fg, { weight: 900, spacing: -2 });
-  out += text("03 / 11 / 26", w * 0.1, h * 0.59, w * 0.035, acid, { weight: 800, spacing: 4 });
-  out += text("WAREHOUSE 17, BERLIN", w * 0.1, h * 0.66, w * 0.024, fg, { weight: 800, spacing: 3 });
-  out += text("NOCTRA  /  VELA  /  SAINT INDEX", w * 0.1, h * 0.73, w * 0.021, hot, { weight: 800, spacing: 2 });
-  out += rect(w * 0.58, h * 0.28, w * 0.28, h * 0.28, "none", { stroke: acid, strokeWidth: 8, transform: `rotate(11 ${w * 0.72} ${h * 0.42})` });
-  out += caption(project, assetDef, w, h, fg);
-  return out;
-}
-
-function templateOlive(project, assetDef, w, h) {
-  const [bg, green, brown, gold, cream] = project.palette;
-  let out = background(project, w, h);
-  out += drawBottle(w * 0.2, h * 0.18, w * 0.24, h * 0.62, { palette: [bg, green, gold, green, cream] }, "VERDE");
-  out += rect(w * 0.51, h * 0.28, w * 0.28, h * 0.36, cream, { stroke: brown, strokeWidth: 3 });
-  out += text("VERDE", w * 0.65, h * 0.42, w * 0.055, green, { serif: true, anchor: "middle", weight: 600, spacing: 4 });
-  out += text("EXTRA VIRGIN OLIVE OIL", w * 0.65, h * 0.5, w * 0.018, brown, { anchor: "middle", weight: 800, spacing: 2 });
-  out += text("HARVEST 2026 / 500 ML", w * 0.65, h * 0.56, w * 0.016, brown, { anchor: "middle", weight: 700, spacing: 2 });
-  out += circle(w * 0.74, h * 0.31, w * 0.055, gold, { opacity: 0.78 });
-  out += caption(project, assetDef, w, h, green);
-  return out;
-}
-
-function templateFitness(project, assetDef, w, h) {
-  const [bg, fg, orange, green, blue] = project.palette;
-  let out = rect(0, 0, w, h, bg);
-  out += rect(w * 0.08, h * 0.12, w * 0.36, h * 0.72, fg, { rx: 42 });
-  out += rect(w * 0.11, h * 0.18, w * 0.3, h * 0.6, bg, { rx: 28 });
-  out += rect(w * 0.53, h * 0.18, w * 0.36, h * 0.18, orange, { transform: `skewX(-12)` });
-  out += rect(w * 0.48, h * 0.43, w * 0.41, h * 0.16, green, { transform: `skewX(-12)` });
-  out += rect(w * 0.58, h * 0.66, w * 0.28, h * 0.12, blue, { transform: `skewX(-12)` });
-  out += text("MOVE", w * 0.15, h * 0.34, w * 0.072, fg, { weight: 900, spacing: 2 });
-  out += text("FASTER", w * 0.15, h * 0.44, w * 0.058, orange, { weight: 900, spacing: 2 });
-  out += text("KINETIC", w * 0.55, h * 0.31, w * 0.06, bg, { weight: 900, spacing: 3 });
-  out += text("7 DAYS OF TRAINING", w * 0.55, h * 0.53, w * 0.026, bg, { weight: 800, spacing: 2 });
-  out += text("START TODAY", w * 0.61, h * 0.74, w * 0.023, fg, { weight: 800, spacing: 2 });
-  out += caption(project, assetDef, w, h, fg);
-  return out;
-}
-
-function templateEditorial(project, assetDef, w, h) {
-  const [paper, ink, grey, light, blue] = project.palette;
-  let out = rect(0, 0, w, h, paper);
-  out += rect(w * 0.08, h * 0.1, w * 0.38, h * 0.72, "#fffdf7", { stroke: ink, strokeWidth: 1 });
-  out += rect(w * 0.54, h * 0.1, w * 0.38, h * 0.72, "#fffdf7", { stroke: ink, strokeWidth: 1 });
-  out += rect(w * 0.12, h * 0.18, w * 0.22, h * 0.28, blue, { opacity: 0.38 });
-  out += rect(w * 0.58, h * 0.16, w * 0.29, h * 0.2, grey, { opacity: 0.36 });
-  out += text("FORM / 26", w * 0.12, h * 0.16, w * 0.037, ink, { weight: 700, spacing: 3 });
-  out += text("Architecture as Climate", w * 0.12, h * 0.55, w * 0.033, ink, { serif: true, weight: 600 });
-  out += text("Essay by Mira Solen", w * 0.12, h * 0.61, w * 0.018, grey, { weight: 700, spacing: 1 });
-  out += text("02", w * 0.84, h * 0.76, w * 0.028, ink, { weight: 700 });
-  out += text("Material Memory", w * 0.58, h * 0.43, w * 0.031, ink, { serif: true, weight: 600 });
-  out += text("Light, concrete and domestic scale in northern studios.", w * 0.58, h * 0.49, w * 0.018, grey, { weight: 500 });
-  out += caption(project, assetDef, w, h, ink);
-  return out;
-}
-
-function templateBeverage(project, assetDef, w, h) {
-  const [yellow, coral, teal, blue, white] = project.palette;
-  let out = rect(0, 0, w, h, yellow);
-  out += circle(w * 0.17, h * 0.2, w * 0.13, coral, { opacity: 0.8 });
-  out += circle(w * 0.88, h * 0.78, w * 0.19, teal, { opacity: 0.75 });
-  ["LEMON", "YUZU", "BERRY"].forEach((flavor, index) => {
-    const x = w * (0.23 + index * 0.19);
-    out += rect(x, h * 0.31, w * 0.12, h * 0.42, [white, teal, coral][index], { stroke: blue, strokeWidth: 3, rx: 28 });
-    out += text("SOLA", x + w * 0.06, h * 0.48, w * 0.034, blue, { anchor: "middle", weight: 900, spacing: 3 });
-    out += text(flavor, x + w * 0.06, h * 0.56, w * 0.017, blue, { anchor: "middle", weight: 800, spacing: 2 });
-  });
-  out += text("SPARKLING DAYS", w * 0.1, h * 0.18, w * 0.064, blue, { weight: 900, spacing: 1 });
-  out += text("ZERO ALCOHOL / REAL SUN", w * 0.1, h * 0.25, w * 0.022, blue, { weight: 800, spacing: 3 });
-  out += caption(project, assetDef, w, h, blue);
-  return out;
-}
-
-function templateFashion(project, assetDef, w, h) {
-  const [bg, fg, wine, gold, paper] = project.palette;
-  let out = rect(0, 0, w, h, bg);
-  out += rect(w * 0.12, h * 0.14, w * 0.34, h * 0.62, paper, { opacity: 0.96 });
-  out += rect(w * 0.17, h * 0.21, w * 0.24, h * 0.44, wine, { opacity: 0.75 });
-  out += circle(w * 0.29, h * 0.32, w * 0.08, gold, { opacity: 0.35 });
-  out += rect(w * 0.55, h * 0.2, w * 0.28, h * 0.5, "none", { stroke: fg, strokeWidth: 1, opacity: 0.5 });
-  out += text("MAISON", w * 0.53, h * 0.32, w * 0.065, fg, { serif: true, weight: 500, spacing: 3 });
-  out += text("ÉLAN", w * 0.6, h * 0.44, w * 0.1, fg, { serif: true, weight: 500, spacing: 5 });
-  out += text("AUTUMN STUDY", w * 0.58, h * 0.55, w * 0.02, gold, { weight: 800, spacing: 3 });
-  out += text("LOOKBOOK / INVITATION / CAMPAIGN", w * 0.58, h * 0.61, w * 0.018, fg, { weight: 700, spacing: 2 });
-  out += caption(project, assetDef, w, h, fg);
-  return out;
-}
-
-function templateFintech(project, assetDef, w, h) {
-  const [bg, fg, teal, gold, muted] = project.palette;
-  let out = background(project, w, h);
-  out += rect(w * 0.12, h * 0.18, w * 0.32, h * 0.48, fg, { opacity: 0.96 });
-  out += text("ORBIT", w * 0.17, h * 0.29, w * 0.056, bg, { weight: 800, spacing: 4 });
-  out += text("CAPITAL FLOW REVIEW", w * 0.17, h * 0.36, w * 0.018, bg, { weight: 800, spacing: 2 });
-  const points = [
-    [0.52, 0.62],
-    [0.58, 0.5],
-    [0.65, 0.56],
-    [0.72, 0.34],
-    [0.8, 0.42]
-  ];
-  for (let i = 0; i < points.length - 1; i += 1) {
-    out += line(w * points[i][0], h * points[i][1], w * points[i + 1][0], h * points[i + 1][1], gold, 1, 5);
-  }
-  points.forEach(([x, y]) => {
-    out += circle(w * x, h * y, 12, teal);
-  });
-  out += rect(w * 0.51, h * 0.2, w * 0.33, h * 0.5, "none", { stroke: muted, strokeWidth: 1, opacity: 0.7 });
-  out += text("DATA / TRUST / SIGNAL", w * 0.52, h * 0.76, w * 0.022, fg, { weight: 800, spacing: 3 });
-  out += caption(project, assetDef, w, h, fg);
-  return out;
-}
-
-function templateHotel(project, assetDef, w, h) {
-  const [bg, brown, clay, paper, green] = project.palette;
-  let out = rect(0, 0, w, h, bg);
-  out += rect(w * 0.1, h * 0.2, w * 0.28, h * 0.42, paper, { stroke: brown, strokeWidth: 2 });
-  out += rect(w * 0.44, h * 0.17, w * 0.18, h * 0.32, green, { opacity: 0.92 });
-  out += rect(w * 0.67, h * 0.28, w * 0.2, h * 0.38, paper, { stroke: clay, strokeWidth: 2, transform: `rotate(5 ${w * 0.77} ${h * 0.47})` });
-  out += text("Casa", w * 0.16, h * 0.36, w * 0.052, brown, { serif: true, weight: 600 });
-  out += text("Fiora", w * 0.16, h * 0.45, w * 0.06, brown, { serif: true, weight: 600 });
-  out += text("ROOM 07", w * 0.49, h * 0.34, w * 0.023, paper, { weight: 800, spacing: 3 });
-  out += text("LOCAL GUIDE", w * 0.7, h * 0.44, w * 0.023, brown, { weight: 800, spacing: 2 });
-  out += text("MORNING MENU", w * 0.7, h * 0.51, w * 0.017, brown, { weight: 700, spacing: 2 });
-  out += caption(project, assetDef, w, h, brown);
-  return out;
-}
-
-function templateExperimental(project, assetDef, w, h) {
-  const [paper, ink, orange, dark, grey] = project.palette;
-  let out = rect(0, 0, w, h, paper);
-  for (let i = 0; i < 18; i += 1) {
-    const x = (i * 83) % w;
-    const y = (i * 137) % h;
-    out += rect(x, y, 110 + (i % 4) * 40, 16 + (i % 3) * 22, i % 2 ? ink : orange, { opacity: i % 2 ? 0.78 : 0.9 });
-  }
-  out += text("NO", w * 0.08, h * 0.32, w * 0.19, ink, { weight: 900, spacing: -4 });
-  out += text("SIGNAL", w * 0.07, h * 0.52, w * 0.14, ink, { weight: 900, spacing: -4 });
-  out += text("MESSAGE LOST / THREAD CLOSED / STATIC OPEN", w * 0.09, h * 0.66, w * 0.022, dark, { weight: 800, spacing: 3 });
-  out += rect(w * 0.1, h * 0.73, w * 0.7, 18, orange);
-  out += rect(w * 0.1, h * 0.78, w * 0.52, 18, ink);
-  out += caption(project, assetDef, w, h, ink);
-  return out;
-}
-
-function templateRealestate(project, assetDef, w, h) {
-  const [bg, ink, grey, gold, white] = project.palette;
-  let out = rect(0, 0, w, h, bg);
-  out += rect(w * 0.08, h * 0.14, w * 0.35, h * 0.56, white, { stroke: grey, strokeWidth: 1 });
-  out += rect(w * 0.5, h * 0.21, w * 0.34, h * 0.38, "none", { stroke: ink, strokeWidth: 3 });
-  out += line(w * 0.56, h * 0.21, w * 0.56, h * 0.59, ink, 0.9, 2);
-  out += line(w * 0.5, h * 0.39, w * 0.84, h * 0.39, ink, 0.9, 2);
-  out += rect(w * 0.12, h * 0.23, w * 0.22, h * 0.17, grey, { opacity: 0.46 });
-  out += text("NEST", w * 0.12, h * 0.5, w * 0.074, ink, { serif: true, weight: 600, spacing: 5 });
-  out += text("RESIDENCES", w * 0.13, h * 0.57, w * 0.019, ink, { weight: 800, spacing: 4 });
-  out += text("PLAN A.04", w * 0.53, h * 0.67, w * 0.024, ink, { weight: 800, spacing: 3 });
-  out += text("QUIET CITY LIVING", w * 0.54, h * 0.73, w * 0.021, gold, { weight: 800, spacing: 2 });
-  out += caption(project, assetDef, w, h, ink);
-  return out;
-}
-
-function templatePet(project, assetDef, w, h) {
-  const [bg, coral, green, yellow, purple] = project.palette;
-  let out = rect(0, 0, w, h, bg);
-  const bags = [
-    [0.15, 0.28, coral, "DOG"],
-    [0.39, 0.22, green, "CAT"],
-    [0.63, 0.32, yellow, "TREATS"]
-  ];
-  bags.forEach(([x, y, color, label]) => {
-    out += rect(w * x, h * y, w * 0.18, h * 0.42, color, { stroke: purple, strokeWidth: 3, rx: 26 });
-    out += circle(w * (x + 0.09), h * (y + 0.12), w * 0.045, bg, { stroke: purple, strokeWidth: 3 });
-    out += text("PAWPAW", w * (x + 0.09), h * (y + 0.24), w * 0.026, purple, { anchor: "middle", weight: 900, spacing: 2 });
-    out += text(label, w * (x + 0.09), h * (y + 0.31), w * 0.02, purple, { anchor: "middle", weight: 900, spacing: 2 });
-  });
-  out += text("FOOD WITH CHARACTER", w * 0.12, h * 0.17, w * 0.052, purple, { weight: 900, spacing: 1 });
-  out += caption(project, assetDef, w, h, purple);
-  return out;
-}
-
-function templateConference(project, assetDef, w, h) {
-  const [bg, fg, blue, yellow, pink] = project.palette;
-  let out = rect(0, 0, w, h, bg);
-  out += rect(w * 0.08, h * 0.12, w * 0.25, h * 0.22, blue);
-  out += rect(w * 0.33, h * 0.12, w * 0.18, h * 0.22, yellow);
-  out += rect(w * 0.51, h * 0.12, w * 0.34, h * 0.22, pink);
-  out += rect(w * 0.08, h * 0.42, w * 0.42, h * 0.28, fg);
-  out += rect(w * 0.56, h * 0.42, w * 0.29, h * 0.28, blue);
-  out += text("FUTURE", w * 0.1, h * 0.54, w * 0.072, bg, { weight: 900, spacing: 2 });
-  out += text("FORUM", w * 0.1, h * 0.64, w * 0.072, bg, { weight: 900, spacing: 2 });
-  out += text("14-16 MAY 2026", w * 0.57, h * 0.52, w * 0.026, fg, { weight: 800, spacing: 3 });
-  out += text("AMSTERDAM", w * 0.57, h * 0.59, w * 0.026, fg, { weight: 800, spacing: 3 });
-  out += text("TECH / BUSINESS / SYSTEMS", w * 0.57, h * 0.66, w * 0.018, fg, { weight: 800, spacing: 2 });
-  out += caption(project, assetDef, w, h, fg);
-  return out;
-}
-
-const templateMap = {
-  luxury: templateLuxury,
-  skincare: templateSkincare,
-  restaurant: templateRestaurant,
-  corporate: templateCorporate,
-  event: templateEvent,
-  olive: templateOlive,
-  fitness: templateFitness,
-  editorial: templateEditorial,
-  beverage: templateBeverage,
-  fashion: templateFashion,
-  fintech: templateFintech,
-  hotel: templateHotel,
-  experimental: templateExperimental,
-  realestate: templateRealestate,
-  pet: templatePet,
-  conference: templateConference
-};
-
-function svg(project, assetDef) {
-  const { w, h } = dimensions(assetDef.orientation);
-  const draw = templateMap[project.style] || templateCorporate;
-  const content = draw(project, assetDef, w, h);
+function wrap(project, assetDef, body) {
+  const { w, h } = dims(assetDef.orientation);
   return `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img" aria-label="${esc(project.title)} ${esc(assetDef.title)}">
   <title>${esc(project.title)} - ${esc(assetDef.title)}</title>
-  <desc>Original portfolio concept visual for ${esc(project.title)}.</desc>
-  ${content}
+  <desc>Original commercial portfolio visual for ${esc(project.title)}.</desc>
+  ${body}
 </svg>
 `;
 }
 
+function bg(project, w, h, light = false) {
+  const [a, b, c, d, e] = project.palette;
+  const base = light ? b : a;
+  const ink = light ? a : b;
+  let out = rect(0, 0, w, h, base);
+  out += rect(44, 44, w - 88, h - 88, "none", { stroke: ink, strokeWidth: 1, opacity: 0.16 });
+  out += circle(w * 0.88, h * 0.14, Math.min(w, h) * 0.16, c, { opacity: 0.12 });
+  out += circle(w * 0.12, h * 0.88, Math.min(w, h) * 0.18, d || c, { opacity: 0.12 });
+  out += line(w * 0.5, 44, w * 0.5, h - 44, ink, 1, 0.08);
+  out += line(44, h * 0.5, w - 44, h * 0.5, ink, 1, 0.08);
+  if (e) out += rect(72, 72, w * 0.14, 8, e, { opacity: 0.78 });
+  return out;
+}
+
+function label(project, assetDef, x, y, width, height, variant = "") {
+  const [a, b, c, d] = project.palette;
+  let out = rect(x, y, width, height, b, { stroke: c, strokeWidth: 2 });
+  out += text(project.title, x + width / 2, y + height * 0.32, Math.min(width * 0.16, 56), a, {
+    anchor: "middle",
+    serif: project.typography.toLowerCase().includes("serif"),
+    spacing: 2,
+    weight: 700
+  });
+  out += text(variant || assetDef.title, x + width / 2, y + height * 0.5, Math.min(width * 0.055, 22), a, {
+    anchor: "middle",
+    spacing: 2,
+    weight: 800
+  });
+  out += line(x + width * 0.18, y + height * 0.62, x + width * 0.82, y + height * 0.62, c, 2, 0.7);
+  out += text("NET WT / 250 ML", x + width / 2, y + height * 0.75, Math.min(width * 0.046, 18), d || a, {
+    anchor: "middle",
+    spacing: 1,
+    weight: 700
+  });
+  return out;
+}
+
+function bottle(project, assetDef, x, y, width, height, variant = "") {
+  const [a, b, c, d] = project.palette;
+  let out = rect(x + width * 0.35, y, width * 0.3, height * 0.12, c, { rx: 10 });
+  out += rect(x + width * 0.2, y + height * 0.1, width * 0.6, height * 0.82, a, {
+    rx: width * 0.08,
+    stroke: b,
+    strokeWidth: 3
+  });
+  out += label(project, assetDef, x + width * 0.29, y + height * 0.38, width * 0.42, height * 0.25, variant);
+  out += rect(x + width * 0.16, y + height * 0.92, width * 0.68, height * 0.025, d || c, { rx: 20, opacity: 0.28 });
+  return out;
+}
+
+function can(project, x, y, width, height, variant, fill) {
+  const [, b, c] = project.palette;
+  let out = rect(x, y, width, height, fill, { rx: width * 0.16, stroke: c, strokeWidth: 3 });
+  out += circle(x + width / 2, y + height * 0.14, width * 0.3, b, { opacity: 0.28 });
+  out += text(project.title, x + width / 2, y + height * 0.44, width * 0.17, c, {
+    anchor: "middle",
+    weight: 900,
+    spacing: 2
+  });
+  out += text(variant, x + width / 2, y + height * 0.57, width * 0.055, c, {
+    anchor: "middle",
+    weight: 800,
+    spacing: 1
+  });
+  out += text("330 ML", x + width / 2, y + height * 0.76, width * 0.045, c, {
+    anchor: "middle",
+    weight: 800,
+    spacing: 1
+  });
+  return out;
+}
+
+function box(project, assetDef, x, y, width, height, labelText = "") {
+  const [a, b, c, d] = project.palette;
+  let out = rect(x, y + height * 0.08, width, height * 0.8, b, { stroke: c, strokeWidth: 3 });
+  out += rect(x + width * 0.08, y, width, height * 0.8, d || a, { stroke: c, strokeWidth: 3, opacity: 0.92 });
+  out += text(project.title, x + width * 0.58, y + height * 0.33, width * 0.09, a, {
+    anchor: "middle",
+    serif: true,
+    spacing: 2
+  });
+  out += text(labelText || assetDef.title, x + width * 0.58, y + height * 0.47, width * 0.035, a, {
+    anchor: "middle",
+    weight: 800,
+    spacing: 1
+  });
+  out += line(x + width * 0.32, y + height * 0.56, x + width * 0.84, y + height * 0.56, c, 2, 0.6);
+  return out;
+}
+
+function phoneFrame(project, x, y, width, height, fill) {
+  const [a, , c] = project.palette;
+  let out = rect(x, y, width, height, "#111", { rx: width * 0.08 });
+  out += rect(x + width * 0.045, y + height * 0.04, width * 0.91, height * 0.92, fill, { rx: width * 0.055 });
+  out += rect(x + width * 0.38, y + height * 0.065, width * 0.24, height * 0.025, "#111", { rx: 12 });
+  out += text("9:41", x + width * 0.1, y + height * 0.105, width * 0.04, a, { weight: 700 });
+  out += circle(x + width * 0.82, y + height * 0.095, width * 0.018, c);
+  return out;
+}
+
+function drawScene(project, assetDef, w, h) {
+  const [a, b, c, d, e] = project.palette;
+  const scene = assetDef.scene;
+  const headline = assetDef.headline || project.title;
+  const cta = assetDef.cta || "Learn more";
+
+  if (scene === "fragranceHero") {
+    return (
+      bg(project, w, h) +
+      bottle(project, assetDef, w * 0.18, h * 0.18, w * 0.22, h * 0.62, "No. 7 / 50 ML") +
+      box(project, assetDef, w * 0.53, h * 0.2, w * 0.25, h * 0.56, "AMBER IRIS") +
+      text("IVORY PAPER / BURGUNDY GLASS / METALLIC FOIL", w * 0.1, h * 0.86, w * 0.025, b, { weight: 800, spacing: 2 })
+    );
+  }
+
+  if (scene === "logoSystem") {
+    let out = bg(project, w, h, true);
+    out += text(project.title, w * 0.09, h * 0.25, Math.min(w * 0.08, 86), a, {
+      serif: project.typography.toLowerCase().includes("serif"),
+      weight: 800,
+      spacing: 3
+    });
+    out += rect(w * 0.1, h * 0.42, w * 0.26, h * 0.18, "none", { stroke: a, strokeWidth: 2 });
+    out += circle(w * 0.23, h * 0.51, h * 0.055, c, { opacity: 0.8 });
+    out += text(project.title.slice(0, 2).replace(/\s/g, ""), w * 0.23, h * 0.535, h * 0.055, a, { anchor: "middle", serif: true });
+    out += rect(w * 0.48, h * 0.38, w * 0.35, h * 0.05, c);
+    out += rect(w * 0.48, h * 0.48, w * 0.25, h * 0.05, d || c);
+    out += rect(w * 0.48, h * 0.58, w * 0.18, h * 0.05, e || a);
+    out += text("WORDMARK / SYMBOL / TYPE SCALE / COLOR SYSTEM", w * 0.1, h * 0.78, w * 0.025, a, { weight: 800, spacing: 2 });
+    return out;
+  }
+
+  if (["labelSheet", "backLabel"].includes(scene)) {
+    let out = bg(project, w, h, true);
+    out += label(project, assetDef, w * 0.12, h * 0.2, w * 0.3, h * 0.42, assetDef.variant || "FRONT LABEL");
+    out += label(project, assetDef, w * 0.52, h * 0.2, w * 0.3, h * 0.42, scene === "backLabel" ? "INGREDIENTS / ORIGIN" : "VARIANT LABEL");
+    out += text("Hierarchy", w * 0.12, h * 0.75, w * 0.04, a, { serif: true });
+    out += text("Product name / descriptor / size / origin / batch information", w * 0.12, h * 0.81, w * 0.023, a, { weight: 600 });
+    return out;
+  }
+
+  if (["bottleFront", "skincareHero", "oliveHero", "beautyHero"].includes(scene)) {
+    let out = bg(project, w, h);
+    out += bottle(project, assetDef, w * 0.22, h * 0.18, w * 0.22, h * 0.62, assetDef.variant || "PRIMARY PRODUCT");
+    out += bottle(project, assetDef, w * 0.48, h * 0.24, w * 0.18, h * 0.5, "SECONDARY");
+    out += text(headline, w * 0.12, h * 0.14, Math.min(w * 0.07, 80), b, { serif: true, weight: 700 });
+    out += text(assetDef.title, w * 0.12, h * 0.84, w * 0.028, b, { weight: 800, spacing: 2 });
+    return out;
+  }
+
+  if (scene === "closeUp" || scene === "detailCrop") {
+    let out = bg(project, w, h, true);
+    out += rect(w * 0.12, h * 0.2, w * 0.76, h * 0.48, b, { stroke: c, strokeWidth: 4 });
+    out += text(project.title, w * 0.5, h * 0.42, Math.min(w * 0.09, 110), a, { anchor: "middle", serif: true, spacing: 3 });
+    out += line(w * 0.24, h * 0.5, w * 0.76, h * 0.5, c, 4, 0.8);
+    out += text("TYPE DETAIL / MATERIAL / FOIL / SCALE", w * 0.5, h * 0.58, w * 0.026, a, { anchor: "middle", weight: 800, spacing: 3 });
+    return out;
+  }
+
+  if (["boxMockup", "shippingBox"].includes(scene)) {
+    let out = bg(project, w, h, true);
+    out += box(project, assetDef, w * 0.2, h * 0.25, w * 0.28, h * 0.42, "OUTER PACK");
+    out += box(project, assetDef, w * 0.52, h * 0.34, w * 0.28, h * 0.32, scene === "shippingBox" ? "SHIPPER" : "DETAIL");
+    out += text(assetDef.title, w * 0.12, h * 0.82, w * 0.034, a, { serif: true });
+    return out;
+  }
+
+  if (["premiumPoster", "poster", "posPoster", "conferencePoster"].includes(scene)) {
+    let out = bg(project, w, h);
+    out += rect(w * 0.12, h * 0.12, w * 0.76, h * 0.62, scene === "posPoster" ? c : "none", {
+      stroke: b,
+      strokeWidth: scene === "posPoster" ? 0 : 2,
+      opacity: scene === "posPoster" ? 0.95 : 1
+    });
+    out += text(headline, w * 0.16, h * 0.32, Math.min(w * 0.105, 118), scene === "posPoster" ? a : b, {
+      serif: project.typography.toLowerCase().includes("serif"),
+      weight: 900,
+      spacing: scene === "premiumPoster" ? 4 : 0
+    });
+    out += text(assetDef.title, w * 0.16, h * 0.54, w * 0.033, scene === "posPoster" ? a : c, { weight: 800, spacing: 2 });
+    out += text("2026 / CONCEPT CAMPAIGN / COMMERCIAL GRAPHIC", w * 0.16, h * 0.66, w * 0.022, scene === "posPoster" ? a : b, { weight: 700, spacing: 2 });
+    return out;
+  }
+
+  if (scene === "magazineAd") {
+    let out = bg(project, w, h, true);
+    out += rect(w * 0.08, h * 0.12, w * 0.38, h * 0.68, b);
+    out += text(project.title, w * 0.52, h * 0.28, w * 0.064, a, { serif: true, weight: 700 });
+    out += text("A quiet launch for a tactile product system.", w * 0.52, h * 0.38, w * 0.026, a, { weight: 600 });
+    out += text("Available in selected stores / concept campaign", w * 0.52, h * 0.56, w * 0.021, c, { weight: 700 });
+    out += bottle(project, assetDef, w * 0.18, h * 0.22, w * 0.16, h * 0.42, "AD PRODUCT");
+    return out;
+  }
+
+  if (["socialPost", "adCard"].includes(scene)) {
+    let out = rect(0, 0, w, h, scene === "adCard" ? b : a);
+    out += rect(w * 0.08, h * 0.08, w * 0.84, h * 0.84, scene === "adCard" ? a : b);
+    out += text(project.title, w * 0.14, h * 0.2, w * 0.045, scene === "adCard" ? b : a, { weight: 900, spacing: 2 });
+    out += text(headline, w * 0.14, h * 0.42, w * 0.072, scene === "adCard" ? b : a, { weight: 900 });
+    out += rect(w * 0.14, h * 0.68, w * 0.34, h * 0.09, c, { rx: h * 0.045 });
+    out += text(cta, w * 0.31, h * 0.735, w * 0.025, scene === "adCard" ? a : b, { anchor: "middle", weight: 900, spacing: 1 });
+    out += circle(w * 0.78, h * 0.24, w * 0.1, c, { opacity: 0.8 });
+    return out;
+  }
+
+  if (scene === "phoneStory") {
+    let out = bg(project, w, h, true);
+    out += phoneFrame(project, w * 0.24, h * 0.08, w * 0.52, h * 0.84, b);
+    out += text(project.title, w * 0.33, h * 0.26, w * 0.05, a, { weight: 900, spacing: 2 });
+    out += text(headline, w * 0.33, h * 0.44, w * 0.07, a, { weight: 900 });
+    out += rect(w * 0.33, h * 0.7, w * 0.32, h * 0.055, c, { rx: h * 0.03 });
+    out += text(cta, w * 0.49, h * 0.737, w * 0.022, a, { anchor: "middle", weight: 900 });
+    return out;
+  }
+
+  if (scene === "beverageHero" || scene === "beverageVariants" || scene === "flavorSystem") {
+    let out = rect(0, 0, w, h, b);
+    ["LEMON", "BERRY", "YUZU"].forEach((variant, i) => {
+      const colors = [c, d, e || a];
+      out += can(project, w * (0.18 + i * 0.21), h * 0.27, w * 0.13, h * 0.42, variant, colors[i]);
+    });
+    out += text(scene === "flavorSystem" ? "FLAVOR SYSTEM" : "SPARKLING SUMMER", w * 0.08, h * 0.17, w * 0.062, a, { weight: 900 });
+    out += text("LEMON / BERRY / YUZU / ZERO ALCOHOL", w * 0.08, h * 0.82, w * 0.027, a, { weight: 800, spacing: 2 });
+    return out;
+  }
+
+  if (scene === "billboard") {
+    let out = rect(0, 0, w, h, "#d8d4ca");
+    out += rect(w * 0.08, h * 0.15, w * 0.84, h * 0.48, a, { stroke: "#222", strokeWidth: 8 });
+    out += text(headline, w * 0.14, h * 0.36, w * 0.07, b, { weight: 900 });
+    out += text(cta, w * 0.14, h * 0.5, w * 0.03, c, { weight: 800, spacing: 2 });
+    out += rect(w * 0.22, h * 0.63, w * 0.04, h * 0.22, "#555");
+    out += rect(w * 0.74, h * 0.63, w * 0.04, h * 0.22, "#555");
+    out += line(0, h * 0.86, w, h * 0.86, "#999", 3, 1);
+    return out;
+  }
+
+  if (scene === "retailShelf") {
+    let out = rect(0, 0, w, h, "#f3f1ea");
+    for (let shelf = 0; shelf < 3; shelf += 1) {
+      out += rect(w * 0.08, h * (0.22 + shelf * 0.2), w * 0.84, h * 0.035, "#b9b4aa");
+      for (let i = 0; i < 7; i += 1) {
+        const x = w * (0.12 + i * 0.11);
+        out += rect(x, h * (0.08 + shelf * 0.2), w * 0.06, h * 0.14, [a, b, c, d, e][i % 5], { rx: 12, stroke: "#333", strokeWidth: 1 });
+        out += text(project.title.slice(0, 5), x + w * 0.03, h * (0.16 + shelf * 0.2), w * 0.012, "#111", { anchor: "middle", weight: 900 });
+      }
+    }
+    out += text(assetDef.title, w * 0.08, h * 0.86, w * 0.034, "#222", { weight: 900 });
+    return out;
+  }
+
+  if (["webBanner", "emailHeader", "linkedinCover"].includes(scene)) {
+    let out = rect(0, 0, w, h, b);
+    out += rect(w * 0.04, h * 0.12, w * 0.92, h * 0.76, a);
+    out += text(project.title, w * 0.09, h * 0.27, w * 0.036, b, { weight: 900, spacing: 2 });
+    out += text(headline, w * 0.09, h * 0.48, w * 0.06, b, { weight: 900 });
+    out += rect(w * 0.09, h * 0.66, w * 0.22, h * 0.08, c, { rx: 24 });
+    out += text(cta, w * 0.2, h * 0.715, w * 0.022, a, { anchor: "middle", weight: 900 });
+    out += circle(w * 0.8, h * 0.43, h * 0.2, d || c, { opacity: 0.75 });
+    return out;
+  }
+
+  if (["presentationSlide", "strategySlide", "dataSlide", "kpiSlide"].includes(scene)) {
+    let out = rect(0, 0, w, h, "#f8fafc");
+    out += rect(w * 0.05, h * 0.08, w * 0.9, h * 0.84, "#fff", { stroke: "#d6dde3", strokeWidth: 2 });
+    out += text(project.title, w * 0.1, h * 0.18, w * 0.033, a, { weight: 900, spacing: 2 });
+    out += text(headline, w * 0.1, h * 0.3, w * 0.052, a, { weight: 800 });
+    const bars = [0.28, 0.48, 0.36, 0.62, 0.74];
+    bars.forEach((bar, i) => {
+      out += rect(w * 0.12, h * (0.42 + i * 0.075), w * bar, h * 0.035, i % 2 ? c : d || c);
+      out += text(`${["ARR", "Retention", "Pipeline", "Margin", "Activation"][i]}  ${Math.round(bar * 100)}%`, w * 0.12, h * (0.405 + i * 0.075), w * 0.019, a, { weight: 700 });
+    });
+    out += rect(w * 0.66, h * 0.42, w * 0.18, h * 0.18, c, { opacity: 0.75 });
+    out += text("+18%", w * 0.75, h * 0.53, w * 0.055, "#fff", { anchor: "middle", weight: 900 });
+    return out;
+  }
+
+  if (["reportCover", "magazineCover", "lookbookCover", "backCover"].includes(scene)) {
+    let out = bg(project, w, h, true);
+    out += rect(w * 0.12, h * 0.16, w * 0.76, h * 0.56, scene === "magazineCover" ? d || c : c, { opacity: 0.32 });
+    out += text(project.title, w * 0.14, h * 0.18, w * 0.07, a, { serif: scene !== "reportCover", weight: 800, spacing: 2 });
+    out += text(assetDef.title, w * 0.14, h * 0.78, w * 0.035, a, { weight: 800, spacing: 1 });
+    out += text("Issue 26 / Q3 / Concept Project", w * 0.14, h * 0.84, w * 0.022, a, { weight: 600 });
+    return out;
+  }
+
+  if (["reportSpread", "magazineSpread", "textSpread", "imageSpread", "quoteSpread", "interviewSpread"].includes(scene)) {
+    let out = rect(0, 0, w, h, "#f7f5ef");
+    out += rect(w * 0.06, h * 0.1, w * 0.4, h * 0.78, "#fff", { stroke: "#bbb", strokeWidth: 1 });
+    out += rect(w * 0.54, h * 0.1, w * 0.4, h * 0.78, "#fff", { stroke: "#bbb", strokeWidth: 1 });
+    out += text(assetDef.title, w * 0.1, h * 0.2, w * 0.04, "#111", { serif: true, weight: 700 });
+    for (let i = 0; i < 9; i += 1) {
+      out += rect(w * 0.1, h * (0.31 + i * 0.045), w * (0.26 + (i % 3) * 0.04), 5, "#333", { opacity: 0.55 });
+      out += rect(w * 0.58, h * (0.25 + i * 0.05), w * (0.25 + (i % 4) * 0.03), 5, "#333", { opacity: 0.5 });
+    }
+    out += rect(w * 0.58, h * 0.56, w * 0.27, h * 0.17, c, { opacity: 0.35 });
+    out += text("024", w * 0.1, h * 0.83, w * 0.02, "#111", { weight: 700 });
+    out += text("025", w * 0.87, h * 0.83, w * 0.02, "#111", { weight: 700 });
+    return out;
+  }
+
+  if (["badge", "lanyard", "ticket", "wristband", "keyCard", "loyaltyCard", "invitation", "postcard"].includes(scene)) {
+    let out = bg(project, w, h, true);
+    out += rect(w * 0.18, h * 0.25, w * 0.64, h * 0.42, b, { rx: scene === "badge" ? 22 : 0, stroke: c, strokeWidth: 3 });
+    out += text(project.title, w * 0.25, h * 0.4, w * 0.048, a, { weight: 900, spacing: 2 });
+    out += text(assetDef.title, w * 0.25, h * 0.51, w * 0.03, a, { weight: 800 });
+    out += text("Name / Date / Access / Format", w * 0.25, h * 0.59, w * 0.022, d || a, { weight: 700 });
+    return out;
+  }
+
+  if (["signage", "stageScreen", "conferenceKeyVisual", "conferenceOverview"].includes(scene)) {
+    let out = rect(0, 0, w, h, a);
+    out += rect(w * 0.08, h * 0.15, w * 0.84, h * 0.6, b);
+    out += text(headline, w * 0.14, h * 0.38, w * 0.07, a, { weight: 900 });
+    out += text(project.title, w * 0.14, h * 0.55, w * 0.03, c, { weight: 900, spacing: 3 });
+    out += rect(w * 0.72, h * 0.2, w * 0.12, h * 0.42, c);
+    out += rect(w * 0.58, h * 0.31, w * 0.12, h * 0.31, d || c);
+    return out;
+  }
+
+  if (scene === "agenda" || scene === "infographic") {
+    let out = bg(project, w, h, true);
+    out += text(assetDef.title, w * 0.12, h * 0.16, w * 0.045, a, { weight: 900 });
+    for (let i = 0; i < 6; i += 1) {
+      out += circle(w * 0.16, h * (0.28 + i * 0.1), 12, c);
+      out += text(`${String(9 + i).padStart(2, "0")}:00`, w * 0.2, h * (0.29 + i * 0.1), w * 0.022, a, { mono: true, weight: 800 });
+      out += rect(w * 0.34, h * (0.265 + i * 0.1), w * (0.24 + i * 0.035), h * 0.026, i % 2 ? d || c : c);
+    }
+    return out;
+  }
+
+  if (scene === "menu") {
+    let out = bg(project, w, h, true);
+    out += text(project.title, w * 0.14, h * 0.15, w * 0.06, a, { weight: 900, spacing: 2 });
+    ["Starters", "Mains", "Dessert", "Drinks"].forEach((section, i) => {
+      const y = h * (0.28 + i * 0.14);
+      out += text(section, w * 0.14, y, w * 0.028, c, { weight: 900, spacing: 2 });
+      out += text("Seasonal bowl / grilled plate / house sauce", w * 0.14, y + h * 0.045, w * 0.021, a, { weight: 600 });
+      out += text(`$${12 + i * 4}`, w * 0.78, y + h * 0.045, w * 0.021, a, { weight: 800 });
+    });
+    return out;
+  }
+
+  if (["stationery", "welcomeCard", "doorHanger", "toteBag", "deliveryBag", "sleeve"].includes(scene)) {
+    let out = bg(project, w, h, true);
+    out += rect(w * 0.12, h * 0.2, w * 0.28, h * 0.42, b, { stroke: c, strokeWidth: 2, transform: `rotate(-4 ${w * 0.26} ${h * 0.41})` });
+    out += rect(w * 0.48, h * 0.18, w * 0.28, h * 0.48, d || c, { stroke: a, strokeWidth: 2, transform: `rotate(3 ${w * 0.62} ${h * 0.42})` });
+    out += text(project.title, w * 0.18, h * 0.38, w * 0.036, a, { weight: 900, spacing: 2 });
+    out += text(assetDef.title, w * 0.53, h * 0.43, w * 0.033, a, { weight: 800 });
+    return out;
+  }
+
+  if (["pouchPackage", "petPackaging", "variantLineup"].includes(scene)) {
+    let out = bg(project, w, h, true);
+    ["DOG", "CAT", "TREATS"].forEach((variant, i) => {
+      const x = w * (0.18 + i * 0.22);
+      out += rect(x, h * 0.25, w * 0.16, h * 0.44, [c, d, e || c][i], { rx: 28, stroke: a, strokeWidth: 3 });
+      out += circle(x + w * 0.08, h * 0.38, w * 0.045, b, { stroke: a, strokeWidth: 2 });
+      out += text(project.title, x + w * 0.08, h * 0.52, w * 0.026, a, { anchor: "middle", weight: 900 });
+      out += text(i === 0 ? assetDef.variant || variant : variant, x + w * 0.08, h * 0.59, w * 0.018, a, { anchor: "middle", weight: 800 });
+    });
+    return out;
+  }
+
+  if (["iconSystem", "patternSheet", "stickerSheet"].includes(scene)) {
+    let out = bg(project, w, h, true);
+    for (let i = 0; i < 15; i += 1) {
+      const x = w * (0.12 + (i % 5) * 0.16);
+      const y = h * (0.25 + Math.floor(i / 5) * 0.18);
+      out += circle(x, y, w * 0.045, [c, d, e || c][i % 3], { stroke: a, strokeWidth: 2 });
+      out += text(String.fromCharCode(65 + i), x, y + 8, w * 0.026, a, { anchor: "middle", weight: 900 });
+    }
+    out += text(assetDef.title, w * 0.12, h * 0.82, w * 0.034, a, { weight: 900 });
+    return out;
+  }
+
+  if (["carousel", "comparison", "displaySet"].includes(scene)) {
+    let out = bg(project, w, h, true);
+    for (let i = 0; i < 4; i += 1) {
+      const x = w * (0.08 + i * 0.22);
+      out += rect(x, h * 0.22, w * 0.18, h * 0.42, i % 2 ? b : c, { stroke: a, strokeWidth: 2 });
+      out += text(i === 0 ? "A" : i === 1 ? "B" : i === 2 ? "C" : "D", x + w * 0.09, h * 0.38, w * 0.07, i % 2 ? a : b, { anchor: "middle", weight: 900 });
+      out += text(i % 2 ? "Offer" : "Benefit", x + w * 0.09, h * 0.51, w * 0.021, i % 2 ? a : b, { anchor: "middle", weight: 800 });
+    }
+    out += text(assetDef.title, w * 0.08, h * 0.78, w * 0.035, a, { weight: 900 });
+    return out;
+  }
+
+  if (["commerceOverview", "marketingOverview", "corporateOverview", "fintechOverview", "realEstateOverview", "restaurantOverview", "hospitalityOverview"].includes(scene)) {
+    let out = bg(project, w, h, true);
+    out += rect(w * 0.08, h * 0.18, w * 0.38, h * 0.24, b);
+    out += rect(w * 0.52, h * 0.18, w * 0.34, h * 0.24, c);
+    out += rect(w * 0.08, h * 0.5, w * 0.22, h * 0.26, d || c);
+    out += rect(w * 0.36, h * 0.5, w * 0.22, h * 0.26, e || b);
+    out += rect(w * 0.64, h * 0.5, w * 0.22, h * 0.26, a);
+    out += text(project.title, w * 0.11, h * 0.33, w * 0.052, a, { weight: 900, spacing: 2 });
+    out += text("SYSTEM OVERVIEW", w * 0.11, h * 0.82, w * 0.026, a, { weight: 900, spacing: 2 });
+    return out;
+  }
+
+  if (scene === "floorPlan") {
+    let out = bg(project, w, h, true);
+    out += rect(w * 0.18, h * 0.18, w * 0.55, h * 0.52, "none", { stroke: a, strokeWidth: 5 });
+    out += line(w * 0.38, h * 0.18, w * 0.38, h * 0.7, a, 4, 1);
+    out += line(w * 0.18, h * 0.42, w * 0.73, h * 0.42, a, 4, 1);
+    out += line(w * 0.55, h * 0.42, w * 0.55, h * 0.7, a, 4, 1);
+    out += text("72 SQM / 2 BED", w * 0.18, h * 0.82, w * 0.034, a, { weight: 900, spacing: 2 });
+    return out;
+  }
+
+  if (scene === "recipeCard" || scene === "productCard" || scene === "productFeature") {
+    let out = bg(project, w, h, true);
+    out += rect(w * 0.12, h * 0.14, w * 0.76, h * 0.62, b, { stroke: c, strokeWidth: 2 });
+    out += text(project.title, w * 0.18, h * 0.28, w * 0.05, a, { weight: 900 });
+    out += text(assetDef.title, w * 0.18, h * 0.4, w * 0.035, a, { weight: 800 });
+    ["Ingredient story", "Key benefit", "Usage notes", "Size / volume"].forEach((item, i) => {
+      out += text(item, w * 0.18, h * (0.5 + i * 0.07), w * 0.023, a, { weight: 700 });
+    });
+    return out;
+  }
+
+  if (["clubPoster", "clubPosterAlt", "lineupPoster", "experimentalPoster", "experimentalPosterTwo", "experimentalPosterThree"].includes(scene)) {
+    let out = rect(0, 0, w, h, a);
+    for (let i = 0; i < 14; i += 1) {
+      out += rect((i * 89) % w, (i * 137) % h, w * 0.26, h * 0.03, i % 2 ? c : d || b, { opacity: 0.86, transform: `rotate(${i % 2 ? -7 : 9} ${w / 2} ${h / 2})` });
+    }
+    out += text(headline, w * 0.1, h * 0.38, w * 0.12, b, { weight: 900, spacing: -2 });
+    out += text("DATE / LOCATION / LINEUP / ACCESS", w * 0.1, h * 0.68, w * 0.026, c, { weight: 900, spacing: 3 });
+    return out;
+  }
+
+  if (scene === "posterWall") {
+    let out = rect(0, 0, w, h, "#d8d4c9");
+    for (let i = 0; i < 5; i += 1) {
+      out += rect(w * (0.06 + i * 0.18), h * 0.15, w * 0.14, h * 0.55, i % 2 ? a : b, { stroke: "#333", strokeWidth: 2 });
+      out += text(i % 2 ? "STATIC" : "NO SIGNAL", w * (0.08 + i * 0.18), h * 0.38, w * 0.026, i % 2 ? b : a, { weight: 900 });
+    }
+    return out;
+  }
+
+  if (scene === "jarMockup") {
+    let out = bg(project, w, h, true);
+    out += rect(w * 0.25, h * 0.38, w * 0.5, h * 0.28, b, { rx: 42, stroke: c, strokeWidth: 3 });
+    out += rect(w * 0.3, h * 0.29, w * 0.4, h * 0.12, c, { rx: 28 });
+    out += text(project.title, w * 0.5, h * 0.52, w * 0.065, a, { anchor: "middle", weight: 900 });
+    return out;
+  }
+
+  if (scene === "fashionKeyVisual" || scene === "lookbookCover" || scene === "editorialPage") {
+    let out = bg(project, w, h);
+    out += rect(w * 0.12, h * 0.16, w * 0.34, h * 0.58, b, { opacity: 0.95 });
+    out += rect(w * 0.18, h * 0.22, w * 0.22, h * 0.4, c, { opacity: 0.72 });
+    out += text(project.title, w * 0.53, h * 0.33, w * 0.075, b, { serif: true, weight: 600 });
+    out += text(assetDef.title, w * 0.54, h * 0.55, w * 0.028, d, { weight: 800, spacing: 2 });
+    return out;
+  }
+
+  return bg(project, w, h, true) + text(project.title, w * 0.1, h * 0.5, w * 0.06, a, { weight: 900 });
+}
+
 function imageAlt(project, assetDef) {
   return {
-    en: `${project.title} ${assetDef.title.toLowerCase()} concept visual.`,
-    uk: `${project.title}: концепт-візуал ${assetDef.title.toLowerCase()}.`,
-    pl: `${project.title}: koncepcyjna wizualizacja ${assetDef.title.toLowerCase()}.`
+    en: `${project.title} ${assetDef.title.toLowerCase()} visual.`,
+    uk: `${project.title}: візуал ${assetDef.title.toLowerCase()}.`,
+    pl: `${project.title}: wizualizacja ${assetDef.title.toLowerCase()}.`
   };
 }
 
-function buildData() {
-  return projects.map((project, index) => {
-    const projectDir = path.join(assetRoot, project.id);
-    ensureDir(projectDir);
+function detailPage(project) {
+  return `<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="${esc(project.title)} visual design concept project by Yana Ellis." />
+    <title>${esc(project.title)} - Visual Design - Yana Ellis</title>
+    <link rel="icon" type="image/png" href="../../favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="../visual-design.css" />
+  </head>
+  <body class="visual-page visual-detail-page" data-project-id="${project.id}">
+    <div class="site-shell">
+      <header class="site-header visual-site-header" aria-label="Yana Ellis">
+        <a class="brand-link" href="../../index.html" aria-label="Yana Ellis">
+          <img class="brand-logo" src="../../assets/yana-ellis-logo-transparent.png" alt="Yana Ellis logo" data-visual-i18n-alt="logoAlt" />
+        </a>
+        <div class="header-actions">
+          <a class="estimate-button guide-button" href="../../index.html" data-visual-i18n="navHome">Web portfolio</a>
+          <a class="estimate-button visual-nav-active" href="../index.html" data-visual-i18n="navVisual">Visual Design</a>
+          <a class="estimate-button guide-button" href="../../project-guide.html" data-visual-i18n="navProcess">Process</a>
+          <div class="language-switcher" aria-label="Language">
+            <button class="language-button is-active" type="button" data-lang="en" aria-pressed="true">EN</button>
+            <button class="language-button" type="button" data-lang="uk" aria-pressed="false">UK</button>
+            <button class="language-button" type="button" data-lang="pl" aria-pressed="false">PL</button>
+          </div>
+        </div>
+      </header>
+      <main id="visualDetailRoot"></main>
+      <footer class="site-footer" aria-label="Footer">
+        <p class="footer-text" data-visual-i18n="footerText">Visual design concept archive for branding, packaging, campaigns, print and digital graphics.</p>
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="../index.html" data-visual-i18n="backToArchive">Back to Visual Design</a>
+          <a href="mailto:oh.yanyoellis@gmail.com" data-visual-i18n="contact">Contact</a>
+        </nav>
+      </footer>
+    </div>
+    <script>window.visualProjectId = "${project.id}";</script>
+    <script src="../visual-design-data.js"></script>
+    <script src="../visual-design-detail.js"></script>
+  </body>
+</html>
+`;
+}
 
-    const images = project.assets.map((assetDef) => {
-      const filename = `${assetDef.id}.svg`;
-      const file = path.join(projectDir, filename);
-      fs.writeFileSync(file, svg(project, assetDef), "utf8");
+function buildData() {
+  fs.rmSync(assetRoot, { recursive: true, force: true });
+  ensureDir(assetRoot);
+
+  for (const project of projects) {
+    fs.rmSync(path.join(pageRoot, project.id), { recursive: true, force: true });
+  }
+
+  return projects.map((project, index) => {
+    const dir = path.join(assetRoot, project.id);
+    ensureDir(dir);
+    ensureDir(path.join(pageRoot, project.id));
+
+    const images = project.assets.map((item) => {
+      const { w, h } = dims(item.orientation);
+      const file = `${item.id}.svg`;
+      const svg = wrap(project, item, drawScene(project, item, w, h));
+      fs.writeFileSync(path.join(dir, file), svg, "utf8");
 
       return {
-        id: assetDef.id,
-        title: assetDef.title,
-        src: `../assets/visual-design/${project.id}/${filename}`,
-        alt: imageAlt(project, assetDef),
-        orientation: assetDef.orientation
+        id: item.id,
+        title: item.title,
+        src: `/assets/visual-design/${project.id}/${file}`,
+        alt: imageAlt(project, item),
+        orientation: item.orientation,
+        scene: item.scene
       };
     });
 
-    const cover = images.find((image) => image.id === "cover") || images[0];
+    fs.writeFileSync(path.join(pageRoot, project.id, "index.html"), detailPage(project), "utf8");
 
     return {
       id: project.id,
@@ -1226,33 +1261,54 @@ function buildData() {
         uk: "Концепт-проєкт",
         pl: "Projekt koncepcyjny"
       },
+      url: `/visual-design/${project.id}/`,
       filters: project.filters,
       category: project.category,
       role: project.role,
       disciplines: project.disciplines,
       description: project.description,
-      deliverables: project.deliverables,
-      tools: project.tools,
-      featured: index < 8,
-      span: project.span,
-      cover,
+      deliverables: project.assets.map((item) => item.title),
+      tools,
+      typography: project.typography,
+      capabilities: project.capabilities,
+      featured: index < 10,
+      coverSize: project.coverSize,
+      cover: images[0],
       images
     };
   });
 }
 
-ensureDir(assetRoot);
-ensureDir(path.dirname(dataFile));
+function capabilityMatrix(data) {
+  const matrix = {};
+  data.forEach((project) => {
+    project.capabilities.forEach((capability) => {
+      if (!matrix[capability]) matrix[capability] = [];
+      matrix[capability].push(project.title);
+    });
+  });
+  return matrix;
+}
+
+ensureDir(pageRoot);
 
 const visualProjects = buildData();
-const output = `window.visualDesignLabels = ${JSON.stringify(labels, null, 2)};
+const matrix = capabilityMatrix(visualProjects);
+
+fs.writeFileSync(
+  dataFile,
+  `window.visualDesignLabels = ${JSON.stringify(labels, null, 2)};
 
 window.visualDesignCategories = ${JSON.stringify(categories, null, 2)};
 
 window.visualDesignProjects = ${JSON.stringify(visualProjects, null, 2)};
-`;
 
-fs.writeFileSync(dataFile, output, "utf8");
+window.visualDesignCapabilityMatrix = ${JSON.stringify(matrix, null, 2)};
+`,
+  "utf8"
+);
+
+fs.writeFileSync(capabilityFile, `${JSON.stringify(matrix, null, 2)}\n`, "utf8");
 
 const count = visualProjects.reduce((sum, project) => sum + project.images.length, 0);
 console.log(`Generated ${visualProjects.length} visual design projects and ${count} assets.`);
