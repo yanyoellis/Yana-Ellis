@@ -154,16 +154,12 @@ window.visualDesignProjects = [
     "disciplines": "Fragrance packaging, label hierarchy, campaign art direction, premium print collateral",
     "description": "A niche fragrance concept built as a tactile packaging system rather than a single poster. The work balances ivory paper, deep burgundy, black glass and muted metallic accents across bottle labels, boxes, print advertising and launch social assets.",
     "deliverables": [
-      "Bottle and outer box system",
-      "Primary wordmark",
-      "Bottle label hierarchy",
-      "Bottle front mockup",
-      "Bottle close-up",
-      "Outer box",
-      "Box typography detail",
-      "Fragrance campaign poster",
-      "Magazine advertisement",
-      "Launch social media post"
+      "Box and Bottle Set",
+      "Bottle Close-Up",
+      "Outer Box",
+      "Product Set",
+      "Campaign Poster",
+      "Social Launch"
     ],
     "tools": [
       "Figma",
@@ -185,137 +181,138 @@ window.visualDesignProjects = [
     "coverSize": "feature",
     "cover": {
       "id": "cover",
-      "title": "Bottle and outer box system",
-      "src": "/assets/visual-design/lumiere-no7/cover.svg",
+      "title": "Box and Bottle Set",
+      "src": "/assets/visual-design-real/lumiere-no7/cover.webp",
       "alt": {
-        "en": "LUMIÈRE NO. 7 bottle and outer box system visual.",
-        "uk": "LUMIÈRE NO. 7: візуал bottle and outer box system.",
-        "pl": "LUMIÈRE NO. 7: wizualizacja bottle and outer box system."
+        "en": "LUMIÈRE NO. 7 box and bottle set real raster portfolio asset.",
+        "uk": "LUMIÈRE NO. 7: реальний raster-візуал box and bottle set.",
+        "pl": "LUMIÈRE NO. 7: realny rasterowy materiał portfolio box and bottle set."
       },
-      "orientation": "landscape",
-      "scene": "fragranceHero"
+      "orientation": "square",
+      "format": "webp",
+      "generated": true,
+      "composited": true
     },
     "images": [
       {
-        "id": "cover",
-        "title": "Bottle and outer box system",
-        "src": "/assets/visual-design/lumiere-no7/cover.svg",
+        "id": "board",
+        "title": "Full generated case board",
+        "src": "/assets/visual-design-real/lumiere-no7/board.webp",
         "alt": {
-          "en": "LUMIÈRE NO. 7 bottle and outer box system visual.",
-          "uk": "LUMIÈRE NO. 7: візуал bottle and outer box system.",
-          "pl": "LUMIÈRE NO. 7: wizualizacja bottle and outer box system."
-        },
-        "orientation": "landscape",
-        "scene": "fragranceHero"
-      },
-      {
-        "id": "wordmark",
-        "title": "Primary wordmark",
-        "src": "/assets/visual-design/lumiere-no7/wordmark.svg",
-        "alt": {
-          "en": "LUMIÈRE NO. 7 primary wordmark visual.",
-          "uk": "LUMIÈRE NO. 7: візуал primary wordmark.",
-          "pl": "LUMIÈRE NO. 7: wizualizacja primary wordmark."
-        },
-        "orientation": "landscape",
-        "scene": "logoSystem"
-      },
-      {
-        "id": "bottle-label",
-        "title": "Bottle label hierarchy",
-        "src": "/assets/visual-design/lumiere-no7/bottle-label.svg",
-        "alt": {
-          "en": "LUMIÈRE NO. 7 bottle label hierarchy visual.",
-          "uk": "LUMIÈRE NO. 7: візуал bottle label hierarchy.",
-          "pl": "LUMIÈRE NO. 7: wizualizacja bottle label hierarchy."
-        },
-        "orientation": "landscape",
-        "scene": "labelSheet"
-      },
-      {
-        "id": "bottle-front",
-        "title": "Bottle front mockup",
-        "src": "/assets/visual-design/lumiere-no7/bottle-front.svg",
-        "alt": {
-          "en": "LUMIÈRE NO. 7 bottle front mockup visual.",
-          "uk": "LUMIÈRE NO. 7: візуал bottle front mockup.",
-          "pl": "LUMIÈRE NO. 7: wizualizacja bottle front mockup."
+          "en": "LUMIÈRE NO. 7 full generated case board real raster portfolio asset.",
+          "uk": "LUMIÈRE NO. 7: реальний raster-візуал full generated case board.",
+          "pl": "LUMIÈRE NO. 7: realny rasterowy materiał portfolio full generated case board."
         },
         "orientation": "portrait",
-        "scene": "bottleFront"
+        "format": "webp",
+        "generated": true,
+        "composited": false
+      },
+      {
+        "id": "cover",
+        "title": "Box and Bottle Set",
+        "src": "/assets/visual-design-real/lumiere-no7/cover.webp",
+        "alt": {
+          "en": "LUMIÈRE NO. 7 box and bottle set real raster portfolio asset.",
+          "uk": "LUMIÈRE NO. 7: реальний raster-візуал box and bottle set.",
+          "pl": "LUMIÈRE NO. 7: realny rasterowy materiał portfolio box and bottle set."
+        },
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
         "id": "bottle-close-up",
-        "title": "Bottle close-up",
-        "src": "/assets/visual-design/lumiere-no7/bottle-close-up.svg",
+        "title": "Bottle Close-Up",
+        "src": "/assets/visual-design-real/lumiere-no7/bottle-close-up.webp",
         "alt": {
-          "en": "LUMIÈRE NO. 7 bottle close-up visual.",
-          "uk": "LUMIÈRE NO. 7: візуал bottle close-up.",
-          "pl": "LUMIÈRE NO. 7: wizualizacja bottle close-up."
+          "en": "LUMIÈRE NO. 7 bottle close-up real raster portfolio asset.",
+          "uk": "LUMIÈRE NO. 7: реальний raster-візуал bottle close-up.",
+          "pl": "LUMIÈRE NO. 7: realny rasterowy materiał portfolio bottle close-up."
         },
-        "orientation": "landscape",
-        "scene": "closeUp"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
         "id": "outer-box",
-        "title": "Outer box",
-        "src": "/assets/visual-design/lumiere-no7/outer-box.svg",
+        "title": "Outer Box",
+        "src": "/assets/visual-design-real/lumiere-no7/outer-box.webp",
         "alt": {
-          "en": "LUMIÈRE NO. 7 outer box visual.",
-          "uk": "LUMIÈRE NO. 7: візуал outer box.",
-          "pl": "LUMIÈRE NO. 7: wizualizacja outer box."
+          "en": "LUMIÈRE NO. 7 outer box real raster portfolio asset.",
+          "uk": "LUMIÈRE NO. 7: реальний raster-візуал outer box.",
+          "pl": "LUMIÈRE NO. 7: realny rasterowy materiał portfolio outer box."
         },
-        "orientation": "landscape",
-        "scene": "boxMockup"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
-        "id": "box-type-detail",
-        "title": "Box typography detail",
-        "src": "/assets/visual-design/lumiere-no7/box-type-detail.svg",
+        "id": "product-set",
+        "title": "Product Set",
+        "src": "/assets/visual-design-real/lumiere-no7/product-set.webp",
         "alt": {
-          "en": "LUMIÈRE NO. 7 box typography detail visual.",
-          "uk": "LUMIÈRE NO. 7: візуал box typography detail.",
-          "pl": "LUMIÈRE NO. 7: wizualizacja box typography detail."
+          "en": "LUMIÈRE NO. 7 product set real raster portfolio asset.",
+          "uk": "LUMIÈRE NO. 7: реальний raster-візуал product set.",
+          "pl": "LUMIÈRE NO. 7: realny rasterowy materiał portfolio product set."
         },
-        "orientation": "landscape",
-        "scene": "detailCrop"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
         "id": "campaign-poster",
-        "title": "Fragrance campaign poster",
-        "src": "/assets/visual-design/lumiere-no7/campaign-poster.svg",
+        "title": "Campaign Poster",
+        "src": "/assets/visual-design-real/lumiere-no7/campaign-poster.webp",
         "alt": {
-          "en": "LUMIÈRE NO. 7 fragrance campaign poster visual.",
-          "uk": "LUMIÈRE NO. 7: візуал fragrance campaign poster.",
-          "pl": "LUMIÈRE NO. 7: wizualizacja fragrance campaign poster."
-        },
-        "orientation": "portrait",
-        "scene": "premiumPoster"
-      },
-      {
-        "id": "magazine-ad",
-        "title": "Magazine advertisement",
-        "src": "/assets/visual-design/lumiere-no7/magazine-ad.svg",
-        "alt": {
-          "en": "LUMIÈRE NO. 7 magazine advertisement visual.",
-          "uk": "LUMIÈRE NO. 7: візуал magazine advertisement.",
-          "pl": "LUMIÈRE NO. 7: wizualizacja magazine advertisement."
-        },
-        "orientation": "landscape",
-        "scene": "magazineAd"
-      },
-      {
-        "id": "launch-social",
-        "title": "Launch social media post",
-        "src": "/assets/visual-design/lumiere-no7/launch-social.svg",
-        "alt": {
-          "en": "LUMIÈRE NO. 7 launch social media post visual.",
-          "uk": "LUMIÈRE NO. 7: візуал launch social media post.",
-          "pl": "LUMIÈRE NO. 7: wizualizacja launch social media post."
+          "en": "LUMIÈRE NO. 7 campaign poster real raster portfolio asset.",
+          "uk": "LUMIÈRE NO. 7: реальний raster-візуал campaign poster.",
+          "pl": "LUMIÈRE NO. 7: realny rasterowy materiał portfolio campaign poster."
         },
         "orientation": "square",
-        "scene": "socialPost"
+        "format": "webp",
+        "generated": true,
+        "composited": true
+      },
+      {
+        "id": "social-launch",
+        "title": "Social Launch",
+        "src": "/assets/visual-design-real/lumiere-no7/social-launch.webp",
+        "alt": {
+          "en": "LUMIÈRE NO. 7 social launch real raster portfolio asset.",
+          "uk": "LUMIÈRE NO. 7: реальний raster-візуал social launch.",
+          "pl": "LUMIÈRE NO. 7: realny rasterowy materiał portfolio social launch."
+        },
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       }
+    ],
+    "assetDirectory": "/assets/visual-design-real/lumiere-no7/",
+    "rasterAssets": [
+      "/assets/visual-design-real/lumiere-no7/source-board.png",
+      "/assets/visual-design-real/lumiere-no7/board.webp",
+      "/assets/visual-design-real/lumiere-no7/cover.png",
+      "/assets/visual-design-real/lumiere-no7/cover.webp",
+      "/assets/visual-design-real/lumiere-no7/bottle-close-up.webp",
+      "/assets/visual-design-real/lumiere-no7/outer-box.webp",
+      "/assets/visual-design-real/lumiere-no7/product-set.webp",
+      "/assets/visual-design-real/lumiere-no7/campaign-poster.webp",
+      "/assets/visual-design-real/lumiere-no7/social-launch.webp"
+    ],
+    "svgAssets": [],
+    "compositedAssets": [
+      "/assets/visual-design-real/lumiere-no7/cover.webp",
+      "/assets/visual-design-real/lumiere-no7/bottle-close-up.webp",
+      "/assets/visual-design-real/lumiere-no7/outer-box.webp",
+      "/assets/visual-design-real/lumiere-no7/product-set.webp",
+      "/assets/visual-design-real/lumiere-no7/campaign-poster.webp",
+      "/assets/visual-design-real/lumiere-no7/social-launch.webp"
     ]
   },
   {
@@ -339,15 +336,12 @@ window.visualDesignProjects = [
     "disciplines": "Beverage campaign, flavor system, retail graphics, paid social assets",
     "description": "A bright FMCG campaign for a fictional non-alcoholic sparkling drink. The system prioritizes shelf recognition, flavor clarity, promotional messaging and high-energy assets for outdoor, retail, paid social and summer banners.",
     "deliverables": [
-      "Hero campaign visual",
-      "Three can and bottle variants",
-      "Flavor system",
-      "Outdoor billboard",
-      "Meta ad",
-      "Instagram story",
-      "Retail refrigerator shelf graphic",
-      "POS promotional poster",
-      "Summer campaign banner"
+      "Product Trio",
+      "Variant Lineup",
+      "Summer Key Visual",
+      "Billboard",
+      "Instagram Story",
+      "Retail Shelf"
     ],
     "tools": [
       "Figma",
@@ -369,125 +363,138 @@ window.visualDesignProjects = [
     "coverSize": "large",
     "cover": {
       "id": "cover",
-      "title": "Hero campaign visual",
-      "src": "/assets/visual-design/sola/cover.svg",
+      "title": "Product Trio",
+      "src": "/assets/visual-design-real/sola/cover.webp",
       "alt": {
-        "en": "SOLA hero campaign visual visual.",
-        "uk": "SOLA: візуал hero campaign visual.",
-        "pl": "SOLA: wizualizacja hero campaign visual."
+        "en": "SOLA product trio real raster portfolio asset.",
+        "uk": "SOLA: реальний raster-візуал product trio.",
+        "pl": "SOLA: realny rasterowy materiał portfolio product trio."
       },
-      "orientation": "landscape",
-      "scene": "beverageHero"
+      "orientation": "square",
+      "format": "webp",
+      "generated": true,
+      "composited": true
     },
     "images": [
       {
+        "id": "board",
+        "title": "Full generated case board",
+        "src": "/assets/visual-design-real/sola/board.webp",
+        "alt": {
+          "en": "SOLA full generated case board real raster portfolio asset.",
+          "uk": "SOLA: реальний raster-візуал full generated case board.",
+          "pl": "SOLA: realny rasterowy materiał portfolio full generated case board."
+        },
+        "orientation": "portrait",
+        "format": "webp",
+        "generated": true,
+        "composited": false
+      },
+      {
         "id": "cover",
-        "title": "Hero campaign visual",
-        "src": "/assets/visual-design/sola/cover.svg",
+        "title": "Product Trio",
+        "src": "/assets/visual-design-real/sola/cover.webp",
         "alt": {
-          "en": "SOLA hero campaign visual visual.",
-          "uk": "SOLA: візуал hero campaign visual.",
-          "pl": "SOLA: wizualizacja hero campaign visual."
+          "en": "SOLA product trio real raster portfolio asset.",
+          "uk": "SOLA: реальний raster-візуал product trio.",
+          "pl": "SOLA: realny rasterowy materiał portfolio product trio."
         },
-        "orientation": "landscape",
-        "scene": "beverageHero"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
-        "id": "variants",
-        "title": "Three can and bottle variants",
-        "src": "/assets/visual-design/sola/variants.svg",
+        "id": "variant-lineup",
+        "title": "Variant Lineup",
+        "src": "/assets/visual-design-real/sola/variant-lineup.webp",
         "alt": {
-          "en": "SOLA three can and bottle variants visual.",
-          "uk": "SOLA: візуал three can and bottle variants.",
-          "pl": "SOLA: wizualizacja three can and bottle variants."
+          "en": "SOLA variant lineup real raster portfolio asset.",
+          "uk": "SOLA: реальний raster-візуал variant lineup.",
+          "pl": "SOLA: realny rasterowy materiał portfolio variant lineup."
         },
-        "orientation": "landscape",
-        "scene": "beverageVariants"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
-        "id": "flavor-system",
-        "title": "Flavor system",
-        "src": "/assets/visual-design/sola/flavor-system.svg",
+        "id": "summer-key-visual",
+        "title": "Summer Key Visual",
+        "src": "/assets/visual-design-real/sola/summer-key-visual.webp",
         "alt": {
-          "en": "SOLA flavor system visual.",
-          "uk": "SOLA: візуал flavor system.",
-          "pl": "SOLA: wizualizacja flavor system."
+          "en": "SOLA summer key visual real raster portfolio asset.",
+          "uk": "SOLA: реальний raster-візуал summer key visual.",
+          "pl": "SOLA: realny rasterowy materiał portfolio summer key visual."
         },
-        "orientation": "landscape",
-        "scene": "flavorSystem"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
         "id": "billboard",
-        "title": "Outdoor billboard",
-        "src": "/assets/visual-design/sola/billboard.svg",
+        "title": "Billboard",
+        "src": "/assets/visual-design-real/sola/billboard.webp",
         "alt": {
-          "en": "SOLA outdoor billboard visual.",
-          "uk": "SOLA: візуал outdoor billboard.",
-          "pl": "SOLA: wizualizacja outdoor billboard."
-        },
-        "orientation": "landscape",
-        "scene": "billboard"
-      },
-      {
-        "id": "meta-ad",
-        "title": "Meta ad",
-        "src": "/assets/visual-design/sola/meta-ad.svg",
-        "alt": {
-          "en": "SOLA meta ad visual.",
-          "uk": "SOLA: візуал meta ad.",
-          "pl": "SOLA: wizualizacja meta ad."
+          "en": "SOLA billboard real raster portfolio asset.",
+          "uk": "SOLA: реальний raster-візуал billboard.",
+          "pl": "SOLA: realny rasterowy materiał portfolio billboard."
         },
         "orientation": "square",
-        "scene": "adCard"
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
-        "id": "story",
-        "title": "Instagram story",
-        "src": "/assets/visual-design/sola/story.svg",
+        "id": "instagram-story",
+        "title": "Instagram Story",
+        "src": "/assets/visual-design-real/sola/instagram-story.webp",
         "alt": {
-          "en": "SOLA instagram story visual.",
-          "uk": "SOLA: візуал instagram story.",
-          "pl": "SOLA: wizualizacja instagram story."
+          "en": "SOLA instagram story real raster portfolio asset.",
+          "uk": "SOLA: реальний raster-візуал instagram story.",
+          "pl": "SOLA: realny rasterowy materiał portfolio instagram story."
         },
-        "orientation": "portrait",
-        "scene": "phoneStory"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
         "id": "retail-shelf",
-        "title": "Retail refrigerator shelf graphic",
-        "src": "/assets/visual-design/sola/retail-shelf.svg",
+        "title": "Retail Shelf",
+        "src": "/assets/visual-design-real/sola/retail-shelf.webp",
         "alt": {
-          "en": "SOLA retail refrigerator shelf graphic visual.",
-          "uk": "SOLA: візуал retail refrigerator shelf graphic.",
-          "pl": "SOLA: wizualizacja retail refrigerator shelf graphic."
+          "en": "SOLA retail shelf real raster portfolio asset.",
+          "uk": "SOLA: реальний raster-візуал retail shelf.",
+          "pl": "SOLA: realny rasterowy materiał portfolio retail shelf."
         },
-        "orientation": "landscape",
-        "scene": "retailShelf"
-      },
-      {
-        "id": "pos-poster",
-        "title": "POS promotional poster",
-        "src": "/assets/visual-design/sola/pos-poster.svg",
-        "alt": {
-          "en": "SOLA pos promotional poster visual.",
-          "uk": "SOLA: візуал pos promotional poster.",
-          "pl": "SOLA: wizualizacja pos promotional poster."
-        },
-        "orientation": "portrait",
-        "scene": "posPoster"
-      },
-      {
-        "id": "summer-banner",
-        "title": "Summer campaign banner",
-        "src": "/assets/visual-design/sola/summer-banner.svg",
-        "alt": {
-          "en": "SOLA summer campaign banner visual.",
-          "uk": "SOLA: візуал summer campaign banner.",
-          "pl": "SOLA: wizualizacja summer campaign banner."
-        },
-        "orientation": "landscape",
-        "scene": "webBanner"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       }
+    ],
+    "assetDirectory": "/assets/visual-design-real/sola/",
+    "rasterAssets": [
+      "/assets/visual-design-real/sola/source-board.png",
+      "/assets/visual-design-real/sola/board.webp",
+      "/assets/visual-design-real/sola/cover.png",
+      "/assets/visual-design-real/sola/cover.webp",
+      "/assets/visual-design-real/sola/variant-lineup.webp",
+      "/assets/visual-design-real/sola/summer-key-visual.webp",
+      "/assets/visual-design-real/sola/billboard.webp",
+      "/assets/visual-design-real/sola/instagram-story.webp",
+      "/assets/visual-design-real/sola/retail-shelf.webp"
+    ],
+    "svgAssets": [],
+    "compositedAssets": [
+      "/assets/visual-design-real/sola/cover.webp",
+      "/assets/visual-design-real/sola/variant-lineup.webp",
+      "/assets/visual-design-real/sola/summer-key-visual.webp",
+      "/assets/visual-design-real/sola/billboard.webp",
+      "/assets/visual-design-real/sola/instagram-story.webp",
+      "/assets/visual-design-real/sola/retail-shelf.webp"
     ]
   },
   {
@@ -511,17 +518,12 @@ window.visualDesignProjects = [
     "disciplines": "B2B identity, corporate stationery, pitch decks, data visualization, conference collateral",
     "description": "A serious B2B technology identity focused on clarity, modularity and professional communication. The project demonstrates stationery, presentation slides, annual reports, LinkedIn assets, badges and infographics without decorative art-direction excess.",
     "deliverables": [
-      "Corporate system overview",
-      "Logo system",
-      "Corporate stationery",
-      "Presentation title slide",
-      "Strategy slide",
-      "Data visualization slide",
-      "LinkedIn cover",
-      "Annual report cover",
-      "Annual report internal spread",
-      "Conference badge",
-      "Corporate infographic"
+      "Stationery System",
+      "Deck on Laptop",
+      "Annual Report",
+      "Conference Screen",
+      "LinkedIn Banner",
+      "Badge and Lanyard"
     ],
     "tools": [
       "Figma",
@@ -543,149 +545,138 @@ window.visualDesignProjects = [
     "coverSize": "large",
     "cover": {
       "id": "cover",
-      "title": "Corporate system overview",
-      "src": "/assets/visual-design/northline/cover.svg",
+      "title": "Stationery System",
+      "src": "/assets/visual-design-real/northline/cover.webp",
       "alt": {
-        "en": "NORTHLINE corporate system overview visual.",
-        "uk": "NORTHLINE: візуал corporate system overview.",
-        "pl": "NORTHLINE: wizualizacja corporate system overview."
+        "en": "NORTHLINE stationery system real raster portfolio asset.",
+        "uk": "NORTHLINE: реальний raster-візуал stationery system.",
+        "pl": "NORTHLINE: realny rasterowy materiał portfolio stationery system."
       },
-      "orientation": "landscape",
-      "scene": "corporateOverview"
+      "orientation": "square",
+      "format": "webp",
+      "generated": true,
+      "composited": true
     },
     "images": [
       {
+        "id": "board",
+        "title": "Full generated case board",
+        "src": "/assets/visual-design-real/northline/board.webp",
+        "alt": {
+          "en": "NORTHLINE full generated case board real raster portfolio asset.",
+          "uk": "NORTHLINE: реальний raster-візуал full generated case board.",
+          "pl": "NORTHLINE: realny rasterowy materiał portfolio full generated case board."
+        },
+        "orientation": "portrait",
+        "format": "webp",
+        "generated": true,
+        "composited": false
+      },
+      {
         "id": "cover",
-        "title": "Corporate system overview",
-        "src": "/assets/visual-design/northline/cover.svg",
+        "title": "Stationery System",
+        "src": "/assets/visual-design-real/northline/cover.webp",
         "alt": {
-          "en": "NORTHLINE corporate system overview visual.",
-          "uk": "NORTHLINE: візуал corporate system overview.",
-          "pl": "NORTHLINE: wizualizacja corporate system overview."
+          "en": "NORTHLINE stationery system real raster portfolio asset.",
+          "uk": "NORTHLINE: реальний raster-візуал stationery system.",
+          "pl": "NORTHLINE: realny rasterowy materiał portfolio stationery system."
         },
-        "orientation": "landscape",
-        "scene": "corporateOverview"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
-        "id": "logo-system",
-        "title": "Logo system",
-        "src": "/assets/visual-design/northline/logo-system.svg",
+        "id": "deck-laptop",
+        "title": "Deck on Laptop",
+        "src": "/assets/visual-design-real/northline/deck-laptop.webp",
         "alt": {
-          "en": "NORTHLINE logo system visual.",
-          "uk": "NORTHLINE: візуал logo system.",
-          "pl": "NORTHLINE: wizualizacja logo system."
+          "en": "NORTHLINE deck on laptop real raster portfolio asset.",
+          "uk": "NORTHLINE: реальний raster-візуал deck on laptop.",
+          "pl": "NORTHLINE: realny rasterowy materiał portfolio deck on laptop."
         },
-        "orientation": "landscape",
-        "scene": "logoSystem"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
-        "id": "stationery",
-        "title": "Corporate stationery",
-        "src": "/assets/visual-design/northline/stationery.svg",
+        "id": "annual-report",
+        "title": "Annual Report",
+        "src": "/assets/visual-design-real/northline/annual-report.webp",
         "alt": {
-          "en": "NORTHLINE corporate stationery visual.",
-          "uk": "NORTHLINE: візуал corporate stationery.",
-          "pl": "NORTHLINE: wizualizacja corporate stationery."
+          "en": "NORTHLINE annual report real raster portfolio asset.",
+          "uk": "NORTHLINE: реальний raster-візуал annual report.",
+          "pl": "NORTHLINE: realny rasterowy materiał portfolio annual report."
         },
-        "orientation": "landscape",
-        "scene": "stationery"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
-        "id": "presentation-title",
-        "title": "Presentation title slide",
-        "src": "/assets/visual-design/northline/presentation-title.svg",
+        "id": "conference-screen",
+        "title": "Conference Screen",
+        "src": "/assets/visual-design-real/northline/conference-screen.webp",
         "alt": {
-          "en": "NORTHLINE presentation title slide visual.",
-          "uk": "NORTHLINE: візуал presentation title slide.",
-          "pl": "NORTHLINE: wizualizacja presentation title slide."
+          "en": "NORTHLINE conference screen real raster portfolio asset.",
+          "uk": "NORTHLINE: реальний raster-візуал conference screen.",
+          "pl": "NORTHLINE: realny rasterowy materiał portfolio conference screen."
         },
-        "orientation": "landscape",
-        "scene": "presentationSlide"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
-        "id": "strategy-slide",
-        "title": "Strategy slide",
-        "src": "/assets/visual-design/northline/strategy-slide.svg",
+        "id": "linkedin-banner",
+        "title": "LinkedIn Banner",
+        "src": "/assets/visual-design-real/northline/linkedin-banner.webp",
         "alt": {
-          "en": "NORTHLINE strategy slide visual.",
-          "uk": "NORTHLINE: візуал strategy slide.",
-          "pl": "NORTHLINE: wizualizacja strategy slide."
+          "en": "NORTHLINE linkedin banner real raster portfolio asset.",
+          "uk": "NORTHLINE: реальний raster-візуал linkedin banner.",
+          "pl": "NORTHLINE: realny rasterowy materiał portfolio linkedin banner."
         },
-        "orientation": "landscape",
-        "scene": "strategySlide"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
-        "id": "data-slide",
-        "title": "Data visualization slide",
-        "src": "/assets/visual-design/northline/data-slide.svg",
+        "id": "badge-lanyard",
+        "title": "Badge and Lanyard",
+        "src": "/assets/visual-design-real/northline/badge-lanyard.webp",
         "alt": {
-          "en": "NORTHLINE data visualization slide visual.",
-          "uk": "NORTHLINE: візуал data visualization slide.",
-          "pl": "NORTHLINE: wizualizacja data visualization slide."
+          "en": "NORTHLINE badge and lanyard real raster portfolio asset.",
+          "uk": "NORTHLINE: реальний raster-візуал badge and lanyard.",
+          "pl": "NORTHLINE: realny rasterowy materiał portfolio badge and lanyard."
         },
-        "orientation": "landscape",
-        "scene": "dataSlide"
-      },
-      {
-        "id": "linkedin-cover",
-        "title": "LinkedIn cover",
-        "src": "/assets/visual-design/northline/linkedin-cover.svg",
-        "alt": {
-          "en": "NORTHLINE linkedin cover visual.",
-          "uk": "NORTHLINE: візуал linkedin cover.",
-          "pl": "NORTHLINE: wizualizacja linkedin cover."
-        },
-        "orientation": "landscape",
-        "scene": "linkedinCover"
-      },
-      {
-        "id": "annual-report-cover",
-        "title": "Annual report cover",
-        "src": "/assets/visual-design/northline/annual-report-cover.svg",
-        "alt": {
-          "en": "NORTHLINE annual report cover visual.",
-          "uk": "NORTHLINE: візуал annual report cover.",
-          "pl": "NORTHLINE: wizualizacja annual report cover."
-        },
-        "orientation": "portrait",
-        "scene": "reportCover"
-      },
-      {
-        "id": "annual-report-spread",
-        "title": "Annual report internal spread",
-        "src": "/assets/visual-design/northline/annual-report-spread.svg",
-        "alt": {
-          "en": "NORTHLINE annual report internal spread visual.",
-          "uk": "NORTHLINE: візуал annual report internal spread.",
-          "pl": "NORTHLINE: wizualizacja annual report internal spread."
-        },
-        "orientation": "landscape",
-        "scene": "reportSpread"
-      },
-      {
-        "id": "conference-badge",
-        "title": "Conference badge",
-        "src": "/assets/visual-design/northline/conference-badge.svg",
-        "alt": {
-          "en": "NORTHLINE conference badge visual.",
-          "uk": "NORTHLINE: візуал conference badge.",
-          "pl": "NORTHLINE: wizualizacja conference badge."
-        },
-        "orientation": "portrait",
-        "scene": "badge"
-      },
-      {
-        "id": "infographic",
-        "title": "Corporate infographic",
-        "src": "/assets/visual-design/northline/infographic.svg",
-        "alt": {
-          "en": "NORTHLINE corporate infographic visual.",
-          "uk": "NORTHLINE: візуал corporate infographic.",
-          "pl": "NORTHLINE: wizualizacja corporate infographic."
-        },
-        "orientation": "portrait",
-        "scene": "infographic"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       }
+    ],
+    "assetDirectory": "/assets/visual-design-real/northline/",
+    "rasterAssets": [
+      "/assets/visual-design-real/northline/source-board.png",
+      "/assets/visual-design-real/northline/board.webp",
+      "/assets/visual-design-real/northline/cover.png",
+      "/assets/visual-design-real/northline/cover.webp",
+      "/assets/visual-design-real/northline/deck-laptop.webp",
+      "/assets/visual-design-real/northline/annual-report.webp",
+      "/assets/visual-design-real/northline/conference-screen.webp",
+      "/assets/visual-design-real/northline/linkedin-banner.webp",
+      "/assets/visual-design-real/northline/badge-lanyard.webp"
+    ],
+    "svgAssets": [],
+    "compositedAssets": [
+      "/assets/visual-design-real/northline/cover.webp",
+      "/assets/visual-design-real/northline/deck-laptop.webp",
+      "/assets/visual-design-real/northline/annual-report.webp",
+      "/assets/visual-design-real/northline/conference-screen.webp",
+      "/assets/visual-design-real/northline/linkedin-banner.webp",
+      "/assets/visual-design-real/northline/badge-lanyard.webp"
     ]
   },
   {
@@ -709,15 +700,12 @@ window.visualDesignProjects = [
     "disciplines": "Event identity, typographic posters, venue graphics, social campaign, ticketing",
     "description": "A complete underground electronic music campaign with expressive typography, distorted hierarchy and practical event assets. This is the intentionally experimental part of the archive, contained within a real campaign system.",
     "deliverables": [
-      "Hero poster",
-      "Alternate poster",
-      "Lineup poster",
-      "Instagram post",
-      "Instagram story",
-      "Ticket",
-      "Wristband",
-      "Outdoor digital screen",
-      "Venue signage"
+      "Wall Poster",
+      "Alternate Poster",
+      "Stage Screen",
+      "Ticket and Wristband",
+      "Instagram Story",
+      "Venue Signage"
     ],
     "tools": [
       "Figma",
@@ -738,125 +726,138 @@ window.visualDesignProjects = [
     "coverSize": "portrait",
     "cover": {
       "id": "cover",
-      "title": "Hero poster",
-      "src": "/assets/visual-design/after-midnight/cover.svg",
+      "title": "Wall Poster",
+      "src": "/assets/visual-design-real/after-midnight/cover.webp",
       "alt": {
-        "en": "AFTER MIDNIGHT hero poster visual.",
-        "uk": "AFTER MIDNIGHT: візуал hero poster.",
-        "pl": "AFTER MIDNIGHT: wizualizacja hero poster."
+        "en": "AFTER MIDNIGHT wall poster real raster portfolio asset.",
+        "uk": "AFTER MIDNIGHT: реальний raster-візуал wall poster.",
+        "pl": "AFTER MIDNIGHT: realny rasterowy materiał portfolio wall poster."
       },
-      "orientation": "portrait",
-      "scene": "clubPoster"
+      "orientation": "square",
+      "format": "webp",
+      "generated": true,
+      "composited": true
     },
     "images": [
       {
-        "id": "cover",
-        "title": "Hero poster",
-        "src": "/assets/visual-design/after-midnight/cover.svg",
+        "id": "board",
+        "title": "Full generated case board",
+        "src": "/assets/visual-design-real/after-midnight/board.webp",
         "alt": {
-          "en": "AFTER MIDNIGHT hero poster visual.",
-          "uk": "AFTER MIDNIGHT: візуал hero poster.",
-          "pl": "AFTER MIDNIGHT: wizualizacja hero poster."
+          "en": "AFTER MIDNIGHT full generated case board real raster portfolio asset.",
+          "uk": "AFTER MIDNIGHT: реальний raster-візуал full generated case board.",
+          "pl": "AFTER MIDNIGHT: realny rasterowy materiał portfolio full generated case board."
         },
         "orientation": "portrait",
-        "scene": "clubPoster"
+        "format": "webp",
+        "generated": true,
+        "composited": false
+      },
+      {
+        "id": "cover",
+        "title": "Wall Poster",
+        "src": "/assets/visual-design-real/after-midnight/cover.webp",
+        "alt": {
+          "en": "AFTER MIDNIGHT wall poster real raster portfolio asset.",
+          "uk": "AFTER MIDNIGHT: реальний raster-візуал wall poster.",
+          "pl": "AFTER MIDNIGHT: realny rasterowy materiał portfolio wall poster."
+        },
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
         "id": "alternate-poster",
-        "title": "Alternate poster",
-        "src": "/assets/visual-design/after-midnight/alternate-poster.svg",
+        "title": "Alternate Poster",
+        "src": "/assets/visual-design-real/after-midnight/alternate-poster.webp",
         "alt": {
-          "en": "AFTER MIDNIGHT alternate poster visual.",
-          "uk": "AFTER MIDNIGHT: візуал alternate poster.",
-          "pl": "AFTER MIDNIGHT: wizualizacja alternate poster."
-        },
-        "orientation": "portrait",
-        "scene": "clubPosterAlt"
-      },
-      {
-        "id": "lineup-poster",
-        "title": "Lineup poster",
-        "src": "/assets/visual-design/after-midnight/lineup-poster.svg",
-        "alt": {
-          "en": "AFTER MIDNIGHT lineup poster visual.",
-          "uk": "AFTER MIDNIGHT: візуал lineup poster.",
-          "pl": "AFTER MIDNIGHT: wizualizacja lineup poster."
-        },
-        "orientation": "portrait",
-        "scene": "lineupPoster"
-      },
-      {
-        "id": "instagram-post",
-        "title": "Instagram post",
-        "src": "/assets/visual-design/after-midnight/instagram-post.svg",
-        "alt": {
-          "en": "AFTER MIDNIGHT instagram post visual.",
-          "uk": "AFTER MIDNIGHT: візуал instagram post.",
-          "pl": "AFTER MIDNIGHT: wizualizacja instagram post."
+          "en": "AFTER MIDNIGHT alternate poster real raster portfolio asset.",
+          "uk": "AFTER MIDNIGHT: реальний raster-візуал alternate poster.",
+          "pl": "AFTER MIDNIGHT: realny rasterowy materiał portfolio alternate poster."
         },
         "orientation": "square",
-        "scene": "socialPost"
+        "format": "webp",
+        "generated": true,
+        "composited": true
+      },
+      {
+        "id": "stage-screen",
+        "title": "Stage Screen",
+        "src": "/assets/visual-design-real/after-midnight/stage-screen.webp",
+        "alt": {
+          "en": "AFTER MIDNIGHT stage screen real raster portfolio asset.",
+          "uk": "AFTER MIDNIGHT: реальний raster-візуал stage screen.",
+          "pl": "AFTER MIDNIGHT: realny rasterowy materiał portfolio stage screen."
+        },
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
+      },
+      {
+        "id": "ticket-wristband",
+        "title": "Ticket and Wristband",
+        "src": "/assets/visual-design-real/after-midnight/ticket-wristband.webp",
+        "alt": {
+          "en": "AFTER MIDNIGHT ticket and wristband real raster portfolio asset.",
+          "uk": "AFTER MIDNIGHT: реальний raster-візуал ticket and wristband.",
+          "pl": "AFTER MIDNIGHT: realny rasterowy materiał portfolio ticket and wristband."
+        },
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
         "id": "instagram-story",
-        "title": "Instagram story",
-        "src": "/assets/visual-design/after-midnight/instagram-story.svg",
+        "title": "Instagram Story",
+        "src": "/assets/visual-design-real/after-midnight/instagram-story.webp",
         "alt": {
-          "en": "AFTER MIDNIGHT instagram story visual.",
-          "uk": "AFTER MIDNIGHT: візуал instagram story.",
-          "pl": "AFTER MIDNIGHT: wizualizacja instagram story."
+          "en": "AFTER MIDNIGHT instagram story real raster portfolio asset.",
+          "uk": "AFTER MIDNIGHT: реальний raster-візуал instagram story.",
+          "pl": "AFTER MIDNIGHT: realny rasterowy materiał portfolio instagram story."
         },
-        "orientation": "portrait",
-        "scene": "phoneStory"
-      },
-      {
-        "id": "ticket",
-        "title": "Ticket",
-        "src": "/assets/visual-design/after-midnight/ticket.svg",
-        "alt": {
-          "en": "AFTER MIDNIGHT ticket visual.",
-          "uk": "AFTER MIDNIGHT: візуал ticket.",
-          "pl": "AFTER MIDNIGHT: wizualizacja ticket."
-        },
-        "orientation": "landscape",
-        "scene": "ticket"
-      },
-      {
-        "id": "wristband",
-        "title": "Wristband",
-        "src": "/assets/visual-design/after-midnight/wristband.svg",
-        "alt": {
-          "en": "AFTER MIDNIGHT wristband visual.",
-          "uk": "AFTER MIDNIGHT: візуал wristband.",
-          "pl": "AFTER MIDNIGHT: wizualizacja wristband."
-        },
-        "orientation": "landscape",
-        "scene": "wristband"
-      },
-      {
-        "id": "digital-screen",
-        "title": "Outdoor digital screen",
-        "src": "/assets/visual-design/after-midnight/digital-screen.svg",
-        "alt": {
-          "en": "AFTER MIDNIGHT outdoor digital screen visual.",
-          "uk": "AFTER MIDNIGHT: візуал outdoor digital screen.",
-          "pl": "AFTER MIDNIGHT: wizualizacja outdoor digital screen."
-        },
-        "orientation": "landscape",
-        "scene": "billboard"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
         "id": "venue-signage",
-        "title": "Venue signage",
-        "src": "/assets/visual-design/after-midnight/venue-signage.svg",
+        "title": "Venue Signage",
+        "src": "/assets/visual-design-real/after-midnight/venue-signage.webp",
         "alt": {
-          "en": "AFTER MIDNIGHT venue signage visual.",
-          "uk": "AFTER MIDNIGHT: візуал venue signage.",
-          "pl": "AFTER MIDNIGHT: wizualizacja venue signage."
+          "en": "AFTER MIDNIGHT venue signage real raster portfolio asset.",
+          "uk": "AFTER MIDNIGHT: реальний raster-візуал venue signage.",
+          "pl": "AFTER MIDNIGHT: realny rasterowy materiał portfolio venue signage."
         },
-        "orientation": "landscape",
-        "scene": "signage"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       }
+    ],
+    "assetDirectory": "/assets/visual-design-real/after-midnight/",
+    "rasterAssets": [
+      "/assets/visual-design-real/after-midnight/source-board.png",
+      "/assets/visual-design-real/after-midnight/board.webp",
+      "/assets/visual-design-real/after-midnight/cover.png",
+      "/assets/visual-design-real/after-midnight/cover.webp",
+      "/assets/visual-design-real/after-midnight/alternate-poster.webp",
+      "/assets/visual-design-real/after-midnight/stage-screen.webp",
+      "/assets/visual-design-real/after-midnight/ticket-wristband.webp",
+      "/assets/visual-design-real/after-midnight/instagram-story.webp",
+      "/assets/visual-design-real/after-midnight/venue-signage.webp"
+    ],
+    "svgAssets": [],
+    "compositedAssets": [
+      "/assets/visual-design-real/after-midnight/cover.webp",
+      "/assets/visual-design-real/after-midnight/alternate-poster.webp",
+      "/assets/visual-design-real/after-midnight/stage-screen.webp",
+      "/assets/visual-design-real/after-midnight/ticket-wristband.webp",
+      "/assets/visual-design-real/after-midnight/instagram-story.webp",
+      "/assets/visual-design-real/after-midnight/venue-signage.webp"
     ]
   },
   {
@@ -879,17 +880,12 @@ window.visualDesignProjects = [
     "disciplines": "Hotel identity, guest collateral, printed menus, signage, local guide design",
     "description": "A tactile Mediterranean hotel system built around guest touchpoints: room keys, menus, stationery, signage, postcards, tote graphics and a local guide booklet. The style is warm and romantic, but restrained enough for a premium hospitality brand.",
     "deliverables": [
-      "Hotel collateral system",
-      "Hotel logo",
-      "Room key",
-      "Welcome card",
-      "Stationery",
-      "Breakfast menu",
-      "Door hanger",
-      "Postcard",
-      "Tote bag",
-      "Local guide booklet",
-      "Hotel signage"
+      "Stationery Set",
+      "Room Key",
+      "Breakfast Menu",
+      "Postcard Set",
+      "Tote and Guide",
+      "Hotel Signage"
     ],
     "tools": [
       "Figma",
@@ -909,149 +905,138 @@ window.visualDesignProjects = [
     "coverSize": "standard",
     "cover": {
       "id": "cover",
-      "title": "Hotel collateral system",
-      "src": "/assets/visual-design/casa-fiora/cover.svg",
+      "title": "Stationery Set",
+      "src": "/assets/visual-design-real/casa-fiora/cover.webp",
       "alt": {
-        "en": "CASA FIORA hotel collateral system visual.",
-        "uk": "CASA FIORA: візуал hotel collateral system.",
-        "pl": "CASA FIORA: wizualizacja hotel collateral system."
+        "en": "CASA FIORA stationery set real raster portfolio asset.",
+        "uk": "CASA FIORA: реальний raster-візуал stationery set.",
+        "pl": "CASA FIORA: realny rasterowy materiał portfolio stationery set."
       },
-      "orientation": "landscape",
-      "scene": "hospitalityOverview"
+      "orientation": "square",
+      "format": "webp",
+      "generated": true,
+      "composited": true
     },
     "images": [
       {
-        "id": "cover",
-        "title": "Hotel collateral system",
-        "src": "/assets/visual-design/casa-fiora/cover.svg",
+        "id": "board",
+        "title": "Full generated case board",
+        "src": "/assets/visual-design-real/casa-fiora/board.webp",
         "alt": {
-          "en": "CASA FIORA hotel collateral system visual.",
-          "uk": "CASA FIORA: візуал hotel collateral system.",
-          "pl": "CASA FIORA: wizualizacja hotel collateral system."
+          "en": "CASA FIORA full generated case board real raster portfolio asset.",
+          "uk": "CASA FIORA: реальний raster-візуал full generated case board.",
+          "pl": "CASA FIORA: realny rasterowy materiał portfolio full generated case board."
         },
-        "orientation": "landscape",
-        "scene": "hospitalityOverview"
+        "orientation": "portrait",
+        "format": "webp",
+        "generated": true,
+        "composited": false
       },
       {
-        "id": "logo",
-        "title": "Hotel logo",
-        "src": "/assets/visual-design/casa-fiora/logo.svg",
+        "id": "cover",
+        "title": "Stationery Set",
+        "src": "/assets/visual-design-real/casa-fiora/cover.webp",
         "alt": {
-          "en": "CASA FIORA hotel logo visual.",
-          "uk": "CASA FIORA: візуал hotel logo.",
-          "pl": "CASA FIORA: wizualizacja hotel logo."
+          "en": "CASA FIORA stationery set real raster portfolio asset.",
+          "uk": "CASA FIORA: реальний raster-візуал stationery set.",
+          "pl": "CASA FIORA: realny rasterowy materiał portfolio stationery set."
         },
-        "orientation": "landscape",
-        "scene": "logoSystem"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
         "id": "room-key",
-        "title": "Room key",
-        "src": "/assets/visual-design/casa-fiora/room-key.svg",
+        "title": "Room Key",
+        "src": "/assets/visual-design-real/casa-fiora/room-key.webp",
         "alt": {
-          "en": "CASA FIORA room key visual.",
-          "uk": "CASA FIORA: візуал room key.",
-          "pl": "CASA FIORA: wizualizacja room key."
+          "en": "CASA FIORA room key real raster portfolio asset.",
+          "uk": "CASA FIORA: реальний raster-візуал room key.",
+          "pl": "CASA FIORA: realny rasterowy materiał portfolio room key."
         },
-        "orientation": "landscape",
-        "scene": "keyCard"
-      },
-      {
-        "id": "welcome-card",
-        "title": "Welcome card",
-        "src": "/assets/visual-design/casa-fiora/welcome-card.svg",
-        "alt": {
-          "en": "CASA FIORA welcome card visual.",
-          "uk": "CASA FIORA: візуал welcome card.",
-          "pl": "CASA FIORA: wizualizacja welcome card."
-        },
-        "orientation": "portrait",
-        "scene": "welcomeCard"
-      },
-      {
-        "id": "stationery",
-        "title": "Stationery",
-        "src": "/assets/visual-design/casa-fiora/stationery.svg",
-        "alt": {
-          "en": "CASA FIORA stationery visual.",
-          "uk": "CASA FIORA: візуал stationery.",
-          "pl": "CASA FIORA: wizualizacja stationery."
-        },
-        "orientation": "landscape",
-        "scene": "stationery"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
         "id": "breakfast-menu",
-        "title": "Breakfast menu",
-        "src": "/assets/visual-design/casa-fiora/breakfast-menu.svg",
+        "title": "Breakfast Menu",
+        "src": "/assets/visual-design-real/casa-fiora/breakfast-menu.webp",
         "alt": {
-          "en": "CASA FIORA breakfast menu visual.",
-          "uk": "CASA FIORA: візуал breakfast menu.",
-          "pl": "CASA FIORA: wizualizacja breakfast menu."
+          "en": "CASA FIORA breakfast menu real raster portfolio asset.",
+          "uk": "CASA FIORA: реальний raster-візуал breakfast menu.",
+          "pl": "CASA FIORA: realny rasterowy materiał portfolio breakfast menu."
         },
-        "orientation": "portrait",
-        "scene": "menu"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
-        "id": "door-hanger",
-        "title": "Door hanger",
-        "src": "/assets/visual-design/casa-fiora/door-hanger.svg",
+        "id": "postcard-set",
+        "title": "Postcard Set",
+        "src": "/assets/visual-design-real/casa-fiora/postcard-set.webp",
         "alt": {
-          "en": "CASA FIORA door hanger visual.",
-          "uk": "CASA FIORA: візуал door hanger.",
-          "pl": "CASA FIORA: wizualizacja door hanger."
+          "en": "CASA FIORA postcard set real raster portfolio asset.",
+          "uk": "CASA FIORA: реальний raster-візуал postcard set.",
+          "pl": "CASA FIORA: realny rasterowy materiał portfolio postcard set."
         },
-        "orientation": "portrait",
-        "scene": "doorHanger"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
-        "id": "postcard",
-        "title": "Postcard",
-        "src": "/assets/visual-design/casa-fiora/postcard.svg",
+        "id": "tote-guide",
+        "title": "Tote and Guide",
+        "src": "/assets/visual-design-real/casa-fiora/tote-guide.webp",
         "alt": {
-          "en": "CASA FIORA postcard visual.",
-          "uk": "CASA FIORA: візуал postcard.",
-          "pl": "CASA FIORA: wizualizacja postcard."
+          "en": "CASA FIORA tote and guide real raster portfolio asset.",
+          "uk": "CASA FIORA: реальний raster-візуал tote and guide.",
+          "pl": "CASA FIORA: realny rasterowy materiał portfolio tote and guide."
         },
-        "orientation": "landscape",
-        "scene": "postcard"
-      },
-      {
-        "id": "tote-bag",
-        "title": "Tote bag",
-        "src": "/assets/visual-design/casa-fiora/tote-bag.svg",
-        "alt": {
-          "en": "CASA FIORA tote bag visual.",
-          "uk": "CASA FIORA: візуал tote bag.",
-          "pl": "CASA FIORA: wizualizacja tote bag."
-        },
-        "orientation": "portrait",
-        "scene": "toteBag"
-      },
-      {
-        "id": "local-guide",
-        "title": "Local guide booklet",
-        "src": "/assets/visual-design/casa-fiora/local-guide.svg",
-        "alt": {
-          "en": "CASA FIORA local guide booklet visual.",
-          "uk": "CASA FIORA: візуал local guide booklet.",
-          "pl": "CASA FIORA: wizualizacja local guide booklet."
-        },
-        "orientation": "landscape",
-        "scene": "magazineSpread"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
         "id": "hotel-signage",
-        "title": "Hotel signage",
-        "src": "/assets/visual-design/casa-fiora/hotel-signage.svg",
+        "title": "Hotel Signage",
+        "src": "/assets/visual-design-real/casa-fiora/hotel-signage.webp",
         "alt": {
-          "en": "CASA FIORA hotel signage visual.",
-          "uk": "CASA FIORA: візуал hotel signage.",
-          "pl": "CASA FIORA: wizualizacja hotel signage."
+          "en": "CASA FIORA hotel signage real raster portfolio asset.",
+          "uk": "CASA FIORA: реальний raster-візуал hotel signage.",
+          "pl": "CASA FIORA: realny rasterowy materiał portfolio hotel signage."
         },
-        "orientation": "landscape",
-        "scene": "signage"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       }
+    ],
+    "assetDirectory": "/assets/visual-design-real/casa-fiora/",
+    "rasterAssets": [
+      "/assets/visual-design-real/casa-fiora/source-board.png",
+      "/assets/visual-design-real/casa-fiora/board.webp",
+      "/assets/visual-design-real/casa-fiora/cover.png",
+      "/assets/visual-design-real/casa-fiora/cover.webp",
+      "/assets/visual-design-real/casa-fiora/room-key.webp",
+      "/assets/visual-design-real/casa-fiora/breakfast-menu.webp",
+      "/assets/visual-design-real/casa-fiora/postcard-set.webp",
+      "/assets/visual-design-real/casa-fiora/tote-guide.webp",
+      "/assets/visual-design-real/casa-fiora/hotel-signage.webp"
+    ],
+    "svgAssets": [],
+    "compositedAssets": [
+      "/assets/visual-design-real/casa-fiora/cover.webp",
+      "/assets/visual-design-real/casa-fiora/room-key.webp",
+      "/assets/visual-design-real/casa-fiora/breakfast-menu.webp",
+      "/assets/visual-design-real/casa-fiora/postcard-set.webp",
+      "/assets/visual-design-real/casa-fiora/tote-guide.webp",
+      "/assets/visual-design-real/casa-fiora/hotel-signage.webp"
     ]
   },
   {
@@ -1074,16 +1059,12 @@ window.visualDesignProjects = [
     "disciplines": "Paid media, conversion creatives, promotional hierarchy, mobile-first campaign assets",
     "description": "A performance marketing system for a fictional fitness app, built to show hierarchy, offers, CTA placement and format adaptation. The project is intentionally practical: Meta ads, carousel frames, stories, email, retargeting and comparison variants.",
     "deliverables": [
-      "Performance campaign system",
-      "Meta static ad",
-      "Meta carousel",
-      "Instagram story",
-      "TikTok cover",
-      "Promotional offer ad",
-      "App Store promotional graphic",
-      "Email hero",
-      "Retargeting creative",
-      "Campaign comparison variants"
+      "Mobile Campaign",
+      "Meta Ad",
+      "Instagram Story",
+      "Retargeting Banner",
+      "Offer Visual",
+      "App Store Asset"
     ],
     "tools": [
       "Figma",
@@ -1103,137 +1084,138 @@ window.visualDesignProjects = [
     "coverSize": "wide",
     "cover": {
       "id": "cover",
-      "title": "Performance campaign system",
-      "src": "/assets/visual-design/kinetic/cover.svg",
+      "title": "Mobile Campaign",
+      "src": "/assets/visual-design-real/kinetic/cover.webp",
       "alt": {
-        "en": "KINETIC performance campaign system visual.",
-        "uk": "KINETIC: візуал performance campaign system.",
-        "pl": "KINETIC: wizualizacja performance campaign system."
+        "en": "KINETIC mobile campaign real raster portfolio asset.",
+        "uk": "KINETIC: реальний raster-візуал mobile campaign.",
+        "pl": "KINETIC: realny rasterowy materiał portfolio mobile campaign."
       },
-      "orientation": "landscape",
-      "scene": "marketingOverview"
+      "orientation": "square",
+      "format": "webp",
+      "generated": true,
+      "composited": true
     },
     "images": [
       {
-        "id": "cover",
-        "title": "Performance campaign system",
-        "src": "/assets/visual-design/kinetic/cover.svg",
+        "id": "board",
+        "title": "Full generated case board",
+        "src": "/assets/visual-design-real/kinetic/board.webp",
         "alt": {
-          "en": "KINETIC performance campaign system visual.",
-          "uk": "KINETIC: візуал performance campaign system.",
-          "pl": "KINETIC: wizualizacja performance campaign system."
+          "en": "KINETIC full generated case board real raster portfolio asset.",
+          "uk": "KINETIC: реальний raster-візуал full generated case board.",
+          "pl": "KINETIC: realny rasterowy materiał portfolio full generated case board."
         },
-        "orientation": "landscape",
-        "scene": "marketingOverview"
+        "orientation": "portrait",
+        "format": "webp",
+        "generated": true,
+        "composited": false
       },
       {
-        "id": "meta-static",
-        "title": "Meta static ad",
-        "src": "/assets/visual-design/kinetic/meta-static.svg",
+        "id": "cover",
+        "title": "Mobile Campaign",
+        "src": "/assets/visual-design-real/kinetic/cover.webp",
         "alt": {
-          "en": "KINETIC meta static ad visual.",
-          "uk": "KINETIC: візуал meta static ad.",
-          "pl": "KINETIC: wizualizacja meta static ad."
+          "en": "KINETIC mobile campaign real raster portfolio asset.",
+          "uk": "KINETIC: реальний raster-візуал mobile campaign.",
+          "pl": "KINETIC: realny rasterowy materiał portfolio mobile campaign."
         },
         "orientation": "square",
-        "scene": "adCard"
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
-        "id": "meta-carousel",
-        "title": "Meta carousel",
-        "src": "/assets/visual-design/kinetic/meta-carousel.svg",
+        "id": "meta-ad",
+        "title": "Meta Ad",
+        "src": "/assets/visual-design-real/kinetic/meta-ad.webp",
         "alt": {
-          "en": "KINETIC meta carousel visual.",
-          "uk": "KINETIC: візуал meta carousel.",
-          "pl": "KINETIC: wizualizacja meta carousel."
+          "en": "KINETIC meta ad real raster portfolio asset.",
+          "uk": "KINETIC: реальний raster-візуал meta ad.",
+          "pl": "KINETIC: realny rasterowy materiał portfolio meta ad."
         },
-        "orientation": "landscape",
-        "scene": "carousel"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
         "id": "instagram-story",
-        "title": "Instagram story",
-        "src": "/assets/visual-design/kinetic/instagram-story.svg",
+        "title": "Instagram Story",
+        "src": "/assets/visual-design-real/kinetic/instagram-story.webp",
         "alt": {
-          "en": "KINETIC instagram story visual.",
-          "uk": "KINETIC: візуал instagram story.",
-          "pl": "KINETIC: wizualizacja instagram story."
-        },
-        "orientation": "portrait",
-        "scene": "phoneStory"
-      },
-      {
-        "id": "tiktok-cover",
-        "title": "TikTok cover",
-        "src": "/assets/visual-design/kinetic/tiktok-cover.svg",
-        "alt": {
-          "en": "KINETIC tiktok cover visual.",
-          "uk": "KINETIC: візуал tiktok cover.",
-          "pl": "KINETIC: wizualizacja tiktok cover."
-        },
-        "orientation": "portrait",
-        "scene": "phoneStory"
-      },
-      {
-        "id": "offer-ad",
-        "title": "Promotional offer ad",
-        "src": "/assets/visual-design/kinetic/offer-ad.svg",
-        "alt": {
-          "en": "KINETIC promotional offer ad visual.",
-          "uk": "KINETIC: візуал promotional offer ad.",
-          "pl": "KINETIC: wizualizacja promotional offer ad."
+          "en": "KINETIC instagram story real raster portfolio asset.",
+          "uk": "KINETIC: реальний raster-візуал instagram story.",
+          "pl": "KINETIC: realny rasterowy materiał portfolio instagram story."
         },
         "orientation": "square",
-        "scene": "adCard"
+        "format": "webp",
+        "generated": true,
+        "composited": true
+      },
+      {
+        "id": "retargeting-banner",
+        "title": "Retargeting Banner",
+        "src": "/assets/visual-design-real/kinetic/retargeting-banner.webp",
+        "alt": {
+          "en": "KINETIC retargeting banner real raster portfolio asset.",
+          "uk": "KINETIC: реальний raster-візуал retargeting banner.",
+          "pl": "KINETIC: realny rasterowy materiał portfolio retargeting banner."
+        },
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
+      },
+      {
+        "id": "offer-visual",
+        "title": "Offer Visual",
+        "src": "/assets/visual-design-real/kinetic/offer-visual.webp",
+        "alt": {
+          "en": "KINETIC offer visual real raster portfolio asset.",
+          "uk": "KINETIC: реальний raster-візуал offer visual.",
+          "pl": "KINETIC: realny rasterowy materiał portfolio offer visual."
+        },
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
         "id": "app-store",
-        "title": "App Store promotional graphic",
-        "src": "/assets/visual-design/kinetic/app-store.svg",
+        "title": "App Store Asset",
+        "src": "/assets/visual-design-real/kinetic/app-store.webp",
         "alt": {
-          "en": "KINETIC app store promotional graphic visual.",
-          "uk": "KINETIC: візуал app store promotional graphic.",
-          "pl": "KINETIC: wizualizacja app store promotional graphic."
-        },
-        "orientation": "landscape",
-        "scene": "webBanner"
-      },
-      {
-        "id": "email-hero",
-        "title": "Email hero",
-        "src": "/assets/visual-design/kinetic/email-hero.svg",
-        "alt": {
-          "en": "KINETIC email hero visual.",
-          "uk": "KINETIC: візуал email hero.",
-          "pl": "KINETIC: wizualizacja email hero."
-        },
-        "orientation": "landscape",
-        "scene": "emailHeader"
-      },
-      {
-        "id": "retargeting",
-        "title": "Retargeting creative",
-        "src": "/assets/visual-design/kinetic/retargeting.svg",
-        "alt": {
-          "en": "KINETIC retargeting creative visual.",
-          "uk": "KINETIC: візуал retargeting creative.",
-          "pl": "KINETIC: wizualizacja retargeting creative."
+          "en": "KINETIC app store asset real raster portfolio asset.",
+          "uk": "KINETIC: реальний raster-візуал app store asset.",
+          "pl": "KINETIC: realny rasterowy materiał portfolio app store asset."
         },
         "orientation": "square",
-        "scene": "adCard"
-      },
-      {
-        "id": "comparison",
-        "title": "Campaign comparison variants",
-        "src": "/assets/visual-design/kinetic/comparison.svg",
-        "alt": {
-          "en": "KINETIC campaign comparison variants visual.",
-          "uk": "KINETIC: візуал campaign comparison variants.",
-          "pl": "KINETIC: wizualizacja campaign comparison variants."
-        },
-        "orientation": "landscape",
-        "scene": "comparison"
+        "format": "webp",
+        "generated": true,
+        "composited": true
       }
+    ],
+    "assetDirectory": "/assets/visual-design-real/kinetic/",
+    "rasterAssets": [
+      "/assets/visual-design-real/kinetic/source-board.png",
+      "/assets/visual-design-real/kinetic/board.webp",
+      "/assets/visual-design-real/kinetic/cover.png",
+      "/assets/visual-design-real/kinetic/cover.webp",
+      "/assets/visual-design-real/kinetic/meta-ad.webp",
+      "/assets/visual-design-real/kinetic/instagram-story.webp",
+      "/assets/visual-design-real/kinetic/retargeting-banner.webp",
+      "/assets/visual-design-real/kinetic/offer-visual.webp",
+      "/assets/visual-design-real/kinetic/app-store.webp"
+    ],
+    "svgAssets": [],
+    "compositedAssets": [
+      "/assets/visual-design-real/kinetic/cover.webp",
+      "/assets/visual-design-real/kinetic/meta-ad.webp",
+      "/assets/visual-design-real/kinetic/instagram-story.webp",
+      "/assets/visual-design-real/kinetic/retargeting-banner.webp",
+      "/assets/visual-design-real/kinetic/offer-visual.webp",
+      "/assets/visual-design-real/kinetic/app-store.webp"
     ]
   },
   {
@@ -1255,15 +1237,12 @@ window.visualDesignProjects = [
     "disciplines": "Magazine systems, readable editorial hierarchy, covers, spreads, captions and folios",
     "description": "A monochrome editorial system for an independent architecture magazine. The project focuses on actual magazine logic: covers, contents, opening spreads, long-form copy, folios, captions, interviews and image-led pacing.",
     "deliverables": [
-      "Magazine cover",
-      "Contents page",
-      "Article opening spread",
-      "Long-form text spread",
-      "Image-led spread",
-      "Pull quote spread",
-      "Interview spread",
-      "Captions and folios",
-      "Back cover"
+      "Magazine Cover",
+      "Contents",
+      "Architecture Spread",
+      "Long-Form Spread",
+      "Photo-Led Spread",
+      "Interview Spread"
     ],
     "tools": [
       "Figma",
@@ -1282,125 +1261,138 @@ window.visualDesignProjects = [
     "coverSize": "standard",
     "cover": {
       "id": "cover",
-      "title": "Magazine cover",
-      "src": "/assets/visual-design/form-26/cover.svg",
+      "title": "Magazine Cover",
+      "src": "/assets/visual-design-real/form-26/cover.webp",
       "alt": {
-        "en": "FORM / 26 magazine cover visual.",
-        "uk": "FORM / 26: візуал magazine cover.",
-        "pl": "FORM / 26: wizualizacja magazine cover."
+        "en": "FORM / 26 magazine cover real raster portfolio asset.",
+        "uk": "FORM / 26: реальний raster-візуал magazine cover.",
+        "pl": "FORM / 26: realny rasterowy materiał portfolio magazine cover."
       },
-      "orientation": "portrait",
-      "scene": "magazineCover"
+      "orientation": "square",
+      "format": "webp",
+      "generated": true,
+      "composited": true
     },
     "images": [
       {
-        "id": "cover",
-        "title": "Magazine cover",
-        "src": "/assets/visual-design/form-26/cover.svg",
+        "id": "board",
+        "title": "Full generated case board",
+        "src": "/assets/visual-design-real/form-26/board.webp",
         "alt": {
-          "en": "FORM / 26 magazine cover visual.",
-          "uk": "FORM / 26: візуал magazine cover.",
-          "pl": "FORM / 26: wizualizacja magazine cover."
+          "en": "FORM / 26 full generated case board real raster portfolio asset.",
+          "uk": "FORM / 26: реальний raster-візуал full generated case board.",
+          "pl": "FORM / 26: realny rasterowy materiał portfolio full generated case board."
         },
         "orientation": "portrait",
-        "scene": "magazineCover"
+        "format": "webp",
+        "generated": true,
+        "composited": false
+      },
+      {
+        "id": "cover",
+        "title": "Magazine Cover",
+        "src": "/assets/visual-design-real/form-26/cover.webp",
+        "alt": {
+          "en": "FORM / 26 magazine cover real raster portfolio asset.",
+          "uk": "FORM / 26: реальний raster-візуал magazine cover.",
+          "pl": "FORM / 26: realny rasterowy materiał portfolio magazine cover."
+        },
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
         "id": "contents",
-        "title": "Contents page",
-        "src": "/assets/visual-design/form-26/contents.svg",
+        "title": "Contents",
+        "src": "/assets/visual-design-real/form-26/contents.webp",
         "alt": {
-          "en": "FORM / 26 contents page visual.",
-          "uk": "FORM / 26: візуал contents page.",
-          "pl": "FORM / 26: wizualizacja contents page."
+          "en": "FORM / 26 contents real raster portfolio asset.",
+          "uk": "FORM / 26: реальний raster-візуал contents.",
+          "pl": "FORM / 26: realny rasterowy materiał portfolio contents."
         },
-        "orientation": "portrait",
-        "scene": "contentsPage"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
-        "id": "opening-spread",
-        "title": "Article opening spread",
-        "src": "/assets/visual-design/form-26/opening-spread.svg",
+        "id": "architecture-spread",
+        "title": "Architecture Spread",
+        "src": "/assets/visual-design-real/form-26/architecture-spread.webp",
         "alt": {
-          "en": "FORM / 26 article opening spread visual.",
-          "uk": "FORM / 26: візуал article opening spread.",
-          "pl": "FORM / 26: wizualizacja article opening spread."
+          "en": "FORM / 26 architecture spread real raster portfolio asset.",
+          "uk": "FORM / 26: реальний raster-візуал architecture spread.",
+          "pl": "FORM / 26: realny rasterowy materiał portfolio architecture spread."
         },
-        "orientation": "landscape",
-        "scene": "magazineSpread"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
-        "id": "long-form",
-        "title": "Long-form text spread",
-        "src": "/assets/visual-design/form-26/long-form.svg",
+        "id": "long-form-spread",
+        "title": "Long-Form Spread",
+        "src": "/assets/visual-design-real/form-26/long-form-spread.webp",
         "alt": {
-          "en": "FORM / 26 long-form text spread visual.",
-          "uk": "FORM / 26: візуал long-form text spread.",
-          "pl": "FORM / 26: wizualizacja long-form text spread."
+          "en": "FORM / 26 long-form spread real raster portfolio asset.",
+          "uk": "FORM / 26: реальний raster-візуал long-form spread.",
+          "pl": "FORM / 26: realny rasterowy materiał portfolio long-form spread."
         },
-        "orientation": "landscape",
-        "scene": "textSpread"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
-        "id": "image-led",
-        "title": "Image-led spread",
-        "src": "/assets/visual-design/form-26/image-led.svg",
+        "id": "photo-led-spread",
+        "title": "Photo-Led Spread",
+        "src": "/assets/visual-design-real/form-26/photo-led-spread.webp",
         "alt": {
-          "en": "FORM / 26 image-led spread visual.",
-          "uk": "FORM / 26: візуал image-led spread.",
-          "pl": "FORM / 26: wizualizacja image-led spread."
+          "en": "FORM / 26 photo-led spread real raster portfolio asset.",
+          "uk": "FORM / 26: реальний raster-візуал photo-led spread.",
+          "pl": "FORM / 26: realny rasterowy materiał portfolio photo-led spread."
         },
-        "orientation": "landscape",
-        "scene": "imageSpread"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
-        "id": "pull-quote",
-        "title": "Pull quote spread",
-        "src": "/assets/visual-design/form-26/pull-quote.svg",
+        "id": "interview-spread",
+        "title": "Interview Spread",
+        "src": "/assets/visual-design-real/form-26/interview-spread.webp",
         "alt": {
-          "en": "FORM / 26 pull quote spread visual.",
-          "uk": "FORM / 26: візуал pull quote spread.",
-          "pl": "FORM / 26: wizualizacja pull quote spread."
+          "en": "FORM / 26 interview spread real raster portfolio asset.",
+          "uk": "FORM / 26: реальний raster-візуал interview spread.",
+          "pl": "FORM / 26: realny rasterowy materiał portfolio interview spread."
         },
-        "orientation": "landscape",
-        "scene": "quoteSpread"
-      },
-      {
-        "id": "interview",
-        "title": "Interview spread",
-        "src": "/assets/visual-design/form-26/interview.svg",
-        "alt": {
-          "en": "FORM / 26 interview spread visual.",
-          "uk": "FORM / 26: візуал interview spread.",
-          "pl": "FORM / 26: wizualizacja interview spread."
-        },
-        "orientation": "landscape",
-        "scene": "interviewSpread"
-      },
-      {
-        "id": "captions-folios",
-        "title": "Captions and folios",
-        "src": "/assets/visual-design/form-26/captions-folios.svg",
-        "alt": {
-          "en": "FORM / 26 captions and folios visual.",
-          "uk": "FORM / 26: візуал captions and folios.",
-          "pl": "FORM / 26: wizualizacja captions and folios."
-        },
-        "orientation": "landscape",
-        "scene": "detailCrop"
-      },
-      {
-        "id": "back-cover",
-        "title": "Back cover",
-        "src": "/assets/visual-design/form-26/back-cover.svg",
-        "alt": {
-          "en": "FORM / 26 back cover visual.",
-          "uk": "FORM / 26: візуал back cover.",
-          "pl": "FORM / 26: wizualizacja back cover."
-        },
-        "orientation": "portrait",
-        "scene": "backCover"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       }
+    ],
+    "assetDirectory": "/assets/visual-design-real/form-26/",
+    "rasterAssets": [
+      "/assets/visual-design-real/form-26/source-board.png",
+      "/assets/visual-design-real/form-26/board.webp",
+      "/assets/visual-design-real/form-26/cover.png",
+      "/assets/visual-design-real/form-26/cover.webp",
+      "/assets/visual-design-real/form-26/contents.webp",
+      "/assets/visual-design-real/form-26/architecture-spread.webp",
+      "/assets/visual-design-real/form-26/long-form-spread.webp",
+      "/assets/visual-design-real/form-26/photo-led-spread.webp",
+      "/assets/visual-design-real/form-26/interview-spread.webp"
+    ],
+    "svgAssets": [],
+    "compositedAssets": [
+      "/assets/visual-design-real/form-26/cover.webp",
+      "/assets/visual-design-real/form-26/contents.webp",
+      "/assets/visual-design-real/form-26/architecture-spread.webp",
+      "/assets/visual-design-real/form-26/long-form-spread.webp",
+      "/assets/visual-design-real/form-26/photo-led-spread.webp",
+      "/assets/visual-design-real/form-26/interview-spread.webp"
     ]
   },
   {
@@ -1424,16 +1416,12 @@ window.visualDesignProjects = [
     "disciplines": "Illustration-led packaging, product variants, retail display, launch graphics",
     "description": "A cheerful consumer packaging system for a fictional pet food brand. It uses expressive illustration, clear product variants and retail-ready pack hierarchy without becoming childish or luxury-coded.",
     "deliverables": [
-      "Pet food package family",
-      "Dog food package",
-      "Cat food package",
-      "Treat pouch",
-      "Product variants",
-      "Illustration and icon system",
-      "Retail shelf display",
-      "Shipping box",
-      "Launch social post",
-      "Campaign graphic"
+      "Package Lineup",
+      "Dog Package",
+      "Cat Package",
+      "Treat Variants",
+      "Retail Shelf",
+      "Shipping and Social"
     ],
     "tools": [
       "Figma",
@@ -1453,137 +1441,138 @@ window.visualDesignProjects = [
     "coverSize": "large",
     "cover": {
       "id": "cover",
-      "title": "Pet food package family",
-      "src": "/assets/visual-design/pawpaw/cover.svg",
+      "title": "Package Lineup",
+      "src": "/assets/visual-design-real/pawpaw/cover.webp",
       "alt": {
-        "en": "PAWPAW pet food package family visual.",
-        "uk": "PAWPAW: візуал pet food package family.",
-        "pl": "PAWPAW: wizualizacja pet food package family."
+        "en": "PAWPAW package lineup real raster portfolio asset.",
+        "uk": "PAWPAW: реальний raster-візуал package lineup.",
+        "pl": "PAWPAW: realny rasterowy materiał portfolio package lineup."
       },
-      "orientation": "landscape",
-      "scene": "petPackaging"
+      "orientation": "square",
+      "format": "webp",
+      "generated": true,
+      "composited": true
     },
     "images": [
       {
-        "id": "cover",
-        "title": "Pet food package family",
-        "src": "/assets/visual-design/pawpaw/cover.svg",
+        "id": "board",
+        "title": "Full generated case board",
+        "src": "/assets/visual-design-real/pawpaw/board.webp",
         "alt": {
-          "en": "PAWPAW pet food package family visual.",
-          "uk": "PAWPAW: візуал pet food package family.",
-          "pl": "PAWPAW: wizualizacja pet food package family."
+          "en": "PAWPAW full generated case board real raster portfolio asset.",
+          "uk": "PAWPAW: реальний raster-візуал full generated case board.",
+          "pl": "PAWPAW: realny rasterowy materiał portfolio full generated case board."
         },
-        "orientation": "landscape",
-        "scene": "petPackaging"
+        "orientation": "portrait",
+        "format": "webp",
+        "generated": true,
+        "composited": false
+      },
+      {
+        "id": "cover",
+        "title": "Package Lineup",
+        "src": "/assets/visual-design-real/pawpaw/cover.webp",
+        "alt": {
+          "en": "PAWPAW package lineup real raster portfolio asset.",
+          "uk": "PAWPAW: реальний raster-візуал package lineup.",
+          "pl": "PAWPAW: realny rasterowy materiał portfolio package lineup."
+        },
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
         "id": "dog-package",
-        "title": "Dog food package",
-        "src": "/assets/visual-design/pawpaw/dog-package.svg",
+        "title": "Dog Package",
+        "src": "/assets/visual-design-real/pawpaw/dog-package.webp",
         "alt": {
-          "en": "PAWPAW dog food package visual.",
-          "uk": "PAWPAW: візуал dog food package.",
-          "pl": "PAWPAW: wizualizacja dog food package."
+          "en": "PAWPAW dog package real raster portfolio asset.",
+          "uk": "PAWPAW: реальний raster-візуал dog package.",
+          "pl": "PAWPAW: realny rasterowy materiał portfolio dog package."
         },
-        "orientation": "portrait",
-        "scene": "pouchPackage"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
         "id": "cat-package",
-        "title": "Cat food package",
-        "src": "/assets/visual-design/pawpaw/cat-package.svg",
+        "title": "Cat Package",
+        "src": "/assets/visual-design-real/pawpaw/cat-package.webp",
         "alt": {
-          "en": "PAWPAW cat food package visual.",
-          "uk": "PAWPAW: візуал cat food package.",
-          "pl": "PAWPAW: wizualizacja cat food package."
-        },
-        "orientation": "portrait",
-        "scene": "pouchPackage"
-      },
-      {
-        "id": "treat-pouch",
-        "title": "Treat pouch",
-        "src": "/assets/visual-design/pawpaw/treat-pouch.svg",
-        "alt": {
-          "en": "PAWPAW treat pouch visual.",
-          "uk": "PAWPAW: візуал treat pouch.",
-          "pl": "PAWPAW: wizualizacja treat pouch."
-        },
-        "orientation": "portrait",
-        "scene": "pouchPackage"
-      },
-      {
-        "id": "variants",
-        "title": "Product variants",
-        "src": "/assets/visual-design/pawpaw/variants.svg",
-        "alt": {
-          "en": "PAWPAW product variants visual.",
-          "uk": "PAWPAW: візуал product variants.",
-          "pl": "PAWPAW: wizualizacja product variants."
-        },
-        "orientation": "landscape",
-        "scene": "variantLineup"
-      },
-      {
-        "id": "icons",
-        "title": "Illustration and icon system",
-        "src": "/assets/visual-design/pawpaw/icons.svg",
-        "alt": {
-          "en": "PAWPAW illustration and icon system visual.",
-          "uk": "PAWPAW: візуал illustration and icon system.",
-          "pl": "PAWPAW: wizualizacja illustration and icon system."
-        },
-        "orientation": "landscape",
-        "scene": "iconSystem"
-      },
-      {
-        "id": "retail-display",
-        "title": "Retail shelf display",
-        "src": "/assets/visual-design/pawpaw/retail-display.svg",
-        "alt": {
-          "en": "PAWPAW retail shelf display visual.",
-          "uk": "PAWPAW: візуал retail shelf display.",
-          "pl": "PAWPAW: wizualizacja retail shelf display."
-        },
-        "orientation": "landscape",
-        "scene": "retailShelf"
-      },
-      {
-        "id": "shipping-box",
-        "title": "Shipping box",
-        "src": "/assets/visual-design/pawpaw/shipping-box.svg",
-        "alt": {
-          "en": "PAWPAW shipping box visual.",
-          "uk": "PAWPAW: візуал shipping box.",
-          "pl": "PAWPAW: wizualizacja shipping box."
-        },
-        "orientation": "landscape",
-        "scene": "boxMockup"
-      },
-      {
-        "id": "launch-social",
-        "title": "Launch social post",
-        "src": "/assets/visual-design/pawpaw/launch-social.svg",
-        "alt": {
-          "en": "PAWPAW launch social post visual.",
-          "uk": "PAWPAW: візуал launch social post.",
-          "pl": "PAWPAW: wizualizacja launch social post."
+          "en": "PAWPAW cat package real raster portfolio asset.",
+          "uk": "PAWPAW: реальний raster-візуал cat package.",
+          "pl": "PAWPAW: realny rasterowy materiał portfolio cat package."
         },
         "orientation": "square",
-        "scene": "socialPost"
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
-        "id": "campaign",
-        "title": "Campaign graphic",
-        "src": "/assets/visual-design/pawpaw/campaign.svg",
+        "id": "treat-variants",
+        "title": "Treat Variants",
+        "src": "/assets/visual-design-real/pawpaw/treat-variants.webp",
         "alt": {
-          "en": "PAWPAW campaign graphic visual.",
-          "uk": "PAWPAW: візуал campaign graphic.",
-          "pl": "PAWPAW: wizualizacja campaign graphic."
+          "en": "PAWPAW treat variants real raster portfolio asset.",
+          "uk": "PAWPAW: реальний raster-візуал treat variants.",
+          "pl": "PAWPAW: realny rasterowy materiał portfolio treat variants."
         },
         "orientation": "square",
-        "scene": "adCard"
+        "format": "webp",
+        "generated": true,
+        "composited": true
+      },
+      {
+        "id": "retail-shelf",
+        "title": "Retail Shelf",
+        "src": "/assets/visual-design-real/pawpaw/retail-shelf.webp",
+        "alt": {
+          "en": "PAWPAW retail shelf real raster portfolio asset.",
+          "uk": "PAWPAW: реальний raster-візуал retail shelf.",
+          "pl": "PAWPAW: realny rasterowy materiał portfolio retail shelf."
+        },
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
+      },
+      {
+        "id": "shipping-social",
+        "title": "Shipping and Social",
+        "src": "/assets/visual-design-real/pawpaw/shipping-social.webp",
+        "alt": {
+          "en": "PAWPAW shipping and social real raster portfolio asset.",
+          "uk": "PAWPAW: реальний raster-візуал shipping and social.",
+          "pl": "PAWPAW: realny rasterowy materiał portfolio shipping and social."
+        },
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       }
+    ],
+    "assetDirectory": "/assets/visual-design-real/pawpaw/",
+    "rasterAssets": [
+      "/assets/visual-design-real/pawpaw/source-board.png",
+      "/assets/visual-design-real/pawpaw/board.webp",
+      "/assets/visual-design-real/pawpaw/cover.png",
+      "/assets/visual-design-real/pawpaw/cover.webp",
+      "/assets/visual-design-real/pawpaw/dog-package.webp",
+      "/assets/visual-design-real/pawpaw/cat-package.webp",
+      "/assets/visual-design-real/pawpaw/treat-variants.webp",
+      "/assets/visual-design-real/pawpaw/retail-shelf.webp",
+      "/assets/visual-design-real/pawpaw/shipping-social.webp"
+    ],
+    "svgAssets": [],
+    "compositedAssets": [
+      "/assets/visual-design-real/pawpaw/cover.webp",
+      "/assets/visual-design-real/pawpaw/dog-package.webp",
+      "/assets/visual-design-real/pawpaw/cat-package.webp",
+      "/assets/visual-design-real/pawpaw/treat-variants.webp",
+      "/assets/visual-design-real/pawpaw/retail-shelf.webp",
+      "/assets/visual-design-real/pawpaw/shipping-social.webp"
     ]
   },
   {
@@ -1607,15 +1596,12 @@ window.visualDesignProjects = [
     "disciplines": "Fashion campaign, lookbook, invitation design, social and print assets",
     "description": "A fashion-driven campaign system for a fictional independent label. The project uses image pacing, asymmetrical typography and tactile print moments across lookbook spreads, social assets, invitations and printed campaign material.",
     "deliverables": [
-      "Seasonal campaign key visual",
-      "Lookbook cover",
-      "Lookbook spread",
-      "Product editorial page",
+      "Campaign Key Visual",
+      "Lookbook Cover",
+      "Lookbook Spread",
       "Invitation",
-      "Social campaign",
-      "Story",
-      "Digital banner",
-      "Printed campaign poster"
+      "Social Campaign",
+      "Boutique Poster"
     ],
     "tools": [
       "Figma",
@@ -1635,125 +1621,138 @@ window.visualDesignProjects = [
     "coverSize": "portrait",
     "cover": {
       "id": "cover",
-      "title": "Seasonal campaign key visual",
-      "src": "/assets/visual-design/maison-elan/cover.svg",
+      "title": "Campaign Key Visual",
+      "src": "/assets/visual-design-real/maison-elan/cover.webp",
       "alt": {
-        "en": "MAISON ÉLAN seasonal campaign key visual visual.",
-        "uk": "MAISON ÉLAN: візуал seasonal campaign key visual.",
-        "pl": "MAISON ÉLAN: wizualizacja seasonal campaign key visual."
+        "en": "MAISON ÉLAN campaign key visual real raster portfolio asset.",
+        "uk": "MAISON ÉLAN: реальний raster-візуал campaign key visual.",
+        "pl": "MAISON ÉLAN: realny rasterowy materiał portfolio campaign key visual."
       },
-      "orientation": "portrait",
-      "scene": "fashionKeyVisual"
+      "orientation": "square",
+      "format": "webp",
+      "generated": true,
+      "composited": true
     },
     "images": [
       {
-        "id": "cover",
-        "title": "Seasonal campaign key visual",
-        "src": "/assets/visual-design/maison-elan/cover.svg",
+        "id": "board",
+        "title": "Full generated case board",
+        "src": "/assets/visual-design-real/maison-elan/board.webp",
         "alt": {
-          "en": "MAISON ÉLAN seasonal campaign key visual visual.",
-          "uk": "MAISON ÉLAN: візуал seasonal campaign key visual.",
-          "pl": "MAISON ÉLAN: wizualizacja seasonal campaign key visual."
+          "en": "MAISON ÉLAN full generated case board real raster portfolio asset.",
+          "uk": "MAISON ÉLAN: реальний raster-візуал full generated case board.",
+          "pl": "MAISON ÉLAN: realny rasterowy materiał portfolio full generated case board."
         },
         "orientation": "portrait",
-        "scene": "fashionKeyVisual"
+        "format": "webp",
+        "generated": true,
+        "composited": false
+      },
+      {
+        "id": "cover",
+        "title": "Campaign Key Visual",
+        "src": "/assets/visual-design-real/maison-elan/cover.webp",
+        "alt": {
+          "en": "MAISON ÉLAN campaign key visual real raster portfolio asset.",
+          "uk": "MAISON ÉLAN: реальний raster-візуал campaign key visual.",
+          "pl": "MAISON ÉLAN: realny rasterowy materiał portfolio campaign key visual."
+        },
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
         "id": "lookbook-cover",
-        "title": "Lookbook cover",
-        "src": "/assets/visual-design/maison-elan/lookbook-cover.svg",
+        "title": "Lookbook Cover",
+        "src": "/assets/visual-design-real/maison-elan/lookbook-cover.webp",
         "alt": {
-          "en": "MAISON ÉLAN lookbook cover visual.",
-          "uk": "MAISON ÉLAN: візуал lookbook cover.",
-          "pl": "MAISON ÉLAN: wizualizacja lookbook cover."
+          "en": "MAISON ÉLAN lookbook cover real raster portfolio asset.",
+          "uk": "MAISON ÉLAN: реальний raster-візуал lookbook cover.",
+          "pl": "MAISON ÉLAN: realny rasterowy materiał portfolio lookbook cover."
         },
-        "orientation": "portrait",
-        "scene": "lookbookCover"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
         "id": "lookbook-spread",
-        "title": "Lookbook spread",
-        "src": "/assets/visual-design/maison-elan/lookbook-spread.svg",
+        "title": "Lookbook Spread",
+        "src": "/assets/visual-design-real/maison-elan/lookbook-spread.webp",
         "alt": {
-          "en": "MAISON ÉLAN lookbook spread visual.",
-          "uk": "MAISON ÉLAN: візуал lookbook spread.",
-          "pl": "MAISON ÉLAN: wizualizacja lookbook spread."
+          "en": "MAISON ÉLAN lookbook spread real raster portfolio asset.",
+          "uk": "MAISON ÉLAN: реальний raster-візуал lookbook spread.",
+          "pl": "MAISON ÉLAN: realny rasterowy materiał portfolio lookbook spread."
         },
-        "orientation": "landscape",
-        "scene": "magazineSpread"
-      },
-      {
-        "id": "product-editorial",
-        "title": "Product editorial page",
-        "src": "/assets/visual-design/maison-elan/product-editorial.svg",
-        "alt": {
-          "en": "MAISON ÉLAN product editorial page visual.",
-          "uk": "MAISON ÉLAN: візуал product editorial page.",
-          "pl": "MAISON ÉLAN: wizualizacja product editorial page."
-        },
-        "orientation": "portrait",
-        "scene": "editorialPage"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
         "id": "invitation",
         "title": "Invitation",
-        "src": "/assets/visual-design/maison-elan/invitation.svg",
+        "src": "/assets/visual-design-real/maison-elan/invitation.webp",
         "alt": {
-          "en": "MAISON ÉLAN invitation visual.",
-          "uk": "MAISON ÉLAN: візуал invitation.",
-          "pl": "MAISON ÉLAN: wizualizacja invitation."
+          "en": "MAISON ÉLAN invitation real raster portfolio asset.",
+          "uk": "MAISON ÉLAN: реальний raster-візуал invitation.",
+          "pl": "MAISON ÉLAN: realny rasterowy materiał portfolio invitation."
         },
-        "orientation": "landscape",
-        "scene": "invitation"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
         "id": "social-campaign",
-        "title": "Social campaign",
-        "src": "/assets/visual-design/maison-elan/social-campaign.svg",
+        "title": "Social Campaign",
+        "src": "/assets/visual-design-real/maison-elan/social-campaign.webp",
         "alt": {
-          "en": "MAISON ÉLAN social campaign visual.",
-          "uk": "MAISON ÉLAN: візуал social campaign.",
-          "pl": "MAISON ÉLAN: wizualizacja social campaign."
+          "en": "MAISON ÉLAN social campaign real raster portfolio asset.",
+          "uk": "MAISON ÉLAN: реальний raster-візуал social campaign.",
+          "pl": "MAISON ÉLAN: realny rasterowy materiał portfolio social campaign."
         },
         "orientation": "square",
-        "scene": "socialPost"
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
-        "id": "story",
-        "title": "Story",
-        "src": "/assets/visual-design/maison-elan/story.svg",
+        "id": "boutique-poster",
+        "title": "Boutique Poster",
+        "src": "/assets/visual-design-real/maison-elan/boutique-poster.webp",
         "alt": {
-          "en": "MAISON ÉLAN story visual.",
-          "uk": "MAISON ÉLAN: візуал story.",
-          "pl": "MAISON ÉLAN: wizualizacja story."
+          "en": "MAISON ÉLAN boutique poster real raster portfolio asset.",
+          "uk": "MAISON ÉLAN: реальний raster-візуал boutique poster.",
+          "pl": "MAISON ÉLAN: realny rasterowy materiał portfolio boutique poster."
         },
-        "orientation": "portrait",
-        "scene": "phoneStory"
-      },
-      {
-        "id": "digital-banner",
-        "title": "Digital banner",
-        "src": "/assets/visual-design/maison-elan/digital-banner.svg",
-        "alt": {
-          "en": "MAISON ÉLAN digital banner visual.",
-          "uk": "MAISON ÉLAN: візуал digital banner.",
-          "pl": "MAISON ÉLAN: wizualizacja digital banner."
-        },
-        "orientation": "landscape",
-        "scene": "webBanner"
-      },
-      {
-        "id": "printed-poster",
-        "title": "Printed campaign poster",
-        "src": "/assets/visual-design/maison-elan/printed-poster.svg",
-        "alt": {
-          "en": "MAISON ÉLAN printed campaign poster visual.",
-          "uk": "MAISON ÉLAN: візуал printed campaign poster.",
-          "pl": "MAISON ÉLAN: wizualizacja printed campaign poster."
-        },
-        "orientation": "portrait",
-        "scene": "premiumPoster"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       }
+    ],
+    "assetDirectory": "/assets/visual-design-real/maison-elan/",
+    "rasterAssets": [
+      "/assets/visual-design-real/maison-elan/source-board.png",
+      "/assets/visual-design-real/maison-elan/board.webp",
+      "/assets/visual-design-real/maison-elan/cover.png",
+      "/assets/visual-design-real/maison-elan/cover.webp",
+      "/assets/visual-design-real/maison-elan/lookbook-cover.webp",
+      "/assets/visual-design-real/maison-elan/lookbook-spread.webp",
+      "/assets/visual-design-real/maison-elan/invitation.webp",
+      "/assets/visual-design-real/maison-elan/social-campaign.webp",
+      "/assets/visual-design-real/maison-elan/boutique-poster.webp"
+    ],
+    "svgAssets": [],
+    "compositedAssets": [
+      "/assets/visual-design-real/maison-elan/cover.webp",
+      "/assets/visual-design-real/maison-elan/lookbook-cover.webp",
+      "/assets/visual-design-real/maison-elan/lookbook-spread.webp",
+      "/assets/visual-design-real/maison-elan/invitation.webp",
+      "/assets/visual-design-real/maison-elan/social-campaign.webp",
+      "/assets/visual-design-real/maison-elan/boutique-poster.webp"
     ]
   },
   {
@@ -1776,16 +1775,12 @@ window.visualDesignProjects = [
     "disciplines": "Label systems, product family, gift packaging, retail and recipe collateral",
     "description": "A Mediterranean olive oil system that translates agricultural heritage into a practical retail package family. The deliverables show front and back labels, product family logic, gift packaging, shelf presence and shipping collateral.",
     "deliverables": [
-      "Bottle and gift box",
-      "Bottle label",
-      "Back label",
-      "Bottle mockup",
-      "Product family",
-      "Gift box",
-      "Recipe card",
-      "Retail shelf visual",
-      "Campaign advertisement",
-      "Shipping packaging"
+      "Bottle and Gift Box",
+      "Front Label",
+      "Back Label",
+      "Product Family",
+      "Retail Shelf",
+      "Recipe and Shipping"
     ],
     "tools": [
       "Figma",
@@ -1805,137 +1800,138 @@ window.visualDesignProjects = [
     "coverSize": "standard",
     "cover": {
       "id": "cover",
-      "title": "Bottle and gift box",
-      "src": "/assets/visual-design/verde/cover.svg",
+      "title": "Bottle and Gift Box",
+      "src": "/assets/visual-design-real/verde/cover.webp",
       "alt": {
-        "en": "VERDE bottle and gift box visual.",
-        "uk": "VERDE: візуал bottle and gift box.",
-        "pl": "VERDE: wizualizacja bottle and gift box."
+        "en": "VERDE bottle and gift box real raster portfolio asset.",
+        "uk": "VERDE: реальний raster-візуал bottle and gift box.",
+        "pl": "VERDE: realny rasterowy materiał portfolio bottle and gift box."
       },
-      "orientation": "landscape",
-      "scene": "oliveHero"
+      "orientation": "square",
+      "format": "webp",
+      "generated": true,
+      "composited": true
     },
     "images": [
       {
-        "id": "cover",
-        "title": "Bottle and gift box",
-        "src": "/assets/visual-design/verde/cover.svg",
+        "id": "board",
+        "title": "Full generated case board",
+        "src": "/assets/visual-design-real/verde/board.webp",
         "alt": {
-          "en": "VERDE bottle and gift box visual.",
-          "uk": "VERDE: візуал bottle and gift box.",
-          "pl": "VERDE: wizualizacja bottle and gift box."
+          "en": "VERDE full generated case board real raster portfolio asset.",
+          "uk": "VERDE: реальний raster-візуал full generated case board.",
+          "pl": "VERDE: realny rasterowy materiał portfolio full generated case board."
         },
-        "orientation": "landscape",
-        "scene": "oliveHero"
+        "orientation": "portrait",
+        "format": "webp",
+        "generated": true,
+        "composited": false
+      },
+      {
+        "id": "cover",
+        "title": "Bottle and Gift Box",
+        "src": "/assets/visual-design-real/verde/cover.webp",
+        "alt": {
+          "en": "VERDE bottle and gift box real raster portfolio asset.",
+          "uk": "VERDE: реальний raster-візуал bottle and gift box.",
+          "pl": "VERDE: realny rasterowy materiał portfolio bottle and gift box."
+        },
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
         "id": "front-label",
-        "title": "Bottle label",
-        "src": "/assets/visual-design/verde/front-label.svg",
+        "title": "Front Label",
+        "src": "/assets/visual-design-real/verde/front-label.webp",
         "alt": {
-          "en": "VERDE bottle label visual.",
-          "uk": "VERDE: візуал bottle label.",
-          "pl": "VERDE: wizualizacja bottle label."
+          "en": "VERDE front label real raster portfolio asset.",
+          "uk": "VERDE: реальний raster-візуал front label.",
+          "pl": "VERDE: realny rasterowy materiał portfolio front label."
         },
-        "orientation": "landscape",
-        "scene": "labelSheet"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
         "id": "back-label",
-        "title": "Back label",
-        "src": "/assets/visual-design/verde/back-label.svg",
+        "title": "Back Label",
+        "src": "/assets/visual-design-real/verde/back-label.webp",
         "alt": {
-          "en": "VERDE back label visual.",
-          "uk": "VERDE: візуал back label.",
-          "pl": "VERDE: wizualizacja back label."
+          "en": "VERDE back label real raster portfolio asset.",
+          "uk": "VERDE: реальний raster-візуал back label.",
+          "pl": "VERDE: realny rasterowy materiał portfolio back label."
         },
-        "orientation": "portrait",
-        "scene": "backLabel"
-      },
-      {
-        "id": "bottle-mockup",
-        "title": "Bottle mockup",
-        "src": "/assets/visual-design/verde/bottle-mockup.svg",
-        "alt": {
-          "en": "VERDE bottle mockup visual.",
-          "uk": "VERDE: візуал bottle mockup.",
-          "pl": "VERDE: wizualizacja bottle mockup."
-        },
-        "orientation": "portrait",
-        "scene": "bottleFront"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
         "id": "product-family",
-        "title": "Product family",
-        "src": "/assets/visual-design/verde/product-family.svg",
+        "title": "Product Family",
+        "src": "/assets/visual-design-real/verde/product-family.webp",
         "alt": {
-          "en": "VERDE product family visual.",
-          "uk": "VERDE: візуал product family.",
-          "pl": "VERDE: wizualizacja product family."
+          "en": "VERDE product family real raster portfolio asset.",
+          "uk": "VERDE: реальний raster-візуал product family.",
+          "pl": "VERDE: realny rasterowy materiał portfolio product family."
         },
-        "orientation": "landscape",
-        "scene": "variantLineup"
-      },
-      {
-        "id": "gift-box",
-        "title": "Gift box",
-        "src": "/assets/visual-design/verde/gift-box.svg",
-        "alt": {
-          "en": "VERDE gift box visual.",
-          "uk": "VERDE: візуал gift box.",
-          "pl": "VERDE: wizualizacja gift box."
-        },
-        "orientation": "landscape",
-        "scene": "boxMockup"
-      },
-      {
-        "id": "recipe-card",
-        "title": "Recipe card",
-        "src": "/assets/visual-design/verde/recipe-card.svg",
-        "alt": {
-          "en": "VERDE recipe card visual.",
-          "uk": "VERDE: візуал recipe card.",
-          "pl": "VERDE: wizualizacja recipe card."
-        },
-        "orientation": "portrait",
-        "scene": "recipeCard"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
         "id": "retail-shelf",
-        "title": "Retail shelf visual",
-        "src": "/assets/visual-design/verde/retail-shelf.svg",
+        "title": "Retail Shelf",
+        "src": "/assets/visual-design-real/verde/retail-shelf.webp",
         "alt": {
-          "en": "VERDE retail shelf visual visual.",
-          "uk": "VERDE: візуал retail shelf visual.",
-          "pl": "VERDE: wizualizacja retail shelf visual."
+          "en": "VERDE retail shelf real raster portfolio asset.",
+          "uk": "VERDE: реальний raster-візуал retail shelf.",
+          "pl": "VERDE: realny rasterowy materiał portfolio retail shelf."
         },
-        "orientation": "landscape",
-        "scene": "retailShelf"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
-        "id": "campaign-ad",
-        "title": "Campaign advertisement",
-        "src": "/assets/visual-design/verde/campaign-ad.svg",
+        "id": "recipe-shipping",
+        "title": "Recipe and Shipping",
+        "src": "/assets/visual-design-real/verde/recipe-shipping.webp",
         "alt": {
-          "en": "VERDE campaign advertisement visual.",
-          "uk": "VERDE: візуал campaign advertisement.",
-          "pl": "VERDE: wizualizacja campaign advertisement."
+          "en": "VERDE recipe and shipping real raster portfolio asset.",
+          "uk": "VERDE: реальний raster-візуал recipe and shipping.",
+          "pl": "VERDE: realny rasterowy materiał portfolio recipe and shipping."
         },
-        "orientation": "landscape",
-        "scene": "magazineAd"
-      },
-      {
-        "id": "shipping",
-        "title": "Shipping packaging",
-        "src": "/assets/visual-design/verde/shipping.svg",
-        "alt": {
-          "en": "VERDE shipping packaging visual.",
-          "uk": "VERDE: візуал shipping packaging.",
-          "pl": "VERDE: wizualizacja shipping packaging."
-        },
-        "orientation": "landscape",
-        "scene": "shippingBox"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       }
+    ],
+    "assetDirectory": "/assets/visual-design-real/verde/",
+    "rasterAssets": [
+      "/assets/visual-design-real/verde/source-board.png",
+      "/assets/visual-design-real/verde/board.webp",
+      "/assets/visual-design-real/verde/cover.png",
+      "/assets/visual-design-real/verde/cover.webp",
+      "/assets/visual-design-real/verde/front-label.webp",
+      "/assets/visual-design-real/verde/back-label.webp",
+      "/assets/visual-design-real/verde/product-family.webp",
+      "/assets/visual-design-real/verde/retail-shelf.webp",
+      "/assets/visual-design-real/verde/recipe-shipping.webp"
+    ],
+    "svgAssets": [],
+    "compositedAssets": [
+      "/assets/visual-design-real/verde/cover.webp",
+      "/assets/visual-design-real/verde/front-label.webp",
+      "/assets/visual-design-real/verde/back-label.webp",
+      "/assets/visual-design-real/verde/product-family.webp",
+      "/assets/visual-design-real/verde/retail-shelf.webp",
+      "/assets/visual-design-real/verde/recipe-shipping.webp"
     ]
   },
   {
@@ -1960,18 +1956,12 @@ window.visualDesignProjects = [
     "disciplines": "Conference branding, modular key visual, signage, badges, social templates and stage graphics",
     "description": "A modular identity for a fictional international technology and business conference. The system is designed to scale across posters, speaker graphics, agendas, badges, lanyards, presentation slides, signage and stage screens.",
     "deliverables": [
-      "Conference key visual",
-      "Logo",
-      "Key visual",
-      "Main poster",
-      "Speaker announcement",
-      "Agenda graphic",
-      "Badge",
-      "Lanyard",
-      "Presentation slide",
-      "Stage screen",
-      "Directional signage",
-      "Social template"
+      "Wall Poster",
+      "Stage Screen",
+      "Social Template",
+      "Badge and Lanyard",
+      "Venue Signage",
+      "Presentation Screen"
     ],
     "tools": [
       "Figma",
@@ -1991,161 +1981,138 @@ window.visualDesignProjects = [
     "coverSize": "wide",
     "cover": {
       "id": "cover",
-      "title": "Conference key visual",
-      "src": "/assets/visual-design/future-forum/cover.svg",
+      "title": "Wall Poster",
+      "src": "/assets/visual-design-real/future-forum/cover.webp",
       "alt": {
-        "en": "FUTURE FORUM conference key visual visual.",
-        "uk": "FUTURE FORUM: візуал conference key visual.",
-        "pl": "FUTURE FORUM: wizualizacja conference key visual."
+        "en": "FUTURE FORUM wall poster real raster portfolio asset.",
+        "uk": "FUTURE FORUM: реальний raster-візуал wall poster.",
+        "pl": "FUTURE FORUM: realny rasterowy materiał portfolio wall poster."
       },
-      "orientation": "landscape",
-      "scene": "conferenceOverview"
+      "orientation": "square",
+      "format": "webp",
+      "generated": true,
+      "composited": true
     },
     "images": [
       {
-        "id": "cover",
-        "title": "Conference key visual",
-        "src": "/assets/visual-design/future-forum/cover.svg",
+        "id": "board",
+        "title": "Full generated case board",
+        "src": "/assets/visual-design-real/future-forum/board.webp",
         "alt": {
-          "en": "FUTURE FORUM conference key visual visual.",
-          "uk": "FUTURE FORUM: візуал conference key visual.",
-          "pl": "FUTURE FORUM: wizualizacja conference key visual."
-        },
-        "orientation": "landscape",
-        "scene": "conferenceOverview"
-      },
-      {
-        "id": "logo",
-        "title": "Logo",
-        "src": "/assets/visual-design/future-forum/logo.svg",
-        "alt": {
-          "en": "FUTURE FORUM logo visual.",
-          "uk": "FUTURE FORUM: візуал logo.",
-          "pl": "FUTURE FORUM: wizualizacja logo."
-        },
-        "orientation": "landscape",
-        "scene": "logoSystem"
-      },
-      {
-        "id": "key-visual",
-        "title": "Key visual",
-        "src": "/assets/visual-design/future-forum/key-visual.svg",
-        "alt": {
-          "en": "FUTURE FORUM key visual visual.",
-          "uk": "FUTURE FORUM: візуал key visual.",
-          "pl": "FUTURE FORUM: wizualizacja key visual."
-        },
-        "orientation": "landscape",
-        "scene": "conferenceKeyVisual"
-      },
-      {
-        "id": "main-poster",
-        "title": "Main poster",
-        "src": "/assets/visual-design/future-forum/main-poster.svg",
-        "alt": {
-          "en": "FUTURE FORUM main poster visual.",
-          "uk": "FUTURE FORUM: візуал main poster.",
-          "pl": "FUTURE FORUM: wizualizacja main poster."
+          "en": "FUTURE FORUM full generated case board real raster portfolio asset.",
+          "uk": "FUTURE FORUM: реальний raster-візуал full generated case board.",
+          "pl": "FUTURE FORUM: realny rasterowy materiał portfolio full generated case board."
         },
         "orientation": "portrait",
-        "scene": "conferencePoster"
+        "format": "webp",
+        "generated": true,
+        "composited": false
       },
       {
-        "id": "speaker",
-        "title": "Speaker announcement",
-        "src": "/assets/visual-design/future-forum/speaker.svg",
+        "id": "cover",
+        "title": "Wall Poster",
+        "src": "/assets/visual-design-real/future-forum/cover.webp",
         "alt": {
-          "en": "FUTURE FORUM speaker announcement visual.",
-          "uk": "FUTURE FORUM: візуал speaker announcement.",
-          "pl": "FUTURE FORUM: wizualizacja speaker announcement."
+          "en": "FUTURE FORUM wall poster real raster portfolio asset.",
+          "uk": "FUTURE FORUM: реальний raster-візуал wall poster.",
+          "pl": "FUTURE FORUM: realny rasterowy materiał portfolio wall poster."
         },
         "orientation": "square",
-        "scene": "socialPost"
-      },
-      {
-        "id": "agenda",
-        "title": "Agenda graphic",
-        "src": "/assets/visual-design/future-forum/agenda.svg",
-        "alt": {
-          "en": "FUTURE FORUM agenda graphic visual.",
-          "uk": "FUTURE FORUM: візуал agenda graphic.",
-          "pl": "FUTURE FORUM: wizualizacja agenda graphic."
-        },
-        "orientation": "portrait",
-        "scene": "agenda"
-      },
-      {
-        "id": "badge",
-        "title": "Badge",
-        "src": "/assets/visual-design/future-forum/badge.svg",
-        "alt": {
-          "en": "FUTURE FORUM badge visual.",
-          "uk": "FUTURE FORUM: візуал badge.",
-          "pl": "FUTURE FORUM: wizualizacja badge."
-        },
-        "orientation": "portrait",
-        "scene": "badge"
-      },
-      {
-        "id": "lanyard",
-        "title": "Lanyard",
-        "src": "/assets/visual-design/future-forum/lanyard.svg",
-        "alt": {
-          "en": "FUTURE FORUM lanyard visual.",
-          "uk": "FUTURE FORUM: візуал lanyard.",
-          "pl": "FUTURE FORUM: wizualizacja lanyard."
-        },
-        "orientation": "landscape",
-        "scene": "lanyard"
-      },
-      {
-        "id": "presentation-slide",
-        "title": "Presentation slide",
-        "src": "/assets/visual-design/future-forum/presentation-slide.svg",
-        "alt": {
-          "en": "FUTURE FORUM presentation slide visual.",
-          "uk": "FUTURE FORUM: візуал presentation slide.",
-          "pl": "FUTURE FORUM: wizualizacja presentation slide."
-        },
-        "orientation": "landscape",
-        "scene": "presentationSlide"
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
         "id": "stage-screen",
-        "title": "Stage screen",
-        "src": "/assets/visual-design/future-forum/stage-screen.svg",
+        "title": "Stage Screen",
+        "src": "/assets/visual-design-real/future-forum/stage-screen.webp",
         "alt": {
-          "en": "FUTURE FORUM stage screen visual.",
-          "uk": "FUTURE FORUM: візуал stage screen.",
-          "pl": "FUTURE FORUM: wizualizacja stage screen."
+          "en": "FUTURE FORUM stage screen real raster portfolio asset.",
+          "uk": "FUTURE FORUM: реальний raster-візуал stage screen.",
+          "pl": "FUTURE FORUM: realny rasterowy materiał portfolio stage screen."
         },
-        "orientation": "landscape",
-        "scene": "stageScreen"
-      },
-      {
-        "id": "directional-signage",
-        "title": "Directional signage",
-        "src": "/assets/visual-design/future-forum/directional-signage.svg",
-        "alt": {
-          "en": "FUTURE FORUM directional signage visual.",
-          "uk": "FUTURE FORUM: візуал directional signage.",
-          "pl": "FUTURE FORUM: wizualizacja directional signage."
-        },
-        "orientation": "landscape",
-        "scene": "signage"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
         "id": "social-template",
-        "title": "Social template",
-        "src": "/assets/visual-design/future-forum/social-template.svg",
+        "title": "Social Template",
+        "src": "/assets/visual-design-real/future-forum/social-template.webp",
         "alt": {
-          "en": "FUTURE FORUM social template visual.",
-          "uk": "FUTURE FORUM: візуал social template.",
-          "pl": "FUTURE FORUM: wizualizacja social template."
+          "en": "FUTURE FORUM social template real raster portfolio asset.",
+          "uk": "FUTURE FORUM: реальний raster-візуал social template.",
+          "pl": "FUTURE FORUM: realny rasterowy materiał portfolio social template."
         },
         "orientation": "square",
-        "scene": "socialPost"
+        "format": "webp",
+        "generated": true,
+        "composited": true
+      },
+      {
+        "id": "badge-lanyard",
+        "title": "Badge and Lanyard",
+        "src": "/assets/visual-design-real/future-forum/badge-lanyard.webp",
+        "alt": {
+          "en": "FUTURE FORUM badge and lanyard real raster portfolio asset.",
+          "uk": "FUTURE FORUM: реальний raster-візуал badge and lanyard.",
+          "pl": "FUTURE FORUM: realny rasterowy materiał portfolio badge and lanyard."
+        },
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
+      },
+      {
+        "id": "venue-signage",
+        "title": "Venue Signage",
+        "src": "/assets/visual-design-real/future-forum/venue-signage.webp",
+        "alt": {
+          "en": "FUTURE FORUM venue signage real raster portfolio asset.",
+          "uk": "FUTURE FORUM: реальний raster-візуал venue signage.",
+          "pl": "FUTURE FORUM: realny rasterowy materiał portfolio venue signage."
+        },
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
+      },
+      {
+        "id": "presentation-screen",
+        "title": "Presentation Screen",
+        "src": "/assets/visual-design-real/future-forum/presentation-screen.webp",
+        "alt": {
+          "en": "FUTURE FORUM presentation screen real raster portfolio asset.",
+          "uk": "FUTURE FORUM: реальний raster-візуал presentation screen.",
+          "pl": "FUTURE FORUM: realny rasterowy materiał portfolio presentation screen."
+        },
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       }
+    ],
+    "assetDirectory": "/assets/visual-design-real/future-forum/",
+    "rasterAssets": [
+      "/assets/visual-design-real/future-forum/source-board.png",
+      "/assets/visual-design-real/future-forum/board.webp",
+      "/assets/visual-design-real/future-forum/cover.png",
+      "/assets/visual-design-real/future-forum/cover.webp",
+      "/assets/visual-design-real/future-forum/stage-screen.webp",
+      "/assets/visual-design-real/future-forum/social-template.webp",
+      "/assets/visual-design-real/future-forum/badge-lanyard.webp",
+      "/assets/visual-design-real/future-forum/venue-signage.webp",
+      "/assets/visual-design-real/future-forum/presentation-screen.webp"
+    ],
+    "svgAssets": [],
+    "compositedAssets": [
+      "/assets/visual-design-real/future-forum/cover.webp",
+      "/assets/visual-design-real/future-forum/stage-screen.webp",
+      "/assets/visual-design-real/future-forum/social-template.webp",
+      "/assets/visual-design-real/future-forum/badge-lanyard.webp",
+      "/assets/visual-design-real/future-forum/venue-signage.webp",
+      "/assets/visual-design-real/future-forum/presentation-screen.webp"
     ]
   },
   {
@@ -2169,17 +2136,12 @@ window.visualDesignProjects = [
     "disciplines": "Approachable skincare identity, product packaging, shipping system, social launch",
     "description": "A warm and natural skincare identity that shows a complete consumer brand system: logo, bottles, jars, outer packaging, shipping, tissue, sticker language, product cards and launch graphics.",
     "deliverables": [
-      "Skincare package family",
-      "Logo",
-      "Skincare bottle",
+      "Product Family",
+      "Bottle",
       "Jar",
-      "Outer packaging",
-      "Shipping box",
-      "Tissue paper",
-      "Sticker system",
-      "Product card",
-      "Instagram launch post",
-      "Story"
+      "Outer Packaging",
+      "Shipping Stickers",
+      "Social Launch"
     ],
     "tools": [
       "Figma",
@@ -2199,149 +2161,138 @@ window.visualDesignProjects = [
     "coverSize": "standard",
     "cover": {
       "id": "cover",
-      "title": "Skincare package family",
-      "src": "/assets/visual-design/kora/cover.svg",
+      "title": "Product Family",
+      "src": "/assets/visual-design-real/kora/cover.webp",
       "alt": {
-        "en": "KORA skincare package family visual.",
-        "uk": "KORA: візуал skincare package family.",
-        "pl": "KORA: wizualizacja skincare package family."
+        "en": "KORA product family real raster portfolio asset.",
+        "uk": "KORA: реальний raster-візуал product family.",
+        "pl": "KORA: realny rasterowy materiał portfolio product family."
       },
-      "orientation": "landscape",
-      "scene": "skincareHero"
+      "orientation": "square",
+      "format": "webp",
+      "generated": true,
+      "composited": true
     },
     "images": [
       {
-        "id": "cover",
-        "title": "Skincare package family",
-        "src": "/assets/visual-design/kora/cover.svg",
+        "id": "board",
+        "title": "Full generated case board",
+        "src": "/assets/visual-design-real/kora/board.webp",
         "alt": {
-          "en": "KORA skincare package family visual.",
-          "uk": "KORA: візуал skincare package family.",
-          "pl": "KORA: wizualizacja skincare package family."
+          "en": "KORA full generated case board real raster portfolio asset.",
+          "uk": "KORA: реальний raster-візуал full generated case board.",
+          "pl": "KORA: realny rasterowy materiał portfolio full generated case board."
         },
-        "orientation": "landscape",
-        "scene": "skincareHero"
+        "orientation": "portrait",
+        "format": "webp",
+        "generated": true,
+        "composited": false
       },
       {
-        "id": "logo",
-        "title": "Logo",
-        "src": "/assets/visual-design/kora/logo.svg",
+        "id": "cover",
+        "title": "Product Family",
+        "src": "/assets/visual-design-real/kora/cover.webp",
         "alt": {
-          "en": "KORA logo visual.",
-          "uk": "KORA: візуал logo.",
-          "pl": "KORA: wizualizacja logo."
+          "en": "KORA product family real raster portfolio asset.",
+          "uk": "KORA: реальний raster-візуал product family.",
+          "pl": "KORA: realny rasterowy materiał portfolio product family."
         },
-        "orientation": "landscape",
-        "scene": "logoSystem"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
         "id": "bottle",
-        "title": "Skincare bottle",
-        "src": "/assets/visual-design/kora/bottle.svg",
+        "title": "Bottle",
+        "src": "/assets/visual-design-real/kora/bottle.webp",
         "alt": {
-          "en": "KORA skincare bottle visual.",
-          "uk": "KORA: візуал skincare bottle.",
-          "pl": "KORA: wizualizacja skincare bottle."
+          "en": "KORA bottle real raster portfolio asset.",
+          "uk": "KORA: реальний raster-візуал bottle.",
+          "pl": "KORA: realny rasterowy materiał portfolio bottle."
         },
-        "orientation": "portrait",
-        "scene": "bottleFront"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
         "id": "jar",
         "title": "Jar",
-        "src": "/assets/visual-design/kora/jar.svg",
+        "src": "/assets/visual-design-real/kora/jar.webp",
         "alt": {
-          "en": "KORA jar visual.",
-          "uk": "KORA: візуал jar.",
-          "pl": "KORA: wizualizacja jar."
+          "en": "KORA jar real raster portfolio asset.",
+          "uk": "KORA: реальний raster-візуал jar.",
+          "pl": "KORA: realny rasterowy materiał portfolio jar."
         },
         "orientation": "square",
-        "scene": "jarMockup"
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
         "id": "outer-packaging",
-        "title": "Outer packaging",
-        "src": "/assets/visual-design/kora/outer-packaging.svg",
+        "title": "Outer Packaging",
+        "src": "/assets/visual-design-real/kora/outer-packaging.webp",
         "alt": {
-          "en": "KORA outer packaging visual.",
-          "uk": "KORA: візуал outer packaging.",
-          "pl": "KORA: wizualizacja outer packaging."
-        },
-        "orientation": "landscape",
-        "scene": "boxMockup"
-      },
-      {
-        "id": "shipping-box",
-        "title": "Shipping box",
-        "src": "/assets/visual-design/kora/shipping-box.svg",
-        "alt": {
-          "en": "KORA shipping box visual.",
-          "uk": "KORA: візуал shipping box.",
-          "pl": "KORA: wizualizacja shipping box."
-        },
-        "orientation": "landscape",
-        "scene": "shippingBox"
-      },
-      {
-        "id": "tissue-paper",
-        "title": "Tissue paper",
-        "src": "/assets/visual-design/kora/tissue-paper.svg",
-        "alt": {
-          "en": "KORA tissue paper visual.",
-          "uk": "KORA: візуал tissue paper.",
-          "pl": "KORA: wizualizacja tissue paper."
-        },
-        "orientation": "landscape",
-        "scene": "patternSheet"
-      },
-      {
-        "id": "stickers",
-        "title": "Sticker system",
-        "src": "/assets/visual-design/kora/stickers.svg",
-        "alt": {
-          "en": "KORA sticker system visual.",
-          "uk": "KORA: візуал sticker system.",
-          "pl": "KORA: wizualizacja sticker system."
-        },
-        "orientation": "landscape",
-        "scene": "stickerSheet"
-      },
-      {
-        "id": "product-card",
-        "title": "Product card",
-        "src": "/assets/visual-design/kora/product-card.svg",
-        "alt": {
-          "en": "KORA product card visual.",
-          "uk": "KORA: візуал product card.",
-          "pl": "KORA: wizualizacja product card."
-        },
-        "orientation": "portrait",
-        "scene": "productCard"
-      },
-      {
-        "id": "instagram",
-        "title": "Instagram launch post",
-        "src": "/assets/visual-design/kora/instagram.svg",
-        "alt": {
-          "en": "KORA instagram launch post visual.",
-          "uk": "KORA: візуал instagram launch post.",
-          "pl": "KORA: wizualizacja instagram launch post."
+          "en": "KORA outer packaging real raster portfolio asset.",
+          "uk": "KORA: реальний raster-візуал outer packaging.",
+          "pl": "KORA: realny rasterowy materiał portfolio outer packaging."
         },
         "orientation": "square",
-        "scene": "socialPost"
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
-        "id": "story",
-        "title": "Story",
-        "src": "/assets/visual-design/kora/story.svg",
+        "id": "shipping-stickers",
+        "title": "Shipping Stickers",
+        "src": "/assets/visual-design-real/kora/shipping-stickers.webp",
         "alt": {
-          "en": "KORA story visual.",
-          "uk": "KORA: візуал story.",
-          "pl": "KORA: wizualizacja story."
+          "en": "KORA shipping stickers real raster portfolio asset.",
+          "uk": "KORA: реальний raster-візуал shipping stickers.",
+          "pl": "KORA: realny rasterowy materiał portfolio shipping stickers."
         },
-        "orientation": "portrait",
-        "scene": "phoneStory"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
+      },
+      {
+        "id": "social-launch",
+        "title": "Social Launch",
+        "src": "/assets/visual-design-real/kora/social-launch.webp",
+        "alt": {
+          "en": "KORA social launch real raster portfolio asset.",
+          "uk": "KORA: реальний raster-візуал social launch.",
+          "pl": "KORA: realny rasterowy materiał portfolio social launch."
+        },
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       }
+    ],
+    "assetDirectory": "/assets/visual-design-real/kora/",
+    "rasterAssets": [
+      "/assets/visual-design-real/kora/source-board.png",
+      "/assets/visual-design-real/kora/board.webp",
+      "/assets/visual-design-real/kora/cover.png",
+      "/assets/visual-design-real/kora/cover.webp",
+      "/assets/visual-design-real/kora/bottle.webp",
+      "/assets/visual-design-real/kora/jar.webp",
+      "/assets/visual-design-real/kora/outer-packaging.webp",
+      "/assets/visual-design-real/kora/shipping-stickers.webp",
+      "/assets/visual-design-real/kora/social-launch.webp"
+    ],
+    "svgAssets": [],
+    "compositedAssets": [
+      "/assets/visual-design-real/kora/cover.webp",
+      "/assets/visual-design-real/kora/bottle.webp",
+      "/assets/visual-design-real/kora/jar.webp",
+      "/assets/visual-design-real/kora/outer-packaging.webp",
+      "/assets/visual-design-real/kora/shipping-stickers.webp",
+      "/assets/visual-design-real/kora/social-launch.webp"
     ]
   },
   {
@@ -2364,12 +2315,12 @@ window.visualDesignProjects = [
     "disciplines": "Experimental typography, image treatment, poster composition",
     "description": "A self-initiated poster series about communication overload and digital absence. This project is intentionally conceptual, but each poster explores the theme through a different typographic structure rather than repeating one layout.",
     "deliverables": [
-      "Poster 01",
-      "Poster 02",
-      "Poster 03",
-      "Poster 04",
-      "Poster 05",
-      "Poster series overview"
+      "Wall Poster",
+      "Black Poster",
+      "Texture Close-Up",
+      "Gallery Wall",
+      "Print Stack",
+      "Street Display"
     ],
     "tools": [
       "Figma",
@@ -2388,89 +2339,138 @@ window.visualDesignProjects = [
     "coverSize": "portrait",
     "cover": {
       "id": "cover",
-      "title": "Poster 01",
-      "src": "/assets/visual-design/no-signal/cover.svg",
+      "title": "Wall Poster",
+      "src": "/assets/visual-design-real/no-signal/cover.webp",
       "alt": {
-        "en": "NO SIGNAL poster 01 visual.",
-        "uk": "NO SIGNAL: візуал poster 01.",
-        "pl": "NO SIGNAL: wizualizacja poster 01."
+        "en": "NO SIGNAL wall poster real raster portfolio asset.",
+        "uk": "NO SIGNAL: реальний raster-візуал wall poster.",
+        "pl": "NO SIGNAL: realny rasterowy materiał portfolio wall poster."
       },
-      "orientation": "portrait",
-      "scene": "experimentalPoster"
+      "orientation": "square",
+      "format": "webp",
+      "generated": true,
+      "composited": true
     },
     "images": [
       {
+        "id": "board",
+        "title": "Full generated case board",
+        "src": "/assets/visual-design-real/no-signal/board.webp",
+        "alt": {
+          "en": "NO SIGNAL full generated case board real raster portfolio asset.",
+          "uk": "NO SIGNAL: реальний raster-візуал full generated case board.",
+          "pl": "NO SIGNAL: realny rasterowy materiał portfolio full generated case board."
+        },
+        "orientation": "portrait",
+        "format": "webp",
+        "generated": true,
+        "composited": false
+      },
+      {
         "id": "cover",
-        "title": "Poster 01",
-        "src": "/assets/visual-design/no-signal/cover.svg",
+        "title": "Wall Poster",
+        "src": "/assets/visual-design-real/no-signal/cover.webp",
         "alt": {
-          "en": "NO SIGNAL poster 01 visual.",
-          "uk": "NO SIGNAL: візуал poster 01.",
-          "pl": "NO SIGNAL: wizualizacja poster 01."
+          "en": "NO SIGNAL wall poster real raster portfolio asset.",
+          "uk": "NO SIGNAL: реальний raster-візуал wall poster.",
+          "pl": "NO SIGNAL: realny rasterowy materiał portfolio wall poster."
         },
-        "orientation": "portrait",
-        "scene": "experimentalPoster"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
-        "id": "poster-02",
-        "title": "Poster 02",
-        "src": "/assets/visual-design/no-signal/poster-02.svg",
+        "id": "black-poster",
+        "title": "Black Poster",
+        "src": "/assets/visual-design-real/no-signal/black-poster.webp",
         "alt": {
-          "en": "NO SIGNAL poster 02 visual.",
-          "uk": "NO SIGNAL: візуал poster 02.",
-          "pl": "NO SIGNAL: wizualizacja poster 02."
+          "en": "NO SIGNAL black poster real raster portfolio asset.",
+          "uk": "NO SIGNAL: реальний raster-візуал black poster.",
+          "pl": "NO SIGNAL: realny rasterowy materiał portfolio black poster."
         },
-        "orientation": "portrait",
-        "scene": "experimentalPosterTwo"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
-        "id": "poster-03",
-        "title": "Poster 03",
-        "src": "/assets/visual-design/no-signal/poster-03.svg",
+        "id": "texture-closeup",
+        "title": "Texture Close-Up",
+        "src": "/assets/visual-design-real/no-signal/texture-closeup.webp",
         "alt": {
-          "en": "NO SIGNAL poster 03 visual.",
-          "uk": "NO SIGNAL: візуал poster 03.",
-          "pl": "NO SIGNAL: wizualizacja poster 03."
+          "en": "NO SIGNAL texture close-up real raster portfolio asset.",
+          "uk": "NO SIGNAL: реальний raster-візуал texture close-up.",
+          "pl": "NO SIGNAL: realny rasterowy materiał portfolio texture close-up."
         },
-        "orientation": "portrait",
-        "scene": "experimentalPosterThree"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
-        "id": "poster-04",
-        "title": "Poster 04",
-        "src": "/assets/visual-design/no-signal/poster-04.svg",
+        "id": "gallery-wall",
+        "title": "Gallery Wall",
+        "src": "/assets/visual-design-real/no-signal/gallery-wall.webp",
         "alt": {
-          "en": "NO SIGNAL poster 04 visual.",
-          "uk": "NO SIGNAL: візуал poster 04.",
-          "pl": "NO SIGNAL: wizualizacja poster 04."
+          "en": "NO SIGNAL gallery wall real raster portfolio asset.",
+          "uk": "NO SIGNAL: реальний raster-візуал gallery wall.",
+          "pl": "NO SIGNAL: realny rasterowy materiał portfolio gallery wall."
         },
-        "orientation": "portrait",
-        "scene": "experimentalPoster"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
-        "id": "poster-05",
-        "title": "Poster 05",
-        "src": "/assets/visual-design/no-signal/poster-05.svg",
+        "id": "print-stack",
+        "title": "Print Stack",
+        "src": "/assets/visual-design-real/no-signal/print-stack.webp",
         "alt": {
-          "en": "NO SIGNAL poster 05 visual.",
-          "uk": "NO SIGNAL: візуал poster 05.",
-          "pl": "NO SIGNAL: wizualizacja poster 05."
+          "en": "NO SIGNAL print stack real raster portfolio asset.",
+          "uk": "NO SIGNAL: реальний raster-візуал print stack.",
+          "pl": "NO SIGNAL: realny rasterowy materiał portfolio print stack."
         },
-        "orientation": "portrait",
-        "scene": "experimentalPosterTwo"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
-        "id": "series-overview",
-        "title": "Poster series overview",
-        "src": "/assets/visual-design/no-signal/series-overview.svg",
+        "id": "street-display",
+        "title": "Street Display",
+        "src": "/assets/visual-design-real/no-signal/street-display.webp",
         "alt": {
-          "en": "NO SIGNAL poster series overview visual.",
-          "uk": "NO SIGNAL: візуал poster series overview.",
-          "pl": "NO SIGNAL: wizualizacja poster series overview."
+          "en": "NO SIGNAL street display real raster portfolio asset.",
+          "uk": "NO SIGNAL: реальний raster-візуал street display.",
+          "pl": "NO SIGNAL: realny rasterowy materiał portfolio street display."
         },
-        "orientation": "landscape",
-        "scene": "posterWall"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       }
+    ],
+    "assetDirectory": "/assets/visual-design-real/no-signal/",
+    "rasterAssets": [
+      "/assets/visual-design-real/no-signal/source-board.png",
+      "/assets/visual-design-real/no-signal/board.webp",
+      "/assets/visual-design-real/no-signal/cover.png",
+      "/assets/visual-design-real/no-signal/cover.webp",
+      "/assets/visual-design-real/no-signal/black-poster.webp",
+      "/assets/visual-design-real/no-signal/texture-closeup.webp",
+      "/assets/visual-design-real/no-signal/gallery-wall.webp",
+      "/assets/visual-design-real/no-signal/print-stack.webp",
+      "/assets/visual-design-real/no-signal/street-display.webp"
+    ],
+    "svgAssets": [],
+    "compositedAssets": [
+      "/assets/visual-design-real/no-signal/cover.webp",
+      "/assets/visual-design-real/no-signal/black-poster.webp",
+      "/assets/visual-design-real/no-signal/texture-closeup.webp",
+      "/assets/visual-design-real/no-signal/gallery-wall.webp",
+      "/assets/visual-design-real/no-signal/print-stack.webp",
+      "/assets/visual-design-real/no-signal/street-display.webp"
     ]
   },
   {
@@ -2494,17 +2494,12 @@ window.visualDesignProjects = [
     "disciplines": "Fintech reports, investor deck assets, KPI graphics, webinar and corporate event communication",
     "description": "A fintech communication design system focused on trust, clarity and business information. The project demonstrates investor decks, KPI slides, financial data visualization, reports, LinkedIn posts, webinars, email headers and conference screens.",
     "deliverables": [
-      "Brand extension system",
-      "Brand extension system",
-      "Investor deck cover",
-      "Financial KPI slide",
-      "Data visualization",
-      "Report cover",
-      "Report spread",
-      "Webinar banner",
-      "LinkedIn post",
-      "Email header",
-      "Conference screen"
+      "Investor Deck",
+      "KPI Dashboard",
+      "Annual Report",
+      "Webinar Banner",
+      "LinkedIn Post",
+      "Conference Screen"
     ],
     "tools": [
       "Figma",
@@ -2525,149 +2520,138 @@ window.visualDesignProjects = [
     "coverSize": "large",
     "cover": {
       "id": "cover",
-      "title": "Brand extension system",
-      "src": "/assets/visual-design/orbit/cover.svg",
+      "title": "Investor Deck",
+      "src": "/assets/visual-design-real/orbit/cover.webp",
       "alt": {
-        "en": "ORBIT brand extension system visual.",
-        "uk": "ORBIT: візуал brand extension system.",
-        "pl": "ORBIT: wizualizacja brand extension system."
+        "en": "ORBIT investor deck real raster portfolio asset.",
+        "uk": "ORBIT: реальний raster-візуал investor deck.",
+        "pl": "ORBIT: realny rasterowy materiał portfolio investor deck."
       },
-      "orientation": "landscape",
-      "scene": "fintechOverview"
+      "orientation": "square",
+      "format": "webp",
+      "generated": true,
+      "composited": true
     },
     "images": [
       {
-        "id": "cover",
-        "title": "Brand extension system",
-        "src": "/assets/visual-design/orbit/cover.svg",
+        "id": "board",
+        "title": "Full generated case board",
+        "src": "/assets/visual-design-real/orbit/board.webp",
         "alt": {
-          "en": "ORBIT brand extension system visual.",
-          "uk": "ORBIT: візуал brand extension system.",
-          "pl": "ORBIT: wizualizacja brand extension system."
-        },
-        "orientation": "landscape",
-        "scene": "fintechOverview"
-      },
-      {
-        "id": "brand-extension",
-        "title": "Brand extension system",
-        "src": "/assets/visual-design/orbit/brand-extension.svg",
-        "alt": {
-          "en": "ORBIT brand extension system visual.",
-          "uk": "ORBIT: візуал brand extension system.",
-          "pl": "ORBIT: wizualizacja brand extension system."
-        },
-        "orientation": "landscape",
-        "scene": "logoSystem"
-      },
-      {
-        "id": "investor-cover",
-        "title": "Investor deck cover",
-        "src": "/assets/visual-design/orbit/investor-cover.svg",
-        "alt": {
-          "en": "ORBIT investor deck cover visual.",
-          "uk": "ORBIT: візуал investor deck cover.",
-          "pl": "ORBIT: wizualizacja investor deck cover."
-        },
-        "orientation": "landscape",
-        "scene": "presentationSlide"
-      },
-      {
-        "id": "kpi-slide",
-        "title": "Financial KPI slide",
-        "src": "/assets/visual-design/orbit/kpi-slide.svg",
-        "alt": {
-          "en": "ORBIT financial kpi slide visual.",
-          "uk": "ORBIT: візуал financial kpi slide.",
-          "pl": "ORBIT: wizualizacja financial kpi slide."
-        },
-        "orientation": "landscape",
-        "scene": "kpiSlide"
-      },
-      {
-        "id": "data-visualization",
-        "title": "Data visualization",
-        "src": "/assets/visual-design/orbit/data-visualization.svg",
-        "alt": {
-          "en": "ORBIT data visualization visual.",
-          "uk": "ORBIT: візуал data visualization.",
-          "pl": "ORBIT: wizualizacja data visualization."
-        },
-        "orientation": "landscape",
-        "scene": "dataSlide"
-      },
-      {
-        "id": "report-cover",
-        "title": "Report cover",
-        "src": "/assets/visual-design/orbit/report-cover.svg",
-        "alt": {
-          "en": "ORBIT report cover visual.",
-          "uk": "ORBIT: візуал report cover.",
-          "pl": "ORBIT: wizualizacja report cover."
+          "en": "ORBIT full generated case board real raster portfolio asset.",
+          "uk": "ORBIT: реальний raster-візуал full generated case board.",
+          "pl": "ORBIT: realny rasterowy materiał portfolio full generated case board."
         },
         "orientation": "portrait",
-        "scene": "reportCover"
+        "format": "webp",
+        "generated": true,
+        "composited": false
       },
       {
-        "id": "report-spread",
-        "title": "Report spread",
-        "src": "/assets/visual-design/orbit/report-spread.svg",
+        "id": "cover",
+        "title": "Investor Deck",
+        "src": "/assets/visual-design-real/orbit/cover.webp",
         "alt": {
-          "en": "ORBIT report spread visual.",
-          "uk": "ORBIT: візуал report spread.",
-          "pl": "ORBIT: wizualizacja report spread."
+          "en": "ORBIT investor deck real raster portfolio asset.",
+          "uk": "ORBIT: реальний raster-візуал investor deck.",
+          "pl": "ORBIT: realny rasterowy materiał portfolio investor deck."
         },
-        "orientation": "landscape",
-        "scene": "reportSpread"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
+      },
+      {
+        "id": "kpi-dashboard",
+        "title": "KPI Dashboard",
+        "src": "/assets/visual-design-real/orbit/kpi-dashboard.webp",
+        "alt": {
+          "en": "ORBIT kpi dashboard real raster portfolio asset.",
+          "uk": "ORBIT: реальний raster-візуал kpi dashboard.",
+          "pl": "ORBIT: realny rasterowy materiał portfolio kpi dashboard."
+        },
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
+      },
+      {
+        "id": "annual-report",
+        "title": "Annual Report",
+        "src": "/assets/visual-design-real/orbit/annual-report.webp",
+        "alt": {
+          "en": "ORBIT annual report real raster portfolio asset.",
+          "uk": "ORBIT: реальний raster-візуал annual report.",
+          "pl": "ORBIT: realny rasterowy materiał portfolio annual report."
+        },
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
         "id": "webinar-banner",
-        "title": "Webinar banner",
-        "src": "/assets/visual-design/orbit/webinar-banner.svg",
+        "title": "Webinar Banner",
+        "src": "/assets/visual-design-real/orbit/webinar-banner.webp",
         "alt": {
-          "en": "ORBIT webinar banner visual.",
-          "uk": "ORBIT: візуал webinar banner.",
-          "pl": "ORBIT: wizualizacja webinar banner."
+          "en": "ORBIT webinar banner real raster portfolio asset.",
+          "uk": "ORBIT: реальний raster-візуал webinar banner.",
+          "pl": "ORBIT: realny rasterowy materiał portfolio webinar banner."
         },
-        "orientation": "landscape",
-        "scene": "webBanner"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
         "id": "linkedin-post",
-        "title": "LinkedIn post",
-        "src": "/assets/visual-design/orbit/linkedin-post.svg",
+        "title": "LinkedIn Post",
+        "src": "/assets/visual-design-real/orbit/linkedin-post.webp",
         "alt": {
-          "en": "ORBIT linkedin post visual.",
-          "uk": "ORBIT: візуал linkedin post.",
-          "pl": "ORBIT: wizualizacja linkedin post."
+          "en": "ORBIT linkedin post real raster portfolio asset.",
+          "uk": "ORBIT: реальний raster-візуал linkedin post.",
+          "pl": "ORBIT: realny rasterowy materiał portfolio linkedin post."
         },
         "orientation": "square",
-        "scene": "socialPost"
-      },
-      {
-        "id": "email-header",
-        "title": "Email header",
-        "src": "/assets/visual-design/orbit/email-header.svg",
-        "alt": {
-          "en": "ORBIT email header visual.",
-          "uk": "ORBIT: візуал email header.",
-          "pl": "ORBIT: wizualizacja email header."
-        },
-        "orientation": "landscape",
-        "scene": "emailHeader"
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
         "id": "conference-screen",
-        "title": "Conference screen",
-        "src": "/assets/visual-design/orbit/conference-screen.svg",
+        "title": "Conference Screen",
+        "src": "/assets/visual-design-real/orbit/conference-screen.webp",
         "alt": {
-          "en": "ORBIT conference screen visual.",
-          "uk": "ORBIT: візуал conference screen.",
-          "pl": "ORBIT: wizualizacja conference screen."
+          "en": "ORBIT conference screen real raster portfolio asset.",
+          "uk": "ORBIT: реальний raster-візуал conference screen.",
+          "pl": "ORBIT: realny rasterowy materiał portfolio conference screen."
         },
-        "orientation": "landscape",
-        "scene": "stageScreen"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       }
+    ],
+    "assetDirectory": "/assets/visual-design-real/orbit/",
+    "rasterAssets": [
+      "/assets/visual-design-real/orbit/source-board.png",
+      "/assets/visual-design-real/orbit/board.webp",
+      "/assets/visual-design-real/orbit/cover.png",
+      "/assets/visual-design-real/orbit/cover.webp",
+      "/assets/visual-design-real/orbit/kpi-dashboard.webp",
+      "/assets/visual-design-real/orbit/annual-report.webp",
+      "/assets/visual-design-real/orbit/webinar-banner.webp",
+      "/assets/visual-design-real/orbit/linkedin-post.webp",
+      "/assets/visual-design-real/orbit/conference-screen.webp"
+    ],
+    "svgAssets": [],
+    "compositedAssets": [
+      "/assets/visual-design-real/orbit/cover.webp",
+      "/assets/visual-design-real/orbit/kpi-dashboard.webp",
+      "/assets/visual-design-real/orbit/annual-report.webp",
+      "/assets/visual-design-real/orbit/webinar-banner.webp",
+      "/assets/visual-design-real/orbit/linkedin-post.webp",
+      "/assets/visual-design-real/orbit/conference-screen.webp"
     ]
   },
   {
@@ -2691,16 +2675,12 @@ window.visualDesignProjects = [
     "disciplines": "Restaurant branding, menu systems, takeaway packaging, loyalty and delivery promotion graphics",
     "description": "A youthful restaurant identity that avoids generic visual clichés. It uses bold color, flexible marks, loud menu hierarchy and delivery-ready packaging to feel like a contemporary urban dining brand.",
     "deliverables": [
-      "Restaurant identity system",
-      "Restaurant logo",
-      "Menu",
-      "Takeaway box",
-      "Chopstick sleeve",
-      "Delivery bag",
-      "Loyalty card",
-      "Poster",
-      "Social post",
-      "Delivery promotion creative"
+      "Menu Table",
+      "Takeaway Box",
+      "Delivery Bag",
+      "Loyalty Sleeve",
+      "Window Poster",
+      "Social Post"
     ],
     "tools": [
       "Figma",
@@ -2720,137 +2700,138 @@ window.visualDesignProjects = [
     "coverSize": "wide",
     "cover": {
       "id": "cover",
-      "title": "Restaurant identity system",
-      "src": "/assets/visual-design/miso-club/cover.svg",
+      "title": "Menu Table",
+      "src": "/assets/visual-design-real/miso-club/cover.webp",
       "alt": {
-        "en": "MISO CLUB restaurant identity system visual.",
-        "uk": "MISO CLUB: візуал restaurant identity system.",
-        "pl": "MISO CLUB: wizualizacja restaurant identity system."
+        "en": "MISO CLUB menu table real raster portfolio asset.",
+        "uk": "MISO CLUB: реальний raster-візуал menu table.",
+        "pl": "MISO CLUB: realny rasterowy materiał portfolio menu table."
       },
-      "orientation": "landscape",
-      "scene": "restaurantOverview"
+      "orientation": "square",
+      "format": "webp",
+      "generated": true,
+      "composited": true
     },
     "images": [
       {
-        "id": "cover",
-        "title": "Restaurant identity system",
-        "src": "/assets/visual-design/miso-club/cover.svg",
+        "id": "board",
+        "title": "Full generated case board",
+        "src": "/assets/visual-design-real/miso-club/board.webp",
         "alt": {
-          "en": "MISO CLUB restaurant identity system visual.",
-          "uk": "MISO CLUB: візуал restaurant identity system.",
-          "pl": "MISO CLUB: wizualizacja restaurant identity system."
-        },
-        "orientation": "landscape",
-        "scene": "restaurantOverview"
-      },
-      {
-        "id": "logo",
-        "title": "Restaurant logo",
-        "src": "/assets/visual-design/miso-club/logo.svg",
-        "alt": {
-          "en": "MISO CLUB restaurant logo visual.",
-          "uk": "MISO CLUB: візуал restaurant logo.",
-          "pl": "MISO CLUB: wizualizacja restaurant logo."
-        },
-        "orientation": "landscape",
-        "scene": "logoSystem"
-      },
-      {
-        "id": "menu",
-        "title": "Menu",
-        "src": "/assets/visual-design/miso-club/menu.svg",
-        "alt": {
-          "en": "MISO CLUB menu visual.",
-          "uk": "MISO CLUB: візуал menu.",
-          "pl": "MISO CLUB: wizualizacja menu."
+          "en": "MISO CLUB full generated case board real raster portfolio asset.",
+          "uk": "MISO CLUB: реальний raster-візуал full generated case board.",
+          "pl": "MISO CLUB: realny rasterowy materiał portfolio full generated case board."
         },
         "orientation": "portrait",
-        "scene": "menu"
+        "format": "webp",
+        "generated": true,
+        "composited": false
+      },
+      {
+        "id": "cover",
+        "title": "Menu Table",
+        "src": "/assets/visual-design-real/miso-club/cover.webp",
+        "alt": {
+          "en": "MISO CLUB menu table real raster portfolio asset.",
+          "uk": "MISO CLUB: реальний raster-візуал menu table.",
+          "pl": "MISO CLUB: realny rasterowy materiał portfolio menu table."
+        },
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
         "id": "takeaway-box",
-        "title": "Takeaway box",
-        "src": "/assets/visual-design/miso-club/takeaway-box.svg",
+        "title": "Takeaway Box",
+        "src": "/assets/visual-design-real/miso-club/takeaway-box.webp",
         "alt": {
-          "en": "MISO CLUB takeaway box visual.",
-          "uk": "MISO CLUB: візуал takeaway box.",
-          "pl": "MISO CLUB: wizualizacja takeaway box."
+          "en": "MISO CLUB takeaway box real raster portfolio asset.",
+          "uk": "MISO CLUB: реальний raster-візуал takeaway box.",
+          "pl": "MISO CLUB: realny rasterowy materiał portfolio takeaway box."
         },
-        "orientation": "landscape",
-        "scene": "boxMockup"
-      },
-      {
-        "id": "chopstick-sleeve",
-        "title": "Chopstick sleeve",
-        "src": "/assets/visual-design/miso-club/chopstick-sleeve.svg",
-        "alt": {
-          "en": "MISO CLUB chopstick sleeve visual.",
-          "uk": "MISO CLUB: візуал chopstick sleeve.",
-          "pl": "MISO CLUB: wizualizacja chopstick sleeve."
-        },
-        "orientation": "landscape",
-        "scene": "sleeve"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
         "id": "delivery-bag",
-        "title": "Delivery bag",
-        "src": "/assets/visual-design/miso-club/delivery-bag.svg",
+        "title": "Delivery Bag",
+        "src": "/assets/visual-design-real/miso-club/delivery-bag.webp",
         "alt": {
-          "en": "MISO CLUB delivery bag visual.",
-          "uk": "MISO CLUB: візуал delivery bag.",
-          "pl": "MISO CLUB: wizualizacja delivery bag."
+          "en": "MISO CLUB delivery bag real raster portfolio asset.",
+          "uk": "MISO CLUB: реальний raster-візуал delivery bag.",
+          "pl": "MISO CLUB: realny rasterowy materiał portfolio delivery bag."
         },
-        "orientation": "portrait",
-        "scene": "deliveryBag"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
-        "id": "loyalty-card",
-        "title": "Loyalty card",
-        "src": "/assets/visual-design/miso-club/loyalty-card.svg",
+        "id": "loyalty-sleeve",
+        "title": "Loyalty Sleeve",
+        "src": "/assets/visual-design-real/miso-club/loyalty-sleeve.webp",
         "alt": {
-          "en": "MISO CLUB loyalty card visual.",
-          "uk": "MISO CLUB: візуал loyalty card.",
-          "pl": "MISO CLUB: wizualizacja loyalty card."
+          "en": "MISO CLUB loyalty sleeve real raster portfolio asset.",
+          "uk": "MISO CLUB: реальний raster-візуал loyalty sleeve.",
+          "pl": "MISO CLUB: realny rasterowy materiał portfolio loyalty sleeve."
         },
-        "orientation": "landscape",
-        "scene": "loyaltyCard"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
-        "id": "poster",
-        "title": "Poster",
-        "src": "/assets/visual-design/miso-club/poster.svg",
+        "id": "window-poster",
+        "title": "Window Poster",
+        "src": "/assets/visual-design-real/miso-club/window-poster.webp",
         "alt": {
-          "en": "MISO CLUB poster visual.",
-          "uk": "MISO CLUB: візуал poster.",
-          "pl": "MISO CLUB: wizualizacja poster."
+          "en": "MISO CLUB window poster real raster portfolio asset.",
+          "uk": "MISO CLUB: реальний raster-візуал window poster.",
+          "pl": "MISO CLUB: realny rasterowy materiał portfolio window poster."
         },
-        "orientation": "portrait",
-        "scene": "poster"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
         "id": "social-post",
-        "title": "Social post",
-        "src": "/assets/visual-design/miso-club/social-post.svg",
+        "title": "Social Post",
+        "src": "/assets/visual-design-real/miso-club/social-post.webp",
         "alt": {
-          "en": "MISO CLUB social post visual.",
-          "uk": "MISO CLUB: візуал social post.",
-          "pl": "MISO CLUB: wizualizacja social post."
+          "en": "MISO CLUB social post real raster portfolio asset.",
+          "uk": "MISO CLUB: реальний raster-візуал social post.",
+          "pl": "MISO CLUB: realny rasterowy materiał portfolio social post."
         },
         "orientation": "square",
-        "scene": "socialPost"
-      },
-      {
-        "id": "delivery-promo",
-        "title": "Delivery promotion creative",
-        "src": "/assets/visual-design/miso-club/delivery-promo.svg",
-        "alt": {
-          "en": "MISO CLUB delivery promotion creative visual.",
-          "uk": "MISO CLUB: візуал delivery promotion creative.",
-          "pl": "MISO CLUB: wizualizacja delivery promotion creative."
-        },
-        "orientation": "square",
-        "scene": "adCard"
+        "format": "webp",
+        "generated": true,
+        "composited": true
       }
+    ],
+    "assetDirectory": "/assets/visual-design-real/miso-club/",
+    "rasterAssets": [
+      "/assets/visual-design-real/miso-club/source-board.png",
+      "/assets/visual-design-real/miso-club/board.webp",
+      "/assets/visual-design-real/miso-club/cover.png",
+      "/assets/visual-design-real/miso-club/cover.webp",
+      "/assets/visual-design-real/miso-club/takeaway-box.webp",
+      "/assets/visual-design-real/miso-club/delivery-bag.webp",
+      "/assets/visual-design-real/miso-club/loyalty-sleeve.webp",
+      "/assets/visual-design-real/miso-club/window-poster.webp",
+      "/assets/visual-design-real/miso-club/social-post.webp"
+    ],
+    "svgAssets": [],
+    "compositedAssets": [
+      "/assets/visual-design-real/miso-club/cover.webp",
+      "/assets/visual-design-real/miso-club/takeaway-box.webp",
+      "/assets/visual-design-real/miso-club/delivery-bag.webp",
+      "/assets/visual-design-real/miso-club/loyalty-sleeve.webp",
+      "/assets/visual-design-real/miso-club/window-poster.webp",
+      "/assets/visual-design-real/miso-club/social-post.webp"
     ]
   },
   {
@@ -2875,16 +2856,12 @@ window.visualDesignProjects = [
     "disciplines": "Real estate branding, brochure design, floor plan presentation, outdoor and sales collateral",
     "description": "A residential development communication system for print, outdoor and sales material. The work focuses on spacious hierarchy, property information, brochure pacing and commercial real estate clarity without becoming another website concept.",
     "deliverables": [
-      "Residential identity overview",
-      "Residential identity",
-      "Sales brochure cover",
-      "Brochure spread",
-      "Property card",
-      "Floor plan presentation",
+      "Brochure Cover",
+      "Brochure Spread",
+      "Sales Presentation",
       "Billboard",
-      "Construction fence",
-      "Social ad",
-      "Sales presentation"
+      "Construction Fence",
+      "Sales Office"
     ],
     "tools": [
       "Figma",
@@ -2904,137 +2881,138 @@ window.visualDesignProjects = [
     "coverSize": "standard",
     "cover": {
       "id": "cover",
-      "title": "Residential identity overview",
-      "src": "/assets/visual-design/nest/cover.svg",
+      "title": "Brochure Cover",
+      "src": "/assets/visual-design-real/nest/cover.webp",
       "alt": {
-        "en": "NEST residential identity overview visual.",
-        "uk": "NEST: візуал residential identity overview.",
-        "pl": "NEST: wizualizacja residential identity overview."
+        "en": "NEST brochure cover real raster portfolio asset.",
+        "uk": "NEST: реальний raster-візуал brochure cover.",
+        "pl": "NEST: realny rasterowy materiał portfolio brochure cover."
       },
-      "orientation": "landscape",
-      "scene": "realEstateOverview"
+      "orientation": "square",
+      "format": "webp",
+      "generated": true,
+      "composited": true
     },
     "images": [
       {
-        "id": "cover",
-        "title": "Residential identity overview",
-        "src": "/assets/visual-design/nest/cover.svg",
+        "id": "board",
+        "title": "Full generated case board",
+        "src": "/assets/visual-design-real/nest/board.webp",
         "alt": {
-          "en": "NEST residential identity overview visual.",
-          "uk": "NEST: візуал residential identity overview.",
-          "pl": "NEST: wizualizacja residential identity overview."
-        },
-        "orientation": "landscape",
-        "scene": "realEstateOverview"
-      },
-      {
-        "id": "identity",
-        "title": "Residential identity",
-        "src": "/assets/visual-design/nest/identity.svg",
-        "alt": {
-          "en": "NEST residential identity visual.",
-          "uk": "NEST: візуал residential identity.",
-          "pl": "NEST: wizualizacja residential identity."
-        },
-        "orientation": "landscape",
-        "scene": "logoSystem"
-      },
-      {
-        "id": "brochure-cover",
-        "title": "Sales brochure cover",
-        "src": "/assets/visual-design/nest/brochure-cover.svg",
-        "alt": {
-          "en": "NEST sales brochure cover visual.",
-          "uk": "NEST: візуал sales brochure cover.",
-          "pl": "NEST: wizualizacja sales brochure cover."
+          "en": "NEST full generated case board real raster portfolio asset.",
+          "uk": "NEST: реальний raster-візуал full generated case board.",
+          "pl": "NEST: realny rasterowy materiał portfolio full generated case board."
         },
         "orientation": "portrait",
-        "scene": "reportCover"
+        "format": "webp",
+        "generated": true,
+        "composited": false
+      },
+      {
+        "id": "cover",
+        "title": "Brochure Cover",
+        "src": "/assets/visual-design-real/nest/cover.webp",
+        "alt": {
+          "en": "NEST brochure cover real raster portfolio asset.",
+          "uk": "NEST: реальний raster-візуал brochure cover.",
+          "pl": "NEST: realny rasterowy materiał portfolio brochure cover."
+        },
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
         "id": "brochure-spread",
-        "title": "Brochure spread",
-        "src": "/assets/visual-design/nest/brochure-spread.svg",
+        "title": "Brochure Spread",
+        "src": "/assets/visual-design-real/nest/brochure-spread.webp",
         "alt": {
-          "en": "NEST brochure spread visual.",
-          "uk": "NEST: візуал brochure spread.",
-          "pl": "NEST: wizualizacja brochure spread."
+          "en": "NEST brochure spread real raster portfolio asset.",
+          "uk": "NEST: реальний raster-візуал brochure spread.",
+          "pl": "NEST: realny rasterowy materiał portfolio brochure spread."
         },
-        "orientation": "landscape",
-        "scene": "reportSpread"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
-        "id": "property-card",
-        "title": "Property card",
-        "src": "/assets/visual-design/nest/property-card.svg",
+        "id": "sales-presentation",
+        "title": "Sales Presentation",
+        "src": "/assets/visual-design-real/nest/sales-presentation.webp",
         "alt": {
-          "en": "NEST property card visual.",
-          "uk": "NEST: візуал property card.",
-          "pl": "NEST: wizualizacja property card."
+          "en": "NEST sales presentation real raster portfolio asset.",
+          "uk": "NEST: реальний raster-візуал sales presentation.",
+          "pl": "NEST: realny rasterowy materiał portfolio sales presentation."
         },
-        "orientation": "portrait",
-        "scene": "productCard"
-      },
-      {
-        "id": "floor-plan",
-        "title": "Floor plan presentation",
-        "src": "/assets/visual-design/nest/floor-plan.svg",
-        "alt": {
-          "en": "NEST floor plan presentation visual.",
-          "uk": "NEST: візуал floor plan presentation.",
-          "pl": "NEST: wizualizacja floor plan presentation."
-        },
-        "orientation": "landscape",
-        "scene": "floorPlan"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
         "id": "billboard",
         "title": "Billboard",
-        "src": "/assets/visual-design/nest/billboard.svg",
+        "src": "/assets/visual-design-real/nest/billboard.webp",
         "alt": {
-          "en": "NEST billboard visual.",
-          "uk": "NEST: візуал billboard.",
-          "pl": "NEST: wizualizacja billboard."
+          "en": "NEST billboard real raster portfolio asset.",
+          "uk": "NEST: реальний raster-візуал billboard.",
+          "pl": "NEST: realny rasterowy materiał portfolio billboard."
         },
-        "orientation": "landscape",
-        "scene": "billboard"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
         "id": "construction-fence",
-        "title": "Construction fence",
-        "src": "/assets/visual-design/nest/construction-fence.svg",
+        "title": "Construction Fence",
+        "src": "/assets/visual-design-real/nest/construction-fence.webp",
         "alt": {
-          "en": "NEST construction fence visual.",
-          "uk": "NEST: візуал construction fence.",
-          "pl": "NEST: wizualizacja construction fence."
-        },
-        "orientation": "landscape",
-        "scene": "signage"
-      },
-      {
-        "id": "social-ad",
-        "title": "Social ad",
-        "src": "/assets/visual-design/nest/social-ad.svg",
-        "alt": {
-          "en": "NEST social ad visual.",
-          "uk": "NEST: візуал social ad.",
-          "pl": "NEST: wizualizacja social ad."
+          "en": "NEST construction fence real raster portfolio asset.",
+          "uk": "NEST: реальний raster-візуал construction fence.",
+          "pl": "NEST: realny rasterowy materiał portfolio construction fence."
         },
         "orientation": "square",
-        "scene": "adCard"
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
-        "id": "sales-presentation",
-        "title": "Sales presentation",
-        "src": "/assets/visual-design/nest/sales-presentation.svg",
+        "id": "sales-office",
+        "title": "Sales Office",
+        "src": "/assets/visual-design-real/nest/sales-office.webp",
         "alt": {
-          "en": "NEST sales presentation visual.",
-          "uk": "NEST: візуал sales presentation.",
-          "pl": "NEST: wizualizacja sales presentation."
+          "en": "NEST sales office real raster portfolio asset.",
+          "uk": "NEST: реальний raster-візуал sales office.",
+          "pl": "NEST: realny rasterowy materiał portfolio sales office."
         },
-        "orientation": "landscape",
-        "scene": "presentationSlide"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       }
+    ],
+    "assetDirectory": "/assets/visual-design-real/nest/",
+    "rasterAssets": [
+      "/assets/visual-design-real/nest/source-board.png",
+      "/assets/visual-design-real/nest/board.webp",
+      "/assets/visual-design-real/nest/cover.png",
+      "/assets/visual-design-real/nest/cover.webp",
+      "/assets/visual-design-real/nest/brochure-spread.webp",
+      "/assets/visual-design-real/nest/sales-presentation.webp",
+      "/assets/visual-design-real/nest/billboard.webp",
+      "/assets/visual-design-real/nest/construction-fence.webp",
+      "/assets/visual-design-real/nest/sales-office.webp"
+    ],
+    "svgAssets": [],
+    "compositedAssets": [
+      "/assets/visual-design-real/nest/cover.webp",
+      "/assets/visual-design-real/nest/brochure-spread.webp",
+      "/assets/visual-design-real/nest/sales-presentation.webp",
+      "/assets/visual-design-real/nest/billboard.webp",
+      "/assets/visual-design-real/nest/construction-fence.webp",
+      "/assets/visual-design-real/nest/sales-office.webp"
     ]
   },
   {
@@ -3058,16 +3036,12 @@ window.visualDesignProjects = [
     "disciplines": "Retail banners, display advertising, email graphics, product comparison and seasonal campaign assets",
     "description": "A clean conversion-focused e-commerce graphics project. The work proves practical online retail capabilities: promo banners, launch banners, sale graphics, email headers, stories, Google Display sizes and product comparison modules.",
     "deliverables": [
-      "E-commerce campaign system",
-      "Homepage promotional banner",
-      "Product launch banner",
-      "Sale campaign graphic",
-      "Email campaign hero",
-      "Instagram post",
-      "Story",
-      "Google Display banner set",
-      "Product comparison graphic",
-      "Seasonal promo creative"
+      "Homepage Laptop",
+      "Sale Tablet",
+      "Mobile Grid",
+      "Email Hero",
+      "Social Carousel",
+      "Retail Display"
     ],
     "tools": [
       "Figma",
@@ -3088,137 +3062,138 @@ window.visualDesignProjects = [
     "coverSize": "large",
     "cover": {
       "id": "cover",
-      "title": "E-commerce campaign system",
-      "src": "/assets/visual-design/echo-commerce/cover.svg",
+      "title": "Homepage Laptop",
+      "src": "/assets/visual-design-real/echo-commerce/cover.webp",
       "alt": {
-        "en": "ECHO COMMERCE e-commerce campaign system visual.",
-        "uk": "ECHO COMMERCE: візуал e-commerce campaign system.",
-        "pl": "ECHO COMMERCE: wizualizacja e-commerce campaign system."
+        "en": "ECHO COMMERCE homepage laptop real raster portfolio asset.",
+        "uk": "ECHO COMMERCE: реальний raster-візуал homepage laptop.",
+        "pl": "ECHO COMMERCE: realny rasterowy materiał portfolio homepage laptop."
       },
-      "orientation": "landscape",
-      "scene": "commerceOverview"
+      "orientation": "square",
+      "format": "webp",
+      "generated": true,
+      "composited": true
     },
     "images": [
       {
+        "id": "board",
+        "title": "Full generated case board",
+        "src": "/assets/visual-design-real/echo-commerce/board.webp",
+        "alt": {
+          "en": "ECHO COMMERCE full generated case board real raster portfolio asset.",
+          "uk": "ECHO COMMERCE: реальний raster-візуал full generated case board.",
+          "pl": "ECHO COMMERCE: realny rasterowy materiał portfolio full generated case board."
+        },
+        "orientation": "portrait",
+        "format": "webp",
+        "generated": true,
+        "composited": false
+      },
+      {
         "id": "cover",
-        "title": "E-commerce campaign system",
-        "src": "/assets/visual-design/echo-commerce/cover.svg",
+        "title": "Homepage Laptop",
+        "src": "/assets/visual-design-real/echo-commerce/cover.webp",
         "alt": {
-          "en": "ECHO COMMERCE e-commerce campaign system visual.",
-          "uk": "ECHO COMMERCE: візуал e-commerce campaign system.",
-          "pl": "ECHO COMMERCE: wizualizacja e-commerce campaign system."
-        },
-        "orientation": "landscape",
-        "scene": "commerceOverview"
-      },
-      {
-        "id": "home-banner",
-        "title": "Homepage promotional banner",
-        "src": "/assets/visual-design/echo-commerce/home-banner.svg",
-        "alt": {
-          "en": "ECHO COMMERCE homepage promotional banner visual.",
-          "uk": "ECHO COMMERCE: візуал homepage promotional banner.",
-          "pl": "ECHO COMMERCE: wizualizacja homepage promotional banner."
-        },
-        "orientation": "landscape",
-        "scene": "webBanner"
-      },
-      {
-        "id": "launch-banner",
-        "title": "Product launch banner",
-        "src": "/assets/visual-design/echo-commerce/launch-banner.svg",
-        "alt": {
-          "en": "ECHO COMMERCE product launch banner visual.",
-          "uk": "ECHO COMMERCE: візуал product launch banner.",
-          "pl": "ECHO COMMERCE: wizualizacja product launch banner."
-        },
-        "orientation": "landscape",
-        "scene": "webBanner"
-      },
-      {
-        "id": "sale-graphic",
-        "title": "Sale campaign graphic",
-        "src": "/assets/visual-design/echo-commerce/sale-graphic.svg",
-        "alt": {
-          "en": "ECHO COMMERCE sale campaign graphic visual.",
-          "uk": "ECHO COMMERCE: візуал sale campaign graphic.",
-          "pl": "ECHO COMMERCE: wizualizacja sale campaign graphic."
+          "en": "ECHO COMMERCE homepage laptop real raster portfolio asset.",
+          "uk": "ECHO COMMERCE: реальний raster-візуал homepage laptop.",
+          "pl": "ECHO COMMERCE: realny rasterowy materiał portfolio homepage laptop."
         },
         "orientation": "square",
-        "scene": "adCard"
+        "format": "webp",
+        "generated": true,
+        "composited": true
+      },
+      {
+        "id": "sale-tablet",
+        "title": "Sale Tablet",
+        "src": "/assets/visual-design-real/echo-commerce/sale-tablet.webp",
+        "alt": {
+          "en": "ECHO COMMERCE sale tablet real raster portfolio asset.",
+          "uk": "ECHO COMMERCE: реальний raster-візуал sale tablet.",
+          "pl": "ECHO COMMERCE: realny rasterowy materiał portfolio sale tablet."
+        },
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
+      },
+      {
+        "id": "mobile-grid",
+        "title": "Mobile Grid",
+        "src": "/assets/visual-design-real/echo-commerce/mobile-grid.webp",
+        "alt": {
+          "en": "ECHO COMMERCE mobile grid real raster portfolio asset.",
+          "uk": "ECHO COMMERCE: реальний raster-візуал mobile grid.",
+          "pl": "ECHO COMMERCE: realny rasterowy materiał portfolio mobile grid."
+        },
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
         "id": "email-hero",
-        "title": "Email campaign hero",
-        "src": "/assets/visual-design/echo-commerce/email-hero.svg",
+        "title": "Email Hero",
+        "src": "/assets/visual-design-real/echo-commerce/email-hero.webp",
         "alt": {
-          "en": "ECHO COMMERCE email campaign hero visual.",
-          "uk": "ECHO COMMERCE: візуал email campaign hero.",
-          "pl": "ECHO COMMERCE: wizualizacja email campaign hero."
-        },
-        "orientation": "landscape",
-        "scene": "emailHeader"
-      },
-      {
-        "id": "instagram-post",
-        "title": "Instagram post",
-        "src": "/assets/visual-design/echo-commerce/instagram-post.svg",
-        "alt": {
-          "en": "ECHO COMMERCE instagram post visual.",
-          "uk": "ECHO COMMERCE: візуал instagram post.",
-          "pl": "ECHO COMMERCE: wizualizacja instagram post."
+          "en": "ECHO COMMERCE email hero real raster portfolio asset.",
+          "uk": "ECHO COMMERCE: реальний raster-візуал email hero.",
+          "pl": "ECHO COMMERCE: realny rasterowy materiał portfolio email hero."
         },
         "orientation": "square",
-        "scene": "socialPost"
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
-        "id": "story",
-        "title": "Story",
-        "src": "/assets/visual-design/echo-commerce/story.svg",
+        "id": "social-carousel",
+        "title": "Social Carousel",
+        "src": "/assets/visual-design-real/echo-commerce/social-carousel.webp",
         "alt": {
-          "en": "ECHO COMMERCE story visual.",
-          "uk": "ECHO COMMERCE: візуал story.",
-          "pl": "ECHO COMMERCE: wizualizacja story."
-        },
-        "orientation": "portrait",
-        "scene": "phoneStory"
-      },
-      {
-        "id": "display-set",
-        "title": "Google Display banner set",
-        "src": "/assets/visual-design/echo-commerce/display-set.svg",
-        "alt": {
-          "en": "ECHO COMMERCE google display banner set visual.",
-          "uk": "ECHO COMMERCE: візуал google display banner set.",
-          "pl": "ECHO COMMERCE: wizualizacja google display banner set."
-        },
-        "orientation": "landscape",
-        "scene": "displaySet"
-      },
-      {
-        "id": "comparison",
-        "title": "Product comparison graphic",
-        "src": "/assets/visual-design/echo-commerce/comparison.svg",
-        "alt": {
-          "en": "ECHO COMMERCE product comparison graphic visual.",
-          "uk": "ECHO COMMERCE: візуал product comparison graphic.",
-          "pl": "ECHO COMMERCE: wizualizacja product comparison graphic."
-        },
-        "orientation": "landscape",
-        "scene": "comparison"
-      },
-      {
-        "id": "seasonal-promo",
-        "title": "Seasonal promo creative",
-        "src": "/assets/visual-design/echo-commerce/seasonal-promo.svg",
-        "alt": {
-          "en": "ECHO COMMERCE seasonal promo creative visual.",
-          "uk": "ECHO COMMERCE: візуал seasonal promo creative.",
-          "pl": "ECHO COMMERCE: wizualizacja seasonal promo creative."
+          "en": "ECHO COMMERCE social carousel real raster portfolio asset.",
+          "uk": "ECHO COMMERCE: реальний raster-візуал social carousel.",
+          "pl": "ECHO COMMERCE: realny rasterowy materiał portfolio social carousel."
         },
         "orientation": "square",
-        "scene": "adCard"
+        "format": "webp",
+        "generated": true,
+        "composited": true
+      },
+      {
+        "id": "retail-display",
+        "title": "Retail Display",
+        "src": "/assets/visual-design-real/echo-commerce/retail-display.webp",
+        "alt": {
+          "en": "ECHO COMMERCE retail display real raster portfolio asset.",
+          "uk": "ECHO COMMERCE: реальний raster-візуал retail display.",
+          "pl": "ECHO COMMERCE: realny rasterowy materiał portfolio retail display."
+        },
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       }
+    ],
+    "assetDirectory": "/assets/visual-design-real/echo-commerce/",
+    "rasterAssets": [
+      "/assets/visual-design-real/echo-commerce/source-board.png",
+      "/assets/visual-design-real/echo-commerce/board.webp",
+      "/assets/visual-design-real/echo-commerce/cover.png",
+      "/assets/visual-design-real/echo-commerce/cover.webp",
+      "/assets/visual-design-real/echo-commerce/sale-tablet.webp",
+      "/assets/visual-design-real/echo-commerce/mobile-grid.webp",
+      "/assets/visual-design-real/echo-commerce/email-hero.webp",
+      "/assets/visual-design-real/echo-commerce/social-carousel.webp",
+      "/assets/visual-design-real/echo-commerce/retail-display.webp"
+    ],
+    "svgAssets": [],
+    "compositedAssets": [
+      "/assets/visual-design-real/echo-commerce/cover.webp",
+      "/assets/visual-design-real/echo-commerce/sale-tablet.webp",
+      "/assets/visual-design-real/echo-commerce/mobile-grid.webp",
+      "/assets/visual-design-real/echo-commerce/email-hero.webp",
+      "/assets/visual-design-real/echo-commerce/social-carousel.webp",
+      "/assets/visual-design-real/echo-commerce/retail-display.webp"
     ]
   },
   {
@@ -3242,14 +3217,12 @@ window.visualDesignProjects = [
     "disciplines": "Beauty campaign art direction, social ads, retail posters, launch banners and email graphics",
     "description": "A feminine but not generic beauty campaign using soft mineral colors, clean hierarchy and product-led commercial messaging. The project adds beauty marketing examples across paid ads, social, email, retail and launch graphics.",
     "deliverables": [
-      "Campaign key visual",
-      "Social post",
-      "Story",
-      "Paid advertisement",
-      "Product launch banner",
-      "Retail poster",
-      "Promotional email header",
-      "Product feature graphic"
+      "Product Hero",
+      "Packaging Close-Up",
+      "Retail Display",
+      "Digital Hero",
+      "Paid Social",
+      "Launch Display"
     ],
     "tools": [
       "Figma",
@@ -3270,113 +3243,138 @@ window.visualDesignProjects = [
     "coverSize": "large",
     "cover": {
       "id": "cover",
-      "title": "Campaign key visual",
-      "src": "/assets/visual-design/aura-beauty/cover.svg",
+      "title": "Product Hero",
+      "src": "/assets/visual-design-real/aura-beauty/cover.webp",
       "alt": {
-        "en": "AURA BEAUTY campaign key visual visual.",
-        "uk": "AURA BEAUTY: візуал campaign key visual.",
-        "pl": "AURA BEAUTY: wizualizacja campaign key visual."
+        "en": "AURA BEAUTY product hero real raster portfolio asset.",
+        "uk": "AURA BEAUTY: реальний raster-візуал product hero.",
+        "pl": "AURA BEAUTY: realny rasterowy materiał portfolio product hero."
       },
-      "orientation": "landscape",
-      "scene": "beautyHero"
+      "orientation": "square",
+      "format": "webp",
+      "generated": true,
+      "composited": true
     },
     "images": [
       {
+        "id": "board",
+        "title": "Full generated case board",
+        "src": "/assets/visual-design-real/aura-beauty/board.webp",
+        "alt": {
+          "en": "AURA BEAUTY full generated case board real raster portfolio asset.",
+          "uk": "AURA BEAUTY: реальний raster-візуал full generated case board.",
+          "pl": "AURA BEAUTY: realny rasterowy materiał portfolio full generated case board."
+        },
+        "orientation": "portrait",
+        "format": "webp",
+        "generated": true,
+        "composited": false
+      },
+      {
         "id": "cover",
-        "title": "Campaign key visual",
-        "src": "/assets/visual-design/aura-beauty/cover.svg",
+        "title": "Product Hero",
+        "src": "/assets/visual-design-real/aura-beauty/cover.webp",
         "alt": {
-          "en": "AURA BEAUTY campaign key visual visual.",
-          "uk": "AURA BEAUTY: візуал campaign key visual.",
-          "pl": "AURA BEAUTY: wizualizacja campaign key visual."
-        },
-        "orientation": "landscape",
-        "scene": "beautyHero"
-      },
-      {
-        "id": "social-post",
-        "title": "Social post",
-        "src": "/assets/visual-design/aura-beauty/social-post.svg",
-        "alt": {
-          "en": "AURA BEAUTY social post visual.",
-          "uk": "AURA BEAUTY: візуал social post.",
-          "pl": "AURA BEAUTY: wizualizacja social post."
+          "en": "AURA BEAUTY product hero real raster portfolio asset.",
+          "uk": "AURA BEAUTY: реальний raster-візуал product hero.",
+          "pl": "AURA BEAUTY: realny rasterowy materiał portfolio product hero."
         },
         "orientation": "square",
-        "scene": "socialPost"
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
-        "id": "story",
-        "title": "Story",
-        "src": "/assets/visual-design/aura-beauty/story.svg",
+        "id": "packaging-closeup",
+        "title": "Packaging Close-Up",
+        "src": "/assets/visual-design-real/aura-beauty/packaging-closeup.webp",
         "alt": {
-          "en": "AURA BEAUTY story visual.",
-          "uk": "AURA BEAUTY: візуал story.",
-          "pl": "AURA BEAUTY: wizualizacja story."
-        },
-        "orientation": "portrait",
-        "scene": "phoneStory"
-      },
-      {
-        "id": "paid-ad",
-        "title": "Paid advertisement",
-        "src": "/assets/visual-design/aura-beauty/paid-ad.svg",
-        "alt": {
-          "en": "AURA BEAUTY paid advertisement visual.",
-          "uk": "AURA BEAUTY: візуал paid advertisement.",
-          "pl": "AURA BEAUTY: wizualizacja paid advertisement."
+          "en": "AURA BEAUTY packaging close-up real raster portfolio asset.",
+          "uk": "AURA BEAUTY: реальний raster-візуал packaging close-up.",
+          "pl": "AURA BEAUTY: realny rasterowy materiał portfolio packaging close-up."
         },
         "orientation": "square",
-        "scene": "adCard"
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
-        "id": "launch-banner",
-        "title": "Product launch banner",
-        "src": "/assets/visual-design/aura-beauty/launch-banner.svg",
+        "id": "retail-display",
+        "title": "Retail Display",
+        "src": "/assets/visual-design-real/aura-beauty/retail-display.webp",
         "alt": {
-          "en": "AURA BEAUTY product launch banner visual.",
-          "uk": "AURA BEAUTY: візуал product launch banner.",
-          "pl": "AURA BEAUTY: wizualizacja product launch banner."
+          "en": "AURA BEAUTY retail display real raster portfolio asset.",
+          "uk": "AURA BEAUTY: реальний raster-візуал retail display.",
+          "pl": "AURA BEAUTY: realny rasterowy materiał portfolio retail display."
         },
-        "orientation": "landscape",
-        "scene": "webBanner"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
-        "id": "retail-poster",
-        "title": "Retail poster",
-        "src": "/assets/visual-design/aura-beauty/retail-poster.svg",
+        "id": "digital-hero",
+        "title": "Digital Hero",
+        "src": "/assets/visual-design-real/aura-beauty/digital-hero.webp",
         "alt": {
-          "en": "AURA BEAUTY retail poster visual.",
-          "uk": "AURA BEAUTY: візуал retail poster.",
-          "pl": "AURA BEAUTY: wizualizacja retail poster."
+          "en": "AURA BEAUTY digital hero real raster portfolio asset.",
+          "uk": "AURA BEAUTY: реальний raster-візуал digital hero.",
+          "pl": "AURA BEAUTY: realny rasterowy materiał portfolio digital hero."
         },
-        "orientation": "portrait",
-        "scene": "posPoster"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
-        "id": "email-header",
-        "title": "Promotional email header",
-        "src": "/assets/visual-design/aura-beauty/email-header.svg",
+        "id": "paid-social",
+        "title": "Paid Social",
+        "src": "/assets/visual-design-real/aura-beauty/paid-social.webp",
         "alt": {
-          "en": "AURA BEAUTY promotional email header visual.",
-          "uk": "AURA BEAUTY: візуал promotional email header.",
-          "pl": "AURA BEAUTY: wizualizacja promotional email header."
+          "en": "AURA BEAUTY paid social real raster portfolio asset.",
+          "uk": "AURA BEAUTY: реальний raster-візуал paid social.",
+          "pl": "AURA BEAUTY: realny rasterowy materiał portfolio paid social."
         },
-        "orientation": "landscape",
-        "scene": "emailHeader"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       },
       {
-        "id": "feature-graphic",
-        "title": "Product feature graphic",
-        "src": "/assets/visual-design/aura-beauty/feature-graphic.svg",
+        "id": "launch-display",
+        "title": "Launch Display",
+        "src": "/assets/visual-design-real/aura-beauty/launch-display.webp",
         "alt": {
-          "en": "AURA BEAUTY product feature graphic visual.",
-          "uk": "AURA BEAUTY: візуал product feature graphic.",
-          "pl": "AURA BEAUTY: wizualizacja product feature graphic."
+          "en": "AURA BEAUTY launch display real raster portfolio asset.",
+          "uk": "AURA BEAUTY: реальний raster-візуал launch display.",
+          "pl": "AURA BEAUTY: realny rasterowy materiał portfolio launch display."
         },
-        "orientation": "landscape",
-        "scene": "productFeature"
+        "orientation": "square",
+        "format": "webp",
+        "generated": true,
+        "composited": true
       }
+    ],
+    "assetDirectory": "/assets/visual-design-real/aura-beauty/",
+    "rasterAssets": [
+      "/assets/visual-design-real/aura-beauty/source-board.png",
+      "/assets/visual-design-real/aura-beauty/board.webp",
+      "/assets/visual-design-real/aura-beauty/cover.png",
+      "/assets/visual-design-real/aura-beauty/cover.webp",
+      "/assets/visual-design-real/aura-beauty/packaging-closeup.webp",
+      "/assets/visual-design-real/aura-beauty/retail-display.webp",
+      "/assets/visual-design-real/aura-beauty/digital-hero.webp",
+      "/assets/visual-design-real/aura-beauty/paid-social.webp",
+      "/assets/visual-design-real/aura-beauty/launch-display.webp"
+    ],
+    "svgAssets": [],
+    "compositedAssets": [
+      "/assets/visual-design-real/aura-beauty/cover.webp",
+      "/assets/visual-design-real/aura-beauty/packaging-closeup.webp",
+      "/assets/visual-design-real/aura-beauty/retail-display.webp",
+      "/assets/visual-design-real/aura-beauty/digital-hero.webp",
+      "/assets/visual-design-real/aura-beauty/paid-social.webp",
+      "/assets/visual-design-real/aura-beauty/launch-display.webp"
     ]
   }
 ];
@@ -3601,3 +3599,730 @@ window.visualDesignCapabilityMatrix = {
     "AURA BEAUTY"
   ]
 };
+
+window.visualDesignAssetSummary = [
+  {
+    "id": "lumiere-no7",
+    "title": "LUMIÈRE NO. 7",
+    "category": "Packaging & Labels / Branding",
+    "filters": [
+      "packaging",
+      "branding",
+      "campaigns"
+    ],
+    "capabilities": [
+      "Brand identity",
+      "Logo design",
+      "Packaging",
+      "Labels",
+      "Poster design",
+      "Social media",
+      "Print advertising",
+      "FMCG"
+    ],
+    "imageCount": 7,
+    "assetDirectory": "/assets/visual-design-real/lumiere-no7/",
+    "rasterAssets": [
+      "/assets/visual-design-real/lumiere-no7/source-board.png",
+      "/assets/visual-design-real/lumiere-no7/board.webp",
+      "/assets/visual-design-real/lumiere-no7/cover.png",
+      "/assets/visual-design-real/lumiere-no7/cover.webp",
+      "/assets/visual-design-real/lumiere-no7/bottle-close-up.webp",
+      "/assets/visual-design-real/lumiere-no7/outer-box.webp",
+      "/assets/visual-design-real/lumiere-no7/product-set.webp",
+      "/assets/visual-design-real/lumiere-no7/campaign-poster.webp",
+      "/assets/visual-design-real/lumiere-no7/social-launch.webp"
+    ],
+    "svgAssets": [],
+    "compositedAssets": [
+      "/assets/visual-design-real/lumiere-no7/cover.webp",
+      "/assets/visual-design-real/lumiere-no7/bottle-close-up.webp",
+      "/assets/visual-design-real/lumiere-no7/outer-box.webp",
+      "/assets/visual-design-real/lumiere-no7/product-set.webp",
+      "/assets/visual-design-real/lumiere-no7/campaign-poster.webp",
+      "/assets/visual-design-real/lumiere-no7/social-launch.webp"
+    ]
+  },
+  {
+    "id": "sola",
+    "title": "SOLA",
+    "category": "FMCG Campaign / Packaging",
+    "filters": [
+      "packaging",
+      "campaigns",
+      "digital"
+    ],
+    "capabilities": [
+      "Packaging",
+      "Labels",
+      "FMCG",
+      "Paid ads",
+      "Meta advertising",
+      "Social media",
+      "Retail graphics",
+      "Digital banners"
+    ],
+    "imageCount": 7,
+    "assetDirectory": "/assets/visual-design-real/sola/",
+    "rasterAssets": [
+      "/assets/visual-design-real/sola/source-board.png",
+      "/assets/visual-design-real/sola/board.webp",
+      "/assets/visual-design-real/sola/cover.png",
+      "/assets/visual-design-real/sola/cover.webp",
+      "/assets/visual-design-real/sola/variant-lineup.webp",
+      "/assets/visual-design-real/sola/summer-key-visual.webp",
+      "/assets/visual-design-real/sola/billboard.webp",
+      "/assets/visual-design-real/sola/instagram-story.webp",
+      "/assets/visual-design-real/sola/retail-shelf.webp"
+    ],
+    "svgAssets": [],
+    "compositedAssets": [
+      "/assets/visual-design-real/sola/cover.webp",
+      "/assets/visual-design-real/sola/variant-lineup.webp",
+      "/assets/visual-design-real/sola/summer-key-visual.webp",
+      "/assets/visual-design-real/sola/billboard.webp",
+      "/assets/visual-design-real/sola/instagram-story.webp",
+      "/assets/visual-design-real/sola/retail-shelf.webp"
+    ]
+  },
+  {
+    "id": "northline",
+    "title": "NORTHLINE",
+    "category": "B2B Technology / Corporate Communication",
+    "filters": [
+      "branding",
+      "corporate",
+      "digital"
+    ],
+    "capabilities": [
+      "B2B technology",
+      "Corporate design",
+      "Presentation design",
+      "Pitch decks",
+      "Data visualization",
+      "Brand identity",
+      "LinkedIn graphics",
+      "Corporate communication"
+    ],
+    "imageCount": 7,
+    "assetDirectory": "/assets/visual-design-real/northline/",
+    "rasterAssets": [
+      "/assets/visual-design-real/northline/source-board.png",
+      "/assets/visual-design-real/northline/board.webp",
+      "/assets/visual-design-real/northline/cover.png",
+      "/assets/visual-design-real/northline/cover.webp",
+      "/assets/visual-design-real/northline/deck-laptop.webp",
+      "/assets/visual-design-real/northline/annual-report.webp",
+      "/assets/visual-design-real/northline/conference-screen.webp",
+      "/assets/visual-design-real/northline/linkedin-banner.webp",
+      "/assets/visual-design-real/northline/badge-lanyard.webp"
+    ],
+    "svgAssets": [],
+    "compositedAssets": [
+      "/assets/visual-design-real/northline/cover.webp",
+      "/assets/visual-design-real/northline/deck-laptop.webp",
+      "/assets/visual-design-real/northline/annual-report.webp",
+      "/assets/visual-design-real/northline/conference-screen.webp",
+      "/assets/visual-design-real/northline/linkedin-banner.webp",
+      "/assets/visual-design-real/northline/badge-lanyard.webp"
+    ]
+  },
+  {
+    "id": "after-midnight",
+    "title": "AFTER MIDNIGHT",
+    "category": "Music Event Campaign",
+    "filters": [
+      "campaigns",
+      "editorial",
+      "digital"
+    ],
+    "capabilities": [
+      "Event identity",
+      "Poster design",
+      "Social media",
+      "Signage",
+      "Print production",
+      "Campaign systems",
+      "Digital screens"
+    ],
+    "imageCount": 7,
+    "assetDirectory": "/assets/visual-design-real/after-midnight/",
+    "rasterAssets": [
+      "/assets/visual-design-real/after-midnight/source-board.png",
+      "/assets/visual-design-real/after-midnight/board.webp",
+      "/assets/visual-design-real/after-midnight/cover.png",
+      "/assets/visual-design-real/after-midnight/cover.webp",
+      "/assets/visual-design-real/after-midnight/alternate-poster.webp",
+      "/assets/visual-design-real/after-midnight/stage-screen.webp",
+      "/assets/visual-design-real/after-midnight/ticket-wristband.webp",
+      "/assets/visual-design-real/after-midnight/instagram-story.webp",
+      "/assets/visual-design-real/after-midnight/venue-signage.webp"
+    ],
+    "svgAssets": [],
+    "compositedAssets": [
+      "/assets/visual-design-real/after-midnight/cover.webp",
+      "/assets/visual-design-real/after-midnight/alternate-poster.webp",
+      "/assets/visual-design-real/after-midnight/stage-screen.webp",
+      "/assets/visual-design-real/after-midnight/ticket-wristband.webp",
+      "/assets/visual-design-real/after-midnight/instagram-story.webp",
+      "/assets/visual-design-real/after-midnight/venue-signage.webp"
+    ]
+  },
+  {
+    "id": "casa-fiora",
+    "title": "CASA FIORA",
+    "category": "Boutique Hospitality / Print",
+    "filters": [
+      "branding",
+      "editorial"
+    ],
+    "capabilities": [
+      "Hospitality collateral",
+      "Brand identity",
+      "Logo design",
+      "Editorial layout",
+      "Signage",
+      "Print design"
+    ],
+    "imageCount": 7,
+    "assetDirectory": "/assets/visual-design-real/casa-fiora/",
+    "rasterAssets": [
+      "/assets/visual-design-real/casa-fiora/source-board.png",
+      "/assets/visual-design-real/casa-fiora/board.webp",
+      "/assets/visual-design-real/casa-fiora/cover.png",
+      "/assets/visual-design-real/casa-fiora/cover.webp",
+      "/assets/visual-design-real/casa-fiora/room-key.webp",
+      "/assets/visual-design-real/casa-fiora/breakfast-menu.webp",
+      "/assets/visual-design-real/casa-fiora/postcard-set.webp",
+      "/assets/visual-design-real/casa-fiora/tote-guide.webp",
+      "/assets/visual-design-real/casa-fiora/hotel-signage.webp"
+    ],
+    "svgAssets": [],
+    "compositedAssets": [
+      "/assets/visual-design-real/casa-fiora/cover.webp",
+      "/assets/visual-design-real/casa-fiora/room-key.webp",
+      "/assets/visual-design-real/casa-fiora/breakfast-menu.webp",
+      "/assets/visual-design-real/casa-fiora/postcard-set.webp",
+      "/assets/visual-design-real/casa-fiora/tote-guide.webp",
+      "/assets/visual-design-real/casa-fiora/hotel-signage.webp"
+    ]
+  },
+  {
+    "id": "kinetic",
+    "title": "KINETIC",
+    "category": "Performance Marketing / Digital Graphics",
+    "filters": [
+      "campaigns",
+      "digital"
+    ],
+    "capabilities": [
+      "Paid ads",
+      "Meta advertising",
+      "Social media",
+      "Digital banners",
+      "Marketing design",
+      "Presentation of offers"
+    ],
+    "imageCount": 7,
+    "assetDirectory": "/assets/visual-design-real/kinetic/",
+    "rasterAssets": [
+      "/assets/visual-design-real/kinetic/source-board.png",
+      "/assets/visual-design-real/kinetic/board.webp",
+      "/assets/visual-design-real/kinetic/cover.png",
+      "/assets/visual-design-real/kinetic/cover.webp",
+      "/assets/visual-design-real/kinetic/meta-ad.webp",
+      "/assets/visual-design-real/kinetic/instagram-story.webp",
+      "/assets/visual-design-real/kinetic/retargeting-banner.webp",
+      "/assets/visual-design-real/kinetic/offer-visual.webp",
+      "/assets/visual-design-real/kinetic/app-store.webp"
+    ],
+    "svgAssets": [],
+    "compositedAssets": [
+      "/assets/visual-design-real/kinetic/cover.webp",
+      "/assets/visual-design-real/kinetic/meta-ad.webp",
+      "/assets/visual-design-real/kinetic/instagram-story.webp",
+      "/assets/visual-design-real/kinetic/retargeting-banner.webp",
+      "/assets/visual-design-real/kinetic/offer-visual.webp",
+      "/assets/visual-design-real/kinetic/app-store.webp"
+    ]
+  },
+  {
+    "id": "form-26",
+    "title": "FORM / 26",
+    "category": "Architecture Magazine / Editorial",
+    "filters": [
+      "editorial"
+    ],
+    "capabilities": [
+      "Editorial layout",
+      "Magazine design",
+      "Print design",
+      "Typography systems",
+      "Readable long-form layout"
+    ],
+    "imageCount": 7,
+    "assetDirectory": "/assets/visual-design-real/form-26/",
+    "rasterAssets": [
+      "/assets/visual-design-real/form-26/source-board.png",
+      "/assets/visual-design-real/form-26/board.webp",
+      "/assets/visual-design-real/form-26/cover.png",
+      "/assets/visual-design-real/form-26/cover.webp",
+      "/assets/visual-design-real/form-26/contents.webp",
+      "/assets/visual-design-real/form-26/architecture-spread.webp",
+      "/assets/visual-design-real/form-26/long-form-spread.webp",
+      "/assets/visual-design-real/form-26/photo-led-spread.webp",
+      "/assets/visual-design-real/form-26/interview-spread.webp"
+    ],
+    "svgAssets": [],
+    "compositedAssets": [
+      "/assets/visual-design-real/form-26/cover.webp",
+      "/assets/visual-design-real/form-26/contents.webp",
+      "/assets/visual-design-real/form-26/architecture-spread.webp",
+      "/assets/visual-design-real/form-26/long-form-spread.webp",
+      "/assets/visual-design-real/form-26/photo-led-spread.webp",
+      "/assets/visual-design-real/form-26/interview-spread.webp"
+    ]
+  },
+  {
+    "id": "pawpaw",
+    "title": "PAWPAW",
+    "category": "Consumer Packaging / Pet Food",
+    "filters": [
+      "packaging",
+      "branding",
+      "campaigns"
+    ],
+    "capabilities": [
+      "Packaging",
+      "Consumer branding",
+      "Illustration integration",
+      "Retail graphics",
+      "Social media",
+      "Product variants"
+    ],
+    "imageCount": 7,
+    "assetDirectory": "/assets/visual-design-real/pawpaw/",
+    "rasterAssets": [
+      "/assets/visual-design-real/pawpaw/source-board.png",
+      "/assets/visual-design-real/pawpaw/board.webp",
+      "/assets/visual-design-real/pawpaw/cover.png",
+      "/assets/visual-design-real/pawpaw/cover.webp",
+      "/assets/visual-design-real/pawpaw/dog-package.webp",
+      "/assets/visual-design-real/pawpaw/cat-package.webp",
+      "/assets/visual-design-real/pawpaw/treat-variants.webp",
+      "/assets/visual-design-real/pawpaw/retail-shelf.webp",
+      "/assets/visual-design-real/pawpaw/shipping-social.webp"
+    ],
+    "svgAssets": [],
+    "compositedAssets": [
+      "/assets/visual-design-real/pawpaw/cover.webp",
+      "/assets/visual-design-real/pawpaw/dog-package.webp",
+      "/assets/visual-design-real/pawpaw/cat-package.webp",
+      "/assets/visual-design-real/pawpaw/treat-variants.webp",
+      "/assets/visual-design-real/pawpaw/retail-shelf.webp",
+      "/assets/visual-design-real/pawpaw/shipping-social.webp"
+    ]
+  },
+  {
+    "id": "maison-elan",
+    "title": "MAISON ÉLAN",
+    "category": "Fashion Editorial Campaign",
+    "filters": [
+      "campaigns",
+      "editorial",
+      "digital"
+    ],
+    "capabilities": [
+      "Fashion",
+      "Campaign systems",
+      "Editorial layout",
+      "Social media",
+      "Digital banners",
+      "Poster design"
+    ],
+    "imageCount": 7,
+    "assetDirectory": "/assets/visual-design-real/maison-elan/",
+    "rasterAssets": [
+      "/assets/visual-design-real/maison-elan/source-board.png",
+      "/assets/visual-design-real/maison-elan/board.webp",
+      "/assets/visual-design-real/maison-elan/cover.png",
+      "/assets/visual-design-real/maison-elan/cover.webp",
+      "/assets/visual-design-real/maison-elan/lookbook-cover.webp",
+      "/assets/visual-design-real/maison-elan/lookbook-spread.webp",
+      "/assets/visual-design-real/maison-elan/invitation.webp",
+      "/assets/visual-design-real/maison-elan/social-campaign.webp",
+      "/assets/visual-design-real/maison-elan/boutique-poster.webp"
+    ],
+    "svgAssets": [],
+    "compositedAssets": [
+      "/assets/visual-design-real/maison-elan/cover.webp",
+      "/assets/visual-design-real/maison-elan/lookbook-cover.webp",
+      "/assets/visual-design-real/maison-elan/lookbook-spread.webp",
+      "/assets/visual-design-real/maison-elan/invitation.webp",
+      "/assets/visual-design-real/maison-elan/social-campaign.webp",
+      "/assets/visual-design-real/maison-elan/boutique-poster.webp"
+    ]
+  },
+  {
+    "id": "verde",
+    "title": "VERDE",
+    "category": "Olive Oil Packaging / Retail",
+    "filters": [
+      "packaging",
+      "branding"
+    ],
+    "capabilities": [
+      "Packaging",
+      "Labels",
+      "Retail graphics",
+      "Food & beverage",
+      "Print design",
+      "Product variants"
+    ],
+    "imageCount": 7,
+    "assetDirectory": "/assets/visual-design-real/verde/",
+    "rasterAssets": [
+      "/assets/visual-design-real/verde/source-board.png",
+      "/assets/visual-design-real/verde/board.webp",
+      "/assets/visual-design-real/verde/cover.png",
+      "/assets/visual-design-real/verde/cover.webp",
+      "/assets/visual-design-real/verde/front-label.webp",
+      "/assets/visual-design-real/verde/back-label.webp",
+      "/assets/visual-design-real/verde/product-family.webp",
+      "/assets/visual-design-real/verde/retail-shelf.webp",
+      "/assets/visual-design-real/verde/recipe-shipping.webp"
+    ],
+    "svgAssets": [],
+    "compositedAssets": [
+      "/assets/visual-design-real/verde/cover.webp",
+      "/assets/visual-design-real/verde/front-label.webp",
+      "/assets/visual-design-real/verde/back-label.webp",
+      "/assets/visual-design-real/verde/product-family.webp",
+      "/assets/visual-design-real/verde/retail-shelf.webp",
+      "/assets/visual-design-real/verde/recipe-shipping.webp"
+    ]
+  },
+  {
+    "id": "future-forum",
+    "title": "FUTURE FORUM",
+    "category": "Business Conference Identity",
+    "filters": [
+      "branding",
+      "campaigns",
+      "corporate",
+      "digital"
+    ],
+    "capabilities": [
+      "Event identity",
+      "Signage",
+      "Presentation design",
+      "Social media",
+      "Corporate communication",
+      "Poster design"
+    ],
+    "imageCount": 7,
+    "assetDirectory": "/assets/visual-design-real/future-forum/",
+    "rasterAssets": [
+      "/assets/visual-design-real/future-forum/source-board.png",
+      "/assets/visual-design-real/future-forum/board.webp",
+      "/assets/visual-design-real/future-forum/cover.png",
+      "/assets/visual-design-real/future-forum/cover.webp",
+      "/assets/visual-design-real/future-forum/stage-screen.webp",
+      "/assets/visual-design-real/future-forum/social-template.webp",
+      "/assets/visual-design-real/future-forum/badge-lanyard.webp",
+      "/assets/visual-design-real/future-forum/venue-signage.webp",
+      "/assets/visual-design-real/future-forum/presentation-screen.webp"
+    ],
+    "svgAssets": [],
+    "compositedAssets": [
+      "/assets/visual-design-real/future-forum/cover.webp",
+      "/assets/visual-design-real/future-forum/stage-screen.webp",
+      "/assets/visual-design-real/future-forum/social-template.webp",
+      "/assets/visual-design-real/future-forum/badge-lanyard.webp",
+      "/assets/visual-design-real/future-forum/venue-signage.webp",
+      "/assets/visual-design-real/future-forum/presentation-screen.webp"
+    ]
+  },
+  {
+    "id": "kora",
+    "title": "KORA",
+    "category": "Natural Skincare / Brand Identity",
+    "filters": [
+      "branding",
+      "packaging",
+      "campaigns"
+    ],
+    "capabilities": [
+      "Beauty campaign design",
+      "Packaging",
+      "Labels",
+      "Brand identity",
+      "Social media",
+      "Consumer branding"
+    ],
+    "imageCount": 7,
+    "assetDirectory": "/assets/visual-design-real/kora/",
+    "rasterAssets": [
+      "/assets/visual-design-real/kora/source-board.png",
+      "/assets/visual-design-real/kora/board.webp",
+      "/assets/visual-design-real/kora/cover.png",
+      "/assets/visual-design-real/kora/cover.webp",
+      "/assets/visual-design-real/kora/bottle.webp",
+      "/assets/visual-design-real/kora/jar.webp",
+      "/assets/visual-design-real/kora/outer-packaging.webp",
+      "/assets/visual-design-real/kora/shipping-stickers.webp",
+      "/assets/visual-design-real/kora/social-launch.webp"
+    ],
+    "svgAssets": [],
+    "compositedAssets": [
+      "/assets/visual-design-real/kora/cover.webp",
+      "/assets/visual-design-real/kora/bottle.webp",
+      "/assets/visual-design-real/kora/jar.webp",
+      "/assets/visual-design-real/kora/outer-packaging.webp",
+      "/assets/visual-design-real/kora/shipping-stickers.webp",
+      "/assets/visual-design-real/kora/social-launch.webp"
+    ]
+  },
+  {
+    "id": "no-signal",
+    "title": "NO SIGNAL",
+    "category": "Experimental Poster Series",
+    "filters": [
+      "editorial",
+      "digital"
+    ],
+    "capabilities": [
+      "Poster design",
+      "Typography systems",
+      "Experimental design",
+      "Image treatment",
+      "Print design"
+    ],
+    "imageCount": 7,
+    "assetDirectory": "/assets/visual-design-real/no-signal/",
+    "rasterAssets": [
+      "/assets/visual-design-real/no-signal/source-board.png",
+      "/assets/visual-design-real/no-signal/board.webp",
+      "/assets/visual-design-real/no-signal/cover.png",
+      "/assets/visual-design-real/no-signal/cover.webp",
+      "/assets/visual-design-real/no-signal/black-poster.webp",
+      "/assets/visual-design-real/no-signal/texture-closeup.webp",
+      "/assets/visual-design-real/no-signal/gallery-wall.webp",
+      "/assets/visual-design-real/no-signal/print-stack.webp",
+      "/assets/visual-design-real/no-signal/street-display.webp"
+    ],
+    "svgAssets": [],
+    "compositedAssets": [
+      "/assets/visual-design-real/no-signal/cover.webp",
+      "/assets/visual-design-real/no-signal/black-poster.webp",
+      "/assets/visual-design-real/no-signal/texture-closeup.webp",
+      "/assets/visual-design-real/no-signal/gallery-wall.webp",
+      "/assets/visual-design-real/no-signal/print-stack.webp",
+      "/assets/visual-design-real/no-signal/street-display.webp"
+    ]
+  },
+  {
+    "id": "orbit",
+    "title": "ORBIT",
+    "category": "Fintech Corporate Communication",
+    "filters": [
+      "corporate",
+      "digital",
+      "branding"
+    ],
+    "capabilities": [
+      "Fintech communication",
+      "Corporate design",
+      "Data visualization",
+      "Pitch decks",
+      "Presentation design",
+      "LinkedIn graphics",
+      "Email header"
+    ],
+    "imageCount": 7,
+    "assetDirectory": "/assets/visual-design-real/orbit/",
+    "rasterAssets": [
+      "/assets/visual-design-real/orbit/source-board.png",
+      "/assets/visual-design-real/orbit/board.webp",
+      "/assets/visual-design-real/orbit/cover.png",
+      "/assets/visual-design-real/orbit/cover.webp",
+      "/assets/visual-design-real/orbit/kpi-dashboard.webp",
+      "/assets/visual-design-real/orbit/annual-report.webp",
+      "/assets/visual-design-real/orbit/webinar-banner.webp",
+      "/assets/visual-design-real/orbit/linkedin-post.webp",
+      "/assets/visual-design-real/orbit/conference-screen.webp"
+    ],
+    "svgAssets": [],
+    "compositedAssets": [
+      "/assets/visual-design-real/orbit/cover.webp",
+      "/assets/visual-design-real/orbit/kpi-dashboard.webp",
+      "/assets/visual-design-real/orbit/annual-report.webp",
+      "/assets/visual-design-real/orbit/webinar-banner.webp",
+      "/assets/visual-design-real/orbit/linkedin-post.webp",
+      "/assets/visual-design-real/orbit/conference-screen.webp"
+    ]
+  },
+  {
+    "id": "miso-club",
+    "title": "MISO CLUB",
+    "category": "Restaurant Identity / Print & Campaign",
+    "filters": [
+      "branding",
+      "campaigns",
+      "editorial"
+    ],
+    "capabilities": [
+      "Restaurant branding",
+      "Menu design",
+      "Packaging",
+      "Social media",
+      "Campaign systems",
+      "Retail graphics"
+    ],
+    "imageCount": 7,
+    "assetDirectory": "/assets/visual-design-real/miso-club/",
+    "rasterAssets": [
+      "/assets/visual-design-real/miso-club/source-board.png",
+      "/assets/visual-design-real/miso-club/board.webp",
+      "/assets/visual-design-real/miso-club/cover.png",
+      "/assets/visual-design-real/miso-club/cover.webp",
+      "/assets/visual-design-real/miso-club/takeaway-box.webp",
+      "/assets/visual-design-real/miso-club/delivery-bag.webp",
+      "/assets/visual-design-real/miso-club/loyalty-sleeve.webp",
+      "/assets/visual-design-real/miso-club/window-poster.webp",
+      "/assets/visual-design-real/miso-club/social-post.webp"
+    ],
+    "svgAssets": [],
+    "compositedAssets": [
+      "/assets/visual-design-real/miso-club/cover.webp",
+      "/assets/visual-design-real/miso-club/takeaway-box.webp",
+      "/assets/visual-design-real/miso-club/delivery-bag.webp",
+      "/assets/visual-design-real/miso-club/loyalty-sleeve.webp",
+      "/assets/visual-design-real/miso-club/window-poster.webp",
+      "/assets/visual-design-real/miso-club/social-post.webp"
+    ]
+  },
+  {
+    "id": "nest",
+    "title": "NEST",
+    "category": "Residential Development / Sales Communication",
+    "filters": [
+      "branding",
+      "corporate",
+      "editorial",
+      "digital"
+    ],
+    "capabilities": [
+      "Real estate graphics",
+      "Corporate design",
+      "Editorial layout",
+      "Outdoor advertising",
+      "Presentation design",
+      "Sales collateral"
+    ],
+    "imageCount": 7,
+    "assetDirectory": "/assets/visual-design-real/nest/",
+    "rasterAssets": [
+      "/assets/visual-design-real/nest/source-board.png",
+      "/assets/visual-design-real/nest/board.webp",
+      "/assets/visual-design-real/nest/cover.png",
+      "/assets/visual-design-real/nest/cover.webp",
+      "/assets/visual-design-real/nest/brochure-spread.webp",
+      "/assets/visual-design-real/nest/sales-presentation.webp",
+      "/assets/visual-design-real/nest/billboard.webp",
+      "/assets/visual-design-real/nest/construction-fence.webp",
+      "/assets/visual-design-real/nest/sales-office.webp"
+    ],
+    "svgAssets": [],
+    "compositedAssets": [
+      "/assets/visual-design-real/nest/cover.webp",
+      "/assets/visual-design-real/nest/brochure-spread.webp",
+      "/assets/visual-design-real/nest/sales-presentation.webp",
+      "/assets/visual-design-real/nest/billboard.webp",
+      "/assets/visual-design-real/nest/construction-fence.webp",
+      "/assets/visual-design-real/nest/sales-office.webp"
+    ]
+  },
+  {
+    "id": "echo-commerce",
+    "title": "ECHO COMMERCE",
+    "category": "E-commerce Marketing Design",
+    "filters": [
+      "digital",
+      "campaigns",
+      "corporate"
+    ],
+    "capabilities": [
+      "E-commerce graphics",
+      "Google display advertising",
+      "Paid ads",
+      "Digital banners",
+      "Email header",
+      "Product comparison",
+      "Retail graphics"
+    ],
+    "imageCount": 7,
+    "assetDirectory": "/assets/visual-design-real/echo-commerce/",
+    "rasterAssets": [
+      "/assets/visual-design-real/echo-commerce/source-board.png",
+      "/assets/visual-design-real/echo-commerce/board.webp",
+      "/assets/visual-design-real/echo-commerce/cover.png",
+      "/assets/visual-design-real/echo-commerce/cover.webp",
+      "/assets/visual-design-real/echo-commerce/sale-tablet.webp",
+      "/assets/visual-design-real/echo-commerce/mobile-grid.webp",
+      "/assets/visual-design-real/echo-commerce/email-hero.webp",
+      "/assets/visual-design-real/echo-commerce/social-carousel.webp",
+      "/assets/visual-design-real/echo-commerce/retail-display.webp"
+    ],
+    "svgAssets": [],
+    "compositedAssets": [
+      "/assets/visual-design-real/echo-commerce/cover.webp",
+      "/assets/visual-design-real/echo-commerce/sale-tablet.webp",
+      "/assets/visual-design-real/echo-commerce/mobile-grid.webp",
+      "/assets/visual-design-real/echo-commerce/email-hero.webp",
+      "/assets/visual-design-real/echo-commerce/social-carousel.webp",
+      "/assets/visual-design-real/echo-commerce/retail-display.webp"
+    ]
+  },
+  {
+    "id": "aura-beauty",
+    "title": "AURA BEAUTY",
+    "category": "Beauty Campaign / Digital & Retail",
+    "filters": [
+      "campaigns",
+      "digital",
+      "packaging"
+    ],
+    "capabilities": [
+      "Beauty campaign design",
+      "Social media",
+      "Paid ads",
+      "Digital banners",
+      "Retail poster",
+      "Email header",
+      "Marketing design"
+    ],
+    "imageCount": 7,
+    "assetDirectory": "/assets/visual-design-real/aura-beauty/",
+    "rasterAssets": [
+      "/assets/visual-design-real/aura-beauty/source-board.png",
+      "/assets/visual-design-real/aura-beauty/board.webp",
+      "/assets/visual-design-real/aura-beauty/cover.png",
+      "/assets/visual-design-real/aura-beauty/cover.webp",
+      "/assets/visual-design-real/aura-beauty/packaging-closeup.webp",
+      "/assets/visual-design-real/aura-beauty/retail-display.webp",
+      "/assets/visual-design-real/aura-beauty/digital-hero.webp",
+      "/assets/visual-design-real/aura-beauty/paid-social.webp",
+      "/assets/visual-design-real/aura-beauty/launch-display.webp"
+    ],
+    "svgAssets": [],
+    "compositedAssets": [
+      "/assets/visual-design-real/aura-beauty/cover.webp",
+      "/assets/visual-design-real/aura-beauty/packaging-closeup.webp",
+      "/assets/visual-design-real/aura-beauty/retail-display.webp",
+      "/assets/visual-design-real/aura-beauty/digital-hero.webp",
+      "/assets/visual-design-real/aura-beauty/paid-social.webp",
+      "/assets/visual-design-real/aura-beauty/launch-display.webp"
+    ]
+  }
+];

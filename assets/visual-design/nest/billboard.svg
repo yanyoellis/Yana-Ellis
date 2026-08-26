@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1100" viewBox="0 0 1600 1100" role="img" aria-label="NEST Billboard">
-  <title>NEST - Billboard</title>
-  <desc>Original commercial portfolio visual for NEST.</desc>
-  <rect x="0" y="0" width="1600" height="1100" fill="#d8d4ca"/><rect x="128" y="165" width="1344" height="528" fill="#ebe5d8" stroke="#222" stroke-width="8"/><text x="224.00000000000003" y="396" font-size="112.00000000000001" fill="#20251f" font-family="Inter, Arial, sans-serif" font-weight="900">Quiet city living</text><text x="224.00000000000003" y="550" font-size="48" fill="#8f9a83" font-family="Inter, Arial, sans-serif" font-weight="800" letter-spacing="2">Learn more</text><rect x="352" y="693" width="64" height="242" fill="#555"/><rect x="1184" y="693" width="64" height="242" fill="#555"/><line x1="0" y1="946" x2="1600" y2="946" stroke="#999" stroke-width="3" opacity="1"/>
-</svg>

@@ -1,0 +1,1850 @@
+{
+  "generatedAt": "2026-08-26T15:18:31.184564+00:00",
+  "sourceDirectory": "C:\\Users\\nyano\\.codex\\generated_images\\019f161d-f160-7f91-93de-355923e32b88",
+  "assetRoot": "/assets/visual-design-real/",
+  "sourceBoardsGeneratedWith": "image_gen.imagegen",
+  "projectCount": 18,
+  "sourceImageCount": 18,
+  "activeWebpCount": 126,
+  "compositedWebpCount": 108,
+  "pngExportCount": 36,
+  "svgCount": 0,
+  "projects": [
+    {
+      "id": "lumiere-no7",
+      "title": "LUMIÈRE NO. 7",
+      "directory": "/assets/visual-design-real/lumiere-no7/",
+      "sourceImage": "call_G5f8oLKQ3cCb8SAUnWvAExB7.png",
+      "sourceBoard": "source-board.png",
+      "board": "board.webp",
+      "cover": "cover.webp",
+      "coverPng": "cover.png",
+      "boardAsset": {
+        "id": "board",
+        "title": "Full Generated Case Board",
+        "src": "/assets/visual-design-real/lumiere-no7/board.webp",
+        "file": "board.webp",
+        "format": "webp",
+        "orientation": "portrait",
+        "generated": true,
+        "composited": false
+      },
+      "assets": [
+        {
+          "id": "cover",
+          "title": "Box and Bottle Set",
+          "src": "/assets/visual-design-real/lumiere-no7/cover.webp",
+          "file": "cover.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "bottle-close-up",
+          "title": "Bottle Close-Up",
+          "src": "/assets/visual-design-real/lumiere-no7/bottle-close-up.webp",
+          "file": "bottle-close-up.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "outer-box",
+          "title": "Outer Box",
+          "src": "/assets/visual-design-real/lumiere-no7/outer-box.webp",
+          "file": "outer-box.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "product-set",
+          "title": "Product Set",
+          "src": "/assets/visual-design-real/lumiere-no7/product-set.webp",
+          "file": "product-set.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "campaign-poster",
+          "title": "Campaign Poster",
+          "src": "/assets/visual-design-real/lumiere-no7/campaign-poster.webp",
+          "file": "campaign-poster.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "social-launch",
+          "title": "Social Launch",
+          "src": "/assets/visual-design-real/lumiere-no7/social-launch.webp",
+          "file": "social-launch.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        }
+      ],
+      "rasterFiles": [
+        "source-board.png",
+        "board.webp",
+        "cover.png",
+        "cover.webp",
+        "bottle-close-up.webp",
+        "outer-box.webp",
+        "product-set.webp",
+        "campaign-poster.webp",
+        "social-launch.webp"
+      ],
+      "svgFiles": [],
+      "compositedFiles": [
+        "cover.webp",
+        "bottle-close-up.webp",
+        "outer-box.webp",
+        "product-set.webp",
+        "campaign-poster.webp",
+        "social-launch.webp"
+      ]
+    },
+    {
+      "id": "sola",
+      "title": "SOLA",
+      "directory": "/assets/visual-design-real/sola/",
+      "sourceImage": "call_MlLCckHrwlml261YqvkeF8LV.png",
+      "sourceBoard": "source-board.png",
+      "board": "board.webp",
+      "cover": "cover.webp",
+      "coverPng": "cover.png",
+      "boardAsset": {
+        "id": "board",
+        "title": "Full Generated Case Board",
+        "src": "/assets/visual-design-real/sola/board.webp",
+        "file": "board.webp",
+        "format": "webp",
+        "orientation": "portrait",
+        "generated": true,
+        "composited": false
+      },
+      "assets": [
+        {
+          "id": "cover",
+          "title": "Product Trio",
+          "src": "/assets/visual-design-real/sola/cover.webp",
+          "file": "cover.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "variant-lineup",
+          "title": "Variant Lineup",
+          "src": "/assets/visual-design-real/sola/variant-lineup.webp",
+          "file": "variant-lineup.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "summer-key-visual",
+          "title": "Summer Key Visual",
+          "src": "/assets/visual-design-real/sola/summer-key-visual.webp",
+          "file": "summer-key-visual.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "billboard",
+          "title": "Billboard",
+          "src": "/assets/visual-design-real/sola/billboard.webp",
+          "file": "billboard.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "instagram-story",
+          "title": "Instagram Story",
+          "src": "/assets/visual-design-real/sola/instagram-story.webp",
+          "file": "instagram-story.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "retail-shelf",
+          "title": "Retail Shelf",
+          "src": "/assets/visual-design-real/sola/retail-shelf.webp",
+          "file": "retail-shelf.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        }
+      ],
+      "rasterFiles": [
+        "source-board.png",
+        "board.webp",
+        "cover.png",
+        "cover.webp",
+        "variant-lineup.webp",
+        "summer-key-visual.webp",
+        "billboard.webp",
+        "instagram-story.webp",
+        "retail-shelf.webp"
+      ],
+      "svgFiles": [],
+      "compositedFiles": [
+        "cover.webp",
+        "variant-lineup.webp",
+        "summer-key-visual.webp",
+        "billboard.webp",
+        "instagram-story.webp",
+        "retail-shelf.webp"
+      ]
+    },
+    {
+      "id": "northline",
+      "title": "NORTHLINE",
+      "directory": "/assets/visual-design-real/northline/",
+      "sourceImage": "call_3EmHdez9JtCXMMJF10iajI4P.png",
+      "sourceBoard": "source-board.png",
+      "board": "board.webp",
+      "cover": "cover.webp",
+      "coverPng": "cover.png",
+      "boardAsset": {
+        "id": "board",
+        "title": "Full Generated Case Board",
+        "src": "/assets/visual-design-real/northline/board.webp",
+        "file": "board.webp",
+        "format": "webp",
+        "orientation": "portrait",
+        "generated": true,
+        "composited": false
+      },
+      "assets": [
+        {
+          "id": "cover",
+          "title": "Stationery System",
+          "src": "/assets/visual-design-real/northline/cover.webp",
+          "file": "cover.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "deck-laptop",
+          "title": "Deck on Laptop",
+          "src": "/assets/visual-design-real/northline/deck-laptop.webp",
+          "file": "deck-laptop.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "annual-report",
+          "title": "Annual Report",
+          "src": "/assets/visual-design-real/northline/annual-report.webp",
+          "file": "annual-report.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "conference-screen",
+          "title": "Conference Screen",
+          "src": "/assets/visual-design-real/northline/conference-screen.webp",
+          "file": "conference-screen.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "linkedin-banner",
+          "title": "LinkedIn Banner",
+          "src": "/assets/visual-design-real/northline/linkedin-banner.webp",
+          "file": "linkedin-banner.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "badge-lanyard",
+          "title": "Badge and Lanyard",
+          "src": "/assets/visual-design-real/northline/badge-lanyard.webp",
+          "file": "badge-lanyard.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        }
+      ],
+      "rasterFiles": [
+        "source-board.png",
+        "board.webp",
+        "cover.png",
+        "cover.webp",
+        "deck-laptop.webp",
+        "annual-report.webp",
+        "conference-screen.webp",
+        "linkedin-banner.webp",
+        "badge-lanyard.webp"
+      ],
+      "svgFiles": [],
+      "compositedFiles": [
+        "cover.webp",
+        "deck-laptop.webp",
+        "annual-report.webp",
+        "conference-screen.webp",
+        "linkedin-banner.webp",
+        "badge-lanyard.webp"
+      ]
+    },
+    {
+      "id": "after-midnight",
+      "title": "AFTER MIDNIGHT",
+      "directory": "/assets/visual-design-real/after-midnight/",
+      "sourceImage": "call_NKy3aGCLcsL6rblrDg5NSiuT.png",
+      "sourceBoard": "source-board.png",
+      "board": "board.webp",
+      "cover": "cover.webp",
+      "coverPng": "cover.png",
+      "boardAsset": {
+        "id": "board",
+        "title": "Full Generated Case Board",
+        "src": "/assets/visual-design-real/after-midnight/board.webp",
+        "file": "board.webp",
+        "format": "webp",
+        "orientation": "portrait",
+        "generated": true,
+        "composited": false
+      },
+      "assets": [
+        {
+          "id": "cover",
+          "title": "Wall Poster",
+          "src": "/assets/visual-design-real/after-midnight/cover.webp",
+          "file": "cover.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "alternate-poster",
+          "title": "Alternate Poster",
+          "src": "/assets/visual-design-real/after-midnight/alternate-poster.webp",
+          "file": "alternate-poster.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "stage-screen",
+          "title": "Stage Screen",
+          "src": "/assets/visual-design-real/after-midnight/stage-screen.webp",
+          "file": "stage-screen.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "ticket-wristband",
+          "title": "Ticket and Wristband",
+          "src": "/assets/visual-design-real/after-midnight/ticket-wristband.webp",
+          "file": "ticket-wristband.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "instagram-story",
+          "title": "Instagram Story",
+          "src": "/assets/visual-design-real/after-midnight/instagram-story.webp",
+          "file": "instagram-story.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "venue-signage",
+          "title": "Venue Signage",
+          "src": "/assets/visual-design-real/after-midnight/venue-signage.webp",
+          "file": "venue-signage.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        }
+      ],
+      "rasterFiles": [
+        "source-board.png",
+        "board.webp",
+        "cover.png",
+        "cover.webp",
+        "alternate-poster.webp",
+        "stage-screen.webp",
+        "ticket-wristband.webp",
+        "instagram-story.webp",
+        "venue-signage.webp"
+      ],
+      "svgFiles": [],
+      "compositedFiles": [
+        "cover.webp",
+        "alternate-poster.webp",
+        "stage-screen.webp",
+        "ticket-wristband.webp",
+        "instagram-story.webp",
+        "venue-signage.webp"
+      ]
+    },
+    {
+      "id": "casa-fiora",
+      "title": "CASA FIORA",
+      "directory": "/assets/visual-design-real/casa-fiora/",
+      "sourceImage": "call_ML9ZDS3lp6qzYTSBCA2GRjce.png",
+      "sourceBoard": "source-board.png",
+      "board": "board.webp",
+      "cover": "cover.webp",
+      "coverPng": "cover.png",
+      "boardAsset": {
+        "id": "board",
+        "title": "Full Generated Case Board",
+        "src": "/assets/visual-design-real/casa-fiora/board.webp",
+        "file": "board.webp",
+        "format": "webp",
+        "orientation": "portrait",
+        "generated": true,
+        "composited": false
+      },
+      "assets": [
+        {
+          "id": "cover",
+          "title": "Stationery Set",
+          "src": "/assets/visual-design-real/casa-fiora/cover.webp",
+          "file": "cover.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "room-key",
+          "title": "Room Key",
+          "src": "/assets/visual-design-real/casa-fiora/room-key.webp",
+          "file": "room-key.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "breakfast-menu",
+          "title": "Breakfast Menu",
+          "src": "/assets/visual-design-real/casa-fiora/breakfast-menu.webp",
+          "file": "breakfast-menu.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "postcard-set",
+          "title": "Postcard Set",
+          "src": "/assets/visual-design-real/casa-fiora/postcard-set.webp",
+          "file": "postcard-set.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "tote-guide",
+          "title": "Tote and Guide",
+          "src": "/assets/visual-design-real/casa-fiora/tote-guide.webp",
+          "file": "tote-guide.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "hotel-signage",
+          "title": "Hotel Signage",
+          "src": "/assets/visual-design-real/casa-fiora/hotel-signage.webp",
+          "file": "hotel-signage.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        }
+      ],
+      "rasterFiles": [
+        "source-board.png",
+        "board.webp",
+        "cover.png",
+        "cover.webp",
+        "room-key.webp",
+        "breakfast-menu.webp",
+        "postcard-set.webp",
+        "tote-guide.webp",
+        "hotel-signage.webp"
+      ],
+      "svgFiles": [],
+      "compositedFiles": [
+        "cover.webp",
+        "room-key.webp",
+        "breakfast-menu.webp",
+        "postcard-set.webp",
+        "tote-guide.webp",
+        "hotel-signage.webp"
+      ]
+    },
+    {
+      "id": "kinetic",
+      "title": "KINETIC",
+      "directory": "/assets/visual-design-real/kinetic/",
+      "sourceImage": "call_lMTmS9RmXwiyWoPgNdUcB7xG.png",
+      "sourceBoard": "source-board.png",
+      "board": "board.webp",
+      "cover": "cover.webp",
+      "coverPng": "cover.png",
+      "boardAsset": {
+        "id": "board",
+        "title": "Full Generated Case Board",
+        "src": "/assets/visual-design-real/kinetic/board.webp",
+        "file": "board.webp",
+        "format": "webp",
+        "orientation": "portrait",
+        "generated": true,
+        "composited": false
+      },
+      "assets": [
+        {
+          "id": "cover",
+          "title": "Mobile Campaign",
+          "src": "/assets/visual-design-real/kinetic/cover.webp",
+          "file": "cover.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "meta-ad",
+          "title": "Meta Ad",
+          "src": "/assets/visual-design-real/kinetic/meta-ad.webp",
+          "file": "meta-ad.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "instagram-story",
+          "title": "Instagram Story",
+          "src": "/assets/visual-design-real/kinetic/instagram-story.webp",
+          "file": "instagram-story.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "retargeting-banner",
+          "title": "Retargeting Banner",
+          "src": "/assets/visual-design-real/kinetic/retargeting-banner.webp",
+          "file": "retargeting-banner.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "offer-visual",
+          "title": "Offer Visual",
+          "src": "/assets/visual-design-real/kinetic/offer-visual.webp",
+          "file": "offer-visual.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "app-store",
+          "title": "App Store Asset",
+          "src": "/assets/visual-design-real/kinetic/app-store.webp",
+          "file": "app-store.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        }
+      ],
+      "rasterFiles": [
+        "source-board.png",
+        "board.webp",
+        "cover.png",
+        "cover.webp",
+        "meta-ad.webp",
+        "instagram-story.webp",
+        "retargeting-banner.webp",
+        "offer-visual.webp",
+        "app-store.webp"
+      ],
+      "svgFiles": [],
+      "compositedFiles": [
+        "cover.webp",
+        "meta-ad.webp",
+        "instagram-story.webp",
+        "retargeting-banner.webp",
+        "offer-visual.webp",
+        "app-store.webp"
+      ]
+    },
+    {
+      "id": "form-26",
+      "title": "FORM / 26",
+      "directory": "/assets/visual-design-real/form-26/",
+      "sourceImage": "call_g3TqLxANC0BVYiT2Rl3A4LQq.png",
+      "sourceBoard": "source-board.png",
+      "board": "board.webp",
+      "cover": "cover.webp",
+      "coverPng": "cover.png",
+      "boardAsset": {
+        "id": "board",
+        "title": "Full Generated Case Board",
+        "src": "/assets/visual-design-real/form-26/board.webp",
+        "file": "board.webp",
+        "format": "webp",
+        "orientation": "portrait",
+        "generated": true,
+        "composited": false
+      },
+      "assets": [
+        {
+          "id": "cover",
+          "title": "Magazine Cover",
+          "src": "/assets/visual-design-real/form-26/cover.webp",
+          "file": "cover.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "contents",
+          "title": "Contents",
+          "src": "/assets/visual-design-real/form-26/contents.webp",
+          "file": "contents.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "architecture-spread",
+          "title": "Architecture Spread",
+          "src": "/assets/visual-design-real/form-26/architecture-spread.webp",
+          "file": "architecture-spread.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "long-form-spread",
+          "title": "Long-Form Spread",
+          "src": "/assets/visual-design-real/form-26/long-form-spread.webp",
+          "file": "long-form-spread.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "photo-led-spread",
+          "title": "Photo-Led Spread",
+          "src": "/assets/visual-design-real/form-26/photo-led-spread.webp",
+          "file": "photo-led-spread.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "interview-spread",
+          "title": "Interview Spread",
+          "src": "/assets/visual-design-real/form-26/interview-spread.webp",
+          "file": "interview-spread.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        }
+      ],
+      "rasterFiles": [
+        "source-board.png",
+        "board.webp",
+        "cover.png",
+        "cover.webp",
+        "contents.webp",
+        "architecture-spread.webp",
+        "long-form-spread.webp",
+        "photo-led-spread.webp",
+        "interview-spread.webp"
+      ],
+      "svgFiles": [],
+      "compositedFiles": [
+        "cover.webp",
+        "contents.webp",
+        "architecture-spread.webp",
+        "long-form-spread.webp",
+        "photo-led-spread.webp",
+        "interview-spread.webp"
+      ]
+    },
+    {
+      "id": "pawpaw",
+      "title": "PAWPAW",
+      "directory": "/assets/visual-design-real/pawpaw/",
+      "sourceImage": "call_bSxuGGSj5qTeWJ7lOGr4XOTY.png",
+      "sourceBoard": "source-board.png",
+      "board": "board.webp",
+      "cover": "cover.webp",
+      "coverPng": "cover.png",
+      "boardAsset": {
+        "id": "board",
+        "title": "Full Generated Case Board",
+        "src": "/assets/visual-design-real/pawpaw/board.webp",
+        "file": "board.webp",
+        "format": "webp",
+        "orientation": "portrait",
+        "generated": true,
+        "composited": false
+      },
+      "assets": [
+        {
+          "id": "cover",
+          "title": "Package Lineup",
+          "src": "/assets/visual-design-real/pawpaw/cover.webp",
+          "file": "cover.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "dog-package",
+          "title": "Dog Package",
+          "src": "/assets/visual-design-real/pawpaw/dog-package.webp",
+          "file": "dog-package.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "cat-package",
+          "title": "Cat Package",
+          "src": "/assets/visual-design-real/pawpaw/cat-package.webp",
+          "file": "cat-package.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "treat-variants",
+          "title": "Treat Variants",
+          "src": "/assets/visual-design-real/pawpaw/treat-variants.webp",
+          "file": "treat-variants.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "retail-shelf",
+          "title": "Retail Shelf",
+          "src": "/assets/visual-design-real/pawpaw/retail-shelf.webp",
+          "file": "retail-shelf.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "shipping-social",
+          "title": "Shipping and Social",
+          "src": "/assets/visual-design-real/pawpaw/shipping-social.webp",
+          "file": "shipping-social.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        }
+      ],
+      "rasterFiles": [
+        "source-board.png",
+        "board.webp",
+        "cover.png",
+        "cover.webp",
+        "dog-package.webp",
+        "cat-package.webp",
+        "treat-variants.webp",
+        "retail-shelf.webp",
+        "shipping-social.webp"
+      ],
+      "svgFiles": [],
+      "compositedFiles": [
+        "cover.webp",
+        "dog-package.webp",
+        "cat-package.webp",
+        "treat-variants.webp",
+        "retail-shelf.webp",
+        "shipping-social.webp"
+      ]
+    },
+    {
+      "id": "maison-elan",
+      "title": "MAISON ÉLAN",
+      "directory": "/assets/visual-design-real/maison-elan/",
+      "sourceImage": "call_8bdAT0LtxfMkywqxZyJq4zGn.png",
+      "sourceBoard": "source-board.png",
+      "board": "board.webp",
+      "cover": "cover.webp",
+      "coverPng": "cover.png",
+      "boardAsset": {
+        "id": "board",
+        "title": "Full Generated Case Board",
+        "src": "/assets/visual-design-real/maison-elan/board.webp",
+        "file": "board.webp",
+        "format": "webp",
+        "orientation": "portrait",
+        "generated": true,
+        "composited": false
+      },
+      "assets": [
+        {
+          "id": "cover",
+          "title": "Campaign Key Visual",
+          "src": "/assets/visual-design-real/maison-elan/cover.webp",
+          "file": "cover.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "lookbook-cover",
+          "title": "Lookbook Cover",
+          "src": "/assets/visual-design-real/maison-elan/lookbook-cover.webp",
+          "file": "lookbook-cover.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "lookbook-spread",
+          "title": "Lookbook Spread",
+          "src": "/assets/visual-design-real/maison-elan/lookbook-spread.webp",
+          "file": "lookbook-spread.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "invitation",
+          "title": "Invitation",
+          "src": "/assets/visual-design-real/maison-elan/invitation.webp",
+          "file": "invitation.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "social-campaign",
+          "title": "Social Campaign",
+          "src": "/assets/visual-design-real/maison-elan/social-campaign.webp",
+          "file": "social-campaign.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "boutique-poster",
+          "title": "Boutique Poster",
+          "src": "/assets/visual-design-real/maison-elan/boutique-poster.webp",
+          "file": "boutique-poster.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        }
+      ],
+      "rasterFiles": [
+        "source-board.png",
+        "board.webp",
+        "cover.png",
+        "cover.webp",
+        "lookbook-cover.webp",
+        "lookbook-spread.webp",
+        "invitation.webp",
+        "social-campaign.webp",
+        "boutique-poster.webp"
+      ],
+      "svgFiles": [],
+      "compositedFiles": [
+        "cover.webp",
+        "lookbook-cover.webp",
+        "lookbook-spread.webp",
+        "invitation.webp",
+        "social-campaign.webp",
+        "boutique-poster.webp"
+      ]
+    },
+    {
+      "id": "verde",
+      "title": "VERDE",
+      "directory": "/assets/visual-design-real/verde/",
+      "sourceImage": "call_fZqhCBHMOy73UYRkOAxTjDOG.png",
+      "sourceBoard": "source-board.png",
+      "board": "board.webp",
+      "cover": "cover.webp",
+      "coverPng": "cover.png",
+      "boardAsset": {
+        "id": "board",
+        "title": "Full Generated Case Board",
+        "src": "/assets/visual-design-real/verde/board.webp",
+        "file": "board.webp",
+        "format": "webp",
+        "orientation": "portrait",
+        "generated": true,
+        "composited": false
+      },
+      "assets": [
+        {
+          "id": "cover",
+          "title": "Bottle and Gift Box",
+          "src": "/assets/visual-design-real/verde/cover.webp",
+          "file": "cover.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "front-label",
+          "title": "Front Label",
+          "src": "/assets/visual-design-real/verde/front-label.webp",
+          "file": "front-label.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "back-label",
+          "title": "Back Label",
+          "src": "/assets/visual-design-real/verde/back-label.webp",
+          "file": "back-label.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "product-family",
+          "title": "Product Family",
+          "src": "/assets/visual-design-real/verde/product-family.webp",
+          "file": "product-family.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "retail-shelf",
+          "title": "Retail Shelf",
+          "src": "/assets/visual-design-real/verde/retail-shelf.webp",
+          "file": "retail-shelf.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "recipe-shipping",
+          "title": "Recipe and Shipping",
+          "src": "/assets/visual-design-real/verde/recipe-shipping.webp",
+          "file": "recipe-shipping.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        }
+      ],
+      "rasterFiles": [
+        "source-board.png",
+        "board.webp",
+        "cover.png",
+        "cover.webp",
+        "front-label.webp",
+        "back-label.webp",
+        "product-family.webp",
+        "retail-shelf.webp",
+        "recipe-shipping.webp"
+      ],
+      "svgFiles": [],
+      "compositedFiles": [
+        "cover.webp",
+        "front-label.webp",
+        "back-label.webp",
+        "product-family.webp",
+        "retail-shelf.webp",
+        "recipe-shipping.webp"
+      ]
+    },
+    {
+      "id": "future-forum",
+      "title": "FUTURE FORUM",
+      "directory": "/assets/visual-design-real/future-forum/",
+      "sourceImage": "call_BBBcYEElu4mgWqBtb4FM0nah.png",
+      "sourceBoard": "source-board.png",
+      "board": "board.webp",
+      "cover": "cover.webp",
+      "coverPng": "cover.png",
+      "boardAsset": {
+        "id": "board",
+        "title": "Full Generated Case Board",
+        "src": "/assets/visual-design-real/future-forum/board.webp",
+        "file": "board.webp",
+        "format": "webp",
+        "orientation": "portrait",
+        "generated": true,
+        "composited": false
+      },
+      "assets": [
+        {
+          "id": "cover",
+          "title": "Wall Poster",
+          "src": "/assets/visual-design-real/future-forum/cover.webp",
+          "file": "cover.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "stage-screen",
+          "title": "Stage Screen",
+          "src": "/assets/visual-design-real/future-forum/stage-screen.webp",
+          "file": "stage-screen.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "social-template",
+          "title": "Social Template",
+          "src": "/assets/visual-design-real/future-forum/social-template.webp",
+          "file": "social-template.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "badge-lanyard",
+          "title": "Badge and Lanyard",
+          "src": "/assets/visual-design-real/future-forum/badge-lanyard.webp",
+          "file": "badge-lanyard.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "venue-signage",
+          "title": "Venue Signage",
+          "src": "/assets/visual-design-real/future-forum/venue-signage.webp",
+          "file": "venue-signage.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "presentation-screen",
+          "title": "Presentation Screen",
+          "src": "/assets/visual-design-real/future-forum/presentation-screen.webp",
+          "file": "presentation-screen.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        }
+      ],
+      "rasterFiles": [
+        "source-board.png",
+        "board.webp",
+        "cover.png",
+        "cover.webp",
+        "stage-screen.webp",
+        "social-template.webp",
+        "badge-lanyard.webp",
+        "venue-signage.webp",
+        "presentation-screen.webp"
+      ],
+      "svgFiles": [],
+      "compositedFiles": [
+        "cover.webp",
+        "stage-screen.webp",
+        "social-template.webp",
+        "badge-lanyard.webp",
+        "venue-signage.webp",
+        "presentation-screen.webp"
+      ]
+    },
+    {
+      "id": "kora",
+      "title": "KORA",
+      "directory": "/assets/visual-design-real/kora/",
+      "sourceImage": "call_KLlcUDV9v0YWiJnn0mWAFNQz.png",
+      "sourceBoard": "source-board.png",
+      "board": "board.webp",
+      "cover": "cover.webp",
+      "coverPng": "cover.png",
+      "boardAsset": {
+        "id": "board",
+        "title": "Full Generated Case Board",
+        "src": "/assets/visual-design-real/kora/board.webp",
+        "file": "board.webp",
+        "format": "webp",
+        "orientation": "portrait",
+        "generated": true,
+        "composited": false
+      },
+      "assets": [
+        {
+          "id": "cover",
+          "title": "Product Family",
+          "src": "/assets/visual-design-real/kora/cover.webp",
+          "file": "cover.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "bottle",
+          "title": "Bottle",
+          "src": "/assets/visual-design-real/kora/bottle.webp",
+          "file": "bottle.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "jar",
+          "title": "Jar",
+          "src": "/assets/visual-design-real/kora/jar.webp",
+          "file": "jar.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "outer-packaging",
+          "title": "Outer Packaging",
+          "src": "/assets/visual-design-real/kora/outer-packaging.webp",
+          "file": "outer-packaging.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "shipping-stickers",
+          "title": "Shipping Stickers",
+          "src": "/assets/visual-design-real/kora/shipping-stickers.webp",
+          "file": "shipping-stickers.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "social-launch",
+          "title": "Social Launch",
+          "src": "/assets/visual-design-real/kora/social-launch.webp",
+          "file": "social-launch.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        }
+      ],
+      "rasterFiles": [
+        "source-board.png",
+        "board.webp",
+        "cover.png",
+        "cover.webp",
+        "bottle.webp",
+        "jar.webp",
+        "outer-packaging.webp",
+        "shipping-stickers.webp",
+        "social-launch.webp"
+      ],
+      "svgFiles": [],
+      "compositedFiles": [
+        "cover.webp",
+        "bottle.webp",
+        "jar.webp",
+        "outer-packaging.webp",
+        "shipping-stickers.webp",
+        "social-launch.webp"
+      ]
+    },
+    {
+      "id": "no-signal",
+      "title": "NO SIGNAL",
+      "directory": "/assets/visual-design-real/no-signal/",
+      "sourceImage": "call_nFiiAXxYMS72z6SgtjeqIztI.png",
+      "sourceBoard": "source-board.png",
+      "board": "board.webp",
+      "cover": "cover.webp",
+      "coverPng": "cover.png",
+      "boardAsset": {
+        "id": "board",
+        "title": "Full Generated Case Board",
+        "src": "/assets/visual-design-real/no-signal/board.webp",
+        "file": "board.webp",
+        "format": "webp",
+        "orientation": "portrait",
+        "generated": true,
+        "composited": false
+      },
+      "assets": [
+        {
+          "id": "cover",
+          "title": "Wall Poster",
+          "src": "/assets/visual-design-real/no-signal/cover.webp",
+          "file": "cover.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "black-poster",
+          "title": "Black Poster",
+          "src": "/assets/visual-design-real/no-signal/black-poster.webp",
+          "file": "black-poster.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "texture-closeup",
+          "title": "Texture Close-Up",
+          "src": "/assets/visual-design-real/no-signal/texture-closeup.webp",
+          "file": "texture-closeup.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "gallery-wall",
+          "title": "Gallery Wall",
+          "src": "/assets/visual-design-real/no-signal/gallery-wall.webp",
+          "file": "gallery-wall.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "print-stack",
+          "title": "Print Stack",
+          "src": "/assets/visual-design-real/no-signal/print-stack.webp",
+          "file": "print-stack.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "street-display",
+          "title": "Street Display",
+          "src": "/assets/visual-design-real/no-signal/street-display.webp",
+          "file": "street-display.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        }
+      ],
+      "rasterFiles": [
+        "source-board.png",
+        "board.webp",
+        "cover.png",
+        "cover.webp",
+        "black-poster.webp",
+        "texture-closeup.webp",
+        "gallery-wall.webp",
+        "print-stack.webp",
+        "street-display.webp"
+      ],
+      "svgFiles": [],
+      "compositedFiles": [
+        "cover.webp",
+        "black-poster.webp",
+        "texture-closeup.webp",
+        "gallery-wall.webp",
+        "print-stack.webp",
+        "street-display.webp"
+      ]
+    },
+    {
+      "id": "orbit",
+      "title": "ORBIT",
+      "directory": "/assets/visual-design-real/orbit/",
+      "sourceImage": "call_ftOei2DyqAx2Vw5jQtrB3yaF.png",
+      "sourceBoard": "source-board.png",
+      "board": "board.webp",
+      "cover": "cover.webp",
+      "coverPng": "cover.png",
+      "boardAsset": {
+        "id": "board",
+        "title": "Full Generated Case Board",
+        "src": "/assets/visual-design-real/orbit/board.webp",
+        "file": "board.webp",
+        "format": "webp",
+        "orientation": "portrait",
+        "generated": true,
+        "composited": false
+      },
+      "assets": [
+        {
+          "id": "cover",
+          "title": "Investor Deck",
+          "src": "/assets/visual-design-real/orbit/cover.webp",
+          "file": "cover.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "kpi-dashboard",
+          "title": "KPI Dashboard",
+          "src": "/assets/visual-design-real/orbit/kpi-dashboard.webp",
+          "file": "kpi-dashboard.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "annual-report",
+          "title": "Annual Report",
+          "src": "/assets/visual-design-real/orbit/annual-report.webp",
+          "file": "annual-report.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "webinar-banner",
+          "title": "Webinar Banner",
+          "src": "/assets/visual-design-real/orbit/webinar-banner.webp",
+          "file": "webinar-banner.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "linkedin-post",
+          "title": "LinkedIn Post",
+          "src": "/assets/visual-design-real/orbit/linkedin-post.webp",
+          "file": "linkedin-post.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "conference-screen",
+          "title": "Conference Screen",
+          "src": "/assets/visual-design-real/orbit/conference-screen.webp",
+          "file": "conference-screen.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        }
+      ],
+      "rasterFiles": [
+        "source-board.png",
+        "board.webp",
+        "cover.png",
+        "cover.webp",
+        "kpi-dashboard.webp",
+        "annual-report.webp",
+        "webinar-banner.webp",
+        "linkedin-post.webp",
+        "conference-screen.webp"
+      ],
+      "svgFiles": [],
+      "compositedFiles": [
+        "cover.webp",
+        "kpi-dashboard.webp",
+        "annual-report.webp",
+        "webinar-banner.webp",
+        "linkedin-post.webp",
+        "conference-screen.webp"
+      ]
+    },
+    {
+      "id": "miso-club",
+      "title": "MISO CLUB",
+      "directory": "/assets/visual-design-real/miso-club/",
+      "sourceImage": "call_jkBPbLM5SfPqmIZ5kWPRQrRM.png",
+      "sourceBoard": "source-board.png",
+      "board": "board.webp",
+      "cover": "cover.webp",
+      "coverPng": "cover.png",
+      "boardAsset": {
+        "id": "board",
+        "title": "Full Generated Case Board",
+        "src": "/assets/visual-design-real/miso-club/board.webp",
+        "file": "board.webp",
+        "format": "webp",
+        "orientation": "portrait",
+        "generated": true,
+        "composited": false
+      },
+      "assets": [
+        {
+          "id": "cover",
+          "title": "Menu Table",
+          "src": "/assets/visual-design-real/miso-club/cover.webp",
+          "file": "cover.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "takeaway-box",
+          "title": "Takeaway Box",
+          "src": "/assets/visual-design-real/miso-club/takeaway-box.webp",
+          "file": "takeaway-box.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "delivery-bag",
+          "title": "Delivery Bag",
+          "src": "/assets/visual-design-real/miso-club/delivery-bag.webp",
+          "file": "delivery-bag.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "loyalty-sleeve",
+          "title": "Loyalty Sleeve",
+          "src": "/assets/visual-design-real/miso-club/loyalty-sleeve.webp",
+          "file": "loyalty-sleeve.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "window-poster",
+          "title": "Window Poster",
+          "src": "/assets/visual-design-real/miso-club/window-poster.webp",
+          "file": "window-poster.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "social-post",
+          "title": "Social Post",
+          "src": "/assets/visual-design-real/miso-club/social-post.webp",
+          "file": "social-post.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        }
+      ],
+      "rasterFiles": [
+        "source-board.png",
+        "board.webp",
+        "cover.png",
+        "cover.webp",
+        "takeaway-box.webp",
+        "delivery-bag.webp",
+        "loyalty-sleeve.webp",
+        "window-poster.webp",
+        "social-post.webp"
+      ],
+      "svgFiles": [],
+      "compositedFiles": [
+        "cover.webp",
+        "takeaway-box.webp",
+        "delivery-bag.webp",
+        "loyalty-sleeve.webp",
+        "window-poster.webp",
+        "social-post.webp"
+      ]
+    },
+    {
+      "id": "nest",
+      "title": "NEST",
+      "directory": "/assets/visual-design-real/nest/",
+      "sourceImage": "call_S4zakS8XTNiPqThIHB1sBPUu.png",
+      "sourceBoard": "source-board.png",
+      "board": "board.webp",
+      "cover": "cover.webp",
+      "coverPng": "cover.png",
+      "boardAsset": {
+        "id": "board",
+        "title": "Full Generated Case Board",
+        "src": "/assets/visual-design-real/nest/board.webp",
+        "file": "board.webp",
+        "format": "webp",
+        "orientation": "portrait",
+        "generated": true,
+        "composited": false
+      },
+      "assets": [
+        {
+          "id": "cover",
+          "title": "Brochure Cover",
+          "src": "/assets/visual-design-real/nest/cover.webp",
+          "file": "cover.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "brochure-spread",
+          "title": "Brochure Spread",
+          "src": "/assets/visual-design-real/nest/brochure-spread.webp",
+          "file": "brochure-spread.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "sales-presentation",
+          "title": "Sales Presentation",
+          "src": "/assets/visual-design-real/nest/sales-presentation.webp",
+          "file": "sales-presentation.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "billboard",
+          "title": "Billboard",
+          "src": "/assets/visual-design-real/nest/billboard.webp",
+          "file": "billboard.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "construction-fence",
+          "title": "Construction Fence",
+          "src": "/assets/visual-design-real/nest/construction-fence.webp",
+          "file": "construction-fence.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "sales-office",
+          "title": "Sales Office",
+          "src": "/assets/visual-design-real/nest/sales-office.webp",
+          "file": "sales-office.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        }
+      ],
+      "rasterFiles": [
+        "source-board.png",
+        "board.webp",
+        "cover.png",
+        "cover.webp",
+        "brochure-spread.webp",
+        "sales-presentation.webp",
+        "billboard.webp",
+        "construction-fence.webp",
+        "sales-office.webp"
+      ],
+      "svgFiles": [],
+      "compositedFiles": [
+        "cover.webp",
+        "brochure-spread.webp",
+        "sales-presentation.webp",
+        "billboard.webp",
+        "construction-fence.webp",
+        "sales-office.webp"
+      ]
+    },
+    {
+      "id": "echo-commerce",
+      "title": "ECHO COMMERCE",
+      "directory": "/assets/visual-design-real/echo-commerce/",
+      "sourceImage": "call_TA7POLuM7C0FjzCpc0Lt17Lv.png",
+      "sourceBoard": "source-board.png",
+      "board": "board.webp",
+      "cover": "cover.webp",
+      "coverPng": "cover.png",
+      "boardAsset": {
+        "id": "board",
+        "title": "Full Generated Case Board",
+        "src": "/assets/visual-design-real/echo-commerce/board.webp",
+        "file": "board.webp",
+        "format": "webp",
+        "orientation": "portrait",
+        "generated": true,
+        "composited": false
+      },
+      "assets": [
+        {
+          "id": "cover",
+          "title": "Homepage Laptop",
+          "src": "/assets/visual-design-real/echo-commerce/cover.webp",
+          "file": "cover.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "sale-tablet",
+          "title": "Sale Tablet",
+          "src": "/assets/visual-design-real/echo-commerce/sale-tablet.webp",
+          "file": "sale-tablet.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "mobile-grid",
+          "title": "Mobile Grid",
+          "src": "/assets/visual-design-real/echo-commerce/mobile-grid.webp",
+          "file": "mobile-grid.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "email-hero",
+          "title": "Email Hero",
+          "src": "/assets/visual-design-real/echo-commerce/email-hero.webp",
+          "file": "email-hero.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "social-carousel",
+          "title": "Social Carousel",
+          "src": "/assets/visual-design-real/echo-commerce/social-carousel.webp",
+          "file": "social-carousel.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "retail-display",
+          "title": "Retail Display",
+          "src": "/assets/visual-design-real/echo-commerce/retail-display.webp",
+          "file": "retail-display.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        }
+      ],
+      "rasterFiles": [
+        "source-board.png",
+        "board.webp",
+        "cover.png",
+        "cover.webp",
+        "sale-tablet.webp",
+        "mobile-grid.webp",
+        "email-hero.webp",
+        "social-carousel.webp",
+        "retail-display.webp"
+      ],
+      "svgFiles": [],
+      "compositedFiles": [
+        "cover.webp",
+        "sale-tablet.webp",
+        "mobile-grid.webp",
+        "email-hero.webp",
+        "social-carousel.webp",
+        "retail-display.webp"
+      ]
+    },
+    {
+      "id": "aura-beauty",
+      "title": "AURA BEAUTY",
+      "directory": "/assets/visual-design-real/aura-beauty/",
+      "sourceImage": "call_0elDlkXEhBOQd8zyk9mF6pHF.png",
+      "sourceBoard": "source-board.png",
+      "board": "board.webp",
+      "cover": "cover.webp",
+      "coverPng": "cover.png",
+      "boardAsset": {
+        "id": "board",
+        "title": "Full Generated Case Board",
+        "src": "/assets/visual-design-real/aura-beauty/board.webp",
+        "file": "board.webp",
+        "format": "webp",
+        "orientation": "portrait",
+        "generated": true,
+        "composited": false
+      },
+      "assets": [
+        {
+          "id": "cover",
+          "title": "Product Hero",
+          "src": "/assets/visual-design-real/aura-beauty/cover.webp",
+          "file": "cover.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "packaging-closeup",
+          "title": "Packaging Close-Up",
+          "src": "/assets/visual-design-real/aura-beauty/packaging-closeup.webp",
+          "file": "packaging-closeup.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "retail-display",
+          "title": "Retail Display",
+          "src": "/assets/visual-design-real/aura-beauty/retail-display.webp",
+          "file": "retail-display.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "digital-hero",
+          "title": "Digital Hero",
+          "src": "/assets/visual-design-real/aura-beauty/digital-hero.webp",
+          "file": "digital-hero.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "paid-social",
+          "title": "Paid Social",
+          "src": "/assets/visual-design-real/aura-beauty/paid-social.webp",
+          "file": "paid-social.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        },
+        {
+          "id": "launch-display",
+          "title": "Launch Display",
+          "src": "/assets/visual-design-real/aura-beauty/launch-display.webp",
+          "file": "launch-display.webp",
+          "format": "webp",
+          "orientation": "square",
+          "generated": true,
+          "composited": true
+        }
+      ],
+      "rasterFiles": [
+        "source-board.png",
+        "board.webp",
+        "cover.png",
+        "cover.webp",
+        "packaging-closeup.webp",
+        "retail-display.webp",
+        "digital-hero.webp",
+        "paid-social.webp",
+        "launch-display.webp"
+      ],
+      "svgFiles": [],
+      "compositedFiles": [
+        "cover.webp",
+        "packaging-closeup.webp",
+        "retail-display.webp",
+        "digital-hero.webp",
+        "paid-social.webp",
+        "launch-display.webp"
+      ]
+    }
+  ]
+}
