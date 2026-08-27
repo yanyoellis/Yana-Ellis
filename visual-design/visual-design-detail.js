@@ -41,13 +41,17 @@ function escapeHtml(value) {
     .replaceAll("'", "&#039;");
 }
 
-function listMarkup(items) {
-  return (items || []).map((item) => `<li>${escapeHtml(localize(item))}</li>`).join("");
+function joinList(items) {
+  return (items || []).map((item) => localize(item)).filter(Boolean).join(" / ");
 }
 
 function imageClass(image, index) {
-  if (index === 0 || index % 7 === 0) {
+  if (index === 0) {
     return "is-full";
+  }
+
+  if (index === 3) {
+    return "is-wide";
   }
 
   if (image.orientation === "portrait") {
@@ -58,7 +62,17 @@ function imageClass(image, index) {
     return "is-square";
   }
 
-  return index % 3 === 0 ? "is-wide" : "is-landscape";
+  return "is-landscape";
+}
+
+function navigationProjects() {
+  const ordered = [...visualProjects].sort((first, second) => (first.archiveOrder ?? 999) - (second.archiveOrder ?? 999));
+
+  if (project?.primaryArchive === false) {
+    return ordered;
+  }
+
+  return ordered.filter((item) => item.primaryArchive !== false);
 }
 
 function applyLanguage(language) {
@@ -110,10 +124,12 @@ function renderProject() {
     return;
   }
 
-  const projectIndex = visualProjects.findIndex((item) => item.id === project.id);
-  const previous = visualProjects[(projectIndex - 1 + visualProjects.length) % visualProjects.length];
-  const next = visualProjects[(projectIndex + 1) % visualProjects.length];
+  const navProjects = navigationProjects();
+  const projectIndex = navProjects.findIndex((item) => item.id === project.id);
+  const previous = navProjects[(projectIndex - 1 + navProjects.length) % navProjects.length];
+  const next = navProjects[(projectIndex + 1) % navProjects.length];
   const coverAlt = localize(project.cover.alt);
+  const displayImages = (project.images || []).filter((image) => image.id !== "board" && !image.internal);
 
   root.innerHTML = `<article class="visual-project">
     <section class="visual-project-hero" aria-labelledby="visual-project-title">
@@ -122,47 +138,37 @@ function renderProject() {
         <div class="visual-project-heading">
           <p class="section-kicker">${escapeHtml(localize(project.category))} / ${escapeHtml(project.year)}</p>
           <h1 id="visual-project-title">${escapeHtml(project.title)}</h1>
+        </div>
+        <div class="visual-project-intro">
           <p>${escapeHtml(localize(project.description))}</p>
         </div>
-        <figure class="visual-project-cover">
-          <img src="${escapeHtml(project.cover.src)}" alt="${escapeHtml(coverAlt)}" decoding="async" />
-        </figure>
       </div>
+      <figure class="visual-project-cover">
+        <img src="${escapeHtml(project.cover.src)}" alt="${escapeHtml(coverAlt)}" decoding="async" />
+      </figure>
     </section>
 
-    <section class="visual-project-specs" aria-label="${escapeHtml(labels.capabilities || "Project details")}">
-      <div class="visual-spec-cell">
-        <span>${escapeHtml(labels.client || "Client")}</span>
-        <strong>${escapeHtml(project.client)}</strong>
-      </div>
-      <div class="visual-spec-cell">
+    <section class="visual-project-info" aria-label="${escapeHtml(labels.projectInfo || "Project information")}">
+      <div>
         <span>${escapeHtml(labels.role || "Role")}</span>
         <strong>${escapeHtml(localize(project.role))}</strong>
       </div>
-      <div class="visual-spec-cell">
+      <div>
         <span>${escapeHtml(labels.disciplines || "Disciplines")}</span>
         <strong>${escapeHtml(localize(project.disciplines))}</strong>
       </div>
-      <div class="visual-spec-cell">
-        <span>${escapeHtml(labels.typography || "Typography direction")}</span>
-        <strong>${escapeHtml(localize(project.typography))}</strong>
-      </div>
-      <div class="visual-spec-cell is-list">
-        <span>${escapeHtml(labels.deliverables || "Deliverables")}</span>
-        <ul>${listMarkup(project.deliverables)}</ul>
-      </div>
-      <div class="visual-spec-cell is-list">
-        <span>${escapeHtml(labels.capabilities || "Capabilities shown")}</span>
-        <ul>${listMarkup(project.capabilities)}</ul>
-      </div>
-      <div class="visual-spec-cell is-list">
+      <div>
         <span>${escapeHtml(labels.tools || "Tools")}</span>
-        <ul>${listMarkup(project.tools)}</ul>
+        <strong>${escapeHtml(joinList(project.tools))}</strong>
+      </div>
+      <div>
+        <span>${escapeHtml(labels.deliverables || "Deliverables")}</span>
+        <strong>${escapeHtml(joinList(project.deliverables))}</strong>
       </div>
     </section>
 
     <section class="visual-project-images" aria-label="${escapeHtml(labels.images || "Project visuals")}">
-      ${project.images
+      ${displayImages
         .map((image, index) => {
           const title = image.title || project.title;
           return `<figure class="visual-project-image-card ${imageClass(image, index)}">

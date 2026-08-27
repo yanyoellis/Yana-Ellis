@@ -1090,10 +1090,12 @@ body.modal-open {
   }
 
   .site-header {
+    gap: 16px;
     min-height: 94px;
   }
 
   .header-actions {
+    max-width: min(280px, calc(100% - 92px));
     flex-wrap: wrap;
     justify-content: flex-end;
     gap: 8px;
@@ -1126,12 +1128,30 @@ body.modal-open {
   }
 
   .hero-role {
+    max-width: 100%;
     margin-top: 24px;
+    overflow-wrap: break-word;
+    text-wrap: balance;
   }
 
   .hero-description {
     max-width: 100%;
+    overflow-wrap: break-word;
     font-size: 1rem;
+  }
+
+  .process-note {
+    max-width: 100%;
+  }
+
+  .hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+    max-width: 280px;
+  }
+
+  .hero-button {
+    width: 100%;
   }
 
   .info-section {
@@ -1229,6 +1249,11 @@ body.modal-open {
 
   .site-header {
     align-items: center;
+    gap: 12px;
+  }
+
+  .header-actions {
+    max-width: 176px;
   }
 
   .brand-link {
@@ -1248,7 +1273,8 @@ body.modal-open {
 
   .estimate-button {
     min-height: 32px;
-    padding: 0 12px;
+    padding: 0 10px;
+    font-size: 0.61rem;
   }
 
   .guide-button {
@@ -1283,7 +1309,15 @@ body.modal-open {
   }
 
   .hero-name {
-    font-size: clamp(2.45rem, 13vw, 3.45rem);
+    font-size: clamp(2.06rem, 10.2vw, 2.78rem);
+  }
+
+  .hero-role,
+  .hero-description,
+  .process-note,
+  .body-copy {
+    word-break: normal;
+    overflow-wrap: anywhere;
   }
 
   .projects-grid {

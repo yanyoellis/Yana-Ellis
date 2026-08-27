@@ -24,11 +24,15 @@ for (const project of projects) {
     failures.push(`${project.id} cover still points to the old SVG asset folder.`);
   }
 
-  if (!Array.isArray(project.images) || project.images.length < 7) {
-    failures.push(`${project.id} has fewer than 7 detail images.`);
+  if (!Array.isArray(project.images) || project.images.length < 6) {
+    failures.push(`${project.id} has fewer than 6 public detail images.`);
   }
 
   for (const image of project.images || []) {
+    if (image.id === "board" || image.title === "Full generated case board") {
+      failures.push(`${project.id} still exposes the generated case board publicly.`);
+    }
+
     if (image.src.startsWith("/assets/visual-design/")) {
       failures.push(`${project.id}/${image.id} still points to the old SVG asset folder.`);
       continue;
