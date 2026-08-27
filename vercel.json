@@ -3,7 +3,6 @@
     { "source": "/project-guide", "destination": "/project-guide.html" },
     { "source": "/faq", "destination": "/faq.html" },
     { "source": "/privacy-policy", "destination": "/privacy-policy.html" },
-    { "source": "/terms-of-service", "destination": "/terms-of-service.html" },
-    { "source": "/visual-design", "destination": "/visual-design/index.html" }
+    { "source": "/terms-of-service", "destination": "/terms-of-service.html" }
   ]
 }
