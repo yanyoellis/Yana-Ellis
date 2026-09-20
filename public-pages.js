@@ -10,7 +10,6 @@ const sharedLabels = {
     faq: "FAQ",
     privacy: "Privacy",
     terms: "Terms",
-    profile: "Professional Profile",
     contact: "Contact",
     telegram: "Telegram",
     email: "Email",
@@ -29,7 +28,6 @@ const sharedLabels = {
     faq: "FAQ",
     privacy: "Конфіденційність",
     terms: "Умови",
-    profile: "Професійний профіль",
     contact: "Контакт",
     telegram: "Telegram",
     email: "Email",
@@ -48,7 +46,6 @@ const sharedLabels = {
     faq: "FAQ",
     privacy: "Prywatność",
     terms: "Regulamin",
-    profile: "Profil zawodowy",
     contact: "Kontakt",
     telegram: "Telegram",
     email: "Email",
@@ -67,7 +64,6 @@ const sharedLabels = {
     faq: "FAQ",
     privacy: "Конфиденциальность",
     terms: "Условия",
-    profile: "Профессиональный профиль",
     contact: "Контакт",
     telegram: "Telegram",
     email: "Email",
@@ -86,7 +82,6 @@ const sharedLabels = {
     faq: "FAQ",
     privacy: "Datenschutz",
     terms: "Bedingungen",
-    profile: "Professional Profile",
     contact: "Kontakt",
     telegram: "Telegram",
     email: "Email",
@@ -305,7 +300,6 @@ function setMeta(page, language) {
 function baseLinks(labels) {
   return `
     <a class="nav-link" href="index.html">${labels.portfolio}</a>
-    <a class="nav-link" href="professional-profile.html">${labels.profile}</a>
     <a class="nav-link" href="project-guide.html">${labels.projectGuide}</a>
     <a class="nav-link" href="faq.html">${labels.faq}</a>
     <a class="nav-link" href="privacy-policy.html">${labels.privacy}</a>
