@@ -1,6 +1,7 @@
 {
   "rewrites": [
     { "source": "/project-guide", "destination": "/project-guide.html" },
+    { "source": "/professional-profile", "destination": "/professional-profile.html" },
     { "source": "/faq", "destination": "/faq.html" },
     { "source": "/privacy-policy", "destination": "/privacy-policy.html" },
     { "source": "/terms-of-service", "destination": "/terms-of-service.html" }

@@ -1,4 +1,4 @@
-const supportedLanguages = ["en", "uk", "pl"];
+const supportedLanguages = ["en", "uk", "pl", "ru", "de"];
 const currency = "грн";
 const storageKey = "yana-ellis-calculator-ukraine";
 const languageKey = "yana-ellis-language";
@@ -362,6 +362,117 @@ const ui = {
   }
 };
 
+ui.ru = {
+  ...ui.en,
+  documentTitle: `Рассчет сайта ${currency} - Yana Ellis`,
+  backToPortfolio: "Портфолио",
+  calculatorTitle: "Калькулятор стоимости сайта",
+  calculatorIntro: "Ответьте на несколько практических вопросов и получите предварительную оценку сайта.",
+  currentEstimate: "Текущая оценка",
+  estimatePlaceholder: "Оценка сайта",
+  estimateNote: "Налоги и сторонние подписки не включены.",
+  stepOf: "Шаг {current} из {total}",
+  chooseOne: "Выберите один вариант.",
+  chooseMultiple: "Выберите все, что нужно. Можно продолжить без дополнительных опций.",
+  back: "Назад",
+  continue: "Продолжить",
+  seeEstimate: "Показать оценку",
+  edit: "Изменить",
+  restart: "Начать заново",
+  included: "Включено",
+  startingFrom: "От",
+  customQuote: "Индивидуальная оценка",
+  noneSelected: "Ничего не выбрано",
+  estimatedProjectCost: "Ориентировочная стоимость проекта",
+  finalCopy: "Это предварительная оценка. Финальная цена подтверждается после просмотра требований проекта.",
+  monthlyService: "Опциональная ежемесячная услуга",
+  oneTimeSubtotal: "Разовая промежуточная сумма",
+  languageMultiplier: "Множитель языков",
+  timelineMultiplier: "Множитель сроков",
+  contactTitle: "Отправить заявку",
+  contactHelp: "Выбранный рынок, ответы и оценка будут включены в заявку.",
+  submit: "Отправить заявку",
+  name: "Имя",
+  email: "Email",
+  company: "Компания или название проекта",
+  phone: "Телефон",
+  website: "Текущий сайт",
+  preferredContact: "Предпочтительный способ связи",
+  description: "Описание проекта",
+  notes: "Дополнительные заметки",
+  descriptionPlaceholder: "Коротко расскажите о бизнесе, целях и идеях для сайта.",
+  notesPlaceholder: "Что еще важно знать перед просмотром заявки?",
+  requiredMessage: "Пожалуйста, заполните обязательные поля.",
+  emailMessage: "Введите корректный email.",
+  successMessage: "Спасибо. Заявка отправлена.\n\nЯ просмотрю детали и свяжусь с вами.",
+  confirmRestart: "Удалить все ответы и начать заново?",
+  whatIncluded: "Что включено?",
+  includedTitle: "Включено",
+  notIncludedTitle: "Не включено, если не выбрано или не рассчитано отдельно",
+  paymentTitle: "Как проходит оплата",
+  paymentText: "Обычно оплата проекта делится на этапы. Точный график будет подтвержден перед началом работы.",
+  languageNote: "Пожалуйста, предоставьте готовые переводы. Профессиональный перевод можно рассчитать отдельно.",
+  marketSummary: "Выбранный рынок",
+  interfaceLanguage: "Язык интерфейса",
+  finalEstimate: "Финальная оценка",
+  manualReview: "Нужен индивидуальный просмотр"
+};
+
+ui.de = {
+  ...ui.en,
+  documentTitle: `Website-Kalkulation ${currency} - Yana Ellis`,
+  backToPortfolio: "Portfolio",
+  calculatorTitle: "Website-Preiskalkulator",
+  calculatorIntro: "Beantworte einige praktische Fragen und erhalte eine erste Schaetzung fuer deine Website.",
+  currentEstimate: "Aktuelle Schaetzung",
+  estimatePlaceholder: "Website-Schaetzung",
+  estimateNote: "Steuern und Drittanbieter-Abos sind nicht enthalten.",
+  stepOf: "Schritt {current} von {total}",
+  chooseOne: "Waehle eine Option.",
+  chooseMultiple: "Waehle alles aus, was du brauchst. Du kannst auch ohne Extras fortfahren.",
+  back: "Zurueck",
+  continue: "Weiter",
+  seeEstimate: "Schaetzung ansehen",
+  edit: "Bearbeiten",
+  restart: "Neu starten",
+  included: "Enthalten",
+  startingFrom: "Ab",
+  customQuote: "Individuelle Schaetzung",
+  noneSelected: "Nichts ausgewaehlt",
+  estimatedProjectCost: "Geschaetzte Projektkosten",
+  finalCopy: "Dies ist eine erste Schaetzung. Der finale Preis wird nach Pruefung der Projektanforderungen bestaetigt.",
+  monthlyService: "Optionale monatliche Leistung",
+  oneTimeSubtotal: "Einmalige Zwischensumme",
+  languageMultiplier: "Sprach-Multiplikator",
+  timelineMultiplier: "Zeitplan-Multiplikator",
+  contactTitle: "Projektanfrage senden",
+  contactHelp: "Markt, Antworten und Schaetzung werden in die Anfrage aufgenommen.",
+  submit: "Anfrage senden",
+  name: "Name",
+  email: "Email",
+  company: "Firma oder Projektname",
+  phone: "Telefon",
+  website: "Aktuelle Website",
+  preferredContact: "Bevorzugter Kontakt",
+  description: "Projektbeschreibung",
+  notes: "Zusaetzliche Notizen",
+  descriptionPlaceholder: "Beschreibe kurz dein Business, Ziele und Ideen fuer die Website.",
+  notesPlaceholder: "Was sollte ich vor der Pruefung noch wissen?",
+  requiredMessage: "Bitte fuelle alle Pflichtfelder aus.",
+  emailMessage: "Bitte gib eine gueltige Email-Adresse ein.",
+  successMessage: "Danke. Deine Projektanfrage wurde gesendet.\n\nIch pruefe die Details und melde mich.",
+  confirmRestart: "Alle Antworten loeschen und neu starten?",
+  whatIncluded: "Was ist enthalten?",
+  includedTitle: "Enthalten",
+  notIncludedTitle: "Nicht enthalten, sofern nicht gewaehlt oder separat angeboten",
+  paymentTitle: "Wie die Zahlung funktioniert",
+  paymentText: "Projekte werden normalerweise in Zahlungsphasen aufgeteilt. Der genaue Plan wird vor Projektbeginn bestaetigt.",
+  languageNote: "Bitte stelle finale Uebersetzungen bereit. Professionelle Uebersetzung kann separat angeboten werden.",
+  marketSummary: "Ausgewaehlter Markt",
+  interfaceLanguage: "Interface-Sprache",
+  finalEstimate: "Finale Schaetzung",
+  manualReview: "Manuelle Pruefung erforderlich"
+};
 const questions = {
   purpose: {
     id: "purpose",
@@ -1070,7 +1181,7 @@ function saveState() {
 }
 
 function t(key) {
-  return ui[currentLanguage][key] || ui.en[key] || key;
+  return ui[currentLanguage]?.[key] || ui.en[key] || key;
 }
 
 function getText(value) {
@@ -1299,7 +1410,7 @@ function applyLanguage(language) {
 
   staticTextNodes.forEach((node) => {
     const key = node.dataset.i18n;
-    if (ui[currentLanguage][key]) {
+    if (ui[currentLanguage]?.[key]) {
       node.textContent = t(key);
     }
   });
@@ -1498,11 +1609,11 @@ function buildDetails() {
       <div class="details-content">
         <div>
           <h3>${t("includedTitle")}</h3>
-          <ul>${ui[currentLanguage].includedItems.map((item) => `<li>${item}</li>`).join("")}</ul>
+          <ul>${(ui[currentLanguage]?.includedItems || ui.en.includedItems).map((item) => `<li>${item}</li>`).join("")}</ul>
         </div>
         <div>
           <h3>${t("notIncludedTitle")}</h3>
-          <ul>${ui[currentLanguage].notIncludedItems.map((item) => `<li>${item}</li>`).join("")}</ul>
+          <ul>${(ui[currentLanguage]?.notIncludedItems || ui.en.notIncludedItems).map((item) => `<li>${item}</li>`).join("")}</ul>
         </div>
       </div>
     </details>

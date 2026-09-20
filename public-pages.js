@@ -1,5 +1,5 @@
 const siteConfig = window.YANA_SITE_CONFIG;
-const supportedLanguages = ["en", "uk", "pl"];
+const supportedLanguages = ["en", "uk", "pl", "ru", "de"];
 const languageKey = "yana-ellis-language";
 
 const sharedLabels = {
@@ -10,6 +10,7 @@ const sharedLabels = {
     faq: "FAQ",
     privacy: "Privacy",
     terms: "Terms",
+    profile: "Professional Profile",
     contact: "Contact",
     telegram: "Telegram",
     email: "Email",
@@ -28,6 +29,7 @@ const sharedLabels = {
     faq: "FAQ",
     privacy: "Конфіденційність",
     terms: "Умови",
+    profile: "Професійний профіль",
     contact: "Контакт",
     telegram: "Telegram",
     email: "Email",
@@ -46,6 +48,7 @@ const sharedLabels = {
     faq: "FAQ",
     privacy: "Prywatność",
     terms: "Regulamin",
+    profile: "Profil zawodowy",
     contact: "Kontakt",
     telegram: "Telegram",
     email: "Email",
@@ -56,6 +59,44 @@ const sharedLabels = {
     ctaText:
       "Najpierw przeczytaj szczegóły procesu, a gdy będziesz gotowy omówić projekt, napisz do mnie bezpośrednio.",
     ctaSecondary: "Napisz do Yany"
+  },
+  ru: {
+    portfolio: "Портфолио",
+    calculator: "Калькулятор",
+    projectGuide: "Гайд проекта",
+    faq: "FAQ",
+    privacy: "Конфиденциальность",
+    terms: "Условия",
+    profile: "Профессиональный профиль",
+    contact: "Контакт",
+    telegram: "Telegram",
+    email: "Email",
+    readMore: "Читать дальше",
+    footerText:
+      "Информация о процессе создания сайта для клиентов, которые хотят понятный письменный порядок работы перед финальной оценкой.",
+    ctaTitle: "Есть идея сайта?",
+    ctaText:
+      "Сначала изучите детали процесса, а когда будете готовы обсудить проект, напишите мне напрямую.",
+    ctaSecondary: "Написать Yana"
+  },
+  de: {
+    portfolio: "Portfolio",
+    calculator: "Kalkulator",
+    projectGuide: "Projektguide",
+    faq: "FAQ",
+    privacy: "Datenschutz",
+    terms: "Bedingungen",
+    profile: "Professional Profile",
+    contact: "Kontakt",
+    telegram: "Telegram",
+    email: "Email",
+    readMore: "Mehr lesen",
+    footerText:
+      "Informationen zum Website-Prozess fuer Kunden, die vor einer finalen Anfrage klare schriftliche Bedingungen verstehen moechten.",
+    ctaTitle: "Hast du ein Website-Projekt im Kopf?",
+    ctaText:
+      "Lies zuerst die Prozessdetails und kontaktiere mich direkt, wenn du bereit bist, das Projekt zu besprechen.",
+    ctaSecondary: "Yana kontaktieren"
   }
 };
 
@@ -264,6 +305,7 @@ function setMeta(page, language) {
 function baseLinks(labels) {
   return `
     <a class="nav-link" href="index.html">${labels.portfolio}</a>
+    <a class="nav-link" href="professional-profile.html">${labels.profile}</a>
     <a class="nav-link" href="project-guide.html">${labels.projectGuide}</a>
     <a class="nav-link" href="faq.html">${labels.faq}</a>
     <a class="nav-link" href="privacy-policy.html">${labels.privacy}</a>

@@ -62,7 +62,7 @@
     canada: {
       id: "canada",
       code: "CA",
-      label: { en: "Canada", uk: "Канада", pl: "Kanada" },
+      label: { en: "Canada", uk: "Канада", pl: "Kanada", ru: "Канада", de: "Kanada" },
       currencyCode: "CAD",
       displayCurrency: "CAD",
       roundingUnit: 25,
@@ -71,7 +71,7 @@
     poland: {
       id: "poland",
       code: "PL",
-      label: { en: "Poland", uk: "Польща", pl: "Polska" },
+      label: { en: "Poland", uk: "Польща", pl: "Polska", ru: "Польша", de: "Polen" },
       currencyCode: "PLN",
       displayCurrency: "PLN",
       roundingUnit: 50,
@@ -80,7 +80,7 @@
     ukraine: {
       id: "ukraine",
       code: "UA",
-      label: { en: "Ukraine", uk: "Україна", pl: "Ukraina" },
+      label: { en: "Ukraine", uk: "Україна", pl: "Ukraina", ru: "Украина", de: "Ukraine" },
       currencyCode: "UAH",
       displayCurrency: "грн",
       roundingUnit: 500,
@@ -1160,9 +1160,11 @@
 
   function languageName(language) {
     const names = {
-      en: { en: "English", uk: "Англійська", pl: "Angielski" },
-      uk: { en: "Ukrainian", uk: "Українська", pl: "Ukraiński" },
-      pl: { en: "Polish", uk: "Польська", pl: "Polski" }
+      en: { en: "English", uk: "Англійська", pl: "Angielski", ru: "Английский", de: "Englisch" },
+      uk: { en: "Ukrainian", uk: "Українська", pl: "Ukraiński", ru: "Украинский", de: "Ukrainisch" },
+      pl: { en: "Polish", uk: "Польська", pl: "Polski", ru: "Польский", de: "Polnisch" },
+      ru: { en: "Russian", uk: "Російська", pl: "Rosyjski", ru: "Русский", de: "Russisch" },
+      de: { en: "German", uk: "Німецька", pl: "Niemiecki", ru: "Немецкий", de: "Deutsch" }
     };
     return names[language]?.[currentLanguage] || language.toUpperCase();
   }

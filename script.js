@@ -28,6 +28,7 @@ const translations = {
     projectAria: "Open {name} project site",
     estimateButton: "Estimate",
     estimateProjectButton: "Estimate project",
+    profileButton: "Professional profile",
     processButton: "How the process works",
     processNote:
       "Read the full process, payments, revisions and project terms before sending a request.",
@@ -44,6 +45,7 @@ const translations = {
     footerText:
       "Website design and development information for clear written project requests.",
     footerProjectGuide: "Project Guide",
+    footerProfile: "Professional Profile",
     footerFaq: "FAQ",
     footerPrivacy: "Privacy Policy",
     footerTerms: "Terms of Service",
@@ -97,6 +99,7 @@ const translations = {
     projectAria: "Відкрити сайт проєкту {name}",
     estimateButton: "Розрахунок",
     estimateProjectButton: "Оцінити проєкт",
+    profileButton: "Професійний профіль",
     processButton: "Як проходить робота",
     processNote:
       "Прочитайте повний процес, оплату, правки та умови проєкту перед надсиланням заявки.",
@@ -113,6 +116,7 @@ const translations = {
     footerText:
       "Інформація про дизайн і розробку сайтів для зрозумілих письмових заявок.",
     footerProjectGuide: "Гайд проєкту",
+    footerProfile: "Професійний профіль",
     footerFaq: "FAQ",
     footerPrivacy: "Конфіденційність",
     footerTerms: "Умови",
@@ -166,6 +170,7 @@ const translations = {
     projectAria: "Otwórz stronę projektu {name}",
     estimateButton: "Wycena",
     estimateProjectButton: "Wyceń projekt",
+    profileButton: "Profil zawodowy",
     processButton: "Jak wygląda proces",
     processNote:
       "Przeczytaj pełny proces, płatności, poprawki i warunki projektu przed wysłaniem zapytania.",
@@ -182,6 +187,7 @@ const translations = {
     footerText:
       "Informacje o projektowaniu i tworzeniu stron dla jasnych pisemnych zapytań.",
     footerProjectGuide: "Przewodnik",
+    footerProfile: "Profil zawodowy",
     footerFaq: "FAQ",
     footerPrivacy: "Prywatność",
     footerTerms: "Regulamin",
@@ -205,6 +211,148 @@ const translations = {
     marketContinue: "Dalej",
     marketNote:
       "Ceny zależą od kraju, w którym głównie działa firma, a nie od aktualnej lokalizacji odwiedzającego."
+  },
+  ru: {
+    documentTitle: "Yana Ellis - UX/UI и веб-дизайнер",
+    logoAlt: "Логотип Yana Ellis",
+    heroRole: "UX/UI и веб-дизайнер, специализирующаяся на сайтах и цифровых продуктах.",
+    heroDescription: "Я создаю минималистичные, экспериментальные и концептуальные цифровые впечатления.",
+    availability: "Открыта к freelance-проектам",
+    aboutTitle: "ОБО МНЕ",
+    aboutOne: "Дизайн интерфейсов для меня: способ выражать идеи.",
+    aboutTwo: "Я фокусируюсь на ясности, эмоции и деталях, которые создают уникальный цифровой опыт.",
+    aboutThree: "Работаю с минимализмом, сильными концепциями и продуманными взаимодействиями.",
+    toolsTitle: "ИНСТРУМЕНТЫ",
+    toolHtml: "HTML/CSS для реализации макетов",
+    toolJs: "JavaScript для интерактивности интерфейса",
+    approachTitle: "ПОДХОД",
+    minimalismTitle: "МИНИМАЛИЗМ",
+    minimalismText: "Меньше, но осмысленнее.",
+    conceptTitle: "СНАЧАЛА КОНЦЕПТ",
+    conceptText: "Сильная идея ведет дизайн.",
+    interactionTitle: "ВЗАИМОДЕЙСТВИЕ",
+    interactionText: "Детали, которые делают опыт плавным.",
+    attentionTitle: "ВНИМАНИЕ",
+    attentionText: "Точность в каждом пикселе.",
+    contactTitle: "КОНТАКТ",
+    emailLabel: "Почта",
+    projectsTitle: "ИЗБРАННЫЕ ПРОЕКТЫ",
+    projectType: "Открыть сайт",
+    projectAria: "Открыть сайт проекта {name}",
+    estimateButton: "Расчет",
+    estimateProjectButton: "Оценить проект",
+    profileButton: "Профессиональный профиль",
+    processButton: "Как проходит работа",
+    processNote:
+      "Прочитайте полный процесс, оплату, правки и условия проекта перед отправкой заявки.",
+    clientInfoKicker: "ИНФОРМАЦИЯ ДЛЯ КЛИЕНТОВ",
+    clientInfoTitle: "Детали перед стартом",
+    clientInfoText:
+      "Посмотрите частые вопросы, конфиденциальность и условия проекта перед отправкой заявки.",
+    clientInfoFaqTitle: "FAQ",
+    clientInfoFaqText: "Ответы о процессе, оплате, правках и поддержке.",
+    clientInfoPrivacyTitle: "Конфиденциальность",
+    clientInfoPrivacyText: "Как данные из заявки собираются и используются.",
+    clientInfoTermsTitle: "Условия",
+    clientInfoTermsText: "Объем проекта, оценки, оплата и передача прав.",
+    footerText:
+      "Информация о дизайне и разработке сайтов для понятных письменных заявок.",
+    footerProjectGuide: "Гайд проекта",
+    footerProfile: "Профессиональный профиль",
+    footerFaq: "FAQ",
+    footerPrivacy: "Конфиденциальность",
+    footerTerms: "Условия",
+    footerCalculator: "Калькулятор",
+    footerEmail: "Email",
+    footerTelegram: "Telegram",
+    marketClose: "Закрыть выбор рынка",
+    marketKicker: "Выберите рынок",
+    marketTitle: "Где работает ваш бизнес?",
+    marketDescription:
+      "Выберите страну, где преимущественно работает ваш бизнес. От этого зависят валюта и региональные цены в расчете.",
+    marketCanadaName: "Канада",
+    marketCanadaPrice: "Цены в канадских долларах",
+    marketCanadaCopy: "Для бизнесов, которые преимущественно работают в Канаде.",
+    marketUkraineName: "Украина",
+    marketUkrainePrice: "Цены в украинских гривнах",
+    marketUkraineCopy: "Для бизнесов, которые преимущественно работают в Украине.",
+    marketPolandName: "Польша",
+    marketPolandPrice: "Цены в польских злотых",
+    marketPolandCopy: "Для бизнесов, которые преимущественно работают в Польше.",
+    marketContinue: "Продолжить",
+    marketNote:
+      "Цены зависят от страны, где преимущественно работает бизнес, а не от текущего местоположения посетителя."
+  },
+  de: {
+    documentTitle: "Yana Ellis - UX/UI & Web Designerin",
+    logoAlt: "Yana Ellis Logo",
+    heroRole: "UX/UI & Web Designerin mit Schwerpunkt auf Websites und digitalen Produkten.",
+    heroDescription: "Ich gestalte minimale, experimentelle und konzeptstarke digitale Erlebnisse.",
+    availability: "Offen fuer Freelance-Projekte",
+    aboutTitle: "UEBER MICH",
+    aboutOne: "Interface Design ist meine Art, Ideen sichtbar zu machen.",
+    aboutTwo: "Ich arbeite mit Klarheit, Emotion und Details, die digitale Erlebnisse eigenstaendig machen.",
+    aboutThree: "Mein Fokus liegt auf Minimalismus, starken Konzepten und durchdachten Interaktionen.",
+    toolsTitle: "TOOLS",
+    toolHtml: "HTML/CSS fuer Layout-Umsetzung",
+    toolJs: "JavaScript fuer Interface-Interaktionen",
+    approachTitle: "ANSATZ",
+    minimalismTitle: "MINIMALISMUS",
+    minimalismText: "Weniger, aber bedeutungsvoller.",
+    conceptTitle: "KONZEPT ZUERST",
+    conceptText: "Eine starke Idee fuehrt das Design.",
+    interactionTitle: "INTERAKTION",
+    interactionText: "Details, die das Erlebnis geschmeidig machen.",
+    attentionTitle: "PRAEZISION",
+    attentionText: "Sorgfalt in jedem Pixel.",
+    contactTitle: "KONTAKT",
+    emailLabel: "Email",
+    projectsTitle: "AUSGEWAEHLTE PROJEKTE",
+    projectType: "Projekt oeffnen",
+    projectAria: "Projektseite {name} oeffnen",
+    estimateButton: "Kalkulation",
+    estimateProjectButton: "Projekt kalkulieren",
+    profileButton: "Professional Profile",
+    processButton: "Ablauf ansehen",
+    processNote:
+      "Lies den vollstaendigen Ablauf, Zahlungen, Korrekturen und Projektbedingungen, bevor du eine Anfrage sendest.",
+    clientInfoKicker: "CLIENT INFORMATION",
+    clientInfoTitle: "Details vor dem Start",
+    clientInfoText:
+      "Pruefe FAQ, Datenschutz und Projektbedingungen, bevor du eine Anfrage sendest.",
+    clientInfoFaqTitle: "FAQ",
+    clientInfoFaqText: "Antworten zu Ablauf, Zahlungen, Korrekturen und Support.",
+    clientInfoPrivacyTitle: "Datenschutz",
+    clientInfoPrivacyText: "Wie Anfragedaten gesammelt und genutzt werden.",
+    clientInfoTermsTitle: "Bedingungen",
+    clientInfoTermsText: "Projektumfang, Schaetzungen, Zahlungen und Nutzungsrechte.",
+    footerText:
+      "Informationen zu Webdesign und Entwicklung fuer klare schriftliche Projektanfragen.",
+    footerProjectGuide: "Projektguide",
+    footerProfile: "Professional Profile",
+    footerFaq: "FAQ",
+    footerPrivacy: "Datenschutz",
+    footerTerms: "Bedingungen",
+    footerCalculator: "Kalkulator",
+    footerEmail: "Email",
+    footerTelegram: "Telegram",
+    marketClose: "Marktauswahl schliessen",
+    marketKicker: "Markt auswaehlen",
+    marketTitle: "Wo ist dein Unternehmen taetig?",
+    marketDescription:
+      "Waehle das Land, in dem dein Unternehmen hauptsaechlich taetig ist. Das bestimmt Waehrung und regionale Preise fuer die Schaetzung.",
+    marketCanadaName: "Kanada",
+    marketCanadaPrice: "Preise in kanadischen Dollar",
+    marketCanadaCopy: "Fuer Unternehmen, die hauptsaechlich in Kanada taetig sind.",
+    marketUkraineName: "Ukraine",
+    marketUkrainePrice: "Preise in ukrainischen Hrywnja",
+    marketUkraineCopy: "Fuer Unternehmen, die hauptsaechlich in der Ukraine taetig sind.",
+    marketPolandName: "Polen",
+    marketPolandPrice: "Preise in polnischen Zloty",
+    marketPolandCopy: "Fuer Unternehmen, die hauptsaechlich in Polen taetig sind.",
+    marketContinue: "Weiter",
+    marketNote:
+      "Die Preise richten sich nach dem Hauptmarkt des Unternehmens, nicht nach dem aktuellen Standort des Besuchers."
   }
 };
 
@@ -223,7 +371,7 @@ const footerEstimateButton = document.querySelector("#footerEstimateButton");
 const marketModal = document.querySelector("#marketModal");
 const marketCards = document.querySelectorAll("[data-market]");
 const marketCloseButtons = document.querySelectorAll("[data-market-close]");
-const supportedLanguages = ["en", "uk", "pl"];
+const supportedLanguages = ["en", "uk", "pl", "ru", "de"];
 let lastFocusedElement = null;
 
 function getInitialLanguage() {
