@@ -94,18 +94,30 @@
   gap: 72px;
 }
 
+.profile-two-column > *,
+.profile-section-heading > * {
+  min-width: 0;
+}
+
 .profile-panel h2,
 .profile-section-heading h2 {
   margin: 22px 0 0;
   font-family: var(--serif);
-  font-size: clamp(3rem, 6.6vw, 7.4rem);
+  font-size: clamp(3rem, 5.8vw, 6.8rem);
   font-weight: 500;
   line-height: 0.9;
   text-transform: uppercase;
+  overflow-wrap: anywhere;
+  hyphens: auto;
+}
+
+.profile-two-column h2 {
+  font-size: clamp(2.85rem, 4.75vw, 5.7rem);
 }
 
 .profile-copy {
   display: grid;
+  min-width: 0;
   align-content: start;
   gap: 24px;
 }

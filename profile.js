@@ -152,13 +152,13 @@ const profileCopy = {
     heroTitle: "Yana Ellis",
     heroRole: "UX/UI & Web Designerin · Digital Product Designer · Multidisciplinary Digital Professional",
     heroIntroOne:
-      "Yana Ellis ist eine multidisziplinare UX/UI- und Webdesignerin, die seit 2022 professionell arbeitet und digitales Design, Produktdenken, Markenentwicklung, Marketing, Business Operations und reale Kundenerfahrung verbindet.",
+      "Yana Ellis ist eine multidisziplinäre UX/UI- und Webdesignerin, die seit 2022 professionell arbeitet und digitales Design, Produktdenken, Markenentwicklung, Marketing, Business Operations und reale Kundenerfahrung verbindet.",
     heroIntroTwo:
-      "Ihre Arbeit geht ueber Interface Design hinaus: Sie verbindet Websites, Customer Journeys, operative Anforderungen, Brand Systems und praktische Umsetzung zu digitalen Erlebnissen, die Unternehmen klarer und leichter nutzbar machen.",
+      "Ihre Arbeit geht über Interface Design hinaus: Sie verbindet Websites, Customer Journeys, operative Anforderungen, Brand Systems und praktische Umsetzung zu digitalen Erlebnissen, die Unternehmen klarer und leichter nutzbar machen.",
     metricOne: "Seit 2022",
     metricOneText: "Professionelle UX/UI-, Web- und Digitalprojektarbeit",
-    metricTwo: "3 Maerkte",
-    metricTwoText: "Kommerzielle Arbeit mit Bezug zu Ukraine, Kanada und dem Vereinigten Koenigreich",
+    metricTwo: "3 Märkte",
+    metricTwoText: "Kommerzielle Arbeit mit Bezug zu Ukraine, Kanada und dem Vereinigten Königreich",
     metricThree: "Multidisciplinary",
     metricThreeText: "Design, Produkt, Brand, SMM, Operations und Customer Experience",
     profileKicker: "Professional profile",
@@ -166,59 +166,175 @@ const profileCopy = {
     profileOne:
       "Yana arbeitet an der Schnittstelle von Design, digitalen Produkten, Branding, Customer Experience und Business Operations. Projekte beginnen oft, bevor es ein perfektes Briefing gibt: Sie recherchiert das Unternehmen, erkennt, was wirklich gebraucht wird, und verwandelt verstreute Informationen in ein strukturiertes Produkt.",
     profileTwo:
-      "Das ist besonders wertvoll, wenn ein Unternehmen mehr braucht als einen visuellen Refresh: klarere Informationsarchitektur, bessere Buchungs- oder Anfragewege, konsistente digitale Praesenz, kundenseitige Inhalte und praktische Systeme, die ausserhalb eines Portfolio-Screenshots funktionieren.",
+      "Das ist besonders wertvoll, wenn ein Unternehmen mehr braucht als einen visuellen Refresh: klarere Informationsarchitektur, bessere Buchungs- oder Anfragewege, konsistente digitale Präsenz, kundenseitige Inhalte und praktische Systeme, die außerhalb eines Portfolio-Screenshots funktionieren.",
     capabilitiesKicker: "Core capabilities",
     capabilitiesTitle: "Breite Kompetenz, organisiert um echte Projektverantwortung.",
     capUxTitle: "UX/UI & Product",
-    capUxText: "Informationsarchitektur, User Flows, responsive Interfaces, Booking- und Enquiry-Flows, Admin-Planung und Uebersetzung von Business-Logik in nutzbare Screens.",
+    capUxText: "Informationsarchitektur, User Flows, responsive Interfaces, Booking- und Enquiry-Flows, Admin-Planung und Übersetzung von Business-Logik in nutzbare Screens.",
     capWebTitle: "Web Design",
     capWebText: "Corporate, Service, Hospitality, ecommerce-nahe und Portfolio-Websites vom Konzept und der Struktur bis zum finalen responsive Erlebnis.",
     capBrandTitle: "Brand & Visual",
     capBrandText: "Digital Identity, Typografie, Layoutsysteme, Social Media Visuals, Visitenkarten, physische Brand Applications und produktionsreife Konzepte.",
     capMarketingTitle: "Marketing & SMM",
-    capMarketingText: "Content Architecture, Instagram Positioning, Highlight-Strukturen und die Uebersetzung komplexer Business-Information in klare oeffentliche Kommunikation.",
+    capMarketingText: "Content Architecture, Instagram Positioning, Highlight-Strukturen und die Übersetzung komplexer Business-Information in klare öffentliche Kommunikation.",
     capOpsTitle: "Operations & CX",
-    capOpsText: "Reservation Management, Gaestekommunikation, Buchungskoordination, Check-in-Prozesse, Zahlungsstatus und Analyse von Kundenanforderungen.",
+    capOpsText: "Reservation Management, Gästekommunikation, Buchungskoordination, Check-in-Prozesse, Zahlungsstatus und Analyse von Kundenanforderungen.",
     capVendorTitle: "Procurement",
-    capVendorText: "Supplier Research, Angebotsvergleich, Spezifikationen, Preisvergleich und Kommunikation mit Herstellern fuer physische Markenmaterialien.",
+    capVendorText: "Supplier Research, Angebotsvergleich, Spezifikationen, Preisvergleich und Kommunikation mit Herstellern für physische Markenmaterialien.",
     commercialKicker: "Selected commercial work",
     commercialTitle: "Echte Unternehmen, echte Constraints, fertige oder laufende Digitalarbeit.",
-    arcedConstruction: "Kommerzielle Website fuer ein kanadisches Bauunternehmen, von Grund auf erstellt mit Fokus auf klare Leistungen, Glaubwuerdigkeit und direkte Anfragewege.",
-    arcedTile: "Separate digitale Praesenz fuer ARCED Tile Services, mit Markenbezug und zugleich eigenstaendiger, verstaendlicher Service-Struktur.",
+    arcedConstruction: "Kommerzielle Website für ein kanadisches Bauunternehmen, von Grund auf erstellt mit Fokus auf klare Leistungen, Glaubwürdigkeit und direkte Anfragewege.",
+    arcedTile: "Separate digitale Präsenz für ARCED Tile Services, mit Markenbezug und zugleich eigenständiger, verständlicher Service-Struktur.",
     ecoHair: "Laufendes kommerzielles Projekt mit Services, Terminbuchung, Ecommerce, Kursen, Brand Direction und digitaler Customer Experience.",
-    mariaCommercial: "Multidisziplinaeres Business- und Digitalprojekt mit UX/UI, Web Design, Operations, Customer Experience, SMM, Brand Design, Procurement und Project Management.",
+    mariaCommercial: "Multidisziplinäres Business- und Digitalprojekt mit UX/UI, Web Design, Operations, Customer Experience, SMM, Brand Design, Procurement und Project Management.",
     mariaKicker: "Maria Apartments",
     mariaTitle: "Ein digitales Produkt, geformt durch direktes operatives Wissen.",
     mariaOne:
-      "Im Unterschied zu einem Designprozess aus einem distanzierten Briefing entstand die Maria Apartments Digital Experience waehrend Yana aktiv an operativen und kundenseitigen Prozessen beteiligt war. Dadurch kannte sie wiederkehrende Gaestefragen, Booking Friction, Preis-Komplexitaet, Verfuegbarkeit und Check-in-Anforderungen aus erster Hand.",
+      "Im Unterschied zu einem Designprozess aus einem distanzierten Briefing entstand die Maria Apartments Digital Experience während Yana aktiv an operativen und kundenseitigen Prozessen beteiligt war. Dadurch kannte sie wiederkehrende Gästefragen, Booking Friction, Preis-Komplexität, Verfügbarkeit und Check-in-Anforderungen aus erster Hand.",
     mariaTwo:
-      "Ihre Rolle umfasst Buchungskoordination, Gaestekommunikation, Check-ins, Dokumentation, Website-Struktur, UX/UI, Social Media Architecture, Brand Materials, Supplier Research und Produktionsplanung fuer physische Brand Objects.",
+      "Ihre Rolle umfasst Buchungskoordination, Gästekommunikation, Check-ins, Dokumentation, Website-Struktur, UX/UI, Social Media Architecture, Brand Materials, Supplier Research und Produktionsplanung für physische Brand Objects.",
     conceptKicker: "Independent concept work",
     conceptTitle: "Branchenbreite, ohne Konzeptprojekte als Kundenarbeit auszugeben.",
     conceptText:
-      "Independent Projects dienen dazu, Interaction Design, Visual Systems, UX Concepts, Creative Direction und Digital Experiences in verschiedenen Branchen zu erforschen. Commercial Work und Concept Work werden getrennt gezeigt, weil sie unterschiedliche Staerken beweisen.",
+      "Independent Projects dienen dazu, Interaction Design, Visual Systems, UX Concepts, Creative Direction und Digital Experiences in verschiedenen Branchen zu erforschen. Commercial Work und Concept Work werden getrennt gezeigt, weil sie unterschiedliche Stärken beweisen.",
     styleKicker: "Working style",
-    styleTitle: "Selbststaendig, systemorientiert und umsetzungsnah.",
+    styleTitle: "Selbstständig, systemorientiert und umsetzungsnah.",
     styleIndependentTitle: "Independent",
-    styleIndependentText: "Kann mit einem Problem statt einer Checkliste arbeiten, recherchieren, strukturieren und eine praktikable Loesung vorschlagen.",
+    styleIndependentText: "Kann mit einem Problem statt einer Checkliste arbeiten, recherchieren, strukturieren und eine praktikable Lösung vorschlagen.",
     styleBusinessTitle: "Business-aware",
-    styleBusinessText: "Beruecksichtigt Business Model, Wartung, Kosten, Kundenverwirrung, interne Workflows und was nach dem Klick passiert.",
+    styleBusinessText: "Berücksichtigt Business Model, Wartung, Kosten, Kundenverwirrung, interne Workflows und was nach dem Klick passiert.",
     styleExecutionTitle: "Execution-focused",
     styleExecutionText: "Interessiert an Arbeit, die vom Konzept zu nutzbarer Website, Brand Material, Supplier Brief, Content Structure oder Customer Flow werden kann.",
     timelineKicker: "Timeline",
     timelineTitle: "Professionelle Arbeit in UX/UI, Web Design und Digitalprojekten seit 2022.",
     timeline2022: "Beginn professioneller Arbeit in UX/UI, Web Design und Digitalprojekten.",
-    timeline2024: "Ausbau vollstaendiger Website-Arbeit, Informationsarchitektur, Responsive Design und multi-industry Concept Work.",
-    timeline2026: "Kommerzielle Arbeit umfasst Unternehmen in Kanada, Schottland / Vereinigtes Koenigreich und Ukraine, mit Fokus auf complete digital experiences.",
+    timeline2024: "Ausbau vollständiger Website-Arbeit, Informationsarchitektur, Responsive Design und multi-industry Concept Work.",
+    timeline2026: "Kommerzielle Arbeit umfasst Unternehmen in Kanada, Schottland / Vereinigtes Königreich und Ukraine, mit Fokus auf complete digital experiences.",
     languagesKicker: "Languages & identity",
     languagesTitle: "Internationale Kommunikation, ohne Sprache zum Hauptthema zu machen.",
     languagesText:
-      "Yana kommuniziert auf Ukrainisch, Russisch, Englisch, Polnisch und Spanisch, mit grundlegenden Japanischkenntnissen. Beruflich arbeitet sie unter dem Namen Yana Ellis; der Name Yanyo Ellis wird auch auf ausgewaehlten persoenlichen und digitalen Plattformen genutzt."
+      "Yana kommuniziert auf Ukrainisch, Russisch, Englisch, Polnisch und Spanisch, mit grundlegenden Japanischkenntnissen. Beruflich arbeitet sie unter dem Namen Yana Ellis; der Name Yanyo Ellis wird auch auf ausgewählten persönlichen und digitalen Plattformen genutzt."
   }
 };
 
-profileCopy.uk = { ...profileCopy.en };
-profileCopy.pl = { ...profileCopy.en };
+profileCopy.uk = {
+  ...profileCopy.en,
+  title: "Професійний профіль | Yana Ellis",
+  portfolio: "Портфоліо",
+  projectGuide: "Гайд проєкту",
+  heroKicker: "Професійне досьє",
+  heroRole: "UX/UI і вебдизайнерка · Digital Product Designer · Multidisciplinary Digital Professional",
+  heroIntroOne:
+    "Yana Ellis - multidisciplinary UX/UI і вебдизайнерка, яка професійно працює з 2022 року. Її робота поєднує digital design, product thinking, розвиток бренду, маркетинг, бізнес-процеси та реальний досвід взаємодії з клієнтами.",
+  heroIntroTwo:
+    "Її робота виходить за межі дизайну інтерфейсів: вона поєднує сайти, customer journeys, операційні вимоги, бренд-системи й практичну реалізацію в цифрові досвіди, які роблять бізнес зрозумілішим і зручнішим.",
+  metricOne: "З 2022",
+  metricOneText: "Професійна робота в UX/UI, web і digital projects",
+  metricTwo: "3 ринки",
+  metricTwoText: "Комерційна робота, пов'язана з Україною, Канадою та Великою Британією",
+  metricThreeText: "Design, product, brand, SMM, operations і customer experience",
+  profileKicker: "Професійний профіль",
+  profileTitle: "Дизайн, пов'язаний із бізнесом за інтерфейсом.",
+  profileOne:
+    "Yana працює на перетині дизайну, цифрових продуктів, брендингу, customer experience і бізнес-процесів. Її проєкти часто починаються ще до ідеального брифу: вона досліджує бізнес, визначає, що насправді потрібно створити, і перетворює розрізнену інформацію на структурований продукт.",
+  profileTwo:
+    "Це особливо цінно там, де компанії потрібен не просто візуальний редизайн, а ясніша інформаційна архітектура, кращий шлях бронювання або заявки, послідовна digital presence, зрозумілий клієнтський контент і практичні системи, що працюють поза красивим скриншотом.",
+  capabilitiesKicker: "Ключові компетенції",
+  capabilitiesTitle: "Широкий діапазон, зібраний навколо реальної відповідальності за проєкт.",
+  capUxText: "Інформаційна архітектура, user flows, адаптивні інтерфейси, booking і enquiry flows, планування admin-інтерфейсів та переклад бізнес-логіки в зручні екрани.",
+  capWebText: "Корпоративні, сервісні, hospitality, ecommerce-related і portfolio websites: від концепції та структури до фінального адаптивного досвіду.",
+  capBrandText: "Digital identity, типографіка, layout systems, social media visuals, візитки, фізичні носії бренду та production-ready concepts.",
+  capMarketingText: "Content architecture, Instagram positioning, структура Highlights і переклад складної бізнес-інформації у зрозумілу публічну комунікацію.",
+  capOpsText: "Reservation management, комунікація з гостями, координація бронювань, check-in processes, tracking оплат і аналіз вимог клієнтів.",
+  capVendorText: "Пошук постачальників, збір пропозицій, підготовка специфікацій, порівняння цін і комунікація з виробниками для фізичних бренд-матеріалів.",
+  commercialKicker: "Комерційні роботи",
+  commercialTitle: "Реальні бізнеси, реальні обмеження, завершена або поточна digital-робота.",
+  arcedConstruction: "Комерційний сайт, створений з нуля для канадської будівельної компанії, з фокусом на ясні послуги, довіру та прямі шляхи заявки.",
+  arcedTile: "Окреме digital presence для tile-напряму ARCED: зі збереженням зв'язку з брендом, але самостійною і зрозумілою структурою послуг.",
+  ecoHair: "Поточний комерційний проєкт, що поєднує послуги, запис, ecommerce, курси, brand direction і digital customer experience.",
+  mariaCommercial: "Multidisciplinary бізнес- і digital-проєкт, що поєднує UX/UI, web design, operations, customer experience, SMM, brand design, procurement і project management.",
+  mariaTitle: "Digital product, сформований реальним операційним досвідом.",
+  mariaOne:
+    "На відміну від дизайнера, який працює лише за зовнішнім брифом, Yana проєктувала digital experience Maria Apartments, одночасно беручи участь в операційних і клієнтських процесах бізнесу. Це дало пряме розуміння повторюваних питань гостей, friction у бронюванні, складності цін, доступності квартир і вимог check-in.",
+  mariaTwo:
+    "Її роль включає координацію бронювань, комунікацію з гостями, check-ins, документацію, структуру сайту, UX/UI, social media architecture, branded materials, supplier research і production planning фізичних бренд-об'єктів.",
+  conceptTitle: "Діапазон індустрій без видавання концептів за клієнтські проєкти.",
+  conceptText:
+    "Independent-проєкти використовуються для дослідження interaction design, visual systems, UX concepts, creative direction і digital experiences у різних індустріях. Комерційні та концептуальні роботи розділені, бо показують різні сильні сторони.",
+  styleKicker: "Робочий стиль",
+  styleTitle: "Самостійний, системний і орієнтований на реалізацію.",
+  styleIndependentTitle: "Самостійність",
+  styleIndependentText: "Комфортно працює з проблемою, а не лише з чеклистом: досліджує, структурує і пропонує практичне рішення.",
+  styleBusinessText: "Враховує бізнес-модель, підтримку, вартість, клієнтську плутанину, внутрішній workflow і те, що відбувається після кліку.",
+  styleExecutionText: "Цікавиться роботою, яка переходить із концепту в сайт, бренд-матеріал, brief для постачальника, структуру контенту або робочий customer flow.",
+  timelineKicker: "Timeline",
+  timelineTitle: "Професійна робота в UX/UI, web design і digital projects з 2022 року.",
+  timeline2022: "Початок професійної роботи в UX/UI, web design і digital projects.",
+  timeline2024: "Розширення роботи над повноцінними сайтами, інформаційною архітектурою, responsive design і концептами в різних індустріях.",
+  timeline2026: "Комерційні проєкти включають бізнеси в Канаді, Шотландії / Великій Британії та Україні; поточний фокус - complete digital experiences.",
+  languagesKicker: "Мови та ідентичність",
+  languagesTitle: "Міжнародна комунікація без перетворення мов на головний сюжет.",
+  languagesText:
+    "Yana спілкується українською, російською, англійською, польською та іспанською, а також має базову японську. Професійно вона працює під іменем Yana Ellis; ім'я Yanyo Ellis також використовується на окремих особистих і digital-платформах."
+};
+
+profileCopy.pl = {
+  ...profileCopy.en,
+  title: "Profil zawodowy | Yana Ellis",
+  projectGuide: "Przewodnik",
+  heroKicker: "Profil zawodowy",
+  heroRole: "Projektantka UX/UI i web · Digital Product Designer · Multidisciplinary Digital Professional",
+  heroIntroOne:
+    "Yana Ellis to multidisciplinary projektantka UX/UI i web, pracująca zawodowo od 2022 roku. Jej praca łączy digital design, product thinking, rozwój marki, marketing, procesy biznesowe i realne doświadczenie kontaktu z klientami.",
+  heroIntroTwo:
+    "Jej praca wykracza poza projektowanie interfejsów: łączy strony internetowe, customer journeys, wymagania operacyjne, systemy marki i praktyczną realizację w doświadczenia cyfrowe, które czynią biznes jaśniejszym i łatwiejszym w użyciu.",
+  metricOne: "Od 2022",
+  metricOneText: "Profesjonalna praca w UX/UI, web i digital projects",
+  metricTwo: "3 rynki",
+  metricTwoText: "Praca komercyjna związana z Ukrainą, Kanadą i Wielką Brytanią",
+  profileKicker: "Profil zawodowy",
+  profileTitle: "Design połączony z biznesem za interfejsem.",
+  profileOne:
+    "Yana pracuje na styku designu, produktów cyfrowych, brandingu, customer experience i procesów biznesowych. Jej projekty często zaczynają się zanim istnieje idealny brief: bada biznes, określa, co naprawdę trzeba zbudować, i zamienia rozproszone informacje w uporządkowany produkt.",
+  profileTwo:
+    "To szczególnie wartościowe tam, gdzie firma potrzebuje więcej niż wizualnego odświeżenia: czytelniejszej architektury informacji, lepszej ścieżki rezerwacji lub zapytania, spójnej obecności cyfrowej, zrozumiałych treści dla klienta i praktycznych systemów działających poza ładnym screenshotem.",
+  capabilitiesKicker: "Kluczowe kompetencje",
+  capabilitiesTitle: "Szeroki zakres zorganizowany wokół realnej odpowiedzialności za projekt.",
+  capUxText: "Architektura informacji, user flows, responsywne interfejsy, booking i enquiry flows, planowanie paneli admin oraz przekładanie logiki biznesowej na użyteczne ekrany.",
+  capWebText: "Strony firmowe, usługowe, hospitality, ecommerce-related i portfolio websites: od koncepcji i struktury po finalne responsywne doświadczenie.",
+  capBrandText: "Digital identity, typografia, layout systems, social media visuals, wizytówki, fizyczne nośniki marki i production-ready concepts.",
+  capMarketingText: "Content architecture, Instagram positioning, struktura Highlights i przekładanie złożonych informacji biznesowych na jasną komunikację publiczną.",
+  capOpsText: "Reservation management, komunikacja z gośćmi, koordynacja rezerwacji, check-in processes, tracking płatności i analiza wymagań klientów.",
+  capVendorText: "Wyszukiwanie dostawców, zbieranie ofert, przygotowanie specyfikacji, porównywanie cen i komunikacja z producentami fizycznych materiałów marki.",
+  commercialKicker: "Prace komercyjne",
+  commercialTitle: "Prawdziwe biznesy, realne ograniczenia, ukończona lub trwająca praca digital.",
+  arcedConstruction: "Komercyjna strona stworzona od podstaw dla kanadyjskiej firmy budowlanej, z naciskiem na jasne usługi, wiarygodność i bezpośrednią ścieżkę kontaktu.",
+  arcedTile: "Osobna obecność cyfrowa dla kierunku tile usług ARCED: spójna z marką, ale samodzielna i zrozumiała jako osobna kategoria usług.",
+  ecoHair: "Trwający projekt komercyjny łączący usługi, rezerwacje, ecommerce, kursy, brand direction i digital customer experience.",
+  mariaCommercial: "Multidisciplinary projekt biznesowy i digital łączący UX/UI, web design, operations, customer experience, SMM, brand design, procurement i project management.",
+  mariaTitle: "Digital product ukształtowany przez realne doświadczenie operacyjne.",
+  mariaOne:
+    "W odróżnieniu od projektanta pracującego wyłącznie z zewnętrznym briefem, Yana projektowała digital experience Maria Apartments, jednocześnie uczestnicząc w operacyjnych i klienckich procesach biznesu. Dało jej to bezpośredni wgląd w powtarzające się pytania gości, friction w rezerwacji, złożoność cen, dostępność apartamentów i wymagania check-in.",
+  mariaTwo:
+    "Jej rola obejmuje koordynację rezerwacji, komunikację z gośćmi, check-ins, dokumentację, strukturę strony, UX/UI, social media architecture, branded materials, supplier research i production planning fizycznych obiektów marki.",
+  conceptTitle: "Zakres branż bez udawania, że projekty koncepcyjne są pracą kliencką.",
+  conceptText:
+    "Independent projects służą do eksplorowania interaction design, visual systems, UX concepts, creative direction i digital experiences w różnych branżach. Prace komercyjne i koncepcyjne są rozdzielone, ponieważ pokazują różne mocne strony.",
+  styleKicker: "Styl pracy",
+  styleTitle: "Samodzielny, systemowy i nastawiony na realizację.",
+  styleIndependentTitle: "Samodzielność",
+  styleIndependentText: "Potrafi pracować z problemem, nie tylko z checklistą: bada, porządkuje i proponuje praktyczne rozwiązanie.",
+  styleBusinessText: "Uwzględnia model biznesowy, utrzymanie, koszt, niejasności po stronie klienta, wewnętrzny workflow i to, co dzieje się po kliknięciu.",
+  styleExecutionText: "Interesuje ją praca, która przechodzi z koncepcji w stronę, materiał marki, brief dla dostawcy, strukturę treści albo działający customer flow.",
+  timelineTitle: "Profesjonalna praca w UX/UI, web design i digital projects od 2022 roku.",
+  timeline2022: "Początek profesjonalnej pracy w UX/UI, web design i digital projects.",
+  timeline2024: "Rozwój pełnych projektów stron, architektury informacji, responsive design i koncepcji w różnych branżach.",
+  timeline2026: "Prace komercyjne obejmują biznesy w Kanadzie, Szkocji / Wielkiej Brytanii i Ukrainie; obecny fokus to complete digital experiences.",
+  languagesKicker: "Języki i tożsamość",
+  languagesTitle: "Komunikacja międzynarodowa bez robienia z języków głównego tematu.",
+  languagesText:
+    "Yana komunikuje się po ukraińsku, rosyjsku, angielsku, polsku i hiszpańsku, ma też podstawową znajomość japońskiego. Zawodowo działa pod nazwiskiem Yana Ellis; nazwa Yanyo Ellis jest również używana na wybranych osobistych i digital-platformach."
+};
 
 function initialLanguage() {
   const saved = localStorage.getItem(languageKey);

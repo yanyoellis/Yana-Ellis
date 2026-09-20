@@ -21,10 +21,12 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   min-width: 320px;
+  overflow-x: hidden;
   margin: 0;
   background: var(--bg);
   color: var(--text);
@@ -159,6 +161,7 @@ button {
 .language-switcher {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 2px;
   padding: 3px;
 }

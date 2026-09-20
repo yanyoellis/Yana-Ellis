@@ -92,7 +92,7 @@ const sharedLabels = {
     email: "Email",
     readMore: "Mehr lesen",
     footerText:
-      "Informationen zum Website-Prozess fuer Kunden, die vor einer finalen Anfrage klare schriftliche Bedingungen verstehen moechten.",
+      "Informationen zum Website-Prozess für Kunden, die vor einer finalen Anfrage klare schriftliche Bedingungen verstehen möchten.",
     ctaTitle: "Hast du ein Website-Projekt im Kopf?",
     ctaText:
       "Lies zuerst die Prozessdetails und kontaktiere mich direkt, wenn du bereit bist, das Projekt zu besprechen.",

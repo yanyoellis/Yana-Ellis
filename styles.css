@@ -19,10 +19,12 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   min-width: 320px;
+  overflow-x: hidden;
   margin: 0;
   background: var(--bg);
   color: var(--text);
