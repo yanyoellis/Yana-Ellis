@@ -28,6 +28,7 @@ const translations = {
     projectAria: "Open {name} project site",
     estimateButton: "Estimate",
     estimateProjectButton: "Estimate project",
+    cvButton: "CV",
     processButton: "How the process works",
     processNote:
       "Read the full process, payments, revisions and project terms before sending a request.",
@@ -44,6 +45,7 @@ const translations = {
     footerText:
       "Website design and development information for clear written project requests.",
     footerProjectGuide: "Project Guide",
+    footerCv: "CV",
     footerFaq: "FAQ",
     footerPrivacy: "Privacy Policy",
     footerTerms: "Terms of Service",
@@ -97,6 +99,7 @@ const translations = {
     projectAria: "Відкрити сайт проєкту {name}",
     estimateButton: "Розрахунок",
     estimateProjectButton: "Оцінити проєкт",
+    cvButton: "CV",
     processButton: "Як проходить робота",
     processNote:
       "Прочитайте повний процес, оплату, правки та умови проєкту перед надсиланням заявки.",
@@ -113,6 +116,7 @@ const translations = {
     footerText:
       "Інформація про дизайн і розробку сайтів для зрозумілих письмових заявок.",
     footerProjectGuide: "Гайд проєкту",
+    footerCv: "CV",
     footerFaq: "FAQ",
     footerPrivacy: "Конфіденційність",
     footerTerms: "Умови",
@@ -166,6 +170,7 @@ const translations = {
     projectAria: "Otwórz stronę projektu {name}",
     estimateButton: "Wycena",
     estimateProjectButton: "Wyceń projekt",
+    cvButton: "CV",
     processButton: "Jak wygląda proces",
     processNote:
       "Przeczytaj pełny proces, płatności, poprawki i warunki projektu przed wysłaniem zapytania.",
@@ -182,6 +187,7 @@ const translations = {
     footerText:
       "Informacje o projektowaniu i tworzeniu stron dla jasnych pisemnych zapytań.",
     footerProjectGuide: "Przewodnik",
+    footerCv: "CV",
     footerFaq: "FAQ",
     footerPrivacy: "Prywatność",
     footerTerms: "Regulamin",
@@ -235,6 +241,7 @@ const translations = {
     projectAria: "Открыть сайт проекта {name}",
     estimateButton: "Расчет",
     estimateProjectButton: "Оценить проект",
+    cvButton: "CV",
     processButton: "Как проходит работа",
     processNote:
       "Прочитайте полный процесс, оплату, правки и условия проекта перед отправкой заявки.",
@@ -251,6 +258,7 @@ const translations = {
     footerText:
       "Информация о дизайне и разработке сайтов для понятных письменных заявок.",
     footerProjectGuide: "Гайд проекта",
+    footerCv: "CV",
     footerFaq: "FAQ",
     footerPrivacy: "Конфиденциальность",
     footerTerms: "Условия",
@@ -304,6 +312,7 @@ const translations = {
     projectAria: "Projektseite {name} öffnen",
     estimateButton: "Kalkulation",
     estimateProjectButton: "Projekt kalkulieren",
+    cvButton: "CV",
     processButton: "Ablauf ansehen",
     processNote:
       "Lies den vollständigen Ablauf, Zahlungen, Korrekturen und Projektbedingungen, bevor du eine Anfrage sendest.",
@@ -320,6 +329,7 @@ const translations = {
     footerText:
       "Informationen zu Webdesign und Entwicklung für klare schriftliche Projektanfragen.",
     footerProjectGuide: "Projektguide",
+    footerCv: "CV",
     footerFaq: "FAQ",
     footerPrivacy: "Datenschutz",
     footerTerms: "Bedingungen",

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="CV for Yana Ellis, UX/UI, product and web designer." />
+    <title>Yana Ellis - CV</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="cv.css" />
+  </head>
+  <body>
+    <div class="cv-shell">
+      <header class="cv-header" aria-label="CV navigation">
+        <a class="brand-link" href="index.html" aria-label="Yana Ellis portfolio">
+          <img class="brand-logo" src="assets/yana-ellis-logo-transparent.png" alt="Yana Ellis logo" />
+        </a>
+        <div class="header-actions">
+          <a class="nav-button" href="index.html" data-nav="portfolio">Portfolio</a>
+          <a class="nav-button" href="project-guide.html" data-nav="projectGuide">Project Guide</a>
+          <div class="language-switcher" aria-label="Language">
+            <button class="language-button is-active" type="button" data-lang="en" aria-pressed="true">EN</button>
+            <button class="language-button" type="button" data-lang="uk" aria-pressed="false">UK</button>
+            <button class="language-button" type="button" data-lang="pl" aria-pressed="false">PL</button>
+            <button class="language-button" type="button" data-lang="ru" aria-pressed="false">RU</button>
+            <button class="language-button" type="button" data-lang="de" aria-pressed="false">DE</button>
+          </div>
+        </div>
+      </header>
+
+      <main id="cvRoot" class="cv-main" aria-live="polite"></main>
+    </div>
+
+    <script src="site-config.js"></script>
+    <script src="cv.js"></script>
+  </body>
+</html>

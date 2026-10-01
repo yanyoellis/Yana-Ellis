@@ -5,6 +5,7 @@ const languageKey = "yana-ellis-language";
 const sharedLabels = {
   en: {
     portfolio: "Portfolio",
+    cv: "CV",
     calculator: "Calculator",
     projectGuide: "Project Guide",
     faq: "FAQ",
@@ -23,6 +24,7 @@ const sharedLabels = {
   },
   uk: {
     portfolio: "Портфоліо",
+    cv: "CV",
     calculator: "Калькулятор",
     projectGuide: "Гайд проєкту",
     faq: "FAQ",
@@ -41,6 +43,7 @@ const sharedLabels = {
   },
   pl: {
     portfolio: "Portfolio",
+    cv: "CV",
     calculator: "Kalkulator",
     projectGuide: "Przewodnik",
     faq: "FAQ",
@@ -59,6 +62,7 @@ const sharedLabels = {
   },
   ru: {
     portfolio: "Портфолио",
+    cv: "CV",
     calculator: "Калькулятор",
     projectGuide: "Гайд проекта",
     faq: "FAQ",
@@ -77,6 +81,7 @@ const sharedLabels = {
   },
   de: {
     portfolio: "Portfolio",
+    cv: "CV",
     calculator: "Kalkulator",
     projectGuide: "Projektguide",
     faq: "FAQ",
@@ -300,6 +305,7 @@ function setMeta(page, language) {
 function baseLinks(labels) {
   return `
     <a class="nav-link" href="index.html">${labels.portfolio}</a>
+    <a class="nav-link" href="cv.html">${labels.cv}</a>
     <a class="nav-link" href="project-guide.html">${labels.projectGuide}</a>
     <a class="nav-link" href="faq.html">${labels.faq}</a>
     <a class="nav-link" href="privacy-policy.html">${labels.privacy}</a>
