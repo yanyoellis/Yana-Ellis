@@ -725,6 +725,389 @@ cvCopy.de.strengths = [
   ["Independence", "Ich kann selbstständig arbeiten und Verantwortung für Entscheidungen übernehmen."]
 ];
 
+const anonymizedContent = {
+  en: {
+    summary:
+      "UX/UI, product and web designer with four years of professional design experience across websites, digital products, brand systems and customer-facing business experiences. I have worked with bars, restaurants, boutiques, online stores, beauty services, rental businesses, construction companies, clinics, small local businesses, service providers and digital products, turning unclear business needs into finished, commercially usable design systems.",
+    meta: [
+      ["Location", "Ukraine · Remote"],
+      ["Availability", "Full-time · Contract · Freelance"],
+      ["Focus", "UX/UI · Web Design · Product Design · Brand Systems"],
+      ["Contact", "oh.yanyoellis@gmail.com · @ohyanyo"]
+    ],
+    experience: [
+      {
+        company: "Independent Digital Design Practice",
+        role: "Freelance Product, UX/UI, Web & Brand Designer",
+        date: "2022 - 2026",
+        copy:
+          "Delivered finished digital products, commercial websites, brand systems and customer-facing experiences for small and medium businesses across hospitality, retail, beauty, real estate, construction, healthcare and service industries.",
+        bullets: [
+          "Created websites and visual systems for bars, restaurants and hospitality businesses where the key problem was weak positioning, unclear menus, poor booking paths and no emotional brand atmosphere online.",
+          "Designed online stores, boutique websites and retail experiences where product discovery, category logic, product presentation, trust signals and checkout clarity were the main commercial priorities.",
+          "Built digital experiences for small businesses that had scattered ideas, inconsistent branding and no clear customer journey, turning them into structured websites with clear offers, content hierarchy and conversion paths.",
+          "Designed booking, enquiry and service-selection journeys for beauty, wellness, rental, renovation and local-service businesses where customers needed to understand options quickly and contact the business without friction.",
+          "Created logos, brand directions, social media systems, business cards, banners, presentation materials and supporting print assets so each business could keep one consistent identity across digital and physical touchpoints.",
+          "Handled responsive UI, front-end implementation, forms, hosting, domains and deployment details when the project required full delivery rather than design files only."
+        ]
+      },
+      {
+        company: "Rental & Guest Experience Business",
+        role: "Product Designer · UX/UI Designer · Web Designer · Brand Designer · Business Operations Manager",
+        date: "2026",
+        copy:
+          "Completed a full digital, brand and operational design system for a short-term and medium-term apartment-rental business, connecting customer research, property presentation, booking logic and real operational workflows.",
+        bullets: [
+          "Solved the problem of a large property portfolio being difficult to compare by creating a clearer apartment-discovery structure with filters, availability logic, pricing context and individual property pages.",
+          "Restructured how customers understand rules, amenities, location, guest capacity and booking conditions, reducing repeated questions and making the offer easier to evaluate.",
+          "Created a consistent visual identity for website, social media, guest materials, branded key tags and other physical customer touchpoints.",
+          "Improved listing presentation across rental platforms so property information stayed accurate, commercially attractive and consistent with the business identity.",
+          "Worked with real guest communication, booking coordination, check-in support and operational feedback, which made the UX decisions practical rather than theoretical."
+        ]
+      }
+    ],
+    commercial: [
+      {
+        name: "Premium Beauty & Education Business",
+        type: "Beauty · E-commerce · Booking · Courses",
+        copy:
+          "The business needed to combine services, appointments, professional products and education without making the website feel fragmented. I created a premium eco-oriented structure with separate journeys for booking treatments, buying products and purchasing courses, plus owner-friendly content management logic."
+      },
+      {
+        name: "Flower Boutique & Gift Store",
+        type: "Retail · Floristry · Online Store",
+        copy:
+          "The original digital presentation felt less premium than the products. I redesigned the customer experience around bouquet discovery, emotional product presentation, clearer categories, better visual hierarchy and a more gift-oriented purchase path."
+      },
+      {
+        name: "Bar & Cocktail Concept",
+        type: "Hospitality · Brand Experience · Reservations",
+        copy:
+          "The venue needed a digital identity that could communicate atmosphere before a guest arrived. I shaped the website around mood, menu discovery, events, table reservation logic and a stronger visual language suitable for nightlife and social sharing."
+      },
+      {
+        name: "Independent Fashion & Lifestyle Store",
+        type: "Retail · E-commerce · Brand System",
+        copy:
+          "The store needed to move from a simple product list to a brand-led shopping experience. I structured category navigation, product cards, campaign visuals, trust elements and mobile-first purchase decisions."
+      },
+      {
+        name: "Construction & Renovation Service",
+        type: "Service Website · Lead Generation",
+        copy:
+          "The company needed credibility and clearer service explanation. I built a service hierarchy, project-oriented content flow, enquiry paths, responsive layouts and a more professional visual system for customers comparing contractors."
+      },
+      {
+        name: "Local Service Businesses",
+        type: "Small Business · Websites · Identity",
+        copy:
+          "For small businesses with limited materials, I created complete digital foundations: offer structure, homepage logic, service descriptions, contact journeys, social visuals and simple brand systems that made the business look established and trustworthy."
+      }
+    ],
+    portfolio: [
+      {
+        name: "B2B SaaS Management Dashboard",
+        type: "Product Design · Analytics · Reporting",
+        copy:
+          "Designed a business-management dashboard for revenue analytics, customers, subscriptions, projects and reporting, solving the problem of dense operational data through clear navigation, scanable metrics and reusable interface patterns."
+      },
+      {
+        name: "Private Banking Mobile App",
+        type: "Fintech · Mobile Product",
+        copy:
+          "Created a luxury mobile banking experience focused on trust, balance visibility, transfers, upcoming payments and premium financial interaction, balancing elegance with practical money-management clarity."
+      },
+      {
+        name: "Premium Dental Clinic Website",
+        type: "Healthcare · Trust · Appointment UX",
+        copy:
+          "Designed a clinic website around patient trust, treatment discovery, specialists, pricing clarity and appointment intent, making medical information feel calm, credible and easy to act on."
+      },
+      {
+        name: "Luxury Real Estate Discovery Platform",
+        type: "Real Estate · Filtering · Property UX",
+        copy:
+          "Designed an interactive property-discovery experience with building navigation, filters, availability states, floor plans and conversion paths for users comparing apartments by practical criteria."
+      },
+      {
+        name: "Italian Restaurant Website",
+        type: "Hospitality · Menu · Reservations",
+        copy:
+          "Designed a restaurant experience combining menu storytelling, atmosphere, editorial composition and reservation-oriented UX so visitors could understand the mood, food and booking path quickly."
+      },
+      {
+        name: "Luxury Tattoo Studio Website",
+        type: "Art Service · Portfolio · Booking",
+        copy:
+          "Created a high-end tattoo service website that positioned the studio as an artistic luxury experience through portfolio storytelling, artist presentation, restrained interaction and clear booking intent."
+      },
+      {
+        name: "Fragrance Brand Website",
+        type: "Luxury Product · Editorial Commerce",
+        copy:
+          "Built a refined fragrance concept website with controlled visual rhythm, curated product presentation and sensory storytelling that translated an intangible scent product into a digital experience."
+      },
+      {
+        name: "Editorial Ocean Experience",
+        type: "Editorial UX · Immersive Storytelling",
+        copy:
+          "Designed an immersive editorial experience with atmospheric navigation, narrative pacing and an ocean-inspired visual system, showing how interface design can support mood and long-form storytelling."
+      }
+    ]
+  },
+  uk: {
+    summary:
+      "UX/UI, product і web designer з чотирма роками професійного досвіду в дизайні сайтів, цифрових продуктів, бренд-систем і клієнтських бізнес-досвідів. Я працювала з барами, ресторанами, бутиками, онлайн-магазинами, beauty-сервісами, орендним бізнесом, будівельними компаніями, клініками, локальними малими бізнесами, сервісними компаніями та цифровими продуктами, перетворюючи нечіткі бізнес-потреби на готові комерційно придатні дизайн-системи.",
+    meta: [
+      ["Локація", "Україна · Remote"],
+      ["Формат", "Full-time · Contract · Freelance"],
+      ["Фокус", "UX/UI · Web Design · Product Design · Brand Systems"],
+      ["Контакт", "oh.yanyoellis@gmail.com · @ohyanyo"]
+    ],
+    experience: [
+      {
+        company: "Незалежна практика digital design",
+        role: "Freelance Product, UX/UI, Web & Brand Designer",
+        date: "2022 - 2026",
+        copy:
+          "Реалізувала готові цифрові продукти, комерційні сайти, бренд-системи та customer-facing experiences для малих і середніх бізнесів у hospitality, retail, beauty, real estate, construction, healthcare і service industries.",
+        bullets: [
+          "Створювала сайти й візуальні системи для барів, ресторанів і hospitality-бізнесів, де проблемою були слабке позиціонування, нечітке меню, незручне бронювання й відсутність атмосфери бренду онлайн.",
+          "Проєктувала онлайн-магазини, boutique websites і retail experiences, де важливими були product discovery, category logic, product presentation, trust signals і зрозумілий checkout.",
+          "Будувала digital experiences для малих бізнесів з розрізненими ідеями, непослідовним branding і відсутністю customer journey, перетворюючи їх на структуровані сайти з чіткою пропозицією й conversion paths.",
+          "Проєктувала booking, enquiry і service-selection journeys для beauty, wellness, rental, renovation і local-service businesses, щоб клієнти швидко розуміли опції й легко зв'язувалися з бізнесом.",
+          "Створювала логотипи, brand directions, social media systems, business cards, banners, presentations і print assets, щоб бізнес мав єдину айдентику в digital і physical touchpoints.",
+          "Працювала з responsive UI, front-end implementation, forms, hosting, domains і deployment, коли потрібна була повна реалізація, а не лише дизайн-файли."
+        ]
+      },
+      {
+        company: "Бізнес оренди та guest experience",
+        role: "Product Designer · UX/UI Designer · Web Designer · Brand Designer · Business Operations Manager",
+        date: "2026",
+        copy:
+          "Завершила повну digital, brand і operational design system для бізнесу коротко- та середньострокової оренди апартаментів, поєднавши customer research, property presentation, booking logic і реальні операційні процеси.",
+        bullets: [
+          "Вирішила проблему складного порівняння великого портфоліо об'єктів через чіткішу структуру apartment discovery з filters, availability logic, pricing context і окремими property pages.",
+          "Переструктурувала пояснення rules, amenities, location, guest capacity і booking conditions, щоб зменшити повторні питання й зробити пропозицію легшою для оцінки.",
+          "Створила єдину айдентику для сайту, social media, guest materials, branded key tags та інших physical customer touchpoints.",
+          "Покращила презентацію listings на rental platforms, щоб інформація залишалася точною, комерційно привабливою й узгодженою з айдентикою бізнесу.",
+          "Працювала з real guest communication, booking coordination, check-in support і operational feedback, тому UX-рішення були практичними, а не теоретичними."
+        ]
+      }
+    ]
+  },
+  pl: {
+    summary:
+      "Projektantka UX/UI, product i web z czteroletnim doświadczeniem w projektowaniu stron, produktów cyfrowych, systemów marki i doświadczeń klienta. Pracowałam z barami, restauracjami, butikami, sklepami online, usługami beauty, biznesami wynajmu, firmami budowlanymi, klinikami, małymi lokalnymi biznesami, usługodawcami i produktami cyfrowymi, zamieniając niejasne potrzeby biznesowe w gotowe, komercyjnie użyteczne systemy projektowe.",
+    meta: [
+      ["Lokalizacja", "Ukraina · Remote"],
+      ["Forma współpracy", "Full-time · Contract · Freelance"],
+      ["Fokus", "UX/UI · Web Design · Product Design · Brand Systems"],
+      ["Kontakt", "oh.yanyoellis@gmail.com · @ohyanyo"]
+    ],
+    experience: [
+      {
+        company: "Niezależna praktyka digital design",
+        role: "Freelance Product, UX/UI, Web & Brand Designer",
+        date: "2022 - 2026",
+        copy:
+          "Dostarczałam ukończone produkty cyfrowe, strony komercyjne, systemy marki i customer-facing experiences dla małych oraz średnich firm z branż hospitality, retail, beauty, real estate, construction, healthcare i services.",
+        bullets: [
+          "Tworzyłam strony i systemy wizualne dla barów, restauracji i hospitality businesses, gdzie problemem było słabe pozycjonowanie, nieczytelne menu, trudna rezerwacja i brak atmosfery marki online.",
+          "Projektowałam sklepy online, boutique websites i retail experiences, gdzie kluczowe były product discovery, category logic, product presentation, trust signals i przejrzysty checkout.",
+          "Budowałam digital experiences dla małych biznesów z rozproszonymi pomysłami, niespójnym brandingiem i brakiem customer journey, zamieniając je w uporządkowane strony z jasną ofertą i conversion paths.",
+          "Projektowałam booking, enquiry i service-selection journeys dla beauty, wellness, rental, renovation i local-service businesses, aby klienci szybko rozumieli opcje i łatwo kontaktowali się z firmą.",
+          "Tworzyłam logo, brand directions, social media systems, business cards, banners, presentations i print assets, aby firma miała spójną identyfikację w digital i physical touchpoints.",
+          "Pracowałam z responsive UI, front-end implementation, forms, hosting, domains i deployment, gdy projekt wymagał pełnej realizacji, nie tylko plików projektowych."
+        ]
+      },
+      {
+        company: "Biznes wynajmu i guest experience",
+        role: "Product Designer · UX/UI Designer · Web Designer · Brand Designer · Business Operations Manager",
+        date: "2026",
+        copy:
+          "Ukończyłam pełny digital, brand i operational design system dla biznesu wynajmu apartamentów, łącząc customer research, property presentation, booking logic i realne procesy operacyjne.",
+        bullets: [
+          "Rozwiązałam problem trudnego porównywania dużego portfolio lokali przez klarowniejszą strukturę apartment discovery z filters, availability logic, pricing context i osobnymi property pages.",
+          "Przebudowałam sposób wyjaśniania rules, amenities, location, guest capacity i booking conditions, aby zmniejszyć liczbę powtarzalnych pytań i ułatwić ocenę oferty.",
+          "Stworzyłam spójną identyfikację dla strony, social media, guest materials, branded key tags i innych physical customer touchpoints.",
+          "Poprawiłam prezentację listings na rental platforms, aby informacje były dokładne, komercyjnie atrakcyjne i zgodne z identyfikacją biznesu.",
+          "Pracowałam z real guest communication, booking coordination, check-in support i operational feedback, dzięki czemu decyzje UX były praktyczne, a nie teoretyczne."
+        ]
+      }
+    ]
+  },
+  ru: {
+    summary:
+      "UX/UI, product и web designer с четырьмя годами профессионального опыта в дизайне сайтов, цифровых продуктов, бренд-систем и клиентских бизнес-опытов. Я работала с барами, ресторанами, бутиками, онлайн-магазинами, beauty-сервисами, бизнесами аренды, строительными компаниями, клиниками, маленькими локальными бизнесами, сервисными компаниями и цифровыми продуктами, превращая неясные бизнес-задачи в готовые коммерчески применимые дизайн-системы.",
+    meta: [
+      ["Локация", "Украина · Remote"],
+      ["Формат", "Full-time · Contract · Freelance"],
+      ["Фокус", "UX/UI · Web Design · Product Design · Brand Systems"],
+      ["Контакт", "oh.yanyoellis@gmail.com · @ohyanyo"]
+    ],
+    experience: [
+      {
+        company: "Независимая практика digital design",
+        role: "Freelance Product, UX/UI, Web & Brand Designer",
+        date: "2022 - 2026",
+        copy:
+          "Реализовала готовые цифровые продукты, коммерческие сайты, бренд-системы и клиентские цифровые сценарии для малых и средних бизнесов в сфере гостеприимства, розницы, beauty, недвижимости, строительства, медицины и услуг.",
+        bullets: [
+          "Создавала сайты и визуальные системы для баров, ресторанов и бизнесов в сфере гостеприимства, где главными проблемами были слабое позиционирование, неясное меню, неудобное бронирование и отсутствие атмосферы бренда онлайн.",
+          "Проектировала онлайн-магазины, сайты бутиков и розничные цифровые витрины, где были важны поиск товара, логика категорий, презентация продукта, сигналы доверия и понятное оформление заказа.",
+          "Строила цифровой опыт для маленьких бизнесов с разрозненными идеями, непоследовательным брендингом и отсутствием клиентского пути, превращая их в структурированные сайты с понятным предложением и путями к заявке.",
+          "Проектировала сценарии записи, заявки и выбора услуги для beauty, wellness, rental, renovation и локальных сервисных бизнесов, чтобы клиенты быстро понимали варианты и легко связывались с бизнесом.",
+          "Создавала логотипы, визуальные направления, системы для социальных сетей, визитки, баннеры, презентации и печатные материалы, чтобы у бизнеса была единая айдентика в цифровых и физических точках контакта.",
+          "Работала с адаптивным UI, front-end реализацией, формами, хостингом, доменами и деплоем, когда проекту нужна была полная реализация, а не только дизайн-файлы."
+        ]
+      },
+      {
+        company: "Бизнес аренды и guest experience",
+        role: "Product Designer · UX/UI Designer · Web Designer · Brand Designer · Business Operations Manager",
+        date: "2026",
+        copy:
+          "Завершила полную цифровую, бренд- и операционную дизайн-систему для бизнеса аренды апартаментов, соединив исследование клиентов, презентацию объектов, логику бронирования и реальные операционные процессы.",
+        bullets: [
+          "Решила проблему сложного сравнения большого портфолио объектов через более понятную структуру поиска апартаментов с фильтрами, логикой доступности, ценовым контекстом и отдельными страницами объектов.",
+          "Перестроила объяснение правил, удобств, локации, вместимости и условий бронирования, чтобы уменьшить повторяющиеся вопросы и сделать предложение проще для оценки.",
+          "Создала единую айдентику для сайта, социальных сетей, гостевых материалов, брендированных ключевых тегов и других физических точек контакта с клиентом.",
+          "Улучшила презентацию объявлений на платформах аренды, чтобы информация оставалась точной, коммерчески привлекательной и согласованной с айдентикой бизнеса.",
+          "Работала с реальной коммуникацией с гостями, координацией бронирований, поддержкой заселения и операционным фидбеком, поэтому UX-решения были практическими, а не теоретическими."
+        ]
+      }
+    ]
+  },
+  de: {
+    summary:
+      "UX/UI, Product und Web Designerin mit vier Jahren professioneller Designerfahrung in Websites, digitalen Produkten, Markensystemen und kundennahen Business Experiences. Ich habe mit Bars, Restaurants, Boutiquen, Online-Shops, Beauty Services, Vermietungsunternehmen, Bauunternehmen, Kliniken, kleinen lokalen Unternehmen, Service Businesses und digitalen Produkten gearbeitet und unklare Business Needs in fertige, kommerziell nutzbare Designsysteme übersetzt.",
+    meta: [
+      ["Standort", "Ukraine · Remote"],
+      ["Verfügbarkeit", "Full-time · Contract · Freelance"],
+      ["Fokus", "UX/UI · Web Design · Product Design · Brand Systems"],
+      ["Kontakt", "oh.yanyoellis@gmail.com · @ohyanyo"]
+    ],
+    experience: [
+      {
+        company: "Unabhängige Digital-Design-Praxis",
+        role: "Freelance Product, UX/UI, Web & Brand Designer",
+        date: "2022 - 2026",
+        copy:
+          "Ich lieferte fertige digitale Produkte, kommerzielle Websites, Markensysteme und customer-facing experiences für kleine und mittlere Unternehmen in Hospitality, Retail, Beauty, Real Estate, Construction, Healthcare und Services.",
+        bullets: [
+          "Ich erstellte Websites und visuelle Systeme für Bars, Restaurants und Hospitality Businesses, bei denen schwaches Positioning, unklare Menüs, schwierige Reservierung und fehlende Online-Atmosphäre die Hauptprobleme waren.",
+          "Ich gestaltete Online-Shops, Boutique Websites und Retail Experiences, bei denen Product Discovery, Category Logic, Product Presentation, Trust Signals und klare Checkout-Flows entscheidend waren.",
+          "Ich baute digital experiences für kleine Unternehmen mit verstreuten Ideen, inkonsistentem Branding und fehlender Customer Journey und machte daraus strukturierte Websites mit klaren Angeboten und Conversion Paths.",
+          "Ich gestaltete Booking, Enquiry und Service-Selection Journeys für Beauty, Wellness, Rental, Renovation und Local-Service Businesses, damit Kunden Optionen schnell verstehen und leicht Kontakt aufnehmen konnten.",
+          "Ich entwickelte Logos, Brand Directions, Social Media Systems, Business Cards, Banners, Presentations und Print Assets, damit Unternehmen eine konsistente Identität über digitale und physische Touchpoints haben.",
+          "Ich arbeitete mit responsive UI, Frontend Implementation, Forms, Hosting, Domains und Deployment, wenn ein Projekt vollständige Lieferung statt nur Design Files erforderte."
+        ]
+      },
+      {
+        company: "Rental & Guest Experience Business",
+        role: "Product Designer · UX/UI Designer · Web Designer · Brand Designer · Business Operations Manager",
+        date: "2026",
+        copy:
+          "Ich schloss ein vollständiges digital, brand und operational design system für ein Apartment-Vermietungsunternehmen ab und verband Customer Research, Property Presentation, Booking Logic und echte operative Workflows.",
+        bullets: [
+          "Ich löste das Problem eines schwer vergleichbaren großen Objektportfolios durch eine klarere Apartment-Discovery-Struktur mit Filters, Availability Logic, Pricing Context und einzelnen Property Pages.",
+          "Ich strukturierte Rules, Amenities, Location, Guest Capacity und Booking Conditions neu, um wiederholte Fragen zu reduzieren und Angebote leichter bewertbar zu machen.",
+          "Ich entwickelte eine konsistente Identität für Website, Social Media, Guest Materials, Branded Key Tags und andere physical customer touchpoints.",
+          "Ich verbesserte Listing Presentation auf Rental Platforms, damit Informationen akkurat, kommerziell attraktiv und konsistent mit der Business Identity blieben.",
+          "Ich arbeitete mit realer Guest Communication, Booking Coordination, Check-in Support und Operational Feedback, wodurch UX-Entscheidungen praktisch statt theoretisch wurden."
+        ]
+      }
+    ]
+  }
+};
+
+const sharedAnonymousCommercial = {
+  uk: [
+    ["Преміальний beauty та education бізнес", "Beauty · E-commerce · Booking · Courses", "Бізнесу потрібно було поєднати services, appointments, professional products і education без відчуття розрізненого сайту. Я створила premium eco-oriented structure з окремими journeys для booking treatments, product purchase і course purchase, а також логікою owner-friendly content management."],
+    ["Квітковий бутик і gift store", "Retail · Floristry · Online Store", "Початкова digital presentation виглядала менш преміально, ніж продукти. Я переробила customer experience навколо bouquet discovery, emotional product presentation, зрозуміліших categories, кращої visual hierarchy і gift-oriented purchase path."],
+    ["Бар і cocktail concept", "Hospitality · Brand Experience · Reservations", "Закладу потрібна була digital identity, яка передає атмосферу до першого візиту. Я побудувала сайт навколо mood, menu discovery, events, table reservation logic і сильнішої visual language для nightlife та social sharing."],
+    ["Незалежний fashion і lifestyle store", "Retail · E-commerce · Brand System", "Магазину потрібно було перейти від простого списку товарів до brand-led shopping experience. Я структурувала category navigation, product cards, campaign visuals, trust elements і mobile-first purchase decisions."],
+    ["Construction і renovation service", "Service Website · Lead Generation", "Компанії потрібні були credibility і чіткіше пояснення послуг. Я створила service hierarchy, project-oriented content flow, enquiry paths, responsive layouts і професійнішу visual system для клієнтів, які порівнюють підрядників."],
+    ["Локальні service businesses", "Small Business · Websites · Identity", "Для малих бізнесів з обмеженими матеріалами я створювала повну digital foundation: offer structure, homepage logic, service descriptions, contact journeys, social visuals і прості brand systems, які робили бізнес надійним і зрілим."]
+  ],
+  pl: [
+    ["Premium beauty i education business", "Beauty · E-commerce · Booking · Courses", "Firma musiała połączyć usługi, wizyty, profesjonalne produkty i edukację bez wrażenia fragmentacji strony. Stworzyłam premium eco-oriented structure z osobnymi journeys dla booking treatments, zakupu produktów i zakupu kursów oraz logiką owner-friendly content management."],
+    ["Butik florystyczny i gift store", "Retail · Floristry · Online Store", "Pierwotna digital presentation wyglądała mniej premium niż produkty. Przebudowałam customer experience wokół bouquet discovery, emotional product presentation, czytelniejszych categories, lepszej visual hierarchy i gift-oriented purchase path."],
+    ["Bar i cocktail concept", "Hospitality · Brand Experience · Reservations", "Lokal potrzebował digital identity, która komunikuje atmosferę przed wizytą. Zbudowałam stronę wokół mood, menu discovery, events, table reservation logic i mocniejszego visual language dla nightlife oraz social sharing."],
+    ["Niezależny fashion i lifestyle store", "Retail · E-commerce · Brand System", "Sklep potrzebował przejścia od prostej listy produktów do brand-led shopping experience. Uporządkowałam category navigation, product cards, campaign visuals, trust elements i mobile-first purchase decisions."],
+    ["Construction i renovation service", "Service Website · Lead Generation", "Firma potrzebowała większej wiarygodności i jaśniejszego opisu usług. Stworzyłam service hierarchy, project-oriented content flow, enquiry paths, responsive layouts i bardziej profesjonalny visual system dla klientów porównujących wykonawców."],
+    ["Lokalne service businesses", "Small Business · Websites · Identity", "Dla małych firm z ograniczonymi materiałami tworzyłam pełne digital foundations: offer structure, homepage logic, service descriptions, contact journeys, social visuals i proste brand systems, które sprawiały, że firma wyglądała dojrzale i godnie zaufania."]
+  ],
+  ru: [
+    ["Премиальный beauty- и образовательный бизнес", "Beauty · E-commerce · Запись · Курсы", "Бизнесу нужно было объединить услуги, запись, профессиональные продукты и обучение без ощущения разрозненного сайта. Я создала премиальную eco-oriented структуру с отдельными сценариями для записи на процедуры, покупки продуктов и покупки курсов, а также с понятной логикой управления контентом для владельца."],
+    ["Цветочный бутик и магазин подарков", "Розница · Флористика · Онлайн-магазин", "Изначальная цифровая презентация выглядела менее премиально, чем сами продукты. Я перестроила клиентский опыт вокруг выбора букетов, эмоциональной презентации товара, более понятных категорий, сильной визуальной иерархии и покупки в формате подарка."],
+    ["Бар и коктейльный концепт", "Гостеприимство · Атмосфера бренда · Бронирование", "Заведению нужна была цифровая айдентика, которая передает атмосферу еще до первого визита. Я построила сайт вокруг настроения, изучения меню, событий, логики бронирования столов и более сильного визуального языка для ночной культуры и социальных сетей."],
+    ["Независимый fashion и lifestyle магазин", "Розница · E-commerce · Бренд-система", "Магазину нужно было перейти от простого списка товаров к брендированному покупательскому опыту. Я структурировала навигацию по категориям, карточки товаров, кампейн-визуалы, элементы доверия и мобильный сценарий покупки."],
+    ["Строительный и ремонтный сервис", "Сайт услуг · Генерация заявок", "Компании нужны были доверие и более понятное объяснение услуг. Я создала иерархию услуг, контентный поток вокруг проектов, пути к заявке, адаптивные макеты и более профессиональную визуальную систему для клиентов, которые сравнивают подрядчиков."],
+    ["Локальные сервисные бизнесы", "Малый бизнес · Сайты · Айдентика", "Для маленьких бизнесов с ограниченными материалами я создавала полноценную цифровую основу: структуру предложения, логику главной страницы, описания услуг, пути контакта, визуалы для социальных сетей и простые бренд-системы, которые делали бизнес надежным и зрелым."]
+  ],
+  de: [
+    ["Premium Beauty & Education Business", "Beauty · E-commerce · Booking · Courses", "Das Unternehmen musste Services, Termine, professionelle Produkte und Education verbinden, ohne dass die Website fragmentiert wirkte. Ich entwickelte eine premium eco-oriented structure mit getrennten Journeys für Booking Treatments, Product Purchase und Course Purchase sowie owner-friendly content management."],
+    ["Flower Boutique & Gift Store", "Retail · Floristry · Online Store", "Die ursprüngliche digital presentation wirkte weniger premium als die Produkte. Ich strukturierte die Customer Experience rund um Bouquet Discovery, Emotional Product Presentation, klarere Categories, bessere Visual Hierarchy und einen gift-oriented purchase path neu."],
+    ["Bar & Cocktail Concept", "Hospitality · Brand Experience · Reservations", "Die Location brauchte eine digital identity, die Atmosphäre schon vor dem Besuch vermittelt. Ich gestaltete die Website rund um Mood, Menu Discovery, Events, Table Reservation Logic und eine stärkere Visual Language für Nightlife und Social Sharing."],
+    ["Independent Fashion & Lifestyle Store", "Retail · E-commerce · Brand System", "Der Store musste von einer einfachen Produktliste zu einer brand-led shopping experience wechseln. Ich strukturierte Category Navigation, Product Cards, Campaign Visuals, Trust Elements und mobile-first purchase decisions."],
+    ["Construction & Renovation Service", "Service Website · Lead Generation", "Das Unternehmen brauchte mehr Credibility und eine klarere Erklärung seiner Leistungen. Ich entwickelte Service Hierarchy, project-oriented content flow, enquiry paths, responsive layouts und ein professionelleres visual system für Kunden, die Anbieter vergleichen."],
+    ["Local Service Businesses", "Small Business · Websites · Identity", "Für kleine Unternehmen mit begrenzten Materialien entwickelte ich vollständige digital foundations: offer structure, homepage logic, service descriptions, contact journeys, social visuals und einfache brand systems, die Vertrauen und Reife vermitteln."]
+  ]
+};
+
+const sharedAnonymousPortfolio = {
+  uk: [
+    ["B2B SaaS management dashboard", "Product Design · Analytics · Reporting", "Спроєктувала dashboard для business management: revenue analytics, customers, subscriptions, projects і reporting. Рішення зменшило cognitive load через чітку navigation, scanable metrics і reusable interface patterns."],
+    ["Private banking mobile app", "Fintech · Mobile Product", "Створила luxury mobile banking experience, сфокусований на trust, balance visibility, transfers, upcoming payments і premium financial interaction, поєднавши елегантність із практичною financial clarity."],
+    ["Premium dental clinic website", "Healthcare · Trust · Appointment UX", "Спроєктувала сайт клініки навколо patient trust, treatment discovery, specialists, pricing clarity і appointment intent, щоб медична інформація була спокійною, credible і легкою для дії."],
+    ["Luxury real estate discovery platform", "Real Estate · Filtering · Property UX", "Створила interactive property-discovery experience з building navigation, filters, availability states, floor plans і conversion paths для користувачів, які порівнюють apartments за практичними критеріями."],
+    ["Italian restaurant website", "Hospitality · Menu · Reservations", "Спроєктувала restaurant experience з menu storytelling, atmosphere, editorial composition і reservation-oriented UX, щоб visitors швидко розуміли mood, food і booking path."],
+    ["Luxury tattoo studio website", "Art Service · Portfolio · Booking", "Створила high-end tattoo service website, який позиціонує studio як artistic luxury experience через portfolio storytelling, artist presentation, restrained interaction і clear booking intent."],
+    ["Fragrance brand website", "Luxury Product · Editorial Commerce", "Побудувала refined fragrance concept website з controlled visual rhythm, curated product presentation і sensory storytelling, щоб intangible scent product працював як digital experience."],
+    ["Editorial ocean experience", "Editorial UX · Immersive Storytelling", "Створила immersive editorial experience з atmospheric navigation, narrative pacing і ocean-inspired visual system, показуючи, як interface design підтримує mood і long-form storytelling."]
+  ],
+  pl: [
+    ["B2B SaaS management dashboard", "Product Design · Analytics · Reporting", "Zaprojektowałam dashboard do business management: revenue analytics, customers, subscriptions, projects i reporting. Rozwiązanie zmniejszyło cognitive load dzięki clear navigation, scanable metrics i reusable interface patterns."],
+    ["Private banking mobile app", "Fintech · Mobile Product", "Stworzyłam luxury mobile banking experience skupiony na trust, balance visibility, transfers, upcoming payments i premium financial interaction, łącząc elegancję z praktyczną financial clarity."],
+    ["Premium dental clinic website", "Healthcare · Trust · Appointment UX", "Zaprojektowałam stronę kliniki wokół patient trust, treatment discovery, specialists, pricing clarity i appointment intent, aby informacje medyczne były spokojne, credible i łatwe do działania."],
+    ["Luxury real estate discovery platform", "Real Estate · Filtering · Property UX", "Stworzyłam interactive property-discovery experience z building navigation, filters, availability states, floor plans i conversion paths dla użytkowników porównujących apartments według praktycznych kryteriów."],
+    ["Italian restaurant website", "Hospitality · Menu · Reservations", "Zaprojektowałam restaurant experience z menu storytelling, atmosphere, editorial composition i reservation-oriented UX, aby visitors szybko rozumieli mood, food i booking path."],
+    ["Luxury tattoo studio website", "Art Service · Portfolio · Booking", "Stworzyłam high-end tattoo service website pozycjonujący studio jako artistic luxury experience przez portfolio storytelling, artist presentation, restrained interaction i clear booking intent."],
+    ["Fragrance brand website", "Luxury Product · Editorial Commerce", "Zbudowałam refined fragrance concept website z controlled visual rhythm, curated product presentation i sensory storytelling, aby intangible scent product działał jako digital experience."],
+    ["Editorial ocean experience", "Editorial UX · Immersive Storytelling", "Zaprojektowałam immersive editorial experience z atmospheric navigation, narrative pacing i ocean-inspired visual system, pokazując jak interface design wspiera mood i long-form storytelling."]
+  ],
+  ru: [
+    ["B2B SaaS dashboard для управления бизнесом", "Product Design · Аналитика · Отчетность", "Спроектировала dashboard для управления бизнесом: revenue analytics, customers, subscriptions, projects и reporting. Решение уменьшило когнитивную нагрузку через понятную навигацию, легко считываемые метрики и переиспользуемые интерфейсные паттерны."],
+    ["Мобильное приложение private banking", "Fintech · Mobile Product", "Создала luxury mobile banking experience с фокусом на доверие, видимость баланса, переводы, предстоящие платежи и премиальное финансовое взаимодействие, сочетая элегантность с практичной финансовой ясностью."],
+    ["Сайт премиальной стоматологической клиники", "Healthcare · Доверие · Запись на прием", "Спроектировала сайт клиники вокруг доверия пациента, изучения процедур, специалистов, понятной информации о ценах и намерения записаться, чтобы медицинская информация ощущалась спокойной, убедительной и простой для действия."],
+    ["Платформа подбора премиальной недвижимости", "Недвижимость · Фильтры · Property UX", "Создала интерактивный опыт выбора недвижимости с навигацией по зданию, фильтрами, статусами доступности, планировками и путями к заявке для пользователей, которые сравнивают апартаменты по практическим критериям."],
+    ["Сайт итальянского ресторана", "Гостеприимство · Меню · Бронирование", "Спроектировала restaurant experience с историей меню, атмосферой, editorial composition и reservation-oriented UX, чтобы посетители быстро понимали настроение места, кухню и путь к бронированию."],
+    ["Сайт luxury tattoo studio", "Арт-сервис · Портфолио · Booking", "Создала high-end сайт для tattoo service, который позиционирует студию как artistic luxury experience через portfolio storytelling, презентацию мастеров, сдержанные взаимодействия и ясное намерение записи."],
+    ["Сайт fragrance brand", "Luxury Product · Editorial Commerce", "Построила refined fragrance concept website с контролируемым визуальным ритмом, curated product presentation и sensory storytelling, чтобы нематериальный продукт вроде аромата работал как цифровой опыт."],
+    ["Editorial ocean experience", "Editorial UX · Immersive Storytelling", "Создала immersive editorial experience с атмосферной навигацией, narrative pacing и ocean-inspired visual system, показывая, как interface design поддерживает настроение и long-form storytelling."]
+  ],
+  de: [
+    ["B2B SaaS Management Dashboard", "Product Design · Analytics · Reporting", "Ich gestaltete ein Dashboard für Business Management: Revenue Analytics, Customers, Subscriptions, Projects und Reporting. Die Lösung reduzierte Cognitive Load durch klare Navigation, scanbare Metrics und reusable interface patterns."],
+    ["Private Banking Mobile App", "Fintech · Mobile Product", "Ich entwickelte eine luxury mobile banking experience mit Fokus auf Trust, Balance Visibility, Transfers, Upcoming Payments und premium financial interaction, verbunden mit praktischer Financial Clarity."],
+    ["Premium Dental Clinic Website", "Healthcare · Trust · Appointment UX", "Ich gestaltete eine Clinic Website rund um Patient Trust, Treatment Discovery, Specialists, Pricing Clarity und Appointment Intent, damit medizinische Informationen ruhig, credible und handlungsorientiert wirken."],
+    ["Luxury Real Estate Discovery Platform", "Real Estate · Filtering · Property UX", "Ich entwickelte eine interactive property-discovery experience mit Building Navigation, Filters, Availability States, Floor Plans und Conversion Paths für Nutzer, die Apartments nach praktischen Kriterien vergleichen."],
+    ["Italian Restaurant Website", "Hospitality · Menu · Reservations", "Ich gestaltete eine restaurant experience mit Menu Storytelling, Atmosphere, Editorial Composition und reservation-oriented UX, damit Visitors Mood, Food und Booking Path schnell verstehen."],
+    ["Luxury Tattoo Studio Website", "Art Service · Portfolio · Booking", "Ich entwickelte eine high-end tattoo service website, die das Studio als artistic luxury experience positioniert: portfolio storytelling, artist presentation, restrained interaction und clear booking intent."],
+    ["Fragrance Brand Website", "Luxury Product · Editorial Commerce", "Ich baute eine refined fragrance concept website mit controlled visual rhythm, curated product presentation und sensory storytelling, damit ein intangible scent product als digital experience funktioniert."],
+    ["Editorial Ocean Experience", "Editorial UX · Immersive Storytelling", "Ich gestaltete eine immersive editorial experience mit atmospheric navigation, narrative pacing und ocean-inspired visual system und zeigte, wie Interface Design Mood und Long-form Storytelling unterstützt."]
+  ]
+};
+
+for (const language of supportedLanguages) {
+  Object.assign(cvCopy[language], anonymizedContent[language]);
+}
+
+for (const language of ["uk", "pl", "ru", "de"]) {
+  cvCopy[language].commercial = sharedAnonymousCommercial[language].map(([name, type, copy]) => ({ name, type, copy }));
+  cvCopy[language].portfolio = sharedAnonymousPortfolio[language].map(([name, type, copy]) => ({ name, type, copy }));
+}
+
 const root = document.querySelector("#cvRoot");
 const languageButtons = document.querySelectorAll(".language-button");
 const navLinks = document.querySelectorAll("[data-nav]");
