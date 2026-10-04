@@ -89,17 +89,27 @@
           </div>
         </section>
 
-        <section class="profile-section" id="commercial-work">
-          <div class="profile-section-heading">
-            <p class="section-kicker" data-profile="commercialKicker">Selected commercial work</p>
-            <h2 data-profile="commercialTitle">Real businesses, real constraints, finished or ongoing digital work.</h2>
+        <section class="profile-section project-archive" id="project-experience" aria-labelledby="project-archive-title">
+          <div class="profile-section-heading project-archive-heading">
+            <div>
+              <p class="section-kicker" data-profile="projectArchiveKicker">Selected project experience</p>
+              <h2 id="project-archive-title" data-profile="projectArchiveTitle">Commercial and independent case studies.</h2>
+            </div>
+            <p class="project-archive-intro" data-profile="projectArchiveIntro">
+              Commercial and independent case studies across construction, hospitality, beauty, retail, healthcare and professional services. Explore individual projects for business context, challenges, approach and delivered work.
+            </p>
           </div>
-          <div class="work-list">
-            <article><span>Canada</span><h3>ARCED Construction</h3><p data-profile="arcedConstruction">Commercial website created from the ground up for a Canadian construction business, focused on clear services, credibility and direct enquiry paths.</p><a href="https://arcedconstruction.ca" target="_blank" rel="noreferrer">arcedconstruction.ca</a></article>
-            <article><span>Canada</span><h3>ARCED Tile</h3><p data-profile="arcedTile">A separate digital presence for ARCED's tile services, preserving brand consistency while making the service category independent and understandable.</p><a href="https://arcedtile.ca" target="_blank" rel="noreferrer">arcedtile.ca</a></article>
-            <article><span>Scotland / United Kingdom</span><h3>ECO HAIR LAB</h3><p data-profile="ecoHair">Ongoing commercial project combining services, appointment booking, ecommerce, courses, brand direction and digital customer experience.</p></article>
-            <article><span>Ternopil, Ukraine</span><h3>Maria Apartments</h3><p data-profile="mariaCommercial">A multidisciplinary business and digital project combining UX/UI, web design, operations, customer experience, SMM, brand design, procurement and project management.</p></article>
+          <div class="project-filter" aria-label="Project filters">
+            <button class="project-filter-button is-active" type="button" data-project-filter="all" data-profile="filterAll">All</button>
+            <button class="project-filter-button" type="button" data-project-filter="commercial" data-profile="filterCommercial">Commercial</button>
+            <button class="project-filter-button" type="button" data-project-filter="independent" data-profile="filterIndependent">Independent</button>
+            <button class="project-filter-button" type="button" data-project-filter="web" data-profile="filterWeb">Web</button>
+            <button class="project-filter-button" type="button" data-project-filter="ecommerce" data-profile="filterEcommerce">Ecommerce</button>
+            <button class="project-filter-button" type="button" data-project-filter="hospitality" data-profile="filterHospitality">Hospitality</button>
+            <button class="project-filter-button" type="button" data-project-filter="healthcare" data-profile="filterHealthcare">Healthcare</button>
           </div>
+          <div class="project-card-grid" id="project-card-grid"></div>
+          <div class="case-study-index" id="case-study-index" aria-hidden="true"></div>
         </section>
 
         <section class="profile-panel profile-two-column" id="maria-apartments">
@@ -115,19 +125,6 @@
               Her role includes reservation coordination, guest communication, check-ins, documentation, website structure, UX/UI, social media architecture, branded materials, supplier research and production planning for physical brand objects.
             </p>
           </div>
-        </section>
-
-        <section class="profile-section" id="concept-work">
-          <div class="profile-section-heading">
-            <p class="section-kicker" data-profile="conceptKicker">Independent concept work</p>
-            <h2 data-profile="conceptTitle">Industry range without pretending concept projects are clients.</h2>
-          </div>
-          <div class="concept-tags">
-            <span>Hospitality</span><span>Beauty</span><span>Luxury Retail</span><span>Finance</span><span>Dentistry</span><span>Restaurants</span><span>Real Estate</span><span>SaaS</span><span>Editorial Web</span>
-          </div>
-          <p class="profile-wide-copy" data-profile="conceptText">
-            Independent projects are used to explore interaction design, visual systems, UX concepts, creative direction and digital experiences across different industries. Commercial work and concept work are presented separately because they demonstrate different strengths.
-          </p>
         </section>
 
         <section class="profile-section" id="working-style">
@@ -167,6 +164,14 @@
         </section>
       </main>
     </div>
+    <div class="case-modal" id="case-modal" aria-hidden="true">
+      <div class="case-modal-backdrop" data-case-close></div>
+      <section class="case-modal-panel" role="dialog" aria-modal="true" aria-labelledby="case-modal-title" tabindex="-1">
+        <button class="case-modal-close" type="button" data-case-close data-profile="modalClose">Close x</button>
+        <div class="case-modal-content" id="case-modal-content"></div>
+      </section>
+    </div>
+    <script src="profile-projects.js"></script>
     <script src="profile.js"></script>
   </body>
 </html>

@@ -366,6 +366,7 @@ const projectsGrid = document.querySelector(".projects-grid");
 const projectsPrevious = document.querySelector("#projectsPrevious");
 const projectsNext = document.querySelector("#projectsNext");
 const estimateButton = document.querySelector("#estimateButton");
+const estimateTriggers = document.querySelectorAll("[data-estimate-trigger]");
 const heroEstimateButton = document.querySelector("#heroEstimateButton");
 const footerEstimateButton = document.querySelector("#footerEstimateButton");
 const marketModal = document.querySelector("#marketModal");
@@ -510,6 +511,9 @@ languageButtons.forEach((button) => {
 });
 
 estimateButton?.addEventListener("click", openMarketModal);
+estimateTriggers.forEach((trigger) => {
+  trigger.addEventListener("click", openMarketModal);
+});
 heroEstimateButton?.addEventListener("click", openMarketModal);
 footerEstimateButton?.addEventListener("click", openMarketModal);
 

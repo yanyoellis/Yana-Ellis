@@ -336,6 +336,169 @@ profileCopy.pl = {
     "Yana komunikuje się po ukraińsku, rosyjsku, angielsku, polsku i hiszpańsku, ma też podstawową znajomość japońskiego. Zawodowo działa pod nazwiskiem Yana Ellis; nazwa Yanyo Ellis jest również używana na wybranych osobistych i digital-platformach."
 };
 
+Object.assign(profileCopy.en, {
+  projectArchiveKicker: "Selected project experience",
+  projectArchiveTitle: "Commercial and independent case studies.",
+  projectArchiveIntro:
+    "Commercial and independent case studies across construction, hospitality, beauty, retail, healthcare and professional services. Explore individual projects for business context, challenges, approach and delivered work.",
+  filterAll: "All",
+  filterCommercial: "Commercial",
+  filterIndependent: "Independent",
+  filterWeb: "Web",
+  filterEcommerce: "Ecommerce",
+  filterHospitality: "Hospitality",
+  filterHealthcare: "Healthcare",
+  modalClose: "Close x"
+});
+
+Object.assign(profileCopy.ru, {
+  heroRole: "UX/UI и веб-дизайнер · дизайнер цифровых продуктов · мультидисциплинарный digital-специалист",
+  heroIntroOne:
+    "Yana Ellis - мультидисциплинарный UX/UI и веб-дизайнер, профессионально работающая с 2022 года. Ее работа объединяет цифровой дизайн, продуктовое мышление, развитие бренда, маркетинг, бизнес-процессы и реальный опыт взаимодействия с клиентами.",
+  heroIntroTwo:
+    "Ее работа выходит за рамки интерфейсов: она связывает сайты, клиентские пути, операционные требования, бренд-системы и практическую реализацию в цифровой опыт, который делает бизнес понятнее и удобнее.",
+  metricOneText: "Профессиональная работа в UX/UI, веб-дизайне и цифровых проектах",
+  metricThree: "Мультидисциплинарность",
+  metricThreeText: "Дизайн, продукт, бренд, SMM, операционные процессы и клиентский опыт",
+  profileOne:
+    "Yana работает на стыке дизайна, цифровых продуктов, брендинга, клиентского опыта и бизнес-процессов. Ее проекты часто начинаются еще до идеального брифа: она исследует бизнес, определяет, что действительно нужно создать, и превращает разрозненную информацию в структурированный продукт.",
+  profileTwo:
+    "Это особенно ценно там, где компании нужен не просто визуальный редизайн, а более ясная информационная архитектура, удобный путь бронирования или заявки, последовательное цифровое присутствие, понятный клиентский контент и практичные системы, которые работают за пределами красивого скриншота.",
+  capabilitiesTitle: "Широкий диапазон, собранный вокруг реальной ответственности за проект.",
+  capUxText: "Информационная архитектура, пользовательские сценарии, адаптивные интерфейсы, пути бронирования и заявки, планирование административных интерфейсов и перевод бизнес-логики в удобные экраны.",
+  capWebTitle: "Веб-дизайн",
+  capWebText: "Корпоративные, сервисные, гостиничные, ecommerce-сайты и портфолио: от концепции и структуры до финального адаптивного опыта.",
+  capBrandTitle: "Брендинг и визуальная система",
+  capBrandText: "Цифровая айдентика, типографика, системы макетов, визуалы для соцсетей, визитки, физические носители бренда и подготовленные к реализации концепции.",
+  capMarketingTitle: "Маркетинг и SMM",
+  capMarketingText: "Архитектура контента, позиционирование в Instagram, структура Highlights и перевод сложной бизнес-информации в понятную публичную коммуникацию.",
+  capOpsTitle: "Операции и клиентский опыт",
+  capOpsText: "Управление бронированиями, коммуникация с гостями, координация заселений, процессы check-in, отслеживание оплат и анализ требований клиентов.",
+  capVendorTitle: "Работа с поставщиками",
+  capVendorText: "Поиск поставщиков, сбор предложений, подготовка спецификаций, сравнение цен и коммуникация с производителями для физических бренд-материалов.",
+  mariaTitle: "Цифровой продукт, сформированный реальным операционным опытом.",
+  mariaOne:
+    "В отличие от дизайнера, работающего только по внешнему брифу, Yana проектировала цифровой опыт Maria Apartments, одновременно участвуя в операционных и клиентских процессах бизнеса. Это дало прямое понимание повторяющихся вопросов гостей, трения в бронировании, сложности цен, доступности квартир и требований к заселению.",
+  mariaTwo:
+    "Ее роль включает координацию бронирований, коммуникацию с гостями, заселения, документацию, структуру сайта, UX/UI, архитектуру соцсетей, бренд-материалы, поиск поставщиков и планирование производства физических бренд-объектов.",
+  styleBusinessTitle: "Понимание бизнеса",
+  styleBusinessText: "Учитывает бизнес-модель, поддержку, стоимость, возможную путаницу для клиента, внутренние процессы и то, что происходит после клика.",
+  styleExecutionTitle: "Фокус на реализации",
+  styleExecutionText: "Интересуется работой, которая переходит из концепта в сайт, бренд-материал, бриф для поставщика, структуру контента или работающий клиентский сценарий.",
+  timelineKicker: "Хронология",
+  timelineTitle: "Профессиональная работа в UX/UI, веб-дизайне и цифровых проектах с 2022 года.",
+  timeline2022: "Начало профессиональной работы в UX/UI, веб-дизайне и цифровых проектах.",
+  timeline2024: "Расширение работы над полноценными сайтами, информационной архитектурой, адаптивным дизайном и концептами в разных индустриях.",
+  timeline2026: "Коммерческие проекты включают бизнесы в Канаде, Шотландии / Великобритании и Украине; текущий фокус - полноценные цифровые продукты.",
+  projectArchiveKicker: "Опыт избранных проектов",
+  projectArchiveTitle: "Коммерческие и независимые кейсы.",
+  projectArchiveIntro:
+    "Коммерческие и независимые кейсы в строительстве, hospitality, beauty, ритейле, healthcare и профессиональных услугах. Откройте проект, чтобы увидеть контекст бизнеса, задачи, подход и выполненную работу.",
+  filterAll: "Все",
+  filterCommercial: "Коммерческие",
+  filterIndependent: "Независимые",
+  filterWeb: "Веб",
+  filterEcommerce: "Ecommerce",
+  filterHospitality: "Hospitality",
+  filterHealthcare: "Healthcare",
+  modalClose: "Закрыть x"
+});
+
+Object.assign(profileCopy.uk, {
+  heroRole: "UX/UI і вебдизайнерка · дизайнерка цифрових продуктів · мультидисциплінарна digital-спеціалістка",
+  heroIntroOne:
+    "Yana Ellis - мультидисциплінарна UX/UI і вебдизайнерка, яка професійно працює з 2022 року. Її робота поєднує цифровий дизайн, продуктове мислення, розвиток бренду, маркетинг, бізнес-процеси та реальний досвід взаємодії з клієнтами.",
+  heroIntroTwo:
+    "Її робота виходить за межі дизайну інтерфейсів: вона поєднує сайти, клієнтські шляхи, операційні вимоги, бренд-системи й практичну реалізацію в цифрові досвіди, які роблять бізнес зрозумілішим і зручнішим.",
+  metricOneText: "Професійна робота в UX/UI, вебдизайні та цифрових проєктах",
+  metricThree: "Мультидисциплінарність",
+  metricThreeText: "Дизайн, продукт, бренд, SMM, операційні процеси та клієнтський досвід",
+  capWebText: "Корпоративні, сервісні, hospitality, ecommerce-сайти та портфоліо: від концепції і структури до фінального адаптивного досвіду.",
+  capBrandText: "Цифрова айдентика, типографіка, системи макетів, візуали для соцмереж, візитки, фізичні носії бренду та підготовлені до реалізації концепції.",
+  capMarketingText: "Архітектура контенту, позиціонування в Instagram, структура Highlights і переклад складної бізнес-інформації у зрозумілу публічну комунікацію.",
+  capOpsText: "Управління бронюваннями, комунікація з гостями, координація заселень, процеси check-in, відстеження оплат і аналіз вимог клієнтів.",
+  mariaCommercial: "Мультидисциплінарний бізнес- і цифровий проєкт, що поєднує UX/UI, вебдизайн, операційні процеси, клієнтський досвід, SMM, бренд-дизайн, роботу з постачальниками та управління проєктом.",
+  mariaTitle: "Цифровий продукт, сформований реальним операційним досвідом.",
+  mariaOne:
+    "На відміну від дизайнера, який працює лише за зовнішнім брифом, Yana проєктувала цифровий досвід Maria Apartments, одночасно беручи участь в операційних і клієнтських процесах бізнесу. Це дало пряме розуміння повторюваних питань гостей, тертя в бронюванні, складності цін, доступності квартир і вимог до заселення.",
+  mariaTwo:
+    "Її роль включає координацію бронювань, комунікацію з гостями, заселення, документацію, структуру сайту, UX/UI, архітектуру соцмереж, бренд-матеріали, пошук постачальників і планування виробництва фізичних бренд-об'єктів.",
+  timelineKicker: "Хронологія",
+  timelineTitle: "Професійна робота в UX/UI, вебдизайні та цифрових проєктах з 2022 року.",
+  timeline2022: "Початок професійної роботи в UX/UI, вебдизайні та цифрових проєктах.",
+  timeline2024: "Розширення роботи над повноцінними сайтами, інформаційною архітектурою, адаптивним дизайном і концептами в різних індустріях.",
+  timeline2026: "Комерційні проєкти включають бізнеси в Канаді, Шотландії / Великій Британії та Україні; поточний фокус - повноцінні цифрові продукти.",
+  projectArchiveKicker: "Досвід вибраних проєктів",
+  projectArchiveTitle: "Комерційні та незалежні кейси.",
+  projectArchiveIntro:
+    "Комерційні та незалежні кейси у будівництві, hospitality, beauty, ритейлі, healthcare і професійних послугах. Відкрийте проєкт, щоб побачити контекст бізнесу, задачі, підхід і виконану роботу.",
+  filterAll: "Усі",
+  filterCommercial: "Комерційні",
+  filterIndependent: "Незалежні",
+  filterWeb: "Веб",
+  filterEcommerce: "Ecommerce",
+  filterHospitality: "Hospitality",
+  filterHealthcare: "Healthcare",
+  modalClose: "Закрити x"
+});
+
+Object.assign(profileCopy.pl, {
+  heroRole: "Projektantka UX/UI i web · projektantka produktów cyfrowych · multidyscyplinarna specjalistka digital",
+  metricOneText: "Profesjonalna praca w UX/UI, web designie i projektach cyfrowych",
+  metricThree: "Multidyscyplinarność",
+  metricThreeText: "Design, produkt, marka, SMM, procesy operacyjne i doświadczenie klienta",
+  capWebText: "Strony firmowe, usługowe, hospitality, ecommerce i portfolio: od koncepcji i struktury po finalne responsywne doświadczenie.",
+  capBrandText: "Identyfikacja cyfrowa, typografia, systemy layoutów, wizualizacje do social media, wizytówki, fizyczne nośniki marki i koncepcje gotowe do realizacji.",
+  capOpsText: "Zarządzanie rezerwacjami, komunikacja z gośćmi, koordynacja przyjazdów, procesy check-in, śledzenie płatności i analiza wymagań klientów.",
+  timelineTitle: "Profesjonalna praca w UX/UI, web designie i projektach cyfrowych od 2022 roku.",
+  timeline2022: "Początek profesjonalnej pracy w UX/UI, web designie i projektach cyfrowych.",
+  timeline2026: "Prace komercyjne obejmują biznesy w Kanadzie, Szkocji / Wielkiej Brytanii i Ukrainie; obecny fokus to kompletne produkty cyfrowe.",
+  projectArchiveKicker: "Wybrane doświadczenie projektowe",
+  projectArchiveTitle: "Komercyjne i niezależne case studies.",
+  projectArchiveIntro:
+    "Komercyjne i niezależne case studies z obszaru budownictwa, hospitality, beauty, retailu, healthcare i usług profesjonalnych. Otwórz projekt, aby zobaczyć kontekst biznesowy, wyzwania, podejście i wykonaną pracę.",
+  filterAll: "Wszystkie",
+  filterCommercial: "Komercyjne",
+  filterIndependent: "Niezależne",
+  filterWeb: "Web",
+  filterEcommerce: "Ecommerce",
+  filterHospitality: "Hospitality",
+  filterHealthcare: "Healthcare",
+  modalClose: "Zamknij x"
+});
+
+Object.assign(profileCopy.de, {
+  title: "Berufsprofil | Yana Ellis",
+  heroKicker: "Berufsprofil",
+  heroRole: "UX/UI- und Webdesignerin · Designerin digitaler Produkte · multidisziplinare Digital-Spezialistin",
+  metricThree: "Multidisziplinar",
+  metricThreeText: "Design, Produkt, Marke, SMM, operative Prozesse und Customer Experience",
+  profileKicker: "Berufsprofil",
+  capabilitiesKicker: "Kernkompetenzen",
+  capWebText: "Corporate-, Service-, Hospitality-, Ecommerce- und Portfolio-Websites vom Konzept und der Struktur bis zum finalen responsiven Erlebnis.",
+  commercialKicker: "Ausgewahlte kommerzielle Arbeit",
+  conceptKicker: "Unabhangige Konzeptarbeit",
+  styleKicker: "Arbeitsstil",
+  styleIndependentTitle: "Selbststandigkeit",
+  styleBusinessTitle: "Business-Verstandnis",
+  styleExecutionTitle: "Umsetzungsfokus",
+  timelineKicker: "Zeitlinie",
+  timeline2026: "Kommerzielle Arbeit umfasst Unternehmen in Kanada, Schottland / Vereinigtes Konigreich und der Ukraine, mit Fokus auf vollstandige digitale Erlebnisse.",
+  languagesKicker: "Sprachen und Identitat",
+  projectArchiveKicker: "Ausgewahlte Projekterfahrung",
+  projectArchiveTitle: "Kommerzielle und unabhangige Fallstudien.",
+  projectArchiveIntro:
+    "Kommerzielle und unabhangige Fallstudien aus Bau, Hospitality, Beauty, Retail, Healthcare und professionellen Dienstleistungen. Offnen Sie einzelne Projekte fur Business-Kontext, Herausforderungen, Ansatz und ausgefuhrte Arbeit.",
+  filterAll: "Alle",
+  filterCommercial: "Kommerziell",
+  filterIndependent: "Unabhangig",
+  filterWeb: "Web",
+  filterEcommerce: "Ecommerce",
+  filterHospitality: "Hospitality",
+  filterHealthcare: "Healthcare",
+  modalClose: "Schliessen x"
+});
+
 function initialLanguage() {
   const saved = localStorage.getItem(languageKey);
   return profileLanguages.includes(saved) ? saved : "en";
