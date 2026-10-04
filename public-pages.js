@@ -5,7 +5,6 @@ const languageKey = "yana-ellis-language";
 const sharedLabels = {
   en: {
     portfolio: "Portfolio",
-    cv: "CV",
     calculator: "Calculator",
     projectGuide: "Project Guide",
     faq: "FAQ",
@@ -24,7 +23,6 @@ const sharedLabels = {
   },
   uk: {
     portfolio: "Портфоліо",
-    cv: "CV",
     calculator: "Калькулятор",
     projectGuide: "Гайд проєкту",
     faq: "FAQ",
@@ -43,7 +41,6 @@ const sharedLabels = {
   },
   pl: {
     portfolio: "Portfolio",
-    cv: "CV",
     calculator: "Kalkulator",
     projectGuide: "Przewodnik",
     faq: "FAQ",
@@ -62,7 +59,6 @@ const sharedLabels = {
   },
   ru: {
     portfolio: "Портфолио",
-    cv: "CV",
     calculator: "Калькулятор",
     projectGuide: "Гайд проекта",
     faq: "FAQ",
@@ -81,7 +77,6 @@ const sharedLabels = {
   },
   de: {
     portfolio: "Portfolio",
-    cv: "CV",
     calculator: "Kalkulator",
     projectGuide: "Projektguide",
     faq: "FAQ",
@@ -223,16 +218,16 @@ const pages = {
       pl: "Polityka prywatności | Yana Ellis"
     },
     description: {
-      en: "Privacy Policy for the Yana Ellis portfolio website, calculators and project request forms.",
-      uk: "Політика конфіденційності для портфоліо Yana Ellis, калькуляторів і форм заявки.",
-      pl: "Polityka prywatności portfolio Yana Ellis, kalkulatorów i formularzy zapytań."
+      en: "Privacy Policy for the Yana Ellis portfolio website, project information pages, calculators and project request forms.",
+      uk: "Політика конфіденційності для портфоліо Yana Ellis, інформаційних сторінок про проєкти, калькуляторів і форм заявки.",
+      pl: "Polityka prywatności portfolio Yana Ellis, stron informacyjnych, kalkulatorów i formularzy zapytań."
     },
     kicker: { en: "Privacy Policy", uk: "Конфіденційність", pl: "Polityka prywatności" },
     heading: { en: "Privacy Policy", uk: "Політика конфіденційності", pl: "Polityka prywatności" },
     intro: {
-      en: "This policy explains what information may be collected when you use the portfolio, calculators or project request forms, why it is used and how to contact me about privacy requests.",
-      uk: "Ця політика пояснює, які дані можуть збиратися під час використання портфоліо, калькуляторів або форм заявки, навіщо вони потрібні та як звернутися щодо приватності.",
-      pl: "Ta polityka wyjaśnia, jakie dane mogą być zbierane podczas korzystania z portfolio, kalkulatorów lub formularzy zapytań, po co są używane i jak skontaktować się w sprawach prywatności."
+      en: "This policy explains what information may be collected when you browse the portfolio, read project information, use calculators or send a project request, why it is used and how to contact me about privacy requests.",
+      uk: "Ця політика пояснює, які дані можуть збиратися під час перегляду портфоліо, читання інформації про проєкт, використання калькуляторів або надсилання заявки, навіщо вони потрібні та як звернутися щодо приватності.",
+      pl: "Ta polityka wyjaśnia, jakie dane mogą być zbierane podczas przeglądania portfolio, czytania informacji projektowych, korzystania z kalkulatorów lub wysyłania zapytania, po co są używane i jak skontaktować się w sprawach prywatności."
     }
   },
   terms: {
@@ -242,9 +237,9 @@ const pages = {
       pl: "Regulamin usług | Yana Ellis"
     },
     description: {
-      en: "Terms for using the Yana Ellis portfolio, calculators, project request forms and pre-contract website information.",
-      uk: "Умови використання портфоліо Yana Ellis, калькуляторів, форм заявки та переддоговірної інформації.",
-      pl: "Warunki korzystania z portfolio Yana Ellis, kalkulatorów, formularzy zapytań i informacji przed zawarciem umowy."
+      en: "Terms for using the Yana Ellis portfolio, project information pages, calculators, project request forms and pre-contract website information.",
+      uk: "Умови використання портфоліо Yana Ellis, інформаційних сторінок про проєкт, калькуляторів, форм заявки та переддоговірної інформації.",
+      pl: "Warunki korzystania z portfolio Yana Ellis, stron informacyjnych, kalkulatorów, formularzy zapytań i informacji przed zawarciem umowy."
     },
     kicker: { en: "Terms of Service", uk: "Умови", pl: "Regulamin" },
     heading: { en: "Terms of Service", uk: "Умови використання", pl: "Regulamin usług" },
@@ -305,7 +300,6 @@ function setMeta(page, language) {
 function baseLinks(labels) {
   return `
     <a class="nav-link" href="index.html">${labels.portfolio}</a>
-    <a class="nav-link" href="cv.html">${labels.cv}</a>
     <a class="nav-link" href="project-guide.html">${labels.projectGuide}</a>
     <a class="nav-link" href="faq.html">${labels.faq}</a>
     <a class="nav-link" href="privacy-policy.html">${labels.privacy}</a>
@@ -749,8 +743,8 @@ function legalSections(type, language) {
   const data = {
     privacy: {
       en: [
-        ["Introduction", `Effective date: ${effectiveDate}. Policy version: ${siteConfig.legal.PRIVACY_VERSION}. This Privacy Policy applies to the Yana Ellis portfolio, website calculators and project request forms.`],
-        ["Information collected", "The forms may collect name, email, phone, company or project name, messenger usernames, current website, calculator answers, project requirements, budget expectations, deadlines, brand materials information, inspiration links, consent statuses, accepted Terms/Privacy/designer-credit versions, acceptance timestamps, submission ID, submission time and technical data."],
+        ["Introduction", `Effective date: ${effectiveDate}. Policy version: ${siteConfig.legal.PRIVACY_VERSION}. This Privacy Policy applies to the Yana Ellis portfolio, project information pages, website calculators and project request forms.`],
+        ["Information collected", "The forms may collect name, email, phone, company or project name, messenger usernames, current website, calculator answers, project requirements, budget expectations, deadlines, brand materials information, inspiration links, consent statuses, accepted Terms/Privacy/designer-credit versions, acceptance timestamps, submission ID, submission time and technical data. Portfolio browsing does not require creating an account."],
         ["How information is collected", "Information is provided directly by the user through calculators and request forms. Technical information may be processed automatically by hosting, security, delivery or email services when a request is submitted."],
         ["Purposes of processing", "Information is used to display a preliminary estimate, receive and review project requests, contact the user through the selected channel, prepare a final proposal, prevent spam or abuse, keep request records and document accepted terms."],
         ["Legal bases", "Depending on the user's location, processing may be based on pre-contract steps, contract performance, consent, legitimate interests in operating the service or legal obligations."],
@@ -760,13 +754,13 @@ function legalSections(type, language) {
         ["User rights", `Depending on applicable law, users may request access, correction, deletion, restriction, objection, portability or withdrawal of consent by emailing ${contact}.`],
         ["Security", "Reasonable organisational and technical measures are used to protect information, but no internet transmission or storage method is completely secure."],
         ["Children", "The services are intended for adults and business representatives. The website is not intended to knowingly collect personal information from children."],
-        ["Third-party links", "The website links to portfolio projects, social networks, payment providers and other third-party services. Their own policies apply."],
+        ["Third-party links", "The website links to portfolio projects, project information pages, social networks, payment providers and other third-party services. Their own policies apply."],
         ["Changes to this policy", "This policy may be updated when services, providers or legal requirements change. The effective date will be revised for material updates."],
         ["Contact", `Privacy questions and formal requests should be sent to ${contact}. General project questions may also be sent to Telegram ${siteConfig.contact.telegram}.`]
       ],
       uk: [
-        ["Вступ", `Дата набрання чинності: ${effectiveDate}. Версія політики: ${siteConfig.legal.PRIVACY_VERSION}. Ця Політика конфіденційності застосовується до портфоліо Yana Ellis, калькуляторів і форм заявки.`],
-        ["Яка інформація збирається", "Форми можуть збирати ім'я, email, телефон, назву компанії або проєкту, username у месенджерах, поточний сайт, відповіді калькулятора, вимоги, бюджет, терміни, інформацію про бренд-матеріали, референси, статуси згоди, версії прийнятих Terms/Privacy/designer-credit умов, timestamps прийняття, submission ID, час відправки та технічні дані."],
+        ["Вступ", `Дата набрання чинності: ${effectiveDate}. Версія політики: ${siteConfig.legal.PRIVACY_VERSION}. Ця Політика конфіденційності застосовується до портфоліо Yana Ellis, інформаційних сторінок про проєкт, калькуляторів і форм заявки.`],
+        ["Яка інформація збирається", "Форми можуть збирати ім'я, email, телефон, назву компанії або проєкту, username у месенджерах, поточний сайт, відповіді калькулятора, вимоги, бюджет, терміни, інформацію про бренд-матеріали, референси, статуси згоди, версії прийнятих Terms/Privacy/designer-credit умов, timestamps прийняття, submission ID, час відправки та технічні дані. Перегляд портфоліо не потребує створення акаунта."],
         ["Як збирається інформація", "Дані надаються користувачем через калькулятори та форми. Технічна інформація може автоматично оброблятися хостингом, безпековими сервісами, сервісами доставки повідомлень або email-сервісами під час відправки заявки."],
         ["Навіщо використовуються дані", "Дані потрібні для попереднього розрахунку, отримання й перегляду заявки, контакту через вибраний канал, підготовки фінальної пропозиції, захисту від спаму, ведення записів заявки та документування прийнятих умов."],
         ["Правові підстави", "Залежно від локації користувача, обробка може базуватися на переддоговірних діях, виконанні договору, згоді, законному інтересі або юридичних обов'язках."],
@@ -776,13 +770,13 @@ function legalSections(type, language) {
         ["Права користувача", `Залежно від закону, користувач може попросити доступ, виправлення, видалення, обмеження, заперечення, переносимість або відкликання згоди через email ${contact}.`],
         ["Безпека", "Використовуються розумні організаційні та технічні заходи, але жоден спосіб передачі або зберігання в інтернеті не є абсолютно безпечним."],
         ["Діти", "Послуги призначені для дорослих і представників бізнесу. Сайт не призначений для свідомого збору персональних даних дітей."],
-        ["Сторонні посилання", "Сайт може посилатися на портфоліо, соцмережі, платіжні сервіси й інші сторонні ресурси. До них застосовуються їхні власні політики."],
+        ["Сторонні посилання", "Сайт може посилатися на портфоліо-проєкти, інформаційні сторінки, соцмережі, платіжні сервіси й інші сторонні ресурси. До них застосовуються їхні власні політики."],
         ["Зміни політики", "Політика може оновлюватися при зміні сервісів, провайдерів або правових вимог. Дата оновлюється при суттєвих змінах."],
         ["Контакт", `Формальні запити щодо приватності надсилайте на ${contact}. Загальні питання про проєкт можна також писати в Telegram ${siteConfig.contact.telegram}.`]
       ],
       pl: [
-        ["Wprowadzenie", `Data wejścia w życie: ${effectiveDate}. Wersja polityki: ${siteConfig.legal.PRIVACY_VERSION}. Ta Polityka prywatności dotyczy portfolio Yana Ellis, kalkulatorów i formularzy zapytań.`],
-        ["Zbierane informacje", "Formularze mogą zbierać imię, email, telefon, nazwę firmy lub projektu, nazwy w komunikatorach, obecną stronę, odpowiedzi z kalkulatora, wymagania, budżet, terminy, informacje o materiałach marki, linki inspiracji, statusy zgód, zaakceptowane wersje Terms/Privacy/designer-credit, acceptance timestamps, submission ID, czas wysłania i dane techniczne."],
+        ["Wprowadzenie", `Data wejścia w życie: ${effectiveDate}. Wersja polityki: ${siteConfig.legal.PRIVACY_VERSION}. Ta Polityka prywatności dotyczy portfolio Yana Ellis, stron informacyjnych, kalkulatorów i formularzy zapytań.`],
+        ["Zbierane informacje", "Formularze mogą zbierać imię, email, telefon, nazwę firmy lub projektu, nazwy w komunikatorach, obecną stronę, odpowiedzi z kalkulatora, wymagania, budżet, terminy, informacje o materiałach marki, linki inspiracji, statusy zgód, zaakceptowane wersje Terms/Privacy/designer-credit, acceptance timestamps, submission ID, czas wysłania i dane techniczne. Przeglądanie portfolio nie wymaga tworzenia konta."],
         ["Jak dane są zbierane", "Dane są podawane bezpośrednio przez użytkownika w kalkulatorach i formularzach. Dane techniczne mogą być przetwarzane automatycznie przez hosting, zabezpieczenia, usługi dostarczania wiadomości lub pocztę email podczas wysyłki."],
         ["Cele przetwarzania", "Dane służą do pokazania wstępnej wyceny, otrzymania i analizy zapytania, kontaktu wybranym kanałem, przygotowania finalnej oferty, ochrony przed spamem, prowadzenia zapisów zapytania i dokumentowania zaakceptowanych warunków."],
         ["Podstawy prawne", "W zależności od lokalizacji użytkownika przetwarzanie może opierać się na działaniach przedumownych, wykonaniu umowy, zgodzie, uzasadnionym interesie albo obowiązku prawnym."],
@@ -792,14 +786,14 @@ function legalSections(type, language) {
         ["Prawa użytkownika", `W zależności od prawa użytkownik może poprosić o dostęp, korektę, usunięcie, ograniczenie, sprzeciw, przeniesienie danych lub wycofanie zgody przez email ${contact}.`],
         ["Bezpieczeństwo", "Stosowane są rozsądne środki organizacyjne i techniczne, ale żadna transmisja ani metoda przechowywania online nie jest całkowicie bezpieczna."],
         ["Dzieci", "Usługi są przeznaczone dla dorosłych i przedstawicieli biznesu. Strona nie jest przeznaczona do świadomego zbierania danych dzieci."],
-        ["Linki zewnętrzne", "Strona może linkować do portfolio, mediów społecznościowych, płatności i innych usług zewnętrznych. Obowiązują ich własne polityki."],
+        ["Linki zewnętrzne", "Strona może linkować do projektów portfolio, stron informacyjnych, mediów społecznościowych, płatności i innych usług zewnętrznych. Obowiązują ich własne polityki."],
         ["Zmiany polityki", "Polityka może być aktualizowana przy zmianie usług, dostawców lub wymogów prawnych. Data zostanie zmieniona przy istotnych aktualizacjach."],
         ["Kontakt", `Formalne prośby prywatności wyślij na ${contact}. Ogólne pytania projektowe można też pisać na Telegram ${siteConfig.contact.telegram}.`]
       ]
     },
     terms: {
       en: [
-        ["Scope", `Effective date: ${effectiveDate}. Terms version: ${siteConfig.legal.TERMS_VERSION}. These Terms govern use of the Yana Ellis portfolio website, calculators, project request forms and pre-contract information. A specific project is governed by the final written proposal, invoice and any separate agreement.`],
+        ["Scope", `Effective date: ${effectiveDate}. Terms version: ${siteConfig.legal.TERMS_VERSION}. These Terms govern use of the Yana Ellis portfolio website, project information pages, calculators, project request forms and pre-contract information. A specific project is governed by the final written proposal, invoice and any separate agreement.`],
         ["Calculator estimates", "Calculator results are preliminary estimates for orientation only. They are not binding quotations, contracts, guarantees of availability or promises to accept a project."],
         ["Project acceptance", "Submitting a request does not obligate either party to proceed. A project begins only after scope, price, schedule and payment terms are agreed in writing and the required first payment has cleared."],
         ["Client responsibilities", "The client must provide accurate information, timely feedback, lawful content and necessary access. The client confirms they own or have permission to use supplied materials."],
@@ -822,7 +816,7 @@ function legalSections(type, language) {
         ["Contact", `General questions: ${siteConfig.contact.telegram} or ${siteConfig.contact.email}. Formal notices concerning payments, cancellation, legal rights or privacy should be sent by email.`]
       ],
       uk: [
-        ["Сфера дії", `Дата набрання чинності: ${effectiveDate}. Версія умов: ${siteConfig.legal.TERMS_VERSION}. Ці Умови регулюють використання портфоліо Yana Ellis, калькуляторів, форм заявки та переддоговірної інформації. Конкретний проєкт регулюється фінальною письмовою пропозицією, рахунком і окремою угодою, якщо вона є.`],
+        ["Сфера дії", `Дата набрання чинності: ${effectiveDate}. Версія умов: ${siteConfig.legal.TERMS_VERSION}. Ці Умови регулюють використання портфоліо Yana Ellis, інформаційних сторінок про проєкт, калькуляторів, форм заявки та переддоговірної інформації. Конкретний проєкт регулюється фінальною письмовою пропозицією, рахунком і окремою угодою, якщо вона є.`],
         ["Оцінки калькулятора", "Результати калькулятора є лише попередньою орієнтовною оцінкою. Вони не є обов'язковою пропозицією, договором, гарантією доступності або обіцянкою прийняти проєкт."],
         ["Прийняття проєкту", "Надсилання заявки не зобов'язує жодну сторону продовжувати. Проєкт починається лише після письмового погодження обсягу, ціни, графіка, оплати та надходження першого платежу."],
         ["Обов'язки клієнта", "Клієнт має надати точну інформацію, своєчасний відгук, законний контент і потрібні доступи. Клієнт підтверджує, що має права на надані матеріали."],
@@ -845,7 +839,7 @@ function legalSections(type, language) {
         ["Контакт", `Загальні питання: ${siteConfig.contact.telegram} або ${siteConfig.contact.email}. Формальні повідомлення щодо оплати, скасування, прав або приватності потрібно надсилати електронною поштою.`]
       ],
       pl: [
-        ["Zakres", `Data wejścia w życie: ${effectiveDate}. Wersja regulaminu: ${siteConfig.legal.TERMS_VERSION}. Te Warunki regulują korzystanie z portfolio Yana Ellis, kalkulatorów, formularzy zapytań i informacji przedumownych. Konkretny projekt podlega finalnej pisemnej ofercie, fakturze i ewentualnej oddzielnej umowie.`],
+        ["Zakres", `Data wejścia w życie: ${effectiveDate}. Wersja regulaminu: ${siteConfig.legal.TERMS_VERSION}. Te Warunki regulują korzystanie z portfolio Yana Ellis, stron informacyjnych, kalkulatorów, formularzy zapytań i informacji przedumownych. Konkretny projekt podlega finalnej pisemnej ofercie, fakturze i ewentualnej oddzielnej umowie.`],
         ["Wyceny z kalkulatora", "Wyniki kalkulatora są wycenami wstępnymi wyłącznie orientacyjnie. Nie są wiążącą ofertą, umową, gwarancją dostępności ani obietnicą przyjęcia projektu."],
         ["Akceptacja projektu", "Wysłanie zapytania nie zobowiązuje żadnej strony do rozpoczęcia. Projekt zaczyna się dopiero po pisemnym uzgodnieniu zakresu, ceny, harmonogramu, płatności i zaksięgowaniu pierwszej płatności."],
         ["Obowiązki klienta", "Klient musi podać dokładne informacje, terminowe informacje zwrotne, legalne treści i potrzebne dostępy. Klient potwierdza, że ma prawa do dostarczonych materiałów."],
