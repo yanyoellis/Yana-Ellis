@@ -1,6 +1,7 @@
 {
   "private": true,
   "dependencies": {
-    "@vercel/blob": "^1.1.1"
+    "@vercel/blob": "^1.1.1",
+    "pdfkit": "^0.16.0"
   }
 }
