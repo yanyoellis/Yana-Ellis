@@ -326,6 +326,11 @@ button {
   list-style: none;
 }
 
+.expertise-list { display:grid; gap:24px; margin-top:42px; }
+.expertise-list h2 { margin:0 0 8px; color:var(--text); font-size:.68rem; font-weight:600; line-height:1.3; text-transform:uppercase; }
+.expertise-list p { margin:0; color:var(--muted); font-size:.82rem; line-height:1.7; white-space:pre-line; }
+.hero-description { white-space:pre-line; }
+
 .approach-list {
   display: grid;
   gap: 24px;
