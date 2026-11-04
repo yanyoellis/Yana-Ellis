@@ -24,7 +24,7 @@ function renderCommercialWork(language = document.documentElement.lang || "en") 
   if (!grid) return;
   grid.innerHTML = commercialProjects.map((project, index) => `<article class="commercial-card tone-${project.tone}">
     <div class="commercial-card-visual">${project.cover ? `<img class="commercial-cover-image" src="${project.cover}" alt="${project.name} website preview" loading="lazy" decoding="async" onerror="this.hidden=true">${project.coverSecond ? `<img class="commercial-cover-image commercial-cover-secondary" src="${project.coverSecond}" alt="${project.name} second website preview" loading="lazy" decoding="async" onerror="this.hidden=true">` : ""}` : ""}<span class="commercial-number">0${index + 1}</span><span class="commercial-mark">${project.name}</span><span class="commercial-industry">${project.industry}</span></div>
-    <div class="commercial-card-body"><p class="commercial-location">${project.location}</p><h3>${project.name}</h3><p class="commercial-type">${project.type}</p><p class="commercial-role"><span>${copy.role}</span>${project.role}</p><button type="button" class="commercial-open" data-commercial-id="${project.id}">${copy.open} <span aria-hidden="true">↗</span></button></div>
+    <div class="commercial-card-body"><p class="commercial-location">${project.location}</p><h3>${project.name}</h3><p class="commercial-type">${project.type}</p><p class="commercial-role"><span>${copy.role}</span>${project.role}</p><a class="commercial-open" href="commercial-case.html?id=${project.id}">${copy.open} <span aria-hidden="true">↗</span></a></div>
   </article>`).join("");
   grid.querySelectorAll("[data-commercial-id]").forEach((button) => button.addEventListener("click", () => openCommercialCase(button.dataset.commercialId, language)));
 }
