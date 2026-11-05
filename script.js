@@ -588,3 +588,30 @@ if (projectsViewport && projectsPrevious && projectsNext) {
 
 applyLanguage(getInitialLanguage());
 updateProjectArrows();
+
+const portraitTrigger = document.querySelector("#portraitTrigger");
+const fallingParticles = document.querySelector("#fallingParticles");
+
+function releasePortraitParticles() {
+  if (!portraitTrigger || !fallingParticles) return;
+  const source = portraitTrigger.getBoundingClientRect();
+  const originX = source.left + source.width / 2;
+  const originY = source.top + source.height / 2;
+  const count = 18;
+
+  for (let index = 0; index < count; index += 1) {
+    const particle = document.createElement("span");
+    const isParrot = index % 4 === 0;
+    particle.className = `falling-particle${isParrot ? " is-parrot" : ""}`;
+    particle.textContent = isParrot ? "🦜" : "♥";
+    particle.style.setProperty("--start-x", `${originX + (Math.random() - 0.5) * 24}px`);
+    particle.style.setProperty("--start-y", `${originY + (Math.random() - 0.5) * 16}px`);
+    particle.style.setProperty("--drift-x", `${(Math.random() - 0.5) * 260}px`);
+    particle.style.setProperty("--rotation", `${(Math.random() - 0.5) * 620}deg`);
+    particle.style.setProperty("--fall-duration", `${2.8 + Math.random() * 2.2}s`);
+    particle.addEventListener("animationend", () => particle.remove(), { once: true });
+    fallingParticles.appendChild(particle);
+  }
+}
+
+portraitTrigger?.addEventListener("click", releasePortraitParticles);

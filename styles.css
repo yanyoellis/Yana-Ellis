@@ -301,6 +301,74 @@ button {
     linear-gradient(180deg, var(--bg) 0%, transparent 13%, transparent 82%, var(--bg) 100%);
 }
 
+.portrait-trigger {
+  position: absolute;
+  top: 27%;
+  left: 58%;
+  z-index: 3;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.025);
+  opacity: 0.42;
+  cursor: pointer;
+  pointer-events: auto;
+  transform: translate(-50%, -50%);
+}
+
+.portrait-trigger:hover,
+.portrait-trigger:focus-visible {
+  border-color: rgba(255, 255, 255, 0.24);
+  background: rgba(255, 255, 255, 0.07);
+  outline: none;
+}
+
+.falling-particles {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.falling-particle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  color: #000;
+  font-family: Arial, sans-serif;
+  font-size: 1.25rem;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+  will-change: transform, opacity;
+  animation: particle-fall var(--fall-duration) cubic-bezier(0.2, 0.72, 0.28, 1) forwards;
+}
+
+.falling-particle.is-parrot {
+  font-size: 1.45rem;
+  filter: grayscale(1) contrast(1.25);
+}
+
+@keyframes particle-fall {
+  0% {
+    opacity: 0;
+    transform: translate3d(var(--start-x), var(--start-y), 0) rotate(0deg) scale(0.55);
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(calc(var(--start-x) + var(--drift-x)), calc(var(--start-y) + 110vh), 0) rotate(var(--rotation)) scale(1);
+  }
+}
+
 .hero-portrait {
   position: absolute;
   inset: -5% -8% -5% -18%;
@@ -1163,6 +1231,11 @@ body.modal-open {
     object-position: 72% 32%;
     -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 16%, #000 80%, transparent 100%);
     mask-image: linear-gradient(180deg, transparent 0%, #000 16%, #000 80%, transparent 100%);
+  }
+
+  .portrait-trigger {
+    top: 29%;
+    left: 58%;
   }
 
   .hero-name {
