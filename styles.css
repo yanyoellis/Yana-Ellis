@@ -340,16 +340,16 @@ button {
   display: block;
   color: #000;
   font-family: Arial, sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.55rem;
   line-height: 1;
   pointer-events: none;
   user-select: none;
   will-change: transform, opacity;
-  animation: particle-fall var(--fall-duration) cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+  animation: particle-fall var(--fall-duration) cubic-bezier(0.18, 0.72, 0.24, 1) forwards;
 }
 
 .falling-particle.is-parrot {
-  font-size: 1.45rem;
+  font-size: 1.75rem;
   filter: grayscale(1) contrast(1.25);
 }
 
