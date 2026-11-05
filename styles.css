@@ -303,11 +303,11 @@ button {
 
 .portrait-trigger {
   position: absolute;
-  top: 29%;
-  left: 58%;
+  top: 30%;
+  left: 63%;
   z-index: 3;
-  width: 28px;
-  height: 28px;
+  width: 30px;
+  height: 30px;
   padding: 0;
   border: 1px solid rgba(255, 255, 255, 0.34);
   border-radius: 50%;
@@ -340,7 +340,7 @@ button {
   display: block;
   color: #000;
   font-family: Arial, sans-serif;
-  font-size: 1.55rem;
+  font-size: 2rem;
   line-height: 1;
   pointer-events: none;
   user-select: none;
@@ -349,7 +349,7 @@ button {
 }
 
 .falling-particle.is-parrot {
-  font-size: 1.75rem;
+  font-size: 2.2rem;
   filter: grayscale(1) contrast(1.25);
 }
 
@@ -1234,8 +1234,8 @@ body.modal-open {
   }
 
   .portrait-trigger {
-    top: 31%;
-    left: 58%;
+    top: 32%;
+    left: 62%;
   }
 
   .hero-name {

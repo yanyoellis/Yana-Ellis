@@ -597,7 +597,7 @@ function releasePortraitParticles() {
   const source = portraitTrigger.getBoundingClientRect();
   const originX = source.left + source.width / 2;
   const originY = source.top + source.height / 2;
-  const count = 32;
+  const count = 48;
 
   for (let index = 0; index < count; index += 1) {
     const particle = document.createElement("span");
@@ -606,9 +606,9 @@ function releasePortraitParticles() {
     particle.textContent = isParrot ? "🦜" : "♥";
     particle.style.setProperty("--start-x", `${originX + (Math.random() - 0.5) * 24}px`);
     particle.style.setProperty("--start-y", `${originY + (Math.random() - 0.5) * 16}px`);
-    particle.style.setProperty("--drift-x", `${(Math.random() - 0.5) * 150}px`);
-    particle.style.setProperty("--rotation", `${(Math.random() - 0.5) * 300}deg`);
-    particle.style.setProperty("--fall-duration", `${12 + Math.random() * 4}s`);
+    particle.style.setProperty("--drift-x", `${(Math.random() - 0.5) * 130}px`);
+    particle.style.setProperty("--rotation", `${(Math.random() - 0.5) * 260}deg`);
+    particle.style.setProperty("--fall-duration", `${18 + Math.random() * 6}s`);
     particle.addEventListener("animationend", () => particle.remove(), { once: true });
     fallingParticles.appendChild(particle);
   }
