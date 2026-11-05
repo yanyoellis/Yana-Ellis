@@ -6,11 +6,11 @@ const commercialProjects = [
 ];
 
 const commercialCopy = {
-  en: { kicker: "SELECTED COMMERCIAL WORK", title: "Real projects, designed for real business contexts.", intro: "Commercial websites, digital products and operational systems created for clients across hospitality, construction, finance and healthcare.", open: "View case", close: "Close", role: "My role", links: "Visit websites" },
-  uk: { kicker: "ОБРАНІ КОМЕРЦІЙНІ ПРОЄКТИ", title: "Реальні проєкти для реальних бізнес-контекстів.", intro: "Комерційні сайти, цифрові продукти та операційні системи для сфер гостинності, будівництва, фінансів і охорони здоров’я.", open: "Відкрити кейс", close: "Закрити", role: "Моя роль", links: "Відвідати сайти" },
-  pl: { kicker: "WYBRANE PROJEKTY KOMERCYJNE", title: "Realne projekty zaprojektowane dla realnego biznesu.", intro: "Komercyjne strony, produkty cyfrowe i systemy operacyjne dla hotelarstwa, budownictwa, finansów i ochrony zdrowia.", open: "Zobacz case", close: "Zamknij", role: "Moja rola", links: "Odwiedź strony" },
-  ru: { kicker: "ИЗБРАННЫЕ КОММЕРЧЕСКИЕ ПРОЕКТЫ", title: "Реальные проекты для реальных бизнес-задач.", intro: "Коммерческие сайты, цифровые продукты и операционные системы для сфер гостеприимства, строительства, финансов и здравоохранения.", open: "Открыть кейс", close: "Закрыть", role: "Моя роль", links: "Открыть сайты" },
-  de: { kicker: "AUSGEWÄHLTE KOMMERZIELLE PROJEKTE", title: "Reale Projekte für reale geschäftliche Anforderungen.", intro: "Kommerzielle Websites, digitale Produkte und operative Systeme für Hotellerie, Bauwesen, Finanzen und Gesundheitswesen.", open: "Case öffnen", close: "Schließen", role: "Meine Rolle", links: "Websites öffnen" }
+  en: { kicker: "SELECTED COMMERCIAL WORK", title: "Real projects, designed for real business contexts.", intro: "Commercial websites, digital products and operational systems created for clients across hospitality, construction, finance and healthcare.", open: "View case", close: "Close", role: "My role", links: "Visit websites", previous: "Previous commercial projects", next: "Next commercial projects" },
+  uk: { kicker: "ОБРАНІ КОМЕРЦІЙНІ ПРОЄКТИ", title: "Реальні проєкти для реальних бізнес-контекстів.", intro: "Комерційні сайти, цифрові продукти та операційні системи для сфер гостинності, будівництва, фінансів і охорони здоров’я.", open: "Відкрити кейс", close: "Закрити", role: "Моя роль", links: "Відвідати сайти", previous: "Попередні комерційні проєкти", next: "Наступні комерційні проєкти" },
+  pl: { kicker: "WYBRANE PROJEKTY KOMERCYJNE", title: "Realne projekty zaprojektowane dla realnego biznesu.", intro: "Komercyjne strony, produkty cyfrowe i systemy operacyjne dla hotelarstwa, budownictwa, finansów i ochrony zdrowia.", open: "Zobacz case", close: "Zamknij", role: "Moja rola", links: "Odwiedź strony", previous: "Poprzednie projekty komercyjne", next: "Następne projekty komercyjne" },
+  ru: { kicker: "ИЗБРАННЫЕ КОММЕРЧЕСКИЕ ПРОЕКТЫ", title: "Реальные проекты для реальных бизнес-задач.", intro: "Коммерческие сайты, цифровые продукты и операционные системы для сфер гостеприимства, строительства, финансов и здравоохранения.", open: "Открыть кейс", close: "Закрыть", role: "Моя роль", links: "Открыть сайты", previous: "Предыдущие коммерческие проекты", next: "Следующие коммерческие проекты" },
+  de: { kicker: "AUSGEWÄHLTE KOMMERZIELLE PROJEKTE", title: "Reale Projekte für reale geschäftliche Anforderungen.", intro: "Kommerzielle Websites, digitale Produkte und operative Systeme für Hotellerie, Bauwesen, Finanzen und Gesundheitswesen.", open: "Case öffnen", close: "Schließen", role: "Meine Rolle", links: "Websites öffnen", previous: "Vorherige kommerzielle Projekte", next: "Nächste kommerzielle Projekte" }
 };
 
 function renderCommercialWork(language = document.documentElement.lang || "en") {
@@ -20,8 +20,39 @@ function renderCommercialWork(language = document.documentElement.lang || "en") 
   const grid = document.getElementById("commercialGrid");
   if (!grid) return;
   grid.innerHTML = commercialProjects.map((project, index) => `<article class="commercial-card tone-${project.tone}">
-    <a class="commercial-card-visual" href="commercial-case.html?id=${project.id}" aria-label="${copy.open}: ${project.name}">${project.cover ? `<img class="commercial-cover-image" src="${project.cover}" alt="${project.name} website preview" loading="lazy" decoding="async" onerror="this.hidden=true">${project.coverSecond ? `<img class="commercial-cover-image commercial-cover-secondary" src="${project.coverSecond}" alt="${project.name} second website preview" loading="lazy" decoding="async" onerror="this.hidden=true">` : ""}` : ""}<span class="commercial-number">0${index + 1}</span><span class="commercial-industry">${project.industry}</span></a>
+    <a class="commercial-card-visual" href="commercial-case.html?id=${project.id}" aria-label="${copy.open}: ${project.name}">${project.cover ? `<img class="commercial-cover-image" src="${project.cover}" alt="${project.name} website preview" loading="lazy" decoding="async" onerror="this.hidden=true">${project.coverSecond ? `<img class="commercial-cover-image commercial-cover-secondary" src="${project.coverSecond}" alt="${project.name} second website preview" loading="lazy" decoding="async" onerror="this.hidden=true">` : ""}` : ""}<span class="commercial-number">0${index + 1}</span><span class="commercial-mark">${project.name}</span><span class="commercial-industry">${project.industry}</span></a>
     <div class="commercial-card-body"><p class="commercial-location">${project.location}</p><h3>${project.name}</h3><p class="commercial-type">${project.type}</p><p class="commercial-role"><span>${copy.role}</span>${project.role}</p><a class="commercial-open" href="commercial-case.html?id=${project.id}">${copy.open} <span aria-hidden="true">↗</span></a></div>
   </article>`).join("");
 }
-document.addEventListener("DOMContentLoaded", () => { renderCommercialWork(); document.querySelectorAll(".language-button").forEach((button) => button.addEventListener("click", () => setTimeout(() => renderCommercialWork(button.dataset.lang), 0))); });
+function setupCommercialCarousel() {
+  const viewport = document.querySelector("#commercialViewport");
+  const grid = document.querySelector("#commercialGrid");
+  const previous = document.querySelector("#commercialPrevious");
+  const next = document.querySelector("#commercialNext");
+  if (!viewport || !grid || !previous || !next) return;
+  const getStep = () => {
+    const card = grid.querySelector(".commercial-card");
+    if (!card) return 0;
+    const gap = Number.parseFloat(getComputedStyle(grid).columnGap) || 0;
+    return card.getBoundingClientRect().width + gap;
+  };
+  const update = () => {
+    const maximum = viewport.scrollWidth - viewport.clientWidth;
+    previous.disabled = viewport.scrollLeft <= 2;
+    next.disabled = viewport.scrollLeft >= maximum - 2;
+  };
+  const move = (direction) => viewport.scrollBy({ left: getStep() * direction, behavior: "smooth" });
+  previous.addEventListener("click", () => move(-1));
+  next.addEventListener("click", () => move(1));
+  viewport.addEventListener("scroll", update, { passive: true });
+  viewport.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+      event.preventDefault();
+      move(event.key === "ArrowLeft" ? -1 : 1);
+    }
+  });
+  window.addEventListener("resize", update);
+  update();
+}
+
+document.addEventListener("DOMContentLoaded", () => { renderCommercialWork(); setupCommercialCarousel(); document.querySelectorAll(".language-button").forEach((button) => button.addEventListener("click", () => setTimeout(() => renderCommercialWork(button.dataset.lang), 0))); });

@@ -15,7 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=20261105-home-carousel" />
   </head>
   <body>
     <div class="site-shell">
@@ -171,9 +171,17 @@
               <p class="section-kicker" data-commercial-i18n="kicker">SELECTED COMMERCIAL WORK</p>
               <h2 id="commercial-title" data-commercial-i18n="title">Real projects, designed for real business contexts.</h2>
             </div>
-            <p data-commercial-i18n="intro">Commercial websites, digital products and operational systems created for clients across hospitality, construction, finance, healthcare, logistics and education.</p>
+            <div class="commercial-heading-side">
+              <p data-commercial-i18n="intro">Commercial websites, digital products and operational systems created for clients across hospitality, construction, finance and healthcare.</p>
+              <div class="projects-controls commercial-controls" aria-label="Commercial project navigation">
+                <button class="projects-arrow" id="commercialPrevious" type="button" data-commercial-aria="previous" aria-controls="commercialViewport" disabled><span aria-hidden="true">&#8592;</span></button>
+                <button class="projects-arrow" id="commercialNext" type="button" data-commercial-aria="next" aria-controls="commercialViewport"><span aria-hidden="true">&#8594;</span></button>
+              </div>
+            </div>
           </div>
-          <div class="commercial-grid" id="commercialGrid"></div>
+          <div class="commercial-viewport" id="commercialViewport" tabindex="0" aria-label="Commercial projects">
+            <div class="commercial-grid" id="commercialGrid"></div>
+          </div>
         </section>
 
         <section class="projects-section conceptual-section" aria-labelledby="projects-title">
