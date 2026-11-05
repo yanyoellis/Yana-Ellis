@@ -447,6 +447,9 @@ button {
   margin-bottom: 0;
 }
 
+.about-learn-link { display:inline-block; margin-top:20px; padding-bottom:6px; border-bottom:1px solid var(--line-strong); color:var(--text); font-size:.72rem; font-weight:600; letter-spacing:.08em; text-decoration:none; text-transform:uppercase; }
+.about-learn-link:hover,.about-learn-link:focus-visible { color:var(--accent); border-color:var(--accent); outline:none; }
+
 .tools-list {
   display: grid;
   gap: 9px;
