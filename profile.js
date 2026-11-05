@@ -67,7 +67,7 @@ const profileCopy = {
     timelineTitle: "Professional work in UX/UI, web design and digital projects since 2022.",
     timeline2022: "Began professional work in UX/UI, web design and digital projects.",
     timeline2024: "Expanded complete website work, information architecture, responsive design and multi-industry independent concepts.",
-    timeline2026: "The commercial portfolio includes six case studies across hospitality, construction, finance, healthcare, logistics and education.",
+    timeline2026: "The commercial portfolio includes four case studies across hospitality, construction, finance and healthcare.",
     languagesKicker: "Languages & identity",
     languagesTitle: "International communication without making language the whole story.",
     languagesText:
@@ -138,7 +138,7 @@ const profileCopy = {
     timelineTitle: "Профессиональная работа в UX/UI, web design и digital projects с 2022 года.",
     timeline2022: "Начало профессиональной работы в UX/UI, web design и digital projects.",
     timeline2024: "Расширение работы над полноценными сайтами, информационной архитектурой, responsive design и концептами в разных индустриях.",
-    timeline2026: "Коммерческое портфолио включает шесть кейсов в сферах гостеприимства, строительства, финансов, медицины, логистики и образования.",
+    timeline2026: "Коммерческое портфолио включает четыре кейса в сферах гостеприимства, строительства, финансов и медицины.",
     languagesKicker: "Языки и идентичность",
     languagesTitle: "Международная коммуникация без превращения языков в главный сюжет.",
     languagesText:
@@ -209,7 +209,7 @@ const profileCopy = {
     timelineTitle: "Professionelle Arbeit in UX/UI, Web Design und Digitalprojekten seit 2022.",
     timeline2022: "Beginn professioneller Arbeit in UX/UI, Web Design und Digitalprojekten.",
     timeline2024: "Ausbau vollständiger Website-Arbeit, Informationsarchitektur, Responsive Design und multi-industry Concept Work.",
-    timeline2026: "Das kommerzielle Portfolio umfasst sechs Fallstudien aus Hotellerie, Bauwesen, Finanzen, Gesundheitswesen, Logistik und Bildung.",
+    timeline2026: "Das kommerzielle Portfolio umfasst vier Fallstudien aus Hotellerie, Bauwesen, Finanzen und Gesundheitswesen.",
     languagesKicker: "Languages & identity",
     languagesTitle: "Internationale Kommunikation, ohne Sprache zum Hauptthema zu machen.",
     languagesText:
@@ -271,7 +271,7 @@ profileCopy.uk = {
   timelineTitle: "Професійна робота в UX/UI, web design і digital projects з 2022 року.",
   timeline2022: "Початок професійної роботи в UX/UI, web design і digital projects.",
   timeline2024: "Розширення роботи над повноцінними сайтами, інформаційною архітектурою, responsive design і концептами в різних індустріях.",
-  timeline2026: "Комерційне портфоліо включає шість кейсів у сферах гостинності, будівництва, фінансів, медицини, логістики й освіти.",
+  timeline2026: "Комерційне портфоліо включає чотири кейси у сферах гостинності, будівництва, фінансів і медицини.",
   languagesKicker: "Мови та ідентичність",
   languagesTitle: "Міжнародна комунікація без перетворення мов на головний сюжет.",
   languagesText:
@@ -329,7 +329,7 @@ profileCopy.pl = {
   timelineTitle: "Profesjonalna praca w UX/UI, web design i digital projects od 2022 roku.",
   timeline2022: "Początek profesjonalnej pracy w UX/UI, web design i digital projects.",
   timeline2024: "Rozwój pełnych projektów stron, architektury informacji, responsive design i koncepcji w różnych branżach.",
-  timeline2026: "Portfolio komercyjne obejmuje sześć case studies z obszarów hotelarstwa, budownictwa, finansów, medycyny, logistyki i edukacji.",
+  timeline2026: "Portfolio komercyjne obejmuje cztery case studies z obszarów hotelarstwa, budownictwa, finansów i ochrony zdrowia.",
   languagesKicker: "Języki i tożsamość",
   languagesTitle: "Komunikacja międzynarodowa bez robienia z języków głównego tematu.",
   languagesText:
@@ -389,7 +389,7 @@ Object.assign(profileCopy.ru, {
   timelineTitle: "Профессиональная работа в UX/UI, веб-дизайне и цифровых проектах с 2022 года.",
   timeline2022: "Начало профессиональной работы в UX/UI, веб-дизайне и цифровых проектах.",
   timeline2024: "Расширение работы над полноценными сайтами, информационной архитектурой, адаптивным дизайном и концептами в разных индустриях.",
-  timeline2026: "Коммерческое портфолио включает шесть кейсов в сферах гостеприимства, строительства, финансов, медицины, логистики и образования.",
+  timeline2026: "Коммерческое портфолио включает четыре кейса в сферах гостеприимства, строительства, финансов и медицины.",
   projectArchiveKicker: "Опыт избранных проектов",
   projectArchiveTitle: "Коммерческие и независимые кейсы.",
   projectArchiveIntro:
@@ -452,7 +452,7 @@ Object.assign(profileCopy.pl, {
   capOpsText: "Zarządzanie rezerwacjami, komunikacja z gośćmi, koordynacja przyjazdów, procesy check-in, śledzenie płatności i analiza wymagań klientów.",
   timelineTitle: "Profesjonalna praca w UX/UI, web designie i projektach cyfrowych od 2022 roku.",
   timeline2022: "Początek profesjonalnej pracy w UX/UI, web designie i projektach cyfrowych.",
-  timeline2026: "Portfolio komercyjne obejmuje sześć case studies z obszarów hotelarstwa, budownictwa, finansów, medycyny, logistyki i edukacji.",
+  timeline2026: "Portfolio komercyjne obejmuje cztery case studies z obszarów hotelarstwa, budownictwa, finansów i ochrony zdrowia.",
   projectArchiveKicker: "Wybrane doświadczenie projektowe",
   projectArchiveTitle: "Komercyjne i niezależne case studies.",
   projectArchiveIntro:
@@ -483,7 +483,7 @@ Object.assign(profileCopy.de, {
   styleBusinessTitle: "Business-Verstandnis",
   styleExecutionTitle: "Umsetzungsfokus",
   timelineKicker: "Zeitlinie",
-  timeline2026: "Das kommerzielle Portfolio umfasst sechs Fallstudien aus Hotellerie, Bauwesen, Finanzen, Gesundheitswesen, Logistik und Bildung.",
+  timeline2026: "Das kommerzielle Portfolio umfasst vier Fallstudien aus Hotellerie, Bauwesen, Finanzen und Gesundheitswesen.",
   languagesKicker: "Sprachen und Identitat",
   projectArchiveKicker: "Ausgewahlte Projekterfahrung",
   projectArchiveTitle: "Kommerzielle und unabhangige Fallstudien.",

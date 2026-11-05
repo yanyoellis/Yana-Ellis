@@ -1,6 +1,6 @@
 const translations = {
   en: {
-    documentTitle: "Yana Ellis - UX/UI & Web Designer",
+    documentTitle: "Yana Ellis — Independent Digital Product Designer & Web Developer",
     logoAlt: "Yana Ellis logo",
     heroRole: "UX/UI & Web Designer specializing in websites and digital products.",
     heroDescription: "I design minimal, experimental and concept-driven digital experiences.",
@@ -70,7 +70,7 @@ const translations = {
       "Pricing is based on the country where the business primarily operates, not the visitor's current location."
   },
   uk: {
-    documentTitle: "Yana Ellis - UX/UI і веб дизайнерка",
+    documentTitle: "Yana Ellis — Незалежна дизайнерка цифрових продуктів і веброзробниця",
     logoAlt: "Логотип Yana Ellis",
     heroRole: "UX/UI І ВЕБ ДИЗАЙНЕРКА, ЩО СПЕЦІАЛІЗУЄТЬСЯ НА САЙТАХ І ЦИФРОВИХ ПРОДУКТАХ.",
     heroDescription: "Я створюю мінімалістичні, експериментальні та концептуальні цифрові досвіди.",
@@ -140,7 +140,7 @@ const translations = {
       "Ціни залежать від країни, у якій переважно працює бізнес, а не від поточного місцезнаходження відвідувача."
   },
   pl: {
-    documentTitle: "Yana Ellis - projektantka UX/UI i web",
+    documentTitle: "Yana Ellis — Niezależna projektantka produktów cyfrowych i web developerka",
     logoAlt: "Logo Yana Ellis",
     heroRole: "PROJEKTANTKA UX/UI I WEB SPECJALIZUJĄCA SIĘ W STRONACH ORAZ PRODUKTACH CYFROWYCH.",
     heroDescription: "Projektuję minimalistyczne, eksperymentalne i koncepcyjne doświadczenia cyfrowe.",
@@ -210,7 +210,7 @@ const translations = {
       "Ceny zależą od kraju, w którym głównie działa firma, a nie od aktualnej lokalizacji odwiedzającego."
   },
   ru: {
-    documentTitle: "Yana Ellis - UX/UI и веб-дизайнер",
+    documentTitle: "Yana Ellis — Независимый дизайнер цифровых продуктов и веб-разработчик",
     logoAlt: "Логотип Yana Ellis",
     heroRole: "UX/UI и веб-дизайнер, специализирующаяся на сайтах и цифровых продуктах.",
     heroDescription: "Я создаю минималистичные, экспериментальные и концептуальные цифровые впечатления.",
@@ -280,7 +280,7 @@ const translations = {
       "Цены зависят от страны, где преимущественно работает бизнес, а не от текущего местоположения посетителя."
   },
   de: {
-    documentTitle: "Yana Ellis - UX/UI & Web Designerin",
+    documentTitle: "Yana Ellis — Unabhängige Digital Product Designerin und Webentwicklerin",
     logoAlt: "Yana Ellis Logo",
     heroRole: "UX/UI & Web Designerin mit Schwerpunkt auf Websites und digitalen Produkten.",
     heroDescription: "Ich gestalte minimale, experimentelle und konzeptstarke digitale Erlebnisse.",
@@ -383,6 +383,11 @@ Object.assign(translations.de, {
   aboutOne: "Ich bin Yana Ellis, eine unabhängige Designerin und Entwicklerin für digitale Produkte, Websites und verbundene Geschäftssysteme.",
   aboutTwo: "Ich verbinde Design, Technologie und praktisches Geschäftsverständnis, um Ideen von der Konzeption bis zur Umsetzung zu führen."
 });
+Object.assign(translations.en, { exploreExpertise: "Explore expertise", howIWork: "How I work", getInTouch: "Get in touch" });
+Object.assign(translations.uk, { exploreExpertise: "Переглянути компетенції", howIWork: "Як я працюю", getInTouch: "Зв’язатися зі мною" });
+Object.assign(translations.pl, { exploreExpertise: "Poznaj kompetencje", howIWork: "Jak pracuję", getInTouch: "Napisz do mnie" });
+Object.assign(translations.ru, { exploreExpertise: "Посмотреть компетенции", howIWork: "Как я работаю", getInTouch: "Связаться со мной" });
+Object.assign(translations.de, { exploreExpertise: "Kompetenzen ansehen", howIWork: "Wie ich arbeite", getInTouch: "Kontakt aufnehmen" });
 
 const languageButtons = document.querySelectorAll(".language-button");
 const textNodes = document.querySelectorAll("[data-i18n]");
@@ -615,6 +620,7 @@ const fallingParticles = document.querySelector("#fallingParticles");
 
 function releasePortraitParticles() {
   if (!portraitTrigger || !fallingParticles) return;
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
   const source = portraitTrigger.getBoundingClientRect();
   const originX = source.left + source.width / 2;
   const originY = source.top + source.height / 2;
