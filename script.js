@@ -606,7 +606,10 @@ function releasePortraitParticles() {
     particle.textContent = isParrot ? "🦜" : "♥";
     particle.style.setProperty("--start-x", `${originX + (Math.random() - 0.5) * 24}px`);
     particle.style.setProperty("--start-y", `${originY + (Math.random() - 0.5) * 16}px`);
-    particle.style.setProperty("--drift-x", `${(Math.random() - 0.5) * 130}px`);
+    const angle = Math.random() * Math.PI * 2;
+    const distance = 260 + Math.random() * 420;
+    particle.style.setProperty("--drift-x", `${Math.cos(angle) * distance}px`);
+    particle.style.setProperty("--drift-y", `${Math.sin(angle) * distance}px`);
     particle.style.setProperty("--rotation", `${(Math.random() - 0.5) * 260}deg`);
     particle.style.setProperty("--fall-duration", `${18 + Math.random() * 6}s`);
     particle.addEventListener("animationend", () => particle.remove(), { once: true });

@@ -304,7 +304,7 @@ button {
 .portrait-trigger {
   position: absolute;
   top: 30%;
-  left: 63%;
+  left: 60%;
   z-index: 3;
   width: 30px;
   height: 30px;
@@ -365,7 +365,7 @@ button {
 
   100% {
     opacity: 0;
-    transform: translate3d(calc(var(--start-x) + var(--drift-x)), calc(var(--start-y) + 110vh), 0) rotate(var(--rotation)) scale(1);
+    transform: translate3d(calc(var(--start-x) + var(--drift-x)), calc(var(--start-y) + var(--drift-y)), 0) rotate(var(--rotation)) scale(1);
   }
 }
 
@@ -1235,7 +1235,7 @@ body.modal-open {
 
   .portrait-trigger {
     top: 32%;
-    left: 62%;
+    left: 59%;
   }
 
   .hero-name {
