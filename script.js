@@ -383,11 +383,11 @@ Object.assign(translations.de, {
   aboutOne: "Ich bin Yana Ellis, eine unabhängige Designerin und Entwicklerin für digitale Produkte, Websites und verbundene Geschäftssysteme.",
   aboutTwo: "Ich verbinde Design, Technologie und praktisches Geschäftsverständnis, um Ideen von der Konzeption bis zur Umsetzung zu führen."
 });
-Object.assign(translations.en, { exploreExpertise: "Explore expertise", howIWork: "How I work", getInTouch: "Get in touch" });
-Object.assign(translations.uk, { exploreExpertise: "Переглянути компетенції", howIWork: "Як я працюю", getInTouch: "Зв’язатися зі мною" });
-Object.assign(translations.pl, { exploreExpertise: "Poznaj kompetencje", howIWork: "Jak pracuję", getInTouch: "Napisz do mnie" });
-Object.assign(translations.ru, { exploreExpertise: "Посмотреть компетенции", howIWork: "Как я работаю", getInTouch: "Связаться со мной" });
-Object.assign(translations.de, { exploreExpertise: "Kompetenzen ansehen", howIWork: "Wie ich arbeite", getInTouch: "Kontakt aufnehmen" });
+Object.assign(translations.en, { exploreExpertise: "Explore expertise", howIWork: "How I work" });
+Object.assign(translations.uk, { exploreExpertise: "Переглянути компетенції", howIWork: "Як я працюю" });
+Object.assign(translations.pl, { exploreExpertise: "Poznaj kompetencje", howIWork: "Jak pracuję" });
+Object.assign(translations.ru, { exploreExpertise: "Посмотреть компетенции", howIWork: "Как я работаю" });
+Object.assign(translations.de, { exploreExpertise: "Kompetenzen ansehen", howIWork: "Wie ich arbeite" });
 
 const languageButtons = document.querySelectorAll(".language-button");
 const textNodes = document.querySelectorAll("[data-i18n]");
