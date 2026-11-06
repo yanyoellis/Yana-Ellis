@@ -620,7 +620,6 @@ const fallingParticles = document.querySelector("#fallingParticles");
 
 function releasePortraitParticles() {
   if (!portraitTrigger || !fallingParticles) return;
-  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
   const source = portraitTrigger.getBoundingClientRect();
   const originX = source.left + source.width / 2;
   const originY = source.top + source.height / 2;
