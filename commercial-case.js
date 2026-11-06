@@ -38,6 +38,12 @@ function renderSectionMedia(id, index, lang, project) {
   return `<figure class="case-section-media case-section-media--${item.kind || "live"}"><img src="${item.src}" alt="${project.name} — ${mediaType}: ${label}" loading="lazy" decoding="async"><figcaption>${mediaType} · ${label}</figcaption></figure>`;
 }
 
+function renderProjectLinks(links, label, lang) {
+  if (!links?.length) return "";
+  const buttonLabel = lang === "uk" ? "Переглянути проєкт" : lang === "pl" ? "Zobacz projekt" : lang === "ru" ? "Посмотреть проект" : lang === "de" ? "Projekt ansehen" : "View project";
+  return `<div class="case-project-links"><p class="section-kicker">${label}</p><nav class="case-external-links" aria-label="${label}">${links.map((link) => `<a href="${link.href}" target="_blank" rel="noopener noreferrer" aria-label="${buttonLabel}: ${link.label}">${buttonLabel} <span aria-hidden="true">↗</span></a>`).join("")}</nav></div>`;
+}
+
 function renderCase() {
   const id = new URLSearchParams(location.search).get("id");
   const base = productCases[id];
@@ -61,7 +67,7 @@ function renderCase() {
   document.title = `${project.name} | UX Case Study`;
 
   const externalLabel = lang === "uk" ? "Сайти проєкту" : lang === "pl" ? "Strony projektu" : lang === "ru" ? "Сайты проекта" : lang === "de" ? "Projekt-Websites" : "Project websites";
-  document.getElementById("caseRoot").innerHTML = `<header class="case-hero"><p class="section-kicker">${project.industry} · ${project.location}</p><h1>${project.name}</h1><p class="case-strapline">${project.strapline}</p><div class="case-meta"><span><b>${ui.industry}</b>${project.industry}</span><span><b>${ui.platform}</b>${project.platform}</span><span><b>${ui.location}</b>${project.location}</span><span><b>${ui.role}</b>${project.role}</span><span><b>${ui.scope}</b>${project.scope}</span></div>${project.links ? `<nav class="case-external-links" aria-label="${externalLabel}">${project.links.map((link) => `<a href="${link.href}" target="_blank" rel="noopener noreferrer">${link.label} ↗</a>`).join("")}</nav>` : ""}${renderCaseImages(base.images || project.images, project, lang)}</header><div class="case-layout"><aside class="case-index"><p class="section-kicker">${ui.overview}</p>${project.sections.map((section, index) => `<a href="#section-${index + 1}">${String(index + 1).padStart(2, "0")} ${section[0]}</a>`).join("")}</aside><article class="case-content">${project.sections.map((section, index) => `<section id="section-${index + 1}"><p class="case-section-number">${String(index + 1).padStart(2, "0")}</p><h2>${section[0]}</h2>${renderSectionBody(section)}${renderSectionMedia(id, index, lang, project)}</section>`).join("")}${["vanta", "vetra"].includes(id) ? `<p class="case-language-note">${ui.anonymizationNote}</p>` : ""}${fallbackTranslation ? `<p class="case-language-note">${caseUi.en.languageNote}</p>` : ""}</article></div>`;
+  document.getElementById("caseRoot").innerHTML = `<header class="case-hero"><p class="section-kicker">${project.industry} · ${project.location}</p><h1>${project.name}</h1><p class="case-strapline">${project.strapline}</p><div class="case-meta"><span><b>${ui.industry}</b>${project.industry}</span><span><b>${ui.platform}</b>${project.platform}</span><span><b>${ui.location}</b>${project.location}</span><span><b>${ui.role}</b>${project.role}</span><span><b>${ui.scope}</b>${project.scope}</span></div>${renderProjectLinks(project.links, externalLabel, lang)}${renderCaseImages(base.images || project.images, project, lang)}</header><div class="case-layout"><aside class="case-index"><p class="section-kicker">${ui.overview}</p>${project.sections.map((section, index) => `<a href="#section-${index + 1}">${String(index + 1).padStart(2, "0")} ${section[0]}</a>`).join("")}</aside><article class="case-content">${project.sections.map((section, index) => `<section id="section-${index + 1}"><p class="case-section-number">${String(index + 1).padStart(2, "0")}</p><h2>${section[0]}</h2>${renderSectionBody(section)}${renderSectionMedia(id, index, lang, project)}</section>`).join("")}${["vanta", "vetra"].includes(id) ? `<p class="case-language-note">${ui.anonymizationNote}</p>` : ""}${fallbackTranslation ? `<p class="case-language-note">${caseUi.en.languageNote}</p>` : ""}</article></div>`;
 }
 
 document.addEventListener("DOMContentLoaded", () => {
