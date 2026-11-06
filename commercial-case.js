@@ -30,10 +30,12 @@ function renderCaseImages(images, project, lang) {
 function renderSectionMedia(id, index, lang, project) {
   const media = caseMedia?.[id];
   if (!media?.length) return "";
-  const item = media[index % media.length];
+  const item = media.find((candidate) => candidate.section === index + 1);
+  if (!item) return "";
   const label = item.label?.[lang] || item.label?.en || "Website view";
   const ui = caseMediaUi[lang] || caseMediaUi.en;
-  return `<figure class="case-section-media"><img src="${item.src}" alt="${project.name} — ${label}" loading="lazy" decoding="async"><figcaption>${ui.liveView} · ${label}</figcaption></figure>`;
+  const mediaType = item.kind === "moodboard" ? ui.moodboard : ui.liveView;
+  return `<figure class="case-section-media case-section-media--${item.kind || "live"}"><img src="${item.src}" alt="${project.name} — ${mediaType}: ${label}" loading="lazy" decoding="async"><figcaption>${mediaType} · ${label}</figcaption></figure>`;
 }
 
 function renderCase() {
