@@ -643,4 +643,12 @@ function releasePortraitParticles() {
   }
 }
 
-portraitTrigger?.addEventListener("click", releasePortraitParticles);
+portraitTrigger?.addEventListener("pointerup", (event) => {
+  if (event.pointerType === "mouse" && event.button !== 0) return;
+  releasePortraitParticles();
+});
+portraitTrigger?.addEventListener("keydown", (event) => {
+  if (event.key !== "Enter" && event.key !== " ") return;
+  event.preventDefault();
+  releasePortraitParticles();
+});
