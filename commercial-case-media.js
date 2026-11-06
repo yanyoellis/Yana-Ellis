@@ -1,9 +1,14 @@
 const caseMediaUi = {
-  en: { liveView: "Live website view", moodboard: "Project moodboard" },
-  uk: { liveView: "Перегляд опублікованого сайту", moodboard: "Мудборд проєкту" },
-  pl: { liveView: "Widok opublikowanej strony", moodboard: "Moodboard projektu" },
-  ru: { liveView: "Вид опубликованного сайта", moodboard: "Мудборд проекта" },
-  de: { liveView: "Ansicht der veröffentlichten Website", moodboard: "Projekt-Moodboard" }
+  en: { liveView: "Live website view", moodboard: "Project moodboard", productScreen: "Product interface screen" },
+  uk: { liveView: "Перегляд опублікованого сайту", moodboard: "Мудборд проєкту", productScreen: "Екран цифрового продукту" },
+  pl: { liveView: "Widok opublikowanej strony", moodboard: "Moodboard projektu", productScreen: "Ekran produktu cyfrowego" },
+  ru: { liveView: "Вид опубликованного сайта", moodboard: "Мудборд проекта", productScreen: "Экран цифрового продукта" },
+  de: { liveView: "Ansicht der veröffentlichten Website", moodboard: "Projekt-Moodboard", productScreen: "Bildschirm des digitalen Produkts" }
+};
+
+const caseHeroImages = {
+  vanta: ["assets/commercial-cases/vanta/monday-cover.png"],
+  vetra: ["assets/commercial-cases/vetra/willow-cover.png"]
 };
 
 const caseMedia = {
@@ -23,5 +28,13 @@ const caseMedia = {
   vrohy: [
     { section: 2, kind: "moodboard", src: "assets/commercial-cases/vrohy/vrohy-atmosphere-moodboard.png", label: { en: "Bar atmosphere and visual direction", uk: "Атмосфера бару та візуальний напрям", pl: "Atmosfera baru i kierunek wizualny", ru: "Атмосфера бара и визуальное направление", de: "Atmosphäre und visuelle Richtung der Bar" } },
     { section: 4, kind: "moodboard", src: "assets/commercial-cases/vrohy/vrohy-discovery-moodboard.png", label: { en: "Cocktail discovery flow", uk: "Сценарій пошуку коктейлю", pl: "Ścieżka odkrywania koktajlu", ru: "Сценарий поиска коктейля", de: "Cocktail-Entdeckungsfluss" } }
+  ],
+  vanta: [
+    { section: 5, kind: "product", src: "assets/commercial-cases/vanta/monday-budget.png", label: { en: "Budget planning interface", uk: "Інтерфейс планування бюджету", pl: "Interfejs planowania budżetu", ru: "Интерфейс планирования бюджета", de: "Oberfläche für die Budgetplanung" } },
+    { section: 7, kind: "product", src: "assets/commercial-cases/vanta/monday-insights.png", label: { en: "Financial insights interface", uk: "Інтерфейс фінансової аналітики", pl: "Interfejs analityki finansowej", ru: "Интерфейс финансовой аналитики", de: "Oberfläche für Finanzanalysen" } }
+  ],
+  vetra: [
+    { section: 8, kind: "product", src: "assets/commercial-cases/vetra/willow-patient-record.png", label: { en: "Patient record interface", uk: "Інтерфейс картки пацієнта", pl: "Interfejs karty pacjenta", ru: "Интерфейс карты пациента", de: "Oberfläche der Patientenakte" } },
+    { section: 9, kind: "product", src: "assets/commercial-cases/vetra/willow-workflow.png", label: { en: "Scheduling and consultation workflow", uk: "Сценарій запису та консультації", pl: "Proces planowania i konsultacji", ru: "Сценарий записи и консультации", de: "Termin- und Beratungsablauf" } }
   ]
 };

@@ -21,9 +21,11 @@ function renderSectionBody(section) {
     : body.map((paragraph) => `<p>${paragraph}</p>`).join("");
 }
 
-function renderCaseImages(images, project, lang) {
+function renderCaseImages(images, project, lang, id) {
   if (!images?.length) return "";
-  const label = lang === "uk" ? "скриншот сайту" : lang === "pl" ? "zrzut strony" : lang === "ru" ? "скриншот сайта" : lang === "de" ? "Website-Screenshot" : "website screenshot";
+  const label = ["vanta", "vetra"].includes(id)
+    ? (lang === "uk" ? "екран цифрового продукту" : lang === "pl" ? "ekran produktu cyfrowego" : lang === "ru" ? "экран цифрового продукта" : lang === "de" ? "Bildschirm des digitalen Produkts" : "product interface screen")
+    : (lang === "uk" ? "скриншот сайту" : lang === "pl" ? "zrzut strony" : lang === "ru" ? "скриншот сайта" : lang === "de" ? "Website-Screenshot" : "website screenshot");
   return `<div class="case-images">${images.map((src, index) => `<figure><img src="${src}" alt="${project.name} ${label} ${index + 1}" loading="lazy"><figcaption>${project.name} · ${label} ${index + 1}</figcaption></figure>`).join("")}</div>`;
 }
 
@@ -34,7 +36,7 @@ function renderSectionMedia(id, index, lang, project) {
   if (!item) return "";
   const label = item.label?.[lang] || item.label?.en || "Website view";
   const ui = caseMediaUi[lang] || caseMediaUi.en;
-  const mediaType = item.kind === "moodboard" ? ui.moodboard : ui.liveView;
+  const mediaType = item.kind === "moodboard" ? ui.moodboard : item.kind === "product" ? ui.productScreen : ui.liveView;
   return `<figure class="case-section-media case-section-media--${item.kind || "live"}"><img src="${item.src}" alt="${project.name} — ${mediaType}: ${label}" loading="lazy" decoding="async"><figcaption>${mediaType} · ${label}</figcaption></figure>`;
 }
 
@@ -67,7 +69,7 @@ function renderCase() {
   document.title = `${project.name} | UX Case Study`;
 
   const externalLabel = lang === "uk" ? "Сайти проєкту" : lang === "pl" ? "Strony projektu" : lang === "ru" ? "Сайты проекта" : lang === "de" ? "Projekt-Websites" : "Project websites";
-  document.getElementById("caseRoot").innerHTML = `<header class="case-hero"><p class="section-kicker">${project.industry} · ${project.location}</p><h1>${project.name}</h1><p class="case-strapline">${project.strapline}</p><div class="case-meta"><span><b>${ui.industry}</b>${project.industry}</span><span><b>${ui.platform}</b>${project.platform}</span><span><b>${ui.location}</b>${project.location}</span><span><b>${ui.role}</b>${project.role}</span><span><b>${ui.scope}</b>${project.scope}</span></div>${renderProjectLinks(project.links, externalLabel, lang)}${renderCaseImages(base.images || project.images, project, lang)}</header><div class="case-layout"><aside class="case-index"><p class="section-kicker">${ui.overview}</p>${project.sections.map((section, index) => `<a href="#section-${index + 1}">${String(index + 1).padStart(2, "0")} ${section[0]}</a>`).join("")}</aside><article class="case-content">${project.sections.map((section, index) => `<section id="section-${index + 1}"><p class="case-section-number">${String(index + 1).padStart(2, "0")}</p><h2>${section[0]}</h2>${renderSectionBody(section)}${renderSectionMedia(id, index, lang, project)}</section>`).join("")}${["vanta", "vetra"].includes(id) ? `<p class="case-language-note">${ui.anonymizationNote}</p>` : ""}${fallbackTranslation ? `<p class="case-language-note">${caseUi.en.languageNote}</p>` : ""}</article></div>`;
+  document.getElementById("caseRoot").innerHTML = `<header class="case-hero"><p class="section-kicker">${project.industry} · ${project.location}</p><h1>${project.name}</h1><p class="case-strapline">${project.strapline}</p><div class="case-meta"><span><b>${ui.industry}</b>${project.industry}</span><span><b>${ui.platform}</b>${project.platform}</span><span><b>${ui.location}</b>${project.location}</span><span><b>${ui.role}</b>${project.role}</span><span><b>${ui.scope}</b>${project.scope}</span></div>${renderProjectLinks(project.links, externalLabel, lang)}${renderCaseImages(caseHeroImages?.[id] || base.images || project.images, project, lang, id)}</header><div class="case-layout"><aside class="case-index"><p class="section-kicker">${ui.overview}</p>${project.sections.map((section, index) => `<a href="#section-${index + 1}">${String(index + 1).padStart(2, "0")} ${section[0]}</a>`).join("")}</aside><article class="case-content">${project.sections.map((section, index) => `<section id="section-${index + 1}"><p class="case-section-number">${String(index + 1).padStart(2, "0")}</p><h2>${section[0]}</h2>${renderSectionBody(section)}${renderSectionMedia(id, index, lang, project)}</section>`).join("")}${["vanta", "vetra"].includes(id) ? `<p class="case-language-note">${ui.anonymizationNote}</p>` : ""}${fallbackTranslation ? `<p class="case-language-note">${caseUi.en.languageNote}</p>` : ""}</article></div>`;
 }
 
 document.addEventListener("DOMContentLoaded", () => {
