@@ -36,7 +36,7 @@ function renderSectionMedia(id, index, lang, project) {
   if (!item) return "";
   const label = item.label?.[lang] || item.label?.en || "Website view";
   const ui = caseMediaUi[lang] || caseMediaUi.en;
-  const mediaType = item.kind === "moodboard" ? ui.moodboard : item.kind === "product" ? ui.productScreen : ui.liveView;
+  const mediaType = item.kind === "moodboard" ? ui.moodboard : item.kind === "product" ? ui.productScreen : item.kind === "gallery" ? ui.gallery : ui.liveView;
   return `<figure class="case-section-media case-section-media--${item.kind || "live"}"><img src="${item.src}" alt="${project.name} — ${mediaType}: ${label}" loading="lazy" decoding="async"><figcaption>${mediaType} · ${label}</figcaption></figure>`;
 }
 

@@ -1,9 +1,9 @@
 const caseMediaUi = {
-  en: { liveView: "Live website view", moodboard: "Project moodboard", productScreen: "Product interface screen" },
-  uk: { liveView: "Перегляд опублікованого сайту", moodboard: "Мудборд проєкту", productScreen: "Екран цифрового продукту" },
-  pl: { liveView: "Widok opublikowanej strony", moodboard: "Moodboard projektu", productScreen: "Ekran produktu cyfrowego" },
-  ru: { liveView: "Вид опубликованного сайта", moodboard: "Мудборд проекта", productScreen: "Экран цифрового продукта" },
-  de: { liveView: "Ansicht der veröffentlichten Website", moodboard: "Projekt-Moodboard", productScreen: "Bildschirm des digitalen Produkts" }
+  en: { liveView: "Live website view", moodboard: "Project moodboard", productScreen: "Product interface screen", gallery: "Venue gallery photograph" },
+  uk: { liveView: "Перегляд опублікованого сайту", moodboard: "Мудборд проєкту", productScreen: "Екран цифрового продукту", gallery: "Фотографія галереї закладу" },
+  pl: { liveView: "Widok opublikowanej strony", moodboard: "Moodboard projektu", productScreen: "Ekran produktu cyfrowego", gallery: "Fotografia galerii lokalu" },
+  ru: { liveView: "Вид опубликованного сайта", moodboard: "Мудборд проекта", productScreen: "Экран цифрового продукта", gallery: "Фотография галереи заведения" },
+  de: { liveView: "Ansicht der veröffentlichten Website", moodboard: "Projekt-Moodboard", productScreen: "Bildschirm des digitalen Produkts", gallery: "Fotografie aus der Galerie des Ortes" }
 };
 
 const caseHeroImages = {
@@ -26,8 +26,8 @@ const caseMedia = {
     { section: 7, kind: "live", src: "assets/commercial-cases/arced/arced-tile-home.png", label: { en: "ARCED Tile website", uk: "Сайт ARCED Tile", pl: "Strona ARCED Tile", ru: "Сайт ARCED Tile", de: "ARCED-Tile-Website" } }
   ],
   vrohy: [
-    { section: 2, kind: "moodboard", src: "assets/commercial-cases/vrohy/vrohy-atmosphere-moodboard.png", label: { en: "Bar atmosphere and visual direction", uk: "Атмосфера бару та візуальний напрям", pl: "Atmosfera baru i kierunek wizualny", ru: "Атмосфера бара и визуальное направление", de: "Atmosphäre und visuelle Richtung der Bar" } },
-    { section: 4, kind: "moodboard", src: "assets/commercial-cases/vrohy/vrohy-discovery-moodboard.png", label: { en: "Cocktail discovery flow", uk: "Сценарій пошуку коктейлю", pl: "Ścieżka odkrywania koktajlu", ru: "Сценарий поиска коктейля", de: "Cocktail-Entdeckungsfluss" } }
+    { section: 2, kind: "gallery", src: "assets/commercial-cases/vrohy/vrohy-gallery-bottle-wall.jpg", label: { en: "Numbered bottle collection at the venue", uk: "Колекція пронумерованих пляшок у закладі", pl: "Kolekcja ponumerowanych butelek w lokalu", ru: "Коллекция пронумерованных бутылок в заведении", de: "Nummerierte Flaschensammlung im Lokal" } },
+    { section: 7, kind: "gallery", src: "assets/commercial-cases/vrohy/vrohy-gallery-bar-interior.jpg", label: { en: "Bar interior and atmosphere", uk: "Інтер’єр та атмосфера бару", pl: "Wnętrze i atmosfera baru", ru: "Интерьер и атмосфера бара", de: "Innenraum und Atmosphäre der Bar" } }
   ],
   vanta: [
     { section: 5, kind: "product", src: "assets/commercial-cases/vanta/monday-budget.png", label: { en: "Budget planning interface", uk: "Інтерфейс планування бюджету", pl: "Interfejs planowania budżetu", ru: "Интерфейс планирования бюджета", de: "Oberfläche für die Budgetplanung" } },
