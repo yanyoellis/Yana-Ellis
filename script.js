@@ -616,6 +616,7 @@ applyLanguage(getInitialLanguage());
 updateProjectArrows();
 
 const portraitTrigger = document.querySelector("#portraitTrigger");
+const portraitImage = document.querySelector(".hero-portrait");
 const fallingParticles = document.querySelector("#fallingParticles");
 
 function releasePortraitParticles() {
@@ -651,4 +652,13 @@ portraitTrigger?.addEventListener("keydown", (event) => {
   if (event.key !== "Enter" && event.key !== " ") return;
   event.preventDefault();
   releasePortraitParticles();
+});
+
+portraitImage?.addEventListener("pointerup", (event) => {
+  if (event.pointerType === "mouse" && event.button !== 0) return;
+  const bounds = portraitImage.getBoundingClientRect();
+  const relativeX = (event.clientX - bounds.left) / bounds.width;
+  const relativeY = (event.clientY - bounds.top) / bounds.height;
+  const isNearFace = relativeX >= 0.38 && relativeX <= 0.8 && relativeY >= 0.12 && relativeY <= 0.56;
+  if (isNearFace) releasePortraitParticles();
 });

@@ -385,6 +385,7 @@ button {
   height: 110%;
   object-fit: cover;
   object-position: 72% 28%;
+  pointer-events: auto;
   filter: grayscale(1) contrast(1.02) brightness(.82);
   mix-blend-mode: screen;
   -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 18%, #000 78%, transparent 100%);
