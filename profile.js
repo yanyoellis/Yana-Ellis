@@ -989,6 +989,76 @@ Object.assign(profileCopy.de, {
   style04Focus: "Mein Fokus: Usability, Zuverlässigkeit, Wartbarkeit und praktischer Business-Nutzen."
 });
 
+let profileAnchorRun = 0;
+let profileAnchorInterrupted = false;
+
+function getProfileHashTarget() {
+  const id = window.location.hash.slice(1);
+
+  if (!id) {
+    return null;
+  }
+
+  try {
+    return document.getElementById(decodeURIComponent(id));
+  } catch {
+    return null;
+  }
+}
+
+function cancelProfileAnchorAlignment() {
+  profileAnchorInterrupted = true;
+  profileAnchorRun += 1;
+}
+
+function scheduleProfileAnchorAlignment() {
+  const target = getProfileHashTarget();
+
+  if (!target || profileAnchorInterrupted) {
+    return;
+  }
+
+  const run = ++profileAnchorRun;
+  let attempts = 0;
+  const align = () => {
+    if (run !== profileAnchorRun || profileAnchorInterrupted || attempts >= 3) {
+      return;
+    }
+
+    attempts += 1;
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        if (run !== profileAnchorRun || profileAnchorInterrupted) {
+          return;
+        }
+
+        const headerHeight = document.querySelector(".site-header")?.getBoundingClientRect().height || 0;
+        const targetTop = target.getBoundingClientRect().top + window.scrollY - headerHeight - 24;
+        window.scrollTo({ top: Math.max(0, targetTop), behavior: "auto" });
+      });
+    });
+  };
+
+  align();
+  window.addEventListener("load", align, { once: true });
+  document.fonts?.ready.then(align, align);
+}
+
+["wheel", "touchmove", "keydown"].forEach((eventName) => {
+  window.addEventListener(eventName, (event) => {
+    if (eventName === "keydown" && !["ArrowDown", "ArrowUp", "PageDown", "PageUp", "Home", "End", " "].includes(event.key)) {
+      return;
+    }
+
+    cancelProfileAnchorAlignment();
+  }, { passive: eventName !== "keydown" });
+});
+
+window.addEventListener("hashchange", () => {
+  profileAnchorInterrupted = false;
+  scheduleProfileAnchorAlignment();
+});
+
 function initialLanguage() {
   const saved = localStorage.getItem(languageKey);
   return profileLanguages.includes(saved) ? saved : "en";
@@ -1012,6 +1082,8 @@ function applyProfileLanguage(language) {
     button.classList.toggle("is-active", isActive);
     button.setAttribute("aria-pressed", String(isActive));
   });
+
+  scheduleProfileAnchorAlignment();
 }
 
 document.querySelectorAll(".language-button").forEach((button) => {

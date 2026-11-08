@@ -6,6 +6,10 @@
   padding-top: 70px;
 }
 
+.profile-section[id] {
+  scroll-margin-top: 28px;
+}
+
 .profile-hero {
   min-height: 680px;
   padding: 110px 0 90px;
